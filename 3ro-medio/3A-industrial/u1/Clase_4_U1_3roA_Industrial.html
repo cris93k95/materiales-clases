@@ -1,136 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3°A — Mecánica Industrial - Clase 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4 — 3°A — Mecánica Industrial</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
-        .header { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 28px; text-align: center; }
-        .header h1 { font-size: 1.6em; margin-bottom: 6px; }
-        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
-        .meta-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
-        .meta-info span { background: rgba(255,255,255,0.15); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
-        .note { background: #fff7ed; border-left: 4px solid #f59e0b; padding: 10px 12px; border-radius: 0 6px 6px 0; margin-bottom: 15px; font-size: 0.92em; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #1565c0, #1e88e5); color: white; padding: 35px 20px; text-align: center; }
+        .header h1 { font-size: 1.8em; font-weight: 700; margin-bottom: 5px; }
+        .header h2 { font-size: 1.15em; font-weight: 300; margin-bottom: 8px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 12px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 920px; margin: 25px auto; padding: 0 15px; }
 
-        .clase-card { background: white; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; }
-        .clase-card.evaluacion { border-left: 5px solid #c62828; }
-        .clase-header { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
-        .clase-header.normal { background: #e8eaf6; }
-        .clase-header.eval { background: #ffebee; }
-        .clase-header .clase-num { font-size: 1.1em; font-weight: 700; color: #1a237e; }
-        .clase-header .clase-fecha { font-size: 0.85em; color: #666; }
-        .clase-header .badge { padding: 3px 10px; border-radius: 12px; font-size: 0.75em; font-weight: 600; }
-        .badge-oa { background: #e3f2fd; color: #1565c0; }
-        .badge-eval { background: #ffcdd2; color: #c62828; }
-        .clase-body { padding: 20px; }
-        .objetivo { background: #fff3e0; border-left: 4px solid #ef6c00; padding: 12px 15px; margin-bottom: 15px; border-radius: 0 6px 6px 0; }
-        .objetivo strong { color: #ef6c00; }
-        .fase { margin-bottom: 12px; }
-        .fase-title { display: inline-block; padding: 3px 12px; border-radius: 4px; font-weight: 600; font-size: 0.85em; color: white; margin-bottom: 6px; }
-        .fase-inicio { background: #2e7d32; }
-        .fase-desarrollo { background: #1565c0; }
-        .fase-cierre { background: #6a1b9a; }
-        .fase-content { padding-left: 15px; font-size: 0.92em; }
-        .fase-content ol, .fase-content ul { margin-left: 15px; }
-        .fase-content li { margin-bottom: 4px; }
-        .recursos { background: #f1f8e9; padding: 10px 15px; border-radius: 6px; margin-top: 10px; font-size: 0.88em; }
-        .recursos strong { color: #33691e; }
-        .evaluacion-box { background: #fce4ec; padding: 10px 15px; border-radius: 6px; margin-top: 10px; font-size: 0.88em; }
-        .evaluacion-box strong { color: #c62828; }
+        .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #1565c0; }
+        .objective-card h3 { color: #1565c0; margin-bottom: 8px; }
+        .objective-en { background: #e3f2fd; padding: 10px 14px; border-radius: 8px; margin-top: 10px; font-style: italic; color: #0d47a1; }
 
-        .footer { text-align: center; padding: 20px; color: #999; font-size: 0.8em; }
-        @media print {
-            body { background: white; }
-            .clase-card { break-inside: avoid; page-break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
-            .header { background: #1a237e !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-        }
+        .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #6a1b9a; }
+        .section-body { padding: 18px 22px; }
+        .section-body ul { margin-left: 18px; }
+        .section-body li { margin-bottom: 8px; }
+
+        .task-card { background: #f5f5f5; border: 1px solid #e0e0e0; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
+        .task-card input { margin-right: 8px; }
+
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 12px; }
+        .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }
+        .vocab-card .word { font-weight: 700; color: #0d47a1; }
+        .vocab-card .meaning { font-size: 0.8em; color: #666; margin-top: 4px; display: none; }
+        .vocab-card.revealed .meaning { display: block; }
+        .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
+        .vocab-card.revealed .hint { display: none; }
+
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .reading-box h4 { color: #1565c0; margin-bottom: 8px; }
+
+        .ticket-box { background: linear-gradient(135deg, #ede7f6, #e3f2fd); border: 2px dashed #1565c0; border-radius: 12px; padding: 18px; }
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; }
+
+        .score-bar { background: white; border-radius: 10px; padding: 12px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+        .score { font-weight: 700; color: #1565c0; }
+        .footer { text-align: center; color: #999; font-size: 0.8em; margin: 18px 0; }
     </style>
 </head>
 <body>
-
 <div class="header">
-    <h1>3°A — Mecánica Industrial — Unidad 1</h1>
-    <h2>Clase 4 · Unidad 1 — Technical Skills & Career Paths</h2>
-    <div class="meta-info">
-        <span>📅 Semana 4 · marzo</span>
-        <span>🧭 Marzo 2026</span>
-        <span>📘 Basado en planificacion oficial</span>
+    <h1>CLASS 4 — 3°A — MECÁNICA INDUSTRIAL</h1>
+    <h2>Unidad 1 — Technical Skills & Career Paths</h2>
+    <div class="meta">
+        <span>📘 OA1 · OA3</span>
+        <span>⏱ 90 minutos</span>
+        <span>🧭 Material de clase</span>
     </div>
 </div>
 
 <div class="container">
-    <div class="note">
-        <strong>Objetivo sintetizado:</strong> Analizar un estudio de caso técnico en inglés identificando el problema, las causas posibles y los pasos de diagnóstico en el contexto de Mecánica Industrial.
+    <div class="objective-card">
+        <h3>🎯 Objetivo de la clase</h3>
+        <p>Analizar un estudio de caso técnico en inglés identificando el problema, las causas posibles y los pasos de diagnóstico en el contexto de Mecánica Industrial.</p>
+        <div class="objective-en">Class focus: active vocabulary + guided practice + exit ticket.</div>
     </div>
 
-    <div class="clase-card">
-<div class="clase-header normal">
-<span class="clase-num">Clase 4</span>
-<span class="badge badge-oa">OA1</span> <span class="badge badge-oa">OA3</span>
-</div>
-<div class="clase-body">
-<div class="objetivo">
-<strong>Objetivo de la clase (Bloom):</strong> Analizar un estudio de caso técnico en inglés identificando el problema, las causas posibles y los pasos de diagnóstico en el contexto de Mecánica Industrial.
-            </div>
-<div class="fase">
-<span class="fase-title fase-inicio">INICIO (15 min)</span>
-<div class="fase-content">
-<ul>
-<li>Docente proyecta una imagen de un problema técnico (ej: máquina dañada, falla visible) y pregunta: <em>"What do you think happened? What is the problem?"</em></li>
-<li>Se introduce vocabulario clave para resolución de problemas: <em>problem, cause, symptom, diagnosis, solution, step, check, inspect, test, replace</em>.</li>
-<li>Pre-reading: <em>"Today we will read a real case study. You will be the technician who solves the problem."</em></li>
-</ul>
-</div>
-</div>
-<div class="fase">
-<span class="fase-title fase-desarrollo">DESARROLLO (60 min)</span>
-<div class="fase-content">
-<ol>
-<li><b>Reading the case study (25 min):</b> Case Study: <em>'The Defective Weld'</em> — A welded joint fails inspection. Students read the diagnostic steps: visual inspection, check welding parameters, test joint strength.
-                    <ul>
-<li>Primera lectura silenciosa (5 min). Estudiantes subrayan palabras desconocidas.</li>
-<li>Segunda lectura guiada por el docente. Se aclara vocabulario en contexto.</li>
-<li>Completar ficha de análisis: <b>Problem → Symptoms → Diagnostic Steps → Solution</b></li>
-</ul>
-</li>
-<li><b>Group discussion (15 min):</b> En grupos de 3-4, los estudiantes discuten:
-                    <ul>
-<li><em>"What was the problem?"</em></li>
-<li><em>"What steps did the technician follow?"</em></li>
-<li><em>"Do you agree with the solution? Why or why not?"</em></li>
-</ul>
-</li>
-<li><b>Sequencing activity (10 min):</b> Los estudiantes reciben los pasos del diagnóstico desordenados y deben ponerlos en orden correcto usando: <em>First… Then… After that… Finally…</em></li>
-<li><b>Oral report (10 min):</b> Un representante de cada grupo explica al curso: <em>"The problem was… First, the technician… Then… The solution was…"</em></li>
-</ol>
-</div>
-</div>
-<div class="fase">
-<span class="fase-title fase-cierre">CIERRE (15 min)</span>
-<div class="fase-content">
-<ul>
-<li>Reflexión: <em>"Was this case study similar to situations you have seen in your workshop? Tell us."</em></li>
-<li>Los estudiantes escriben en su cuaderno una oración sobre lo que aprendieron: <em>"Today I learned that…"</em></li>
-</ul>
-</div>
-</div>
-<div class="recursos">
-<strong>📦 Recursos:</strong> Ficha de estudio de caso impresa, ficha de análisis (Problem/Symptoms/Steps/Solution), tarjetas de secuencia recortables, pizarra.
-            </div>
-<div class="evaluacion-box">
-<strong>📋 Evaluación:</strong> Formativa — revisión de ficha de análisis completada; evaluación de participación oral en grupo.
-            </div>
-<div class="sugerencia"><strong>💡 Sugerencia:</strong> <b>Actividad de extensión:</b> Los estudiantes pueden inventar su propio caso de estudio breve (5 oraciones) describiendo un problema diferente del área, para compartir en la siguiente clase.</div>
-</div>
-</div>
-
-    <div class="footer">
-        <p>Material de clase generado desde planificaciones U1 — 2026</p>
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (15 min)</div>
+        <div class="section-body"><ul><li>Docente proyecta una imagen de un problema técnico (ej: máquina dañada, falla visible) y pregunta: "What do you think happened? What is the problem?"</li><li>Se introduce vocabulario clave para resolución de problemas: problem, cause, symptom, diagnosis, solution, step, check, inspect, test, replace .</li><li>Pre-reading: "Today we will read a real case study. You will be the technician who solves the problem."</li></ul></div>
     </div>
+
+    <div class="section">
+        <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
+        <div class="section-body">
+            <div class="task-card"><label><input type="checkbox" class="task-check"/> Reading the case study (25 min): Case Study: 'The Defective Weld' — A welded joint fails inspection. Students read the diagnostic steps: visual inspection, check welding parameters, test joint strength. Primera lectura silenciosa (5 min). Estudiantes subrayan palabras desconocidas. Segunda lectura guiada por el docente. Se aclara vocabulario en contexto. Completar ficha de análisis: Problem → Symptoms → Diagnostic Steps → Solution</label></div><div class="task-card"><label><input type="checkbox" class="task-check"/> Primera lectura silenciosa (5 min). Estudiantes subrayan palabras desconocidas.</label></div><div class="task-card"><label><input type="checkbox" class="task-check"/> Segunda lectura guiada por el docente. Se aclara vocabulario en contexto.</label></div><div class="task-card"><label><input type="checkbox" class="task-check"/> Completar ficha de análisis: Problem → Symptoms → Diagnostic Steps → Solution</label></div><div class="task-card"><label><input type="checkbox" class="task-check"/> Group discussion (15 min): En grupos de 3-4, los estudiantes discuten: "What was the problem?" "What steps did the technician follow?" "Do you agree with the solution? Why or why not?"</label></div><div class="task-card"><label><input type="checkbox" class="task-check"/> "What was the problem?"</label></div>
+            
+            <div class="reading-box">
+                <h4>📚 Reading Organizer — The Defective Weld</h4>
+                <p><strong>Before reading:</strong> What do you think this text is about?</p>
+                <p><strong>While reading:</strong> Underline key words and verbs.</p>
+                <p><strong>After reading:</strong> Write 3 key ideas from the text.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <ul><li>Reflexión: "Was this case study similar to situations you have seen in your workshop? Tell us."</li><li>Los estudiantes escriben en su cuaderno una oración sobre lo que aprendieron: "Today I learned that…"</li></ul>
+            <div class="ticket-box">
+                <h4>🎫 Exit Ticket</h4>
+                <input class="ticket-input" placeholder="1) New word + meaning" />
+                <input class="ticket-input" placeholder="2) New word + meaning" />
+                <input class="ticket-input" placeholder="3) New word + meaning" />
+                <input class="ticket-input" placeholder="4) New word + meaning" />
+                <input class="ticket-input" placeholder="5) New word + meaning" />
+                <input class="ticket-input" placeholder="Reflection: Why is it important to know English in your career?" />
+            </div>
+        </div>
+    </div>
+
+    <div class="score-bar">
+        <span>📊 Progreso de actividades completadas:</span>
+        <span class="score" id="progressScore">0</span>
+    </div>
+
+    <div class="footer">3°A — Mecánica Industrial — Clase 4, Unidad 1 — Inglés 2026</div>
 </div>
 
+<script>
+    const checks = document.querySelectorAll('.task-check');
+    function updateScore() {
+        let done = 0;
+        checks.forEach(c => { if (c.checked) done++; });
+        document.getElementById('progressScore').textContent = done + ' / ' + checks.length;
+    }
+    checks.forEach(c => c.addEventListener('change', updateScore));
+    updateScore();
+</script>
 </body>
 </html>

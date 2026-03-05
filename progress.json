@@ -3,11 +3,11 @@
   "classes": {
     "3C-electricidad/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — Technical Vocabulary: Electrical Tools & Equipment"
+      "title": "Clase 1 — Identificar vocabulario técnico básico en inglés relacionado con la especiali..."
     },
     "3D-grafica/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — Technical Vocabulary: Graphic Arts & Printing"
+      "title": "Clase 1 — Identificar vocabulario técnico básico en inglés relacionado con la especiali..."
     },
     "1ro-lu-ju/u1/Clase_1": {
       "status": "pending",
@@ -176,6 +176,206 @@
     "4E-electronica/u1/Clase_4": {
       "status": "pending",
       "title": "Clase 4 — Aplicar estrategias de comunicación oral para responder preguntas frecuentes..."
+    },
+    "1ro-lu-ju/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Comprender la estructura y el uso del Present Perfect Simple para describir l..."
+    },
+    "1ro-lu-ju/u1/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Diferenciar el uso de \"since\" y \"for\" con Present Perfect para describir la d..."
+    },
+    "1ro-lu-ju/u1/Clase_11": {
+      "status": "pending",
+      "title": "Clase 11 — Comprender y utilizar la estructura \"used to + infinitive\" para comparar prác..."
+    },
+    "1ro-lu-ju/u1/Clase_12": {
+      "status": "pending",
+      "title": "Clase 12 — Analizar un estudio de caso sobre un accidente laboral aplicando estrategias..."
+    },
+    "1ro-lu-ju/u1/Clase_13": {
+      "status": "pending",
+      "title": "Clase 13 — Describir oralmente un proceso técnico simple utilizando vocabulario especial..."
+    },
+    "1ro-lu-ju/u1/Clase_14": {
+      "status": "pending",
+      "title": "Clase 14 — Comparar información de textos sobre profesionales técnicos de diferentes paí..."
+    },
+    "1ro-lu-ju/u1/Clase_15": {
+      "status": "pending",
+      "title": "Clase 15 — Producir una presentación oral breve sobre la carrera técnica de su interés,..."
+    },
+    "1ro-lu-ju/u1/Clase_16": {
+      "status": "pending",
+      "title": "Clase 16 — Producir una presentación oral breve sobre la carrera técnica de su interés,..."
+    },
+    "1ro-lu-ju/u1/Clase_17": {
+      "status": "pending",
+      "title": "Clase 17 — Demostrar comprensión de ideas generales e información explícita en textos té..."
+    },
+    "3A-industrial/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Comprender información específica en un video técnico en inglés y producir de..."
+    },
+    "3A-industrial/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Comprender y evaluar reglas de seguridad escritas en inglés relevantes al tal..."
+    },
+    "3A-industrial/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Organizar y ensayar una presentación oral en inglés sobre las habilidades téc..."
+    },
+    "3A-industrial/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Producir una presentación oral breve y clara en inglés describiendo sus habil..."
+    },
+    "3A-industrial/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Sintetizar los aprendizajes de vocabulario técnico, lectura y expresión oral..."
+    },
+    "3B-automotriz/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Comprender información específica en un video técnico en inglés y producir de..."
+    },
+    "3B-automotriz/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Comprender y evaluar reglas de seguridad escritas en inglés relevantes al tal..."
+    },
+    "3B-automotriz/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Organizar y ensayar una presentación oral en inglés sobre las habilidades téc..."
+    },
+    "3B-automotriz/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Producir una presentación oral breve y clara en inglés describiendo sus habil..."
+    },
+    "3B-automotriz/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Sintetizar los aprendizajes de vocabulario técnico, lectura y expresión oral..."
+    },
+    "3C-electricidad/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Comprender información específica en un video técnico en inglés y producir de..."
+    },
+    "3C-electricidad/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Comprender y evaluar reglas de seguridad escritas en inglés relevantes al tal..."
+    },
+    "3C-electricidad/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Organizar y ensayar una presentación oral en inglés sobre las habilidades téc..."
+    },
+    "3C-electricidad/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Producir una presentación oral breve y clara en inglés describiendo sus habil..."
+    },
+    "3C-electricidad/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Sintetizar los aprendizajes de vocabulario técnico, lectura y expresión oral..."
+    },
+    "3D-grafica/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Comprender información específica en un video técnico en inglés y producir de..."
+    },
+    "3D-grafica/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Comprender y evaluar reglas de seguridad escritas en inglés relevantes al tal..."
+    },
+    "3D-grafica/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Organizar y ensayar una presentación oral en inglés sobre las habilidades téc..."
+    },
+    "3D-grafica/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Producir una presentación oral breve y clara en inglés describiendo sus habil..."
+    },
+    "3D-grafica/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Sintetizar los aprendizajes de vocabulario técnico, lectura y expresión oral..."
+    },
+    "3E-electronica/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Comprender información específica en un video técnico en inglés y producir de..."
+    },
+    "3E-electronica/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Comprender y evaluar reglas de seguridad escritas en inglés relevantes al tal..."
+    },
+    "3E-electronica/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Organizar y ensayar una presentación oral en inglés sobre las habilidades téc..."
+    },
+    "3E-electronica/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Producir una presentación oral breve y clara en inglés describiendo sus habil..."
+    },
+    "3E-electronica/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Sintetizar los aprendizajes de vocabulario técnico, lectura y expresión oral..."
+    },
+    "4A-industrial/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Producir respuestas orales coherentes y pertinentes en una simulación de entr..."
+    },
+    "4A-industrial/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Producir correos electrónicos y mensajes formales en inglés aplicables al con..."
+    },
+    "4A-industrial/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Comprender y evaluar críticamente escenarios laborales presentados en un vide..."
+    },
+    "4A-industrial/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Comprender y producir instrucciones de seguridad laboral en inglés específica..."
+    },
+    "4B-automotriz/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Producir respuestas orales coherentes y pertinentes en una simulación de entr..."
+    },
+    "4B-automotriz/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Producir correos electrónicos y mensajes formales en inglés aplicables al con..."
+    },
+    "4B-automotriz/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Comprender y evaluar críticamente escenarios laborales presentados en un vide..."
+    },
+    "4B-automotriz/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Comprender y producir instrucciones de seguridad laboral en inglés específica..."
+    },
+    "4C-electricidad/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Producir respuestas orales coherentes y pertinentes en una simulación de entr..."
+    },
+    "4C-electricidad/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Producir correos electrónicos y mensajes formales en inglés aplicables al con..."
+    },
+    "4C-electricidad/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Comprender y evaluar críticamente escenarios laborales presentados en un vide..."
+    },
+    "4C-electricidad/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Comprender y producir instrucciones de seguridad laboral en inglés específica..."
+    },
+    "4E-electronica/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Producir respuestas orales coherentes y pertinentes en una simulación de entr..."
+    },
+    "4E-electronica/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Producir correos electrónicos y mensajes formales en inglés aplicables al con..."
+    },
+    "4E-electronica/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Comprender y evaluar críticamente escenarios laborales presentados en un vide..."
+    },
+    "4E-electronica/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Comprender y producir instrucciones de seguridad laboral en inglés específica..."
     }
   }
 }

@@ -1,121 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1° Medio — Inglés General (Lu+Ju) - Clase 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2 — 1° Medio — Inglés General (Lu+Ju)</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
-        .header { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 28px; text-align: center; }
-        .header h1 { font-size: 1.6em; margin-bottom: 6px; }
-        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
-        .meta-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
-        .meta-info span { background: rgba(255,255,255,0.15); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
-        .note { background: #fff7ed; border-left: 4px solid #f59e0b; padding: 10px 12px; border-radius: 0 6px 6px 0; margin-bottom: 15px; font-size: 0.92em; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #1565c0, #1e88e5); color: white; padding: 35px 20px; text-align: center; }
+        .header h1 { font-size: 1.8em; font-weight: 700; margin-bottom: 5px; }
+        .header h2 { font-size: 1.15em; font-weight: 300; margin-bottom: 8px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 12px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 920px; margin: 25px auto; padding: 0 15px; }
 
-        .clase-card { background: white; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; }
-        .clase-card.evaluacion { border-left: 5px solid #c62828; }
-        .clase-header { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
-        .clase-header.normal { background: #e8eaf6; }
-        .clase-header.eval { background: #ffebee; }
-        .clase-header .clase-num { font-size: 1.1em; font-weight: 700; color: #1a237e; }
-        .clase-header .clase-fecha { font-size: 0.85em; color: #666; }
-        .clase-header .badge { padding: 3px 10px; border-radius: 12px; font-size: 0.75em; font-weight: 600; }
-        .badge-oa { background: #e3f2fd; color: #1565c0; }
-        .badge-eval { background: #ffcdd2; color: #c62828; }
-        .clase-body { padding: 20px; }
-        .objetivo { background: #fff3e0; border-left: 4px solid #ef6c00; padding: 12px 15px; margin-bottom: 15px; border-radius: 0 6px 6px 0; }
-        .objetivo strong { color: #ef6c00; }
-        .fase { margin-bottom: 12px; }
-        .fase-title { display: inline-block; padding: 3px 12px; border-radius: 4px; font-weight: 600; font-size: 0.85em; color: white; margin-bottom: 6px; }
-        .fase-inicio { background: #2e7d32; }
-        .fase-desarrollo { background: #1565c0; }
-        .fase-cierre { background: #6a1b9a; }
-        .fase-content { padding-left: 15px; font-size: 0.92em; }
-        .fase-content ol, .fase-content ul { margin-left: 15px; }
-        .fase-content li { margin-bottom: 4px; }
-        .recursos { background: #f1f8e9; padding: 10px 15px; border-radius: 6px; margin-top: 10px; font-size: 0.88em; }
-        .recursos strong { color: #33691e; }
-        .evaluacion-box { background: #fce4ec; padding: 10px 15px; border-radius: 6px; margin-top: 10px; font-size: 0.88em; }
-        .evaluacion-box strong { color: #c62828; }
+        .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #1565c0; }
+        .objective-card h3 { color: #1565c0; margin-bottom: 8px; }
+        .objective-en { background: #e3f2fd; padding: 10px 14px; border-radius: 8px; margin-top: 10px; font-style: italic; color: #0d47a1; }
 
-        .footer { text-align: center; padding: 20px; color: #999; font-size: 0.8em; }
-        @media print {
-            body { background: white; }
-            .clase-card { break-inside: avoid; page-break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
-            .header { background: #1a237e !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-        }
+        .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #6a1b9a; }
+        .section-body { padding: 18px 22px; }
+        .section-body ul { margin-left: 18px; }
+        .section-body li { margin-bottom: 8px; }
+
+        .task-card { background: #f5f5f5; border: 1px solid #e0e0e0; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
+        .task-card input { margin-right: 8px; }
+
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 12px; }
+        .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }
+        .vocab-card .word { font-weight: 700; color: #0d47a1; }
+        .vocab-card .meaning { font-size: 0.8em; color: #666; margin-top: 4px; display: none; }
+        .vocab-card.revealed .meaning { display: block; }
+        .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
+        .vocab-card.revealed .hint { display: none; }
+
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .reading-box h4 { color: #1565c0; margin-bottom: 8px; }
+
+        .ticket-box { background: linear-gradient(135deg, #ede7f6, #e3f2fd); border: 2px dashed #1565c0; border-radius: 12px; padding: 18px; }
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; }
+
+        .score-bar { background: white; border-radius: 10px; padding: 12px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+        .score { font-weight: 700; color: #1565c0; }
+        .footer { text-align: center; color: #999; font-size: 0.8em; margin: 18px 0; }
     </style>
 </head>
 <body>
-
 <div class="header">
-    <h1>1° Medio — Inglés General (Lu+Ju) — Unidad 1</h1>
-    <h2>Clase 2 · Unidad 1 — The World of Technical Work</h2>
-    <div class="meta-info">
-        <span>📅 Semana 1 · marzo</span>
-        <span>🧭 Marzo 2026</span>
-        <span>📘 Basado en planificacion oficial</span>
+    <h1>CLASS 2 — 1° MEDIO — INGLÉS GENERAL (LU+JU)</h1>
+    <h2>Unidad 1 — The World of Technical Work</h2>
+    <div class="meta">
+        <span>📘 OA9 · OA12</span>
+        <span>⏱ 90 minutos</span>
+        <span>🧭 Material de clase</span>
     </div>
 </div>
 
 <div class="container">
-    <div class="note">
-        <strong>Objetivo sintetizado:</strong> Reconocer y categorizar vocabulario técnico básico de herramientas comunes a las cinco especialidades técnico-profesionales.
+    <div class="objective-card">
+        <h3>🎯 Objetivo de la clase</h3>
+        <p>Reconocer y categorizar vocabulario técnico básico de herramientas comunes a las cinco especialidades técnico-profesionales.</p>
+        <div class="objective-en">Class focus: active vocabulary + guided practice + exit ticket.</div>
     </div>
 
-    <div class="clase-card">
-<div class="clase-header normal">
-<span class="clase-num">Clase 2</span>
-<span class="clase-fecha">Semana 1 · marzo</span>
-<span class="badge badge-oa">OA9 · OA12</span>
-</div>
-<div class="clase-body">
-<div class="objetivo">
-<strong>Objetivo de la clase:</strong> Reconocer y categorizar vocabulario técnico básico de herramientas comunes a las cinco especialidades técnico-profesionales.
-            </div>
-<div class="fase">
-<span class="fase-title fase-inicio">INICIO (15 min)</span>
-<div class="fase-content">
-<ul>
-<li>Proyectar imagen de un taller desordenado con diversas herramientas. Preguntar: <em>"What can you see? Name everything you recognize in English."</em></li>
-<li>Brainstorm colectivo en la pizarra: organizar las respuestas de los estudiantes en una nube de palabras.</li>
-<li>Pregunta motivadora: <em>"A mechanic, an electrician, and an electronics technician walk into a workshop. Which tools does each one need?"</em></li>
-</ul>
-</div>
-</div>
-<div class="fase">
-<span class="fase-title fase-desarrollo">DESARROLLO (60 min)</span>
-<div class="fase-content">
-<ol>
-<li><b>Vocabulary presentation (20 min):</b> Presentación con imágenes y pronunciación guiada de 20 herramientas y equipos: <em>hammer, screwdriver, wrench, pliers, drill, multimeter, soldering iron, measuring tape, safety goggles, gloves, helmet, wire cutter, welding torch, caliper, saw, sandpaper, level, clamp, socket set, Allen key</em>. Los estudiantes repiten pronunciación y escriben las palabras en su cuaderno con un dibujo simple.</li>
-<li><b>Reading (20 min):</b> Texto corto: <em>"The Right Tool for the Right Job"</em> — Texto descriptivo donde un supervisor de taller explica la importancia de elegir la herramienta correcta. Los estudiantes subrayan todas las herramientas mencionadas y responden: <em>What happens when you use the wrong tool?</em></li>
-<li><b>Categorización grupal (20 min):</b> En grupos de 4-5, los estudiantes reciben tarjetas con las 20 herramientas y deben clasificarlas en un diagrama de Venn con las 5 especialidades. Discuten: <em>"Some tools belong to more than one specialty!"</em> Pegan las tarjetas en un papelógrafo.</li>
-</ol>
-</div>
-</div>
-<div class="fase">
-<span class="fase-title fase-cierre">CIERRE (15 min)</span>
-<div class="fase-content">
-<ul>
-<li>Juego: <em>"Guess the tool"</em> — El docente describe una herramienta sin nombrarla (<em>"It's a small device that measures voltage, current, and resistance"</em>), los estudiantes adivinan.</li>
-<li>Luego, 3-4 estudiantes voluntarios hacen lo mismo para sus compañeros.</li>
-<li>Ticket de salida: <em>"Write 3 tools you use (or will use) in your specialty."</em></li>
-</ul>
-</div>
-</div>
-<div class="recursos">
-<strong>Recursos:</strong> Flashcards impresas de herramientas (20), texto <em>"The Right Tool for the Right Job"</em> impreso, diagrama de Venn en papelógrafo, tarjetas de herramientas recortables, proyector.
-            </div>
-</div>
-</div>
-
-    <div class="footer">
-        <p>Material de clase generado desde planificaciones U1 — 2026</p>
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (15 min)</div>
+        <div class="section-body"><ul><li>Proyectar imagen de un taller desordenado con diversas herramientas. Preguntar: "What can you see? Name everything you recognize in English."</li><li>Brainstorm colectivo en la pizarra: organizar las respuestas de los estudiantes en una nube de palabras.</li><li>Pregunta motivadora: "A mechanic, an electrician, and an electronics technician walk into a workshop. Which tools does each one need?"</li></ul></div>
     </div>
+
+    <div class="section">
+        <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
+        <div class="section-body">
+            <div class="task-card"><label><input type="checkbox" class="task-check"/> Vocabulary presentation (20 min): Presentación con imágenes y pronunciación guiada de 20 herramientas y equipos: hammer, screwdriver, wrench, pliers, drill, multimeter, soldering iron, measuring tape, safety goggles, gloves, helmet, wire cutter, welding torch, caliper, saw, sandpaper, level, clamp, socket set, Allen key . Los estudiantes repiten pronunciación y escriben las palabras en su cuaderno con un dibujo simple.</label></div><div class="task-card"><label><input type="checkbox" class="task-check"/> Reading (20 min): Texto corto: "The Right Tool for the Right Job" — Texto descriptivo donde un supervisor de taller explica la importancia de elegir la herramienta correcta. Los estudiantes subrayan todas las herramientas mencionadas y responden: What happens when you use the wrong tool?</label></div><div class="task-card"><label><input type="checkbox" class="task-check"/> Categorización grupal (20 min): En grupos de 4-5, los estudiantes reciben tarjetas con las 20 herramientas y deben clasificarlas en un diagrama de Venn con las 5 especialidades. Discuten: "Some tools belong to more than one specialty!" Pegan las tarjetas en un papelógrafo.</label></div>
+            <h4 style="margin-top:12px; color:#1565c0;">📖 Vocabulary Cards</h4><div class="vocab-grid"><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">screwdriver</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">wrench</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">pliers</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">drill</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">multimeter</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">soldering iron</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">measuring tape</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">safety goggles</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">gloves</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">helmet</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">wire cutter</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">welding torch</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">caliper</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">saw</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">sandpaper</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">level</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div></div>
+            <div class="reading-box">
+                <h4>📚 Reading Organizer — The Right Tool for the Right Job</h4>
+                <p><strong>Before reading:</strong> What do you think this text is about?</p>
+                <p><strong>While reading:</strong> Underline key words and verbs.</p>
+                <p><strong>After reading:</strong> Write 3 key ideas from the text.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <ul><li>Juego: "Guess the tool" — El docente describe una herramienta sin nombrarla ( "It's a small device that measures voltage, current, and resistance" ), los estudiantes adivinan.</li><li>Luego, 3-4 estudiantes voluntarios hacen lo mismo para sus compañeros.</li><li>Ticket de salida: "Write 3 tools you use (or will use) in your specialty."</li></ul>
+            <div class="ticket-box">
+                <h4>🎫 Exit Ticket</h4>
+                <input class="ticket-input" placeholder="1) New word + meaning" />
+                <input class="ticket-input" placeholder="2) New word + meaning" />
+                <input class="ticket-input" placeholder="3) New word + meaning" />
+                <input class="ticket-input" placeholder="4) New word + meaning" />
+                <input class="ticket-input" placeholder="5) New word + meaning" />
+                <input class="ticket-input" placeholder="Reflection: Why is it important to know English in your career?" />
+            </div>
+        </div>
+    </div>
+
+    <div class="score-bar">
+        <span>📊 Progreso de actividades completadas:</span>
+        <span class="score" id="progressScore">0</span>
+    </div>
+
+    <div class="footer">1° Medio — Inglés General (Lu+Ju) — Clase 2, Unidad 1 — Inglés 2026</div>
 </div>
 
+<script>
+    const checks = document.querySelectorAll('.task-check');
+    function updateScore() {
+        let done = 0;
+        checks.forEach(c => { if (c.checked) done++; });
+        document.getElementById('progressScore').textContent = done + ' / ' + checks.length;
+    }
+    checks.forEach(c => c.addEventListener('change', updateScore));
+    updateScore();
+</script>
 </body>
 </html>
