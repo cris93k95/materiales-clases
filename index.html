@@ -117,6 +117,53 @@
         .tag-guia { background: rgba(234,179,8,0.15); color: #facc15; }
         .tag-eval { background: rgba(239,68,68,0.15); color: #f87171; }
 
+        /* STATUS BADGES */
+        .status-badge {
+            font-size: 0.72em; padding: 3px 10px; border-radius: 5px;
+            font-weight: 600; margin-left: auto; flex-shrink: 0; white-space: nowrap;
+        }
+        .status-done { background: rgba(34,197,94,0.2); color: #4ade80; }
+        .status-pending { background: rgba(234,179,8,0.15); color: #facc15; }
+        .status-next { background: rgba(99,102,241,0.2); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.4); animation: pulseNext 2s infinite; }
+        @keyframes pulseNext { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+        .class-link.done { opacity: 0.65; }
+        .class-link.done .title { text-decoration: line-through; text-decoration-color: #4ade8066; }
+        .class-link.next { background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2); }
+
+        /* PROGRESS DASHBOARD */
+        .progress-dashboard {
+            background: #1e293b; border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px; padding: 20px; margin-bottom: 25px;
+        }
+        .progress-dashboard h3 { color: #f1f5f9; font-size: 1em; margin-bottom: 15px; }
+        .progress-stats { display: flex; gap: 15px; flex-wrap: wrap; }
+        .stat-card {
+            flex: 1; min-width: 100px; background: #0f172a;
+            border-radius: 10px; padding: 15px; text-align: center;
+            border: 1px solid rgba(255,255,255,0.04);
+        }
+        .stat-card .number { font-size: 1.8em; font-weight: 800; }
+        .stat-card .label { font-size: 0.75em; color: #64748b; margin-top: 4px; }
+        .stat-done .number { color: #4ade80; }
+        .stat-pending .number { color: #facc15; }
+        .stat-total .number { color: #818cf8; }
+
+        /* COURSE PROGRESS BAR */
+        .course-progress {
+            display: flex; align-items: center; gap: 10px;
+            margin-left: auto; flex-shrink: 0;
+        }
+        .progress-bar {
+            width: 80px; height: 6px; background: #1e293b;
+            border-radius: 3px; overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 100%; background: linear-gradient(90deg, #4ade80, #22c55e);
+            border-radius: 3px; transition: width 0.5s;
+        }
+        .progress-text { font-size: 0.75em; color: #64748b; white-space: nowrap; }
+
         /* EMPTY STATE */
         .empty-state {
             text-align: center; padding: 40px 20px; color: #475569;
@@ -173,6 +220,26 @@
 </div>
 
 <div class="container">
+
+    <!-- PROGRESS DASHBOARD -->
+    <div class="progress-dashboard" id="progressDashboard">
+        <h3>📊 Progreso General</h3>
+        <div class="progress-stats">
+            <div class="stat-card stat-done">
+                <div class="number" id="statDone">0</div>
+                <div class="label">Realizadas</div>
+            </div>
+            <div class="stat-card stat-pending">
+                <div class="number" id="statPending">0</div>
+                <div class="label">Pendientes</div>
+            </div>
+            <div class="stat-card stat-total">
+                <div class="number" id="statTotal">0</div>
+                <div class="label">Total</div>
+            </div>
+        </div>
+        <p style="font-size:0.78em; color:#475569; margin-top:12px;" id="lastUpdated"></p>
+    </div>
 
     <div class="search-bar">
         <span class="icon">🔍</span>
@@ -308,10 +375,11 @@
                     <span class="arrow">▶</span>
                 </div>
                 <div class="unit-classes">
-                    <a class="class-link" href="3ro-medio/3C-electricidad/u1/Clase_1_U1_3roC_Electricidad.html">
+                    <a class="class-link" href="3ro-medio/3C-electricidad/u1/Clase_1_U1_3roC_Electricidad.html" data-progress-id="3C-electricidad/u1/Clase_1">
                         <span class="num">1</span>
                         <span class="title">Clase 1 — Technical Vocabulary: Electrical Tools & Equipment</span>
                         <span class="tag tag-clase">Clase</span>
+                        <span class="status-badge status-pending" data-status-badge>⏳ Pendiente</span>
                     </a>
                 </div>
             </div>
@@ -332,10 +400,11 @@
                     <span class="arrow">▶</span>
                 </div>
                 <div class="unit-classes">
-                    <a class="class-link" href="3ro-medio/3D-grafica/u1/Clase_1_U1_3roD_Grafica.html">
+                    <a class="class-link" href="3ro-medio/3D-grafica/u1/Clase_1_U1_3roD_Grafica.html" data-progress-id="3D-grafica/u1/Clase_1">
                         <span class="num">1</span>
                         <span class="title">Clase 1 — Technical Vocabulary: Graphic Arts & Printing</span>
                         <span class="tag tag-clase">Clase</span>
+                        <span class="status-badge status-pending" data-status-badge>⏳ Pendiente</span>
                     </a>
                 </div>
             </div>
@@ -450,20 +519,73 @@
             return;
         }
 
-        // Show all levels when searching
         document.querySelectorAll('.level-content').forEach(c => c.classList.add('active'));
         document.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));
 
         sections.forEach(s => {
             const searchData = (s.dataset.search || '') + ' ' + s.textContent.toLowerCase();
             s.style.display = searchData.includes(query) ? '' : 'none';
-            // Auto-open units that have matches
             if (searchData.includes(query)) {
                 s.querySelectorAll('.unit-title').forEach(u => u.classList.add('open'));
                 s.querySelectorAll('.unit-classes').forEach(u => u.classList.add('open'));
             }
         });
     }
+
+    // ==================== PROGRESS TRACKING ====================
+    async function loadProgress() {
+        try {
+            const resp = await fetch('progress.json?t=' + Date.now());
+            if (!resp.ok) return;
+            const data = await resp.json();
+
+            let done = 0, pending = 0;
+            const allLinks = document.querySelectorAll('.class-link[data-progress-id]');
+            let firstPending = null;
+
+            allLinks.forEach(link => {
+                const id = link.dataset.progressId;
+                const entry = data.classes[id];
+                const badge = link.querySelector('[data-status-badge]');
+                if (!entry || !badge) return;
+
+                if (entry.status === 'done') {
+                    done++;
+                    badge.textContent = '✅ Realizada';
+                    badge.className = 'status-badge status-done';
+                    link.classList.add('done');
+                    link.classList.remove('next');
+                    if (entry.date) badge.title = 'Realizada el ' + entry.date;
+                } else {
+                    pending++;
+                    if (!firstPending) {
+                        firstPending = link;
+                        badge.textContent = '▶ Próxima';
+                        badge.className = 'status-badge status-next';
+                        link.classList.add('next');
+                        link.classList.remove('done');
+                    } else {
+                        badge.textContent = '⏳ Pendiente';
+                        badge.className = 'status-badge status-pending';
+                        link.classList.remove('done', 'next');
+                    }
+                }
+            });
+
+            document.getElementById('statDone').textContent = done;
+            document.getElementById('statPending').textContent = pending;
+            document.getElementById('statTotal').textContent = done + pending;
+
+            if (data.lastUpdated) {
+                document.getElementById('lastUpdated').textContent = '🕐 Última actualización: ' + data.lastUpdated;
+            }
+        } catch (e) {
+            console.log('Progress not available:', e);
+        }
+    }
+
+    // Load progress on page load
+    loadProgress();
 </script>
 
 </body>
