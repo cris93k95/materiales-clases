@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2 — 4°C — Electricidad</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #0d47a1, #1565c0); color: white; padding: 34px 20px; text-align: center; }
+        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
+        .card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+        .card h3 { color: #1565c0; margin-bottom: 8px; }
+        ul, ol { margin-left: 20px; }
+        li { margin-bottom: 7px; }
+        .section-title { color: white; font-weight: 600; padding: 10px 14px; border-radius: 8px; margin-bottom: 10px; display: inline-block; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #6a1b9a; }
+
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 10px; }
+        .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }
+        .vocab-card .word { font-weight: 700; color: #0d47a1; }
+        .vocab-card .meaning { font-size: 0.8em; color: #666; margin-top: 4px; display: none; }
+        .vocab-card.revealed .meaning { display: block; }
+        .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
+        .vocab-card.revealed .hint { display: none; }
+
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }
+        .task-box { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }
+        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+        .quiz-options { display: flex; gap: 10px; margin-top: 8px; }
+        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; }
+        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
+
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; }
+        .score { font-weight: 700; color: #1565c0; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>CLASS 2 — 4°C — ELECTRICIDAD</h1>
+    <div class="meta">
+        <span>📘 OA1 · OA3</span>
+        <span>⏱ 90 min</span>
+        <span>🧭 Guía de estudiante completa</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card"><h3>🎯 Objetivo de la clase</h3><p>Analizar un estudio de caso sobre la trayectoria profesional de un técnico de Electricidad, identificando hitos clave, habilidades requeridas y el rol del inglés en su carrera.</p></div>
+
+    <div class="card">
+        <div class="section-title inicio">Inicio (15 min)</div>
+        <ul><li>Warm-up: repaso de vocabulario con "Word Relay" — en equipos, cada estudiante dice una palabra técnica en inglés; el equipo con más palabras gana.</li><li>Pre-reading: "What steps does someone take to become a successful professional in electricidad?" — lluvia de ideas.</li><li>Se introduce el concepto de Case Study como herramienta de aprendizaje.</li></ul>
+    </div>
+
+    <div class="card">
+        <div class="section-title desarrollo">Desarrollo (60 min)</div>
+        <ul><li>Reading (25 min): Case Study: Powering a Career — María, a Chilean electrician, shares her career journey: technical school, apprenticeship in residential wiring, specialization in solar panel installation, and starting her own business. She uses English to read international electrical codes. Lectura guiada con pausas. Los estudiantes completan una tabla: Stage (education, internship, first job, specialization) Skills developed at each stage Role of English at each stage Challenges faced</li><li>Stage (education, internship, first job, specialization)</li><li>Skills developed at each stage</li><li>Role of English at each stage</li><li>Challenges faced</li><li>Comprehension (15 min): 8 preguntas: 4 explícitas + 4 de análisis crítico ( "Why was English important for his/her career?" , "What would you do differently?" ).</li></ul>
+
+        <h3 style="margin-top:14px;">📖 Activity 1 — Vocabulary Review</h3>
+        <div class="vocab-grid">
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">three-phase power</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">circuit breaker</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">transformer</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">voltage regulator</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">switchgear</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">load calculation</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            </div>
+
+        <h3 style="margin-top:14px;">📚 Activity 2 — Reading</h3>
+        <div class="reading-box"><p>Rocío built her career through internships in residential and industrial electrical projects.</p><p>She learned load calculation, transformer maintenance, and protection system testing.</p><p>English was key to understanding electrical codes and technical documentation.</p></div>
+
+        <h3 style="margin-top:14px;">📝 Activity 3 — Comprehension Questions</h3>
+        <div class="task-box">
+    <ol>
+        <li>What is the main job/task described in the text?</li>
+        <li>Which technical tools or systems are mentioned?</li>
+        <li>What sequence of actions appears in the routine?</li>
+        <li>Why is English useful in this professional context?</li>
+        <li>What challenge does the professional face and how is it solved?</li>
+        <li>What skill from this text is relevant for your own future career?</li>
+    </ol>
+    </div>
+
+        <h3 style="margin-top:14px;">📊 Activity 4 — Task / Tool / Time Table</h3>
+        <div class="task-box">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr><th style="border:1px solid #ddd; padding:8px;">Task</th><th style="border:1px solid #ddd; padding:8px;">Tool/System</th><th style="border:1px solid #ddd; padding:8px;">Time of day</th></tr>
+                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
+                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
+                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
+            </table>
+        </div>
+
+        <h3 style="margin-top:14px;">✅ Activity 5 — True/False Check</h3>
+        
+    <div class="quiz-item"><p>1. The text describes professional technical tasks.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button></div></div>
+    <div class="quiz-item"><p>2. English is not necessary in technical jobs.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,true)">FALSE</button></div></div>
+    <div class="quiz-item"><p>3. The routine includes specific tools and procedures.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button></div></div>
+    
+
+        <h3 style="margin-top:14px;">🗣 Activity 6 — Speaking Frames</h3>
+        <div class="task-box">
+            <p><strong>Use these frames in pairs:</strong></p>
+            <ul>
+                <li>"Every day, the technician checks ..."</li>
+                <li>"First ..., then ..., finally ..."</li>
+                <li>"The most important skill is ... because ..."</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="section-title cierre">Cierre (15 min)</div>
+        <ul><li>Reflexión escrita (3 líneas): "What is the most important lesson from this case study for my own career?"</li><li>Preview: "Next class, we will build your professional CV in English."</li></ul>
+        <h3 style="margin-top:10px;">🎫 Exit Ticket</h3>
+        <input class="ticket-input" placeholder="Write 3 new words from today + meaning" />
+        <input class="ticket-input" placeholder="Reflection: What was the most useful skill in this lesson?" />
+        <p class="score" id="totalScore" style="margin-top:8px;">0 / 3 puntos</p>
+    </div>
+</div>
+
+<script>
+    let score = 0;
+    function checkAnswer(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b !== btn) b.classList.add('correct'); }); }
+        document.getElementById('totalScore').textContent = score + ' / 3 puntos';
+    }
+</script>
+</body>
+</html>

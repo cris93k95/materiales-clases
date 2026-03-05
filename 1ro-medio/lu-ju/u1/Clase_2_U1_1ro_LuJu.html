@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #0d47a1, #1565c0); color: white; padding: 34px 20px; text-align: center; }
+        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
+        .card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+        .card h3 { color: #1565c0; margin-bottom: 8px; }
+        ul, ol { margin-left: 20px; }
+        li { margin-bottom: 7px; }
+        .section-title { color: white; font-weight: 600; padding: 10px 14px; border-radius: 8px; margin-bottom: 10px; display: inline-block; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #6a1b9a; }
+
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 10px; }
+        .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }
+        .vocab-card .word { font-weight: 700; color: #0d47a1; }
+        .vocab-card .meaning { font-size: 0.8em; color: #666; margin-top: 4px; display: none; }
+        .vocab-card.revealed .meaning { display: block; }
+        .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
+        .vocab-card.revealed .hint { display: none; }
+
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }
+        .task-box { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }
+        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+        .quiz-options { display: flex; gap: 10px; margin-top: 8px; }
+        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; }
+        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
+
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; }
+        .score { font-weight: 700; color: #1565c0; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>CLASS 2 — 1° MEDIO — INGLÉS GENERAL (LU+JU)</h1>
+    <div class="meta">
+        <span>📘 OA1 · OA3</span>
+        <span>⏱ 90 min</span>
+        <span>🧭 Guía de estudiante completa</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card"><h3>🎯 Objetivo de la clase</h3><p>Reconocer y categorizar vocabulario técnico básico de herramientas comunes a las cinco especialidades técnico-profesionales.</p></div>
+
+    <div class="card">
+        <div class="section-title inicio">Inicio (15 min)</div>
+        <ul><li>Proyectar imagen de un taller desordenado con diversas herramientas. Preguntar: "What can you see? Name everything you recognize in English."</li><li>Brainstorm colectivo en la pizarra: organizar las respuestas de los estudiantes en una nube de palabras.</li><li>Pregunta motivadora: "A mechanic, an electrician, and an electronics technician walk into a workshop. Which tools does each one need?"</li></ul>
+    </div>
+
+    <div class="card">
+        <div class="section-title desarrollo">Desarrollo (60 min)</div>
+        <ul><li>Vocabulary presentation (20 min): Presentación con imágenes y pronunciación guiada de 20 herramientas y equipos: hammer, screwdriver, wrench, pliers, drill, multimeter, soldering iron, measuring tape, safety goggles, gloves, helmet, wire cutter, welding torch, caliper, saw, sandpaper, level, clamp, socket set, Allen key . Los estudiantes repiten pronunciación y escriben las palabras en su cuaderno con un dibujo simple.</li><li>Reading (20 min): Texto corto: "The Right Tool for the Right Job" — Texto descriptivo donde un supervisor de taller explica la importancia de elegir la herramienta correcta. Los estudiantes subrayan todas las herramientas mencionadas y responden: What happens when you use the wrong tool?</li><li>Categorización grupal (20 min): En grupos de 4-5, los estudiantes reciben tarjetas con las 20 herramientas y deben clasificarlas en un diagrama de Venn con las 5 especialidades. Discuten: "Some tools belong to more than one specialty!" Pegan las tarjetas en un papelógrafo.</li></ul>
+
+        <h3 style="margin-top:14px;">📖 Activity 1 — Vocabulary Review</h3>
+        <div class="vocab-grid">
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">hammer</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">screwdriver</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">wrench</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">wire</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">circuit</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">engine</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">battery</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">tool</div>
+                <div class="meaning">Repasar definición en clase</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            </div>
+
+        <h3 style="margin-top:14px;">📚 Activity 2 — Reading</h3>
+        <div class="reading-box"><p>Sofía is a first-year technical student. Every day, she learns about tools and safety rules in the workshop.</p><p>In class, she reads a short text about a mechanic who checks engines, changes oil, and uses different tools.</p><p>After reading, she identifies key words and explains what each tool is used for.</p></div>
+
+        <h3 style="margin-top:14px;">📝 Activity 3 — Comprehension Questions</h3>
+        <div class="task-box">
+    <ol>
+        <li>What is the main job/task described in the text?</li>
+        <li>Which technical tools or systems are mentioned?</li>
+        <li>What sequence of actions appears in the routine?</li>
+        <li>Why is English useful in this professional context?</li>
+        <li>What challenge does the professional face and how is it solved?</li>
+        <li>What skill from this text is relevant for your own future career?</li>
+    </ol>
+    </div>
+
+        <h3 style="margin-top:14px;">📊 Activity 4 — Task / Tool / Time Table</h3>
+        <div class="task-box">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr><th style="border:1px solid #ddd; padding:8px;">Task</th><th style="border:1px solid #ddd; padding:8px;">Tool/System</th><th style="border:1px solid #ddd; padding:8px;">Time of day</th></tr>
+                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
+                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
+                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
+            </table>
+        </div>
+
+        <h3 style="margin-top:14px;">✅ Activity 5 — True/False Check</h3>
+        
+    <div class="quiz-item"><p>1. The text describes professional technical tasks.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button></div></div>
+    <div class="quiz-item"><p>2. English is not necessary in technical jobs.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,true)">FALSE</button></div></div>
+    <div class="quiz-item"><p>3. The routine includes specific tools and procedures.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button></div></div>
+    
+
+        <h3 style="margin-top:14px;">🗣 Activity 6 — Speaking Frames</h3>
+        <div class="task-box">
+            <p><strong>Use these frames in pairs:</strong></p>
+            <ul>
+                <li>"Every day, the technician checks ..."</li>
+                <li>"First ..., then ..., finally ..."</li>
+                <li>"The most important skill is ... because ..."</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="section-title cierre">Cierre (15 min)</div>
+        <ul><li>Juego: "Guess the tool" — El docente describe una herramienta sin nombrarla ( "It's a small device that measures voltage, current, and resistance" ), los estudiantes adivinan.</li><li>Luego, 3-4 estudiantes voluntarios hacen lo mismo para sus compañeros.</li><li>Ticket de salida: "Write 3 tools you use (or will use) in your specialty."</li></ul>
+        <h3 style="margin-top:10px;">🎫 Exit Ticket</h3>
+        <input class="ticket-input" placeholder="Write 3 new words from today + meaning" />
+        <input class="ticket-input" placeholder="Reflection: What was the most useful skill in this lesson?" />
+        <p class="score" id="totalScore" style="margin-top:8px;">0 / 3 puntos</p>
+    </div>
+</div>
+
+<script>
+    let score = 0;
+    function checkAnswer(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b !== btn) b.classList.add('correct'); }); }
+        document.getElementById('totalScore').textContent = score + ' / 3 puntos';
+    }
+</script>
+</body>
+</html>
