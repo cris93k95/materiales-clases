@@ -9,15 +9,14 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
         .header { background: linear-gradient(135deg, #1565c0, #1e88e5); color: white; padding: 35px 20px; text-align: center; }
-        .header h1 { font-size: 1.8em; font-weight: 700; margin-bottom: 5px; }
-        .header h2 { font-size: 1.15em; font-weight: 300; margin-bottom: 8px; }
+        .header h1 { font-size: 1.9em; font-weight: 700; margin-bottom: 5px; }
+        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
         .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 12px; }
         .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
-        .container { max-width: 920px; margin: 25px auto; padding: 0 15px; }
+        .container { max-width: 920px; margin: 24px auto; padding: 0 15px; }
 
         .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #1565c0; }
         .objective-card h3 { color: #1565c0; margin-bottom: 8px; }
-        .objective-en { background: #e3f2fd; padding: 10px 14px; border-radius: 8px; margin-top: 10px; font-style: italic; color: #0d47a1; }
 
         .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
         .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
@@ -25,11 +24,9 @@
         .desarrollo { background: #1565c0; }
         .cierre { background: #6a1b9a; }
         .section-body { padding: 18px 22px; }
+
         .section-body ul { margin-left: 18px; }
         .section-body li { margin-bottom: 8px; }
-
-        .task-card { background: #f5f5f5; border: 1px solid #e0e0e0; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
-        .task-card input { margin-right: 8px; }
 
         .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 12px; }
         .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }
@@ -39,8 +36,20 @@
         .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
         .vocab-card.revealed .hint { display: none; }
 
+        .matching-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 12px; }
+        .match-item { background: white; border: 2px solid #e0e0e0; border-radius: 8px; padding: 11px; text-align: center; margin-bottom: 8px; cursor: pointer; }
+        .match-item:hover { border-color: #1565c0; }
+        .match-item.selected { border-color: #1565c0; background: #e3f2fd; }
+        .match-item.matched { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; }
+
         .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
         .reading-box h4 { color: #1565c0; margin-bottom: 8px; }
+
+        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+        .quiz-options { display: flex; gap: 10px; margin-top: 8px; }
+        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; }
+        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
 
         .ticket-box { background: linear-gradient(135deg, #ede7f6, #e3f2fd); border: 2px dashed #1565c0; border-radius: 12px; padding: 18px; }
         .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; }
@@ -56,8 +65,8 @@
     <h2>Unidad 1 — The World of Technical Work</h2>
     <div class="meta">
         <span>📘 OA9</span>
-        <span>⏱ 90 minutos</span>
-        <span>🧭 Material de clase</span>
+        <span>⏱ 90 min</span>
+        <span>🧭 Guía de estudiante</span>
     </div>
 </div>
 
@@ -65,32 +74,156 @@
     <div class="objective-card">
         <h3>🎯 Objetivo de la clase</h3>
         <p>Identificar el nivel de competencia en inglés de los estudiantes mediante una evaluación diagnóstica integrada con contexto técnico-profesional.</p>
-        <div class="objective-en">Class focus: active vocabulary + guided practice + exit ticket.</div>
     </div>
 
     <div class="section">
         <div class="section-header inicio">🟢 Inicio (15 min)</div>
-        <div class="section-body"><ul><li>El docente se presenta en inglés de manera simple y clara: "Hello! My name is… I am your English teacher this year."</li><li>Hace preguntas básicas a algunos estudiantes: "What's your name? How old are you? What specialty are you interested in?"</li><li>Escribe en la pizarra: "This year, we will learn English for YOUR career." Explica brevemente la dinámica del curso: inglés conectado a las especialidades TP.</li><li>Activa conocimientos previos: "What English words related to technical work do you already know?" Brainstorm en la pizarra.</li></ul></div>
+        <div class="section-body">
+            <ul><li>Presentación del docente en inglés y contexto del curso técnico-profesional.</li><li>Preguntas breves: name, age, interests, preferred specialty.</li><li>Lluvia de ideas: palabras en inglés que ya conocen del mundo técnico.</li></ul>
+        </div>
     </div>
 
     <div class="section">
         <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
         <div class="section-body">
-            <div class="task-card"><label><input type="checkbox" class="task-check"/> Reading comprehension (20 min): Texto corto adaptado: "Carlos works at a small automotive workshop in Santiago. Every day, he checks engines, changes oil, and repairs brakes…" Los estudiantes responden 5 preguntas de comprensión (opción múltiple + respuesta breve).</label></div><div class="task-card"><label><input type="checkbox" class="task-check"/> Vocabulary matching (15 min): Actividad de asociación imagen-palabra con 15 herramientas y equipos técnicos comunes (hammer, screwdriver, wrench, wire, circuit, printer, etc.).</label></div><div class="task-card"><label><input type="checkbox" class="task-check"/> Oral assessment (25 min): En parejas, los estudiantes realizan una breve conversación guiada: "Tell your partner: your name, your age, one hobby, and which specialty you like." El docente circula escuchando y registrando niveles de producción oral.</label></div>
-            <h4 style="margin-top:12px; color:#1565c0;">📖 Vocabulary Cards</h4><div class="vocab-grid"><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">screwdriver</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">wrench</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">wire</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">circuit</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">printer</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div><div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">etc</div><div class="meaning">Definición/traducción trabajada en clase</div><div class="hint">clic para marcar aprendida</div></div></div>
-            <div class="reading-box">
-                <h4>📚 Reading Organizer — Tell your partner: your name, your age, one hobby, and which specialty you like.</h4>
-                <p><strong>Before reading:</strong> What do you think this text is about?</p>
-                <p><strong>While reading:</strong> Underline key words and verbs.</p>
-                <p><strong>After reading:</strong> Write 3 key ideas from the text.</p>
+            <h4>📖 Activity 1: Vocabulary</h4>
+            <p>Haz clic en cada tarjeta para ver la traducción y estudiar vocabulario técnico.</p>
+            <div class="vocab-grid">
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">hammer</div>
+                <div class="meaning">martillo</div>
+                <div class="hint">👆 clic para ver</div>
             </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">screwdriver</div>
+                <div class="meaning">destornillador</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">wrench</div>
+                <div class="meaning">llave</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">wire</div>
+                <div class="meaning">cable</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">circuit</div>
+                <div class="meaning">circuito</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">printer</div>
+                <div class="meaning">impresora</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">engine</div>
+                <div class="meaning">motor</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">brake</div>
+                <div class="meaning">freno</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">panel</div>
+                <div class="meaning">panel</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">switch</div>
+                <div class="meaning">interruptor</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">battery</div>
+                <div class="meaning">batería</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">tool</div>
+                <div class="meaning">herramienta</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            </div>
+
+            <h4 style="margin-top:14px;">🔗 Activity 2: Matching</h4>
+            <p>Relaciona descripción y término técnico.</p>
+            <div class="matching-grid">
+                <div><div class="match-item" data-match="A" onclick="selectMatch(this,'left')">Used to hit nails</div><div class="match-item" data-match="B" onclick="selectMatch(this,'left')">Used to tighten bolts</div><div class="match-item" data-match="C" onclick="selectMatch(this,'left')">Carries electricity</div><div class="match-item" data-match="D" onclick="selectMatch(this,'left')">Electrical path</div><div class="match-item" data-match="E" onclick="selectMatch(this,'left')">Stores electrical energy</div></div>
+                <div><div class="match-item" data-match="A" onclick="selectMatch(this,'right')">hammer</div><div class="match-item" data-match="B" onclick="selectMatch(this,'right')">wrench</div><div class="match-item" data-match="C" onclick="selectMatch(this,'right')">wire</div><div class="match-item" data-match="D" onclick="selectMatch(this,'right')">circuit</div><div class="match-item" data-match="E" onclick="selectMatch(this,'right')">battery</div></div>
+            </div>
+            <p id="matchScore" style="font-weight:600;color:#2e7d32;"></p>
+
+            <h4 style="margin-top:14px;">📚 Activity 3: Reading</h4>
+            <div class="reading-box">
+                <h4>Carlos at the Workshop</h4>
+                <p>Carlos works at a small automotive workshop in Santiago. Every morning, he checks the engine and prepares his tools.</p><p>He changes oil, inspects the brakes, and uses a wrench and screwdriver to adjust parts. He also checks the battery and electrical circuit.</p><p>At the end of the day, Carlos writes a short report and cleans the work area. Technical English helps him read manuals and safety instructions.</p>
+            </div>
+
+            <h4 style="margin-top:14px;">✅ Activity 4: True or False</h4>
+            
+            <div class="quiz-item">
+                <p>1. Carlos works in a workshop in Santiago.</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button>
+                </div>
+            </div>
+            
+            <div class="quiz-item">
+                <p>2. He repairs computers all day.</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">TRUE</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">FALSE</button>
+                </div>
+            </div>
+            
+            <div class="quiz-item">
+                <p>3. He checks brakes and oil.</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button>
+                </div>
+            </div>
+            
+            <div class="quiz-item">
+                <p>4. English is not useful for manuals.</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">TRUE</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">FALSE</button>
+                </div>
+            </div>
+            
+            <div class="quiz-item">
+                <p>5. Carlos uses technical tools at work.</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button>
+                </div>
+            </div>
+            
         </div>
     </div>
 
     <div class="section">
         <div class="section-header cierre">🟣 Cierre (15 min)</div>
         <div class="section-body">
-            <ul><li>Puesta en común: "What was easy? What was difficult?" Los estudiantes comparten sus impresiones sobre la evaluación.</li><li>Presentación del programa del año: el docente muestra brevemente ejemplos reales de manuales técnicos en inglés, videos de diagnóstico automotriz en inglés, instrucciones de equipos electrónicos en inglés.</li><li>Mensaje motivador: "English is a tool for your career. This year, you will learn to read technical texts and speak about your specialty."</li></ul>
             <div class="ticket-box">
                 <h4>🎫 Exit Ticket</h4>
                 <input class="ticket-input" placeholder="1) New word + meaning" />
@@ -98,28 +231,47 @@
                 <input class="ticket-input" placeholder="3) New word + meaning" />
                 <input class="ticket-input" placeholder="4) New word + meaning" />
                 <input class="ticket-input" placeholder="5) New word + meaning" />
-                <input class="ticket-input" placeholder="Reflection: Why is it important to know English in your career?" />
+                <input class="ticket-input" placeholder="Reflection: Why is English important for your future technical career?" />
             </div>
         </div>
     </div>
 
-    <div class="score-bar">
-        <span>📊 Progreso de actividades completadas:</span>
-        <span class="score" id="progressScore">0</span>
-    </div>
-
+    <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 10</span></div>
     <div class="footer">1° Medio — Inglés General (Lu+Ju) — Clase 1, Unidad 1 — Inglés 2026</div>
 </div>
 
 <script>
-    const checks = document.querySelectorAll('.task-check');
+    let score = 0;
     function updateScore() {
-        let done = 0;
-        checks.forEach(c => { if (c.checked) done++; });
-        document.getElementById('progressScore').textContent = done + ' / ' + checks.length;
+        document.getElementById('totalScore').textContent = score + ' / 10';
     }
-    checks.forEach(c => c.addEventListener('change', updateScore));
-    updateScore();
+
+    function checkAnswer(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b !== btn) b.classList.add('correct'); }); }
+        updateScore();
+    }
+
+    let selectedLeft = null, selectedRight = null, matches = 0;
+    function selectMatch(el, side) {
+        if (el.classList.contains('matched')) return;
+        if (side === 'left') { if (selectedLeft) selectedLeft.classList.remove('selected'); selectedLeft = el; el.classList.add('selected'); }
+        else { if (selectedRight) selectedRight.classList.remove('selected'); selectedRight = el; el.classList.add('selected'); }
+
+        if (selectedLeft && selectedRight) {
+            if (selectedLeft.dataset.match === selectedRight.dataset.match) {
+                selectedLeft.classList.remove('selected'); selectedRight.classList.remove('selected');
+                selectedLeft.classList.add('matched'); selectedRight.classList.add('matched');
+                matches++; score++; updateScore();
+                if (matches === 5) document.getElementById('matchScore').textContent = '🎉 ¡Matching completo!';
+            } else {
+                selectedLeft.classList.remove('selected'); selectedRight.classList.remove('selected');
+            }
+            selectedLeft = null; selectedRight = null;
+        }
+    }
 </script>
 </body>
 </html>
