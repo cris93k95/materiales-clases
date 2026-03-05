@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📚 Materiales de Clases — Inglés 2026</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>📚 Materiales de Clases — Inglés 2026</title>
+<style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
@@ -208,293 +209,244 @@
     </style>
 </head>
 <body>
-
 <div class="hero">
-    <h1>📚 Materiales de Clases</h1>
-    <p>Inglés — Liceo Técnico Profesional — 2026</p>
-    <div class="badge-row">
-        <span class="badge">📱 Acceso desde cualquier dispositivo</span>
-        <span class="badge">🔄 Actualización automática</span>
-        <span class="badge">📂 Organizado por curso</span>
-    </div>
+<h1>📚 Materiales de Clases</h1>
+<p>Inglés — Liceo Técnico Profesional — 2026</p>
+<div class="badge-row">
+<span class="badge">📱 Acceso desde cualquier dispositivo</span>
+<span class="badge">🔄 Actualización automática</span>
+<span class="badge">📂 Organizado por curso</span>
 </div>
-
+</div>
 <div class="container">
-
-    <!-- PROGRESS DASHBOARD -->
-    <div class="progress-dashboard" id="progressDashboard">
-        <h3>📊 Progreso General</h3>
-        <div class="progress-stats">
-            <div class="stat-card stat-done">
-                <div class="number" id="statDone">0</div>
-                <div class="label">Realizadas</div>
-            </div>
-            <div class="stat-card stat-pending">
-                <div class="number" id="statPending">0</div>
-                <div class="label">Pendientes</div>
-            </div>
-            <div class="stat-card stat-total">
-                <div class="number" id="statTotal">0</div>
-                <div class="label">Total</div>
-            </div>
-        </div>
-        <p style="font-size:0.78em; color:#475569; margin-top:12px;" id="lastUpdated"></p>
-    </div>
-
-    <div class="search-bar">
-        <span class="icon">🔍</span>
-        <input type="text" id="searchInput" placeholder="Buscar material por nombre, unidad o especialidad..." oninput="filterMaterials()">
-    </div>
-
-    <div class="level-tabs">
-        <button class="level-tab active" onclick="switchLevel('1ro')">1° Medio</button>
-        <button class="level-tab" onclick="switchLevel('3ro')">3° Medio</button>
-        <button class="level-tab" onclick="switchLevel('4to')">4° Medio</button>
-    </div>
-
-    <!-- ======================== 1° MEDIO ======================== -->
-    <div class="level-content active" id="level-1ro">
-        <div class="course-section">
-            <div class="course-header">
-                <div class="course-icon color-general">📘</div>
-                <div>
-                    <h3>1° Medio — Inglés General</h3>
-                    <span>Plan común — Todos los cursos</span>
-                </div>
-            </div>
-
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)">
-                    <span>📁 Unidad 1 — Communication & Daily Life</span>
-                    <span class="arrow">▶</span>
-                </div>
-                <div class="unit-classes">
-                    <div class="empty-state">
-                        <div class="icon">🚧</div>
-                        <p>Materiales en preparación</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)">
-                    <span>📁 Unidad 2</span>
-                    <span class="arrow">▶</span>
-                </div>
-                <div class="unit-classes">
-                    <div class="empty-state">
-                        <div class="icon">🚧</div>
-                        <p>Materiales en preparación</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)">
-                    <span>📁 Unidad 3</span>
-                    <span class="arrow">▶</span>
-                </div>
-                <div class="unit-classes">
-                    <div class="empty-state">
-                        <div class="icon">🚧</div>
-                        <p>Materiales en preparación</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)">
-                    <span>📁 Unidad 4</span>
-                    <span class="arrow">▶</span>
-                </div>
-                <div class="unit-classes">
-                    <div class="empty-state">
-                        <div class="icon">🚧</div>
-                        <p>Materiales en preparación</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ======================== 3° MEDIO ======================== -->
-    <div class="level-content" id="level-3ro">
-
-        <!-- 3°A MEC INDUSTRIAL -->
-        <div class="course-section" data-search="3ro a mecanica industrial">
-            <div class="course-header">
-                <div class="course-icon color-mec-ind">⚙️</div>
-                <div>
-                    <h3>3°A — Mecánica Industrial</h3>
-                    <span>Especialidad técnica</span>
-                </div>
-            </div>
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)">
-                    <span>📁 Unidad 1 — Technical Skills & Career Paths</span>
-                    <span class="arrow">▶</span>
-                </div>
-                <div class="unit-classes">
-                    <div class="empty-state"><div class="icon">🚧</div><p>Materiales en preparación</p></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3°B MEC AUTOMOTRIZ -->
-        <div class="course-section" data-search="3ro b mecanica automotriz">
-            <div class="course-header">
-                <div class="course-icon color-mec-auto">🚗</div>
-                <div>
-                    <h3>3°B — Mecánica Automotriz</h3>
-                    <span>Especialidad técnica</span>
-                </div>
-            </div>
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)">
-                    <span>📁 Unidad 1 — Technical Skills & Career Paths</span>
-                    <span class="arrow">▶</span>
-                </div>
-                <div class="unit-classes">
-                    <div class="empty-state"><div class="icon">🚧</div><p>Materiales en preparación</p></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3°C ELECTRICIDAD -->
-        <div class="course-section" data-search="3ro c electricidad">
-            <div class="course-header">
-                <div class="course-icon color-elec">⚡</div>
-                <div>
-                    <h3>3°C — Electricidad</h3>
-                    <span>Especialidad técnica</span>
-                </div>
-            </div>
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)">
-                    <span>📁 Unidad 1 — Technical Skills & Career Paths</span>
-                    <span class="arrow">▶</span>
-                </div>
-                <div class="unit-classes">
-                    <a class="class-link" href="3ro-medio/3C-electricidad/u1/Clase_1_U1_3roC_Electricidad.html" data-progress-id="3C-electricidad/u1/Clase_1">
-                        <span class="num">1</span>
-                        <span class="title">Clase 1 — Technical Vocabulary: Electrical Tools & Equipment</span>
-                        <span class="tag tag-clase">Clase</span>
-                        <span class="status-badge status-pending" data-status-badge>⏳ Pendiente</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3°D GRÁFICA -->
-        <div class="course-section" data-search="3ro d grafica">
-            <div class="course-header">
-                <div class="course-icon color-graf">🎨</div>
-                <div>
-                    <h3>3°D — Gráfica</h3>
-                    <span>Especialidad técnica</span>
-                </div>
-            </div>
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)">
-                    <span>📁 Unidad 1 — Technical Skills & Career Paths</span>
-                    <span class="arrow">▶</span>
-                </div>
-                <div class="unit-classes">
-                    <a class="class-link" href="3ro-medio/3D-grafica/u1/Clase_1_U1_3roD_Grafica.html" data-progress-id="3D-grafica/u1/Clase_1">
-                        <span class="num">1</span>
-                        <span class="title">Clase 1 — Technical Vocabulary: Graphic Arts & Printing</span>
-                        <span class="tag tag-clase">Clase</span>
-                        <span class="status-badge status-pending" data-status-badge>⏳ Pendiente</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3°E ELECTRÓNICA -->
-        <div class="course-section" data-search="3ro e electronica">
-            <div class="course-header">
-                <div class="course-icon color-electron">🔌</div>
-                <div>
-                    <h3>3°E — Electrónica</h3>
-                    <span>Especialidad técnica</span>
-                </div>
-            </div>
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)">
-                    <span>📁 Unidad 1 — Technical Skills & Career Paths</span>
-                    <span class="arrow">▶</span>
-                </div>
-                <div class="unit-classes">
-                    <div class="empty-state"><div class="icon">🚧</div><p>Materiales en preparación</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ======================== 4° MEDIO ======================== -->
-    <div class="level-content" id="level-4to">
-
-        <div class="course-section" data-search="4to a mecanica industrial">
-            <div class="course-header">
-                <div class="course-icon color-mec-ind">⚙️</div>
-                <div><h3>4°A — Mecánica Industrial</h3><span>Especialidad técnica</span></div>
-            </div>
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)"><span>📁 Unidad 1</span><span class="arrow">▶</span></div>
-                <div class="unit-classes"><div class="empty-state"><div class="icon">🚧</div><p>Materiales en preparación</p></div></div>
-            </div>
-        </div>
-
-        <div class="course-section" data-search="4to b mecanica automotriz">
-            <div class="course-header">
-                <div class="course-icon color-mec-auto">🚗</div>
-                <div><h3>4°B — Mecánica Automotriz</h3><span>Especialidad técnica</span></div>
-            </div>
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)"><span>📁 Unidad 1</span><span class="arrow">▶</span></div>
-                <div class="unit-classes"><div class="empty-state"><div class="icon">🚧</div><p>Materiales en preparación</p></div></div>
-            </div>
-        </div>
-
-        <div class="course-section" data-search="4to c electricidad">
-            <div class="course-header">
-                <div class="course-icon color-elec">⚡</div>
-                <div><h3>4°C — Electricidad</h3><span>Especialidad técnica</span></div>
-            </div>
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)"><span>📁 Unidad 1</span><span class="arrow">▶</span></div>
-                <div class="unit-classes"><div class="empty-state"><div class="icon">🚧</div><p>Materiales en preparación</p></div></div>
-            </div>
-        </div>
-
-        <div class="course-section" data-search="4to d grafica">
-            <div class="course-header">
-                <div class="course-icon color-graf">🎨</div>
-                <div><h3>4°D — Gráfica</h3><span>Especialidad técnica</span></div>
-            </div>
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)"><span>📁 Unidad 1</span><span class="arrow">▶</span></div>
-                <div class="unit-classes"><div class="empty-state"><div class="icon">🚧</div><p>Materiales en preparación</p></div></div>
-            </div>
-        </div>
-
-        <div class="course-section" data-search="4to e electronica">
-            <div class="course-header">
-                <div class="course-icon color-electron">🔌</div>
-                <div><h3>4°E — Electrónica</h3><span>Especialidad técnica</span></div>
-            </div>
-            <div class="unit-group">
-                <div class="unit-title" onclick="toggleUnit(this)"><span>📁 Unidad 1</span><span class="arrow">▶</span></div>
-                <div class="unit-classes"><div class="empty-state"><div class="icon">🚧</div><p>Materiales en preparación</p></div></div>
-            </div>
-        </div>
-    </div>
+<!-- PROGRESS DASHBOARD -->
+<div class="progress-dashboard" id="progressDashboard">
+<h3>📊 Progreso General</h3>
+<div class="progress-stats">
+<div class="stat-card stat-done">
+<div class="number" id="statDone">0</div>
+<div class="label">Realizadas</div>
 </div>
-
+<div class="stat-card stat-pending">
+<div class="number" id="statPending">0</div>
+<div class="label">Pendientes</div>
+</div>
+<div class="stat-card stat-total">
+<div class="number" id="statTotal">0</div>
+<div class="label">Total</div>
+</div>
+</div>
+<p id="lastUpdated" style="font-size:0.78em; color:#475569; margin-top:12px;"></p>
+</div>
+<div class="search-bar">
+<span class="icon">🔍</span>
+<input id="searchInput" oninput="filterMaterials()" placeholder="Buscar material por nombre, unidad o especialidad..." type="text"/>
+</div>
+<div class="level-tabs">
+<button class="level-tab active" onclick="switchLevel('1ro')">1° Medio</button>
+<button class="level-tab" onclick="switchLevel('3ro')">3° Medio</button>
+<button class="level-tab" onclick="switchLevel('4to')">4° Medio</button>
+</div>
+<!-- ======================== 1° MEDIO ======================== -->
+<div class="level-content active" id="level-1ro">
+<div class="course-section">
+<div class="course-header">
+<div class="course-icon color-general">📘</div>
+<div>
+<h3>1° Medio — Inglés General</h3>
+<span>Plan común — Todos los cursos</span>
+</div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)">
+<span>📁 Unidad 1 — The World of Technical Work</span>
+<span class="arrow">▶</span>
+</div>
+<div class="unit-classes"><a class="class-link" data-progress-id="1ro-lu-ju/u1/Clase_1" href="1ro-medio/lu-ju/u1/Clase_1_U1_1ro_LuJu.html"><span class="num">1</span><span class="title">Clase 1 — Identificar el nivel de competencia en inglés de los estudiantes mediante una...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="1ro-lu-ju/u1/Clase_2" href="1ro-medio/lu-ju/u1/Clase_2_U1_1ro_LuJu.html"><span class="num">2</span><span class="title">Clase 2 — Reconocer y categorizar vocabulario técnico básico de herramientas comunes a...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="1ro-lu-ju/u1/Clase_3" href="1ro-medio/lu-ju/u1/Clase_3_U1_1ro_LuJu.html"><span class="num">3</span><span class="title">Clase 3 — Comprender información explícita en un texto descriptivo sobre un taller auto...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="1ro-lu-ju/u1/Clase_4" href="1ro-medio/lu-ju/u1/Clase_4_U1_1ro_LuJu.html"><span class="num">4</span><span class="title">Clase 4 — Comprender información específica en un estudio de caso sobre seguridad en me...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="1ro-lu-ju/u1/Clase_5" href="1ro-medio/lu-ju/u1/Clase_5_U1_1ro_LuJu.html"><span class="num">5</span><span class="title">Clase 5 — Aplicar estrategias de lectura (pre-lectura, lectura y post-lectura) para com...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="1ro-lu-ju/u1/Clase_6" href="1ro-medio/lu-ju/u1/Clase_6_U1_1ro_LuJu.html"><span class="num">6</span><span class="title">Clase 6 — Comprender un texto instructivo sobre el armado de un circuito electrónico si...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="1ro-lu-ju/u1/Clase_7" href="1ro-medio/lu-ju/u1/Clase_7_U1_1ro_LuJu.html"><span class="num">7</span><span class="title">Clase 7 — Comprender un texto descriptivo sobre los procesos de la industria gráfica e...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="1ro-lu-ju/u1/Clase_8" href="1ro-medio/lu-ju/u1/Clase_8_U1_1ro_LuJu.html"><span class="num">8</span><span class="title">Clase 8 — Sintetizar y aplicar el vocabulario técnico de las cinco especialidades en ac...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a></div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)">
+<span>📁 Unidad 2</span>
+<span class="arrow">▶</span>
+</div>
+<div class="unit-classes">
+<div class="empty-state">
+<div class="icon">🚧</div>
+<p>Materiales en preparación</p>
+</div>
+</div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)">
+<span>📁 Unidad 3</span>
+<span class="arrow">▶</span>
+</div>
+<div class="unit-classes">
+<div class="empty-state">
+<div class="icon">🚧</div>
+<p>Materiales en preparación</p>
+</div>
+</div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)">
+<span>📁 Unidad 4</span>
+<span class="arrow">▶</span>
+</div>
+<div class="unit-classes">
+<div class="empty-state">
+<div class="icon">🚧</div>
+<p>Materiales en preparación</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ======================== 3° MEDIO ======================== -->
+<div class="level-content" id="level-3ro">
+<!-- 3°A MEC INDUSTRIAL -->
+<div class="course-section" data-search="3ro a mecanica industrial">
+<div class="course-header">
+<div class="course-icon color-mec-ind">⚙️</div>
+<div>
+<h3>3°A — Mecánica Industrial</h3>
+<span>Especialidad técnica</span>
+</div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)">
+<span>📁 Unidad 1 — Technical Skills &amp; Career Paths</span>
+<span class="arrow">▶</span>
+</div>
+<div class="unit-classes"><a class="class-link" data-progress-id="3A-industrial/u1/Clase_1" href="3ro-medio/3A-industrial/u1/Clase_1_U1_3roA_Industrial.html"><span class="num">1</span><span class="title">Clase 1 — Identificar vocabulario técnico básico en inglés relacionado con la especiali...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3A-industrial/u1/Clase_2" href="3ro-medio/3A-industrial/u1/Clase_2_U1_3roA_Industrial.html"><span class="num">2</span><span class="title">Clase 2 — Comprender información explícita en un texto adaptado sobre el perfil laboral...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3A-industrial/u1/Clase_3" href="3ro-medio/3A-industrial/u1/Clase_3_U1_3roA_Industrial.html"><span class="num">3</span><span class="title">Clase 3 — Aplicar vocabulario técnico de Mecánica Industrial en oraciones simples utili...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3A-industrial/u1/Clase_4" href="3ro-medio/3A-industrial/u1/Clase_4_U1_3roA_Industrial.html"><span class="num">4</span><span class="title">Clase 4 — Analizar un estudio de caso técnico en inglés identificando el problema, las...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a></div>
+</div>
+</div>
+<!-- 3°B MEC AUTOMOTRIZ -->
+<div class="course-section" data-search="3ro b mecanica automotriz">
+<div class="course-header">
+<div class="course-icon color-mec-auto">🚗</div>
+<div>
+<h3>3°B — Mecánica Automotriz</h3>
+<span>Especialidad técnica</span>
+</div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)">
+<span>📁 Unidad 1 — Technical Skills &amp; Career Paths</span>
+<span class="arrow">▶</span>
+</div>
+<div class="unit-classes"><a class="class-link" data-progress-id="3B-automotriz/u1/Clase_1" href="3ro-medio/3B-automotriz/u1/Clase_1_U1_3roB_Automotriz.html"><span class="num">1</span><span class="title">Clase 1 — Identificar vocabulario técnico básico en inglés relacionado con la especiali...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3B-automotriz/u1/Clase_2" href="3ro-medio/3B-automotriz/u1/Clase_2_U1_3roB_Automotriz.html"><span class="num">2</span><span class="title">Clase 2 — Comprender información explícita en un texto adaptado sobre el perfil laboral...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3B-automotriz/u1/Clase_3" href="3ro-medio/3B-automotriz/u1/Clase_3_U1_3roB_Automotriz.html"><span class="num">3</span><span class="title">Clase 3 — Aplicar vocabulario técnico de Mecánica Automotriz en oraciones simples utili...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3B-automotriz/u1/Clase_4" href="3ro-medio/3B-automotriz/u1/Clase_4_U1_3roB_Automotriz.html"><span class="num">4</span><span class="title">Clase 4 — Analizar un estudio de caso técnico en inglés identificando el problema, las...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a></div>
+</div>
+</div>
+<!-- 3°C ELECTRICIDAD -->
+<div class="course-section" data-search="3ro c electricidad">
+<div class="course-header">
+<div class="course-icon color-elec">⚡</div>
+<div>
+<h3>3°C — Electricidad</h3>
+<span>Especialidad técnica</span>
+</div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)">
+<span>📁 Unidad 1 — Technical Skills &amp; Career Paths</span>
+<span class="arrow">▶</span>
+</div>
+<div class="unit-classes"><a class="class-link" data-progress-id="3C-electricidad/u1/Clase_1" href="3ro-medio/3C-electricidad/u1/Clase_1_U1_3roC_Electricidad.html"><span class="num">1</span><span class="title">Clase 1 — Identificar vocabulario técnico básico en inglés relacionado con la especiali...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3C-electricidad/u1/Clase_2" href="3ro-medio/3C-electricidad/u1/Clase_2_U1_3roC_Electricidad.html"><span class="num">2</span><span class="title">Clase 2 — Comprender información explícita en un texto adaptado sobre el perfil laboral...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3C-electricidad/u1/Clase_3" href="3ro-medio/3C-electricidad/u1/Clase_3_U1_3roC_Electricidad.html"><span class="num">3</span><span class="title">Clase 3 — Aplicar vocabulario técnico de Electricidad en oraciones simples utilizando S...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3C-electricidad/u1/Clase_4" href="3ro-medio/3C-electricidad/u1/Clase_4_U1_3roC_Electricidad.html"><span class="num">4</span><span class="title">Clase 4 — Analizar un estudio de caso técnico en inglés identificando el problema, las...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a></div>
+</div>
+</div>
+<!-- 3°D GRÁFICA -->
+<div class="course-section" data-search="3ro d grafica">
+<div class="course-header">
+<div class="course-icon color-graf">🎨</div>
+<div>
+<h3>3°D — Gráfica</h3>
+<span>Especialidad técnica</span>
+</div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)">
+<span>📁 Unidad 1 — Technical Skills &amp; Career Paths</span>
+<span class="arrow">▶</span>
+</div>
+<div class="unit-classes"><a class="class-link" data-progress-id="3D-grafica/u1/Clase_1" href="3ro-medio/3D-grafica/u1/Clase_1_U1_3roD_Grafica.html"><span class="num">1</span><span class="title">Clase 1 — Identificar vocabulario técnico básico en inglés relacionado con la especiali...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3D-grafica/u1/Clase_2" href="3ro-medio/3D-grafica/u1/Clase_2_U1_3roD_Grafica.html"><span class="num">2</span><span class="title">Clase 2 — Comprender información explícita en un texto adaptado sobre el perfil laboral...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3D-grafica/u1/Clase_3" href="3ro-medio/3D-grafica/u1/Clase_3_U1_3roD_Grafica.html"><span class="num">3</span><span class="title">Clase 3 — Aplicar vocabulario técnico de Gráfica en oraciones simples utilizando Simple...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3D-grafica/u1/Clase_4" href="3ro-medio/3D-grafica/u1/Clase_4_U1_3roD_Grafica.html"><span class="num">4</span><span class="title">Clase 4 — Analizar un estudio de caso técnico en inglés identificando el problema, las...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a></div>
+</div>
+</div>
+<!-- 3°E ELECTRÓNICA -->
+<div class="course-section" data-search="3ro e electronica">
+<div class="course-header">
+<div class="course-icon color-electron">🔌</div>
+<div>
+<h3>3°E — Electrónica</h3>
+<span>Especialidad técnica</span>
+</div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)">
+<span>📁 Unidad 1 — Technical Skills &amp; Career Paths</span>
+<span class="arrow">▶</span>
+</div>
+<div class="unit-classes"><a class="class-link" data-progress-id="3E-electronica/u1/Clase_1" href="3ro-medio/3E-electronica/u1/Clase_1_U1_3roE_Electronica.html"><span class="num">1</span><span class="title">Clase 1 — Identificar vocabulario técnico básico en inglés relacionado con la especiali...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3E-electronica/u1/Clase_2" href="3ro-medio/3E-electronica/u1/Clase_2_U1_3roE_Electronica.html"><span class="num">2</span><span class="title">Clase 2 — Comprender información explícita en un texto adaptado sobre el perfil laboral...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3E-electronica/u1/Clase_3" href="3ro-medio/3E-electronica/u1/Clase_3_U1_3roE_Electronica.html"><span class="num">3</span><span class="title">Clase 3 — Aplicar vocabulario técnico de Electrónica en oraciones simples utilizando Si...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="3E-electronica/u1/Clase_4" href="3ro-medio/3E-electronica/u1/Clase_4_U1_3roE_Electronica.html"><span class="num">4</span><span class="title">Clase 4 — Analizar un estudio de caso técnico en inglés identificando el problema, las...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a></div>
+</div>
+</div>
+</div>
+<!-- ======================== 4° MEDIO ======================== -->
+<div class="level-content" id="level-4to">
+<div class="course-section" data-search="4to a mecanica industrial">
+<div class="course-header">
+<div class="course-icon color-mec-ind">⚙️</div>
+<div><h3>4°A — Mecánica Industrial</h3><span>Especialidad técnica</span></div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)"><span>📁 Unidad 1</span><span class="arrow">▶</span></div>
+<div class="unit-classes"><a class="class-link" data-progress-id="4A-industrial/u1/Clase_1" href="4to-medio/4A-industrial/u1/Clase_1_U1_4toA_Industrial.html"><span class="num">1</span><span class="title">Clase 1 — Identificar vocabulario técnico avanzado en inglés relacionado con Mecánica I...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4A-industrial/u1/Clase_2" href="4to-medio/4A-industrial/u1/Clase_2_U1_4toA_Industrial.html"><span class="num">2</span><span class="title">Clase 2 — Analizar un estudio de caso sobre la trayectoria profesional de un técnico de...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4A-industrial/u1/Clase_3" href="4to-medio/4A-industrial/u1/Clase_3_U1_4toA_Industrial.html"><span class="num">3</span><span class="title">Clase 3 — Producir un currículum vitae en inglés adaptado al perfil profesional de Mecá...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4A-industrial/u1/Clase_4" href="4to-medio/4A-industrial/u1/Clase_4_U1_4toA_Industrial.html"><span class="num">4</span><span class="title">Clase 4 — Aplicar estrategias de comunicación oral para responder preguntas frecuentes...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a></div>
+</div>
+</div>
+<div class="course-section" data-search="4to b mecanica automotriz">
+<div class="course-header">
+<div class="course-icon color-mec-auto">🚗</div>
+<div><h3>4°B — Mecánica Automotriz</h3><span>Especialidad técnica</span></div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)"><span>📁 Unidad 1</span><span class="arrow">▶</span></div>
+<div class="unit-classes"><a class="class-link" data-progress-id="4B-automotriz/u1/Clase_1" href="4to-medio/4B-automotriz/u1/Clase_1_U1_4toB_Automotriz.html"><span class="num">1</span><span class="title">Clase 1 — Identificar vocabulario técnico avanzado en inglés relacionado con Mecánica A...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4B-automotriz/u1/Clase_2" href="4to-medio/4B-automotriz/u1/Clase_2_U1_4toB_Automotriz.html"><span class="num">2</span><span class="title">Clase 2 — Analizar un estudio de caso sobre la trayectoria profesional de un técnico de...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4B-automotriz/u1/Clase_3" href="4to-medio/4B-automotriz/u1/Clase_3_U1_4toB_Automotriz.html"><span class="num">3</span><span class="title">Clase 3 — Producir un currículum vitae en inglés adaptado al perfil profesional de Mecá...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4B-automotriz/u1/Clase_4" href="4to-medio/4B-automotriz/u1/Clase_4_U1_4toB_Automotriz.html"><span class="num">4</span><span class="title">Clase 4 — Aplicar estrategias de comunicación oral para responder preguntas frecuentes...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a></div>
+</div>
+</div>
+<div class="course-section" data-search="4to c electricidad">
+<div class="course-header">
+<div class="course-icon color-elec">⚡</div>
+<div><h3>4°C — Electricidad</h3><span>Especialidad técnica</span></div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)"><span>📁 Unidad 1</span><span class="arrow">▶</span></div>
+<div class="unit-classes"><a class="class-link" data-progress-id="4C-electricidad/u1/Clase_1" href="4to-medio/4C-electricidad/u1/Clase_1_U1_4toC_Electricidad.html"><span class="num">1</span><span class="title">Clase 1 — Identificar vocabulario técnico avanzado en inglés relacionado con Electricid...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4C-electricidad/u1/Clase_2" href="4to-medio/4C-electricidad/u1/Clase_2_U1_4toC_Electricidad.html"><span class="num">2</span><span class="title">Clase 2 — Analizar un estudio de caso sobre la trayectoria profesional de un técnico de...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4C-electricidad/u1/Clase_3" href="4to-medio/4C-electricidad/u1/Clase_3_U1_4toC_Electricidad.html"><span class="num">3</span><span class="title">Clase 3 — Producir un currículum vitae en inglés adaptado al perfil profesional de Elec...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4C-electricidad/u1/Clase_4" href="4to-medio/4C-electricidad/u1/Clase_4_U1_4toC_Electricidad.html"><span class="num">4</span><span class="title">Clase 4 — Aplicar estrategias de comunicación oral para responder preguntas frecuentes...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a></div>
+</div>
+</div>
+<div class="course-section" data-search="4to d grafica">
+<div class="course-header">
+<div class="course-icon color-graf">🎨</div>
+<div><h3>4°D — Gráfica</h3><span>Especialidad técnica</span></div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)"><span>📁 Unidad 1</span><span class="arrow">▶</span></div>
+<div class="unit-classes"><div class="empty-state"><div class="icon">🚧</div><p>Materiales en preparación</p></div></div>
+</div>
+</div>
+<div class="course-section" data-search="4to e electronica">
+<div class="course-header">
+<div class="course-icon color-electron">🔌</div>
+<div><h3>4°E — Electrónica</h3><span>Especialidad técnica</span></div>
+</div>
+<div class="unit-group">
+<div class="unit-title" onclick="toggleUnit(this)"><span>📁 Unidad 1</span><span class="arrow">▶</span></div>
+<div class="unit-classes"><a class="class-link" data-progress-id="4E-electronica/u1/Clase_1" href="4to-medio/4E-electronica/u1/Clase_1_U1_4toE_Electronica.html"><span class="num">1</span><span class="title">Clase 1 — Identificar vocabulario técnico avanzado en inglés relacionado con Electrónic...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4E-electronica/u1/Clase_2" href="4to-medio/4E-electronica/u1/Clase_2_U1_4toE_Electronica.html"><span class="num">2</span><span class="title">Clase 2 — Analizar un estudio de caso sobre la trayectoria profesional de un técnico de...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4E-electronica/u1/Clase_3" href="4to-medio/4E-electronica/u1/Clase_3_U1_4toE_Electronica.html"><span class="num">3</span><span class="title">Clase 3 — Producir un currículum vitae en inglés adaptado al perfil profesional de Elec...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a><a class="class-link" data-progress-id="4E-electronica/u1/Clase_4" href="4to-medio/4E-electronica/u1/Clase_4_U1_4toE_Electronica.html"><span class="num">4</span><span class="title">Clase 4 — Aplicar estrategias de comunicación oral para responder preguntas frecuentes...</span><span class="tag tag-clase">Clase</span><span class="status-badge status-pending" data-status-badge="">⏳ Pendiente</span></a></div>
+</div>
+</div>
+</div>
+</div>
 <div class="footer">
-    <p>Materiales de Clases — Inglés 2026 — Actualizado automáticamente vía GitHub Pages</p>
+<p>Materiales de Clases — Inglés 2026 — Actualizado automáticamente vía GitHub Pages</p>
 </div>
-
 <script>
     function switchLevel(level) {
         document.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));
@@ -587,6 +539,5 @@
     // Load progress on page load
     loadProgress();
 </script>
-
 </body>
 </html>

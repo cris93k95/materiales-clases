@@ -1,7 +1,181 @@
 {
   "lastUpdated": "2026-03-04",
   "classes": {
-    "3C-electricidad/u1/Clase_1": { "status": "pending", "title": "Clase 1 — Technical Vocabulary: Electrical Tools & Equipment" },
-    "3D-grafica/u1/Clase_1": { "status": "pending", "title": "Clase 1 — Technical Vocabulary: Graphic Arts & Printing" }
+    "3C-electricidad/u1/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Technical Vocabulary: Electrical Tools & Equipment"
+    },
+    "3D-grafica/u1/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Technical Vocabulary: Graphic Arts & Printing"
+    },
+    "1ro-lu-ju/u1/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Identificar el nivel de competencia en inglés de los estudiantes mediante una..."
+    },
+    "1ro-lu-ju/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Reconocer y categorizar vocabulario técnico básico de herramientas comunes a..."
+    },
+    "1ro-lu-ju/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Comprender información explícita en un texto descriptivo sobre un taller auto..."
+    },
+    "1ro-lu-ju/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Comprender información específica en un estudio de caso sobre seguridad en me..."
+    },
+    "1ro-lu-ju/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Aplicar estrategias de lectura (pre-lectura, lectura y post-lectura) para com..."
+    },
+    "1ro-lu-ju/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Comprender un texto instructivo sobre el armado de un circuito electrónico si..."
+    },
+    "1ro-lu-ju/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Comprender un texto descriptivo sobre los procesos de la industria gráfica e..."
+    },
+    "1ro-lu-ju/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Sintetizar y aplicar el vocabulario técnico de las cinco especialidades en ac..."
+    },
+    "3A-industrial/u1/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Identificar vocabulario técnico básico en inglés relacionado con la especiali..."
+    },
+    "3A-industrial/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprender información explícita en un texto adaptado sobre el perfil laboral..."
+    },
+    "3A-industrial/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Aplicar vocabulario técnico de Mecánica Industrial en oraciones simples utili..."
+    },
+    "3A-industrial/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Analizar un estudio de caso técnico en inglés identificando el problema, las..."
+    },
+    "3B-automotriz/u1/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Identificar vocabulario técnico básico en inglés relacionado con la especiali..."
+    },
+    "3B-automotriz/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprender información explícita en un texto adaptado sobre el perfil laboral..."
+    },
+    "3B-automotriz/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Aplicar vocabulario técnico de Mecánica Automotriz en oraciones simples utili..."
+    },
+    "3B-automotriz/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Analizar un estudio de caso técnico en inglés identificando el problema, las..."
+    },
+    "3C-electricidad/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprender información explícita en un texto adaptado sobre el perfil laboral..."
+    },
+    "3C-electricidad/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Aplicar vocabulario técnico de Electricidad en oraciones simples utilizando S..."
+    },
+    "3C-electricidad/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Analizar un estudio de caso técnico en inglés identificando el problema, las..."
+    },
+    "3D-grafica/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprender información explícita en un texto adaptado sobre el perfil laboral..."
+    },
+    "3D-grafica/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Aplicar vocabulario técnico de Gráfica en oraciones simples utilizando Simple..."
+    },
+    "3D-grafica/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Analizar un estudio de caso técnico en inglés identificando el problema, las..."
+    },
+    "3E-electronica/u1/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Identificar vocabulario técnico básico en inglés relacionado con la especiali..."
+    },
+    "3E-electronica/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprender información explícita en un texto adaptado sobre el perfil laboral..."
+    },
+    "3E-electronica/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Aplicar vocabulario técnico de Electrónica en oraciones simples utilizando Si..."
+    },
+    "3E-electronica/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Analizar un estudio de caso técnico en inglés identificando el problema, las..."
+    },
+    "4A-industrial/u1/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Identificar vocabulario técnico avanzado en inglés relacionado con Mecánica I..."
+    },
+    "4A-industrial/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Analizar un estudio de caso sobre la trayectoria profesional de un técnico de..."
+    },
+    "4A-industrial/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Producir un currículum vitae en inglés adaptado al perfil profesional de Mecá..."
+    },
+    "4A-industrial/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Aplicar estrategias de comunicación oral para responder preguntas frecuentes..."
+    },
+    "4B-automotriz/u1/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Identificar vocabulario técnico avanzado en inglés relacionado con Mecánica A..."
+    },
+    "4B-automotriz/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Analizar un estudio de caso sobre la trayectoria profesional de un técnico de..."
+    },
+    "4B-automotriz/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Producir un currículum vitae en inglés adaptado al perfil profesional de Mecá..."
+    },
+    "4B-automotriz/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Aplicar estrategias de comunicación oral para responder preguntas frecuentes..."
+    },
+    "4C-electricidad/u1/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Identificar vocabulario técnico avanzado en inglés relacionado con Electricid..."
+    },
+    "4C-electricidad/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Analizar un estudio de caso sobre la trayectoria profesional de un técnico de..."
+    },
+    "4C-electricidad/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Producir un currículum vitae en inglés adaptado al perfil profesional de Elec..."
+    },
+    "4C-electricidad/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Aplicar estrategias de comunicación oral para responder preguntas frecuentes..."
+    },
+    "4E-electronica/u1/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Identificar vocabulario técnico avanzado en inglés relacionado con Electrónic..."
+    },
+    "4E-electronica/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Analizar un estudio de caso sobre la trayectoria profesional de un técnico de..."
+    },
+    "4E-electronica/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Producir un currículum vitae en inglés adaptado al perfil profesional de Elec..."
+    },
+    "4E-electronica/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Aplicar estrategias de comunicación oral para responder preguntas frecuentes..."
+    }
   }
 }
