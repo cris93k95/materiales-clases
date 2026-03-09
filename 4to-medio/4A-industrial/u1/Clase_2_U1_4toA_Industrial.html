@@ -149,17 +149,5 @@
         <input class="ticket-input" placeholder="Reflection: What was the most useful skill in this lesson?" />
         <p class="score" id="totalScore" style="margin-top:8px;">0 / 3 puntos</p>
     </div>
-</div>
 
-<script>
-    let score = 0;
-    function checkAnswer(btn, isCorrect) {
-        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
-        buttons.forEach(b => b.disabled = true);
-        if (isCorrect) { btn.classList.add('correct'); score++; }
-        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b !== btn) b.classList.add('correct'); }); }
-        document.getElementById('totalScore').textContent = score + ' / 3 puntos';
-    }
-</script>
-</body>
-</html>
+</div>
