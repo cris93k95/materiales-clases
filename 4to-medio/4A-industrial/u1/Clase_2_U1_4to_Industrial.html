@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2 — 4° Medio — Mecánica Industrial</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #1b5e20, #2e7d32); color: white; padding: 34px 20px; text-align: center; }
+        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
+        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
+        .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #1b5e20; }
+        .objective-card h3 { color: #1b5e20; margin-bottom: 8px; }
+        .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1b5e20; }
+        .cierre { background: #6a1b9a; }
+        .section-body { padding: 18px 22px; }
+        .section-body ul, .section-body ol { margin-left: 18px; }
+        .section-body li { margin-bottom: 8px; }
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .reading-box h4 { color: #1b5e20; margin-bottom: 8px; }
+        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+        .quiz-options { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; transition: all 0.2s; }
+        .quiz-btn:hover { border-color: #1b5e20; }
+        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
+        .table-activity { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        .table-activity th { background: #1b5e20; color: white; padding: 10px; text-align: left; font-size: 0.9em; }
+        .table-activity td { border: 1px solid #ddd; padding: 8px; }
+        .table-activity input { width: 100%; border: none; padding: 5px; background: transparent; font-family: inherit; font-size: 0.88em; }
+        .table-activity input:focus { outline: 2px solid #1b5e20; border-radius: 4px; }
+        .ticket-box { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); border: 2px dashed #1b5e20; border-radius: 12px; padding: 18px; margin-top: 12px; }
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; }
+        .ticket-input:focus { outline: 2px solid #1b5e20; }
+        textarea.ticket-area { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; min-height: 70px; resize: vertical; }
+        textarea.ticket-area:focus { outline: 2px solid #1b5e20; }
+        .score-bar { background: white; border-radius: 10px; padding: 12px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+        .score { font-weight: 700; color: #1b5e20; }
+        .footer { text-align: center; color: #999; font-size: 0.8em; margin: 18px 0; }
+        .oral-box { background: #e8f5e9; border-left: 4px solid #2e7d32; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .oral-box strong { color: #2e7d32; }
+        .concept-box { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .concept-box strong { color: #1565c0; }
+        .discussion-box { background: #f3e5f5; border-left: 4px solid #7b1fa2; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .discussion-box strong { color: #7b1fa2; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>CLASS 2 — 4° MEDIO — MECÁNICA INDUSTRIAL</h1>
+    <h2>Unidad 1 — Professional Profile & Workplace English</h2>
+    <div class="meta">
+        <span>📘 OA1 · OA3</span>
+        <span>⏱ 90 min</span>
+        <span>🧭 Guía de estudiante completa</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="objective-card">
+        <h3>🎯 Objetivo de la clase</h3>
+        <p>Analizar un estudio de caso sobre la trayectoria profesional de un técnico de Mecánica Industrial, identificando hitos clave, habilidades requeridas y el rol del inglés en su carrera.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (15 min)</div>
+        <div class="section-body">
+            <h4>🔄 Warm-up: Word Relay</h4>
+            <p>In teams, each student says a technical word in English. The team with the most words wins!</p>
+            <input class="ticket-input" placeholder="Write your team's words here..." />
+            <div class="oral-box" style="margin-top:14px;">
+                <strong>💬 Pre-reading Discussion:</strong> <em>"What steps does someone take to become a successful professional in industrial mechanics?"</em>
+            </div>
+            <div class="concept-box" style="margin-top:14px;">
+                <strong>📖 What is a Case Study?</strong>
+                <p>A <strong>case study</strong> is a detailed story about a real person or situation used as a learning tool. Today, we will read about Andrés, a Chilean industrial mechanic who went from apprentice to production line supervisor.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header desarrollo">🟢 Desarrollo (60 min)</div>
+        <div class="section-body">
+            <h4>📖 Activity 1 — Case Study: From Apprentice to Specialist (25 min)</h4>
+            <div class="reading-box">
+                <h4>From Apprentice to Specialist</h4>
+                <p>Andrés grew up in Calama, in the heart of Chile's mining region. His father worked at a copper mine, and Andrés always admired the massive machines used in the mining industry. He decided to study industrial mechanics at a technical high school in Antofagasta.</p>
+
+                <p>During his studies, Andrés learned the fundamentals: how to operate a lathe and a milling machine, how to read blueprints, how to weld different types of metal, and how to measure parts with calipers and micrometers. His teachers also taught him about workplace safety and the importance of following procedures.</p>
+
+                <p>After graduating, Andrés did his apprenticeship at a mining company in the Atacama region. He worked in the maintenance workshop, where he helped repair conveyor belts, replace bearings on large motors, and maintain hydraulic systems. It was hard work, but he learned quickly. His mentor, a senior mechanic named Don Jorge, taught him that "a good mechanic prevents problems before they happen."</p>
+
+                <p>Andrés' first permanent job was at the same mining company. He worked in the preventive maintenance team for three years. During this time, the company introduced CNC (Computer Numerical Control) machines, and Andrés volunteered to learn how to program them. The training manual was in English, and the programming software used English commands. Andrés took evening English classes to keep up.</p>
+
+                <p>His CNC skills set him apart from other technicians. He was promoted to CNC specialist and later to production line supervisor. In this role, he coordinates a team of five technicians, plans the production schedule, and ensures quality standards are met. He also communicates with foreign engineers when new equipment is installed.</p>
+
+                <p>Today, Andrés is studying for an international welding certification (AWS — American Welding Society). The entire course is in English. He says: "English was not easy for me, but it opened doors. In the mining industry, the best technology comes from other countries, and if you can't read the manuals or talk to the engineers, you fall behind."</p>
+            </div>
+
+            <h4 style="margin-top:18px;">📋 Activity 2 — Career Path Analysis</h4>
+            <p>Complete the table based on the case study:</p>
+            <table class="table-activity">
+                <tr><th>Stage</th><th>Skills Developed</th><th>Role of English</th><th>Challenges Faced</th></tr>
+                <tr>
+                    <td>Education (Liceo TP)</td>
+                    <td><input placeholder="e.g. Lathe, milling, welding..." /></td>
+                    <td><input placeholder="" /></td>
+                    <td><input placeholder="" /></td>
+                </tr>
+                <tr>
+                    <td>Apprenticeship (Mining Co.)</td>
+                    <td><input /></td>
+                    <td><input /></td>
+                    <td><input /></td>
+                </tr>
+                <tr>
+                    <td>First Job + CNC Training</td>
+                    <td><input /></td>
+                    <td><input /></td>
+                    <td><input /></td>
+                </tr>
+                <tr>
+                    <td>Current Role (Supervisor)</td>
+                    <td><input /></td>
+                    <td><input /></td>
+                    <td><input /></td>
+                </tr>
+            </table>
+
+            <h4 style="margin-top:18px;">✅ Activity 3 — Comprehension Questions (15 min)</h4>
+            <p><strong>A) Explicit questions:</strong></p>
+            <div class="quiz-item">
+                <p>1. Where did Andrés grow up?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Calama, Chile's mining region</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Santiago, the capital</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Valdivia, southern Chile</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>2. What did Andrés volunteer to learn at his first job?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Electrical installation</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">CNC machine programming</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Truck driving</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>3. What is Andrés currently studying for?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">A university degree in engineering</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">A management diploma</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">An international welding certification (AWS)</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>4. What advice did Don Jorge, his mentor, give him?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Always work fast</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">A good mechanic prevents problems before they happen</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Study English first, mechanics second</button>
+                </div>
+            </div>
+
+            <p style="margin-top:14px;"><strong>B) Critical analysis questions:</strong></p>
+            <div class="quiz-item">
+                <p>5. Why was English important for Andrés' career advancement?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">CNC manuals, software, and foreign engineers required English</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">His boss only spoke English</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Chilean mining regulations are in English</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>6. Why did Andrés' CNC skills help him get promoted?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because everyone had CNC skills</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Because it set him apart from other technicians</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because the company had no other options</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>7. What would you do differently from Andrés?</p>
+                <textarea class="ticket-area" placeholder="I would... because..."></textarea>
+            </div>
+            <div class="quiz-item">
+                <p>8. How does Andrés' story show the value of mentorship in a career?</p>
+                <textarea class="ticket-area" placeholder="Andrés' story shows that mentorship... because..."></textarea>
+            </div>
+
+            <h4 style="margin-top:18px;">🗣️ Activity 4 — Group Discussion (15 min)</h4>
+            <div class="discussion-box">
+                <strong>In groups of 3, compare Andrés' career path to your own plans:</strong>
+                <p style="margin-top:8px;"><em>"Like Andrés, I will..."</em></p>
+                <p><em>"Unlike Andrés, I plan to..."</em></p>
+                <p><em>"I agree/disagree that volunteering for new skills is important because..."</em></p>
+            </div>
+            <textarea class="ticket-area" placeholder="Write your group's main conclusions here..." style="margin-top:10px;"></textarea>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <h4>📝 Reflection</h4>
+            <p>Write 3 lines: <em>"What is the most important lesson from this case study for my own career?"</em></p>
+            <textarea class="ticket-area" placeholder="The most important lesson is..."></textarea>
+            <div class="oral-box" style="margin-top:14px;">
+                <strong>👀 Preview:</strong> <em>"Next class, we will build your professional CV in English."</em>
+            </div>
+            <div class="ticket-box">
+                <h4>🎫 Exit Ticket</h4>
+                <input class="ticket-input" placeholder="Write 3 new words/expressions from today + meaning" />
+                <input class="ticket-input" placeholder="One thing Andrés did that inspires you:" />
+            </div>
+        </div>
+    </div>
+
+    <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 6</span></div>
+    <div class="footer">4° Medio — Mecánica Industrial — Clase 2, Unidad 1 — Inglés 2026</div>
+</div>
+
+<script>
+    let score = 0;
+    function updateScore() { document.getElementById('totalScore').textContent = score + ' / 6'; }
+    function checkAnswer(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b.getAttribute('onclick').includes('true')) b.classList.add('correct'); }); }
+        updateScore();
+    }
+</script>
+</body>
+</html>

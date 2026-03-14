@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 17 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #1a237e, #283593); color: white; padding: 34px 20px; text-align: center; }
+        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
+        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
+        .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #1a237e; }
+        .objective-card h3 { color: #1a237e; margin-bottom: 8px; }
+        .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #6a1b9a; }
+        .section-body { padding: 18px 22px; }
+        .section-body ul, .section-body ol { margin-left: 18px; }
+        .section-body li { margin-bottom: 8px; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; margin-top: 12px; }
+        .vocab-card { background: #e8eaf6; border: 2px solid #9fa8da; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.3s; }
+        .vocab-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .vocab-card .word { font-weight: 700; color: #1a237e; }
+        .vocab-card .meaning { font-size: 0.8em; color: #666; margin-top: 4px; display: none; }
+        .vocab-card.revealed .meaning { display: block; }
+        .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
+        .vocab-card.revealed .hint { display: none; }
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .reading-box h4 { color: #1a237e; margin-bottom: 8px; }
+        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+        .quiz-options { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; transition: all 0.2s; }
+        .quiz-btn:hover { border-color: #1a237e; }
+        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
+        .table-activity { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        .table-activity th { background: #1a237e; color: white; padding: 10px; text-align: left; font-size: 0.9em; }
+        .table-activity td { border: 1px solid #ddd; padding: 8px; }
+        .table-activity input { width: 100%; border: none; padding: 5px; background: transparent; font-family: inherit; }
+        .table-activity input:focus { outline: 2px solid #1a237e; border-radius: 4px; }
+        .ticket-box { background: linear-gradient(135deg, #e8eaf6, #c5cae9); border: 2px dashed #1a237e; border-radius: 12px; padding: 18px; margin-top: 12px; }
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; }
+        .ticket-input:focus { outline: 2px solid #1a237e; }
+        textarea.ticket-area { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; min-height: 70px; resize: vertical; }
+        textarea.ticket-area:focus { outline: 2px solid #1a237e; }
+        .score-bar { background: white; border-radius: 10px; padding: 12px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+        .score { font-weight: 700; color: #1a237e; }
+        .footer { text-align: center; color: #999; font-size: 0.8em; margin: 18px 0; }
+        .oral-box { background: #e8eaf6; border-left: 4px solid #3949ab; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .oral-box strong { color: #3949ab; }
+        .concept-box { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .concept-box strong { color: #1565c0; }
+        .grammar-box { background: #fff3e0; border-left: 4px solid #ef6c00; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .grammar-box strong { color: #ef6c00; }
+        .safety-box { background: #fce4ec; border-left: 4px solid #c62828; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .safety-box strong { color: #c62828; }
+        .matching-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 12px; }
+        .match-item { background: white; border: 2px solid #e0e0e0; border-radius: 8px; padding: 11px; text-align: center; margin-bottom: 8px; cursor: pointer; }
+        .match-item:hover { border-color: #1a237e; }
+        .match-item.selected { border-color: #1a237e; background: #e8eaf6; }
+        .match-item.matched { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; }
+        .scramble-item { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 8px; padding: 10px; margin-bottom: 8px; cursor: grab; }
+        .scramble-item.correct-order { border-color: #2e7d32; background: #e8f5e9; }
+        .eval-box { background: #fce4ec; border: 2px solid #ef9a9a; border-radius: 12px; padding: 18px; margin-top: 12px; }
+        .eval-box strong { color: #c62828; }
+        .bingo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
+        .bingo-cell { background: #e8eaf6; border: 2px solid #9fa8da; border-radius: 8px; padding: 12px; text-align: center; cursor: pointer; font-weight: 600; color: #1a237e; transition: all 0.2s; }
+        .bingo-cell.marked { background: #c5cae9; border-color: #3949ab; }
+        .bingo-cell.bingo { background: #e8f5e9; border-color: #2e7d32; color: #2e7d32; }
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>CLASS 17 — 1° MEDIO — INGLÉS GENERAL (LU+JU)</h1>
+    <h2>Unidad 1 — The World of Technical Work</h2>
+    <div class="meta">
+        <span>📘 EVALUACIÓN — NOTA 2</span>
+        <span>⏱ 90 min</span>
+        <span>🧭 Guía de estudiante completa</span>
+    </div>
+</div>
+<div class="container">
+    <div class="objective-card">
+        <h3>🎯 Objetivo de la clase</h3>
+        <p>Demostrar comprensión de ideas generales e información explícita en textos técnicos, aplicando estrategias de lectura y vocabulario de la unidad.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (10 min)</div>
+        <div class="section-body">
+            <div class="eval-box">
+                <strong>📋 EVALUACIÓN — NOTA 2: Prueba de Comprensión Lectora</strong>
+                <p>Total: 70 puntos · Escala: 60% de exigencia</p>
+                <p style="margin-top:6px;"><em>"Read each text carefully. Use the strategies we practiced: skimming first, then scanning for details."</em></p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header desarrollo">🔵 Desarrollo (65 min)</div>
+        <div class="section-body">
+            <h4>📝 Section I — Vocabulary (20 pts)</h4>
+            <p><strong>A) Matching:</strong> Match each tool/equipment with its definition.</p>
+            <div class="matching-grid">
+                <div>
+                    <div class="match-item" data-match="A" onclick="selectMatch(this,'left')">A device that measures voltage and current</div>
+                    <div class="match-item" data-match="B" onclick="selectMatch(this,'left')">Used to tighten or loosen bolts</div>
+                    <div class="match-item" data-match="C" onclick="selectMatch(this,'left')">Melts metal to join pieces together</div>
+                    <div class="match-item" data-match="D" onclick="selectMatch(this,'left')">Protects your eyes in a workshop</div>
+                    <div class="match-item" data-match="E" onclick="selectMatch(this,'left')">Used to cut metal or wood</div>
+                </div>
+                <div>
+                    <div class="match-item" data-match="C" onclick="selectMatch(this,'right')">welding torch</div>
+                    <div class="match-item" data-match="A" onclick="selectMatch(this,'right')">multimeter</div>
+                    <div class="match-item" data-match="E" onclick="selectMatch(this,'right')">saw</div>
+                    <div class="match-item" data-match="B" onclick="selectMatch(this,'right')">wrench</div>
+                    <div class="match-item" data-match="D" onclick="selectMatch(this,'right')">safety goggles</div>
+                </div>
+            </div>
+            <p id="matchScore" style="font-weight:600;color:#2e7d32;margin-top:8px;"></p>
+
+            <p style="margin-top:14px;"><strong>B) Classification:</strong> Write each word under the correct specialty.</p>
+            <table class="table-activity">
+                <tr><th>Automotive</th><th>Industrial</th><th>Electricity</th><th>Electronics</th><th>Graphic Arts</th></tr>
+                <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
+                <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
+            </table>
+            <p style="font-size:0.85em; color:#666;">Words: engine, lathe, circuit breaker, resistor, ink, brake, milling machine, voltage, LED, binding</p>
+
+            <h4 style="margin-top:18px;">📖 Section II — Reading Comprehension (30 pts)</h4>
+            <div class="reading-box">
+                <h4>The New Technician</h4>
+                <p>Sofía has just started working at a technical workshop in Temuco. She has studied electronics for three years at a technical school. She has built more than 20 circuit boards and has repaired many devices.</p>
+                <p>On her first day, the supervisor gives her a broken radio to fix. Sofía opens the radio and inspects the circuit board. She finds a burnt resistor and a loose wire. She uses her soldering iron to replace the resistor and reconnects the wire.</p>
+                <p>After fixing the radio, Sofía tests it. It works perfectly. The supervisor is impressed. He says: "You have done a great job. We used to send radios like this to another shop, but now we can fix them here."</p>
+                <p>Sofía is happy. She has wanted to work in electronics since she was 12 years old. She used to take apart her family's old phones and radios to see how they worked. Now, she does it professionally.</p>
+            </div>
+
+            <div class="quiz-item"><p>1. How long has Sofía studied electronics?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">Two years</button><button class="quiz-btn" onclick="checkAnswer(this,true)">Three years</button><button class="quiz-btn" onclick="checkAnswer(this,false)">Five years</button></div></div>
+            <div class="quiz-item"><p>2. What was wrong with the radio?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">A broken screen</button><button class="quiz-btn" onclick="checkAnswer(this,true)">A burnt resistor and a loose wire</button><button class="quiz-btn" onclick="checkAnswer(this,false)">A dead battery</button></div></div>
+            <div class="quiz-item"><p>3. What tool did Sofía use to fix the radio?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">A multimeter</button><button class="quiz-btn" onclick="checkAnswer(this,true)">A soldering iron</button><button class="quiz-btn" onclick="checkAnswer(this,false)">A wrench</button></div></div>
+            <div class="quiz-item"><p>4. What did the workshop 'used to' do with broken radios?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">Throw them away</button><button class="quiz-btn" onclick="checkAnswer(this,true)">Send them to another shop</button><button class="quiz-btn" onclick="checkAnswer(this,false)">Give them to customers</button></div></div>
+            <div class="quiz-item"><p>5. How long has Sofía wanted to work in electronics?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">Since she was 12</button><button class="quiz-btn" onclick="checkAnswer(this,false)">For 3 years</button><button class="quiz-btn" onclick="checkAnswer(this,false)">Since last year</button></div></div>
+
+            <h4 style="margin-top:18px;">📝 Section III — Grammar in Context (20 pts)</h4>
+            <p><strong>A) Complete with the correct Present Perfect form:</strong></p>
+            <div class="quiz-item"><p>6. "They _____ (install) the new wiring."</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">has installed</button><button class="quiz-btn" onclick="checkAnswer(this,true)">have installed</button><button class="quiz-btn" onclick="checkAnswer(this,false)">installed</button></div></div>
+            <div class="quiz-item"><p>7. "She _____ (work) here for 5 years."</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">has worked</button><button class="quiz-btn" onclick="checkAnswer(this,false)">have worked</button><button class="quiz-btn" onclick="checkAnswer(this,false)">working</button></div></div>
+
+            <p style="margin-top:12px;"><strong>B) Choose: Since or For?</strong></p>
+            <div class="quiz-item"><p>8. "He has studied English _____ 2020."</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">for</button><button class="quiz-btn" onclick="checkAnswer(this,true)">since</button></div></div>
+            <div class="quiz-item"><p>9. "They have used this machine _____ 10 years."</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">since</button><button class="quiz-btn" onclick="checkAnswer(this,true)">for</button></div></div>
+
+            <p style="margin-top:12px;"><strong>C) Rewrite using "used to":</strong></p>
+            <p><em>In the past, mechanics fixed cars without computers.</em></p>
+            <input class="ticket-input" placeholder="Mechanics used to..." />
+            <p><em>In the past, printers set text letter by letter.</em></p>
+            <input class="ticket-input" placeholder="Printers used to..." />
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <div class="oral-box">
+                <strong>💬 Post-Test Reflection:</strong> <em>"How did you find the test? What was easy? What was challenging?"</em>
+            </div>
+            <div class="concept-box" style="margin-top:12px;">
+                <strong>👀 Preview — Unit 2:</strong>
+                <p><em>"In Unit 2, we'll go deeper into each specialty. We'll read case studies about real problems and learn to describe how things work using Passive Voice."</em></p>
+                <p style="margin-top:6px;">Congratulations on completing Unit 1! 🎉</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 14</span></div>
+    <div class="footer">1° Medio — Inglés General (Lu+Ju) — Clase 17, Unidad 1 — Inglés 2026</div>
+</div>
+
+<script>
+    let score = 0;
+    let totalQ = document.querySelectorAll('.quiz-item').length;
+    function updateScore() { 
+        let el = document.getElementById('totalScore');
+        if(el) el.textContent = score + ' / ' + totalQ;
+    }
+    function checkAnswer(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b.getAttribute('onclick') && b.getAttribute('onclick').includes('true')) b.classList.add('correct'); }); }
+        updateScore();
+    }
+    let selectedLeft = null, selectedRight = null, matches = 0;
+    function selectMatch(el, side) {
+        if (el.classList.contains('matched')) return;
+        if (side === 'left') { if (selectedLeft) selectedLeft.classList.remove('selected'); selectedLeft = el; el.classList.add('selected'); }
+        else { if (selectedRight) selectedRight.classList.remove('selected'); selectedRight = el; el.classList.add('selected'); }
+        if (selectedLeft && selectedRight) {
+            if (selectedLeft.dataset.match === selectedRight.dataset.match) {
+                selectedLeft.classList.remove('selected'); selectedRight.classList.remove('selected');
+                selectedLeft.classList.add('matched'); selectedRight.classList.add('matched');
+                matches++; score++; updateScore();
+                let ms = document.getElementById('matchScore');
+                if(ms && matches >= 5) ms.textContent = '¡Matching completo!';
+            } else {
+                selectedLeft.classList.remove('selected'); selectedRight.classList.remove('selected');
+            }
+            selectedLeft = null; selectedRight = null;
+        }
+    }
+</script>
+
+</body>
+</html>

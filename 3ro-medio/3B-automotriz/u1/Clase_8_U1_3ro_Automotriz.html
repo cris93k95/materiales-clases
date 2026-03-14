@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 8 — 3° Medio — Mecánica Automotriz</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f0f2f5;color:#333;line-height:1.7}
+.header{background:linear-gradient(135deg,#b71c1c,#d32f2f);color:white;padding:34px 20px;text-align:center}
+.header h1{font-size:1.85em;margin-bottom:5px}.header h2{font-size:1.1em;font-weight:300;margin-bottom:8px}
+.header .meta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:10px}
+.header .meta span{background:rgba(255,255,255,0.2);padding:5px 14px;border-radius:20px;font-size:0.85em}
+.container{max-width:930px;margin:24px auto;padding:0 15px}
+.objective-card{background:white;border-radius:12px;padding:24px;margin-bottom:22px;box-shadow:0 2px 12px rgba(0,0,0,0.06);border-left:5px solid #b71c1c}
+.objective-card h3{color:#b71c1c;margin-bottom:8px}
+.section{background:white;border-radius:12px;margin-bottom:22px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.section-header{padding:14px 22px;color:white;font-weight:600;font-size:1.05em}
+.inicio{background:#2e7d32}.desarrollo{background:#b71c1c}.cierre{background:#6a1b9a}
+.section-body{padding:18px 22px}.section-body ul,.section-body ol{margin-left:18px}.section-body li{margin-bottom:8px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin-top:12px}
+.vocab-card{background:#ffebee;border:2px solid #d32f2f40;border-radius:10px;padding:12px;text-align:center;cursor:pointer;transition:all 0.3s}
+.vocab-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.vocab-card .word{font-weight:700;color:#b71c1c}.vocab-card .meaning{font-size:0.8em;color:#666;margin-top:4px;display:none}
+.vocab-card.revealed .meaning{display:block}.vocab-card .hint{font-size:0.72em;color:#888;margin-top:4px}.vocab-card.revealed .hint{display:none}
+.reading-box{background:#fafafa;border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-top:12px}
+.reading-box h4{color:#b71c1c;margin-bottom:8px}
+.quiz-item{background:#f7f7f7;border:1px solid #e0e0e0;border-radius:8px;padding:12px;margin-bottom:10px}
+.quiz-options{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.quiz-btn{padding:7px 14px;border-radius:8px;border:2px solid #e0e0e0;background:white;cursor:pointer;transition:all 0.2s}
+.quiz-btn:hover{border-color:#b71c1c}.quiz-btn.correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:700}
+.quiz-btn.incorrect{border-color:#c62828;background:#ffebee;color:#c62828}
+.table-activity{width:100%;border-collapse:collapse;margin-top:12px}
+.table-activity th{background:#b71c1c;color:white;padding:10px;text-align:left;font-size:0.9em}
+.table-activity td{border:1px solid #ddd;padding:8px}
+.table-activity input{width:100%;border:none;padding:5px;background:transparent;font-family:inherit}
+.table-activity input:focus{outline:2px solid #b71c1c;border-radius:4px}
+.ticket-box{background:linear-gradient(135deg,#ffebee,#ffebeedd);border:2px dashed #b71c1c;border-radius:12px;padding:18px;margin-top:12px}
+.ticket-input{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;margin-top:8px;font-family:inherit}
+.ticket-input:focus{outline:2px solid #b71c1c}
+textarea.ta{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;margin-top:8px;font-family:inherit;min-height:70px;resize:vertical}
+textarea.ta:focus{outline:2px solid #b71c1c}
+.score-bar{background:white;border-radius:10px;padding:12px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;justify-content:space-between;align-items:center}
+.score{font-weight:700;color:#b71c1c}.footer{text-align:center;color:#999;font-size:0.8em;margin:18px 0}
+.oral-box{background:#ffebee;border-left:4px solid #d32f2f;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}
+.oral-box strong{color:#d32f2f}
+.concept-box{background:#e3f2fd;border-left:4px solid #1565c0;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}
+.concept-box strong{color:#1565c0}
+.grammar-box{background:#fff3e0;border-left:4px solid #ef6c00;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}
+.grammar-box strong{color:#ef6c00}
+.safety-box{background:#fce4ec;border-left:4px solid #c62828;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}
+.safety-box strong{color:#c62828}
+.eval-box{background:#fce4ec;border:2px solid #ef9a9a;border-radius:12px;padding:18px;margin-top:12px}
+.eval-box strong{color:#c62828}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>CLASS 8 — 3° MEDIO — MECÁNICA AUTOMOTRIZ</h1>
+<h2>Unidad 1 — Technical Skills & Career Paths</h2>
+<div class="meta"><span>📘 OA4 · EVALUACIÓN</span><span>⏱ 90 min</span><span>🧭 Guía de estudiante completa · ⚠️ NOTA 1</span></div>
+</div>
+<div class="container">
+<div class="objective-card"><h3>🎯 Objetivo de la clase</h3><p>Producir una presentación oral breve y clara en inglés describiendo sus habilidades técnicas y conocimientos en Mecánica Automotriz.</p></div>
+
+    <div class="section"><div class="section-header inicio">🟢 Inicio (15 min)</div><div class="section-body">
+        <div class="eval-box"><strong>📋 EVALUACIÓN — NOTA 1 SEMESTRE 1</strong>
+        <p>Presentación oral: <em>"My Automotive Mechanics Skills"</em> (2-3 min por estudiante)</p>
+        <p>20 puntos · Exigencia 60%</p></div>
+        <div class="oral-box" style="margin-top:12px;"><strong>💡 Tips:</strong> Speak clearly · Make eye contact · Use notes as a guide · Relax!</div>
+    </div></div>
+    <div class="section"><div class="section-header desarrollo">🔵 Desarrollo (60 min)</div><div class="section-body">
+        <h4>🎤 Oral Presentations (55 min)</h4>
+        <p>Each student presents for 2-3 minutes. Evaluate your classmates:</p>
+        <table class="table-activity">
+        <tr><th>Name</th><th>Content (1-4)</th><th>Vocabulary (1-4)</th><th>Strength</th><th>Suggestion</th></tr>
+        <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
+        <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
+        <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
+        <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
+        <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
+        </table>
+    </div></div>
+    <div class="section"><div class="section-header cierre">🟣 Cierre (15 min)</div><div class="section-body">
+        <div class="oral-box"><strong>💬 General Feedback:</strong> Strengths and areas for improvement.
+        <p><em>"How did you feel presenting in English? What can you improve?"</em></p></div>
+    </div></div>
+<div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 0</span></div>
+<div class="footer">3° Medio — Mecánica Automotriz — Clase 8, Unidad 1 — Inglés 2026</div>
+</div>
+<script>
+let score=0;function updateScore(){let e=document.getElementById('totalScore');if(e)e.textContent=score+' / 0';}
+function checkAnswer(b,c){const btns=b.parentElement.querySelectorAll('.quiz-btn');btns.forEach(x=>x.disabled=true);if(c){b.classList.add('correct');score++;}else{b.classList.add('incorrect');btns.forEach(x=>{if(x.getAttribute('onclick')&&x.getAttribute('onclick').includes('true'))x.classList.add('correct');});}updateScore();}
+</script>
+</body></html>

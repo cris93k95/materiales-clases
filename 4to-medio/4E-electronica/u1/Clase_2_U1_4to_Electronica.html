@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2 — 4° Medio — Electrónica</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #1565c0, #1e88e5); color: white; padding: 34px 20px; text-align: center; }
+        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
+        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
+        .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #1565c0; }
+        .objective-card h3 { color: #1565c0; margin-bottom: 8px; }
+        .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #6a1b9a; }
+        .section-body { padding: 18px 22px; }
+        .section-body ul, .section-body ol { margin-left: 18px; }
+        .section-body li { margin-bottom: 8px; }
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .reading-box h4 { color: #1565c0; margin-bottom: 8px; }
+        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+        .quiz-options { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; transition: all 0.2s; }
+        .quiz-btn:hover { border-color: #1565c0; }
+        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
+        .table-activity { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        .table-activity th { background: #1565c0; color: white; padding: 10px; text-align: left; font-size: 0.9em; }
+        .table-activity td { border: 1px solid #ddd; padding: 8px; }
+        .table-activity input { width: 100%; border: none; padding: 5px; background: transparent; font-family: inherit; font-size: 0.88em; }
+        .table-activity input:focus { outline: 2px solid #1565c0; border-radius: 4px; }
+        .ticket-box { background: linear-gradient(135deg, #e3f2fd, #bbdefb); border: 2px dashed #1565c0; border-radius: 12px; padding: 18px; margin-top: 12px; }
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; }
+        .ticket-input:focus { outline: 2px solid #1565c0; }
+        textarea.ticket-area { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; min-height: 70px; resize: vertical; }
+        textarea.ticket-area:focus { outline: 2px solid #1565c0; }
+        .score-bar { background: white; border-radius: 10px; padding: 12px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+        .score { font-weight: 700; color: #1565c0; }
+        .footer { text-align: center; color: #999; font-size: 0.8em; margin: 18px 0; }
+        .oral-box { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .oral-box strong { color: #1565c0; }
+        .concept-box { background: #e8f5e9; border-left: 4px solid #2e7d32; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .concept-box strong { color: #2e7d32; }
+        .discussion-box { background: #f3e5f5; border-left: 4px solid #7b1fa2; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .discussion-box strong { color: #7b1fa2; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>CLASS 2 — 4° MEDIO — ELECTRÓNICA</h1>
+    <h2>Unidad 1 — Professional Profile & Workplace English</h2>
+    <div class="meta">
+        <span>📘 OA1 · OA3</span>
+        <span>⏱ 90 min</span>
+        <span>🧭 Guía de estudiante completa</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="objective-card">
+        <h3>🎯 Objetivo de la clase</h3>
+        <p>Analizar un estudio de caso sobre la trayectoria profesional de un técnico de Electrónica, identificando hitos clave, habilidades requeridas y el rol del inglés en su carrera.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (15 min)</div>
+        <div class="section-body">
+            <h4>🔄 Warm-up: Word Relay</h4>
+            <p>In teams, each student says a technical word in English. The team with the most words wins!</p>
+            <input class="ticket-input" placeholder="Write your team's words here..." />
+            <div class="oral-box" style="margin-top:14px;">
+                <strong>💬 Pre-reading Discussion:</strong> <em>"What steps does someone take to become a successful professional in electronics?"</em>
+            </div>
+            <div class="concept-box" style="margin-top:14px;">
+                <strong>📖 What is a Case Study?</strong>
+                <p>A <strong>case study</strong> is a detailed story about a real person or situation used as a learning tool. Today, we will read about Diego, a Chilean electronics technician who went from school to maintaining medical equipment at a hospital.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
+        <div class="section-body">
+            <h4>📖 Activity 1 — Case Study: Building a Tech Career (25 min)</h4>
+            <div class="reading-box">
+                <h4>Building a Tech Career</h4>
+                <p>Diego grew up in Concepción, Chile, and was always curious about how electronic devices work. He would take apart old radios and phones to see what was inside. When it was time to choose a specialty at his technical school, he chose electronics without hesitation.</p>
+
+                <p>During his studies, Diego learned to read schematic diagrams, solder components onto circuit boards, and test circuits using multimeters and oscilloscopes. He also discovered a passion for programming when his teacher introduced the class to Arduino microcontrollers. The tutorials were all in English, so Diego started learning English on his own using free online resources.</p>
+
+                <p>After graduation, Diego did his internship at a telecommunications company. He worked in the maintenance department, repairing communication equipment, replacing faulty circuit boards, and calibrating signal amplifiers. His supervisor noticed that Diego was quick to learn and good at troubleshooting problems.</p>
+
+                <p>Diego's first full-time job was at the same company. He worked there for two years. In his free time, he continued learning about Arduino and Raspberry Pi, completing several personal projects: a home automation system and a weather station. All the documentation and community forums for these platforms were in English.</p>
+
+                <p>Diego then saw a job posting at a hospital in Santiago. They needed a biomedical electronics technician to maintain and repair medical equipment such as patient monitors, infusion pumps, and diagnostic machines. The position required English because the equipment manuals and software were from international manufacturers. Diego applied and got the job.</p>
+
+                <p>Today, Diego works at the hospital maintaining critical medical equipment. He reads datasheets in English every day, communicates with foreign technical support teams, and recently completed an online certification in biomedical equipment maintenance — entirely in English. He says: "Being self-taught in programming and English changed my career. I went from fixing phones to maintaining machines that save lives."</p>
+            </div>
+
+            <h4 style="margin-top:18px;">📋 Activity 2 — Career Path Analysis</h4>
+            <p>Complete the table based on the case study:</p>
+            <table class="table-activity">
+                <tr><th>Stage</th><th>Skills Developed</th><th>Role of English</th><th>Challenges Faced</th></tr>
+                <tr>
+                    <td>Education (Liceo TP)</td>
+                    <td><input placeholder="e.g. Soldering, reading schematics..." /></td>
+                    <td><input placeholder="e.g. Arduino tutorials..." /></td>
+                    <td><input placeholder="" /></td>
+                </tr>
+                <tr>
+                    <td>Internship</td>
+                    <td><input /></td>
+                    <td><input /></td>
+                    <td><input /></td>
+                </tr>
+                <tr>
+                    <td>First Job + Self-learning</td>
+                    <td><input /></td>
+                    <td><input /></td>
+                    <td><input /></td>
+                </tr>
+                <tr>
+                    <td>Current Role (Hospital)</td>
+                    <td><input /></td>
+                    <td><input /></td>
+                    <td><input /></td>
+                </tr>
+            </table>
+
+            <h4 style="margin-top:18px;">✅ Activity 3 — Comprehension Questions (15 min)</h4>
+            <p><strong>A) Explicit questions:</strong></p>
+            <div class="quiz-item">
+                <p>1. Where did Diego grow up?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Concepción, Chile</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Santiago, Chile</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Valparaíso, Chile</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>2. What personal projects did Diego build in his free time?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">A website and a mobile app</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">A home automation system and a weather station</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">A robot and a drone</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>3. What type of equipment does Diego maintain at the hospital?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Kitchen equipment</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Computer servers</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Medical equipment (monitors, pumps, diagnostic machines)</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>4. How did Diego first start learning English?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">At a language school</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">On his own using free online resources</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">By traveling abroad</button>
+                </div>
+            </div>
+
+            <p style="margin-top:14px;"><strong>B) Critical analysis questions:</strong></p>
+            <div class="quiz-item">
+                <p>5. Why was being "self-taught" an advantage for Diego?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">It showed initiative and helped him develop unique skills beyond school</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">It saved him money on courses</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">It made his diploma unnecessary</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>6. Why did the hospital require English for the position?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because the patients speak English</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because the hospital is international</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Because the equipment manuals and software are from international manufacturers</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>7. What would you do differently from Diego?</p>
+                <textarea class="ticket-area" placeholder="I would... because..."></textarea>
+            </div>
+            <div class="quiz-item">
+                <p>8. How does Diego's story show the connection between curiosity and career success?</p>
+                <textarea class="ticket-area" placeholder="Diego's story shows that curiosity... because..."></textarea>
+            </div>
+
+            <h4 style="margin-top:18px;">🗣️ Activity 4 — Group Discussion (15 min)</h4>
+            <div class="discussion-box">
+                <strong>In groups of 3, compare Diego's career path to your own plans:</strong>
+                <p style="margin-top:8px;"><em>"Like Diego, I will..."</em></p>
+                <p><em>"Unlike Diego, I plan to..."</em></p>
+                <p><em>"I agree/disagree that self-learning is important because..."</em></p>
+            </div>
+            <textarea class="ticket-area" placeholder="Write your group's main conclusions here..." style="margin-top:10px;"></textarea>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <h4>📝 Reflection</h4>
+            <p>Write 3 lines: <em>"What is the most important lesson from this case study for my own career?"</em></p>
+            <textarea class="ticket-area" placeholder="The most important lesson is..."></textarea>
+            <div class="oral-box" style="margin-top:14px;">
+                <strong>👀 Preview:</strong> <em>"Next class, we will build your professional CV in English."</em>
+            </div>
+            <div class="ticket-box">
+                <h4>🎫 Exit Ticket</h4>
+                <input class="ticket-input" placeholder="Write 3 new words/expressions from today + meaning" />
+                <input class="ticket-input" placeholder="One thing Diego did that inspires you:" />
+            </div>
+        </div>
+    </div>
+
+    <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 6</span></div>
+    <div class="footer">4° Medio — Electrónica — Clase 2, Unidad 1 — Inglés 2026</div>
+</div>
+
+<script>
+    let score = 0;
+    function updateScore() { document.getElementById('totalScore').textContent = score + ' / 6'; }
+    function checkAnswer(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b.getAttribute('onclick').includes('true')) b.classList.add('correct'); }); }
+        updateScore();
+    }
+</script>
+</body>
+</html>

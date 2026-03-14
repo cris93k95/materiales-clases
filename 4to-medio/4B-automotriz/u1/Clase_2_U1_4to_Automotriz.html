@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2 — 4° Medio — Mecánica Automotriz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #b71c1c, #d32f2f); color: white; padding: 34px 20px; text-align: center; }
+        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
+        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
+        .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #b71c1c; }
+        .objective-card h3 { color: #b71c1c; margin-bottom: 8px; }
+        .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #b71c1c; }
+        .cierre { background: #6a1b9a; }
+        .section-body { padding: 18px 22px; }
+        .section-body ul, .section-body ol { margin-left: 18px; }
+        .section-body li { margin-bottom: 8px; }
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .reading-box h4 { color: #b71c1c; margin-bottom: 8px; }
+        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+        .quiz-options { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; transition: all 0.2s; }
+        .quiz-btn:hover { border-color: #b71c1c; }
+        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
+        .table-activity { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        .table-activity th { background: #b71c1c; color: white; padding: 10px; text-align: left; font-size: 0.9em; }
+        .table-activity td { border: 1px solid #ddd; padding: 8px; }
+        .table-activity input { width: 100%; border: none; padding: 5px; background: transparent; font-family: inherit; font-size: 0.88em; }
+        .table-activity input:focus { outline: 2px solid #b71c1c; border-radius: 4px; }
+        .ticket-box { background: linear-gradient(135deg, #fce4ec, #ffebee); border: 2px dashed #b71c1c; border-radius: 12px; padding: 18px; margin-top: 12px; }
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; }
+        .ticket-input:focus { outline: 2px solid #b71c1c; }
+        textarea.ticket-area { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; min-height: 70px; resize: vertical; }
+        textarea.ticket-area:focus { outline: 2px solid #b71c1c; }
+        .score-bar { background: white; border-radius: 10px; padding: 12px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+        .score { font-weight: 700; color: #b71c1c; }
+        .footer { text-align: center; color: #999; font-size: 0.8em; margin: 18px 0; }
+        .oral-box { background: #fff3e0; border-left: 4px solid #ef6c00; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .oral-box strong { color: #ef6c00; }
+        .concept-box { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .concept-box strong { color: #1565c0; }
+        .discussion-box { background: #f3e5f5; border-left: 4px solid #7b1fa2; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .discussion-box strong { color: #7b1fa2; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>CLASS 2 — 4° MEDIO — MECÁNICA AUTOMOTRIZ</h1>
+    <h2>Unidad 1 — Professional Profile & Workplace English</h2>
+    <div class="meta">
+        <span>📘 OA1 · OA3</span>
+        <span>⏱ 90 min</span>
+        <span>🧭 Guía de estudiante completa</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="objective-card">
+        <h3>🎯 Objetivo de la clase</h3>
+        <p>Analizar un estudio de caso sobre la trayectoria profesional de un técnico de Mecánica Automotriz, identificando hitos clave, habilidades requeridas y el rol del inglés en su carrera.</p>
+    </div>
+
+    <!-- INICIO -->
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (15 min)</div>
+        <div class="section-body">
+            <h4>🔄 Warm-up: Word Relay</h4>
+            <p>In teams, each student says a technical word in English. The team with the most words wins!</p>
+            <input class="ticket-input" placeholder="Write your team's words here..." />
+
+            <div class="oral-box" style="margin-top:14px;">
+                <strong>💬 Pre-reading Discussion:</strong> <em>"What steps does someone take to become a successful professional in automotive mechanics?"</em>
+            </div>
+
+            <div class="concept-box" style="margin-top:14px;">
+                <strong>📖 What is a Case Study?</strong>
+                <p>A <strong>case study</strong> is a detailed story about a real person or situation. It is used as a learning tool to analyze experiences, decisions, and results. Today, we will read a case study about a Chilean automotive technician.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DESARROLLO -->
+    <div class="section">
+        <div class="section-header desarrollo">🔴 Desarrollo (60 min)</div>
+        <div class="section-body">
+
+            <!-- Reading -->
+            <h4>📖 Activity 1 — Case Study: From Workshop to Dealership (25 min)</h4>
+            <div class="reading-box">
+                <h4>From Workshop to Dealership</h4>
+                <p>Carlos grew up in Temuco, Chile, and always loved cars. When he was 15, he entered a technical high school (liceo técnico-profesional) and chose the automotive mechanics specialty. During those years, he learned the basics: how to change oil, inspect brakes, and diagnose simple engine problems. His teachers encouraged him to study English because most car manuals were written in English.</p>
+
+                <p>After graduating, Carlos did his internship (práctica profesional) at a small independent workshop. There, he gained hands-on experience: he worked on different car brands, learned to use diagnostic scanners, and improved his customer service skills. The owner of the workshop became his mentor and taught him the importance of being punctual and professional.</p>
+
+                <p>Carlos' first real job was at the same workshop. He worked there for three years, specializing in engine repair and electrical systems. During this time, he took an online course in English for Automotive Professionals, which helped him read technical bulletins and understand software updates from car manufacturers.</p>
+
+                <p>His big break came when a Toyota dealership in Santiago was looking for experienced technicians. Carlos applied, passed a technical test (which was partly in English), and got the job. At the dealership, he received specialized training from Toyota, including a two-week course in Brazil where all the materials were in English.</p>
+
+                <p>Today, Carlos is a senior technician at the dealership. He leads a small team, trains new technicians, and handles the most complex diagnostic cases. He recently attended a training seminar in Germany, where he learned about hybrid and electric vehicle technology. English was essential for communicating with engineers from other countries.</p>
+
+                <p>Carlos says: "English opened doors I never imagined. Without it, I would still be working only on basic repairs. Now I can access international training, read the latest technical documentation, and grow in my career."</p>
+            </div>
+
+            <!-- Table -->
+            <h4 style="margin-top:18px;">📋 Activity 2 — Career Path Analysis</h4>
+            <p>Complete the table based on the case study:</p>
+            <table class="table-activity">
+                <tr><th>Stage</th><th>Skills Developed</th><th>Role of English</th><th>Challenges Faced</th></tr>
+                <tr>
+                    <td>Education (Liceo TP)</td>
+                    <td><input placeholder="e.g. Basic mechanics..." /></td>
+                    <td><input placeholder="e.g. Reading manuals..." /></td>
+                    <td><input placeholder="e.g. Learning basics..." /></td>
+                </tr>
+                <tr>
+                    <td>Internship</td>
+                    <td><input placeholder="" /></td>
+                    <td><input placeholder="" /></td>
+                    <td><input placeholder="" /></td>
+                </tr>
+                <tr>
+                    <td>First Job</td>
+                    <td><input placeholder="" /></td>
+                    <td><input placeholder="" /></td>
+                    <td><input placeholder="" /></td>
+                </tr>
+                <tr>
+                    <td>Specialization / Current</td>
+                    <td><input placeholder="" /></td>
+                    <td><input placeholder="" /></td>
+                    <td><input placeholder="" /></td>
+                </tr>
+            </table>
+
+            <!-- Comprehension -->
+            <h4 style="margin-top:18px;">✅ Activity 3 — Comprehension Questions (15 min)</h4>
+            <p><strong>A) Explicit questions:</strong></p>
+
+            <div class="quiz-item">
+                <p>1. Where did Carlos study automotive mechanics?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">At a technical high school in Temuco</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">At a university in Santiago</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">At a private academy in Valparaíso</button>
+                </div>
+            </div>
+
+            <div class="quiz-item">
+                <p>2. Where did Carlos do his internship?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">At a Toyota dealership</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">At a small independent workshop</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">At a car factory</button>
+                </div>
+            </div>
+
+            <div class="quiz-item">
+                <p>3. What country did Carlos visit for his most recent training?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Japan</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Brazil</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Germany</button>
+                </div>
+            </div>
+
+            <div class="quiz-item">
+                <p>4. How long did Carlos work at the independent workshop?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">One year</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Three years</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Five years</button>
+                </div>
+            </div>
+
+            <p style="margin-top:14px;"><strong>B) Critical analysis questions:</strong></p>
+
+            <div class="quiz-item">
+                <p>5. Why was English important for Carlos' career?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">It helped him talk to Chilean clients</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">It gave him access to international training and documentation</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">It was required to get his diploma</button>
+                </div>
+            </div>
+
+            <div class="quiz-item">
+                <p>6. What role did the workshop owner play in Carlos' development?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">He was a mentor who taught professionalism</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">He paid for Carlos' English course</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">He helped Carlos get the dealership job</button>
+                </div>
+            </div>
+
+            <div class="quiz-item">
+                <p>7. What would you do differently from Carlos?</p>
+                <textarea class="ticket-area" placeholder="I would... because..."></textarea>
+            </div>
+
+            <div class="quiz-item">
+                <p>8. How does Carlos' story show the importance of continuous learning?</p>
+                <textarea class="ticket-area" placeholder="Carlos' story shows that... because..."></textarea>
+            </div>
+
+            <!-- Discussion -->
+            <h4 style="margin-top:18px;">🗣️ Activity 4 — Group Discussion (15 min)</h4>
+            <div class="discussion-box">
+                <strong>In groups of 3, compare Carlos' career path to your own plans:</strong>
+                <p style="margin-top:8px;">Use these expressions:</p>
+                <p><em>"Like Carlos, I will..."</em></p>
+                <p><em>"Unlike Carlos, I plan to..."</em></p>
+                <p><em>"I agree/disagree that English is important because..."</em></p>
+            </div>
+            <textarea class="ticket-area" placeholder="Write your group's main conclusions here..." style="margin-top:10px;"></textarea>
+        </div>
+    </div>
+
+    <!-- CIERRE -->
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <h4>📝 Reflection</h4>
+            <p>Write 3 lines: <em>"What is the most important lesson from this case study for my own career?"</em></p>
+            <textarea class="ticket-area" placeholder="The most important lesson is..."></textarea>
+
+            <div class="oral-box" style="margin-top:14px;">
+                <strong>👀 Preview:</strong> <em>"Next class, we will build your professional CV in English."</em>
+            </div>
+
+            <div class="ticket-box">
+                <h4>🎫 Exit Ticket</h4>
+                <input class="ticket-input" placeholder="Write 3 new words/expressions from today + meaning" />
+                <input class="ticket-input" placeholder="One thing Carlos did that inspires you:" />
+            </div>
+        </div>
+    </div>
+
+    <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 6</span></div>
+    <div class="footer">4° Medio — Mecánica Automotriz — Clase 2, Unidad 1 — Inglés 2026</div>
+</div>
+
+<script>
+    let score = 0;
+    function updateScore() { document.getElementById('totalScore').textContent = score + ' / 6'; }
+    function checkAnswer(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b.getAttribute('onclick').includes('true')) b.classList.add('correct'); }); }
+        updateScore();
+    }
+</script>
+</body>
+</html>

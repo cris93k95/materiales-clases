@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 8 — 4° Medio — Electrónica</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:#f0f2f5;color:#333;line-height:1.7}
+.header{background:linear-gradient(135deg,#1565c0,#1e88e5);color:white;padding:34px 20px;text-align:center}
+.header h1{font-size:1.85em;margin-bottom:5px}.header h2{font-size:1.1em;font-weight:300;margin-bottom:8px}
+.header .meta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:10px}
+.header .meta span{background:rgba(255,255,255,0.2);padding:5px 14px;border-radius:20px;font-size:0.85em}
+.container{max-width:930px;margin:24px auto;padding:0 15px}
+.objective-card{background:white;border-radius:12px;padding:24px;margin-bottom:22px;box-shadow:0 2px 12px rgba(0,0,0,0.06);border-left:5px solid #1565c0}.objective-card h3{color:#1565c0;margin-bottom:8px}
+.section{background:white;border-radius:12px;margin-bottom:22px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.section-header{padding:14px 22px;color:white;font-weight:600;font-size:1.05em}
+.inicio{background:#2e7d32}.desarrollo{background:#1565c0}.cierre{background:#6a1b9a}
+.section-body{padding:18px 22px}.section-body ul,.section-body ol{margin-left:18px}.section-body li{margin-bottom:8px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin-top:12px}
+.vocab-card{background:#e3f2fd;border:2px solid #1e88e540;border-radius:10px;padding:12px;text-align:center;cursor:pointer;transition:all 0.3s}
+.vocab-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.vocab-card .word{font-weight:700;color:#1565c0}.vocab-card .meaning{font-size:0.8em;color:#666;margin-top:4px;display:none}
+.vocab-card.revealed .meaning{display:block}.vocab-card .hint{font-size:0.72em;color:#888;margin-top:4px}.vocab-card.revealed .hint{display:none}
+.reading-box{background:#fafafa;border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-top:12px}.reading-box h4{color:#1565c0;margin-bottom:8px}
+.quiz-item{background:#f7f7f7;border:1px solid #e0e0e0;border-radius:8px;padding:12px;margin-bottom:10px}
+.quiz-options{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.quiz-btn{padding:7px 14px;border-radius:8px;border:2px solid #e0e0e0;background:white;cursor:pointer;transition:all 0.2s}
+.quiz-btn:hover{border-color:#1565c0}.quiz-btn.correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:700}
+.quiz-btn.incorrect{border-color:#c62828;background:#ffebee;color:#c62828}
+.table-activity{width:100%;border-collapse:collapse;margin-top:12px}
+.table-activity th{background:#1565c0;color:white;padding:10px;text-align:left;font-size:0.9em}
+.table-activity td{border:1px solid #ddd;padding:8px}
+.table-activity input{width:100%;border:none;padding:5px;background:transparent;font-family:inherit}.table-activity input:focus{outline:2px solid #1565c0;border-radius:4px}
+.ticket-box{background:linear-gradient(135deg,#e3f2fd,#e3f2fddd);border:2px dashed #1565c0;border-radius:12px;padding:18px;margin-top:12px}
+.ticket-input{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;margin-top:8px;font-family:inherit}.ticket-input:focus{outline:2px solid #1565c0}
+textarea.ta{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;margin-top:8px;font-family:inherit;min-height:70px;resize:vertical}.ta:focus{outline:2px solid #1565c0}
+.score-bar{background:white;border-radius:10px;padding:12px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;justify-content:space-between;align-items:center}
+.score{font-weight:700;color:#1565c0}.footer{text-align:center;color:#999;font-size:0.8em;margin:18px 0}
+.oral-box{background:#e3f2fd;border-left:4px solid #1e88e5;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.oral-box strong{color:#1e88e5}
+.concept-box{background:#e3f2fd;border-left:4px solid #1565c0;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.concept-box strong{color:#1565c0}
+.grammar-box{background:#fff3e0;border-left:4px solid #ef6c00;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.grammar-box strong{color:#ef6c00}
+.safety-box{background:#fce4ec;border-left:4px solid #c62828;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.safety-box strong{color:#c62828}
+.eval-box{background:#fce4ec;border:2px solid #ef9a9a;border-radius:12px;padding:18px;margin-top:12px}.eval-box strong{color:#c62828}
+.email-box{background:#f5f5f5;border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-top:12px;font-family:monospace,sans-serif;font-size:0.9em}
+</style></head><body>
+<div class="header"><h1>CLASS 8 — 4° MEDIO — ELECTRÓNICA</h1><h2>Unidad 1 — Professional Profile & Workplace English</h2>
+<div class="meta"><span>📘 OA1 · OA4</span><span>⏱ 90 min</span><span>🧭 Guía de estudiante completa</span></div></div>
+<div class="container">
+<div class="objective-card"><h3>🎯 Objetivo de la clase</h3><p>Comprender y producir instrucciones de seguridad laboral en inglés específicas para el contexto de Electrónica.</p></div>
+
+    <div class="section"><div class="section-header inicio">🟢 Inicio (15 min)</div><div class="section-body">
+        <div class="safety-box"><strong>🛡️ Safety Signs:</strong> Warning · Danger · Caution · Emergency Exit
+        <p style="margin-top:6px;"><em>"Where have you seen these signs? What do they mean?"</em></p></div>
+        <div class="concept-box" style="margin-top:12px;"><strong>📖 Key Concepts:</strong>
+        <p><strong>SDS</strong> = Safety Data Sheets · <strong>SOP</strong> = Standard Operating Procedures</p>
+        <p>Vocabulary: <em>hazard, emergency, prohibited, mandatory, caution, warning</em></p></div>
+    </div></div>
+    <div class="section"><div class="section-header desarrollo">🔵 Desarrollo (60 min)</div><div class="section-body">
+        <h4>📖 Activity 1 — Reading: Safety Protocols for Electronics (20 min)</h4>
+        <div class="reading-box" style="margin-top:8px;"><h4>Rule 1: ESD protection</h4><p>Always wear an anti-static wrist strap when handling sensitive electronic components.</p></div><div class="reading-box" style="margin-top:8px;"><h4>Rule 2: Soldering safety</h4><p>Use a fume extractor when soldering. Lead fumes and flux vapors are harmful to your health.</p></div><div class="reading-box" style="margin-top:8px;"><h4>Rule 3: Capacitor discharge</h4><p>Always discharge capacitors before working on a circuit. They can store dangerous charge even when unplugged.</p></div><div class="reading-box" style="margin-top:8px;"><h4>Rule 4: Chemical handling</h4><p>Handle PCB cleaning solvents in a well-ventilated area. Wear chemical-resistant gloves.</p></div>
+        
+        <h4 style="margin-top:18px;">✅ Activity 2 — Comprehension</h4>
+        <div class="quiz-item"><p>1. What is the most critical safety rule for electronics?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">ESD protection</button><button class="quiz-btn" onclick="checkAnswer(this,false)">No rules are needed</button><button class="quiz-btn" onclick="checkAnswer(this,false)">Only wear gloves</button></div></div>
+        <div class="quiz-item"><p>2. Why are SOPs (Standard Operating Procedures) important?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">They are optional</button><button class="quiz-btn" onclick="checkAnswer(this,true)">They ensure consistent and safe work practices</button><button class="quiz-btn" onclick="checkAnswer(this,false)">They slow down work</button></div></div>
+        
+        <h4 style="margin-top:18px;">✏️ Activity 3 — Write Safety Instructions (20 min)</h4>
+        <p>In pairs, write 5 safety instructions for your workshop using imperatives:</p>
+        <input class="ticket-input" placeholder="1. Always wear..." />
+        <input class="ticket-input" placeholder="2. Never..." />
+        <input class="ticket-input" placeholder="3. Before starting work, always..." />
+        <input class="ticket-input" placeholder="4. In case of emergency,..." />
+        <input class="ticket-input" placeholder="5. Report any..." />
+        
+        <div class="oral-box" style="margin-top:14px;"><strong>🗣️ Activity 4 — Safety Role-Play (15 min)</strong>
+        <p>Scenario: A new colleague who only speaks English arrives at your workshop. Explain the safety procedures to them.</p>
+        <p>Practice in pairs, then present to the class.</p></div>
+        
+        <h4 style="margin-top:18px;">⚡ Activity 5 — Safety Quiz</h4>
+        <div class="quiz-item"><p>3. What PPE is mandatory in a electronics workshop?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">Sunglasses and sandals</button><button class="quiz-btn" onclick="checkAnswer(this,true)">Appropriate PPE for the task</button><button class="quiz-btn" onclick="checkAnswer(this,false)">No PPE is needed</button></div></div>
+        <div class="quiz-item"><p>4. What should you do if you see a hazard?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">Ignore it</button><button class="quiz-btn" onclick="checkAnswer(this,true)">Report it immediately to your supervisor</button><button class="quiz-btn" onclick="checkAnswer(this,false)">Fix it yourself without telling anyone</button></div></div>
+    </div></div>
+    <div class="section"><div class="section-header cierre">🟣 Cierre (15 min)</div><div class="section-body">
+        <div class="safety-box"><strong>🛡️ Remember:</strong> <em>"Safety is universal. Knowing safety vocabulary in English can save lives."</em></div>
+        <div class="ticket-box"><h4>🎫 Exit Ticket</h4>
+        <input class="ticket-input" placeholder="The most important safety word I learned today:" />
+        <input class="ticket-input" placeholder="One safety rule I will always follow:" />
+        </div>
+    </div></div>
+<div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 4</span></div>
+<div class="footer">4° Medio — Electrónica — Clase 8, Unidad 1 — Inglés 2026</div>
+</div>
+<script>
+let score=0;function updateScore(){let e=document.getElementById('totalScore');if(e)e.textContent=score+' / 4';}
+function checkAnswer(b,c){const btns=b.parentElement.querySelectorAll('.quiz-btn');btns.forEach(x=>x.disabled=true);if(c){b.classList.add('correct');score++;}else{b.classList.add('incorrect');btns.forEach(x=>{if(x.getAttribute('onclick')&&x.getAttribute('onclick').includes('true'))x.classList.add('correct');});}updateScore();}
+</script></body></html>

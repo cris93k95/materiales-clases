@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2 — 4° Medio — Electricidad</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #e65100, #f57c00); color: white; padding: 34px 20px; text-align: center; }
+        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
+        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
+        .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #e65100; }
+        .objective-card h3 { color: #e65100; margin-bottom: 8px; }
+        .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #e65100; }
+        .cierre { background: #6a1b9a; }
+        .section-body { padding: 18px 22px; }
+        .section-body ul, .section-body ol { margin-left: 18px; }
+        .section-body li { margin-bottom: 8px; }
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .reading-box h4 { color: #e65100; margin-bottom: 8px; }
+        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+        .quiz-options { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; transition: all 0.2s; }
+        .quiz-btn:hover { border-color: #e65100; }
+        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
+        .table-activity { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        .table-activity th { background: #e65100; color: white; padding: 10px; text-align: left; font-size: 0.9em; }
+        .table-activity td { border: 1px solid #ddd; padding: 8px; }
+        .table-activity input { width: 100%; border: none; padding: 5px; background: transparent; font-family: inherit; font-size: 0.88em; }
+        .table-activity input:focus { outline: 2px solid #e65100; border-radius: 4px; }
+        .ticket-box { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border: 2px dashed #e65100; border-radius: 12px; padding: 18px; margin-top: 12px; }
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; }
+        .ticket-input:focus { outline: 2px solid #e65100; }
+        textarea.ticket-area { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; min-height: 70px; resize: vertical; }
+        textarea.ticket-area:focus { outline: 2px solid #e65100; }
+        .score-bar { background: white; border-radius: 10px; padding: 12px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+        .score { font-weight: 700; color: #e65100; }
+        .footer { text-align: center; color: #999; font-size: 0.8em; margin: 18px 0; }
+        .oral-box { background: #fff3e0; border-left: 4px solid #ef6c00; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .oral-box strong { color: #ef6c00; }
+        .concept-box { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .concept-box strong { color: #1565c0; }
+        .discussion-box { background: #f3e5f5; border-left: 4px solid #7b1fa2; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .discussion-box strong { color: #7b1fa2; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>CLASS 2 — 4° MEDIO — ELECTRICIDAD</h1>
+    <h2>Unidad 1 — Professional Profile & Workplace English</h2>
+    <div class="meta">
+        <span>📘 OA1 · OA3</span>
+        <span>⏱ 90 min</span>
+        <span>🧭 Guía de estudiante completa</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="objective-card">
+        <h3>🎯 Objetivo de la clase</h3>
+        <p>Analizar un estudio de caso sobre la trayectoria profesional de un técnico de Electricidad, identificando hitos clave, habilidades requeridas y el rol del inglés en su carrera.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (15 min)</div>
+        <div class="section-body">
+            <h4>🔄 Warm-up: Word Relay</h4>
+            <p>In teams, each student says a technical word in English. The team with the most words wins!</p>
+            <input class="ticket-input" placeholder="Write your team's words here..." />
+            <div class="oral-box" style="margin-top:14px;">
+                <strong>💬 Pre-reading Discussion:</strong> <em>"What steps does someone take to become a successful professional in electricity?"</em>
+            </div>
+            <div class="concept-box" style="margin-top:14px;">
+                <strong>📖 What is a Case Study?</strong>
+                <p>A <strong>case study</strong> is a detailed story about a real person or situation used as a learning tool. Today, we will read about María, a Chilean electrician who built her own business.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header desarrollo">⚡ Desarrollo (60 min)</div>
+        <div class="section-body">
+            <h4>📖 Activity 1 — Case Study: Powering a Career (25 min)</h4>
+            <div class="reading-box">
+                <h4>Powering a Career</h4>
+                <p>María grew up in Copiapó, in northern Chile. As a teenager, she was fascinated by how electricity works and decided to study at a technical high school in the electricity specialty. During her studies, she learned about residential wiring, circuit design, safety regulations, and how to use tools like multimeters and wire cutters.</p>
+
+                <p>After finishing school, María did her apprenticeship with a local electrical company. She worked on residential projects: installing wiring in new houses, connecting outlets and switches, and ensuring everything met the Chilean electrical code (SEC regulations). Her supervisor taught her the importance of double-checking every connection.</p>
+
+                <p>María's first paid job was at the same company. She worked there for two years, gaining experience in both residential and commercial installations. During this time, she noticed a growing demand for renewable energy in Chile, especially solar power. She decided to specialize.</p>
+
+                <p>María took an online certification course in solar panel installation. The course was taught by an international organization, and all the materials — videos, manuals, and exams — were in English. It was challenging, but she studied hard and passed. She learned how to design solar systems, install panels on rooftops, and connect them to the electrical grid.</p>
+
+                <p>With her new specialization, María started getting more clients. After three years of saving money and building a reputation, she opened her own small business: a company that installs and maintains solar energy systems for homes and small businesses in the Atacama region.</p>
+
+                <p>Today, María employs three technicians and is planning to expand. She regularly reads international electrical codes and technical articles in English to stay updated on new technology. She says: "Learning English was one of the best decisions I made. It gave me access to knowledge that helped me build something of my own."</p>
+            </div>
+
+            <h4 style="margin-top:18px;">📋 Activity 2 — Career Path Analysis</h4>
+            <p>Complete the table based on the case study:</p>
+            <table class="table-activity">
+                <tr><th>Stage</th><th>Skills Developed</th><th>Role of English</th><th>Challenges Faced</th></tr>
+                <tr>
+                    <td>Education (Liceo TP)</td>
+                    <td><input placeholder="e.g. Wiring, circuit design..." /></td>
+                    <td><input placeholder="" /></td>
+                    <td><input placeholder="" /></td>
+                </tr>
+                <tr>
+                    <td>Apprenticeship</td>
+                    <td><input /></td>
+                    <td><input /></td>
+                    <td><input /></td>
+                </tr>
+                <tr>
+                    <td>First Job</td>
+                    <td><input /></td>
+                    <td><input /></td>
+                    <td><input /></td>
+                </tr>
+                <tr>
+                    <td>Specialization / Own Business</td>
+                    <td><input /></td>
+                    <td><input /></td>
+                    <td><input /></td>
+                </tr>
+            </table>
+
+            <h4 style="margin-top:18px;">✅ Activity 3 — Comprehension Questions (15 min)</h4>
+            <p><strong>A) Explicit questions:</strong></p>
+            <div class="quiz-item">
+                <p>1. Where is María from?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Copiapó, northern Chile</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Santiago, central Chile</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Punta Arenas, southern Chile</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>2. What did María specialize in?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Industrial wiring</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Solar panel installation</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Computer networking</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>3. How many technicians does María currently employ?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">One</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Three</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Five</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>4. In what language was her solar panel certification course?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">English</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Spanish</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Portuguese</button>
+                </div>
+            </div>
+
+            <p style="margin-top:14px;"><strong>B) Critical analysis questions:</strong></p>
+            <div class="quiz-item">
+                <p>5. Why was English important for María's career growth?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">It gave her access to international certification and technical knowledge</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Her clients only speak English</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Chilean regulations are written in English</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>6. Why did María choose to specialize in solar energy?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because her boss told her to</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Because she noticed a growing demand for renewable energy in Chile</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because it was the only course available</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>7. What would you do differently from María?</p>
+                <textarea class="ticket-area" placeholder="I would... because..."></textarea>
+            </div>
+            <div class="quiz-item">
+                <p>8. What does María's story teach us about entrepreneurship?</p>
+                <textarea class="ticket-area" placeholder="María's story teaches us that..."></textarea>
+            </div>
+
+            <h4 style="margin-top:18px;">🗣️ Activity 4 — Group Discussion (15 min)</h4>
+            <div class="discussion-box">
+                <strong>In groups of 3, compare María's career path to your own plans:</strong>
+                <p style="margin-top:8px;"><em>"Like her, I will..."</em></p>
+                <p><em>"Unlike her, I plan to..."</em></p>
+                <p><em>"I agree/disagree that English is important because..."</em></p>
+            </div>
+            <textarea class="ticket-area" placeholder="Write your group's main conclusions here..." style="margin-top:10px;"></textarea>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <h4>📝 Reflection</h4>
+            <p>Write 3 lines: <em>"What is the most important lesson from this case study for my own career?"</em></p>
+            <textarea class="ticket-area" placeholder="The most important lesson is..."></textarea>
+            <div class="oral-box" style="margin-top:14px;">
+                <strong>👀 Preview:</strong> <em>"Next class, we will build your professional CV in English."</em>
+            </div>
+            <div class="ticket-box">
+                <h4>🎫 Exit Ticket</h4>
+                <input class="ticket-input" placeholder="Write 3 new words/expressions from today + meaning" />
+                <input class="ticket-input" placeholder="One thing María did that inspires you:" />
+            </div>
+        </div>
+    </div>
+
+    <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 6</span></div>
+    <div class="footer">4° Medio — Electricidad — Clase 2, Unidad 1 — Inglés 2026</div>
+</div>
+
+<script>
+    let score = 0;
+    function updateScore() { document.getElementById('totalScore').textContent = score + ' / 6'; }
+    function checkAnswer(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b.getAttribute('onclick').includes('true')) b.classList.add('correct'); }); }
+        updateScore();
+    }
+</script>
+</body>
+</html>

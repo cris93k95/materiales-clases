@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 3 — 4° Medio — Mecánica Automotriz</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:#f0f2f5;color:#333;line-height:1.7}
+.header{background:linear-gradient(135deg,#b71c1c,#d32f2f);color:white;padding:34px 20px;text-align:center}
+.header h1{font-size:1.85em;margin-bottom:5px}.header h2{font-size:1.1em;font-weight:300;margin-bottom:8px}
+.header .meta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:10px}
+.header .meta span{background:rgba(255,255,255,0.2);padding:5px 14px;border-radius:20px;font-size:0.85em}
+.container{max-width:930px;margin:24px auto;padding:0 15px}
+.objective-card{background:white;border-radius:12px;padding:24px;margin-bottom:22px;box-shadow:0 2px 12px rgba(0,0,0,0.06);border-left:5px solid #b71c1c}.objective-card h3{color:#b71c1c;margin-bottom:8px}
+.section{background:white;border-radius:12px;margin-bottom:22px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.section-header{padding:14px 22px;color:white;font-weight:600;font-size:1.05em}
+.inicio{background:#2e7d32}.desarrollo{background:#b71c1c}.cierre{background:#6a1b9a}
+.section-body{padding:18px 22px}.section-body ul,.section-body ol{margin-left:18px}.section-body li{margin-bottom:8px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin-top:12px}
+.vocab-card{background:#ffebee;border:2px solid #d32f2f40;border-radius:10px;padding:12px;text-align:center;cursor:pointer;transition:all 0.3s}
+.vocab-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.vocab-card .word{font-weight:700;color:#b71c1c}.vocab-card .meaning{font-size:0.8em;color:#666;margin-top:4px;display:none}
+.vocab-card.revealed .meaning{display:block}.vocab-card .hint{font-size:0.72em;color:#888;margin-top:4px}.vocab-card.revealed .hint{display:none}
+.reading-box{background:#fafafa;border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-top:12px}.reading-box h4{color:#b71c1c;margin-bottom:8px}
+.quiz-item{background:#f7f7f7;border:1px solid #e0e0e0;border-radius:8px;padding:12px;margin-bottom:10px}
+.quiz-options{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.quiz-btn{padding:7px 14px;border-radius:8px;border:2px solid #e0e0e0;background:white;cursor:pointer;transition:all 0.2s}
+.quiz-btn:hover{border-color:#b71c1c}.quiz-btn.correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:700}
+.quiz-btn.incorrect{border-color:#c62828;background:#ffebee;color:#c62828}
+.table-activity{width:100%;border-collapse:collapse;margin-top:12px}
+.table-activity th{background:#b71c1c;color:white;padding:10px;text-align:left;font-size:0.9em}
+.table-activity td{border:1px solid #ddd;padding:8px}
+.table-activity input{width:100%;border:none;padding:5px;background:transparent;font-family:inherit}.table-activity input:focus{outline:2px solid #b71c1c;border-radius:4px}
+.ticket-box{background:linear-gradient(135deg,#ffebee,#ffebeedd);border:2px dashed #b71c1c;border-radius:12px;padding:18px;margin-top:12px}
+.ticket-input{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;margin-top:8px;font-family:inherit}.ticket-input:focus{outline:2px solid #b71c1c}
+textarea.ta{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;margin-top:8px;font-family:inherit;min-height:70px;resize:vertical}.ta:focus{outline:2px solid #b71c1c}
+.score-bar{background:white;border-radius:10px;padding:12px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;justify-content:space-between;align-items:center}
+.score{font-weight:700;color:#b71c1c}.footer{text-align:center;color:#999;font-size:0.8em;margin:18px 0}
+.oral-box{background:#ffebee;border-left:4px solid #d32f2f;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.oral-box strong{color:#d32f2f}
+.concept-box{background:#e3f2fd;border-left:4px solid #1565c0;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.concept-box strong{color:#1565c0}
+.grammar-box{background:#fff3e0;border-left:4px solid #ef6c00;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.grammar-box strong{color:#ef6c00}
+.safety-box{background:#fce4ec;border-left:4px solid #c62828;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.safety-box strong{color:#c62828}
+.eval-box{background:#fce4ec;border:2px solid #ef9a9a;border-radius:12px;padding:18px;margin-top:12px}.eval-box strong{color:#c62828}
+.email-box{background:#f5f5f5;border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-top:12px;font-family:monospace,sans-serif;font-size:0.9em}
+</style></head><body>
+<div class="header"><h1>CLASS 3 — 4° MEDIO — MECÁNICA AUTOMOTRIZ</h1><h2>Unidad 1 — Professional Profile & Workplace English</h2>
+<div class="meta"><span>📘 OA2 · OA4</span><span>⏱ 90 min</span><span>🧭 Guía de estudiante completa</span></div></div>
+<div class="container">
+<div class="objective-card"><h3>🎯 Objetivo de la clase</h3><p>Producir un currículum vitae en inglés adaptado al perfil profesional de Mecánica Automotriz, aplicando formato estándar y vocabulario técnico apropiado.</p></div>
+
+    <div class="section"><div class="section-header inicio">🟢 Inicio (15 min)</div><div class="section-body">
+        <div class="oral-box"><strong>💬 Compare two CVs:</strong> <em>"Which CV would you hire? Why?"</em></div>
+        <div class="concept-box" style="margin-top:12px;"><strong>📖 CV Sections:</strong>
+        <p><strong>Personal Information · Objective · Education · Work Experience · Skills · Languages · References</strong></p>
+        <p>Key vocabulary: <em>objective, proficient, experienced in, certified, reference, internship, vocational training</em></p></div>
+    </div></div>
+    <div class="section"><div class="section-header desarrollo">🔵 Desarrollo (60 min)</div><div class="section-body">
+        <h4>📋 Activity 1 — CV Model Analysis (15 min)</h4>
+        <div class="email-box">
+            <p><strong>CURRICULUM VITAE</strong></p>
+            <p><strong>Name:</strong> Carlos Muñoz Sepúlveda<br><strong>Email:</strong> carlos.munoz@email.com<br><strong>Phone:</strong> +56 9 1234 5678</p>
+            <p><strong>OBJECTIVE</strong><br>To obtain a position as a automotive mechanics technician where I can apply my technical skills and continue developing professionally.</p>
+            <p><strong>EDUCATION</strong><br>Liceo Técnico Profesional, Mecánica Automotriz (2024-2026)</p>
+            <p><strong>SKILLS</strong><br><ul><li>Engine diagnostics and repair</li><li>Brake system maintenance</li><li>Electronic fuel injection</li><li>OBD scanner operation</li><li>Hybrid vehicle basics</li><li>Wheel alignment</li><li>Oil change and fluid maintenance</li><li>Battery testing and replacement</li></ul></p>
+            <p><strong>LANGUAGES</strong><br>Spanish (Native) · English (Basic-Intermediate)</p>
+        </div>
+        <div class="quiz-item"><p>1. What is the purpose of the 'Objective' section?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">To list your hobbies</button><button class="quiz-btn" onclick="checkAnswer(this,true)">To state what position you want and what you offer</button><button class="quiz-btn" onclick="checkAnswer(this,false)">To write your address</button></div></div>
+        
+        <h4 style="margin-top:18px;">✏️ Activity 2 — Write Your CV (35 min)</h4>
+        <table class="table-activity">
+        <tr><th>Section</th><th>Your Content</th></tr>
+        <tr><td><strong>Full Name</strong></td><td><input /></td></tr>
+        <tr><td><strong>Email</strong></td><td><input /></td></tr>
+        <tr><td><strong>Phone</strong></td><td><input /></td></tr>
+        <tr><td><strong>Objective</strong></td><td><input placeholder="To obtain a position as a... where I can..." /></td></tr>
+        <tr><td><strong>Education</strong></td><td><input placeholder="Liceo TP, Mecánica Automotriz..." /></td></tr>
+        <tr><td><strong>Skill 1</strong></td><td><input placeholder="Engine diagnostics and repair" /></td></tr>
+        <tr><td><strong>Skill 2</strong></td><td><input placeholder="Brake system maintenance" /></td></tr>
+        <tr><td><strong>Skill 3</strong></td><td><input placeholder="Electronic fuel injection" /></td></tr>
+        <tr><td><strong>Skill 4</strong></td><td><input placeholder="OBD scanner operation" /></td></tr>
+        <tr><td><strong>Skill 5</strong></td><td><input placeholder="Hybrid vehicle basics" /></td></tr>
+        <tr><td><strong>Languages</strong></td><td><input placeholder="Spanish (Native), English (Basic-Intermediate)" /></td></tr>
+        </table>
+        
+        <h4 style="margin-top:18px;">🔄 Activity 3 — Peer Review (10 min)</h4>
+        <div class="oral-box"><strong>Exchange CVs with a partner. Check:</strong>
+        <p>✅ All sections present? ✅ Action verbs used correctly? ✅ Information clear and professional?</p></div>
+        <input class="ticket-input" placeholder="Feedback for my partner's CV:" />
+    </div></div>
+    <div class="section"><div class="section-header cierre">🟣 Cierre (15 min)</div><div class="section-body">
+        <div class="oral-box"><strong>🗣️ Share:</strong> 3 volunteers read their <em>Objective</em> to the class.</div>
+        <p style="margin-top:8px;"><em>Homework: Complete and improve your CV for next week.</em></p>
+    </div></div>
+<div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 1</span></div>
+<div class="footer">4° Medio — Mecánica Automotriz — Clase 3, Unidad 1 — Inglés 2026</div>
+</div>
+<script>
+let score=0;function updateScore(){let e=document.getElementById('totalScore');if(e)e.textContent=score+' / 1';}
+function checkAnswer(b,c){const btns=b.parentElement.querySelectorAll('.quiz-btn');btns.forEach(x=>x.disabled=true);if(c){b.classList.add('correct');score++;}else{b.classList.add('incorrect');btns.forEach(x=>{if(x.getAttribute('onclick')&&x.getAttribute('onclick').includes('true'))x.classList.add('correct');});}updateScore();}
+</script></body></html>

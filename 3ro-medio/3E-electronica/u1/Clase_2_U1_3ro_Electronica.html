@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2 — 3° Medio — Electrónica</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #1565c0, #1e88e5); color: white; padding: 34px 20px; text-align: center; }
+        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
+        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
+        .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #1565c0; }
+        .objective-card h3 { color: #1565c0; margin-bottom: 8px; }
+        .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #6a1b9a; }
+        .section-body { padding: 18px 22px; }
+        .section-body ul, .section-body ol { margin-left: 18px; }
+        .section-body li { margin-bottom: 8px; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin-top: 12px; }
+        .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.3s; }
+        .vocab-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .vocab-card .word { font-weight: 700; color: #1565c0; }
+        .vocab-card .meaning { font-size: 0.8em; color: #666; margin-top: 4px; display: none; }
+        .vocab-card.revealed .meaning { display: block; }
+        .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
+        .vocab-card.revealed .hint { display: none; }
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .reading-box h4 { color: #1565c0; margin-bottom: 8px; }
+        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+        .quiz-options { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; transition: all 0.2s; }
+        .quiz-btn:hover { border-color: #1565c0; }
+        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
+        .table-activity { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        .table-activity th { background: #1565c0; color: white; padding: 10px; text-align: left; }
+        .table-activity td { border: 1px solid #ddd; padding: 8px; }
+        .table-activity input { width: 100%; border: none; padding: 5px; background: transparent; font-family: inherit; }
+        .table-activity input:focus { outline: 2px solid #1565c0; border-radius: 4px; }
+        .purpose-btn { padding: 10px 20px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; font-size: 0.95em; transition: all 0.2s; }
+        .purpose-btn:hover { border-color: #1565c0; }
+        .purpose-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .purpose-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
+        .ticket-box { background: linear-gradient(135deg, #e3f2fd, #bbdefb); border: 2px dashed #1565c0; border-radius: 12px; padding: 18px; margin-top: 12px; }
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; }
+        .ticket-input:focus { outline: 2px solid #1565c0; }
+        .score-bar { background: white; border-radius: 10px; padding: 12px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+        .score { font-weight: 700; color: #1565c0; }
+        .footer { text-align: center; color: #999; font-size: 0.8em; margin: 18px 0; }
+        .oral-box { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .oral-box strong { color: #1565c0; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>CLASS 2 — 3° MEDIO — ELECTRÓNICA</h1>
+    <h2>Unidad 1 — Technical Skills & Career Paths</h2>
+    <div class="meta">
+        <span>📘 OA1 · OA3</span>
+        <span>⏱ 90 min</span>
+        <span>🧭 Guía de estudiante completa</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="objective-card">
+        <h3>🎯 Objetivo de la clase</h3>
+        <p>Comprender información explícita en un texto adaptado sobre el perfil laboral y la rutina diaria de un profesional de Electrónica.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (15 min)</div>
+        <div class="section-body">
+            <h4>🔄 Warm-up: Vocabulary Review</h4>
+            <p>Haz clic en cada tarjeta para recordar el vocabulario de la clase anterior.</p>
+            <div class="vocab-grid">
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">resistor</div><div class="meaning">Resistencia</div><div class="hint">👆 clic</div></div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">capacitor</div><div class="meaning">Condensador</div><div class="hint">👆 clic</div></div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">circuit board</div><div class="meaning">Placa de circuito</div><div class="hint">👆 clic</div></div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">soldering iron</div><div class="meaning">Cautín</div><div class="hint">👆 clic</div></div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">oscilloscope</div><div class="meaning">Osciloscopio</div><div class="hint">👆 clic</div></div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">LED</div><div class="meaning">Diodo emisor de luz</div><div class="hint">👆 clic</div></div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">transistor</div><div class="meaning">Transistor</div><div class="hint">👆 clic</div></div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">multimeter</div><div class="meaning">Multímetro</div><div class="hint">👆 clic</div></div>
+            </div>
+            <div class="oral-box" style="margin-top:14px;">
+                <strong>💬 Pre-reading Discussion:</strong> <em>"What does an electronics professional do every day? What tasks do they perform?"</em>
+                <p style="margin-top:6px;">Useful expressions: <strong>"Every day, he/she checks…"</strong> · <strong>"He/she uses… to…"</strong> · <strong>"First…, then…, finally…"</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
+        <div class="section-body">
+            <h4>🔍 Activity 1 — Pre-reading Strategies (10 min)</h4>
+            <p>Observa el título e imágenes del texto. Haz una predicción: <em>"What is this text about?"</em></p>
+            <input class="ticket-input" placeholder="My prediction: I think this text is about..." />
+
+            <h4 style="margin-top:18px;">📖 Activity 2 — Reading: A Day in an Electronics Lab (20 min)</h4>
+            <div class="reading-box">
+                <h4>A Day in an Electronics Lab</h4>
+                <p>My name is Felipe and I work as an electronics technician at a telecommunications company in Valparaíso, Chile. My job is to assemble, test, and repair electronic devices.</p>
+                <p>Every morning, I start by reviewing the work orders. Today, I need to repair a communication module and assemble two new circuit boards for a client.</p>
+                <p>First, I work on the circuit boards. I read the schematic diagram carefully, identify the components I need — resistors, capacitors, transistors, and LEDs — and place them on the board. Then, I use the soldering iron to attach each component. This requires a steady hand and good concentration.</p>
+                <p>After that, I test the boards using an oscilloscope and a multimeter to make sure they work correctly. If there is a problem, I check each connection and component until I find the fault.</p>
+                <p>In the afternoon, I repair the communication module. I open it, inspect the internal circuit board, and find a burnt capacitor. I desolder the damaged component and solder a new one in its place.</p>
+                <p>At the end of the day, I document all my work in a digital report and organize the components in the storage area. English is essential in my job because all the datasheets, technical manuals, and software interfaces are in English.</p>
+            </div>
+
+            <h4 style="margin-top:18px;">✅ Activity 3 — Comprehension Questions (20 min)</h4>
+            <p><strong>A) Explicit questions:</strong></p>
+            <div class="quiz-item">
+                <p>1. Where does Felipe work?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">In a hospital</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">At a telecommunications company</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">In a school</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>2. What tool does Felipe use to attach components to the board?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">A multimeter</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">An oscilloscope</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">A soldering iron</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>3. What was wrong with the communication module?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">A burnt capacitor</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">A broken screen</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">A missing transistor</button>
+                </div>
+            </div>
+            <p style="margin-top:14px;"><strong>B) Inferential questions:</strong></p>
+            <div class="quiz-item">
+                <p>4. Why does Felipe need "a steady hand"?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Because soldering small components requires precision</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because the tools are heavy</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because he writes reports by hand</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>5. Why is English "essential" and not just "useful" for Felipe?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because his boss speaks English</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Because ALL technical documentation is in English</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because he lives in an English-speaking country</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>6. What skills can you infer Felipe needs for his job?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Physical strength and speed</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Precision, patience, and analytical thinking</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Creativity and artistic ability</button>
+                </div>
+            </div>
+
+            <h4 style="margin-top:18px;">📋 Activity 4 — Complete the Table</h4>
+            <p>Based on the text, complete the following table:</p>
+            <table class="table-activity">
+                <tr><th>Task</th><th>Tool Used</th><th>Time of Day</th></tr>
+                <tr><td><input placeholder="e.g. Assembling circuit boards" /></td><td><input placeholder="e.g. Soldering iron" /></td><td><input placeholder="e.g. Morning" /></td></tr>
+                <tr><td><input /></td><td><input /></td><td><input /></td></tr>
+                <tr><td><input /></td><td><input /></td><td><input /></td></tr>
+                <tr><td><input /></td><td><input /></td><td><input /></td></tr>
+            </table>
+
+            <h4 style="margin-top:18px;">🎯 Activity 5 — Text Purpose</h4>
+            <p>What is the main purpose of this text?</p>
+            <div class="quiz-options" style="margin-top:8px;">
+                <button class="purpose-btn" onclick="checkPurpose(this,true)">To inform</button>
+                <button class="purpose-btn" onclick="checkPurpose(this,false)">To instruct</button>
+                <button class="purpose-btn" onclick="checkPurpose(this,false)">To persuade</button>
+            </div>
+
+            <div class="oral-box" style="margin-top:18px;">
+                <strong>🗣️ Activity 6 — Oral Practice (10 min)</strong>
+                <p>In pairs, take turns describing a task from the text:</p>
+                <p><em>"The technician assembles <strong>______</strong> every morning."</em></p>
+                <p><em>"He uses a <strong>______</strong> to <strong>______</strong>."</em></p>
+                <p><em>"First, he <strong>______</strong>, then he <strong>______</strong>, finally he <strong>______</strong>."</em></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <h4>📝 Post-reading: Summary</h4>
+            <p>Write 3 simple sentences in English summarizing the text.</p>
+            <input class="ticket-input" placeholder="Sentence 1: Felipe works as..." />
+            <input class="ticket-input" placeholder="Sentence 2: Every day, he..." />
+            <input class="ticket-input" placeholder="Sentence 3: English helps him..." />
+            <div class="oral-box" style="margin-top:14px;">
+                <strong>💬 Reflection:</strong> <em>"What was the most interesting task mentioned in the text? Why?"</em>
+            </div>
+            <div class="ticket-box">
+                <h4>🎫 Exit Ticket</h4>
+                <input class="ticket-input" placeholder="Write 3 new words from today + their meaning" />
+                <input class="ticket-input" placeholder="What was the most useful thing you learned today?" />
+            </div>
+        </div>
+    </div>
+
+    <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 7</span></div>
+    <div class="footer">3° Medio — Electrónica — Clase 2, Unidad 1 — Inglés 2026</div>
+</div>
+
+<script>
+    let score = 0;
+    function updateScore() { document.getElementById('totalScore').textContent = score + ' / 7'; }
+    function checkAnswer(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b.getAttribute('onclick').includes('true')) b.classList.add('correct'); }); }
+        updateScore();
+    }
+    function checkPurpose(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.purpose-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b.getAttribute('onclick').includes('true')) b.classList.add('correct'); }); }
+        updateScore();
+    }
+</script>
+</body>
+</html>

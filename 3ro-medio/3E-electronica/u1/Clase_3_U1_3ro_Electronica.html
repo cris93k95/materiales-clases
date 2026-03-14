@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 3 — 3° Medio — Electrónica</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f0f2f5;color:#333;line-height:1.7}
+.header{background:linear-gradient(135deg,#1565c0,#1e88e5);color:white;padding:34px 20px;text-align:center}
+.header h1{font-size:1.85em;margin-bottom:5px}.header h2{font-size:1.1em;font-weight:300;margin-bottom:8px}
+.header .meta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:10px}
+.header .meta span{background:rgba(255,255,255,0.2);padding:5px 14px;border-radius:20px;font-size:0.85em}
+.container{max-width:930px;margin:24px auto;padding:0 15px}
+.objective-card{background:white;border-radius:12px;padding:24px;margin-bottom:22px;box-shadow:0 2px 12px rgba(0,0,0,0.06);border-left:5px solid #1565c0}
+.objective-card h3{color:#1565c0;margin-bottom:8px}
+.section{background:white;border-radius:12px;margin-bottom:22px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.section-header{padding:14px 22px;color:white;font-weight:600;font-size:1.05em}
+.inicio{background:#2e7d32}.desarrollo{background:#1565c0}.cierre{background:#6a1b9a}
+.section-body{padding:18px 22px}.section-body ul,.section-body ol{margin-left:18px}.section-body li{margin-bottom:8px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin-top:12px}
+.vocab-card{background:#e3f2fd;border:2px solid #1e88e540;border-radius:10px;padding:12px;text-align:center;cursor:pointer;transition:all 0.3s}
+.vocab-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.vocab-card .word{font-weight:700;color:#1565c0}.vocab-card .meaning{font-size:0.8em;color:#666;margin-top:4px;display:none}
+.vocab-card.revealed .meaning{display:block}.vocab-card .hint{font-size:0.72em;color:#888;margin-top:4px}.vocab-card.revealed .hint{display:none}
+.reading-box{background:#fafafa;border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-top:12px}
+.reading-box h4{color:#1565c0;margin-bottom:8px}
+.quiz-item{background:#f7f7f7;border:1px solid #e0e0e0;border-radius:8px;padding:12px;margin-bottom:10px}
+.quiz-options{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.quiz-btn{padding:7px 14px;border-radius:8px;border:2px solid #e0e0e0;background:white;cursor:pointer;transition:all 0.2s}
+.quiz-btn:hover{border-color:#1565c0}.quiz-btn.correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:700}
+.quiz-btn.incorrect{border-color:#c62828;background:#ffebee;color:#c62828}
+.table-activity{width:100%;border-collapse:collapse;margin-top:12px}
+.table-activity th{background:#1565c0;color:white;padding:10px;text-align:left;font-size:0.9em}
+.table-activity td{border:1px solid #ddd;padding:8px}
+.table-activity input{width:100%;border:none;padding:5px;background:transparent;font-family:inherit}
+.table-activity input:focus{outline:2px solid #1565c0;border-radius:4px}
+.ticket-box{background:linear-gradient(135deg,#e3f2fd,#e3f2fddd);border:2px dashed #1565c0;border-radius:12px;padding:18px;margin-top:12px}
+.ticket-input{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;margin-top:8px;font-family:inherit}
+.ticket-input:focus{outline:2px solid #1565c0}
+textarea.ta{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;margin-top:8px;font-family:inherit;min-height:70px;resize:vertical}
+textarea.ta:focus{outline:2px solid #1565c0}
+.score-bar{background:white;border-radius:10px;padding:12px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;justify-content:space-between;align-items:center}
+.score{font-weight:700;color:#1565c0}.footer{text-align:center;color:#999;font-size:0.8em;margin:18px 0}
+.oral-box{background:#e3f2fd;border-left:4px solid #1e88e5;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}
+.oral-box strong{color:#1e88e5}
+.concept-box{background:#e3f2fd;border-left:4px solid #1565c0;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}
+.concept-box strong{color:#1565c0}
+.grammar-box{background:#fff3e0;border-left:4px solid #ef6c00;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}
+.grammar-box strong{color:#ef6c00}
+.safety-box{background:#fce4ec;border-left:4px solid #c62828;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}
+.safety-box strong{color:#c62828}
+.eval-box{background:#fce4ec;border:2px solid #ef9a9a;border-radius:12px;padding:18px;margin-top:12px}
+.eval-box strong{color:#c62828}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>CLASS 3 — 3° MEDIO — ELECTRÓNICA</h1>
+<h2>Unidad 1 — Technical Skills & Career Paths</h2>
+<div class="meta"><span>📘 OA1 · OA4</span><span>⏱ 90 min</span><span>🧭 Guía de estudiante completa</span></div>
+</div>
+<div class="container">
+<div class="objective-card"><h3>🎯 Objetivo de la clase</h3><p>Aplicar vocabulario técnico de Electrónica en oraciones simples utilizando Simple Present para describir rutinas laborales.</p></div>
+
+    <div class="section"><div class="section-header inicio">🟢 Inicio (15 min)</div><div class="section-body">
+        <h4>🏁 Word Race</h4>
+        <div class="oral-box"><strong>Competition:</strong> Two teams compete to write the most technical words in English in 2 minutes!</div>
+        <input class="ticket-input" placeholder="My team's words:" />
+        <div class="grammar-box" style="margin-top:12px;"><strong>📖 Simple Present Review:</strong>
+        <p>He checks / She uses / They repair — for routines and habits</p>
+        <p>Structure: <strong>Subject + verb(s) + object</strong></p></div>
+    </div></div>
+    <div class="section"><div class="section-header desarrollo">🔵 Desarrollo (60 min)</div><div class="section-body">
+        <h4>🔧 Activity 1 — Action Verbs (15 min)</h4>
+        <p>Key verbs for Electronics: <em>solder</em>, <em>assemble</em>, <em>test</em>, <em>program</em>, <em>calibrate</em>, <em>troubleshoot</em>, <em>design</em>, <em>repair</em></p>
+        <p>Complete: <em>"A electronics technician _____ (verb) the _____ (tool/part) every day."</em></p>
+        <input class="ticket-input" placeholder="A technician solders the..." />
+        <input class="ticket-input" placeholder="A technician assembles the..." />
+        <input class="ticket-input" placeholder="A technician tests the..." />
+        <input class="ticket-input" placeholder="A technician programs the..." />
+        
+        <h4 style="margin-top:18px;">✏️ Activity 2 — Build Sentences (20 min)</h4>
+        <p>Build 6 correct sentences about daily routines in Electronics:</p>
+        <table class="table-activity">
+        <tr><th>#</th><th>Subject</th><th>Verb</th><th>Object</th></tr>
+        <tr><td>1</td><td><input placeholder="The technician"/></td><td><input placeholder="solders"/></td><td><input placeholder="the resistor"/></td></tr>
+        <tr><td>2</td><td><input /></td><td><input /></td><td><input /></td></tr>
+        <tr><td>3</td><td><input /></td><td><input /></td><td><input /></td></tr>
+        <tr><td>4</td><td><input /></td><td><input /></td><td><input /></td></tr>
+        <tr><td>5</td><td><input /></td><td><input /></td><td><input /></td></tr>
+        <tr><td>6</td><td><input /></td><td><input /></td><td><input /></td></tr>
+        </table>
+        
+        <div class="oral-box" style="margin-top:14px;"><strong>🗣️ Activity 3 — Interview a Technician (15 min)</strong>
+        <p>In pairs: A = journalist, B = technician.</p>
+        <p>A asks: <em>"What do you do every day?"</em></p>
+        <p>B answers using Simple Present + technical vocabulary. Then switch roles.</p></div>
+        
+        <h4 style="margin-top:18px;">✏️ Activity 4 — Write a Paragraph (10 min)</h4>
+        <p>Write 5 sentences: <em>"My name is… I study Electrónica. Every day at the workshop, I…"</em></p>
+        <textarea class="ta" placeholder="My name is... I study Electrónica. Every day at the workshop, I..."></textarea>
+    </div></div>
+    <div class="section"><div class="section-header cierre">🟣 Cierre (15 min)</div><div class="section-body">
+        <div class="oral-box"><strong>🗣️ Sharing:</strong> 3 students read their paragraphs to the class.</div>
+        <div class="ticket-box"><h4>🎫 Exit Ticket</h4>
+        <input class="ticket-input" placeholder="Write 3 sentences about your daily routine using Simple Present" />
+        </div>
+    </div></div>
+<div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 0</span></div>
+<div class="footer">3° Medio — Electrónica — Clase 3, Unidad 1 — Inglés 2026</div>
+</div>
+<script>
+let score=0;function updateScore(){let e=document.getElementById('totalScore');if(e)e.textContent=score+' / 0';}
+function checkAnswer(b,c){const btns=b.parentElement.querySelectorAll('.quiz-btn');btns.forEach(x=>x.disabled=true);if(c){b.classList.add('correct');score++;}else{b.classList.add('incorrect');btns.forEach(x=>{if(x.getAttribute('onclick')&&x.getAttribute('onclick').includes('true'))x.classList.add('correct');});}updateScore();}
+</script>
+</body></html>
