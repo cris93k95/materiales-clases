@@ -1,98 +1,386 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clase 3 — 4° Medio — Electrónica</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:#f0f2f5;color:#333;line-height:1.7}
-.header{background:linear-gradient(135deg,#1565c0,#1e88e5);color:white;padding:34px 20px;text-align:center}
-.header h1{font-size:1.85em;margin-bottom:5px}.header h2{font-size:1.1em;font-weight:300;margin-bottom:8px}
-.header .meta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:10px}
-.header .meta span{background:rgba(255,255,255,0.2);padding:5px 14px;border-radius:20px;font-size:0.85em}
-.container{max-width:930px;margin:24px auto;padding:0 15px}
-.objective-card{background:white;border-radius:12px;padding:24px;margin-bottom:22px;box-shadow:0 2px 12px rgba(0,0,0,0.06);border-left:5px solid #1565c0}.objective-card h3{color:#1565c0;margin-bottom:8px}
-.section{background:white;border-radius:12px;margin-bottom:22px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
-.section-header{padding:14px 22px;color:white;font-weight:600;font-size:1.05em}
-.inicio{background:#2e7d32}.desarrollo{background:#1565c0}.cierre{background:#6a1b9a}
-.section-body{padding:18px 22px}.section-body ul,.section-body ol{margin-left:18px}.section-body li{margin-bottom:8px}
-.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin-top:12px}
-.vocab-card{background:#e3f2fd;border:2px solid #1e88e540;border-radius:10px;padding:12px;text-align:center;cursor:pointer;transition:all 0.3s}
-.vocab-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
-.vocab-card .word{font-weight:700;color:#1565c0}.vocab-card .meaning{font-size:0.8em;color:#666;margin-top:4px;display:none}
-.vocab-card.revealed .meaning{display:block}.vocab-card .hint{font-size:0.72em;color:#888;margin-top:4px}.vocab-card.revealed .hint{display:none}
-.reading-box{background:#fafafa;border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-top:12px}.reading-box h4{color:#1565c0;margin-bottom:8px}
-.quiz-item{background:#f7f7f7;border:1px solid #e0e0e0;border-radius:8px;padding:12px;margin-bottom:10px}
-.quiz-options{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-.quiz-btn{padding:7px 14px;border-radius:8px;border:2px solid #e0e0e0;background:white;cursor:pointer;transition:all 0.2s}
-.quiz-btn:hover{border-color:#1565c0}.quiz-btn.correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:700}
-.quiz-btn.incorrect{border-color:#c62828;background:#ffebee;color:#c62828}
-.table-activity{width:100%;border-collapse:collapse;margin-top:12px}
-.table-activity th{background:#1565c0;color:white;padding:10px;text-align:left;font-size:0.9em}
-.table-activity td{border:1px solid #ddd;padding:8px}
-.table-activity input{width:100%;border:none;padding:5px;background:transparent;font-family:inherit}.table-activity input:focus{outline:2px solid #1565c0;border-radius:4px}
-.ticket-box{background:linear-gradient(135deg,#e3f2fd,#e3f2fddd);border:2px dashed #1565c0;border-radius:12px;padding:18px;margin-top:12px}
-.ticket-input{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;margin-top:8px;font-family:inherit}.ticket-input:focus{outline:2px solid #1565c0}
-textarea.ta{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;margin-top:8px;font-family:inherit;min-height:70px;resize:vertical}.ta:focus{outline:2px solid #1565c0}
-.score-bar{background:white;border-radius:10px;padding:12px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;justify-content:space-between;align-items:center}
-.score{font-weight:700;color:#1565c0}.footer{text-align:center;color:#999;font-size:0.8em;margin:18px 0}
-.oral-box{background:#e3f2fd;border-left:4px solid #1e88e5;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.oral-box strong{color:#1e88e5}
-.concept-box{background:#e3f2fd;border-left:4px solid #1565c0;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.concept-box strong{color:#1565c0}
-.grammar-box{background:#fff3e0;border-left:4px solid #ef6c00;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.grammar-box strong{color:#ef6c00}
-.safety-box{background:#fce4ec;border-left:4px solid #c62828;padding:14px;border-radius:0 10px 10px 0;margin-top:12px}.safety-box strong{color:#c62828}
-.eval-box{background:#fce4ec;border:2px solid #ef9a9a;border-radius:12px;padding:18px;margin-top:12px}.eval-box strong{color:#c62828}
-.email-box{background:#f5f5f5;border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-top:12px;font-family:monospace,sans-serif;font-size:0.9em}
-</style></head><body>
-<div class="header"><h1>CLASS 3 — 4° MEDIO — ELECTRÓNICA</h1><h2>Unidad 1 — Professional Profile & Workplace English</h2>
-<div class="meta"><span>📘 OA2 · OA4</span><span>⏱ 90 min</span><span>🧭 Guía de estudiante completa</span></div></div>
-<div class="container">
-<div class="objective-card"><h3>🎯 Objetivo de la clase</h3><p>Producir un currículum vitae en inglés adaptado al perfil profesional de Electrónica, aplicando formato estándar y vocabulario técnico apropiado.</p></div>
-
-    <div class="section"><div class="section-header inicio">🟢 Inicio (15 min)</div><div class="section-body">
-        <div class="oral-box"><strong>💬 Compare two CVs:</strong> <em>"Which CV would you hire? Why?"</em></div>
-        <div class="concept-box" style="margin-top:12px;"><strong>📖 CV Sections:</strong>
-        <p><strong>Personal Information · Objective · Education · Work Experience · Skills · Languages · References</strong></p>
-        <p>Key vocabulary: <em>objective, proficient, experienced in, certified, reference, internship, vocational training</em></p></div>
-    </div></div>
-    <div class="section"><div class="section-header desarrollo">🔵 Desarrollo (60 min)</div><div class="section-body">
-        <h4>📋 Activity 1 — CV Model Analysis (15 min)</h4>
-        <div class="email-box">
-            <p><strong>CURRICULUM VITAE</strong></p>
-            <p><strong>Name:</strong> Carlos Muñoz Sepúlveda<br><strong>Email:</strong> carlos.munoz@email.com<br><strong>Phone:</strong> +56 9 1234 5678</p>
-            <p><strong>OBJECTIVE</strong><br>To obtain a position as a electronics technician where I can apply my technical skills and continue developing professionally.</p>
-            <p><strong>EDUCATION</strong><br>Liceo Técnico Profesional, Electrónica (2024-2026)</p>
-            <p><strong>SKILLS</strong><br><ul><li>Circuit board assembly and repair</li><li>Microcontroller programming (Arduino)</li><li>PCB design and layout</li><li>Component soldering (SMD/through-hole)</li><li>Oscilloscope operation</li><li>IoT device configuration</li><li>Firmware updating</li><li>Signal testing and analysis</li></ul></p>
-            <p><strong>LANGUAGES</strong><br>Spanish (Native) · English (Basic-Intermediate)</p>
-        </div>
-        <div class="quiz-item"><p>1. What is the purpose of the 'Objective' section?</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">To list your hobbies</button><button class="quiz-btn" onclick="checkAnswer(this,true)">To state what position you want and what you offer</button><button class="quiz-btn" onclick="checkAnswer(this,false)">To write your address</button></div></div>
-        
-        <h4 style="margin-top:18px;">✏️ Activity 2 — Write Your CV (35 min)</h4>
-        <table class="table-activity">
-        <tr><th>Section</th><th>Your Content</th></tr>
-        <tr><td><strong>Full Name</strong></td><td><input /></td></tr>
-        <tr><td><strong>Email</strong></td><td><input /></td></tr>
-        <tr><td><strong>Phone</strong></td><td><input /></td></tr>
-        <tr><td><strong>Objective</strong></td><td><input placeholder="To obtain a position as a... where I can..." /></td></tr>
-        <tr><td><strong>Education</strong></td><td><input placeholder="Liceo TP, Electrónica..." /></td></tr>
-        <tr><td><strong>Skill 1</strong></td><td><input placeholder="Circuit board assembly and repair" /></td></tr>
-        <tr><td><strong>Skill 2</strong></td><td><input placeholder="Microcontroller programming (Arduino)" /></td></tr>
-        <tr><td><strong>Skill 3</strong></td><td><input placeholder="PCB design and layout" /></td></tr>
-        <tr><td><strong>Skill 4</strong></td><td><input placeholder="Component soldering (SMD/through-hole)" /></td></tr>
-        <tr><td><strong>Skill 5</strong></td><td><input placeholder="Oscilloscope operation" /></td></tr>
-        <tr><td><strong>Languages</strong></td><td><input placeholder="Spanish (Native), English (Basic-Intermediate)" /></td></tr>
-        </table>
-        
-        <h4 style="margin-top:18px;">🔄 Activity 3 — Peer Review (10 min)</h4>
-        <div class="oral-box"><strong>Exchange CVs with a partner. Check:</strong>
-        <p>✅ All sections present? ✅ Action verbs used correctly? ✅ Information clear and professional?</p></div>
-        <input class="ticket-input" placeholder="Feedback for my partner's CV:" />
-    </div></div>
-    <div class="section"><div class="section-header cierre">🟣 Cierre (15 min)</div><div class="section-body">
-        <div class="oral-box"><strong>🗣️ Share:</strong> 3 volunteers read their <em>Objective</em> to the class.</div>
-        <p style="margin-top:8px;"><em>Homework: Complete and improve your CV for next week.</em></p>
-    </div></div>
-<div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 1</span></div>
-<div class="footer">4° Medio — Electrónica — Clase 3, Unidad 1 — Inglés 2026</div>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 3 — 4° Medio — Electrónica</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+        .header { background: linear-gradient(135deg, #1565c0, #1e88e5); color: white; padding: 34px 20px; text-align: center; }
+        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
+        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
+        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
+        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
+        .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #1565c0; }
+        .objective-card h3 { color: #1565c0; margin-bottom: 8px; }
+        .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #6a1b9a; }
+        .section-body { padding: 18px 22px; }
+        .section-body ul, .section-body ol { margin-left: 18px; }
+        .section-body li { margin-bottom: 8px; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; margin-top: 12px; }
+        .vocab-card { background: #e3f2fd; border: 2px solid #1e88e540; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.3s; }
+        .vocab-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .vocab-card .word { font-weight: 700; color: #1565c0; }
+        .vocab-card .meaning { font-size: 0.8em; color: #666; margin-top: 4px; display: none; }
+        .vocab-card.revealed .meaning { display: block; }
+        .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
+        .vocab-card.revealed .hint { display: none; }
+        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .reading-box h4 { color: #1565c0; margin-bottom: 8px; }
+        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+        .quiz-options { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; transition: all 0.2s; font-size: 0.92em; }
+        .quiz-btn:hover { border-color: #1565c0; }
+        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
+        .table-activity { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        .table-activity th { background: #1565c0; color: white; padding: 10px; text-align: left; font-size: 0.9em; }
+        .table-activity td { border: 1px solid #ddd; padding: 8px; }
+        .table-activity input { width: 100%; border: none; padding: 5px; background: transparent; font-family: inherit; font-size: 0.88em; }
+        .table-activity input:focus { outline: 2px solid #1565c0; border-radius: 4px; }
+        .ticket-box { background: linear-gradient(135deg, #e3f2fd, #bbdefb); border: 2px dashed #1565c0; border-radius: 12px; padding: 18px; margin-top: 12px; }
+        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; }
+        .ticket-input:focus { outline: 2px solid #1565c0; }
+        textarea.ta { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; min-height: 70px; resize: vertical; }
+        .ta:focus { outline: 2px solid #1565c0; }
+        .score-bar { background: white; border-radius: 10px; padding: 12px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+        .score { font-weight: 700; color: #1565c0; }
+        .footer { text-align: center; color: #999; font-size: 0.8em; margin: 18px 0; }
+        .oral-box { background: #e3f2fd; border-left: 4px solid #1e88e5; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .oral-box strong { color: #1e88e5; }
+        .concept-box { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .concept-box strong { color: #1565c0; }
+        .grammar-box { background: #fff3e0; border-left: 4px solid #ef6c00; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .grammar-box strong { color: #ef6c00; }
+        .discussion-box { background: #f3e5f5; border-left: 4px solid #7b1fa2; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
+        .discussion-box strong { color: #7b1fa2; }
+        .email-box { background: #f5f5f5; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; font-family: monospace, sans-serif; font-size: 0.9em; }
+        .word-bank { background: #e3f2fd; border: 2px solid #1e88e560; border-radius: 10px; padding: 14px; margin-top: 10px; }
+        .word-bank strong { color: #1565c0; }
+        .word-bank .words { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .word-bank .words span { background: white; border: 1px solid #1e88e540; padding: 4px 12px; border-radius: 6px; font-size: 0.88em; cursor: default; }
+        .checklist-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .checklist-box label { display: flex; align-items: center; gap: 8px; padding: 6px 0; cursor: pointer; font-size: 0.95em; }
+        .checklist-box input[type="checkbox"] { width: 18px; height: 18px; accent-color: #1565c0; }
+        .error-box { background: #fff8e1; border: 2px solid #ffd54f; border-radius: 10px; padding: 16px; margin-top: 12px; font-family: monospace, sans-serif; font-size: 0.9em; }
+        .error-box .error-line { background: #ffebee; padding: 4px 8px; border-radius: 4px; margin: 3px 0; border-left: 3px solid #c62828; }
+        .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px; }
+        .compare-card { border: 2px solid #e0e0e0; border-radius: 10px; padding: 14px; font-family: monospace, sans-serif; font-size: 0.85em; }
+        .compare-card.good { border-color: #2e7d32; background: #f1f8e9; }
+        .compare-card.bad { border-color: #c62828; background: #fce4ec; }
+        .compare-label { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+        .compare-card.good .compare-label { color: #2e7d32; }
+        .compare-card.bad .compare-label { color: #c62828; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>CLASS 3 — 4° MEDIO — ELECTRÓNICA</h1>
+    <h2>Unidad 1 — Professional Profile & Workplace English</h2>
+    <div class="meta">
+        <span>📘 OA2 · OA4</span>
+        <span>⏱ 90 min</span>
+        <span>🧭 Guía de estudiante completa</span>
+    </div>
 </div>
+
+<div class="container">
+    <div class="objective-card">
+        <h3>🎯 Objetivo de la clase</h3>
+        <p>Producir un currículum vitae en inglés adaptado al perfil profesional de Electrónica, aplicando formato estándar, vocabulario técnico apropiado y verbos de acción.</p>
+    </div>
+
+    <!-- ===== INICIO ===== -->
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (15 min)</div>
+        <div class="section-body">
+            <h4>🔍 Activity 1 — Good CV vs. Bad CV (8 min)</h4>
+            <p>Look at these two CVs for an electronics technician position. Which one would you hire?</p>
+            <div class="compare-grid">
+                <div class="compare-card bad">
+                    <div class="compare-label">❌ CV A</div>
+                    <p><strong>name:</strong> tomás reyes<br>
+                    <strong>email:</strong> tomas_gamer_pro@hotmail.com<br>
+                    <strong>about me:</strong> i like electronics and building stuff. im at a technical school.<br>
+                    <strong>skills:</strong> soldering, arduino, i know about circuits</p>
+                </div>
+                <div class="compare-card good">
+                    <div class="compare-label">✅ CV B</div>
+                    <p><strong>Name:</strong> Tomás Reyes Figueroa<br>
+                    <strong>Email:</strong> tomas.reyes@email.com<br>
+                    <strong>Objective:</strong> To obtain a position as an electronics technician where I can apply my PCB design, microcontroller programming, and signal testing skills.<br>
+                    <strong>Skills:</strong> PCB design and layout · Arduino programming · Component soldering (SMD) · Oscilloscope operation</p>
+                </div>
+            </div>
+            <div class="quiz-item" style="margin-top:12px;">
+                <p><strong>Which CV is better and why?</strong></p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">CV A — it mentions specific tools, that's enough</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">CV B — it's professional, specific, and well-organized</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Both are equally good</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p><strong>What is WRONG with CV A's "about me" section?</strong></p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Nothing, it describes his interests</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">It's too informal — a CV should have a professional "Objective" with specific goals and skills</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">It's too short</button>
+                </div>
+            </div>
+
+            <h4 style="margin-top:16px;">🃏 CV Vocabulary — Click to Reveal (7 min)</h4>
+            <div class="vocab-grid">
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                    <div class="word">Objective</div>
+                    <div class="hint">💡 Click to see</div>
+                    <div class="meaning">Tu meta profesional — lo que quieres lograr</div>
+                </div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                    <div class="word">Proficient in</div>
+                    <div class="hint">💡 Click to see</div>
+                    <div class="meaning">Competente en — alto nivel de habilidad</div>
+                </div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                    <div class="word">Certified</div>
+                    <div class="hint">💡 Click to see</div>
+                    <div class="meaning">Certificado — tienes un documento oficial</div>
+                </div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                    <div class="word">Firmware</div>
+                    <div class="hint">💡 Click to see</div>
+                    <div class="meaning">Software permanente grabado en un chip electrónico</div>
+                </div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                    <div class="word">Troubleshooting</div>
+                    <div class="hint">💡 Click to see</div>
+                    <div class="meaning">Diagnóstico de fallas — encontrar y resolver problemas en circuitos</div>
+                </div>
+                <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                    <div class="word">Reference</div>
+                    <div class="hint">💡 Click to see</div>
+                    <div class="meaning">Referencia — persona que habla bien de ti profesionalmente</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== DESARROLLO ===== -->
+    <div class="section">
+        <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
+        <div class="section-body">
+
+            <!-- Activity 2: Model CV Analysis -->
+            <h4>📋 Activity 2 — Analyze a Model CV (15 min)</h4>
+            <p>Read this CV carefully. Then answer the comprehension questions below.</p>
+            <div class="email-box">
+                <p><strong>CURRICULUM VITAE</strong></p>
+                <p><strong>Name:</strong> Valentina Torres Medina<br>
+                <strong>Email:</strong> valentina.torres@email.com<br>
+                <strong>Phone:</strong> +56 9 3456 7890<br>
+                <strong>Address:</strong> Concepción, Biobío Region, Chile</p>
+                <p><strong>OBJECTIVE</strong><br>
+                To obtain a position as an electronics technician where I can apply my PCB design, microcontroller programming, and circuit troubleshooting skills to support innovative technology projects.</p>
+                <p><strong>EDUCATION</strong><br>
+                Liceo Técnico Profesional, Electrónica (2024–2026)<br>
+                <em>Relevant coursework: Digital Electronics, Microcontrollers (Arduino/ESP32), PCB Design, IoT Systems</em></p>
+                <p><strong>WORK EXPERIENCE</strong><br>
+                <em>Internship — TechSur Electronics (January–February 2026)</em><br>
+                • Assembled and tested prototype circuit boards<br>
+                • Programmed Arduino-based sensors for automated systems<br>
+                • Diagnosed circuit faults using oscilloscope and multimeter</p>
+                <p><strong>TECHNICAL SKILLS</strong><br>
+                • Circuit board assembly and repair<br>
+                • Microcontroller programming (Arduino, ESP32)<br>
+                • PCB design and layout (KiCad)<br>
+                • Component soldering (SMD and through-hole)<br>
+                • Oscilloscope and multimeter operation<br>
+                • IoT device configuration<br>
+                • Signal testing and analysis</p>
+                <p><strong>SOFT SKILLS</strong><br>
+                • Analytical thinking · Teamwork · Attention to detail · Creativity</p>
+                <p><strong>LANGUAGES</strong><br>
+                Spanish (Native) · English (Basic-Intermediate)</p>
+                <p><strong>REFERENCES</strong><br>
+                Available upon request</p>
+            </div>
+
+            <div class="quiz-item" style="margin-top:14px;">
+                <p>1. What is the purpose of the "Objective" section?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">To list your hobbies</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">To state what position you want and what you can contribute</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">To write your home address</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>2. Why does Valentina include specific software names like "KiCad" and "Arduino" in her CV?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because they are popular brands</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Because employers in electronics look for specific tools and platforms — it shows real, verifiable skills</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because her teacher told her to</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>3. In the Work Experience section, why does Valentina use action verbs ("Assembled", "Programmed", "Diagnosed")?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Action verbs show what you DID, making your experience concrete and professional</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">They are just filler words</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">They make the CV longer</button>
+                </div>
+            </div>
+            <div class="quiz-item">
+                <p>4. Why is "Analytical thinking" a good soft skill for an electronics technician?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">It sounds smart but isn't really useful</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">Because diagnosing circuit problems requires logical, step-by-step analysis</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">Because all CVs should include it</button>
+                </div>
+            </div>
+
+            <!-- Activity 3: Error Detection -->
+            <h4 style="margin-top:22px;">🔎 Activity 3 — Find the Errors (10 min)</h4>
+            <p>This CV has <strong>5 errors</strong>. Find and correct them:</p>
+            <div class="error-box">
+                <p><strong>CURRICULUM VITAE</strong></p>
+                <div class="error-line">name: ignacio morales</div>
+                <div class="error-line">email: nacho_hacker_2009@gmail.com</div>
+                <p><strong>OBJETIVE</strong><br>
+                I want to work with electronics because its cool and i like building stuff.</p>
+                <p><strong>SKILLS</strong><br>
+                • I know about circuits<br>
+                • Arduino programming</p>
+            </div>
+            <table class="table-activity" style="margin-top:12px;">
+                <tr><th>#</th><th>Error Found</th><th>Correction</th></tr>
+                <tr><td>1</td><td><input placeholder="e.g. 'name' not capitalized" /></td><td><input placeholder="Name: Ignacio Morales" /></td></tr>
+                <tr><td>2</td><td><input placeholder="" /></td><td><input placeholder="" /></td></tr>
+                <tr><td>3</td><td><input placeholder="" /></td><td><input placeholder="" /></td></tr>
+                <tr><td>4</td><td><input placeholder="" /></td><td><input placeholder="" /></td></tr>
+                <tr><td>5</td><td><input placeholder="" /></td><td><input placeholder="" /></td></tr>
+            </table>
+            <div class="quiz-item" style="margin-top:12px;">
+                <p>How many errors did you find?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">2–3 errors</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">4 errors</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">5 errors (name capitalization, unprofessional email, "OBJETIVE" typo, unprofessional objective, vague skill)</button>
+                </div>
+            </div>
+
+            <!-- Activity 4: Build Your CV -->
+            <h4 style="margin-top:22px;">✏️ Activity 4 — Build Your Professional CV (25 min)</h4>
+            <div class="concept-box">
+                <strong>📝 Writing Tips:</strong>
+                <ul style="margin-top:6px;">
+                    <li>Use a <strong>professional email</strong>: firstname.lastname@email.com</li>
+                    <li>Write your objective using: <em>"To obtain a position as a... where I can apply my... skills"</em></li>
+                    <li>Use <strong>action verbs</strong> for experience: <em>Assembled, Programmed, Tested, Soldered, Designed, Configured</em></li>
+                    <li>Be <strong>specific</strong> with skills — mention tools and platforms (Arduino, KiCad, etc.)</li>
+                </ul>
+            </div>
+
+            <div class="word-bank" style="margin-top:14px;">
+                <strong>🔧 Word Bank — Electronics Action Verbs & Skills:</strong>
+                <div class="words">
+                    <span>Assembled</span><span>Programmed</span><span>Tested</span><span>Soldered</span>
+                    <span>Designed</span><span>Configured</span><span>Diagnosed</span><span>Calibrated</span>
+                    <span>Debugged</span><span>Prototyped</span><span>PCB design</span><span>Arduino</span>
+                    <span>ESP32</span><span>Oscilloscope</span><span>Multimeter</span>
+                    <span>IoT devices</span><span>SMD soldering</span><span>Signal testing</span>
+                </div>
+            </div>
+
+            <table class="table-activity" style="margin-top:14px;">
+                <tr><th>Section</th><th>Your Content</th></tr>
+                <tr><td><strong>Full Name</strong></td><td><input placeholder="e.g. Tomás Reyes Figueroa" /></td></tr>
+                <tr><td><strong>Email</strong></td><td><input placeholder="e.g. tomas.reyes@email.com" /></td></tr>
+                <tr><td><strong>Phone</strong></td><td><input placeholder="+56 9 XXXX XXXX" /></td></tr>
+                <tr><td><strong>Objective</strong></td><td><input placeholder="To obtain a position as a... where I can apply my... skills to..." /></td></tr>
+                <tr><td><strong>Education</strong></td><td><input placeholder="Liceo TP, Electrónica (2024–2026)" /></td></tr>
+                <tr><td><strong>Relevant Coursework</strong></td><td><input placeholder="e.g. Digital Electronics, Microcontrollers, PCB Design, IoT" /></td></tr>
+                <tr><td><strong>Work Experience</strong></td><td><input placeholder="Internship — Company Name (dates) • Assembled..." /></td></tr>
+                <tr><td><strong>Technical Skill 1</strong></td><td><input placeholder="e.g. Circuit board assembly and repair" /></td></tr>
+                <tr><td><strong>Technical Skill 2</strong></td><td><input placeholder="e.g. Microcontroller programming (Arduino)" /></td></tr>
+                <tr><td><strong>Technical Skill 3</strong></td><td><input placeholder="e.g. PCB design and layout (KiCad)" /></td></tr>
+                <tr><td><strong>Technical Skill 4</strong></td><td><input placeholder="e.g. Component soldering (SMD/through-hole)" /></td></tr>
+                <tr><td><strong>Technical Skill 5</strong></td><td><input placeholder="e.g. Oscilloscope operation and signal testing" /></td></tr>
+                <tr><td><strong>Soft Skills</strong></td><td><input placeholder="e.g. Analytical thinking, Teamwork, Creativity" /></td></tr>
+                <tr><td><strong>Languages</strong></td><td><input placeholder="Spanish (Native), English (Basic-Intermediate)" /></td></tr>
+            </table>
+
+            <!-- Activity 5: Peer Review -->
+            <h4 style="margin-top:22px;">🔄 Activity 5 — Peer Review Checklist (10 min)</h4>
+            <div class="oral-box">
+                <strong>📋 Exchange your CV with a partner. Use this checklist to evaluate their CV:</strong>
+            </div>
+            <div class="checklist-box">
+                <label><input type="checkbox" /> ✅ Has a professional email (not a gaming/nickname email)</label>
+                <label><input type="checkbox" /> ✅ Objective is specific (mentions the position AND skills)</label>
+                <label><input type="checkbox" /> ✅ Education section includes relevant coursework</label>
+                <label><input type="checkbox" /> ✅ Technical skills mention specific tools/platforms (Arduino, KiCad...)</label>
+                <label><input type="checkbox" /> ✅ Uses action verbs in Work Experience (Assembled, Programmed...)</label>
+                <label><input type="checkbox" /> ✅ Includes soft skills</label>
+                <label><input type="checkbox" /> ✅ Information is clear, organized, and professional</label>
+            </div>
+            <textarea class="ta" placeholder="Write specific feedback for your partner: What is strong? What could be improved?"></textarea>
+        </div>
+    </div>
+
+    <!-- ===== CIERRE ===== -->
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <h4>🗣️ Activity 6 — CV Showcase (8 min)</h4>
+            <div class="discussion-box">
+                <strong>3 volunteers read their Objective and best skill to the class.</strong>
+                <p style="margin-top:6px;">Class votes: <em>"Which Objective was the most professional and specific?"</em></p>
+            </div>
+
+            <div class="quiz-item" style="margin-top:14px;">
+                <p><strong>Quick Check:</strong> Which of these is the BEST objective for an electronics technician's CV?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">I want to work with electronics because it's cool</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,false)">To get a job in a technology company</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this,true)">To obtain a position as an electronics technician where I can apply my PCB design and programming skills</button>
+                </div>
+            </div>
+
+            <div class="ticket-box" style="margin-top:14px;">
+                <h4>🎫 Exit Ticket</h4>
+                <input class="ticket-input" placeholder="Name 3 sections every professional CV must have:" />
+                <input class="ticket-input" placeholder="Write 2 action verbs you used in your CV:" />
+                <input class="ticket-input" placeholder="One thing you will improve in your CV before next class:" />
+            </div>
+
+            <div class="oral-box" style="margin-top:12px;">
+                <strong>👀 Preview:</strong> <em>"Next class, we will prepare for a mock job interview in English — bring your CV!"</em>
+            </div>
+        </div>
+    </div>
+
+    <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 8</span></div>
+    <div class="footer">4° Medio — Electrónica — Clase 3, Unidad 1 — Inglés 2026</div>
+</div>
+
 <script>
-let score=0;function updateScore(){let e=document.getElementById('totalScore');if(e)e.textContent=score+' / 1';}
-function checkAnswer(b,c){const btns=b.parentElement.querySelectorAll('.quiz-btn');btns.forEach(x=>x.disabled=true);if(c){b.classList.add('correct');score++;}else{b.classList.add('incorrect');btns.forEach(x=>{if(x.getAttribute('onclick')&&x.getAttribute('onclick').includes('true'))x.classList.add('correct');});}updateScore();}
-</script></body></html>
+    let score = 0;
+    const totalQuestions = 8;
+    function updateScore() { document.getElementById('totalScore').textContent = score + ' / ' + totalQuestions; }
+    function checkAnswer(btn, isCorrect) {
+        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => b.disabled = true);
+        if (isCorrect) { btn.classList.add('correct'); score++; }
+        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b.getAttribute('onclick') && b.getAttribute('onclick').includes('true')) b.classList.add('correct'); }); }
+        updateScore();
+    }
+</script>
+</body>
+</html>
