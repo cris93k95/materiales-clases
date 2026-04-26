@@ -27,6 +27,8 @@
 
         .section-body ul { margin-left: 18px; }
         .section-body li { margin-bottom: 8px; }
+        .task-steps { margin-left: 20px; }
+        .task-steps li { margin-bottom: 8px; }
 
         .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 12px; }
         .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }
@@ -35,6 +37,12 @@
         .vocab-card.revealed .meaning { display: block; }
         .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
         .vocab-card.revealed .hint { display: none; }
+
+        .support-box, .task-box { background: #f7f9fc; border: 1px solid #dbe4f0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .support-box h4, .task-box h4 { color: #1565c0; margin-bottom: 8px; }
+        .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 12px; }
+        .support-grid h5 { color: #0d47a1; margin-bottom: 6px; }
+        .reading-note { font-size: 0.9em; color: #546e7a; margin-bottom: 10px; }
 
         .matching-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 12px; }
         .match-item { background: white; border: 2px solid #e0e0e0; border-radius: 8px; padding: 11px; text-align: center; margin-bottom: 8px; cursor: pointer; }
@@ -66,6 +74,7 @@
     <div class="meta">
         <span>📘 OA9</span>
         <span>⏱ 90 min</span>
+            <span>📗 A2</span>
         <span>🧭 Guía de estudiante</span>
     </div>
 </div>
@@ -79,7 +88,8 @@
     <div class="section">
         <div class="section-header inicio">🟢 Inicio (15 min)</div>
         <div class="section-body">
-            <ul><li>Presentación del docente en inglés y contexto del curso técnico-profesional.</li><li>Preguntas breves: name, age, interests, preferred specialty.</li><li>Lluvia de ideas: palabras en inglés que ya conocen del mundo técnico.</li></ul>
+                <p>Activate prior knowledge and prepare the reading context before working with the technical text.</p>
+                <ol class="task-steps"><li>Presentación del docente en inglés y contexto del curso técnico-profesional.</li><li>Preguntas breves: name, age, interests, preferred specialty.</li><li>Lluvia de ideas: palabras en inglés que ya conocen del mundo técnico.</li></ol>
         </div>
     </div>
 
@@ -87,96 +97,120 @@
         <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
         <div class="section-body">
             <h4>📖 Activity 1: Vocabulary</h4>
-            <p>Haz clic en cada tarjeta para ver la traducción y estudiar vocabulario técnico.</p>
+                <p>Open each card to review a short technical definition in English. Use the vocabulary to understand the reading, not only to memorize isolated words.</p>
             <div class="vocab-grid">
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">hammer</div>
-                <div class="meaning">martillo</div>
+                <div class="meaning">a hand tool used to hit nails or shape material</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">screwdriver</div>
-                <div class="meaning">destornillador</div>
+                <div class="meaning">a tool used to tighten or loosen screws</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">wrench</div>
-                <div class="meaning">llave</div>
+                <div class="meaning">a tool used to turn bolts or nuts</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">wire</div>
-                <div class="meaning">cable</div>
+                <div class="meaning">a metal conductor that carries electricity</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">circuit</div>
-                <div class="meaning">circuito</div>
+                <div class="meaning">a complete path that lets electricity move</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">printer</div>
-                <div class="meaning">impresora</div>
+                <div class="meaning">a machine that produces text or images on paper</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">engine</div>
-                <div class="meaning">motor</div>
+                <div class="meaning">the machine that produces power in a vehicle</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">brake</div>
-                <div class="meaning">freno</div>
+                <div class="meaning">the system that slows or stops movement</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">panel</div>
-                <div class="meaning">panel</div>
+                <div class="meaning">a board where controls, circuits, or indicators are grouped</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">switch</div>
-                <div class="meaning">interruptor</div>
+                <div class="meaning">a control that opens or closes an electrical connection</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">battery</div>
-                <div class="meaning">batería</div>
+                <div class="meaning">a device that stores electrical energy</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">tool</div>
-                <div class="meaning">herramienta</div>
+                <div class="meaning">an object used to do a practical or technical job</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             </div>
 
-            <h4 style="margin-top:14px;">🔗 Activity 2: Matching</h4>
-            <p>Relaciona descripción y término técnico.</p>
+                
+    <div class="support-box">
+        <h4>🧠 Activity 2: Language support and sentence frames</h4>
+        <p>Use these examples before reading so the vocabulary becomes part of a complete idea, not an isolated list.</p>
+        <div class="support-grid">
+            <div>
+                <h5>Model examples</h5>
+                <ul><li>A hammer is used in technical work.</li><li>The student checks the screwdriver before starting the task.</li><li>English helps students understand safety and instructions.</li></ul>
+            </div>
+            <div>
+                <h5>Frames to reuse</h5>
+                <ul><li>A ___ is used to ...</li><li>The technician checks ___ before ...</li><li>English helps because ...</li></ul>
+            </div>
+        </div>
+    </div>
+    
+
+                <h4 style="margin-top:14px;">🔗 Activity 3: Matching</h4>
+                <p>Match each clue with the correct technical term. Say the complete sentence aloud after each match.</p>
             <div class="matching-grid">
                 <div><div class="match-item" data-match="A" onclick="selectMatch(this,'left')">Used to hit nails</div><div class="match-item" data-match="B" onclick="selectMatch(this,'left')">Used to tighten bolts</div><div class="match-item" data-match="C" onclick="selectMatch(this,'left')">Carries electricity</div><div class="match-item" data-match="D" onclick="selectMatch(this,'left')">Electrical path</div><div class="match-item" data-match="E" onclick="selectMatch(this,'left')">Stores electrical energy</div></div>
                 <div><div class="match-item" data-match="A" onclick="selectMatch(this,'right')">hammer</div><div class="match-item" data-match="B" onclick="selectMatch(this,'right')">wrench</div><div class="match-item" data-match="C" onclick="selectMatch(this,'right')">wire</div><div class="match-item" data-match="D" onclick="selectMatch(this,'right')">circuit</div><div class="match-item" data-match="E" onclick="selectMatch(this,'right')">battery</div></div>
             </div>
             <p id="matchScore" style="font-weight:600;color:#2e7d32;"></p>
 
-            <h4 style="margin-top:14px;">📚 Activity 3: Reading</h4>
+                <h4 style="margin-top:14px;">📚 Activity 4: Reading</h4>
             <div class="reading-box">
                 <h4>Carlos at the Workshop</h4>
-                <p>Carlos works at a small automotive workshop in Santiago. Every morning, he checks the engine and prepares his tools.</p><p>He changes oil, inspects the brakes, and uses a wrench and screwdriver to adjust parts. He also checks the battery and electrical circuit.</p><p>At the end of the day, Carlos writes a short report and cleans the work area. Technical English helps him read manuals and safety instructions.</p>
+                    <p class="reading-note">Texto graduado A2: cinco parrafos, secuencia clara y apoyo de vocabulario para comprender la rutina tecnica.</p>
+                <p>Carlos works at a small automotive workshop in Santiago. Every morning, he checks the engine and prepares his tools. The reading introduces the workplace, the people involved, and the main task in simple language.</p><p>Before the routine continues, the student notices words such as hammer and screwdriver. These words are important because they explain what is used, what is checked, and what should happen next.</p><p>He changes oil, inspects the brakes, and uses a wrench and screwdriver to adjust parts. He also checks the battery and electrical circuit. The actions appear in a clear order so the reader can follow the procedure without losing the main idea.</p><p>While reading, the student identifies the purpose of each action, the safety detail, and the result of the task. This helps the class connect vocabulary with real workshop decisions.</p><p>At the end of the day, Carlos writes a short report and cleans the work area. Technical English helps him read manuals and safety instructions. By the end of the text, the reader can explain the routine, justify one decision, and connect the lesson objective with identificar el nivel de competencia en inglés de los estudiantes mediante una evaluación diagnóstica integrada con contexto técnico-profesional.</p>
             </div>
 
-            <h4 style="margin-top:14px;">✅ Activity 4: True or False</h4>
+                <div class="task-box">
+                    <h4>📝 Activity 5: Guided comprehension</h4>
+                    <p>Answer the questions with evidence from the text. Underline the sentence that helped you before sharing your answer.</p>
+                    <ol><li>What is the main task or routine described in the text?</li><li>Which tool, system, or material appears first in the reading?</li><li>What actions help the reader understand the sequence of the job?</li><li>Which technical words are essential for understanding the text?</li><li>Why is English useful in this professional situation?</li><li>What idea from the text can you use in your own future workshop context?</li></ol>
+                </div>
+
+                <h4 style="margin-top:14px;">✅ Activity 6: True or False</h4>
             
             <div class="quiz-item">
                 <p>1. Carlos works in a workshop in Santiago.</p>
@@ -226,18 +260,16 @@
         <div class="section-body">
             <div class="ticket-box">
                 <h4>🎫 Exit Ticket</h4>
-                <input class="ticket-input" placeholder="1) New word + meaning" />
-                <input class="ticket-input" placeholder="2) New word + meaning" />
-                <input class="ticket-input" placeholder="3) New word + meaning" />
-                <input class="ticket-input" placeholder="4) New word + meaning" />
-                <input class="ticket-input" placeholder="5) New word + meaning" />
-                <input class="ticket-input" placeholder="Reflection: Why is English important for your future technical career?" />
+                    <p>Complete the three prompts before leaving the class.</p>
+                    <input class="ticket-input" placeholder="1) One new technical word and its definition in English" />
+                    <input class="ticket-input" placeholder="2) One sentence using that word in a workshop or lab context" />
+                    <input class="ticket-input" placeholder="3) Reflection: Why is English important for your future technical career?" />
             </div>
         </div>
     </div>
 
     <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 10</span></div>
-    <div class="footer">1° Medio — Inglés General (Lu+Ju) — Clase 1, Unidad 1 — Inglés 2026</div>
+        <div class="footer">1° Medio — Inglés General (Lu+Ju) — Clase 1, Unidad 1 — Guía de trabajo estudiantil 2026</div>
 </div>
 
 <script>

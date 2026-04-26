@@ -3,184 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 15 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <title>Clase 15 — Unidad 1 — 1° Medio — Inglés General (Lu+Ju)</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
-        .header { background: linear-gradient(135deg, #1a237e, #283593); color: white; padding: 34px 20px; text-align: center; }
-        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
-        .header h2 { font-size: 1.1em; font-weight: 300; margin-bottom: 8px; }
-        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
-        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
-        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
-        .objective-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid #1a237e; }
-        .objective-card h3 { color: #1a237e; margin-bottom: 8px; }
-        .section { background: white; border-radius: 12px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-        .section-header { padding: 14px 22px; color: white; font-weight: 600; font-size: 1.05em; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
+        .hero p { color: rgba(255,255,255,0.88); }
+        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
         .inicio { background: #2e7d32; }
         .desarrollo { background: #1565c0; }
-        .cierre { background: #6a1b9a; }
-        .section-body { padding: 18px 22px; }
-        .section-body ul, .section-body ol { margin-left: 18px; }
+        .cierre { background: #7c3aed; }
+        .section-body { padding: 20px 22px 22px; }
+        .section-body ul { margin-left: 20px; }
         .section-body li { margin-bottom: 8px; }
-        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; margin-top: 12px; }
-        .vocab-card { background: #e8eaf6; border: 2px solid #9fa8da; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.3s; }
-        .vocab-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .vocab-card .word { font-weight: 700; color: #1a237e; }
-        .vocab-card .meaning { font-size: 0.8em; color: #666; margin-top: 4px; display: none; }
-        .vocab-card.revealed .meaning { display: block; }
-        .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
-        .vocab-card.revealed .hint { display: none; }
-        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; margin-top: 12px; }
-        .reading-box h4 { color: #1a237e; margin-bottom: 8px; }
-        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
-        .quiz-options { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; transition: all 0.2s; }
-        .quiz-btn:hover { border-color: #1a237e; }
-        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
-        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
-        .table-activity { width: 100%; border-collapse: collapse; margin-top: 12px; }
-        .table-activity th { background: #1a237e; color: white; padding: 10px; text-align: left; font-size: 0.9em; }
-        .table-activity td { border: 1px solid #ddd; padding: 8px; }
-        .table-activity input { width: 100%; border: none; padding: 5px; background: transparent; font-family: inherit; }
-        .table-activity input:focus { outline: 2px solid #1a237e; border-radius: 4px; }
-        .ticket-box { background: linear-gradient(135deg, #e8eaf6, #c5cae9); border: 2px dashed #1a237e; border-radius: 12px; padding: 18px; margin-top: 12px; }
-        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; }
-        .ticket-input:focus { outline: 2px solid #1a237e; }
-        textarea.ticket-area { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; font-family: inherit; min-height: 70px; resize: vertical; }
-        textarea.ticket-area:focus { outline: 2px solid #1a237e; }
-        .score-bar { background: white; border-radius: 10px; padding: 12px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
-        .score { font-weight: 700; color: #1a237e; }
-        .footer { text-align: center; color: #999; font-size: 0.8em; margin: 18px 0; }
-        .oral-box { background: #e8eaf6; border-left: 4px solid #3949ab; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
-        .oral-box strong { color: #3949ab; }
-        .concept-box { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
-        .concept-box strong { color: #1565c0; }
-        .grammar-box { background: #fff3e0; border-left: 4px solid #ef6c00; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
-        .grammar-box strong { color: #ef6c00; }
-        .safety-box { background: #fce4ec; border-left: 4px solid #c62828; padding: 14px; border-radius: 0 10px 10px 0; margin-top: 12px; }
-        .safety-box strong { color: #c62828; }
-        .matching-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 12px; }
-        .match-item { background: white; border: 2px solid #e0e0e0; border-radius: 8px; padding: 11px; text-align: center; margin-bottom: 8px; cursor: pointer; }
-        .match-item:hover { border-color: #1a237e; }
-        .match-item.selected { border-color: #1a237e; background: #e8eaf6; }
-        .match-item.matched { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; }
-        .scramble-item { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 8px; padding: 10px; margin-bottom: 8px; cursor: grab; }
-        .scramble-item.correct-order { border-color: #2e7d32; background: #e8f5e9; }
-        .eval-box { background: #fce4ec; border: 2px solid #ef9a9a; border-radius: 12px; padding: 18px; margin-top: 12px; }
-        .eval-box strong { color: #c62828; }
-        .bingo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
-        .bingo-cell { background: #e8eaf6; border: 2px solid #9fa8da; border-radius: 8px; padding: 12px; text-align: center; cursor: pointer; font-weight: 600; color: #1a237e; transition: all 0.2s; }
-        .bingo-cell.marked { background: #c5cae9; border-color: #3949ab; }
-        .bingo-cell.bingo { background: #e8f5e9; border-color: #2e7d32; color: #2e7d32; }
-</style>
+        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+        .activity-card p { margin-bottom: 10px; }
+        .task-steps { margin-left: 20px; }
+        .task-steps li { margin-bottom: 8px; }
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .meaning { font-size: 0.92rem; color: #1f2937; }
+        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
+        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card ul { margin-left: 18px; }
+        .focus-card li { margin-bottom: 6px; }
+        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .reading-box p { margin-bottom: 10px; }
+        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+        .answer-box.open { display: block; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
+        .activity-table th { background: #e2e8f0; }
+        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
+        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+        .exit-ticket ul { margin-left: 18px; }
+        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+        @media (max-width: 720px) {
+            .hero h1 { font-size: 1.55rem; }
+            .page { padding: 16px 12px 28px; }
+        }
+        @media print {
+            body { background: white; }
+            .toolbar { display: none; }
+            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
+        }
+    </style>
 </head>
 <body>
-<div class="header">
-    <h1>CLASS 15 — 1° MEDIO — INGLÉS GENERAL (LU+JU)</h1>
-    <h2>Unidad 1 — The World of Technical Work</h2>
-    <div class="meta">
-        <span>📘 EVALUACIÓN — NOTA 1 (Grupo A)</span>
-        <span>⏱ 90 min</span>
-        <span>🧭 Guía de estudiante completa</span>
-    </div>
-</div>
-<div class="container">
-    <div class="objective-card">
-        <h3>🎯 Objetivo de la clase</h3>
-        <p>Producir una presentación oral breve sobre la carrera técnica de su interés, demostrando uso de vocabulario técnico, Present Perfect y 'used to'.</p>
-    </div>
-
-    <div class="section">
-        <div class="section-header inicio">🟢 Inicio (15 min)</div>
-        <div class="section-body">
-            <div class="eval-box">
-                <strong>📋 EVALUACIÓN — NOTA 1 (Grupo A)</strong>
-                <p>Presentación oral: "My Future Career" (2-3 min por estudiante)</p>
-            </div>
-            <div class="concept-box" style="margin-top:12px;">
-                <strong>💡 Presentation Tips:</strong>
-                <p>✅ Speak clearly · ✅ Make eye contact · ✅ Use your cards as a guide, not a script · ✅ Relax!</p>
-            </div>
-            <h4 style="margin-top:12px;">📊 Evaluation Criteria (Rubric):</h4>
-            <table class="table-activity">
-                <tr><th>Criterion</th><th>Excellent (3)</th><th>Good (2)</th><th>Needs Work (1)</th></tr>
-                <tr><td>Technical Vocabulary</td><td>Uses 8+ words correctly</td><td>Uses 5-7 words</td><td>Uses fewer than 5</td></tr>
-                <tr><td>Grammar (PP + Used to)</td><td>Uses both correctly</td><td>Uses one correctly</td><td>Errors in both</td></tr>
-                <tr><td>Pronunciation</td><td>Clear and understandable</td><td>Mostly clear</td><td>Difficult to understand</td></tr>
-                <tr><td>Content & Organization</td><td>Complete and logical</td><td>Mostly complete</td><td>Incomplete</td></tr>
-                <tr><td>Confidence & Eye Contact</td><td>Speaks naturally</td><td>Some reading</td><td>Reads everything</td></tr>
-            </table>
-        </div>
-    </div>
-    <div class="section">
-        <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
-        <div class="section-body">
-            <h4>🎤 Oral Presentations — Group A</h4>
-            <p>Each student presents for 2-3 minutes + 1 minute Q&A.</p>
-            <div class="oral-box" style="margin-top:12px;">
-                <strong>While you listen, evaluate your classmates:</strong>
-                <p>Rate each presenter on a scale of 1-3:</p>
-            </div>
-            <table class="table-activity">
-                <tr><th>Presenter Name</th><th>Vocabulary (1-3)</th><th>Grammar (1-3)</th><th>Best Part</th></tr>
-                <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
-                <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
-                <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
-                <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
-                <tr><td><input /></td><td><input /></td><td><input /></td><td><input /></td></tr>
-            </table>
-        </div>
-    </div>
-    <div class="section">
-        <div class="section-header cierre">🟣 Cierre (15 min)</div>
-        <div class="section-body">
-            <div class="oral-box">
-                <strong>💬 General Feedback:</strong> Strengths observed and common areas for improvement.
-                <p style="margin-top:6px;"><em>"Great job! Speaking in English in front of your classmates is brave. Be proud of your effort."</em></p>
-                <p><em>Group B presents next class!</em></p>
+    <div class="page">
+        <div class="hero">
+            <h1>Clase 15 — Unidad 1</h1>
+            <p>1° Medio — Inglés General (Lu+Ju) · The World of Technical Work</p>
+            <div class="meta">
+                <span>🎯 una presentación oral breve sobre la carrera técnica de su interés, demostrando...</span>
+                <span>📘 EVALUACIÓN — NOTA 1 (Grupo A)</span>
+                <span>🗂 Clase 15</span>
+                <span>🧩 Clase de trabajo</span>
             </div>
         </div>
+
+        <div class="toolbar">
+            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+        </div>
+
+        <div class="objective-card">
+            <h2>Objetivo de la clase</h2>
+            <p>Producir una presentación oral breve sobre la carrera técnica de su interés, demostrando uso de vocabulario técnico, Present Perfect y "used to".</p>
+        </div>
+
+        <div class="section">
+            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🔎 Actividad 1 — Activate and Predict</h4>
+        <p>Start the class by connecting prior knowledge with the new text and the new language focus.</p>
+        <ol class="task-steps"><li>Read the objective of the lesson and circle the technical action linked to the practice project.</li><li>Recuerda la idea central de la clase pasada: Comparar información de textos sobre profesionales técnicos de diferentes países,...</li><li>Predict which tools or key ideas may appear in a text about the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
+        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Comparar información de textos sobre profesionales técnicos de diferentes países,...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+    </div>
+    </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-body">
+                
+    <div class="task-box activity-card">
+        <h4>🧠 Actividad 2 — Language Focus</h4>
+        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <div class="focus-grid">
+            <div class="focus-card">
+                <h5>Present perfect for completed experience</h5>
+                <p>Use have or has plus a past participle to connect a past action with its present result.</p>
+                <div class="focus-subtitle">Examples</div>
+                <ul><li>The team has completed the first inspection.</li><li>The supervisor has reviewed the checklist notes.</li><li>Students have improved their technical vocabulary this unit.</li></ul>
+                <div class="focus-subtitle">Sentence frames</div>
+                <ul><li>The team has ...</li><li>The operator has already ...</li><li>We have learned that ...</li></ul>
+            </div>
+            
+            <div class="focus-card">
+                <h5>Used to for past habits and changes</h5>
+                <p>Use used to when comparing an old practice with a current or newer method.</p>
+                <div class="focus-subtitle">Examples</div>
+                <ul><li>Workers used to record results by hand.</li><li>The team used to rely only on the tool kit.</li><li>They did not use to share digital reports after each task.</li></ul>
+                <div class="focus-subtitle">Sentence frames</div>
+                <ul><li>Workers used to ... but now they ...</li><li>The process used to ...</li><li>We did not use to ...</li></ul>
+            </div>
+            </div>
+    </div>
+    
+
+                <div class="task-box">
+                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
+                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
+                    <div class="glossary-grid">
+            <div class="vocab-card">
+                <div class="word">process</div>
+                <div class="meaning">a sequence of actions used to complete a task</div>
+                <div class="pronunciation">Pron.: PRO-ses</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">component</div>
+                <div class="meaning">one part of a machine, circuit, or larger system</div>
+                <div class="pronunciation">Pron.: kom-POU-nent</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">tool</div>
+                <div class="meaning">an object used to do a practical or technical job</div>
+                <div class="pronunciation">Pron.: TUL</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">measure</div>
+                <div class="meaning">to find size, amount, or distance accurately</div>
+                <div class="pronunciation">Pron.: ME-zher</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">connect</div>
+                <div class="meaning">to join parts so the system can work correctly</div>
+                <div class="pronunciation">Pron.: ko-NEKT</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">repair</div>
+                <div class="meaning">to fix something that is damaged or not working</div>
+                <div class="pronunciation">Pron.: ri-PAIR</div>
+            </div>
+            </div>
+                </div>
+
+                <div class="reading-box">
+                    <h4>📖 Actividad 4 — Reading Model — Preparing an Oral Explanation</h4>
+                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
+                    <p>In the school technical workshop, a student team is working on a model explanation prepared for an oral task linked to The World of Technical Work. Their task is to understand how a practice project is prepared, checked, and explained in English.</p><p>Before the main procedure begins, the tool kit is prepared and the class reads a short note about process. The teacher asks students to notice the technical verbs and the words that help the reader follow the order of the task.</p><p>During the activity, the checklist is used to complete an important stage of the job. Each action is recorded in clear sentences so the next person can understand what is done, what is checked, and what must happen next.</p><p>A small difficulty appears when one step is not fully clear, so the students compare evidence, review the glossary, and revisit the example box for Present Perfect. This helps them decide which detail is essential and which detail only gives extra context.</p><p>In the final stage, the group writes a short conclusion, explains the result, and suggests one safety action. The reading shows that technical English is useful because it supports accuracy, teamwork, and better decisions in the workshop.</p>
+                </div>
+
+                <div class="task-box">
+                    <h4>📝 Actividad 5 — Reading comprehension</h4>
+                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
+                    
+            <div class="question-card">
+                <p><strong>1.</strong> What task or problem is described in the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-1">The text describes a model explanation prepared for an oral task in the school technical workshop.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>2.</strong> What happens before the main procedure starts?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-2">Before the main task starts, the team prepares the tool kit and reads the note about process.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-3">The tool kit, the checklist, and the glossary notes are important sources of information.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-4">The text highlights Present Perfect through model sentences and technical examples.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-5">The team finishes by explaining the result and suggesting one safety action.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-6">Good technical work depends on clear notes, accurate vocabulary, and careful checking.</div>
+            </div>
+            
+                </div>
+
+                <div class="task-box">
+                    <h4>🛠 Actividad 6 — Actividad Aplicada — Speaking frames</h4>
+                    
+            <ol class="task-steps">
+                <li>Use the frames to organize your explanation in a clear order.</li>
+                <li>Replace the blanks with technical vocabulary from the glossary and the reading.</li>
+                <li>Practise once with a partner and once independently before presenting.</li>
+            </ol>
+            <ul>
+                <li><em>First, the technician checks...</em></li>
+                <li><em>Then, the team uses...</em></li>
+                <li><em>The main problem is...</em></li>
+                <li><em>Finally, the result is...</em></li>
+            </ul>
+            
+                </div>
+
+                <div class="eval-box">
+                    <h4>📋 Seguimiento de la clase</h4>
+                    <p>Evaluación: SUMATIVA — Nota 1 del semestre (Expresión Oral). Rúbrica de 5 criterios × 3 niveles = 15 puntos. Escala 60%.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
+        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
+        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
+        
+        <div class="exit-ticket">
+            <h5>Exit ticket prompts</h5>
+            <ul><li>Write one sentence that summarizes the main idea of the text.</li><li>Use one glossary term and one language structure from the class in a new sentence.</li><li>Explain what detail or instruction would help you repeat the task more safely next time.</li></ul>
+        </div>
+        
+    </div>
+    </div>
+        </div>
+
+        <div class="resource-card">
+            <h4>📦 Recursos sugeridos</h4>
+            <p>Recursos: Rúbrica de evaluación, fichas de evaluación entre pares, cronómetro/timer, proyector con rúbrica visible.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+        </div>
+
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
     </div>
 
-    <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 0</span></div>
-    <div class="footer">1° Medio — Inglés General (Lu+Ju) — Clase 15, Unidad 1 — Inglés 2026</div>
-</div>
-
-<script>
-    let score = 0;
-    let totalQ = document.querySelectorAll('.quiz-item').length;
-    function updateScore() { 
-        let el = document.getElementById('totalScore');
-        if(el) el.textContent = score + ' / ' + totalQ;
-    }
-    function checkAnswer(btn, isCorrect) {
-        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
-        buttons.forEach(b => b.disabled = true);
-        if (isCorrect) { btn.classList.add('correct'); score++; }
-        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b.getAttribute('onclick') && b.getAttribute('onclick').includes('true')) b.classList.add('correct'); }); }
-        updateScore();
-    }
-    let selectedLeft = null, selectedRight = null, matches = 0;
-    function selectMatch(el, side) {
-        if (el.classList.contains('matched')) return;
-        if (side === 'left') { if (selectedLeft) selectedLeft.classList.remove('selected'); selectedLeft = el; el.classList.add('selected'); }
-        else { if (selectedRight) selectedRight.classList.remove('selected'); selectedRight = el; el.classList.add('selected'); }
-        if (selectedLeft && selectedRight) {
-            if (selectedLeft.dataset.match === selectedRight.dataset.match) {
-                selectedLeft.classList.remove('selected'); selectedRight.classList.remove('selected');
-                selectedLeft.classList.add('matched'); selectedRight.classList.add('matched');
-                matches++; score++; updateScore();
-                let ms = document.getElementById('matchScore');
-                if(ms && matches >= 5) ms.textContent = '¡Matching completo!';
-            } else {
-                selectedLeft.classList.remove('selected'); selectedRight.classList.remove('selected');
-            }
-            selectedLeft = null; selectedRight = null;
+    <script>
+        function toggleAnswer(id, button) {
+            const answer = document.getElementById(id);
+            const isOpen = answer.classList.toggle('open');
+            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
         }
-    }
-</script>
-
+    </script>
 </body>
 </html>

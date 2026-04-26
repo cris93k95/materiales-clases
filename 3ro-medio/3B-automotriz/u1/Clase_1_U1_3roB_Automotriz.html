@@ -27,6 +27,8 @@
 
         .section-body ul { margin-left: 18px; }
         .section-body li { margin-bottom: 8px; }
+        .task-steps { margin-left: 20px; }
+        .task-steps li { margin-bottom: 8px; }
 
         .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 12px; }
         .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }
@@ -35,6 +37,12 @@
         .vocab-card.revealed .meaning { display: block; }
         .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
         .vocab-card.revealed .hint { display: none; }
+
+        .support-box, .task-box { background: #f7f9fc; border: 1px solid #dbe4f0; border-radius: 10px; padding: 16px; margin-top: 12px; }
+        .support-box h4, .task-box h4 { color: #1565c0; margin-bottom: 8px; }
+        .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 12px; }
+        .support-grid h5 { color: #0d47a1; margin-bottom: 6px; }
+        .reading-note { font-size: 0.9em; color: #546e7a; margin-bottom: 10px; }
 
         .matching-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 12px; }
         .match-item { background: white; border: 2px solid #e0e0e0; border-radius: 8px; padding: 11px; text-align: center; margin-bottom: 8px; cursor: pointer; }
@@ -66,6 +74,7 @@
     <div class="meta">
         <span>📘 OA1</span>
         <span>⏱ 90 min</span>
+            <span>📗 B1</span>
         <span>🧭 Guía de estudiante</span>
     </div>
 </div>
@@ -79,7 +88,8 @@
     <div class="section">
         <div class="section-header inicio">🟢 Inicio (15 min)</div>
         <div class="section-body">
-            <ul><li>Brainstorm automotive words in English.</li><li>Identify parts in workshop images.</li><li>Share daily tasks of a mechanic.</li></ul>
+                <p>Activate prior knowledge and prepare the reading context before working with the technical text.</p>
+                <ol class="task-steps"><li>Brainstorm automotive words in English.</li><li>Identify parts in workshop images.</li><li>Share daily tasks of a mechanic.</li></ol>
         </div>
     </div>
 
@@ -87,108 +97,132 @@
         <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
         <div class="section-body">
             <h4>📖 Activity 1: Vocabulary</h4>
-            <p>Haz clic en cada tarjeta para ver la traducción y estudiar vocabulario técnico.</p>
+                <p>Open each card to review a short technical definition in English. Use the vocabulary to understand the reading, not only to memorize isolated words.</p>
             <div class="vocab-grid">
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">engine</div>
-                <div class="meaning">motor</div>
+                <div class="meaning">the machine that produces power in a vehicle</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">brake pad</div>
-                <div class="meaning">pastilla de freno</div>
+                <div class="meaning">the part of a brake system that presses to stop the wheel</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">transmission</div>
-                <div class="meaning">transmisión</div>
+                <div class="meaning">the system that transfers power from the engine to movement</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">coolant</div>
-                <div class="meaning">refrigerante</div>
+                <div class="meaning">liquid that controls the temperature of an engine or system</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">wrench</div>
-                <div class="meaning">llave</div>
+                <div class="meaning">a tool used to turn bolts or nuts</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">jack</div>
-                <div class="meaning">gata</div>
+                <div class="meaning">a device used to lift a vehicle safely</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">spark plug</div>
-                <div class="meaning">bujía</div>
+                <div class="meaning">a component that creates the spark needed in many engines</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">oil filter</div>
-                <div class="meaning">filtro de aceite</div>
+                <div class="meaning">the part that removes impurities from engine oil</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">radiator</div>
-                <div class="meaning">radiador</div>
+                <div class="meaning">the system that helps cool the engine</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">exhaust</div>
-                <div class="meaning">escape</div>
+                <div class="meaning">the system that carries gases away from the engine</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">tire</div>
-                <div class="meaning">neumático</div>
+                <div class="meaning">the rubber part that covers the wheel and contacts the road</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">battery</div>
-                <div class="meaning">batería</div>
+                <div class="meaning">a device that stores electrical energy</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">alternator</div>
-                <div class="meaning">alternador</div>
+                <div class="meaning">the part that generates electrical power in a vehicle</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">diagnostic scanner</div>
-                <div class="meaning">escáner de diagnóstico</div>
+                <div class="meaning">a tool that reads digital fault information from a vehicle</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             </div>
 
-            <h4 style="margin-top:14px;">🔗 Activity 2: Matching</h4>
-            <p>Relaciona descripción y término técnico.</p>
+                
+    <div class="support-box">
+        <h4>🧠 Activity 2: Language support and sentence frames</h4>
+        <p>Use these examples before reading so the vocabulary becomes part of a complete idea, not an isolated list.</p>
+        <div class="support-grid">
+            <div>
+                <h5>Model examples</h5>
+                <ul><li>The engine is relevant because it supports accurate professional work.</li><li>The technician uses the brake pad in order to verify a key detail.</li><li>Technical English matters when evidence, procedures, and decisions must be communicated clearly.</li></ul>
+            </div>
+            <div>
+                <h5>Frames to reuse</h5>
+                <ul><li>This tool is relevant because ...</li><li>The professional uses ___ in order to ...</li><li>Technical English matters when ...</li></ul>
+            </div>
+        </div>
+    </div>
+    
+
+                <h4 style="margin-top:14px;">🔗 Activity 3: Matching</h4>
+                <p>Match each clue with the correct technical term. Say the complete sentence aloud after each match.</p>
             <div class="matching-grid">
                 <div><div class="match-item" data-match="A" onclick="selectMatch(this,'left')">Main power unit of a car</div><div class="match-item" data-match="B" onclick="selectMatch(this,'left')">Filters oil impurities</div><div class="match-item" data-match="C" onclick="selectMatch(this,'left')">Produces electric current</div><div class="match-item" data-match="D" onclick="selectMatch(this,'left')">Reads fault codes</div><div class="match-item" data-match="E" onclick="selectMatch(this,'left')">Part used for stopping</div></div>
                 <div><div class="match-item" data-match="A" onclick="selectMatch(this,'right')">engine</div><div class="match-item" data-match="B" onclick="selectMatch(this,'right')">oil filter</div><div class="match-item" data-match="C" onclick="selectMatch(this,'right')">alternator</div><div class="match-item" data-match="D" onclick="selectMatch(this,'right')">diagnostic scanner</div><div class="match-item" data-match="E" onclick="selectMatch(this,'right')">brake pad</div></div>
             </div>
             <p id="matchScore" style="font-weight:600;color:#2e7d32;"></p>
 
-            <h4 style="margin-top:14px;">📚 Activity 3: Reading</h4>
+                <h4 style="margin-top:14px;">📚 Activity 4: Reading</h4>
             <div class="reading-box">
                 <h4>A Day in an Automotive Workshop</h4>
-                <p>Valentina starts by checking the engine and battery in each vehicle.</p><p>She changes the oil filter, inspects brake pads, and uses a diagnostic scanner for error codes.</p><p>Before finishing, she verifies coolant and tire condition. English helps her use technical manuals and software.</p>
+                    <p class="reading-note">Texto B1: cinco parrafos con contexto profesional, evidencia tecnica y razonamiento aplicado.</p>
+                <p>Valentina starts by checking the engine and battery in each vehicle. The text frames the situation as part of a real professional pathway or technical routine in 3°B — Mecánica Automotriz.</p><p>Before the central action is completed, the reader must interpret terms such as engine and brake pad in context. These references matter because they signal tools, systems, or evidence that support later decisions.</p><p>She changes the oil filter, inspects brake pads, and uses a diagnostic scanner for error codes. Rather than listing actions only, the passage shows how procedure, evidence, and responsibility are connected in professional work.</p><p>A key part of the reading is the way the professional explains results, reports a difficulty, or justifies a choice. This is where technical English moves from isolated vocabulary to professional communication.</p><p>Before finishing, she verifies coolant and tire condition. English helps her use technical manuals and software. The closing idea links the routine to identificar vocabulario técnico básico en inglés relacionado con la especialidad de mecánica automotriz mediante la exploración de textos e imágenes del campo profesional, showing why English supports accuracy, safety, and career development.</p>
             </div>
 
-            <h4 style="margin-top:14px;">✅ Activity 4: True or False</h4>
+                <div class="task-box">
+                    <h4>📝 Activity 5: Guided comprehension</h4>
+                    <p>Answer the questions with evidence from the text. Underline the sentence that helped you before sharing your answer.</p>
+                    <ol><li>What professional challenge, responsibility, or goal is described in the text?</li><li>Which tools, systems, or documents shape the routine or decision-making process?</li><li>How does the sequence of actions support quality, safety, or efficiency?</li><li>Which evidence from the text shows the importance of technical vocabulary in context?</li><li>Why does English become necessary beyond simple translation in this professional setting?</li><li>What transferable career skill can you infer from the reading and why does it matter?</li></ol>
+                </div>
+
+                <h4 style="margin-top:14px;">✅ Activity 6: True or False</h4>
             
             <div class="quiz-item">
                 <p>1. A diagnostic scanner reads vehicle fault codes.</p>
@@ -238,18 +272,16 @@
         <div class="section-body">
             <div class="ticket-box">
                 <h4>🎫 Exit Ticket</h4>
-                <input class="ticket-input" placeholder="1) New word + meaning" />
-                <input class="ticket-input" placeholder="2) New word + meaning" />
-                <input class="ticket-input" placeholder="3) New word + meaning" />
-                <input class="ticket-input" placeholder="4) New word + meaning" />
-                <input class="ticket-input" placeholder="5) New word + meaning" />
-                <input class="ticket-input" placeholder="Reflection: How does English help in automotive diagnostics?" />
+                    <p>Complete the three prompts before leaving the class.</p>
+                    <input class="ticket-input" placeholder="1) One new technical word and its definition in English" />
+                    <input class="ticket-input" placeholder="2) One sentence using that word in a workshop or lab context" />
+                    <input class="ticket-input" placeholder="3) Reflection: How does English help in automotive diagnostics?" />
             </div>
         </div>
     </div>
 
     <div class="score-bar"><span>📊 Puntaje actividades</span><span class="score" id="totalScore">0 / 10</span></div>
-    <div class="footer">3°B — Mecánica Automotriz — Clase 1, Unidad 1 — Inglés 2026</div>
+        <div class="footer">3°B — Mecánica Automotriz — Clase 1, Unidad 1 — Guía de trabajo estudiantil 2026</div>
 </div>
 
 <script>

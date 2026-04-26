@@ -4,8 +4,18 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
+from student_material_support import (
+    build_question_list_markup,
+    course_level,
+    definition_for_term,
+    expand_reading,
+    reading_note,
+)
+
 ROOT = Path(r"c:\Users\crist\OneDrive\Escritorio\2026")
 SITE = ROOT / "materiales-clases"
+PUBLISHED_SITE = ROOT / "tranquiprofe.cl" / "static" / "recursos" / "materiales"
+OUTPUT_SITES = (SITE, PUBLISHED_SITE)
 
 COURSES = [
     {
@@ -423,12 +433,12 @@ def build_tf_html(tf_questions):
 
 def build_vocab_html(vocab):
     cards = []
-    for word, meaning in vocab:
+    for word, _meaning in vocab:
         cards.append(
             f"""
             <div class=\"vocab-card\" onclick=\"this.classList.toggle('revealed')\">
                 <div class=\"word\">{word}</div>
-                <div class=\"meaning\">{meaning}</div>
+                <div class="meaning">{definition_for_term(word)}</div>
                 <div class=\"hint\">👆 clic para ver</div>
             </div>
             """
@@ -436,11 +446,64 @@ def build_vocab_html(vocab):
     return "".join(cards)
 
 
+def build_language_support_html(course):
+    first_word = course["vocab"][0][0]
+    second_word = course["vocab"][1][0]
+    if course_level(course["course_key"]) == "A2":
+        frames = [
+            "A ___ is used to ...",
+            "The technician checks ___ before ...",
+            "English helps because ...",
+        ]
+        examples = [
+            f"A {first_word} is used in technical work.",
+            f"The student checks the {second_word} before starting the task.",
+            "English helps students understand safety and instructions.",
+        ]
+    else:
+        frames = [
+            "This tool is relevant because ...",
+            "The professional uses ___ in order to ...",
+            "Technical English matters when ...",
+        ]
+        examples = [
+            f"The {first_word} is relevant because it supports accurate professional work.",
+            f"The technician uses the {second_word} in order to verify a key detail.",
+            "Technical English matters when evidence, procedures, and decisions must be communicated clearly.",
+        ]
+
+    return f"""
+    <div class="support-box">
+        <h4>🧠 Activity 2: Language support and sentence frames</h4>
+        <p>Use these examples before reading so the vocabulary becomes part of a complete idea, not an isolated list.</p>
+        <div class="support-grid">
+            <div>
+                <h5>Model examples</h5>
+                <ul>{''.join(f'<li>{example}</li>' for example in examples)}</ul>
+            </div>
+            <div>
+                <h5>Frames to reuse</h5>
+                <ul>{''.join(f'<li>{frame}</li>' for frame in frames)}</ul>
+            </div>
+        </div>
+    </div>
+    """
+
+
 def build_class_html(course):
     vocab_html = build_vocab_html(course["vocab"])
     left_html, right_html = build_matching_html(course["matching"])
     tf_html = build_tf_html(course["true_false"])
-    reading_html = "".join(f"<p>{p}</p>" for p in course["reading_paragraphs"])
+    reading_paragraphs = expand_reading(
+        course["reading_paragraphs"],
+        course["course_key"],
+        course["course_label"],
+        [word for word, _ in course["vocab"]],
+        course["objective"],
+    )
+    reading_html = "".join(f"<p>{paragraph}</p>" for paragraph in reading_paragraphs)
+    guided_questions = build_question_list_markup(course["course_key"])
+    level_tag = course_level(course["course_key"])
 
     total_points = len(course["matching"]) + len(course["true_false"])
 
@@ -473,6 +536,8 @@ def build_class_html(course):
 
         .section-body ul {{ margin-left: 18px; }}
         .section-body li {{ margin-bottom: 8px; }}
+        .task-steps {{ margin-left: 20px; }}
+        .task-steps li {{ margin-bottom: 8px; }}
 
         .vocab-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 12px; }}
         .vocab-card {{ background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }}
@@ -481,6 +546,12 @@ def build_class_html(course):
         .vocab-card.revealed .meaning {{ display: block; }}
         .vocab-card .hint {{ font-size: 0.72em; color: #888; margin-top: 4px; }}
         .vocab-card.revealed .hint {{ display: none; }}
+
+        .support-box, .task-box {{ background: #f7f9fc; border: 1px solid #dbe4f0; border-radius: 10px; padding: 16px; margin-top: 12px; }}
+        .support-box h4, .task-box h4 {{ color: #1565c0; margin-bottom: 8px; }}
+        .support-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 12px; }}
+        .support-grid h5 {{ color: #0d47a1; margin-bottom: 6px; }}
+        .reading-note {{ font-size: 0.9em; color: #546e7a; margin-bottom: 10px; }}
 
         .matching-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 12px; }}
         .match-item {{ background: white; border: 2px solid #e0e0e0; border-radius: 8px; padding: 11px; text-align: center; margin-bottom: 8px; cursor: pointer; }}
@@ -512,6 +583,7 @@ def build_class_html(course):
     <div class=\"meta\">
         <span>📘 {course['oa']}</span>
         <span>⏱ 90 min</span>
+            <span>📗 {level_tag}</span>
         <span>🧭 Guía de estudiante</span>
     </div>
 </div>
@@ -525,7 +597,8 @@ def build_class_html(course):
     <div class=\"section\">
         <div class=\"section-header inicio\">🟢 Inicio (15 min)</div>
         <div class=\"section-body\">
-            <ul>{''.join(f'<li>{item}</li>' for item in course['warmup'])}</ul>
+                <p>Activate prior knowledge and prepare the reading context before working with the technical text.</p>
+                <ol class=\"task-steps\">{''.join(f'<li>{item}</li>' for item in course['warmup'])}</ol>
         </div>
     </div>
 
@@ -533,24 +606,33 @@ def build_class_html(course):
         <div class=\"section-header desarrollo\">🔵 Desarrollo (60 min)</div>
         <div class=\"section-body\">
             <h4>📖 Activity 1: Vocabulary</h4>
-            <p>Haz clic en cada tarjeta para ver la traducción y estudiar vocabulario técnico.</p>
+                <p>Open each card to review a short technical definition in English. Use the vocabulary to understand the reading, not only to memorize isolated words.</p>
             <div class=\"vocab-grid\">{vocab_html}</div>
 
-            <h4 style=\"margin-top:14px;\">🔗 Activity 2: Matching</h4>
-            <p>Relaciona descripción y término técnico.</p>
+                {build_language_support_html(course)}
+
+                <h4 style=\"margin-top:14px;\">🔗 Activity 3: Matching</h4>
+                <p>Match each clue with the correct technical term. Say the complete sentence aloud after each match.</p>
             <div class=\"matching-grid\">
                 <div>{left_html}</div>
                 <div>{right_html}</div>
             </div>
             <p id=\"matchScore\" style=\"font-weight:600;color:#2e7d32;\"></p>
 
-            <h4 style=\"margin-top:14px;\">📚 Activity 3: Reading</h4>
+                <h4 style=\"margin-top:14px;\">📚 Activity 4: Reading</h4>
             <div class=\"reading-box\">
                 <h4>{course['reading_title']}</h4>
+                    <p class=\"reading-note\">{reading_note(course['course_key'])}</p>
                 {reading_html}
             </div>
 
-            <h4 style=\"margin-top:14px;\">✅ Activity 4: True or False</h4>
+                <div class=\"task-box\">
+                    <h4>📝 Activity 5: Guided comprehension</h4>
+                    <p>Answer the questions with evidence from the text. Underline the sentence that helped you before sharing your answer.</p>
+                    {guided_questions}
+                </div>
+
+                <h4 style=\"margin-top:14px;\">✅ Activity 6: True or False</h4>
             {tf_html}
         </div>
     </div>
@@ -560,18 +642,16 @@ def build_class_html(course):
         <div class=\"section-body\">
             <div class=\"ticket-box\">
                 <h4>🎫 Exit Ticket</h4>
-                <input class=\"ticket-input\" placeholder=\"1) New word + meaning\" />
-                <input class=\"ticket-input\" placeholder=\"2) New word + meaning\" />
-                <input class=\"ticket-input\" placeholder=\"3) New word + meaning\" />
-                <input class=\"ticket-input\" placeholder=\"4) New word + meaning\" />
-                <input class=\"ticket-input\" placeholder=\"5) New word + meaning\" />
-                <input class=\"ticket-input\" placeholder=\"Reflection: {course['reflection']}\" />
+                    <p>Complete the three prompts before leaving the class.</p>
+                    <input class=\"ticket-input\" placeholder=\"1) One new technical word and its definition in English\" />
+                    <input class=\"ticket-input\" placeholder=\"2) One sentence using that word in a workshop or lab context\" />
+                    <input class=\"ticket-input\" placeholder=\"3) Reflection: {course['reflection']}\" />
             </div>
         </div>
     </div>
 
     <div class=\"score-bar\"><span>📊 Puntaje actividades</span><span class=\"score\" id=\"totalScore\">0 / {total_points}</span></div>
-    <div class=\"footer\">{course['course_label']} — Clase 1, Unidad 1 — Inglés 2026</div>
+        <div class=\"footer\">{course['course_label']} — Clase 1, Unidad 1 — Guía de trabajo estudiantil 2026</div>
 </div>
 
 <script>
@@ -614,31 +694,16 @@ def build_class_html(course):
 
 def write_class_files():
     for course in COURSES:
-        out = SITE / course["relative_file"]
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(build_class_html(course), encoding="utf-8")
+        html = build_class_html(course)
+        for output_site in OUTPUT_SITES:
+            out = output_site / course["relative_file"]
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(html, encoding="utf-8")
 
 
 def cleanup_extra_files():
-    keep = {str((SITE / c["relative_file"]).resolve()).lower() for c in COURSES}
-
-    for folder in [
-        SITE / "1ro-medio" / "lu-ju" / "u1",
-        SITE / "3ro-medio" / "3A-industrial" / "u1",
-        SITE / "3ro-medio" / "3B-automotriz" / "u1",
-        SITE / "3ro-medio" / "3C-electricidad" / "u1",
-        SITE / "3ro-medio" / "3D-grafica" / "u1",
-        SITE / "3ro-medio" / "3E-electronica" / "u1",
-        SITE / "4to-medio" / "4A-industrial" / "u1",
-        SITE / "4to-medio" / "4B-automotriz" / "u1",
-        SITE / "4to-medio" / "4C-electricidad" / "u1",
-        SITE / "4to-medio" / "4E-electronica" / "u1",
-    ]:
-        if not folder.exists():
-            continue
-        for f in folder.glob("Clase_*_U1_*.html"):
-            if str(f.resolve()).lower() not in keep:
-                f.unlink(missing_ok=True)
+    # Do not remove other Unit 1 classes. This generator owns only Class 1.
+    return
 
 
 def update_index():
@@ -679,15 +744,18 @@ def update_index():
 
 
 def update_progress():
-    progress_path = SITE / "progress.json"
-    data = {"lastUpdated": str(date.today()), "classes": {}}
-    for course in COURSES:
-        key = f"{course['course_key']}/u1/Clase_1"
-        data["classes"][key] = {
-            "status": "pending",
-            "title": "Clase 1 — Material de clase interactivo"
-        }
-    progress_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    for output_site in OUTPUT_SITES:
+        progress_path = output_site / "progress.json"
+        data = json.loads(progress_path.read_text(encoding="utf-8")) if progress_path.exists() else {"classes": {}}
+        data.setdefault("classes", {})
+        data["lastUpdated"] = str(date.today())
+        for course in COURSES:
+            key = f"{course['course_key']}/u1/Clase_1"
+            data["classes"][key] = {
+                "status": "pending",
+                "title": "Clase 1 — Material de clase interactivo"
+            }
+        progress_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def main():

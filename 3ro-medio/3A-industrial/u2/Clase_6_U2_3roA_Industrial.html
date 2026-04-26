@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 6 — Unidad 2 — 3°A — Mecánica Industrial</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
+        .hero p { color: rgba(255,255,255,0.88); }
+        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #7c3aed; }
+        .section-body { padding: 20px 22px 22px; }
+        .section-body ul { margin-left: 20px; }
+        .section-body li { margin-bottom: 8px; }
+        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+        .activity-card p { margin-bottom: 10px; }
+        .task-steps { margin-left: 20px; }
+        .task-steps li { margin-bottom: 8px; }
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .meaning { font-size: 0.92rem; color: #1f2937; }
+        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
+        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card ul { margin-left: 18px; }
+        .focus-card li { margin-bottom: 6px; }
+        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .reading-box p { margin-bottom: 10px; }
+        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+        .answer-box.open { display: block; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
+        .activity-table th { background: #e2e8f0; }
+        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
+        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+        .exit-ticket ul { margin-left: 18px; }
+        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+        @media (max-width: 720px) {
+            .hero h1 { font-size: 1.55rem; }
+            .page { padding: 16px 12px 28px; }
+        }
+        @media print {
+            body { background: white; }
+            .toolbar { display: none; }
+            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="hero">
+            <h1>Clase 6 — Unidad 2</h1>
+            <p>3°A — Mecánica Industrial · Technical Challenges & Global Issues</p>
+            <div class="meta">
+                <span>🎯 los resultados de la prueba de lectura para consolidar estrategias efectivas y...</span>
+                <span>📘 OA1 · OA3 · OA4</span>
+                <span>🗂 Clase anual 15</span>
+                <span>🧩 Clase de trabajo</span>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+        </div>
+
+        <div class="objective-card">
+            <h2>Objetivo de la clase</h2>
+            <p>Evaluar los resultados de la prueba de lectura para consolidar estrategias efectivas y corregir errores recurrentes en la comprensión de textos técnicos.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🔎 Actividad 1 — Activate and Predict</h4>
+        <p>Start the class by connecting prior knowledge with the new text and the new language focus.</p>
+        <ol class="task-steps"><li>Read the objective of the lesson and circle the technical action linked to the metal support.</li><li>Recuerda la idea central de la clase pasada: Demostrar comprensión de información central y específica en un texto técnico en inglés...</li><li>Predict which tools or key ideas may appear in a text about the mecánica industrial context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
+        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Demostrar comprensión de información central y específica en un texto técnico en inglés...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+    </div>
+    </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-body">
+                
+    <div class="task-box activity-card">
+        <h4>🧠 Actividad 2 — Language Focus</h4>
+        <p>Use these examples before reading. The class text is written at B1 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <div class="focus-grid">
+            <div class="focus-card">
+                <h5>Technical English in context</h5>
+                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
+                <div class="focus-subtitle">Examples</div>
+                <ul><li>The lathe is checked before the task begins.</li><li>The caliper gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
+                <div class="focus-subtitle">Sentence frames</div>
+                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
+            </div>
+            </div>
+    </div>
+    
+
+                <div class="task-box">
+                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
+                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
+                    <div class="glossary-grid">
+            <div class="vocab-card">
+                <div class="word">lathe</div>
+                <div class="meaning">a machine that turns material so it can be shaped</div>
+                <div class="pronunciation">Pron.: LEITH</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">caliper</div>
+                <div class="meaning">a precision tool used to measure width or thickness</div>
+                <div class="pronunciation">Pron.: KA-li-per</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">blueprint</div>
+                <div class="meaning">a technical drawing that shows how something must be built</div>
+                <div class="pronunciation">Pron.: BLU-print</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">tolerance</div>
+                <div class="meaning">the allowed small difference in a measurement</div>
+                <div class="pronunciation">Pron.: TO-le-rans</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">weld</div>
+                <div class="meaning">to join metal parts using heat</div>
+                <div class="pronunciation">Pron.: WELD</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">surface</div>
+                <div class="meaning">the outside part of an object or material</div>
+                <div class="pronunciation">Pron.: SER-fis</div>
+            </div>
+            </div>
+                </div>
+
+                <div class="reading-box">
+                    <h4>📖 Actividad 4 — Reading Text — Process and Description</h4>
+                    <p class="reading-note">Texto B1: cinco parrafos con relaciones de causa, secuencia, evidencia y conclusion tecnica.</p>
+                    <p>At the start of the shift in the industrial workshop, a team is asked to solve a technical process that must be explained clearly connected to Technical Challenges & Global Issues. The text follows the way technical information is interpreted before any action is taken.</p><p>The supervisor first reviews the record of the previous task, the available materials, and the quality criteria expected for the metal support. This context matters because the team cannot choose a valid response until the evidence is organized.</p><p>As the procedure develops, the lathe and the caliper provide the key evidence for the decision-making process. Notes, measurements, and short explanations are compared in order to distinguish routine data from signs of a real problem or opportunity.</p><p>The writer also uses Technical English to connect ideas precisely and to clarify relationships between cause, sequence, contrast, or responsibility. Because of that, the reader can understand not only what happens, but also why a certain action is preferred.</p><p>By the end of the text, the team reaches a justified conclusion, records the outcome, and proposes one improvement for future work. The passage suggests that technical English is valuable when evidence must be communicated clearly to classmates, supervisors, or clients.</p>
+                </div>
+
+                <div class="task-box">
+                    <h4>📝 Actividad 5 — Reading comprehension</h4>
+                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
+                    
+            <div class="question-card">
+                <p><strong>1.</strong> What operational or communicative challenge is presented in the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-1">The text presents a technical process that must be explained clearly in a professional setting.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>2.</strong> Which prior checks or contextual details shape the task?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-2">Before the procedure advances, the team reviews previous records, materials, and quality criteria for the metal support.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>3.</strong> What evidence or technical details guide the team's decisions?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-3">The lathe, the caliper, and the written notes guide the team's decisions.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>4.</strong> How does the writer use the language focus of the lesson to clarify meaning?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-4">The text uses Technical English to organize relationships between ideas more precisely.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>5.</strong> What conclusion or recommendation emerges from the situation?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-5">The team reaches a justified conclusion and proposes one improvement for future work.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>6.</strong> What broader lesson about technical communication can be inferred?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-6">The broader lesson is that technical communication must be evidence-based, accurate, and easy to transfer to others.</div>
+            </div>
+            
+                </div>
+
+                <div class="task-box">
+                    <h4>🛠 Actividad 6 — Actividad Aplicada — Síntesis técnica</h4>
+                    
+        <ol class="task-steps">
+            <li>Resume the main idea of the class in relation to mecánica industrial.</li>
+            <li>Write two pieces of evidence from the text that support your summary.</li>
+            <li>Explain how the reading connects with a real task from the workshop, lab, or production area.</li>
+        </ol>
+        
+                </div>
+
+                <div class="eval-box">
+                    <h4>📋 Seguimiento de la clase</h4>
+                    <p>Formativa — análisis de errores y observación de práctica integrada.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
+        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
+        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
+        
+        <div class="exit-ticket">
+            <h5>Exit ticket prompts</h5>
+            <ul><li>Write one sentence that summarizes the main idea of the text.</li><li>Use one glossary term and one language structure from the class in a new sentence.</li><li>Explain what detail or instruction would help you repeat the task more safely next time.</li></ul>
+        </div>
+        
+    </div>
+    </div>
+        </div>
+
+        <div class="resource-card">
+            <h4>📦 Recursos sugeridos</h4>
+            <p>Evaluaciones corregidas, Bingo de vocabulario, mini-texto para actividad integradora, ficha de reflexión.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+        </div>
+
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+    </div>
+
+    <script>
+        function toggleAnswer(id, button) {
+            const answer = document.getElementById(id);
+            const isOpen = answer.classList.toggle('open');
+            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+        }
+    </script>
+</body>
+</html>

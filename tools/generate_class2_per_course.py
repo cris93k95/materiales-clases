@@ -5,8 +5,18 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
+from student_material_support import (
+    build_question_list_markup,
+    course_level,
+    definition_for_term,
+    expand_reading,
+    reading_note,
+)
+
 ROOT = Path(r"c:\Users\crist\OneDrive\Escritorio\2026")
 SITE = ROOT / "materiales-clases"
+PUBLISHED_SITE = ROOT / "tranquiprofe.cl" / "static" / "recursos" / "materiales"
+OUTPUT_SITES = (SITE, PUBLISHED_SITE)
 
 COURSES = [
     {
@@ -20,7 +30,7 @@ COURSES = [
         "reading_text": [
             "Sofía is a first-year technical student. Every day, she learns about tools and safety rules in the workshop.",
             "In class, she reads a short text about a mechanic who checks engines, changes oil, and uses different tools.",
-            "After reading, she identifies key words and explains what each tool is used for."
+            "After reading, she identifies key words and explains what each tool is used for.",
         ],
     },
     {
@@ -34,7 +44,7 @@ COURSES = [
         "reading_text": [
             "Martín begins his day in an industrial workshop by reviewing a blueprint and preparing the machine area.",
             "He operates a lathe, measures dimensions with a caliper, and checks tolerance using a micrometer.",
-            "At the end, he records results and reports quality issues to his supervisor."
+            "At the end, he records results and reports quality issues to his supervisor.",
         ],
     },
     {
@@ -48,7 +58,7 @@ COURSES = [
         "reading_text": [
             "Camila works in an automotive workshop and starts with a quick vehicle inspection.",
             "She checks engine sounds, scans error codes, and inspects brake pads and coolant levels.",
-            "Before finishing, she explains to the client what repairs are necessary."
+            "Before finishing, she explains to the client what repairs are necessary.",
         ],
     },
     {
@@ -62,7 +72,7 @@ COURSES = [
         "reading_text": [
             "Nicolás works as an electrician trainee in a building project.",
             "He installs wire and conduit, checks circuits with a multimeter, and verifies panel safety.",
-            "Finally, he tests outlet voltage and confirms grounding in all areas."
+            "Finally, he tests outlet voltage and confirms grounding in all areas.",
         ],
     },
     {
@@ -76,7 +86,7 @@ COURSES = [
         "reading_text": [
             "Fernanda starts in prepress by checking file resolution and color profiles.",
             "She prepares ink for the press, verifies CMYK quality, and checks test prints.",
-            "Later, she finishes products with a cutter and laminator before binding."
+            "Later, she finishes products with a cutter and laminator before binding.",
         ],
     },
     {
@@ -90,7 +100,7 @@ COURSES = [
         "reading_text": [
             "Ignacio assembles a small circuit on a PCB during electronics lab.",
             "He solders components, checks continuity, and observes waveforms with an oscilloscope.",
-            "Then he records voltage and signal results for the final report."
+            "Then he records voltage and signal results for the final report.",
         ],
     },
     {
@@ -104,7 +114,7 @@ COURSES = [
         "reading_text": [
             "Paulo followed a career path from technical school to industrial maintenance specialist.",
             "He learned CNC programming, preventive maintenance, and quality control in a metal factory.",
-            "English helped him read technical documentation and apply international standards."
+            "English helped him read technical documentation and apply international standards.",
         ],
     },
     {
@@ -118,7 +128,7 @@ COURSES = [
         "reading_text": [
             "Daniela started as an apprentice and became an automotive diagnostics technician.",
             "She specialized in hybrid systems and uses OBD tools to solve complex faults.",
-            "Her English skills improved because she regularly reads software updates and service manuals."
+            "Her English skills improved because she regularly reads software updates and service manuals.",
         ],
     },
     {
@@ -132,7 +142,7 @@ COURSES = [
         "reading_text": [
             "Rocío built her career through internships in residential and industrial electrical projects.",
             "She learned load calculation, transformer maintenance, and protection system testing.",
-            "English was key to understanding electrical codes and technical documentation."
+            "English was key to understanding electrical codes and technical documentation.",
         ],
     },
     {
@@ -146,7 +156,7 @@ COURSES = [
         "reading_text": [
             "Sebastián studied electronics and then worked in IoT device maintenance.",
             "He programs microcontrollers, updates firmware, and validates embedded systems with lab tools.",
-            "Reading English datasheets allowed him to solve advanced technical problems."
+            "Reading English datasheets allowed him to solve advanced technical problems.",
         ],
     },
 ]
@@ -182,9 +192,9 @@ def extract_class2_data(plan_path):
         objective = objective.replace("Objetivo de la clase (Bloom):", "").replace("Objetivo de la clase:", "").strip()
 
     def phase_items(keyword):
-        for phase in class2.select("div.fase"):
-            t = phase.select_one(".fase-title")
-            if not t or keyword.lower() not in clean_text(t.get_text()).lower():
+        for phase in soup.select("div.clase-card div.fase"):
+            title = phase.select_one(".fase-title")
+            if not title or keyword.lower() not in clean_text(title.get_text()).lower():
                 continue
             content = phase.select_one(".fase-content")
             if not content:
@@ -202,12 +212,12 @@ def extract_class2_data(plan_path):
 
 def build_vocab_html(vocab_words):
     cards = []
-    for w in vocab_words:
+    for word in vocab_words:
         cards.append(
             f"""
             <div class=\"vocab-card\" onclick=\"this.classList.toggle('revealed')\">
-                <div class=\"word\">{w}</div>
-                <div class=\"meaning\">Repasar definición en clase</div>
+                <div class=\"word\">{word}</div>
+                <div class=\"meaning\">{definition_for_term(word)}</div>
                 <div class=\"hint\">👆 clic para ver</div>
             </div>
             """
@@ -215,17 +225,85 @@ def build_vocab_html(vocab_words):
     return "".join(cards)
 
 
-def build_question_items():
-    return """
-    <ol>
-        <li>What is the main job/task described in the text?</li>
-        <li>Which technical tools or systems are mentioned?</li>
-        <li>What sequence of actions appears in the routine?</li>
-        <li>Why is English useful in this professional context?</li>
-        <li>What challenge does the professional face and how is it solved?</li>
-        <li>What skill from this text is relevant for your own future career?</li>
-    </ol>
+def build_question_items(course_key):
+    return build_question_list_markup(course_key)
+
+
+def build_language_support_html(course):
+    first_word = course["vocab_review"][0]
+    second_word = course["vocab_review"][1]
+    if course_level(course["course_key"]) == "A2":
+        examples = [
+            f"The text explains when the {first_word} is used.",
+            f"The student identifies the {second_word} before answering the questions.",
+            "The reader follows the sequence first, then the purpose, and finally the result.",
+        ]
+        frames = [
+            "First, the technician ...",
+            "Then, the professional uses ...",
+            "At the end, the result is ...",
+        ]
+    else:
+        examples = [
+            f"The {first_word} appears as evidence of a professional routine.",
+            f"The {second_word} helps the reader understand responsibility and technical decision-making.",
+            "The text links procedure, evidence, and communication rather than isolated vocabulary only.",
+        ]
+        frames = [
+            "The main responsibility in the text is ...",
+            "A key tool or system is ... because ...",
+            "English is essential when the professional needs to ...",
+        ]
+
+    return f"""
+    <div class=\"task-box support-box\">
+        <h3>🧠 Activity 2 — Reading support</h3>
+        <p>Use these examples and frames before reading so you can identify task, evidence, and result more easily.</p>
+        <div class=\"support-grid\">
+            <div>
+                <h4>Model ideas</h4>
+                <ul>{''.join(f'<li>{example}</li>' for example in examples)}</ul>
+            </div>
+            <div>
+                <h4>Frames to reuse</h4>
+                <ul>{''.join(f'<li>{frame}</li>' for frame in frames)}</ul>
+            </div>
+        </div>
+    </div>
     """
+
+
+def build_start_steps(course):
+    return [
+        "Read the objective and highlight two words that show today's reading focus.",
+        f"Review key vocabulary from class 1: {', '.join(course['vocab_review'][:4])}.",
+        "Predict what kind of professional routine, problem, or career situation will appear in the text.",
+        "Share one prediction with a partner before reading.",
+    ]
+
+
+def build_closure_steps():
+    return [
+        "Summarize the main idea of the text in one complete sentence.",
+        "Choose one technical term and explain why it was important for comprehension.",
+        "State one professional skill from the reading that matters for your own future pathway.",
+    ]
+
+
+def build_speaking_frames(course):
+    if course_level(course["course_key"]) == "A2":
+        frames = [
+            "Every day, the technician checks ...",
+            "First ..., then ..., finally ...",
+            "The most important skill is ... because ...",
+        ]
+    else:
+        frames = [
+            "The professional is responsible for ...",
+            "A key part of the routine is ... because ...",
+            "This reading shows that English is necessary when ...",
+        ]
+    return "<ul>" + "".join(f"<li>{frame}</li>" for frame in frames) + "</ul>"
 
 
 def build_tf_block():
@@ -237,11 +315,19 @@ def build_tf_block():
 
 
 def build_class2_html(course, parsed):
+    objective = parsed["objective"] or "Desarrollar comprensión lectora y uso de vocabulario técnico en contexto profesional."
     vocab_html = build_vocab_html(course["vocab_review"])
-    reading_html = "".join(f"<p>{p}</p>" for p in course["reading_text"])
-    init_list = "".join(f"<li>{i}</li>" for i in (parsed["inicio"][:4] or ["Activación y prelectura."]))
-    dev_list = "".join(f"<li>{i}</li>" for i in (parsed["desarrollo"][:6] or ["Lectura guiada y comprensión."]))
-    close_list = "".join(f"<li>{i}</li>" for i in (parsed["cierre"][:4] or ["Cierre y reflexión."]))
+    reading_paragraphs = expand_reading(
+        course["reading_text"],
+        course["course_key"],
+        course["course_label"],
+        course["vocab_review"],
+        objective,
+    )
+    reading_html = "".join(f"<p>{paragraph}</p>" for paragraph in reading_paragraphs)
+    init_list = "".join(f"<li>{step}</li>" for step in build_start_steps(course))
+    close_list = "".join(f"<li>{step}</li>" for step in build_closure_steps())
+    level_tag = course_level(course["course_key"])
 
     return f"""<!DOCTYPE html>
 <html lang=\"es\">
@@ -266,7 +352,6 @@ def build_class2_html(course, parsed):
         .inicio {{ background: #2e7d32; }}
         .desarrollo {{ background: #1565c0; }}
         .cierre {{ background: #6a1b9a; }}
-
         .vocab-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 10px; }}
         .vocab-card {{ background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }}
         .vocab-card .word {{ font-weight: 700; color: #0d47a1; }}
@@ -274,15 +359,17 @@ def build_class2_html(course, parsed):
         .vocab-card.revealed .meaning {{ display: block; }}
         .vocab-card .hint {{ font-size: 0.72em; color: #888; margin-top: 4px; }}
         .vocab-card.revealed .hint {{ display: none; }}
-
         .reading-box {{ background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }}
+        .reading-note {{ font-size: 0.9em; color: #546e7a; margin-bottom: 10px; }}
         .task-box {{ background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }}
+        .support-box {{ background: #f7f9fc; border-color: #dbe4f0; }}
+        .support-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 12px; }}
+        .support-grid h4 {{ color: #0d47a1; margin-bottom: 6px; }}
         .quiz-item {{ background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }}
         .quiz-options {{ display: flex; gap: 10px; margin-top: 8px; }}
         .quiz-btn {{ padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; }}
         .quiz-btn.correct {{ border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }}
         .quiz-btn.incorrect {{ border-color: #c62828; background: #ffebee; color: #c62828; }}
-
         .ticket-input {{ width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; }}
         .score {{ font-weight: 700; color: #1565c0; }}
     </style>
@@ -293,61 +380,68 @@ def build_class2_html(course, parsed):
     <div class=\"meta\">
         <span>📘 OA1 · OA3</span>
         <span>⏱ 90 min</span>
+        <span>📗 {level_tag}</span>
         <span>🧭 Guía de estudiante completa</span>
     </div>
 </div>
 
 <div class=\"container\">
-    <div class=\"card\"><h3>🎯 Objetivo de la clase</h3><p>{parsed['objective']}</p></div>
+    <div class=\"card\"><h3>🎯 Objetivo de la clase</h3><p>{objective}</p></div>
 
     <div class=\"card\">
         <div class=\"section-title inicio\">Inicio (15 min)</div>
-        <ul>{init_list}</ul>
+        <p>Prepare the reading by activating prior knowledge and predicting the professional context of the text.</p>
+        <ol>{init_list}</ol>
     </div>
 
     <div class=\"card\">
         <div class=\"section-title desarrollo\">Desarrollo (60 min)</div>
-        <ul>{dev_list}</ul>
-
         <h3 style=\"margin-top:14px;\">📖 Activity 1 — Vocabulary Review</h3>
+        <p>Open each card to review a short technical definition in English before reading.</p>
         <div class=\"vocab-grid\">{vocab_html}</div>
 
-        <h3 style=\"margin-top:14px;\">📚 Activity 2 — Reading</h3>
-        <div class=\"reading-box\">{reading_html}</div>
+        {build_language_support_html(course)}
 
-        <h3 style=\"margin-top:14px;\">📝 Activity 3 — Comprehension Questions</h3>
-        <div class=\"task-box\">{build_question_items()}</div>
+        <h3 style=\"margin-top:14px;\">📚 Activity 3 — Reading</h3>
+        <div class=\"reading-box\">
+            <p class=\"reading-note\">{reading_note(course['course_key'])}</p>
+            {reading_html}
+        </div>
 
-        <h3 style=\"margin-top:14px;\">📊 Activity 4 — Task / Tool / Time Table</h3>
+        <h3 style=\"margin-top:14px;\">📝 Activity 4 — Comprehension Questions</h3>
         <div class=\"task-box\">
+            <p>Answer using evidence from the text. Underline the sentence that helps you answer each question.</p>
+            {build_question_items(course['course_key'])}
+        </div>
+
+        <h3 style=\"margin-top:14px;\">📊 Activity 5 — Task / Tool / Evidence Table</h3>
+        <div class=\"task-box\">
+            <p>Transfer information from the reading into the organizer. Keep the wording specific and professional.</p>
             <table style=\"width:100%; border-collapse: collapse;\">
-                <tr><th style=\"border:1px solid #ddd; padding:8px;\">Task</th><th style=\"border:1px solid #ddd; padding:8px;\">Tool/System</th><th style=\"border:1px solid #ddd; padding:8px;\">Time of day</th></tr>
+                <tr><th style=\"border:1px solid #ddd; padding:8px;\">Task or responsibility</th><th style=\"border:1px solid #ddd; padding:8px;\">Tool / system</th><th style=\"border:1px solid #ddd; padding:8px;\">Evidence from the text</th></tr>
                 <tr><td style=\"border:1px solid #ddd; padding:8px;\">&nbsp;</td><td style=\"border:1px solid #ddd; padding:8px;\">&nbsp;</td><td style=\"border:1px solid #ddd; padding:8px;\">&nbsp;</td></tr>
                 <tr><td style=\"border:1px solid #ddd; padding:8px;\">&nbsp;</td><td style=\"border:1px solid #ddd; padding:8px;\">&nbsp;</td><td style=\"border:1px solid #ddd; padding:8px;\">&nbsp;</td></tr>
                 <tr><td style=\"border:1px solid #ddd; padding:8px;\">&nbsp;</td><td style=\"border:1px solid #ddd; padding:8px;\">&nbsp;</td><td style=\"border:1px solid #ddd; padding:8px;\">&nbsp;</td></tr>
             </table>
         </div>
 
-        <h3 style=\"margin-top:14px;\">✅ Activity 5 — True/False Check</h3>
+        <h3 style=\"margin-top:14px;\">✅ Activity 6 — True/False Check</h3>
         {build_tf_block()}
 
-        <h3 style=\"margin-top:14px;\">🗣 Activity 6 — Speaking Frames</h3>
+        <h3 style=\"margin-top:14px;\">🗣 Activity 7 — Speaking Frames</h3>
         <div class=\"task-box\">
             <p><strong>Use these frames in pairs:</strong></p>
-            <ul>
-                <li>"Every day, the technician checks ..."</li>
-                <li>"First ..., then ..., finally ..."</li>
-                <li>"The most important skill is ... because ..."</li>
-            </ul>
+            {build_speaking_frames(course)}
         </div>
     </div>
 
     <div class=\"card\">
         <div class=\"section-title cierre\">Cierre (15 min)</div>
-        <ul>{close_list}</ul>
+        <ol>{close_list}</ol>
         <h3 style=\"margin-top:10px;\">🎫 Exit Ticket</h3>
-        <input class=\"ticket-input\" placeholder=\"Write 3 new words from today + meaning\" />
-        <input class=\"ticket-input\" placeholder=\"Reflection: What was the most useful skill in this lesson?\" />
+        <input class=\"ticket-input\" placeholder=\"1) One key word from the reading and its definition in English\" />
+        <input class=\"ticket-input\" placeholder=\"2) One sentence explaining the main professional skill from the text\" />
+        <input class=\"ticket-input\" placeholder=\"3) Reflection: What was the most useful skill in this lesson?\" />
         <p class=\"score\" id=\"totalScore\" style=\"margin-top:8px;\">0 / 3 puntos</p>
     </div>
 </div>
@@ -371,13 +465,13 @@ def update_index():
     index_path = SITE / "index.html"
     soup = BeautifulSoup(index_path.read_text(encoding="utf-8"), "html.parser")
 
-    by_course = {c["course_name"]: c for c in COURSES}
+    by_course = {course["course_name"]: course for course in COURSES}
 
     for section in soup.select(".course-section"):
-        h3 = section.select_one(".course-header h3")
-        if not h3:
+        heading = section.select_one(".course-header h3")
+        if not heading:
             continue
-        course_name = h3.get_text(strip=True)
+        course_name = heading.get_text(strip=True)
         if course_name not in by_course:
             continue
 
@@ -387,7 +481,7 @@ def update_index():
             continue
 
         existing = list(unit_classes.select("a.class-link"))
-        has_class2 = any((a.get("data-progress-id") or "").endswith("/Clase_2") for a in existing)
+        has_class2 = any((anchor.get("data-progress-id") or "").endswith("/Clase_2") for anchor in existing)
         if has_class2:
             continue
 
@@ -405,26 +499,29 @@ def update_index():
 
 
 def update_progress():
-    progress_path = SITE / "progress.json"
-    data = json.loads(progress_path.read_text(encoding="utf-8")) if progress_path.exists() else {"classes": {}}
-    data["lastUpdated"] = str(date.today())
+    for output_site in OUTPUT_SITES:
+        progress_path = output_site / "progress.json"
+        data = json.loads(progress_path.read_text(encoding="utf-8")) if progress_path.exists() else {"classes": {}}
+        data["lastUpdated"] = str(date.today())
 
-    for c in COURSES:
-        key = f"{c['course_key']}/u1/Clase_2"
-        data.setdefault("classes", {})[key] = {
-            "status": "pending",
-            "title": "Clase 2 — Comprensión lectora y práctica guiada",
-        }
+        for course in COURSES:
+            key = f"{course['course_key']}/u1/Clase_2"
+            data.setdefault("classes", {})[key] = {
+                "status": "pending",
+                "title": "Clase 2 — Comprensión lectora y práctica guiada",
+            }
 
-    progress_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        progress_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def main():
-    for c in COURSES:
-        parsed = extract_class2_data(c["plan_path"])
-        out = SITE / c["relative_file"]
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(build_class2_html(c, parsed), encoding="utf-8")
+    for course in COURSES:
+        parsed = extract_class2_data(course["plan_path"])
+        html = build_class2_html(course, parsed)
+        for output_site in OUTPUT_SITES:
+            output_path = output_site / course["relative_file"]
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            output_path.write_text(html, encoding="utf-8")
 
     update_index()
     update_progress()

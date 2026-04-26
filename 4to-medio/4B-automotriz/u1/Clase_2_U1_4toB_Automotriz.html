@@ -21,7 +21,6 @@
         .inicio { background: #2e7d32; }
         .desarrollo { background: #1565c0; }
         .cierre { background: #6a1b9a; }
-
         .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 10px; }
         .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }
         .vocab-card .word { font-weight: 700; color: #0d47a1; }
@@ -29,15 +28,17 @@
         .vocab-card.revealed .meaning { display: block; }
         .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
         .vocab-card.revealed .hint { display: none; }
-
         .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }
+        .reading-note { font-size: 0.9em; color: #546e7a; margin-bottom: 10px; }
         .task-box { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }
+        .support-box { background: #f7f9fc; border-color: #dbe4f0; }
+        .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 12px; }
+        .support-grid h4 { color: #0d47a1; margin-bottom: 6px; }
         .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
         .quiz-options { display: flex; gap: 10px; margin-top: 8px; }
         .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; }
         .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
         .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
-
         .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; }
         .score { font-weight: 700; color: #1565c0; }
     </style>
@@ -48,6 +49,7 @@
     <div class="meta">
         <span>📘 OA1 · OA3</span>
         <span>⏱ 90 min</span>
+        <span>📗 B1</span>
         <span>🧭 Guía de estudiante completa</span>
     </div>
 </div>
@@ -57,101 +59,113 @@
 
     <div class="card">
         <div class="section-title inicio">Inicio (15 min)</div>
-        <ul><li>Warm-up: repaso de vocabulario con "Word Relay" — en equipos, cada estudiante dice una palabra técnica en inglés; el equipo con más palabras gana.</li><li>Pre-reading: "What steps does someone take to become a successful professional in mecánica automotriz?" — lluvia de ideas.</li><li>Se introduce el concepto de Case Study como herramienta de aprendizaje.</li></ul>
+        <p>Prepare the reading by activating prior knowledge and predicting the professional context of the text.</p>
+        <ol><li>Read the objective and highlight two words that show today's reading focus.</li><li>Review key vocabulary from class 1: engine diagnostics, OBD scanner, fuel injection, hybrid system.</li><li>Predict what kind of professional routine, problem, or career situation will appear in the text.</li><li>Share one prediction with a partner before reading.</li></ol>
     </div>
 
     <div class="card">
         <div class="section-title desarrollo">Desarrollo (60 min)</div>
-        <ul><li>Reading (25 min): Case Study: From Workshop to Dealership — Carlos, a Chilean automotive technician, describes his career path: vocational school, internship at a workshop, certification, and current job at a dealership. He explains how English helped him read technical manuals and attend a training in Germany. Lectura guiada con pausas. Los estudiantes completan una tabla: Stage (education, internship, first job, specialization) Skills developed at each stage Role of English at each stage Challenges faced</li><li>Stage (education, internship, first job, specialization)</li><li>Skills developed at each stage</li><li>Role of English at each stage</li><li>Challenges faced</li><li>Comprehension (15 min): 8 preguntas: 4 explícitas + 4 de análisis crítico ( "Why was English important for his/her career?" , "What would you do differently?" ).</li></ul>
-
         <h3 style="margin-top:14px;">📖 Activity 1 — Vocabulary Review</h3>
+        <p>Open each card to review a short technical definition in English before reading.</p>
         <div class="vocab-grid">
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">engine diagnostics</div>
-                <div class="meaning">Repasar definición en clase</div>
+                <div class="meaning">the analysis used to identify vehicle faults and performance issues</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">OBD scanner</div>
-                <div class="meaning">Repasar definición en clase</div>
+                <div class="meaning">a tool that reads digital fault codes from vehicle systems</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">fuel injection</div>
-                <div class="meaning">Repasar definición en clase</div>
+                <div class="meaning">the system that delivers fuel to the engine in a controlled way</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">hybrid system</div>
-                <div class="meaning">Repasar definición en clase</div>
+                <div class="meaning">a vehicle system that combines electric and fuel power</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">torque</div>
-                <div class="meaning">Repasar definición en clase</div>
+                <div class="meaning">the turning force that makes a part rotate</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             
             <div class="vocab-card" onclick="this.classList.toggle('revealed')">
                 <div class="word">alignment</div>
-                <div class="meaning">Repasar definición en clase</div>
+                <div class="meaning">the correct position of wheels or parts so the system works properly</div>
                 <div class="hint">👆 clic para ver</div>
             </div>
             </div>
 
-        <h3 style="margin-top:14px;">📚 Activity 2 — Reading</h3>
-        <div class="reading-box"><p>Daniela started as an apprentice and became an automotive diagnostics technician.</p><p>She specialized in hybrid systems and uses OBD tools to solve complex faults.</p><p>Her English skills improved because she regularly reads software updates and service manuals.</p></div>
-
-        <h3 style="margin-top:14px;">📝 Activity 3 — Comprehension Questions</h3>
-        <div class="task-box">
-    <ol>
-        <li>What is the main job/task described in the text?</li>
-        <li>Which technical tools or systems are mentioned?</li>
-        <li>What sequence of actions appears in the routine?</li>
-        <li>Why is English useful in this professional context?</li>
-        <li>What challenge does the professional face and how is it solved?</li>
-        <li>What skill from this text is relevant for your own future career?</li>
-    </ol>
+        
+    <div class="task-box support-box">
+        <h3>🧠 Activity 2 — Reading support</h3>
+        <p>Use these examples and frames before reading so you can identify task, evidence, and result more easily.</p>
+        <div class="support-grid">
+            <div>
+                <h4>Model ideas</h4>
+                <ul><li>The engine diagnostics appears as evidence of a professional routine.</li><li>The OBD scanner helps the reader understand responsibility and technical decision-making.</li><li>The text links procedure, evidence, and communication rather than isolated vocabulary only.</li></ul>
+            </div>
+            <div>
+                <h4>Frames to reuse</h4>
+                <ul><li>The main responsibility in the text is ...</li><li>A key tool or system is ... because ...</li><li>English is essential when the professional needs to ...</li></ul>
+            </div>
+        </div>
     </div>
+    
 
-        <h3 style="margin-top:14px;">📊 Activity 4 — Task / Tool / Time Table</h3>
+        <h3 style="margin-top:14px;">📚 Activity 3 — Reading</h3>
+        <div class="reading-box">
+            <p class="reading-note">Texto B1: cinco parrafos con contexto profesional, evidencia tecnica y razonamiento aplicado.</p>
+            <p>Daniela started as an apprentice and became an automotive diagnostics technician. The text frames the situation as part of a real professional pathway or technical routine in 4°B — Mecánica Automotriz.</p><p>Before the central action is completed, the reader must interpret terms such as engine diagnostics and OBD scanner in context. These references matter because they signal tools, systems, or evidence that support later decisions.</p><p>She specialized in hybrid systems and uses OBD tools to solve complex faults. Rather than listing actions only, the passage shows how procedure, evidence, and responsibility are connected in professional work.</p><p>A key part of the reading is the way the professional explains results, reports a difficulty, or justifies a choice. This is where technical English moves from isolated vocabulary to professional communication.</p><p>Her English skills improved because she regularly reads software updates and service manuals. The closing idea links the routine to analizar un estudio de caso sobre la trayectoria profesional de un técnico de mecánica automotriz, identificando hitos clave, habilidades requeridas y el rol del inglés en su carrera, showing why English supports accuracy, safety, and career development.</p>
+        </div>
+
+        <h3 style="margin-top:14px;">📝 Activity 4 — Comprehension Questions</h3>
         <div class="task-box">
+            <p>Answer using evidence from the text. Underline the sentence that helps you answer each question.</p>
+            <ol><li>What professional challenge, responsibility, or goal is described in the text?</li><li>Which tools, systems, or documents shape the routine or decision-making process?</li><li>How does the sequence of actions support quality, safety, or efficiency?</li><li>Which evidence from the text shows the importance of technical vocabulary in context?</li><li>Why does English become necessary beyond simple translation in this professional setting?</li><li>What transferable career skill can you infer from the reading and why does it matter?</li></ol>
+        </div>
+
+        <h3 style="margin-top:14px;">📊 Activity 5 — Task / Tool / Evidence Table</h3>
+        <div class="task-box">
+            <p>Transfer information from the reading into the organizer. Keep the wording specific and professional.</p>
             <table style="width:100%; border-collapse: collapse;">
-                <tr><th style="border:1px solid #ddd; padding:8px;">Task</th><th style="border:1px solid #ddd; padding:8px;">Tool/System</th><th style="border:1px solid #ddd; padding:8px;">Time of day</th></tr>
+                <tr><th style="border:1px solid #ddd; padding:8px;">Task or responsibility</th><th style="border:1px solid #ddd; padding:8px;">Tool / system</th><th style="border:1px solid #ddd; padding:8px;">Evidence from the text</th></tr>
                 <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
                 <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
                 <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
             </table>
         </div>
 
-        <h3 style="margin-top:14px;">✅ Activity 5 — True/False Check</h3>
+        <h3 style="margin-top:14px;">✅ Activity 6 — True/False Check</h3>
         
     <div class="quiz-item"><p>1. The text describes professional technical tasks.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button></div></div>
     <div class="quiz-item"><p>2. English is not necessary in technical jobs.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,true)">FALSE</button></div></div>
     <div class="quiz-item"><p>3. The routine includes specific tools and procedures.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button></div></div>
     
 
-        <h3 style="margin-top:14px;">🗣 Activity 6 — Speaking Frames</h3>
+        <h3 style="margin-top:14px;">🗣 Activity 7 — Speaking Frames</h3>
         <div class="task-box">
             <p><strong>Use these frames in pairs:</strong></p>
-            <ul>
-                <li>"Every day, the technician checks ..."</li>
-                <li>"First ..., then ..., finally ..."</li>
-                <li>"The most important skill is ... because ..."</li>
-            </ul>
+            <ul><li>The professional is responsible for ...</li><li>A key part of the routine is ... because ...</li><li>This reading shows that English is necessary when ...</li></ul>
         </div>
     </div>
 
     <div class="card">
         <div class="section-title cierre">Cierre (15 min)</div>
-        <ul><li>Reflexión escrita (3 líneas): "What is the most important lesson from this case study for my own career?"</li><li>Preview: "Next class, we will build your professional CV in English."</li></ul>
+        <ol><li>Summarize the main idea of the text in one complete sentence.</li><li>Choose one technical term and explain why it was important for comprehension.</li><li>State one professional skill from the reading that matters for your own future pathway.</li></ol>
         <h3 style="margin-top:10px;">🎫 Exit Ticket</h3>
-        <input class="ticket-input" placeholder="Write 3 new words from today + meaning" />
-        <input class="ticket-input" placeholder="Reflection: What was the most useful skill in this lesson?" />
+        <input class="ticket-input" placeholder="1) One key word from the reading and its definition in English" />
+        <input class="ticket-input" placeholder="2) One sentence explaining the main professional skill from the text" />
+        <input class="ticket-input" placeholder="3) Reflection: What was the most useful skill in this lesson?" />
         <p class="score" id="totalScore" style="margin-top:8px;">0 / 3 puntos</p>
     </div>
 </div>

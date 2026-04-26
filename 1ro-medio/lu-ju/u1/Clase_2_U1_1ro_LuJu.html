@@ -21,7 +21,6 @@
         .inicio { background: #2e7d32; }
         .desarrollo { background: #1565c0; }
         .cierre { background: #6a1b9a; }
-
         .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 10px; }
         .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }
         .vocab-card .word { font-weight: 700; color: #0d47a1; }
@@ -29,15 +28,17 @@
         .vocab-card.revealed .meaning { display: block; }
         .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
         .vocab-card.revealed .hint { display: none; }
-
         .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }
+        .reading-note { font-size: 0.9em; color: #546e7a; margin-bottom: 10px; }
         .task-box { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }
+        .support-box { background: #f7f9fc; border-color: #dbe4f0; }
+        .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 12px; }
+        .support-grid h4 { color: #0d47a1; margin-bottom: 6px; }
         .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
         .quiz-options { display: flex; gap: 10px; margin-top: 8px; }
         .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; }
         .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
         .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
-
         .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; }
         .score { font-weight: 700; color: #1565c0; }
     </style>
@@ -48,6 +49,7 @@
     <div class="meta">
         <span>📘 OA1 · OA3</span>
         <span>⏱ 90 min</span>
+        <span>📗 A2</span>
         <span>🧭 Guía de estudiante completa</span>
     </div>
 </div>
@@ -57,69 +59,125 @@
 
     <div class="card">
         <div class="section-title inicio">Inicio (15 min)</div>
-        <ul><li>Proyectar imagen de un taller desordenado con diversas herramientas. Preguntar: "What can you see? Name everything you recognize in English."</li><li>Brainstorm colectivo en la pizarra: organizar las respuestas de los estudiantes en una nube de palabras.</li><li>Pregunta motivadora: "A mechanic, an electrician, and an electronics technician walk into a workshop. Which tools does each one need?"</li></ul>
+        <p>Prepare the reading by activating prior knowledge and predicting the professional context of the text.</p>
+        <ol><li>Read the objective and highlight two words that show today's reading focus.</li><li>Review key vocabulary from class 1: hammer, screwdriver, wrench, wire.</li><li>Predict what kind of professional routine, problem, or career situation will appear in the text.</li><li>Share one prediction with a partner before reading.</li></ol>
     </div>
 
     <div class="card">
         <div class="section-title desarrollo">Desarrollo (60 min)</div>
-        <!-- Actividad 1: Presentación de vocabulario técnico -->
-        <h3 style="margin-top:14px;">🛠️ Activity 1 — Vocabulary Presentation</h3>
-        <p>Revisa las tarjetas de vocabulario. Haz clic para ver la palabra y dibuja cada herramienta en tu cuaderno.</p>
+        <h3 style="margin-top:14px;">📖 Activity 1 — Vocabulary Review</h3>
+        <p>Open each card to review a short technical definition in English before reading.</p>
         <div class="vocab-grid">
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">hammer</div><div class="meaning">Martillo</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">screwdriver</div><div class="meaning">Destornillador</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">wrench</div><div class="meaning">Llave inglesa</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">pliers</div><div class="meaning">Alicates</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">drill</div><div class="meaning">Taladro</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">multimeter</div><div class="meaning">Multímetro</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">soldering iron</div><div class="meaning">Cautín</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">measuring tape</div><div class="meaning">Cinta métrica</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">safety goggles</div><div class="meaning">Gafas de seguridad</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">gloves</div><div class="meaning">Guantes</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">helmet</div><div class="meaning">Casco</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">wire cutter</div><div class="meaning">Cortacables</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">welding torch</div><div class="meaning">Soplete de soldadura</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">caliper</div><div class="meaning">Calibrador</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">saw</div><div class="meaning">Sierra</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">sandpaper</div><div class="meaning">Lija</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">level</div><div class="meaning">Nivel</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">clamp</div><div class="meaning">Prensa</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">socket set</div><div class="meaning">Juego de dados</div><div class="hint">👆 clic para ver</div></div>
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')"><div class="word">Allen key</div><div class="meaning">Llave Allen</div><div class="hint">👆 clic para ver</div></div>
-        </div>
-        <div style="margin-top:10px;">
-            <p><strong>Actividad:</strong> Dibuja cada herramienta en tu cuaderno y escribe su nombre en inglés.</p>
-        </div>
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">hammer</div>
+                <div class="meaning">a hand tool used to hit nails or shape material</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">screwdriver</div>
+                <div class="meaning">a tool used to tighten or loosen screws</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">wrench</div>
+                <div class="meaning">a tool used to turn bolts or nuts</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">wire</div>
+                <div class="meaning">a metal conductor that carries electricity</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">circuit</div>
+                <div class="meaning">a complete path that lets electricity move</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">engine</div>
+                <div class="meaning">the machine that produces power in a vehicle</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">battery</div>
+                <div class="meaning">a device that stores electrical energy</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            
+            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
+                <div class="word">tool</div>
+                <div class="meaning">an object used to do a practical or technical job</div>
+                <div class="hint">👆 clic para ver</div>
+            </div>
+            </div>
 
-        <!-- Actividad 2: Lectura guiada -->
-        <h3 style="margin-top:14px;">📚 Activity 2 — Reading: The Right Tool for the Right Job</h3>
-        <div class="reading-box">
-            <p>Lee el siguiente texto y subraya todas las herramientas mencionadas. Luego responde: ¿Qué pasa si usas la herramienta equivocada?</p>
-            <p><em>"Un supervisor explica: En el taller, elegir la herramienta correcta es esencial. Si usas un destornillador en vez de una llave inglesa, puedes dañar el perno. Las gafas de seguridad protegen tus ojos al cortar o soldar. Cada herramienta tiene un propósito específico. Usar la herramienta equivocada puede causar accidentes o malos resultados."</em></p>
-            <input class="ticket-input" placeholder="¿Qué pasa si usas la herramienta equivocada?" />
-        </div>
-
-        <!-- Actividad 3: Categorización grupal -->
-        <h3 style="margin-top:14px;">🗂️ Activity 3 — Group Categorization</h3>
-        <div class="task-box">
-            <p>En grupos, clasifica las 20 herramientas en un diagrama de Venn con las 5 especialidades (Industrial, Automotriz, Electricidad, Gráfica, Electrónica). Discute: "¡Algunas herramientas pertenecen a más de una especialidad!" Pega las tarjetas en un papelógrafo.</p>
-            <ul>
-                <li>Arrastra las tarjetas a cada especialidad según corresponda.</li>
-                <li>Discute con tu grupo y justifica tu clasificación.</li>
-            </ul>
-            <div style="margin-top:10px;">
-                <input class="ticket-input" placeholder="Escribe una herramienta que pertenezca a más de una especialidad" />
+        
+    <div class="task-box support-box">
+        <h3>🧠 Activity 2 — Reading support</h3>
+        <p>Use these examples and frames before reading so you can identify task, evidence, and result more easily.</p>
+        <div class="support-grid">
+            <div>
+                <h4>Model ideas</h4>
+                <ul><li>The text explains when the hammer is used.</li><li>The student identifies the screwdriver before answering the questions.</li><li>The reader follows the sequence first, then the purpose, and finally the result.</li></ul>
+            </div>
+            <div>
+                <h4>Frames to reuse</h4>
+                <ul><li>First, the technician ...</li><li>Then, the professional uses ...</li><li>At the end, the result is ...</li></ul>
             </div>
         </div>
+    </div>
+    
 
+        <h3 style="margin-top:14px;">📚 Activity 3 — Reading</h3>
+        <div class="reading-box">
+            <p class="reading-note">Texto graduado A2: cinco parrafos, secuencia clara y apoyo de vocabulario para comprender la rutina tecnica.</p>
+            <p>Sofía is a first-year technical student. Every day, she learns about tools and safety rules in the workshop. The reading introduces the workplace, the people involved, and the main task in simple language.</p><p>Before the routine continues, the student notices words such as hammer and screwdriver. These words are important because they explain what is used, what is checked, and what should happen next.</p><p>In class, she reads a short text about a mechanic who checks engines, changes oil, and uses different tools. The actions appear in a clear order so the reader can follow the procedure without losing the main idea.</p><p>While reading, the student identifies the purpose of each action, the safety detail, and the result of the task. This helps the class connect vocabulary with real workshop decisions.</p><p>After reading, she identifies key words and explains what each tool is used for. By the end of the text, the reader can explain the routine, justify one decision, and connect the lesson objective with reconocer y categorizar vocabulario técnico básico de herramientas comunes a las cinco especialidades técnico-profesionales.</p>
+        </div>
+
+        <h3 style="margin-top:14px;">📝 Activity 4 — Comprehension Questions</h3>
+        <div class="task-box">
+            <p>Answer using evidence from the text. Underline the sentence that helps you answer each question.</p>
+            <ol><li>What is the main task or routine described in the text?</li><li>Which tool, system, or material appears first in the reading?</li><li>What actions help the reader understand the sequence of the job?</li><li>Which technical words are essential for understanding the text?</li><li>Why is English useful in this professional situation?</li><li>What idea from the text can you use in your own future workshop context?</li></ol>
+        </div>
+
+        <h3 style="margin-top:14px;">📊 Activity 5 — Task / Tool / Evidence Table</h3>
+        <div class="task-box">
+            <p>Transfer information from the reading into the organizer. Keep the wording specific and professional.</p>
+            <table style="width:100%; border-collapse: collapse;">
+                <tr><th style="border:1px solid #ddd; padding:8px;">Task or responsibility</th><th style="border:1px solid #ddd; padding:8px;">Tool / system</th><th style="border:1px solid #ddd; padding:8px;">Evidence from the text</th></tr>
+                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
+                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
+                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
+            </table>
+        </div>
+
+        <h3 style="margin-top:14px;">✅ Activity 6 — True/False Check</h3>
+        
+    <div class="quiz-item"><p>1. The text describes professional technical tasks.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button></div></div>
+    <div class="quiz-item"><p>2. English is not necessary in technical jobs.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,true)">FALSE</button></div></div>
+    <div class="quiz-item"><p>3. The routine includes specific tools and procedures.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button></div></div>
+    
+
+        <h3 style="margin-top:14px;">🗣 Activity 7 — Speaking Frames</h3>
+        <div class="task-box">
+            <p><strong>Use these frames in pairs:</strong></p>
+            <ul><li>Every day, the technician checks ...</li><li>First ..., then ..., finally ...</li><li>The most important skill is ... because ...</li></ul>
+        </div>
     </div>
 
     <div class="card">
         <div class="section-title cierre">Cierre (15 min)</div>
-        <ul><li>Juego: "Guess the tool" — El docente describe una herramienta sin nombrarla ( "It's a small device that measures voltage, current, and resistance" ), los estudiantes adivinan.</li><li>Luego, 3-4 estudiantes voluntarios hacen lo mismo para sus compañeros.</li><li>Ticket de salida: "Write 3 tools you use (or will use) in your specialty."</li></ul>
+        <ol><li>Summarize the main idea of the text in one complete sentence.</li><li>Choose one technical term and explain why it was important for comprehension.</li><li>State one professional skill from the reading that matters for your own future pathway.</li></ol>
         <h3 style="margin-top:10px;">🎫 Exit Ticket</h3>
-        <input class="ticket-input" placeholder="Write 3 new words from today + meaning" />
-        <input class="ticket-input" placeholder="Reflection: What was the most useful skill in this lesson?" />
+        <input class="ticket-input" placeholder="1) One key word from the reading and its definition in English" />
+        <input class="ticket-input" placeholder="2) One sentence explaining the main professional skill from the text" />
+        <input class="ticket-input" placeholder="3) Reflection: What was the most useful skill in this lesson?" />
         <p class="score" id="totalScore" style="margin-top:8px;">0 / 3 puntos</p>
     </div>
 </div>

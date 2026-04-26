@@ -1,381 +1,1569 @@
 {
-  "lastUpdated": "2026-03-18",
+  "lastUpdated": "2026-04-26",
   "classes": {
     "1ro-lu-ju/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_2": {
-      "status": "pending",
-      "title": "Clase 2 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_5": {
-      "status": "pending",
-      "title": "Clase 5 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_6": {
-      "status": "pending",
-      "title": "Clase 6 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_7": {
-      "status": "pending",
-      "title": "Clase 7 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_8": {
-      "status": "pending",
-      "title": "Clase 8 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_9": {
-      "status": "pending",
-      "title": "Clase 9 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_10": {
-      "status": "pending",
-      "title": "Clase 10 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_11": {
-      "status": "pending",
-      "title": "Clase 11 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_12": {
-      "status": "pending",
-      "title": "Clase 12 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_13": {
-      "status": "pending",
-      "title": "Clase 13 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_14": {
-      "status": "pending",
-      "title": "Clase 14 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_15": {
-      "status": "pending",
-      "title": "Clase 15 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_16": {
-      "status": "pending",
-      "title": "Clase 16 — 1° Medio — Inglés General (Lu+Ju)"
-    },
-    "1ro-lu-ju/u1/Clase_17": {
-      "status": "pending",
-      "title": "Clase 17 — 1° Medio — Inglés General (Lu+Ju)"
+      "title": "Clase 1 — Material de clase interactivo"
     },
     "3A-industrial/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — 3°A — Mecánica Industrial"
-    },
-    "3A-industrial/u1/Clase_2": {
-      "status": "pending",
-      "title": "Clase 2 — 3°A — Mecánica Industrial"
-    },
-    "3A-industrial/u1/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — 3° Medio — Mecánica Industrial"
-    },
-    "3A-industrial/u1/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — 3° Medio — Mecánica Industrial"
-    },
-    "3A-industrial/u1/Clase_5": {
-      "status": "pending",
-      "title": "Clase 5 — 3° Medio — Mecánica Industrial"
-    },
-    "3A-industrial/u1/Clase_6": {
-      "status": "pending",
-      "title": "Clase 6 — 3° Medio — Mecánica Industrial"
-    },
-    "3A-industrial/u1/Clase_7": {
-      "status": "pending",
-      "title": "Clase 7 — 3° Medio — Mecánica Industrial"
-    },
-    "3A-industrial/u1/Clase_8": {
-      "status": "pending",
-      "title": "Clase 8 — 3° Medio — Mecánica Industrial"
-    },
-    "3A-industrial/u1/Clase_9": {
-      "status": "pending",
-      "title": "Clase 9 — 3° Medio — Mecánica Industrial"
+      "title": "Clase 1 — Material de clase interactivo"
     },
     "3B-automotriz/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — 3°B — Mecánica Automotriz"
-    },
-    "3B-automotriz/u1/Clase_2": {
-      "status": "pending",
-      "title": "Clase 2 — 3°B — Mecánica Automotriz"
-    },
-    "3B-automotriz/u1/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — 3° Medio — Mecánica Automotriz"
-    },
-    "3B-automotriz/u1/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — 3° Medio — Mecánica Automotriz"
-    },
-    "3B-automotriz/u1/Clase_5": {
-      "status": "pending",
-      "title": "Clase 5 — 3° Medio — Mecánica Automotriz"
-    },
-    "3B-automotriz/u1/Clase_6": {
-      "status": "pending",
-      "title": "Clase 6 — 3° Medio — Mecánica Automotriz"
-    },
-    "3B-automotriz/u1/Clase_7": {
-      "status": "pending",
-      "title": "Clase 7 — 3° Medio — Mecánica Automotriz"
-    },
-    "3B-automotriz/u1/Clase_8": {
-      "status": "pending",
-      "title": "Clase 8 — 3° Medio — Mecánica Automotriz"
-    },
-    "3B-automotriz/u1/Clase_9": {
-      "status": "pending",
-      "title": "Clase 9 — 3° Medio — Mecánica Automotriz"
+      "title": "Clase 1 — Material de clase interactivo"
     },
     "3C-electricidad/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — 3°C — Electricidad"
-    },
-    "3C-electricidad/u1/Clase_2": {
-      "status": "pending",
-      "title": "Clase 2 — 3°C — Electricidad"
-    },
-    "3C-electricidad/u1/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — 3° Medio — Electricidad"
-    },
-    "3C-electricidad/u1/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — 3° Medio — Electricidad"
-    },
-    "3C-electricidad/u1/Clase_5": {
-      "status": "pending",
-      "title": "Clase 5 — 3° Medio — Electricidad"
-    },
-    "3C-electricidad/u1/Clase_6": {
-      "status": "pending",
-      "title": "Clase 6 — 3° Medio — Electricidad"
-    },
-    "3C-electricidad/u1/Clase_7": {
-      "status": "pending",
-      "title": "Clase 7 — 3° Medio — Electricidad"
-    },
-    "3C-electricidad/u1/Clase_8": {
-      "status": "pending",
-      "title": "Clase 8 — 3° Medio — Electricidad"
-    },
-    "3C-electricidad/u1/Clase_9": {
-      "status": "pending",
-      "title": "Clase 9 — 3° Medio — Electricidad"
+      "title": "Clase 1 — Material de clase interactivo"
     },
     "3D-grafica/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — 3°D — Gráfica"
-    },
-    "3D-grafica/u1/Clase_2": {
-      "status": "pending",
-      "title": "Clase 2 — 3°D — Gráfica"
-    },
-    "3D-grafica/u1/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — 3° Medio — Gráfica"
-    },
-    "3D-grafica/u1/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — 3° Medio — Gráfica"
-    },
-    "3D-grafica/u1/Clase_5": {
-      "status": "pending",
-      "title": "Clase 5 — 3° Medio — Gráfica"
-    },
-    "3D-grafica/u1/Clase_6": {
-      "status": "pending",
-      "title": "Clase 6 — 3° Medio — Gráfica"
-    },
-    "3D-grafica/u1/Clase_7": {
-      "status": "pending",
-      "title": "Clase 7 — 3° Medio — Gráfica"
-    },
-    "3D-grafica/u1/Clase_8": {
-      "status": "pending",
-      "title": "Clase 8 — 3° Medio — Gráfica"
-    },
-    "3D-grafica/u1/Clase_9": {
-      "status": "pending",
-      "title": "Clase 9 — 3° Medio — Gráfica"
+      "title": "Clase 1 — Material de clase interactivo"
     },
     "3E-electronica/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — 3°E — Electrónica"
-    },
-    "3E-electronica/u1/Clase_2": {
-      "status": "pending",
-      "title": "Clase 2 — 3°E — Electrónica"
-    },
-    "3E-electronica/u1/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — 3° Medio — Electrónica"
-    },
-    "3E-electronica/u1/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — 3° Medio — Electrónica"
-    },
-    "3E-electronica/u1/Clase_5": {
-      "status": "pending",
-      "title": "Clase 5 — 3° Medio — Electrónica"
-    },
-    "3E-electronica/u1/Clase_6": {
-      "status": "pending",
-      "title": "Clase 6 — 3° Medio — Electrónica"
-    },
-    "3E-electronica/u1/Clase_7": {
-      "status": "pending",
-      "title": "Clase 7 — 3° Medio — Electrónica"
-    },
-    "3E-electronica/u1/Clase_8": {
-      "status": "pending",
-      "title": "Clase 8 — 3° Medio — Electrónica"
-    },
-    "3E-electronica/u1/Clase_9": {
-      "status": "pending",
-      "title": "Clase 9 — 3° Medio — Electrónica"
+      "title": "Clase 1 — Material de clase interactivo"
     },
     "4A-industrial/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — 4°A — Mecánica Industrial"
-    },
-    "4A-industrial/u1/Clase_2": {
-      "status": "pending",
-      "title": "Clase 2 — 4°A — Mecánica Industrial"
-    },
-    "4A-industrial/u1/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — 4° Medio — Mecánica Industrial"
-    },
-    "4A-industrial/u1/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — 4° Medio — Mecánica Industrial"
-    },
-    "4A-industrial/u1/Clase_5": {
-      "status": "pending",
-      "title": "Clase 5 — 4° Medio — Mecánica Industrial"
-    },
-    "4A-industrial/u1/Clase_6": {
-      "status": "pending",
-      "title": "Clase 6 — 4° Medio — Mecánica Industrial"
-    },
-    "4A-industrial/u1/Clase_7": {
-      "status": "pending",
-      "title": "Clase 7 — 4° Medio — Mecánica Industrial"
-    },
-    "4A-industrial/u1/Clase_8": {
-      "status": "pending",
-      "title": "Clase 8 — 4° Medio — Mecánica Industrial"
+      "title": "Clase 1 — Material de clase interactivo"
     },
     "4B-automotriz/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — 4°B — Mecánica Automotriz"
-    },
-    "4B-automotriz/u1/Clase_2": {
-      "status": "pending",
-      "title": "Clase 2 — 4°B — Mecánica Automotriz"
-    },
-    "4B-automotriz/u1/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — 4° Medio — Mecánica Automotriz"
-    },
-    "4B-automotriz/u1/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — 4° Medio — Mecánica Automotriz"
-    },
-    "4B-automotriz/u1/Clase_5": {
-      "status": "pending",
-      "title": "Clase 5 — 4° Medio — Mecánica Automotriz"
-    },
-    "4B-automotriz/u1/Clase_6": {
-      "status": "pending",
-      "title": "Clase 6 — 4° Medio — Mecánica Automotriz"
-    },
-    "4B-automotriz/u1/Clase_7": {
-      "status": "pending",
-      "title": "Clase 7 — 4° Medio — Mecánica Automotriz"
-    },
-    "4B-automotriz/u1/Clase_8": {
-      "status": "pending",
-      "title": "Clase 8 — 4° Medio — Mecánica Automotriz"
+      "title": "Clase 1 — Material de clase interactivo"
     },
     "4C-electricidad/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — 4°C — Electricidad"
-    },
-    "4C-electricidad/u1/Clase_2": {
-      "status": "pending",
-      "title": "Clase 2 — 4°C — Electricidad"
-    },
-    "4C-electricidad/u1/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — 4° Medio — Electricidad"
-    },
-    "4C-electricidad/u1/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — 4° Medio — Electricidad"
-    },
-    "4C-electricidad/u1/Clase_5": {
-      "status": "pending",
-      "title": "Clase 5 — 4° Medio — Electricidad"
-    },
-    "4C-electricidad/u1/Clase_6": {
-      "status": "pending",
-      "title": "Clase 6 — 4° Medio — Electricidad"
-    },
-    "4C-electricidad/u1/Clase_7": {
-      "status": "pending",
-      "title": "Clase 7 — 4° Medio — Electricidad"
-    },
-    "4C-electricidad/u1/Clase_8": {
-      "status": "pending",
-      "title": "Clase 8 — 4° Medio — Electricidad"
+      "title": "Clase 1 — Material de clase interactivo"
     },
     "4E-electronica/u1/Clase_1": {
       "status": "pending",
-      "title": "Clase 1 — 4°E — Electrónica"
+      "title": "Clase 1 — Material de clase interactivo"
+    },
+    "1ro-lu-ju/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprensión lectora y práctica guiada"
+    },
+    "3A-industrial/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprensión lectora y práctica guiada"
+    },
+    "3B-automotriz/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprensión lectora y práctica guiada"
+    },
+    "3C-electricidad/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprensión lectora y práctica guiada"
+    },
+    "3D-grafica/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprensión lectora y práctica guiada"
+    },
+    "3E-electronica/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprensión lectora y práctica guiada"
+    },
+    "4A-industrial/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprensión lectora y práctica guiada"
+    },
+    "4B-automotriz/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprensión lectora y práctica guiada"
+    },
+    "4C-electricidad/u1/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — Comprensión lectora y práctica guiada"
     },
     "4E-electronica/u1/Clase_2": {
       "status": "pending",
-      "title": "Clase 2 — 4°E — Electrónica"
+      "title": "Clase 2 — Comprensión lectora y práctica guiada"
+    },
+    "1ro-lu-ju/u2/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — la estructura de la Passive Voice en Present Simple para describir procesos..."
+    },
+    "1ro-lu-ju/u2/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — la Passive Voice para comprender y describir el proceso de fabricación de una..."
+    },
+    "1ro-lu-ju/u2/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — un estudio de caso sobre diagnóstico de falla automotriz, aplicando estrategias..."
+    },
+    "1ro-lu-ju/u2/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un texto técnico sobre detección de fallas en sistemas eléctricos residenciales,..."
+    },
+    "1ro-lu-ju/u2/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — un texto descriptivo sobre el funcionamiento de componentes electrónicos,..."
+    },
+    "1ro-lu-ju/u2/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — un texto sobre el proceso de impresión offset, aplicando estrategias de lectura..."
+    },
+    "1ro-lu-ju/u2/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y utilizar conectores de contraste y causa-efecto para describir problemas y..."
+    },
+    "1ro-lu-ju/u2/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — un texto sobre automatización industrial y discutir sus implicaciones comparando..."
+    },
+    "1ro-lu-ju/u2/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — fichas técnicas y manuales simplificados en inglés, extrayendo información clave..."
+    },
+    "1ro-lu-ju/u2/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — objetos técnicos en detalle (material, tamaño, función, uso) utilizando Passive..."
+    },
+    "1ro-lu-ju/u2/Clase_11": {
+      "status": "pending",
+      "title": "Clase 11 — oralmente un proceso o mecanismo técnico demostrando uso de Passive Voice,..."
+    },
+    "1ro-lu-ju/u2/Clase_12": {
+      "status": "pending",
+      "title": "Clase 12 — comprensión de textos técnicos descriptivos y de procesos, aplicando estrategias..."
+    },
+    "1ro-lu-ju/u2/Clase_13": {
+      "status": "pending",
+      "title": "Clase 13 — Prueba de comprensión lectora"
+    },
+    "1ro-lu-ju/u3/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — conocimientos previos sobre vocabulario técnico y estructuras gramaticales del..."
+    },
+    "1ro-lu-ju/u3/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — y aplicar cláusulas relativas con who, which y that para describir personas,..."
+    },
+    "1ro-lu-ju/u3/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — cláusulas relativas en la comprensión de un estudio de caso sobre diagnóstico..."
+    },
+    "1ro-lu-ju/u3/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — información específica en un estudio de caso sobre una avería en una fábrica..."
+    },
+    "1ro-lu-ju/u3/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — y utilizar conectores de contraste, propósito y adición ( although, so that,..."
+    },
+    "1ro-lu-ju/u3/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — un estudio de caso sobre un corte de suministro eléctrico (Electricidad),..."
+    },
+    "1ro-lu-ju/u3/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Integrar el uso de cláusulas relativas y conectores en la producción de oraciones..."
+    },
+    "1ro-lu-ju/u3/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — información explícita en un estudio de caso sobre falla de circuito electrónico,..."
+    },
+    "1ro-lu-ju/u3/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — oralmente problemas técnicos y sus soluciones utilizando la estructura..."
+    },
+    "1ro-lu-ju/u3/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Evaluación oral de procedimiento técnico"
+    },
+    "1ro-lu-ju/u3/Clase_11": {
+      "status": "pending",
+      "title": "Clase 11 — Evaluación oral de procedimiento técnico"
+    },
+    "1ro-lu-ju/u3/Clase_12": {
+      "status": "pending",
+      "title": "Clase 12 — Evaluación oral de procedimiento técnico"
+    },
+    "1ro-lu-ju/u3/Clase_13": {
+      "status": "pending",
+      "title": "Clase 13 — información central en un video de troubleshooting técnico en inglés,..."
+    },
+    "1ro-lu-ju/u3/Clase_14": {
+      "status": "pending",
+      "title": "Clase 14 — un estudio de caso integrado que combina elementos de múltiples especialidades,..."
+    },
+    "1ro-lu-ju/u3/Clase_15": {
+      "status": "pending",
+      "title": "Clase 15 — diálogos orales estructurados simulando situaciones reales de diagnóstico técnico..."
+    },
+    "1ro-lu-ju/u3/Clase_16": {
+      "status": "pending",
+      "title": "Clase 16 — información de un estudio de caso en un párrafo escrito siguiendo la estructura..."
+    },
+    "1ro-lu-ju/u3/Clase_17": {
+      "status": "pending",
+      "title": "Clase 17 — estrategias de lectura (skimming, scanning, inferencia) en un estudio de caso más..."
+    },
+    "1ro-lu-ju/u3/Clase_18": {
+      "status": "pending",
+      "title": "Clase 18 — Consolidar conocimientos de vocabulario, gramática y estrategias de lectura de la..."
+    },
+    "1ro-lu-ju/u3/Clase_19": {
+      "status": "pending",
+      "title": "Clase 19 — Prueba de comprensión lectora"
+    },
+    "1ro-lu-ju/u4/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — Reconocer y categorizar vocabulario de seguridad laboral en inglés, identificando..."
+    },
+    "1ro-lu-ju/u4/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un protocolo de seguridad adaptado en inglés, identificando instrucciones,..."
+    },
+    "1ro-lu-ju/u4/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — y formular Tag Questions para confirmar información sobre normas de seguridad y..."
+    },
+    "1ro-lu-ju/u4/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un reporte de accidente laboral en inglés, practicando Tag Questions para..."
+    },
+    "1ro-lu-ju/u4/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Presentar oralmente las reglas de seguridad específicas de cada especialidad,..."
+    },
+    "1ro-lu-ju/u4/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — información sobre innovaciones tecnológicas en Mecánica Automotriz, identificando..."
+    },
+    "1ro-lu-ju/u4/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — información sobre innovaciones en Mecánica Industrial, identificando vocabulario..."
+    },
+    "1ro-lu-ju/u4/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — información sobre innovaciones en Electricidad y Electrónica, identificando..."
+    },
+    "1ro-lu-ju/u4/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — información sobre innovaciones en la industria Gráfica, analizando tendencias de..."
+    },
+    "1ro-lu-ju/u4/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Evaluación oral de procedimiento técnico"
+    },
+    "1ro-lu-ju/u4/Clase_11": {
+      "status": "pending",
+      "title": "Clase 11 — Consolidar todas las estructuras gramaticales del año (Present Perfect, Used to,..."
+    },
+    "1ro-lu-ju/u4/Clase_12": {
+      "status": "pending",
+      "title": "Clase 12 — un artículo sobre el futuro del trabajo técnico-profesional, evaluando tendencias..."
+    },
+    "1ro-lu-ju/u4/Clase_13": {
+      "status": "pending",
+      "title": "Clase 13 — información audiovisual sobre innovación en especialidades TP, extrayendo datos..."
+    },
+    "1ro-lu-ju/u4/Clase_14": {
+      "status": "pending",
+      "title": "Clase 14 — Planificar y estructurar el contenido del proyecto final \"My Career Path\",..."
+    },
+    "1ro-lu-ju/u4/Clase_15": {
+      "status": "pending",
+      "title": "Clase 15 — Desarrollar y practicar la presentación oral del proyecto final \"My Career Path\"..."
+    },
+    "1ro-lu-ju/u4/Clase_16": {
+      "status": "pending",
+      "title": "Clase 16 — Ensayar la presentación final con último feedback formativo y preparar material..."
+    },
+    "1ro-lu-ju/u4/Clase_17": {
+      "status": "pending",
+      "title": "Clase 17 — Evaluación oral de procedimiento técnico"
+    },
+    "1ro-lu-ju/u4/Clase_18": {
+      "status": "pending",
+      "title": "Clase 18 — Completar las presentaciones del proyecto final \"My Career Path\" y reflexionar..."
+    },
+    "1ro-lu-ju/u4/Clase_19": {
+      "status": "pending",
+      "title": "Clase 19 — comprensión lectora, dominio gramatical y conocimiento de vocabulario técnico de..."
+    },
+    "1ro-lu-ju/u4/Clase_20": {
+      "status": "pending",
+      "title": "Clase 20 — Prueba de comprensión lectora"
+    },
+    "3A-industrial/u2/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — temas globales actuales relacionados con la especialidad de Mecánica Industrial a..."
+    },
+    "3A-industrial/u2/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un estudio de caso sobre un desafío técnico global relacionado con Mecánica..."
+    },
+    "3A-industrial/u2/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Construir argumentos a favor y en contra sobre un tema técnico-ambiental..."
+    },
+    "3A-industrial/u2/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — estrategias de lectura (skimming, scanning, inferencia) en textos técnicos sobre..."
+    },
+    "3A-industrial/u2/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — comprensión de información central y específica en un texto técnico en inglés..."
+    },
+    "3A-industrial/u2/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — los resultados de la prueba de lectura para consolidar estrategias efectivas y..."
+    },
+    "3A-industrial/u2/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Prueba de comprensión lectora"
+    },
+    "3A-industrial/u3/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — los elementos clave de la comunicación técnica profesional en inglés dentro del..."
+    },
+    "3A-industrial/u3/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — y secuenciar instrucciones técnicas escritas en inglés para procedimientos de..."
+    },
+    "3A-industrial/u3/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — información específica de un video en inglés sobre comunicación profesional en..."
+    },
+    "3A-industrial/u3/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un reporte técnico simplificado en inglés describiendo un problema y su solución..."
+    },
+    "3A-industrial/u3/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Evaluación oral de procedimiento técnico"
+    },
+    "3A-industrial/u3/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — las consecuencias de una falla de comunicación técnica en un caso real de..."
+    },
+    "3A-industrial/u3/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y ensayar una explicación oral en inglés de un procedimiento técnico de Mecánica..."
+    },
+    "3A-industrial/u3/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Evaluación oral de procedimiento técnico"
+    },
+    "3A-industrial/u3/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — el vocabulario y las estructuras de comunicación técnica profesional en inglés..."
+    },
+    "3A-industrial/u3/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Prueba de comprensión lectora"
+    },
+    "3A-industrial/u4/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — tendencias tecnológicas actuales relacionadas con Mecánica Industrial a partir de..."
+    },
+    "3A-industrial/u4/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un video en inglés sobre el futuro de Mecánica Industrial y expresar una postura..."
+    },
+    "3A-industrial/u4/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — un estudio de caso sobre innovación en Mecánica Industrial comparando..."
+    },
+    "3A-industrial/u4/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Construir y defender argumentos en inglés a favor y en contra de una tendencia..."
+    },
+    "3A-industrial/u4/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — estrategias de lectura consolidadas en textos sobre innovación y tendencias en..."
+    },
+    "3A-industrial/u4/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Evaluación oral de procedimiento técnico"
+    },
+    "3A-industrial/u4/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Planificar una presentación oral sobre una innovación tecnológica en Mecánica..."
+    },
+    "3A-industrial/u4/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Ensayar y perfeccionar la presentación oral del proyecto final sobre innovación..."
+    },
+    "3A-industrial/u4/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Evaluación oral de procedimiento técnico"
+    },
+    "3A-industrial/u4/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — y reflexionar sobre los aprendizajes del año en inglés técnico de Mecánica..."
+    },
+    "3A-industrial/u4/Clase_11": {
+      "status": "pending",
+      "title": "Clase 11 — Consolidar aprendizajes de la unidad mediante actividades integradas de lectura..."
+    },
+    "3A-industrial/u4/Clase_12": {
+      "status": "pending",
+      "title": "Clase 12 — Prueba de comprensión lectora"
+    },
+    "3B-automotriz/u2/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — temas globales actuales relacionados con la especialidad de Mecánica Automotriz a..."
+    },
+    "3B-automotriz/u2/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un estudio de caso sobre un desafío técnico global relacionado con Mecánica..."
+    },
+    "3B-automotriz/u2/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Construir argumentos a favor y en contra sobre un tema técnico-ambiental..."
+    },
+    "3B-automotriz/u2/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — estrategias de lectura (skimming, scanning, inferencia) en textos técnicos sobre..."
+    },
+    "3B-automotriz/u2/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — comprensión de información central y específica en un texto técnico en inglés..."
+    },
+    "3B-automotriz/u2/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — los resultados de la prueba de lectura para consolidar estrategias efectivas y..."
+    },
+    "3B-automotriz/u2/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Prueba de comprensión lectora"
+    },
+    "3B-automotriz/u3/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — los elementos clave de la comunicación técnica profesional en inglés dentro del..."
+    },
+    "3B-automotriz/u3/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — y secuenciar instrucciones técnicas escritas en inglés para procedimientos de..."
+    },
+    "3B-automotriz/u3/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — información específica de un video en inglés sobre comunicación profesional en..."
+    },
+    "3B-automotriz/u3/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un reporte técnico simplificado en inglés describiendo un problema y su solución..."
+    },
+    "3B-automotriz/u3/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Evaluación oral de procedimiento técnico"
+    },
+    "3B-automotriz/u3/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — las consecuencias de una falla de comunicación técnica en un caso real de..."
+    },
+    "3B-automotriz/u3/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y ensayar una explicación oral en inglés de un procedimiento técnico de Mecánica..."
+    },
+    "3B-automotriz/u3/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Evaluación oral de procedimiento técnico"
+    },
+    "3B-automotriz/u3/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — el vocabulario y las estructuras de comunicación técnica profesional en inglés..."
+    },
+    "3B-automotriz/u3/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Prueba de comprensión lectora"
+    },
+    "3B-automotriz/u4/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — tendencias tecnológicas actuales relacionadas con Mecánica Automotriz a partir de..."
+    },
+    "3B-automotriz/u4/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un video en inglés sobre el futuro de Mecánica Automotriz y expresar una postura..."
+    },
+    "3B-automotriz/u4/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — un estudio de caso sobre innovación en Mecánica Automotriz comparando..."
+    },
+    "3B-automotriz/u4/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Construir y defender argumentos en inglés a favor y en contra de una tendencia..."
+    },
+    "3B-automotriz/u4/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — estrategias de lectura consolidadas en textos sobre innovación y tendencias en..."
+    },
+    "3B-automotriz/u4/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Evaluación oral de procedimiento técnico"
+    },
+    "3B-automotriz/u4/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Planificar una presentación oral sobre una innovación tecnológica en Mecánica..."
+    },
+    "3B-automotriz/u4/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Ensayar y perfeccionar la presentación oral del proyecto final sobre innovación..."
+    },
+    "3B-automotriz/u4/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Evaluación oral de procedimiento técnico"
+    },
+    "3B-automotriz/u4/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — y reflexionar sobre los aprendizajes del año en inglés técnico de Mecánica..."
+    },
+    "3B-automotriz/u4/Clase_11": {
+      "status": "pending",
+      "title": "Clase 11 — Consolidar aprendizajes de la unidad mediante actividades integradas de lectura..."
+    },
+    "3B-automotriz/u4/Clase_12": {
+      "status": "pending",
+      "title": "Clase 12 — Prueba de comprensión lectora"
+    },
+    "3C-electricidad/u2/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — temas globales actuales relacionados con la especialidad de Electricidad a partir..."
+    },
+    "3C-electricidad/u2/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un estudio de caso sobre un desafío técnico global relacionado con Electricidad,..."
+    },
+    "3C-electricidad/u2/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Construir argumentos a favor y en contra sobre un tema técnico-ambiental..."
+    },
+    "3C-electricidad/u2/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — estrategias de lectura (skimming, scanning, inferencia) en textos técnicos sobre..."
+    },
+    "3C-electricidad/u2/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — comprensión de información central y específica en un texto técnico en inglés..."
+    },
+    "3C-electricidad/u2/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — los resultados de la prueba de lectura para consolidar estrategias efectivas y..."
+    },
+    "3C-electricidad/u2/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Prueba de comprensión lectora"
+    },
+    "3C-electricidad/u3/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — los elementos clave de la comunicación técnica profesional en inglés dentro del..."
+    },
+    "3C-electricidad/u3/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — y secuenciar instrucciones técnicas escritas en inglés para procedimientos de..."
+    },
+    "3C-electricidad/u3/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — información específica de un video en inglés sobre comunicación profesional en..."
+    },
+    "3C-electricidad/u3/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un reporte técnico simplificado en inglés describiendo un problema y su solución..."
+    },
+    "3C-electricidad/u3/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Evaluación oral de procedimiento técnico"
+    },
+    "3C-electricidad/u3/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — las consecuencias de una falla de comunicación técnica en un caso real de..."
+    },
+    "3C-electricidad/u3/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y ensayar una explicación oral en inglés de un procedimiento técnico de..."
+    },
+    "3C-electricidad/u3/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Evaluación oral de procedimiento técnico"
+    },
+    "3C-electricidad/u3/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — el vocabulario y las estructuras de comunicación técnica profesional en inglés..."
+    },
+    "3C-electricidad/u3/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Prueba de comprensión lectora"
+    },
+    "3C-electricidad/u4/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — tendencias tecnológicas actuales relacionadas con Electricidad a partir de un..."
+    },
+    "3C-electricidad/u4/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un video en inglés sobre el futuro de Electricidad y expresar una postura crítica..."
+    },
+    "3C-electricidad/u4/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — un estudio de caso sobre innovación en Electricidad comparando perspectivas..."
+    },
+    "3C-electricidad/u4/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Construir y defender argumentos en inglés a favor y en contra de una tendencia..."
+    },
+    "3C-electricidad/u4/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — estrategias de lectura consolidadas en textos sobre innovación y tendencias en..."
+    },
+    "3C-electricidad/u4/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Evaluación oral de procedimiento técnico"
+    },
+    "3C-electricidad/u4/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Planificar una presentación oral sobre una innovación tecnológica en..."
+    },
+    "3C-electricidad/u4/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Ensayar y perfeccionar la presentación oral del proyecto final sobre innovación..."
+    },
+    "3C-electricidad/u4/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Evaluación oral de procedimiento técnico"
+    },
+    "3C-electricidad/u4/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — y reflexionar sobre los aprendizajes del año en inglés técnico de Electricidad,..."
+    },
+    "3C-electricidad/u4/Clase_11": {
+      "status": "pending",
+      "title": "Clase 11 — Consolidar aprendizajes de la unidad mediante actividades integradas de lectura..."
+    },
+    "3C-electricidad/u4/Clase_12": {
+      "status": "pending",
+      "title": "Clase 12 — Prueba de comprensión lectora"
+    },
+    "3D-grafica/u2/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — temas globales actuales relacionados con la especialidad de Gráfica a partir de..."
+    },
+    "3D-grafica/u2/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un estudio de caso sobre un desafío técnico global relacionado con Gráfica,..."
+    },
+    "3D-grafica/u2/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Construir argumentos a favor y en contra sobre un tema técnico-ambiental..."
+    },
+    "3D-grafica/u2/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — estrategias de lectura (skimming, scanning, inferencia) en textos técnicos sobre..."
+    },
+    "3D-grafica/u2/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — comprensión de información central y específica en un texto técnico en inglés..."
+    },
+    "3D-grafica/u2/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — los resultados de la prueba de lectura para consolidar estrategias efectivas y..."
+    },
+    "3D-grafica/u2/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Prueba de comprensión lectora"
+    },
+    "3D-grafica/u3/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — los elementos clave de la comunicación técnica profesional en inglés dentro del..."
+    },
+    "3D-grafica/u3/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — y secuenciar instrucciones técnicas escritas en inglés para procedimientos de..."
+    },
+    "3D-grafica/u3/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — información específica de un video en inglés sobre comunicación profesional en..."
+    },
+    "3D-grafica/u3/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un reporte técnico simplificado en inglés describiendo un problema y su solución..."
+    },
+    "3D-grafica/u3/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Evaluación oral de procedimiento técnico"
+    },
+    "3D-grafica/u3/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — las consecuencias de una falla de comunicación técnica en un caso real de Gráfica..."
+    },
+    "3D-grafica/u3/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y ensayar una explicación oral en inglés de un procedimiento técnico de Gráfica..."
+    },
+    "3D-grafica/u3/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Evaluación oral de procedimiento técnico"
+    },
+    "3D-grafica/u3/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — el vocabulario y las estructuras de comunicación técnica profesional en inglés..."
+    },
+    "3D-grafica/u3/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Prueba de comprensión lectora"
+    },
+    "3D-grafica/u4/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — tendencias tecnológicas actuales relacionadas con Gráfica a partir de un texto..."
+    },
+    "3D-grafica/u4/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un video en inglés sobre el futuro de Gráfica y expresar una postura crítica..."
+    },
+    "3D-grafica/u4/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — un estudio de caso sobre innovación en Gráfica comparando perspectivas diferentes..."
+    },
+    "3D-grafica/u4/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Construir y defender argumentos en inglés a favor y en contra de una tendencia..."
+    },
+    "3D-grafica/u4/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — estrategias de lectura consolidadas en textos sobre innovación y tendencias en..."
+    },
+    "3D-grafica/u4/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Evaluación oral de procedimiento técnico"
+    },
+    "3D-grafica/u4/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Planificar una presentación oral sobre una innovación tecnológica en Gráfica,..."
+    },
+    "3D-grafica/u4/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Ensayar y perfeccionar la presentación oral del proyecto final sobre innovación..."
+    },
+    "3D-grafica/u4/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Evaluación oral de procedimiento técnico"
+    },
+    "3D-grafica/u4/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — y reflexionar sobre los aprendizajes del año en inglés técnico de Gráfica,..."
+    },
+    "3D-grafica/u4/Clase_11": {
+      "status": "pending",
+      "title": "Clase 11 — Consolidar aprendizajes de la unidad mediante actividades integradas de lectura..."
+    },
+    "3D-grafica/u4/Clase_12": {
+      "status": "pending",
+      "title": "Clase 12 — Prueba de comprensión lectora"
+    },
+    "3E-electronica/u2/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — temas globales actuales relacionados con la especialidad de Electrónica a partir..."
+    },
+    "3E-electronica/u2/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un estudio de caso sobre un desafío técnico global relacionado con Electrónica,..."
+    },
+    "3E-electronica/u2/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Construir argumentos a favor y en contra sobre un tema técnico-ambiental..."
+    },
+    "3E-electronica/u2/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — estrategias de lectura (skimming, scanning, inferencia) en textos técnicos sobre..."
+    },
+    "3E-electronica/u2/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — comprensión de información central y específica en un texto técnico en inglés..."
+    },
+    "3E-electronica/u2/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — los resultados de la prueba de lectura para consolidar estrategias efectivas y..."
+    },
+    "3E-electronica/u2/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Prueba de comprensión lectora"
+    },
+    "3E-electronica/u3/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — los elementos clave de la comunicación técnica profesional en inglés dentro del..."
+    },
+    "3E-electronica/u3/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — y secuenciar instrucciones técnicas escritas en inglés para procedimientos de..."
+    },
+    "3E-electronica/u3/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — información específica de un video en inglés sobre comunicación profesional en..."
+    },
+    "3E-electronica/u3/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un reporte técnico simplificado en inglés describiendo un problema y su solución..."
+    },
+    "3E-electronica/u3/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Evaluación oral de procedimiento técnico"
+    },
+    "3E-electronica/u3/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — las consecuencias de una falla de comunicación técnica en un caso real de..."
+    },
+    "3E-electronica/u3/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y ensayar una explicación oral en inglés de un procedimiento técnico de..."
+    },
+    "3E-electronica/u3/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Evaluación oral de procedimiento técnico"
+    },
+    "3E-electronica/u3/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — el vocabulario y las estructuras de comunicación técnica profesional en inglés..."
+    },
+    "3E-electronica/u3/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Prueba de comprensión lectora"
+    },
+    "3E-electronica/u4/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — tendencias tecnológicas actuales relacionadas con Electrónica a partir de un..."
+    },
+    "3E-electronica/u4/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un video en inglés sobre el futuro de Electrónica y expresar una postura crítica..."
+    },
+    "3E-electronica/u4/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — un estudio de caso sobre innovación en Electrónica comparando perspectivas..."
+    },
+    "3E-electronica/u4/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Construir y defender argumentos en inglés a favor y en contra de una tendencia..."
+    },
+    "3E-electronica/u4/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — estrategias de lectura consolidadas en textos sobre innovación y tendencias en..."
+    },
+    "3E-electronica/u4/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Evaluación oral de procedimiento técnico"
+    },
+    "3E-electronica/u4/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Planificar una presentación oral sobre una innovación tecnológica en Electrónica,..."
+    },
+    "3E-electronica/u4/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Ensayar y perfeccionar la presentación oral del proyecto final sobre innovación..."
+    },
+    "3E-electronica/u4/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Evaluación oral de procedimiento técnico"
+    },
+    "3E-electronica/u4/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — y reflexionar sobre los aprendizajes del año en inglés técnico de Electrónica,..."
+    },
+    "3E-electronica/u4/Clase_11": {
+      "status": "pending",
+      "title": "Clase 11 — Consolidar aprendizajes de la unidad mediante actividades integradas de lectura..."
+    },
+    "3E-electronica/u4/Clase_12": {
+      "status": "pending",
+      "title": "Clase 12 — Prueba de comprensión lectora"
+    },
+    "4A-industrial/u2/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — críticamente un estudio de caso sobre tendencias globales que afectan al campo de..."
+    },
+    "4A-industrial/u2/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un problema laboral presentado en un estudio de caso de Mecánica Industrial,..."
+    },
+    "4A-industrial/u2/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Construir argumentos fundamentados en inglés para defender una postura sobre un..."
+    },
+    "4A-industrial/u2/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Defender una postura personal de manera crítica y fundamentada en un debate..."
+    },
+    "4A-industrial/u2/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — y analizar un texto técnico en inglés sobre mecánica industrial, respondiendo..."
+    },
+    "4A-industrial/u2/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Integrar habilidades de comprensión lectora, expresión oral y pensamiento crítico..."
+    },
+    "4A-industrial/u2/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Prueba de comprensión lectora"
+    },
+    "4A-industrial/u3/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — información técnica específica en un documento profesional en inglés del área de..."
+    },
+    "4A-industrial/u3/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — instrucciones técnicas claras en inglés para un procedimiento específico de..."
+    },
+    "4A-industrial/u3/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — y evaluar un procedimiento técnico presentado en un video en inglés sobre..."
+    },
+    "4A-industrial/u3/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Evaluación oral de procedimiento técnico"
+    },
+    "4A-industrial/u3/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — información técnica específica en un manual de equipo en inglés usado en Mecánica..."
+    },
+    "4A-industrial/u3/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — críticamente un caso de falla de comunicación en inglés en el contexto laboral de..."
+    },
+    "4A-industrial/u3/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Evaluación oral de procedimiento técnico"
+    },
+    "4A-industrial/u3/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Prueba de comprensión lectora"
+    },
+    "4A-industrial/u4/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — y comprender las principales tendencias de innovación en Mecánica Industrial a..."
+    },
+    "4A-industrial/u4/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un video en inglés sobre innovación en Mecánica Industrial y construir una..."
+    },
+    "4A-industrial/u4/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Comparar y evaluar críticamente dos modelos profesionales dentro de Mecánica..."
+    },
+    "4A-industrial/u4/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Defender una postura personal fundamentada sobre el futuro de Mecánica Industrial..."
+    },
+    "4A-industrial/u4/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Evaluación oral de procedimiento técnico"
+    },
+    "4A-industrial/u4/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Finalizar la preparación del proyecto final de Mecánica Industrial, incorporando..."
+    },
+    "4A-industrial/u4/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Evaluación oral de procedimiento técnico"
+    },
+    "4A-industrial/u4/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Sintetizar, reflexionar y evaluar el progreso personal en inglés técnico a lo..."
+    },
+    "4A-industrial/u4/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Consolidar aprendizajes de la unidad mediante actividades integradas de lectura..."
+    },
+    "4A-industrial/u4/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Prueba de comprensión lectora"
+    },
+    "4B-automotriz/u2/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — críticamente un estudio de caso sobre tendencias globales que afectan al campo de..."
+    },
+    "4B-automotriz/u2/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un problema laboral presentado en un estudio de caso de Mecánica Automotriz,..."
+    },
+    "4B-automotriz/u2/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Construir argumentos fundamentados en inglés para defender una postura sobre un..."
+    },
+    "4B-automotriz/u2/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Defender una postura personal de manera crítica y fundamentada en un debate..."
+    },
+    "4B-automotriz/u2/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — y analizar un texto técnico en inglés sobre mecánica automotriz, respondiendo..."
+    },
+    "4B-automotriz/u2/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Integrar habilidades de comprensión lectora, expresión oral y pensamiento crítico..."
+    },
+    "4B-automotriz/u2/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Prueba de comprensión lectora"
+    },
+    "4B-automotriz/u3/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — información técnica específica en un documento profesional en inglés del área de..."
+    },
+    "4B-automotriz/u3/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — instrucciones técnicas claras en inglés para un procedimiento específico de..."
+    },
+    "4B-automotriz/u3/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — y evaluar un procedimiento técnico presentado en un video en inglés sobre..."
+    },
+    "4B-automotriz/u3/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Evaluación oral de procedimiento técnico"
+    },
+    "4B-automotriz/u3/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — información técnica específica en un manual de equipo en inglés usado en Mecánica..."
+    },
+    "4B-automotriz/u3/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — críticamente un caso de falla de comunicación en inglés en el contexto laboral de..."
+    },
+    "4B-automotriz/u3/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Evaluación oral de procedimiento técnico"
+    },
+    "4B-automotriz/u3/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Prueba de comprensión lectora"
+    },
+    "4B-automotriz/u4/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — y comprender las principales tendencias de innovación en Mecánica Automotriz a..."
+    },
+    "4B-automotriz/u4/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un video en inglés sobre innovación en Mecánica Automotriz y construir una..."
+    },
+    "4B-automotriz/u4/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Comparar y evaluar críticamente dos modelos profesionales dentro de Mecánica..."
+    },
+    "4B-automotriz/u4/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Defender una postura personal fundamentada sobre el futuro de Mecánica Automotriz..."
+    },
+    "4B-automotriz/u4/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Evaluación oral de procedimiento técnico"
+    },
+    "4B-automotriz/u4/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Finalizar la preparación del proyecto final de Mecánica Automotriz, incorporando..."
+    },
+    "4B-automotriz/u4/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Evaluación oral de procedimiento técnico"
+    },
+    "4B-automotriz/u4/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Sintetizar, reflexionar y evaluar el progreso personal en inglés técnico a lo..."
+    },
+    "4B-automotriz/u4/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Consolidar aprendizajes de la unidad mediante actividades integradas de lectura..."
+    },
+    "4B-automotriz/u4/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Prueba de comprensión lectora"
+    },
+    "4C-electricidad/u2/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — críticamente un estudio de caso sobre tendencias globales que afectan al campo de..."
+    },
+    "4C-electricidad/u2/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un problema laboral presentado en un estudio de caso de Electricidad, proponiendo..."
+    },
+    "4C-electricidad/u2/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Construir argumentos fundamentados en inglés para defender una postura sobre un..."
+    },
+    "4C-electricidad/u2/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Defender una postura personal de manera crítica y fundamentada en un debate..."
+    },
+    "4C-electricidad/u2/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — y analizar un texto técnico en inglés sobre electricidad, respondiendo preguntas..."
+    },
+    "4C-electricidad/u2/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Integrar habilidades de comprensión lectora, expresión oral y pensamiento crítico..."
+    },
+    "4C-electricidad/u2/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Prueba de comprensión lectora"
+    },
+    "4C-electricidad/u3/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — información técnica específica en un documento profesional en inglés del área de..."
+    },
+    "4C-electricidad/u3/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — instrucciones técnicas claras en inglés para un procedimiento específico de..."
+    },
+    "4C-electricidad/u3/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — y evaluar un procedimiento técnico presentado en un video en inglés sobre..."
+    },
+    "4C-electricidad/u3/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Evaluación oral de procedimiento técnico"
+    },
+    "4C-electricidad/u3/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — información técnica específica en un manual de equipo en inglés usado en..."
+    },
+    "4C-electricidad/u3/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — críticamente un caso de falla de comunicación en inglés en el contexto laboral de..."
+    },
+    "4C-electricidad/u3/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Evaluación oral de procedimiento técnico"
+    },
+    "4C-electricidad/u3/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Prueba de comprensión lectora"
+    },
+    "4C-electricidad/u4/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — y comprender las principales tendencias de innovación en Electricidad a partir de..."
+    },
+    "4C-electricidad/u4/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un video en inglés sobre innovación en Electricidad y construir una postura..."
+    },
+    "4C-electricidad/u4/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Comparar y evaluar críticamente dos modelos profesionales dentro de Electricidad,..."
+    },
+    "4C-electricidad/u4/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Defender una postura personal fundamentada sobre el futuro de Electricidad en un..."
+    },
+    "4C-electricidad/u4/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Evaluación oral de procedimiento técnico"
+    },
+    "4C-electricidad/u4/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Finalizar la preparación del proyecto final de Electricidad, incorporando..."
+    },
+    "4C-electricidad/u4/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Evaluación oral de procedimiento técnico"
+    },
+    "4C-electricidad/u4/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Sintetizar, reflexionar y evaluar el progreso personal en inglés técnico a lo..."
+    },
+    "4C-electricidad/u4/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Consolidar aprendizajes de la unidad mediante actividades integradas de lectura..."
+    },
+    "4C-electricidad/u4/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Prueba de comprensión lectora"
+    },
+    "4E-electronica/u2/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — críticamente un estudio de caso sobre tendencias globales que afectan al campo de..."
+    },
+    "4E-electronica/u2/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un problema laboral presentado en un estudio de caso de Electrónica, proponiendo..."
+    },
+    "4E-electronica/u2/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Construir argumentos fundamentados en inglés para defender una postura sobre un..."
+    },
+    "4E-electronica/u2/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Defender una postura personal de manera crítica y fundamentada en un debate..."
+    },
+    "4E-electronica/u2/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — y analizar un texto técnico en inglés sobre electrónica, respondiendo preguntas..."
+    },
+    "4E-electronica/u2/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Integrar habilidades de comprensión lectora, expresión oral y pensamiento crítico..."
+    },
+    "4E-electronica/u2/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Prueba de comprensión lectora"
+    },
+    "4E-electronica/u3/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — información técnica específica en un documento profesional en inglés del área de..."
+    },
+    "4E-electronica/u3/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — instrucciones técnicas claras en inglés para un procedimiento específico de..."
+    },
+    "4E-electronica/u3/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — y evaluar un procedimiento técnico presentado en un video en inglés sobre..."
+    },
+    "4E-electronica/u3/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Evaluación oral de procedimiento técnico"
+    },
+    "4E-electronica/u3/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — información técnica específica en un manual de equipo en inglés usado en..."
+    },
+    "4E-electronica/u3/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — críticamente un caso de falla de comunicación en inglés en el contexto laboral de..."
+    },
+    "4E-electronica/u3/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Evaluación oral de procedimiento técnico"
+    },
+    "4E-electronica/u3/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Prueba de comprensión lectora"
+    },
+    "4E-electronica/u4/Clase_1": {
+      "status": "pending",
+      "title": "Clase 1 — y comprender las principales tendencias de innovación en Electrónica a partir de..."
+    },
+    "4E-electronica/u4/Clase_2": {
+      "status": "pending",
+      "title": "Clase 2 — un video en inglés sobre innovación en Electrónica y construir una postura..."
+    },
+    "4E-electronica/u4/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — Comparar y evaluar críticamente dos modelos profesionales dentro de Electrónica,..."
+    },
+    "4E-electronica/u4/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — Defender una postura personal fundamentada sobre el futuro de Electrónica en un..."
+    },
+    "4E-electronica/u4/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — Evaluación oral de procedimiento técnico"
+    },
+    "4E-electronica/u4/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — Finalizar la preparación del proyecto final de Electrónica, incorporando..."
+    },
+    "4E-electronica/u4/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — Evaluación oral de procedimiento técnico"
+    },
+    "4E-electronica/u4/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — Sintetizar, reflexionar y evaluar el progreso personal en inglés técnico a lo..."
+    },
+    "4E-electronica/u4/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — Consolidar aprendizajes de la unidad mediante actividades integradas de lectura..."
+    },
+    "4E-electronica/u4/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Prueba de comprensión lectora"
+    },
+    "1ro-lu-ju/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — información explícita en un texto descriptivo sobre un taller automotriz,..."
+    },
+    "1ro-lu-ju/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — información específica en un estudio de caso sobre seguridad en mecánica..."
+    },
+    "1ro-lu-ju/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — estrategias de lectura (pre-lectura, lectura y post-lectura) para comprender un..."
+    },
+    "1ro-lu-ju/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — un texto instructivo sobre el armado de un circuito electrónico simple,..."
+    },
+    "1ro-lu-ju/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — un texto descriptivo sobre los procesos de la industria gráfica e identificar la..."
+    },
+    "1ro-lu-ju/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — y aplicar el vocabulario técnico de las cinco especialidades en actividades..."
+    },
+    "1ro-lu-ju/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — la estructura y el uso del Present Perfect Simple para describir logros y..."
+    },
+    "1ro-lu-ju/u1/Clase_10": {
+      "status": "pending",
+      "title": "Clase 10 — Diferenciar el uso de \"since\" y \"for\" con Present Perfect para describir la..."
+    },
+    "1ro-lu-ju/u1/Clase_11": {
+      "status": "pending",
+      "title": "Clase 11 — y utilizar la estructura \"used to + infinitive\" para comparar prácticas técnicas..."
+    },
+    "1ro-lu-ju/u1/Clase_12": {
+      "status": "pending",
+      "title": "Clase 12 — un estudio de caso sobre un accidente laboral aplicando estrategias de lectura..."
+    },
+    "1ro-lu-ju/u1/Clase_13": {
+      "status": "pending",
+      "title": "Clase 13 — oralmente un proceso técnico simple utilizando vocabulario especializado y..."
+    },
+    "1ro-lu-ju/u1/Clase_14": {
+      "status": "pending",
+      "title": "Clase 14 — Comparar información de textos sobre profesionales técnicos de diferentes países,..."
+    },
+    "1ro-lu-ju/u1/Clase_15": {
+      "status": "pending",
+      "title": "Clase 15 — una presentación oral breve sobre la carrera técnica de su interés, demostrando..."
+    },
+    "1ro-lu-ju/u1/Clase_16": {
+      "status": "pending",
+      "title": "Clase 16 — una presentación oral breve sobre la carrera técnica de su interés, demostrando..."
+    },
+    "1ro-lu-ju/u1/Clase_17": {
+      "status": "pending",
+      "title": "Clase 17 — comprensión de ideas generales e información explícita en textos técnicos,..."
+    },
+    "3A-industrial/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — vocabulario técnico de Mecánica Industrial en oraciones simples utilizando Simple..."
+    },
+    "3A-industrial/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un estudio de caso técnico en inglés identificando el problema, las causas..."
+    },
+    "3A-industrial/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — información específica en un video técnico en inglés y producir descripciones..."
+    },
+    "3A-industrial/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — y evaluar reglas de seguridad escritas en inglés relevantes al taller de Mecánica..."
+    },
+    "3A-industrial/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y ensayar una presentación oral en inglés sobre las habilidades técnicas y..."
+    },
+    "3A-industrial/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — una presentación oral breve y clara en inglés describiendo sus habilidades..."
+    },
+    "3A-industrial/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — los aprendizajes de vocabulario técnico, lectura y expresión oral adquiridos en..."
+    },
+    "3B-automotriz/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — vocabulario técnico de Mecánica Automotriz en oraciones simples utilizando Simple..."
+    },
+    "3B-automotriz/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un estudio de caso técnico en inglés identificando el problema, las causas..."
+    },
+    "3B-automotriz/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — información específica en un video técnico en inglés y producir descripciones..."
+    },
+    "3B-automotriz/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — y evaluar reglas de seguridad escritas en inglés relevantes al taller de Mecánica..."
+    },
+    "3B-automotriz/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y ensayar una presentación oral en inglés sobre las habilidades técnicas y..."
+    },
+    "3B-automotriz/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — una presentación oral breve y clara en inglés describiendo sus habilidades..."
+    },
+    "3B-automotriz/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — los aprendizajes de vocabulario técnico, lectura y expresión oral adquiridos en..."
+    },
+    "3C-electricidad/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — vocabulario técnico de Electricidad en oraciones simples utilizando Simple..."
+    },
+    "3C-electricidad/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un estudio de caso técnico en inglés identificando el problema, las causas..."
+    },
+    "3C-electricidad/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — información específica en un video técnico en inglés y producir descripciones..."
+    },
+    "3C-electricidad/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — y evaluar reglas de seguridad escritas en inglés relevantes al taller de..."
+    },
+    "3C-electricidad/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y ensayar una presentación oral en inglés sobre las habilidades técnicas y..."
+    },
+    "3C-electricidad/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — una presentación oral breve y clara en inglés describiendo sus habilidades..."
+    },
+    "3C-electricidad/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — los aprendizajes de vocabulario técnico, lectura y expresión oral adquiridos en..."
+    },
+    "3D-grafica/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — vocabulario técnico de Gráfica en oraciones simples utilizando Simple Present..."
+    },
+    "3D-grafica/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un estudio de caso técnico en inglés identificando el problema, las causas..."
+    },
+    "3D-grafica/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — información específica en un video técnico en inglés y producir descripciones..."
+    },
+    "3D-grafica/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — y evaluar reglas de seguridad escritas en inglés relevantes al taller de Gráfica,..."
+    },
+    "3D-grafica/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y ensayar una presentación oral en inglés sobre las habilidades técnicas y..."
+    },
+    "3D-grafica/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — una presentación oral breve y clara en inglés describiendo sus habilidades..."
+    },
+    "3D-grafica/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — los aprendizajes de vocabulario técnico, lectura y expresión oral adquiridos en..."
+    },
+    "3E-electronica/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — vocabulario técnico de Electrónica en oraciones simples utilizando Simple Present..."
+    },
+    "3E-electronica/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — un estudio de caso técnico en inglés identificando el problema, las causas..."
+    },
+    "3E-electronica/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — información específica en un video técnico en inglés y producir descripciones..."
+    },
+    "3E-electronica/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — y evaluar reglas de seguridad escritas en inglés relevantes al taller de..."
+    },
+    "3E-electronica/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y ensayar una presentación oral en inglés sobre las habilidades técnicas y..."
+    },
+    "3E-electronica/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — una presentación oral breve y clara en inglés describiendo sus habilidades..."
+    },
+    "3E-electronica/u1/Clase_9": {
+      "status": "pending",
+      "title": "Clase 9 — los aprendizajes de vocabulario técnico, lectura y expresión oral adquiridos en..."
+    },
+    "4A-industrial/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — un currículum vitae en inglés adaptado al perfil profesional de Mecánica..."
+    },
+    "4A-industrial/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — estrategias de comunicación oral para responder preguntas frecuentes de..."
+    },
+    "4A-industrial/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — respuestas orales coherentes y pertinentes en una simulación de entrevista..."
+    },
+    "4A-industrial/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — correos electrónicos y mensajes formales en inglés aplicables al contexto laboral..."
+    },
+    "4A-industrial/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y evaluar críticamente escenarios laborales presentados en un video en inglés..."
+    },
+    "4A-industrial/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — y producir instrucciones de seguridad laboral en inglés específicas para el..."
+    },
+    "4B-automotriz/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — un currículum vitae en inglés adaptado al perfil profesional de Mecánica..."
+    },
+    "4B-automotriz/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — estrategias de comunicación oral para responder preguntas frecuentes de..."
+    },
+    "4B-automotriz/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — respuestas orales coherentes y pertinentes en una simulación de entrevista..."
+    },
+    "4B-automotriz/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — correos electrónicos y mensajes formales en inglés aplicables al contexto laboral..."
+    },
+    "4B-automotriz/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y evaluar críticamente escenarios laborales presentados en un video en inglés..."
+    },
+    "4B-automotriz/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — y producir instrucciones de seguridad laboral en inglés específicas para el..."
+    },
+    "4C-electricidad/u1/Clase_3": {
+      "status": "pending",
+      "title": "Clase 3 — un currículum vitae en inglés adaptado al perfil profesional de Electricidad,..."
+    },
+    "4C-electricidad/u1/Clase_4": {
+      "status": "pending",
+      "title": "Clase 4 — estrategias de comunicación oral para responder preguntas frecuentes de..."
+    },
+    "4C-electricidad/u1/Clase_5": {
+      "status": "pending",
+      "title": "Clase 5 — respuestas orales coherentes y pertinentes en una simulación de entrevista..."
+    },
+    "4C-electricidad/u1/Clase_6": {
+      "status": "pending",
+      "title": "Clase 6 — correos electrónicos y mensajes formales en inglés aplicables al contexto laboral..."
+    },
+    "4C-electricidad/u1/Clase_7": {
+      "status": "pending",
+      "title": "Clase 7 — y evaluar críticamente escenarios laborales presentados en un video en inglés..."
+    },
+    "4C-electricidad/u1/Clase_8": {
+      "status": "pending",
+      "title": "Clase 8 — y producir instrucciones de seguridad laboral en inglés específicas para el..."
     },
     "4E-electronica/u1/Clase_3": {
       "status": "pending",
-      "title": "Clase 3 — 4° Medio — Electrónica"
+      "title": "Clase 3 — un currículum vitae en inglés adaptado al perfil profesional de Electrónica,..."
     },
     "4E-electronica/u1/Clase_4": {
       "status": "pending",
-      "title": "Clase 4 — 4° Medio — Electrónica"
+      "title": "Clase 4 — estrategias de comunicación oral para responder preguntas frecuentes de..."
     },
     "4E-electronica/u1/Clase_5": {
       "status": "pending",
-      "title": "Clase 5 — 4° Medio — Electrónica"
+      "title": "Clase 5 — respuestas orales coherentes y pertinentes en una simulación de entrevista..."
     },
     "4E-electronica/u1/Clase_6": {
       "status": "pending",
-      "title": "Clase 6 — 4° Medio — Electrónica"
+      "title": "Clase 6 — correos electrónicos y mensajes formales en inglés aplicables al contexto laboral..."
     },
     "4E-electronica/u1/Clase_7": {
       "status": "pending",
-      "title": "Clase 7 — 4° Medio — Electrónica"
+      "title": "Clase 7 — y evaluar críticamente escenarios laborales presentados en un video en inglés..."
     },
     "4E-electronica/u1/Clase_8": {
       "status": "pending",
-      "title": "Clase 8 — 4° Medio — Electrónica"
+      "title": "Clase 8 — y producir instrucciones de seguridad laboral en inglés específicas para el..."
     }
   }
 }
