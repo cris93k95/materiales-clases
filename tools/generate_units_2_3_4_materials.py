@@ -619,6 +619,107 @@ def evaluation_kind(unit_number, class_data, total_classes):
     return None
 
 
+def oral_project_sequence(course, unit_number, class_data):
+    course_key = course["course_key"] if isinstance(course, dict) else course
+    if unit_number != 2:
+        return None
+
+    if course_key == "1ro-lu-ju":
+        config = {
+            "family": "1ro",
+            "class_indices": [7, 8, 9, 10, 11],
+            "project_name": "Trabajo oral de cierre semestral",
+            "project_short_title": "Trabajo oral — proceso técnico",
+            "due_note": "Entrega prevista: primera semana de junio.",
+            "prompt": "Describe a technical process or mechanism from workshop practice, using clear sequence, technical vocabulary, and one safety detail.",
+            "requirements": [
+                "Choose one process, machine, or mechanism connected to workshop practice.",
+                "Explain materials, components, steps, and one relevant safety point.",
+                "Use passive voice, relative clauses, and at least six technical words.",
+                "Close with one practical conclusion about why the process matters.",
+            ],
+            "stage_titles": [
+                "Definir el proceso del trabajo oral",
+                "Recolectar pasos y vocabulario clave",
+                "Organizar la explicación técnica",
+                "Ensayar con apoyo y retroalimentación",
+                "Trabajo oral final de proceso técnico",
+            ],
+            "stage_goals": [
+                "Elegir un proceso o mecanismo y fijar el foco de la explicación.",
+                "Extraer pasos, datos y vocabulario útil desde textos, diagramas o fichas.",
+                "Ordenar la explicación con inicio, desarrollo y cierre en inglés.",
+                "Practicar con apoyo visual y mejorar claridad, pronunciación y seguridad.",
+                "Presentar el proceso técnico y responder preguntas simples de seguimiento.",
+            ],
+            "stage_outputs": [
+                "Ficha de planificación con tema, propósito y vocabulario base.",
+                "Banco de evidencias con pasos, especificaciones y palabras clave.",
+                "Guion oral breve con opening, sequence, safety note y closing.",
+                "Ensayo cronometrado con checklist de retroalimentación.",
+                "Presentación oral individual con autoevaluación breve.",
+            ],
+        }
+    elif course_key.startswith("4"):
+        config = {
+            "family": "4to",
+            "class_indices": [1, 2, 3, 4, 6],
+            "project_name": "Trabajo oral de junio",
+            "project_short_title": "Trabajo oral — análisis técnico",
+            "due_note": "Entrega prevista: primera semana de junio.",
+            "prompt": "Present a technical workplace case, explain the evidence, and defend a practical solution with justified recommendations.",
+            "requirements": [
+                "Present one technical case, workplace situation, or operational problem.",
+                "Explain evidence, causes, and consequences using precise technical language.",
+                "Defend one feasible solution or recommendation for the scenario.",
+                "Close with a professional conclusion and answer follow-up questions.",
+            ],
+            "stage_titles": [
+                "Seleccionar el caso técnico y la postura",
+                "Reunir evidencia y vocabulario especializado",
+                "Construir el argumento oral",
+                "Ensayar con retroalimentación crítica",
+                "Trabajo oral final de junio",
+            ],
+            "stage_goals": [
+                "Definir el caso técnico, el público y la idea central de la intervención oral.",
+                "Reunir evidencia desde reportes, manuales o lecturas y fijar vocabulario clave.",
+                "Organizar la intervención con problema, evidencia, propuesta y cierre profesional.",
+                "Ensayar con un compañero, ajustar pronunciación y fortalecer la justificación.",
+                "Presentar el análisis técnico y defender oralmente una solución viable.",
+            ],
+            "stage_outputs": [
+                "Tarjeta de proyecto con caso, audiencia y enfoque del análisis.",
+                "Banco de evidencia con datos, conceptos y citas útiles para hablar.",
+                "Esquema oral con opening, evidence, recommendation y closing.",
+                "Ensayo con checklist de claridad, evidencia y manejo del tiempo.",
+                "Presentación oral con preguntas de seguimiento y cierre reflexivo.",
+            ],
+        }
+    else:
+        return None
+
+    unit_index = class_data["unit_index"]
+    class_indices = config["class_indices"]
+    if unit_index not in class_indices:
+        return None
+
+    stage = class_indices.index(unit_index) + 1
+    return {
+        **config,
+        "stage": stage,
+        "total_stages": len(config["stage_titles"]),
+        "is_delivery": unit_index == class_indices[-1],
+        "stage_title": config["stage_titles"][stage - 1],
+        "stage_goal": config["stage_goals"][stage - 1],
+        "stage_output": config["stage_outputs"][stage - 1],
+    }
+
+
+def class_is_evaluation(class_data, eval_kind):
+    return bool(eval_kind or class_data["is_plan_evaluation"])
+
+
 def truncate_text(text, max_len=82):
     if len(text) <= max_len:
         return text
@@ -626,7 +727,9 @@ def truncate_text(text, max_len=82):
     return f"{shortened}..."
 
 
-def short_title(class_data, unit_number, eval_kind):
+def short_title(class_data, unit_number, eval_kind, oral_sequence=None):
+    if oral_sequence:
+        return oral_sequence["project_short_title"] if oral_sequence["is_delivery"] else oral_sequence["stage_title"]
     if eval_kind == "oral":
         return "Evaluación oral de procedimiento técnico"
     if eval_kind == "reading":
@@ -845,7 +948,188 @@ def detect_language_focuses(objective, context):
     return blocks[:3]
 
 
-def build_reading_content(course, unit_number, unit_title, class_data, glossary, eval_kind):
+def build_oral_sequence_reading(course, glossary, oral_sequence):
+    context = COURSE_CONTEXT[course["course_key"]]
+    profile = level_profile(course["course_key"])
+    tool_one = context["equipment"][0]
+    tool_two = context["equipment"][1]
+    key_word = glossary[0][0]
+    support_word = glossary[1][0]
+
+    if oral_sequence["family"] == "1ro":
+        paragraphs_by_stage = {
+            1: [
+                f"In the school technical workshop, the student chooses one process or mechanism for the final oral task. The topic must be connected to real practice and easy to explain step by step.",
+                f"The first planning card includes the name of the process, one important material, and one useful tool such as the {tool_one}. It also explains why the process matters for safe work.",
+                "The teacher asks the class to think about audience and purpose: who needs the explanation, and what must that person understand after listening?",
+                f"A partner checks whether the topic is clear, realistic, and supported by vocabulary from the unit like {key_word} and {support_word}.",
+                "By the end of the lesson, the student has a simple topic plan for the June oral task and knows what information must still be collected.",
+            ],
+            2: [
+                "After choosing the topic, the student reads a short manual, diagram, or data sheet to identify the order of actions in the process.",
+                "Important notes include the main components, one measurement or technical specification, and the safety detail that cannot be forgotten during the explanation.",
+                f"The vocabulary bank grows with words that will appear in the oral task, especially terms linked to {tool_one}, {tool_two}, and the workshop routine.",
+                "The student groups information into beginning, middle, and final result so the explanation will sound organized instead of improvised.",
+                "At this stage, the goal is not to memorize a script yet, but to collect solid evidence that can support the speaking task later.",
+            ],
+            3: [
+                "With the evidence ready, the student organizes the oral explanation into a clear opening, a sequence of actions, and a practical conclusion.",
+                "Simple connectors help the message sound natural: first, then, after that, finally. Passive voice and relative clauses make the description more technical.",
+                f"The speaker chooses where to use vocabulary like {key_word} and {support_word} so the explanation sounds connected to the English of the workshop.",
+                "An outline replaces long sentences. Short notes are easier to remember and allow the student to speak instead of reading every line.",
+                "A good oral text at this stage sounds ordered, useful, and focused on what another student technician really needs to understand.",
+            ],
+            4: [
+                "Before the final delivery, the student rehearses the explanation with notes, a diagram, or a small visual support.",
+                "A partner listens with a checklist: Was the sequence clear? Was the pronunciation understandable? Did the speaker include the safety point and the final result?",
+                "The speaker then adjusts the outline, removes unnecessary words, and practises difficult technical vocabulary one more time.",
+                f"Short rehearsals help the student control time and speak more confidently when mentioning details related to {tool_one} or {tool_two}.",
+                "By the end of rehearsal day, the explanation should be clear enough to present in two or three minutes without reading a full script.",
+            ],
+            5: [
+                "On presentation day, the student introduces the chosen process, explains the main steps, and highlights one important technical or safety detail.",
+                "The oral task must sound organized, with a clear beginning, a logical sequence, and a short conclusion about why the process matters in practice.",
+                f"Strong answers reuse vocabulary from the unit, especially terms such as {key_word} and {support_word}, instead of speaking only in general words.",
+                "After the explanation, the teacher may ask one or two simple follow-up questions to check understanding, confidence, and use of English.",
+                "The final goal is not only to speak, but to show that the student can explain technical knowledge clearly to another person.",
+            ],
+        }
+        answers_by_stage = {
+            1: [
+                "The text presents the first stage of the oral task: choosing a process or mechanism connected to workshop practice.",
+                "Before the full explanation starts, the student defines the topic, audience, and purpose of the oral task.",
+                f"Important details include one material, one tool like the {tool_one}, and vocabulary such as {key_word} and {support_word}.",
+                "The text uses planning language to show that technical speaking needs order and preparation, not improvisation.",
+                "At the end, the student has a clear topic plan and knows what information is still needed.",
+                "A good technical explanation begins with a realistic topic and a clear idea of why the process matters.",
+            ],
+            2: [
+                "The text focuses on collecting steps, technical details, and vocabulary that will support the oral task.",
+                "Before speaking, the student reads sources and organizes the information into a logical order.",
+                f"Important details include components, a technical specification, a safety point, and words related to {tool_one} and {tool_two}.",
+                "The language focus is on selecting precise information that can later be explained clearly in English.",
+                "At the end, the student has an evidence bank instead of only a general idea.",
+                "Good oral work depends on evidence taken from texts, diagrams, and technical notes.",
+            ],
+            3: [
+                "The text explains how to build the structure of the oral explanation.",
+                "Before the final version, the student prepares an opening, a sequence of steps, and a conclusion.",
+                f"Key details include connectors, passive voice, relative clauses, and technical words like {key_word} and {support_word}.",
+                "The language focus shows how grammar and organization help technical ideas sound clearer.",
+                "At the end, the student has an outline that is easier to speak from than a full script.",
+                "Technical communication improves when ideas are organized into clear parts with useful language frames.",
+            ],
+            4: [
+                "The text presents the rehearsal stage before the final oral delivery.",
+                "Before the presentation, the student practises with notes, a partner, and a feedback checklist.",
+                "Important details include timing, pronunciation, visual support, and the safety point inside the explanation.",
+                "The language focus is on clarity and confidence, because good ideas still need understandable delivery.",
+                "At the end, the student revises the outline and prepares a stronger final version.",
+                "Practice helps technical speaking become clearer, shorter, and more confident.",
+            ],
+            5: [
+                "The text describes the final oral presentation of the technical process.",
+                "Before the conclusion, the student introduces the topic, explains the steps, and answers follow-up questions.",
+                f"Important details include the sequence of actions, the safety note, and vocabulary such as {key_word} and {support_word}.",
+                "The language focus shows that technical English must be both accurate and understandable for the audience.",
+                "At the end, the listener understands why the process matters in real workshop practice.",
+                "A solid oral task shows knowledge, sequence, and confidence at the same time.",
+            ],
+        }
+    else:
+        paragraphs_by_stage = {
+            1: [
+                f"At the beginning of the June oral project, the team selects one workplace case connected to {context['specialty']}. The situation must be specific enough to analyse and defend in front of an audience.",
+                f"The planning card defines the audience, the operational problem, and one initial source of evidence such as a report, a checklist, or notes related to the {tool_one}.",
+                "The group also decides what professional question will guide the oral intervention: what is happening, why does it matter, and what should be done next?",
+                f"During pair discussion, classmates challenge vague ideas so the final focus becomes more precise and uses technical language like {key_word} and {support_word}.",
+                "By the end of this stage, the speaker has a defendable topic and a clear purpose for the oral task of June.",
+            ],
+            2: [
+                "Once the case is chosen, the team gathers evidence from manuals, reports, data tables, or class readings to support the future presentation.",
+                f"Useful notes include the main cause of the problem, its impact on the workplace, and the technical references connected to equipment such as the {tool_one} or {tool_two}.",
+                "The vocabulary bank becomes more precise because the speaker needs words that describe evidence, risk, sequence, and recommendation in a professional tone.",
+                "Instead of copying full paragraphs, the group organizes information into short evidence points that can be explained naturally during the oral task.",
+                "A strong oral analysis begins with reliable evidence, not only with opinions or isolated vocabulary.",
+            ],
+            3: [
+                "At this stage, the oral intervention is organized into four parts: opening, case description, evidence-based recommendation, and professional closing.",
+                "The speaker decides how to connect ideas with cause-effect language, contrast, and justification so the audience can follow the argument step by step.",
+                f"Technical vocabulary such as {key_word} and {support_word} is placed where it strengthens meaning rather than where it sounds memorized or forced.",
+                "The presentation outline stays concise: the goal is to defend an idea with clarity, not to read a long text from paper or screen.",
+                "By the end of the lesson, the case has become a structured oral argument with a clear recommendation and professional tone.",
+            ],
+            4: [
+                "Before the final delivery, the speaker rehearses the technical case with a partner who listens critically and notes strengths and weak points.",
+                "Feedback focuses on clarity of the problem, quality of evidence, pronunciation of key terms, and whether the recommendation sounds feasible in a real workplace.",
+                "The rehearsal may include a quick visual aid, a diagram, or a short note card that helps the speaker control time without losing eye contact with the audience.",
+                "After the rehearsal, the outline is adjusted so the final version sounds more direct, better supported, and easier to defend under questions.",
+                "This stage turns information into performance: the goal is not only to know the case, but to communicate it convincingly.",
+            ],
+            5: [
+                "During the final oral task, the speaker presents the technical case, explains the key evidence, and defends one practical recommendation for the situation.",
+                "A strong presentation sounds organized from the first sentence: the audience understands the context, the problem, the evidence, and the proposed response.",
+                f"Precise vocabulary such as {key_word} and {support_word} helps the analysis sound professional and connected to {context['specialty']} rather than generic.",
+                "After the presentation, follow-up questions test whether the speaker can justify the recommendation and adapt the explanation in real time.",
+                "The final objective is to show technical judgement, clear English, and the ability to defend a solution under brief questioning.",
+            ],
+        }
+        answers_by_stage = {
+            1: [
+                "The text presents the first stage of the June oral project: selecting a workplace case and defining the purpose of the presentation.",
+                "Before the full analysis starts, the team identifies the audience, the core problem, and the first source of evidence.",
+                f"Important details include the technical setting, evidence related to the {tool_one}, and vocabulary such as {key_word} and {support_word}.",
+                "The language focus shows that professional speaking begins by narrowing the topic and clarifying the central question.",
+                "At the end, the speaker has a defendable case and a clear reason for presenting it.",
+                "Technical communication improves when the problem is specific and the purpose of the explanation is explicit.",
+            ],
+            2: [
+                "The text focuses on gathering evidence and technical vocabulary for the oral analysis.",
+                "Before speaking, the team reviews reports, readings, or tables and organizes the most relevant information.",
+                f"Important details include causes, consequences, and references connected to the {tool_one} or {tool_two}.",
+                "The language focus shows that good oral arguments depend on evidence rather than unsupported opinion.",
+                "At the end, the group has a stronger evidence bank to use in the presentation.",
+                "Reliable evidence makes the final recommendation more convincing and professional.",
+            ],
+            3: [
+                "The text explains how to structure the oral argument into clear professional sections.",
+                "Before the final version, the speaker organizes the case description, the evidence, the recommendation, and the closing.",
+                f"Key details include connectors for cause and contrast, plus technical words such as {key_word} and {support_word}.",
+                "The language focus shows how structure helps the audience follow a technical recommendation step by step.",
+                "At the end, the case has become a concise oral argument rather than a collection of disconnected notes.",
+                "Professional speaking is stronger when the listener can clearly follow the problem, evidence, and solution.",
+            ],
+            4: [
+                "The text presents the rehearsal stage with peer feedback before the final oral task.",
+                "Before delivery, the speaker practises timing, pronunciation, and the defence of the recommendation.",
+                "Important details include feedback on clarity, evidence, feasibility, and oral control during questioning.",
+                "The language focus shows that technical accuracy still needs clear spoken delivery and confident transitions.",
+                "At the end, the outline is revised into a stronger final version.",
+                "Feedback helps turn a prepared case into a persuasive oral performance.",
+            ],
+            5: [
+                "The text describes the final oral presentation of the technical case and recommendation.",
+                "Before the conclusion, the speaker explains the problem, supports it with evidence, and defends one practical solution.",
+                f"Important details include the workplace context, the recommendation, and the technical vocabulary used to justify it.",
+                "The language focus shows that professional English requires both content control and the ability to respond to questions.",
+                "At the end, the audience understands the case and the logic behind the proposed action.",
+                "A strong oral analysis shows technical judgement, evidence, and communication skills together.",
+            ],
+        }
+
+    return {
+        "title": f"Reading Model — {oral_sequence['stage_title']}",
+        "paragraphs": paragraphs_by_stage[oral_sequence["stage"]],
+        "questions": profile["question_stems"],
+        "answers": answers_by_stage[oral_sequence["stage"]],
+        "cefr": profile["cefr"],
+        "reading_note": f"Modelo guiado {profile['cefr']} para la etapa {oral_sequence['stage']}/{oral_sequence['total_stages']} del {oral_sequence['project_name'].lower()}: {oral_sequence['stage_goal']}",
+    }
+
+
+def build_reading_content(course, unit_number, unit_title, class_data, glossary, eval_kind, oral_sequence=None):
+    if oral_sequence:
+        return build_oral_sequence_reading(course, glossary, oral_sequence)
     profile = level_profile(course["course_key"])
     context = COURSE_CONTEXT[course["course_key"]]
     focus = infer_focus(class_data["objective"])
@@ -1002,6 +1286,19 @@ def build_review_html(review):
     return f"<div class=\"review-box\"><h4>🔁 {review['title']}</h4><ul>{items}</ul></div>"
 
 
+def build_oral_sequence_box(oral_sequence):
+    requirement_items = "".join(f"<li>{item}</li>" for item in oral_sequence["requirements"])
+    return f"""
+    <div class="review-box">
+        <h4>🎤 Ruta del trabajo oral</h4>
+        <p><strong>{oral_sequence['project_name']}</strong> · Etapa {oral_sequence['stage']}/{oral_sequence['total_stages']} · {oral_sequence['due_note']}</p>
+        <p><strong>Meta de hoy:</strong> {oral_sequence['stage_goal']}</p>
+        <p><strong>Producto esperado:</strong> {oral_sequence['stage_output']}</p>
+        <ul>{requirement_items}</ul>
+    </div>
+    """
+
+
 def build_activity_card(title, intro, items, extra_html=""):
     item_list = "".join(f"<li>{item}</li>" for item in items)
     return f"""
@@ -1014,7 +1311,7 @@ def build_activity_card(title, intro, items, extra_html=""):
     """
 
 
-def build_launch_html(course, class_data, review):
+def build_launch_html(course, class_data, review, oral_sequence=None):
     context = COURSE_CONTEXT[course["course_key"]]
     steps = [
         f"Read the objective of the lesson and circle the technical action linked to the {context['product']}.",
@@ -1026,11 +1323,54 @@ def build_launch_html(course, class_data, review):
         "🔎 Actividad 1 — Activate and Predict",
         "Start the class by connecting prior knowledge with the new text and the new language focus.",
         steps,
-        build_review_html(review),
+        build_review_html(review) + (build_oral_sequence_box(oral_sequence) if oral_sequence else ""),
     )
 
 
-def build_closure_html(course, class_data, reading, eval_kind):
+def build_closure_html(course, class_data, reading, eval_kind, oral_sequence=None):
+    if oral_sequence:
+        prompts_by_stage = {
+            1: [
+                "Write the process or case you chose and explain why it is useful for the oral task.",
+                "List the first technical words you still need to understand better.",
+                "Note one question you must answer before the next class.",
+            ],
+            2: [
+                "Write two pieces of evidence or technical details you collected today.",
+                "Identify the vocabulary item that will be most useful in your presentation.",
+                "Explain what information is still missing before you can build the oral outline.",
+            ],
+            3: [
+                "Write your opening sentence and your final conclusion in short note form.",
+                "Check whether your explanation already has a clear order and one strong connector.",
+                "Name the section of the presentation that still needs more detail or clearer English.",
+            ],
+            4: [
+                "Write one strength and one improvement point from today's rehearsal.",
+                "Note the technical word or phrase you need to pronounce more clearly.",
+                "Explain what you will adjust before the final oral delivery.",
+            ],
+            5: [
+                "Reflect on one part of your oral work that sounded clear and professional.",
+                "Write the follow-up question that was easiest or hardest to answer.",
+                "State one concrete improvement for your next technical presentation in English.",
+            ],
+        }
+        return build_activity_card(
+            "🟣 Cierre — Oral Project Checkpoint",
+            "Close the lesson by checking progress on the oral task and defining the next step in the sequence.",
+            [
+                "Review your notes and identify the strongest contribution from today's stage.",
+                "Compare your progress with a partner before writing your final exit ticket.",
+                "Complete the three checkpoint prompts below.",
+            ],
+            """
+            <div class="exit-ticket">
+                <h5>Exit ticket prompts</h5>
+                <ul>{}</ul>
+            </div>
+            """.format("".join(f"<li>{prompt}</li>" for prompt in prompts_by_stage[oral_sequence["stage"]])),
+        )
     if eval_kind == "oral":
         prompts = [
             "Write the opening sentence you will use in your oral explanation.",
@@ -1067,7 +1407,75 @@ def build_closure_html(course, class_data, reading, eval_kind):
     )
 
 
-def build_applied_task(course, class_data, eval_kind):
+def build_applied_task(course, class_data, eval_kind, oral_sequence=None):
+    if oral_sequence:
+        if oral_sequence["family"] == "1ro":
+            task_steps = {
+                1: [
+                    "Choose one process, machine, or mechanism from workshop practice.",
+                    "Complete a planning card with topic, purpose, audience, and five key words.",
+                    "Explain your choice to a partner in 30 seconds using one opening sentence.",
+                ],
+                2: [
+                    "Extract the main steps, one technical specification, and one safety detail from the text or diagram.",
+                    "Build an evidence bank with vocabulary you will need in the oral task.",
+                    "Check with a partner that the sequence is logical and complete.",
+                ],
+                3: [
+                    "Write a short oral outline with opening, sequence of steps, safety note, and closing.",
+                    "Add passive voice, one relative clause, and connectors such as first, then, and finally.",
+                    "Practise a 45-second version without reading full sentences.",
+                ],
+                4: [
+                    "Rehearse the oral task with a timer and a simple visual or note card.",
+                    "Use a peer checklist: clarity, pronunciation, sequence, vocabulary, and confidence.",
+                    "Revise the outline so the final version can be delivered in 2-3 minutes.",
+                ],
+                5: [
+                    "Deliver the oral task individually using your final outline and visual support if needed.",
+                    "Answer one or two follow-up questions from the teacher or classmates.",
+                    "Complete a short self-assessment about clarity, technical vocabulary, and confidence.",
+                ],
+            }
+        else:
+            task_steps = {
+                1: [
+                    "Select one technical case or workplace problem that deserves analysis.",
+                    "Complete a project card with audience, context, central question, and first source of evidence.",
+                    "Pitch the case to a partner in 30-45 seconds and refine the focus after feedback.",
+                ],
+                2: [
+                    "Collect evidence from reports, manuals, tables, or previous readings.",
+                    "Organize the notes into problem, cause, consequence, and possible recommendation.",
+                    "Highlight the vocabulary that makes the analysis sound professional and precise.",
+                ],
+                3: [
+                    "Build the oral outline with opening, case description, evidence, recommendation, and closing.",
+                    "Add cause-effect and contrast connectors so the audience can follow your reasoning.",
+                    "Practise a one-minute version focused on clarity and professional tone.",
+                ],
+                4: [
+                    "Rehearse the case with a partner who checks evidence, feasibility, pronunciation, and timing.",
+                    "Adjust the recommendation so it sounds realistic for the workplace context.",
+                    "Prepare the final note card or visual support for the June oral task.",
+                ],
+                5: [
+                    "Present the technical case, defend your recommendation, and close with a professional conclusion.",
+                    "Respond to follow-up questions using evidence from the sequence of classes.",
+                    "Write one reflective note about what made your analysis convincing or unclear.",
+                ],
+            }
+        requirement_items = "".join(f"<li>{item}</li>" for item in oral_sequence["requirements"])
+        return (
+            "Actividad Aplicada — Ruta del trabajo oral",
+            f"""
+            <p><strong>{oral_sequence['project_name']}</strong> · Etapa {oral_sequence['stage']}/{oral_sequence['total_stages']}</p>
+            <p><strong>Prompt:</strong> <em>{oral_sequence['prompt']}</em></p>
+            <ol class="task-steps">{''.join(f'<li>{step}</li>' for step in task_steps[oral_sequence['stage']])}</ol>
+            <p><strong>Producto esperado:</strong> {oral_sequence['stage_output']}</p>
+            <ul>{requirement_items}</ul>
+            """,
+        )
     focus = infer_focus(class_data["objective"])
     specialty = COURSE_CONTEXT[course["course_key"]]["specialty"]
     if eval_kind == "oral":
@@ -1171,19 +1579,26 @@ def build_applied_task(course, class_data, eval_kind):
 
 def build_class_html(course, unit_number, unit_info, class_data, previous_class):
     eval_kind = evaluation_kind(unit_number, class_data, len(unit_info["classes"]))
+    oral_sequence = oral_project_sequence(course, unit_number, class_data)
     glossary = select_glossary(course["course_key"], unit_number)
-    reading = build_reading_content(course, unit_number, unit_info["unit_title"], class_data, glossary, eval_kind)
-    task_title, task_body = build_applied_task(course, class_data, eval_kind)
+    reading = build_reading_content(course, unit_number, unit_info["unit_title"], class_data, glossary, eval_kind, oral_sequence)
+    task_title, task_body = build_applied_task(course, class_data, eval_kind, oral_sequence)
     review = review_prompt(previous_class, unit_number)
     badge_text = " · ".join(class_data["badges"]) or "OA — En desarrollo"
-    eval_pill = "<span>📝 Evaluación</span>" if eval_kind else "<span>🧩 Clase de trabajo</span>"
+    is_evaluation = class_is_evaluation(class_data, eval_kind)
+    eval_pill = "<span>📝 Evaluación</span>" if is_evaluation else "<span>🧩 Clase de trabajo</span>"
     annual_meta = f"Clase anual {class_data['annual_number']}" if class_data["annual_number"] != class_data["unit_index"] else f"Clase {class_data['unit_index']}"
     resources = class_data["resources"] or "Texto adaptado, pizarra, guía de apoyo y recursos visuales de la especialidad."
     evaluation_note = class_data["evaluation"] or "Formativa: observación de participación, revisión de respuestas y salida escrita breve."
-    link_title = short_title(class_data, unit_number, eval_kind)
-    launch_html = build_launch_html(course, class_data, review)
-    closure_html = build_closure_html(course, class_data, reading, eval_kind)
+    if oral_sequence:
+        resources = f"{resources} Producto de avance: {oral_sequence['stage_output']}"
+        if not oral_sequence["is_delivery"]:
+            evaluation_note = f"{evaluation_note} Evidencia de etapa: {oral_sequence['stage_output']}"
+    link_title = short_title(class_data, unit_number, eval_kind, oral_sequence)
+    launch_html = build_launch_html(course, class_data, review, oral_sequence)
+    closure_html = build_closure_html(course, class_data, reading, eval_kind, oral_sequence)
     language_support_html = build_language_support_html(course, class_data)
+    project_meta = f"<span>🎤 {oral_sequence['project_name']} · Etapa {oral_sequence['stage']}/{oral_sequence['total_stages']}</span>" if oral_sequence else ""
 
     return f"""<!DOCTYPE html>
 <html lang=\"es\">
@@ -1263,6 +1678,7 @@ def build_class_html(course, unit_number, unit_info, class_data, previous_class)
                 <span>🎯 {link_title}</span>
                 <span>📘 {badge_text}</span>
                 <span>🗂 {annual_meta}</span>
+                {project_meta}
                 {eval_pill}
             </div>
         </div>
@@ -1356,9 +1772,11 @@ def write_targets(relative_path, content):
 
 
 def class_link_markup(relative_path, course_key, unit_number, class_data, eval_kind, use_archive_prefix=False):
-    title = short_title(class_data, unit_number, eval_kind)
-    tag_class = "tag-eval" if eval_kind else "tag-clase"
-    tag_text = "Evaluación" if eval_kind else "Clase"
+    oral_sequence = oral_project_sequence(course_key, unit_number, class_data)
+    title = short_title(class_data, unit_number, eval_kind, oral_sequence)
+    is_evaluation = class_is_evaluation(class_data, eval_kind)
+    tag_class = "tag-eval" if is_evaluation else "tag-clase"
+    tag_text = "Evaluación" if is_evaluation else "Clase"
     href = str(relative_path).replace("\\", "/")
     if use_archive_prefix:
         href = f"archivo/{href}"
@@ -1384,10 +1802,11 @@ def update_progress(plan_cache):
                     if not should_generate_class(unit_number, class_data):
                         continue
                     eval_kind = evaluation_kind(unit_number, class_data, len(unit_info["classes"]))
+                    oral_sequence = oral_project_sequence(course, unit_number, class_data)
                     key = f"{course['course_key']}/u{unit_number}/Clase_{class_data['unit_index']}"
                     data["classes"][key] = {
                         "status": "pending",
-                        "title": f"Clase {class_data['unit_index']} — {short_title(class_data, unit_number, eval_kind)}",
+                        "title": f"Clase {class_data['unit_index']} — {short_title(class_data, unit_number, eval_kind, oral_sequence)}",
                     }
 
         progress_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
