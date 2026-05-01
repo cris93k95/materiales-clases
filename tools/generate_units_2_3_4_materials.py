@@ -1764,6 +1764,126 @@ def relative_output_path(course, unit_number, class_data):
     return Path(course["folder"]) / f"u{unit_number}" / filename
 
 
+def instrument_entries_for_course(course):
+    course_key = course["course_key"]
+
+    if course_key == "1ro-lu-ju":
+        return [
+            {
+                "icon": "📝",
+                "title": "Evaluación Diagnóstica — 1° Medio",
+                "href": "1ro-medio/instrumentos/diagnostico_1ro_medio.html",
+                "tag": "Diagnóstico",
+            },
+            {
+                "icon": "📋",
+                "title": "Rúbrica — Video: My Future Career",
+                "href": "1ro-medio/instrumentos/rubrica_video_my_future_career.html",
+                "tag": "Rúbrica",
+            },
+            {
+                "icon": "📝",
+                "title": "Prueba — Comprensión Lectora U1 — 1° Medio",
+                "href": "1ro-medio/instrumentos/PRUEBA_COMPRENSION_LECTORA_U1_1RO_MEDIO.docx",
+                "tag": "Prueba",
+            },
+            {
+                "icon": "🎤",
+                "title": "Trabajo oral de cierre semestral — ruta de 5 clases",
+                "href": "1ro-medio/lu-ju/u2/Clase_7_U2_1ro_LuJu.html",
+                "tag": "Proyecto",
+            },
+        ]
+
+    three_ro_courses = {
+        "3A-industrial": {
+            "diagnostic_href": "3ro-medio/instrumentos/diagnostico_3ro_industrial.html",
+            "diagnostic_title": "Evaluación Diagnóstica — 3°A Mecánica Industrial",
+            "test_href": "3ro-medio/instrumentos/PRUEBA_COMPRENSION_LECTORA_3RO_INDUSTRIAL.docx",
+            "test_title": "Prueba — Comprensión Lectora TP — 3°A Mecánica Industrial",
+        },
+        "3B-automotriz": {
+            "diagnostic_href": "3ro-medio/instrumentos/diagnostico_3ro_automotriz.html",
+            "diagnostic_title": "Evaluación Diagnóstica — 3°B Mecánica Automotriz",
+            "test_href": "3ro-medio/instrumentos/PRUEBA_COMPRENSION_LECTORA_3RO_AUTOMOTRIZ.docx",
+            "test_title": "Prueba — Comprensión Lectora TP — 3°B Mecánica Automotriz",
+        },
+        "3C-electricidad": {
+            "diagnostic_href": "3ro-medio/instrumentos/diagnostico_3ro_electricidad.html",
+            "diagnostic_title": "Evaluación Diagnóstica — 3°C Electricidad",
+            "test_href": "3ro-medio/instrumentos/PRUEBA_COMPRENSION_LECTORA_3RO_ELECTRICIDAD.docx",
+            "test_title": "Prueba — Comprensión Lectora TP — 3°C Electricidad",
+        },
+        "3D-grafica": {
+            "diagnostic_href": "3ro-medio/instrumentos/diagnostico_3ro_grafica.html",
+            "diagnostic_title": "Evaluación Diagnóstica — 3°D Gráfica",
+            "test_href": "3ro-medio/instrumentos/PRUEBA_COMPRENSION_LECTORA_3RO_GRAFICA.docx",
+            "test_title": "Prueba — Comprensión Lectora TP — 3°D Gráfica",
+        },
+        "3E-electronica": {
+            "diagnostic_href": "3ro-medio/instrumentos/diagnostico_3ro_electronica.html",
+            "diagnostic_title": "Evaluación Diagnóstica — 3°E Electrónica",
+            "test_href": "3ro-medio/instrumentos/PRUEBA_COMPRENSION_LECTORA_3RO_ELECTRONICA.docx",
+            "test_title": "Prueba — Comprensión Lectora TP — 3°E Electrónica",
+        },
+    }
+
+    if course_key in three_ro_courses:
+        course_info = three_ro_courses[course_key]
+        return [
+            {
+                "icon": "📝",
+                "title": course_info["diagnostic_title"],
+                "href": course_info["diagnostic_href"],
+                "tag": "Diagnóstico",
+            },
+            {
+                "icon": "📋",
+                "title": "Rúbrica — My Technical Skills",
+                "href": "3ro-medio/instrumentos/rubrica_video_my_technical_skills.html",
+                "tag": "Rúbrica",
+            },
+            {
+                "icon": "📝",
+                "title": course_info["test_title"],
+                "href": course_info["test_href"],
+                "tag": "Prueba",
+            },
+        ]
+
+    four_to_oral_projects = {
+        "4A-industrial": {
+            "href": "4to-medio/4A-industrial/u2/Clase_1_U2_4toA_Industrial.html",
+            "title": "Trabajo oral de junio — ruta de 5 clases",
+        },
+        "4B-automotriz": {
+            "href": "4to-medio/4B-automotriz/u2/Clase_1_U2_4toB_Automotriz.html",
+            "title": "Trabajo oral de junio — ruta de 5 clases",
+        },
+        "4C-electricidad": {
+            "href": "4to-medio/4C-electricidad/u2/Clase_1_U2_4toC_Electricidad.html",
+            "title": "Trabajo oral de junio — ruta de 5 clases",
+        },
+        "4E-electronica": {
+            "href": "4to-medio/4E-electronica/u2/Clase_1_U2_4toE_Electronica.html",
+            "title": "Trabajo oral de junio — ruta de 5 clases",
+        },
+    }
+
+    if course_key in four_to_oral_projects:
+        project_info = four_to_oral_projects[course_key]
+        return [
+            {
+                "icon": "🎤",
+                "title": project_info["title"],
+                "href": project_info["href"],
+                "tag": "Proyecto",
+            },
+        ]
+
+    return []
+
+
 def write_targets(relative_path, content):
     for base in (SOURCE_SITE, PUBLISHED_SITE):
         destination = base / relative_path
@@ -1786,6 +1906,19 @@ def class_link_markup(relative_path, course_key, unit_number, class_data, eval_k
         f"<span class=\"title\">Clase {class_data['unit_index']} — {title}</span>"
         f"<span class=\"tag {tag_class}\">{tag_text}</span>"
         f"<span class=\"status-badge status-pending\" data-status-badge>⏳ Pendiente</span>"
+        f"</a>"
+    )
+
+
+def instrument_link_markup(entry, use_archive_prefix=False):
+    href = entry["href"]
+    if use_archive_prefix:
+        href = f"archivo/{href}"
+    return (
+        f"<a class=\"class-link\" href=\"{href}\">"
+        f"<span class=\"num\">{entry['icon']}</span>"
+        f"<span class=\"title\">{entry['title']}</span>"
+        f"<span class=\"tag tag-eval\">{entry['tag']}</span>"
         f"</a>"
     )
 
@@ -1814,6 +1947,15 @@ def update_progress(plan_cache):
 
 def unit_group_title(unit_number, unit_title):
     return f"📁 Unidad {unit_number} — {unit_title}"
+
+
+def instrument_group_markup():
+    return (
+        '<div class="unit-group">'
+        '<div class="unit-title" onclick="toggleUnit(this)"><span>📋 Instrumentos de Evaluación</span><span class="arrow">▶</span></div>'
+        '<div class="unit-classes"></div>'
+        '</div>'
+    )
 
 
 def find_or_create_unit_group(section, unit_number, unit_title):
@@ -1853,6 +1995,25 @@ def find_or_create_unit_group(section, unit_number, unit_title):
         insert_before.insert_before(new_group)
     else:
         section.append(new_group)
+    return new_group
+
+
+def find_instrument_group(section):
+    for group in section.find_all("div", class_="unit-group", recursive=False):
+        title_el = group.select_one(".unit-title")
+        title = clean_text(title_el.get_text(" ")) if title_el else ""
+        if title and "Instrumentos" in title:
+            return group
+    return None
+
+
+def find_or_create_instrument_group(section):
+    existing = find_instrument_group(section)
+    if existing:
+        return existing
+
+    new_group = BeautifulSoup(instrument_group_markup(), "html.parser").div
+    section.append(new_group)
     return new_group
 
 
@@ -1911,6 +2072,18 @@ def update_index(index_path, plan_cache):
                     )
                 )
             replace_unit_links(group, links)
+
+        instrument_entries = instrument_entries_for_course(course)
+        instrument_group = find_instrument_group(section)
+        if instrument_entries:
+            instrument_group = find_or_create_instrument_group(section)
+            instrument_links = [
+                instrument_link_markup(entry, use_archive_prefix=use_archive_prefix)
+                for entry in instrument_entries
+            ]
+            replace_unit_links(instrument_group, instrument_links)
+        elif instrument_group:
+            instrument_group.decompose()
 
     index_path.write_text(str(soup), encoding="utf-8")
 
