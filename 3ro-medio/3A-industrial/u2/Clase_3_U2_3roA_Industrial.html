@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Clase 3 — Unidad 2 — 3°A — Mecánica Industrial</title>
 <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.65}
-.page{max-width:1080px;margin:0 auto;padding:24px 18px 40px}
-.hero{background:linear-gradient(135deg,#0f766e,#155e75);color:white;border-radius:18px;padding:28px;box-shadow:0 18px 40px rgba(15,118,110,.18)}
-.hero h1{font-size:2rem;margin-bottom:6px}.hero p{color:rgba(255,255,255,.88)}
-.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.meta span{background:rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;font-size:.84rem}
-.toolbar{display:flex;justify-content:flex-end;margin:18px 0 10px}
-.print-btn{border:none;border-radius:10px;background:#0f172a;color:white;padding:10px 16px;font-weight:600;cursor:pointer}
-.objective-card,.section,.resource-card{background:white;border-radius:16px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:18px;overflow:hidden}
-.objective-card{padding:22px 24px;border-left:6px solid #0f766e}
-.objective-card h2{color:#0f766e;font-size:1.05rem;margin-bottom:8px}
-.section-header{color:white;font-weight:700;padding:14px 22px;font-size:1rem}
-.inicio{background:#2e7d32}.desarrollo{background:#1565c0}.cierre{background:#7c3aed}
-.section-body{padding:20px 22px 22px}
-.activity{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-bottom:16px}
-.activity:last-child{margin-bottom:0}.activity h4{color:#0f172a;margin-bottom:6px;font-size:1rem}
-.activity .lead{color:#475569;margin-bottom:12px;font-size:.95rem}
-.match-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
-.match-card{background:white;border:1px solid #cbd5e1;border-radius:12px;padding:14px;text-align:center}
-.match-card .icon{font-size:2.4rem;line-height:1;display:block;margin-bottom:8px}
-.match-card .label-blank{display:block;border-bottom:2px dashed #94a3b8;margin:8px auto 4px;min-height:22px;max-width:80%}
-.match-card .clue{font-size:.82rem;color:#64748b}
-.options-bank{background:#ecfeff;border:1px dashed #06b6d4;border-radius:12px;padding:12px 14px;margin-top:12px}
-.options-bank strong{display:block;color:#0e7490;margin-bottom:6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
-.options-bank .chip-row{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:white;border:1px solid #0e7490;color:#0e7490;padding:5px 12px;border-radius:999px;font-size:.86rem;font-weight:600}
-.answer-line{display:block;height:38px;border-bottom:2px solid #94a3b8;margin-top:6px}
-.glossary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:12px}
-.vocab-card{background:white;border:1px solid #dbeafe;border-radius:12px;padding:14px}
-.vocab-card .word{font-weight:800;color:#1d4ed8;font-size:1.02rem;margin-bottom:4px}
-.vocab-card .meaning{font-size:.92rem;color:#1f2937;margin-bottom:6px}
-.vocab-card .pron{font-size:.88rem;color:#475569;font-family:'Courier New',monospace}
-.phonics-key{margin-top:14px;background:#fefce8;border:1px solid #facc15;border-radius:12px;padding:12px 14px;font-size:.86rem;color:#713f12}
-.phonics-key strong{display:block;margin-bottom:4px;color:#854d0e}
-.phonics-key code{background:white;border:1px solid #facc15;border-radius:4px;padding:1px 6px;margin:0 2px;font-family:'Courier New',monospace}
-.reading{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-top:10px}
-.reading p{margin-bottom:10px}.reading p:last-child{margin-bottom:0}
-.question-card{background:white;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin-top:10px}
-.question-card p{margin-bottom:8px}
-.toggle-btn{border:none;border-radius:8px;background:#dbeafe;color:#1d4ed8;padding:6px 12px;font-weight:700;font-size:.85rem;cursor:pointer}
-.answer-box{display:none;background:#eefbf3;border-left:4px solid #16a34a;padding:10px 12px;border-radius:8px;margin-top:10px}
-.answer-box.open{display:block}
-.data-table{width:100%;border-collapse:collapse;margin-top:12px;background:white;border-radius:10px;overflow:hidden}
-.data-table th,.data-table td{border:1px solid #cbd5e1;padding:10px 12px;text-align:left;font-size:.92rem;vertical-align:top}
-.data-table th{background:#1565c0;color:white;font-weight:700}
-.data-table td.empty{background:#f8fafc;min-height:40px}
-.exit-card{background:white;border:2px dashed #7c3aed;border-radius:12px;padding:14px 16px;margin-top:10px}
-.exit-card h5{color:#5b21b6;margin-bottom:8px;font-size:.95rem}
-.exit-card .prompt-line{display:block;border-bottom:1.5px solid #c4b5fd;margin:10px 0 4px;min-height:32px}
-.resource-card{padding:18px 22px;border-left:6px solid #0ea5e9}
-.resource-card h4{color:#0369a1;margin-bottom:8px}
-.footer-note{text-align:center;color:#6b7280;font-size:.82rem;margin-top:28px}
-.tf-list{list-style:none;padding:0;margin-top:8px}
-.tf-list li{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;background:white;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin-bottom:8px}
-.tf-list .tf-opt{border:1px solid #94a3b8;border-radius:6px;padding:3px 10px;font-size:.85rem;font-weight:700}
-.tf-list .tf-opt.t{color:#16a34a;border-color:#16a34a}.tf-list .tf-opt.f{color:#dc2626;border-color:#dc2626}
-.gap-text{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;line-height:2}
-.gap{display:inline-block;min-width:110px;border-bottom:2px solid #1d4ed8;text-align:center;font-weight:700;color:#1d4ed8}
-.quiz-grid{display:grid;gap:10px;margin-top:10px}
-.quiz-item{background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px}
-.quiz-item .stem{font-weight:600;margin-bottom:6px}
-.quiz-item .opts{display:flex;flex-wrap:wrap;gap:8px}
-.quiz-item .opts label{background:#f1f5f9;border:1px solid #cbd5e1;border-radius:8px;padding:4px 10px;font-size:.88rem}
-.test-instructions{background:#fef3c7;border-left:5px solid #f59e0b;border-radius:10px;padding:14px 16px;margin-bottom:16px}
-.test-instructions h4{color:#92400e;margin-bottom:6px}
-.id-strip{background:white;border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;font-size:.9rem}
-.id-strip span{border-bottom:1.5px solid #94a3b8;min-height:22px;display:inline-block;min-width:160px}
-.long-answer{display:block;border-bottom:1.5px solid #94a3b8;min-height:30px;margin-top:6px}.long-answer+.long-answer{margin-top:18px}
-@media (max-width:720px){.hero h1{font-size:1.55rem}.page{padding:16px 12px 28px}}
-@media print{body{background:white}.toolbar{display:none}.hero,.objective-card,.section,.resource-card{box-shadow:none}}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.activity { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px; margin-bottom: 16px; }
+.activity:last-child { margin-bottom: 0; }
+.activity h4 { color: #0f172a; margin-bottom: 6px; font-size: 1rem; }
+.activity .lead { color: #475569; margin-bottom: 12px; font-size: 0.95rem; }
+.match-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 8px; }
+.match-card { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 14px; text-align: center; }
+.match-card .icon { font-size: 2.4rem; line-height: 1; display: block; margin-bottom: 8px; }
+.match-card .label-blank { display: block; border-bottom: 2px dashed #94a3b8; margin: 8px auto 4px; min-height: 22px; max-width: 80%; }
+.match-card .clue { font-size: 0.82rem; color: #64748b; }
+.options-bank { background: #ecfeff; border: 1px dashed #06b6d4; border-radius: 12px; padding: 12px 14px; margin-top: 12px; }
+.options-bank strong { display: block; color: #0e7490; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.options-bank .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: white; border: 1px solid #0e7490; color: #0e7490; padding: 5px 12px; border-radius: 999px; font-size: 0.86rem; font-weight: 600; }
+.answer-line { display: block; height: 38px; border-bottom: 2px solid #94a3b8; margin-top: 6px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 12px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.vocab-card .word { font-weight: 800; color: #1d4ed8; font-size: 1.02rem; margin-bottom: 4px; }
+.vocab-card .meaning { font-size: 0.92rem; color: #1f2937; margin-bottom: 6px; }
+.vocab-card .pron { font-size: 0.88rem; color: #475569; font-family: 'Courier New', monospace; }
+.phonics-key { margin-top: 14px; background: #fefce8; border: 1px solid #facc15; border-radius: 12px; padding: 12px 14px; font-size: 0.86rem; color: #713f12; }
+.phonics-key strong { display: block; margin-bottom: 4px; color: #854d0e; }
+.phonics-key code { background: white; border: 1px solid #facc15; border-radius: 4px; padding: 1px 6px; margin: 0 2px; font-family: 'Courier New', monospace; }
+.reading { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; margin-top: 10px; }
+.reading p { margin-bottom: 10px; }
+.reading p:last-child { margin-bottom: 0; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
+.question-card p { margin-bottom: 8px; }
+.toggle-btn { border: none; border-radius: 8px; background: #dbeafe; color: #1d4ed8; padding: 6px 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.data-table { width: 100%; border-collapse: collapse; margin-top: 12px; background: white; border-radius: 10px; overflow: hidden; }
+.data-table th, .data-table td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 0.92rem; vertical-align: top; }
+.data-table th { background: #1565c0; color: white; font-weight: 700; }
+.data-table td.empty { background: #f8fafc; min-height: 40px; }
+.exit-card { background: white; border: 2px dashed #7c3aed; border-radius: 12px; padding: 14px 16px; margin-top: 10px; }
+.exit-card h5 { color: #5b21b6; margin-bottom: 8px; font-size: 0.95rem; }
+.exit-card .prompt-line { display: block; border-bottom: 1.5px solid #c4b5fd; margin: 10px 0 4px; min-height: 32px; }
+.resource-card { padding: 18px 22px; border-left: 6px solid #0ea5e9; }
+.resource-card h4 { color: #0369a1; margin-bottom: 8px; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+.tf-list { list-style: none; padding: 0; margin-top: 8px; }
+.tf-list li { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+.tf-list .tf-opt { border: 1px solid #94a3b8; border-radius: 6px; padding: 3px 10px; font-size: 0.85rem; font-weight: 700; }
+.tf-list .tf-opt.t { color: #16a34a; border-color: #16a34a; }
+.tf-list .tf-opt.f { color: #dc2626; border-color: #dc2626; }
+.gap-text { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; line-height: 2; }
+.gap { display: inline-block; min-width: 110px; border-bottom: 2px solid #1d4ed8; text-align: center; font-weight: 700; color: #1d4ed8; }
+.quiz-grid { display: grid; gap: 10px; margin-top: 10px; }
+.quiz-item { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+.quiz-item .stem { font-weight: 600; margin-bottom: 6px; }
+.quiz-item .opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.quiz-item .opts label { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px 10px; font-size: 0.88rem; }
+.test-instructions { background: #fef3c7; border-left: 5px solid #f59e0b; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+.test-instructions h4 { color: #92400e; margin-bottom: 6px; }
+.id-strip { background: white; border: 1px solid #cbd5e1; border-radius: 10px; padding: 10px 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; font-size: 0.9rem; }
+.id-strip span { border-bottom: 1.5px solid #94a3b8; min-height: 22px; display: inline-block; min-width: 160px; }
+.long-answer { display: block; border-bottom: 1.5px solid #94a3b8; min-height: 30px; margin-top: 6px; }
+.long-answer + .long-answer { margin-top: 18px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
 </style></head><body>
-<div class="page"><div class="hero"><h1>Clase 3 — Unidad 2</h1><p>3°A — Mecánica Industrial · Safety and PPE</p><div class="meta"><span>🎯 Safety first</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 3 de 7</span><span>🧩 PPE &amp; signs</span></div></div>
+<div class="page"><div class="hero"><h1>Clase 3 — Unidad 2</h1><p>3°A — Mecánica Industrial · Reading safety under pressure</p><div class="meta"><span>🎯 Señales y PPE</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 3 de 7</span><span>🧩 Near-miss case</span></div></div>
 <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-<div class="objective-card"><h2>Objetivo de la clase</h2><p>Reconocer en inglés el vocabulario de seguridad industrial (EPP, señalización, riesgos) y aplicarlo en un texto técnico.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>🗂️ Actividad 1 — Sort the items</h4><p class="lead">Clasifica cada elemento en la columna correcta.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:8px;"><div style="background:white;border:2px dashed #94a3b8;border-radius:12px;padding:12px;min-height:120px;"><h5 style="text-align:center;color:#0f172a;margin-bottom:6px;">🦺 PPE</h5></div><div style="background:white;border:2px dashed #94a3b8;border-radius:12px;padding:12px;min-height:120px;"><h5 style="text-align:center;color:#0f172a;margin-bottom:6px;">⚠️ Hazards</h5></div><div style="background:white;border:2px dashed #94a3b8;border-radius:12px;padding:12px;min-height:120px;"><h5 style="text-align:center;color:#0f172a;margin-bottom:6px;">🚧 Signs</h5></div></div><div class="options-bank"><strong>Items</strong><div class="chip-row"><span class="chip">helmet</span><span class="chip">sharp edge</span><span class="chip">no entry</span><span class="chip">safety glasses</span><span class="chip">hot surface</span><span class="chip">danger</span><span class="chip">gloves</span><span class="chip">exit sign</span></div></div></div><div class="activity"><h4>🔁 Quick recall</h4><p><em>Name one measuring instrument and its accuracy.</em></p><span class="answer-line"></span></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">safety</div><div class="meaning">protection from danger.</div><div class="pron">/séif-ti/</div></div><div class="vocab-card"><div class="word">PPE</div><div class="meaning">personal protective equipment.</div><div class="pron">/pi pi i/</div></div><div class="vocab-card"><div class="word">helmet</div><div class="meaning">head protection.</div><div class="pron">/hél-met/</div></div><div class="vocab-card"><div class="word">gloves</div><div class="meaning">hand protection.</div><div class="pron">/glóvs/</div></div><div class="vocab-card"><div class="word">goggles</div><div class="meaning">eye protection.</div><div class="pron">/gó-guels/</div></div><div class="vocab-card"><div class="word">hazard</div><div class="meaning">a possible danger.</div><div class="pron">/há-sard/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>working</em> · <code>/dʒ/</code> as in <em>engine</em></div></div><div class="activity"><h4>📖 Reading: Safety first</h4><div class="reading"><p>Every workshop has rules. Students must wear PPE before they start: helmet on the head, gloves on the hands, goggles on the eyes and safety boots on the feet.</p><p>The walls show signs: yellow signs warn about hazards (hot surface, sharp edges), red signs show prohibitions (no entry, no smoking) and green signs show the exit.</p><p>If a student sees a hazard, the rule is simple: stop, tell the teacher and never touch a damaged tool.</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde con información del texto.</p><div class="question-card"><p><strong>1.</strong> What four pieces of PPE must students wear?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">Helmet, gloves, goggles and safety boots.</div></div><div class="question-card"><p><strong>2.</strong> What do yellow signs warn about?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">Hazards like hot surface or sharp edges.</div></div><div class="question-card"><p><strong>3.</strong> What should a student do if he sees a hazard?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">Stop, tell the teacher and never touch a damaged tool.</div></div></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>📊 Risk and PPE</h4><table class="data-table"><tr><th>Activity</th><th>Required PPE</th></tr><tr><td><strong>Welding</strong></td><td class="empty"></td></tr><tr><td><strong>Using the lathe</strong></td><td class="empty"></td></tr><tr><td><strong>Carrying a steel bar</strong></td><td class="empty"></td></tr></table></div><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>PPE tip</h5><p>Escribe una frase en inglés que advierta a un compañero <strong>por qué debe usar guantes</strong>.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>Próxima clase: materiales en el taller.</p></div>
+<div class="objective-card"><h2>Objetivo de la clase</h2><p>Interpretar en inglés un caso breve de seguridad industrial para identificar riesgos, protocolos omitidos y acciones preventivas.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>✅ Actividad 1 — True or False</h4><p class="lead">Marca True (T) o False (F) antes de leer el texto completo.</p><ul class="tf-list"><li><span>A warning sign gives optional information.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>PPE only matters when using large machines.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>A clean floor can reduce workshop risk.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>Stopping the job can be the safest decision.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li></ul></div><div class="activity"><h4>🔁 Quick recall</h4><p>En una frase: <em>what is more professional, finishing fast or stopping to report a risk?</em></p><span class="answer-line"></span></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">hazard</div><div class="meaning">something that can cause harm.</div><div class="pron">/há-zard/</div></div><div class="vocab-card"><div class="word">warning sign</div><div class="meaning">sign that alerts you to a risk.</div><div class="pron">/uór-niŋ sain/</div></div><div class="vocab-card"><div class="word">report</div><div class="meaning">to communicate a problem formally.</div><div class="pron">/ri-pórt/</div></div><div class="vocab-card"><div class="word">slippery</div><div class="meaning">easy to slide on.</div><div class="pron">/slí-pe-ri/</div></div><div class="vocab-card"><div class="word">face shield</div><div class="meaning">protection for the whole face.</div><div class="pron">/féis ʃild/</div></div><div class="vocab-card"><div class="word">near miss</div><div class="meaning">incident that could become an accident.</div><div class="pron">/níar mis/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>grinding</em> · <code>/dʒ/</code> as in <em>job</em> · <code>/ʃ/</code> as in <em>shaft</em></div></div><div class="activity"><h4>📖 Reading: The wet floor near the grinder</h4><div class="reading"><p>During the second block, a student carries coolant from one station to another and a small amount spills near the grinder. The yellow warning sign is still in the storage room, not on the floor.</p><p>Another team arrives in a hurry because they want to finish before lunch. One student starts grinding without checking the floor and without using a face shield. His partner notices the risk and stops the job immediately.</p><p>The teacher asks the group to report the near miss, clean the area, place the warning sign and restart only when the station is safe. In industry, reporting a hazard is part of the job, not a delay.</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde usando evidencia concreta del texto.</p><div class="question-card"><p><strong>1.</strong> What risk appears near the grinder?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">A wet floor caused by spilled coolant.</div></div><div class="question-card"><p><strong>2.</strong> Which two checks are missing before the student starts grinding?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">Checking the floor and using a face shield.</div></div><div class="question-card"><p><strong>3.</strong> Why does the teacher insist on reporting the near miss?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">Because reporting hazards is part of professional work and prevents real accidents.</div></div></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>📊 Safety response plan</h4><table class="data-table"><tr><th>Step</th><th>What should the team do?</th></tr><tr><td><strong>1. Detect the hazard</strong></td><td class="empty"></td></tr><tr><td><strong>2. Stop the task</strong></td><td class="empty"></td></tr><tr><td><strong>3. Report and signal</strong></td><td class="empty"></td></tr><tr><td><strong>4. Restart safely</strong></td><td class="empty"></td></tr></table></div><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>Short report</h5><p>Escribe en inglés una frase breve para reportar el riesgo del caso usando <em>wet floor</em>, <em>warning sign</em> o <em>stop the job</em>.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>Próxima clase: elegir materiales y justificar por qué una pieza debe hacerse en steel, aluminum o copper.</p></div>
 <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 3° Medio TP.</p>
 </div><script>function toggleAnswer(id, btn){const a=document.getElementById(id);const o=a.classList.toggle('open');btn.textContent=o?'Ocultar respuesta':'Ver respuesta';}</script></body></html>

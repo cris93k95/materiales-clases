@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Clase 5 — Unidad 2 — 3°D — Gráfica</title>
 <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.65}
-.page{max-width:1080px;margin:0 auto;padding:24px 18px 40px}
-.hero{background:linear-gradient(135deg,#0f766e,#155e75);color:white;border-radius:18px;padding:28px;box-shadow:0 18px 40px rgba(15,118,110,.18)}
-.hero h1{font-size:2rem;margin-bottom:6px}.hero p{color:rgba(255,255,255,.88)}
-.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.meta span{background:rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;font-size:.84rem}
-.toolbar{display:flex;justify-content:flex-end;margin:18px 0 10px}
-.print-btn{border:none;border-radius:10px;background:#0f172a;color:white;padding:10px 16px;font-weight:600;cursor:pointer}
-.objective-card,.section,.resource-card{background:white;border-radius:16px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:18px;overflow:hidden}
-.objective-card{padding:22px 24px;border-left:6px solid #0f766e}
-.objective-card h2{color:#0f766e;font-size:1.05rem;margin-bottom:8px}
-.section-header{color:white;font-weight:700;padding:14px 22px;font-size:1rem}
-.inicio{background:#2e7d32}.desarrollo{background:#1565c0}.cierre{background:#7c3aed}
-.section-body{padding:20px 22px 22px}
-.activity{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-bottom:16px}
-.activity:last-child{margin-bottom:0}.activity h4{color:#0f172a;margin-bottom:6px;font-size:1rem}
-.activity .lead{color:#475569;margin-bottom:12px;font-size:.95rem}
-.match-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
-.match-card{background:white;border:1px solid #cbd5e1;border-radius:12px;padding:14px;text-align:center}
-.match-card .icon{font-size:2.4rem;line-height:1;display:block;margin-bottom:8px}
-.match-card .label-blank{display:block;border-bottom:2px dashed #94a3b8;margin:8px auto 4px;min-height:22px;max-width:80%}
-.match-card .clue{font-size:.82rem;color:#64748b}
-.options-bank{background:#ecfeff;border:1px dashed #06b6d4;border-radius:12px;padding:12px 14px;margin-top:12px}
-.options-bank strong{display:block;color:#0e7490;margin-bottom:6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
-.options-bank .chip-row{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:white;border:1px solid #0e7490;color:#0e7490;padding:5px 12px;border-radius:999px;font-size:.86rem;font-weight:600}
-.answer-line{display:block;height:38px;border-bottom:2px solid #94a3b8;margin-top:6px}
-.glossary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:12px}
-.vocab-card{background:white;border:1px solid #dbeafe;border-radius:12px;padding:14px}
-.vocab-card .word{font-weight:800;color:#1d4ed8;font-size:1.02rem;margin-bottom:4px}
-.vocab-card .meaning{font-size:.92rem;color:#1f2937;margin-bottom:6px}
-.vocab-card .pron{font-size:.88rem;color:#475569;font-family:'Courier New',monospace}
-.phonics-key{margin-top:14px;background:#fefce8;border:1px solid #facc15;border-radius:12px;padding:12px 14px;font-size:.86rem;color:#713f12}
-.phonics-key strong{display:block;margin-bottom:4px;color:#854d0e}
-.phonics-key code{background:white;border:1px solid #facc15;border-radius:4px;padding:1px 6px;margin:0 2px;font-family:'Courier New',monospace}
-.reading{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-top:10px}
-.reading p{margin-bottom:10px}.reading p:last-child{margin-bottom:0}
-.question-card{background:white;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin-top:10px}
-.question-card p{margin-bottom:8px}
-.toggle-btn{border:none;border-radius:8px;background:#dbeafe;color:#1d4ed8;padding:6px 12px;font-weight:700;font-size:.85rem;cursor:pointer}
-.answer-box{display:none;background:#eefbf3;border-left:4px solid #16a34a;padding:10px 12px;border-radius:8px;margin-top:10px}
-.answer-box.open{display:block}
-.data-table{width:100%;border-collapse:collapse;margin-top:12px;background:white;border-radius:10px;overflow:hidden}
-.data-table th,.data-table td{border:1px solid #cbd5e1;padding:10px 12px;text-align:left;font-size:.92rem;vertical-align:top}
-.data-table th{background:#1565c0;color:white;font-weight:700}
-.data-table td.empty{background:#f8fafc;min-height:40px}
-.exit-card{background:white;border:2px dashed #7c3aed;border-radius:12px;padding:14px 16px;margin-top:10px}
-.exit-card h5{color:#5b21b6;margin-bottom:8px;font-size:.95rem}
-.exit-card .prompt-line{display:block;border-bottom:1.5px solid #c4b5fd;margin:10px 0 4px;min-height:32px}
-.resource-card{padding:18px 22px;border-left:6px solid #0ea5e9}
-.resource-card h4{color:#0369a1;margin-bottom:8px}
-.footer-note{text-align:center;color:#6b7280;font-size:.82rem;margin-top:28px}
-.tf-list{list-style:none;padding:0;margin-top:8px}
-.tf-list li{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;background:white;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin-bottom:8px}
-.tf-list .tf-opt{border:1px solid #94a3b8;border-radius:6px;padding:3px 10px;font-size:.85rem;font-weight:700}
-.tf-list .tf-opt.t{color:#16a34a;border-color:#16a34a}.tf-list .tf-opt.f{color:#dc2626;border-color:#dc2626}
-.gap-text{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;line-height:2}
-.gap{display:inline-block;min-width:110px;border-bottom:2px solid #1d4ed8;text-align:center;font-weight:700;color:#1d4ed8}
-.quiz-grid{display:grid;gap:10px;margin-top:10px}
-.quiz-item{background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px}
-.quiz-item .stem{font-weight:600;margin-bottom:6px}
-.quiz-item .opts{display:flex;flex-wrap:wrap;gap:8px}
-.quiz-item .opts label{background:#f1f5f9;border:1px solid #cbd5e1;border-radius:8px;padding:4px 10px;font-size:.88rem}
-.test-instructions{background:#fef3c7;border-left:5px solid #f59e0b;border-radius:10px;padding:14px 16px;margin-bottom:16px}
-.test-instructions h4{color:#92400e;margin-bottom:6px}
-.id-strip{background:white;border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;font-size:.9rem}
-.id-strip span{border-bottom:1.5px solid #94a3b8;min-height:22px;display:inline-block;min-width:160px}
-.long-answer{display:block;border-bottom:1.5px solid #94a3b8;min-height:30px;margin-top:6px}.long-answer+.long-answer{margin-top:18px}
-@media (max-width:720px){.hero h1{font-size:1.55rem}.page{padding:16px 12px 28px}}
-@media print{body{background:white}.toolbar{display:none}.hero,.objective-card,.section,.resource-card{box-shadow:none}}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.activity { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px; margin-bottom: 16px; }
+.activity:last-child { margin-bottom: 0; }
+.activity h4 { color: #0f172a; margin-bottom: 6px; font-size: 1rem; }
+.activity .lead { color: #475569; margin-bottom: 12px; font-size: 0.95rem; }
+.match-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 8px; }
+.match-card { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 14px; text-align: center; }
+.match-card .icon { font-size: 2.4rem; line-height: 1; display: block; margin-bottom: 8px; }
+.match-card .label-blank { display: block; border-bottom: 2px dashed #94a3b8; margin: 8px auto 4px; min-height: 22px; max-width: 80%; }
+.match-card .clue { font-size: 0.82rem; color: #64748b; }
+.options-bank { background: #ecfeff; border: 1px dashed #06b6d4; border-radius: 12px; padding: 12px 14px; margin-top: 12px; }
+.options-bank strong { display: block; color: #0e7490; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.options-bank .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: white; border: 1px solid #0e7490; color: #0e7490; padding: 5px 12px; border-radius: 999px; font-size: 0.86rem; font-weight: 600; }
+.answer-line { display: block; height: 38px; border-bottom: 2px solid #94a3b8; margin-top: 6px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 12px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.vocab-card .word { font-weight: 800; color: #1d4ed8; font-size: 1.02rem; margin-bottom: 4px; }
+.vocab-card .meaning { font-size: 0.92rem; color: #1f2937; margin-bottom: 6px; }
+.vocab-card .pron { font-size: 0.88rem; color: #475569; font-family: 'Courier New', monospace; }
+.phonics-key { margin-top: 14px; background: #fefce8; border: 1px solid #facc15; border-radius: 12px; padding: 12px 14px; font-size: 0.86rem; color: #713f12; }
+.phonics-key strong { display: block; margin-bottom: 4px; color: #854d0e; }
+.phonics-key code { background: white; border: 1px solid #facc15; border-radius: 4px; padding: 1px 6px; margin: 0 2px; font-family: 'Courier New', monospace; }
+.reading { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; margin-top: 10px; }
+.reading p { margin-bottom: 10px; }
+.reading p:last-child { margin-bottom: 0; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
+.question-card p { margin-bottom: 8px; }
+.toggle-btn { border: none; border-radius: 8px; background: #dbeafe; color: #1d4ed8; padding: 6px 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.data-table { width: 100%; border-collapse: collapse; margin-top: 12px; background: white; border-radius: 10px; overflow: hidden; }
+.data-table th, .data-table td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 0.92rem; vertical-align: top; }
+.data-table th { background: #1565c0; color: white; font-weight: 700; }
+.data-table td.empty { background: #f8fafc; min-height: 40px; }
+.exit-card { background: white; border: 2px dashed #7c3aed; border-radius: 12px; padding: 14px 16px; margin-top: 10px; }
+.exit-card h5 { color: #5b21b6; margin-bottom: 8px; font-size: 0.95rem; }
+.exit-card .prompt-line { display: block; border-bottom: 1.5px solid #c4b5fd; margin: 10px 0 4px; min-height: 32px; }
+.resource-card { padding: 18px 22px; border-left: 6px solid #0ea5e9; }
+.resource-card h4 { color: #0369a1; margin-bottom: 8px; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+.tf-list { list-style: none; padding: 0; margin-top: 8px; }
+.tf-list li { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+.tf-list .tf-opt { border: 1px solid #94a3b8; border-radius: 6px; padding: 3px 10px; font-size: 0.85rem; font-weight: 700; }
+.tf-list .tf-opt.t { color: #16a34a; border-color: #16a34a; }
+.tf-list .tf-opt.f { color: #dc2626; border-color: #dc2626; }
+.gap-text { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; line-height: 2; }
+.gap { display: inline-block; min-width: 110px; border-bottom: 2px solid #1d4ed8; text-align: center; font-weight: 700; color: #1d4ed8; }
+.quiz-grid { display: grid; gap: 10px; margin-top: 10px; }
+.quiz-item { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+.quiz-item .stem { font-weight: 600; margin-bottom: 6px; }
+.quiz-item .opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.quiz-item .opts label { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px 10px; font-size: 0.88rem; }
+.test-instructions { background: #fef3c7; border-left: 5px solid #f59e0b; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+.test-instructions h4 { color: #92400e; margin-bottom: 6px; }
+.id-strip { background: white; border: 1px solid #cbd5e1; border-radius: 10px; padding: 10px 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; font-size: 0.9rem; }
+.id-strip span { border-bottom: 1.5px solid #94a3b8; min-height: 22px; display: inline-block; min-width: 160px; }
+.long-answer { display: block; border-bottom: 1.5px solid #94a3b8; min-height: 30px; margin-top: 6px; }
+.long-answer + .long-answer { margin-top: 18px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
 </style></head><body>
-<div class="page"><div class="hero"><h1>Clase 5 — Unidad 2</h1><p>3°D — Gráfica · File formats</p><div class="meta"><span>🎯 File formats</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 5 de 7</span><span>🧩 Raster &amp; vector</span></div></div>
+<div class="page"><div class="hero"><h1>Clase 5 — Unidad 2</h1><p>3°D — Gráfica · File formats before delivery</p><div class="meta"><span>🎯 File formats</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 5 de 7</span><span>🧩 Raster & vector</span></div></div>
 <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-<div class="objective-card"><h2>Objetivo de la clase</h2><p>Reconocer en inglés los formatos de archivo más usados en diseño gráfico y su uso correcto.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>🔡 Actividad 1 — Fill the gaps</h4><p class="lead">Completa con las palabras del recuadro.</p><div class="gap-text">1. <span class="gap"></span> is the model for screens.<br>2. <span class="gap"></span> is the model for printing.<br>3. A <span class="gap"></span> font has no small lines at the end of letters.<br>4. <span class="gap"></span> is used for t-shirts.<br>5. A <span class="gap"></span> is a test print.</div><div class="options-bank"><strong>Word bank</strong><div class="chip-row"><span class="chip">RGB</span><span class="chip">CMYK</span><span class="chip">sans-serif</span><span class="chip">Screen printing</span><span class="chip">proof</span></div></div></div><div class="activity"><h4>🔁 Quick recall</h4><p><em>Name one printing technique and one printing job for it.</em></p><span class="answer-line"></span></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">JPG</div><div class="meaning">compressed photo format.</div><div class="pron">/dʒei-pi-dʒi/</div></div><div class="vocab-card"><div class="word">PNG</div><div class="meaning">image format with transparency.</div><div class="pron">/pi-en-dʒi/</div></div><div class="vocab-card"><div class="word">PDF</div><div class="meaning">portable document format.</div><div class="pron">/pi-di-ef/</div></div><div class="vocab-card"><div class="word">vector</div><div class="meaning">math-based graphic.</div><div class="pron">/vék-tor/</div></div><div class="vocab-card"><div class="word">raster</div><div class="meaning">pixel-based graphic.</div><div class="pron">/rás-ter/</div></div><div class="vocab-card"><div class="word">export</div><div class="meaning">to save in another format.</div><div class="pron">/ex-pórt/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>working</em> · <code>/dʒ/</code> as in <em>engine</em></div></div><div class="activity"><h4>📖 Reading: Choosing the right file format</h4><div class="reading"><p>Files come in two big families: raster and vector.</p><p>Raster files (JPG, PNG, PSD) are made of pixels. They are perfect for photos, but they lose quality if you make them bigger. JPG compresses the file (good for the web); PNG keeps transparency (good for logos with no background).</p><p>Vector files (AI, SVG, PDF) are made of math curves. They keep perfect quality at any size. They are ideal for logos and printed material that must be enlarged.</p><p>When the designer finishes, he exports the work in the right format for the client: a PDF for print, a PNG for a website, a JPG for a social media post.</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde con información del texto.</p><div class="question-card"><p><strong>1.</strong> What is the main difference between raster and vector files?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">Raster files are made of pixels and lose quality when enlarged; vector files are made of math curves and keep perfect quality at any size.</div></div><div class="question-card"><p><strong>2.</strong> Which format keeps transparency?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">PNG.</div></div><div class="question-card"><p><strong>3.</strong> What format is best for a printed file?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">PDF.</div></div></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>📊 Export checklist</h4><table class="data-table"><tr><th>Output</th><th>Best format</th></tr><tr><td><strong>Logo for a sign</strong></td><td class="empty"></td></tr><tr><td><strong>Photo for Instagram</strong></td><td class="empty"></td></tr><tr><td><strong>Brochure for the printer</strong></td><td class="empty"></td></tr><tr><td><strong>Web icon</strong></td><td class="empty"></td></tr></table></div><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>A file question</h5><p>Escribe en inglés una frase para preguntar a un cliente <strong>en qué formato quiere el archivo</strong>.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>Próxima clase: repaso integrador.</p></div>
+<div class="objective-card"><h2>Objetivo de la clase</h2><p>Distinguir formatos básicos de archivo y aplicarlos a una entrega gráfica simple con menos errores de exportación.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>🔡 Actividad 1 — Fill the gaps</h4><p class="lead">Completa con el formato más lógico para cada salida del proyecto.</p><div class="gap-text">1. A final print-ready document is often sent as <span class="gap"></span>.<br>2. A logo that needs to scale cleanly should stay in <span class="gap"></span> format.<br>3. A compressed photograph is often delivered as <span class="gap"></span>.</div><div class="options-bank"><strong>Word bank</strong><div class="chip-row"><span class="chip">PDF</span><span class="chip">vector</span><span class="chip">JPG</span></div></div></div><div class="activity"><h4>🔁 Quick recall</h4><p>Responde en una frase: <em>why can the wrong file format ruin a good design?</em></p><span class="answer-line"></span></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">vector</div><div class="meaning">graphic that scales without losing quality.</div><div class="pron">/véc-tor/</div></div><div class="vocab-card"><div class="word">raster</div><div class="meaning">image made of pixels.</div><div class="pron">/rás-ter/</div></div><div class="vocab-card"><div class="word">resolution</div><div class="meaning">amount of detail in the image.</div><div class="pron">/re-so-lú-ʃon/</div></div><div class="vocab-card"><div class="word">export</div><div class="meaning">to save in final output format.</div><div class="pron">/eks-pórt/</div></div><div class="vocab-card"><div class="word">proof PDF</div><div class="meaning">final review file for print.</div><div class="pron">/prúf pí-di-ef/</div></div><div class="vocab-card"><div class="word">delivery</div><div class="meaning">moment the client receives the files.</div><div class="pron">/di-lí-ve-ri/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>working</em> · <code>/dʒ/</code> as in <em>job</em> · <code>/ʃ/</code> as in <em>shift</em></div></div><div class="activity"><h4>📖 Reading: The file that looked good until export</h4><div class="reading"><p>A student finishes a school logo and places it inside a poster. On screen everything looks sharp, but the file is exported as a low-resolution image instead of keeping the original vector logo.</p><p>When the class prints a proof, the logo edges look soft. The teacher asks students to compare the export settings and the original files in the project folder.</p><p>The group learns a practical lesson: good delivery depends on using the right format for each element, not only on finishing the design quickly.</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde usando evidencia del texto y una idea propia cuando se te pida.</p><div class="question-card"><p><strong>1.</strong> What goes wrong in the export?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">The logo is exported as a low-resolution image instead of staying vector.</div></div><div class="question-card"><p><strong>2.</strong> How is the problem discovered?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">The printed proof shows soft logo edges.</div></div><div class="question-card"><p><strong>3.</strong> What practical lesson does the group learn?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">That good delivery depends on using the right format for each element.</div></div></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>📊 Delivery checklist</h4><table class="data-table"><tr><th>Checkpoint</th><th>What should be confirmed?</th></tr><tr><td><strong>Vector elements preserved</strong></td><td class="empty"></td></tr><tr><td><strong>Resolution reviewed</strong></td><td class="empty"></td></tr><tr><td><strong>Proof PDF exported</strong></td><td class="empty"></td></tr><tr><td><strong>Project folder organized</strong></td><td class="empty"></td></tr></table></div><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>Export advice</h5><p>Escribe en inglés una recomendación breve para evitar errores de exportación antes de entregar un archivo.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>Próxima clase: repaso integrador desde el brief hasta la entrega final del proyecto gráfico.</p></div>
 <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 3° Medio TP.</p>
 </div><script>function toggleAnswer(id, btn){const a=document.getElementById(id);const o=a.classList.toggle('open');btn.textContent=o?'Ocultar respuesta':'Ver respuesta';}</script></body></html>

@@ -1,98 +1,95 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Clase 7 — Unidad 2 — 3°C — Electricidad</title>
 <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.65}
-.page{max-width:1080px;margin:0 auto;padding:24px 18px 40px}
-.hero{background:linear-gradient(135deg,#0f766e,#155e75);color:white;border-radius:18px;padding:28px;box-shadow:0 18px 40px rgba(15,118,110,.18)}
-.hero h1{font-size:2rem;margin-bottom:6px}.hero p{color:rgba(255,255,255,.88)}
-.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.meta span{background:rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;font-size:.84rem}
-.toolbar{display:flex;justify-content:flex-end;margin:18px 0 10px}
-.print-btn{border:none;border-radius:10px;background:#0f172a;color:white;padding:10px 16px;font-weight:600;cursor:pointer}
-.objective-card,.section,.resource-card{background:white;border-radius:16px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:18px;overflow:hidden}
-.objective-card{padding:22px 24px;border-left:6px solid #0f766e}
-.objective-card h2{color:#0f766e;font-size:1.05rem;margin-bottom:8px}
-.section-header{color:white;font-weight:700;padding:14px 22px;font-size:1rem}
-.inicio{background:#2e7d32}.desarrollo{background:#1565c0}.cierre{background:#7c3aed}
-.section-body{padding:20px 22px 22px}
-.activity{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-bottom:16px}
-.activity:last-child{margin-bottom:0}.activity h4{color:#0f172a;margin-bottom:6px;font-size:1rem}
-.activity .lead{color:#475569;margin-bottom:12px;font-size:.95rem}
-.match-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
-.match-card{background:white;border:1px solid #cbd5e1;border-radius:12px;padding:14px;text-align:center}
-.match-card .icon{font-size:2.4rem;line-height:1;display:block;margin-bottom:8px}
-.match-card .label-blank{display:block;border-bottom:2px dashed #94a3b8;margin:8px auto 4px;min-height:22px;max-width:80%}
-.match-card .clue{font-size:.82rem;color:#64748b}
-.options-bank{background:#ecfeff;border:1px dashed #06b6d4;border-radius:12px;padding:12px 14px;margin-top:12px}
-.options-bank strong{display:block;color:#0e7490;margin-bottom:6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
-.options-bank .chip-row{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:white;border:1px solid #0e7490;color:#0e7490;padding:5px 12px;border-radius:999px;font-size:.86rem;font-weight:600}
-.answer-line{display:block;height:38px;border-bottom:2px solid #94a3b8;margin-top:6px}
-.glossary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:12px}
-.vocab-card{background:white;border:1px solid #dbeafe;border-radius:12px;padding:14px}
-.vocab-card .word{font-weight:800;color:#1d4ed8;font-size:1.02rem;margin-bottom:4px}
-.vocab-card .meaning{font-size:.92rem;color:#1f2937;margin-bottom:6px}
-.vocab-card .pron{font-size:.88rem;color:#475569;font-family:'Courier New',monospace}
-.phonics-key{margin-top:14px;background:#fefce8;border:1px solid #facc15;border-radius:12px;padding:12px 14px;font-size:.86rem;color:#713f12}
-.phonics-key strong{display:block;margin-bottom:4px;color:#854d0e}
-.phonics-key code{background:white;border:1px solid #facc15;border-radius:4px;padding:1px 6px;margin:0 2px;font-family:'Courier New',monospace}
-.reading{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-top:10px}
-.reading p{margin-bottom:10px}.reading p:last-child{margin-bottom:0}
-.question-card{background:white;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin-top:10px}
-.question-card p{margin-bottom:8px}
-.toggle-btn{border:none;border-radius:8px;background:#dbeafe;color:#1d4ed8;padding:6px 12px;font-weight:700;font-size:.85rem;cursor:pointer}
-.answer-box{display:none;background:#eefbf3;border-left:4px solid #16a34a;padding:10px 12px;border-radius:8px;margin-top:10px}
-.answer-box.open{display:block}
-.data-table{width:100%;border-collapse:collapse;margin-top:12px;background:white;border-radius:10px;overflow:hidden}
-.data-table th,.data-table td{border:1px solid #cbd5e1;padding:10px 12px;text-align:left;font-size:.92rem;vertical-align:top}
-.data-table th{background:#1565c0;color:white;font-weight:700}
-.data-table td.empty{background:#f8fafc;min-height:40px}
-.exit-card{background:white;border:2px dashed #7c3aed;border-radius:12px;padding:14px 16px;margin-top:10px}
-.exit-card h5{color:#5b21b6;margin-bottom:8px;font-size:.95rem}
-.exit-card .prompt-line{display:block;border-bottom:1.5px solid #c4b5fd;margin:10px 0 4px;min-height:32px}
-.resource-card{padding:18px 22px;border-left:6px solid #0ea5e9}
-.resource-card h4{color:#0369a1;margin-bottom:8px}
-.footer-note{text-align:center;color:#6b7280;font-size:.82rem;margin-top:28px}
-.tf-list{list-style:none;padding:0;margin-top:8px}
-.tf-list li{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;background:white;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin-bottom:8px}
-.tf-list .tf-opt{border:1px solid #94a3b8;border-radius:6px;padding:3px 10px;font-size:.85rem;font-weight:700}
-.tf-list .tf-opt.t{color:#16a34a;border-color:#16a34a}.tf-list .tf-opt.f{color:#dc2626;border-color:#dc2626}
-.gap-text{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;line-height:2}
-.gap{display:inline-block;min-width:110px;border-bottom:2px solid #1d4ed8;text-align:center;font-weight:700;color:#1d4ed8}
-.quiz-grid{display:grid;gap:10px;margin-top:10px}
-.quiz-item{background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px}
-.quiz-item .stem{font-weight:600;margin-bottom:6px}
-.quiz-item .opts{display:flex;flex-wrap:wrap;gap:8px}
-.quiz-item .opts label{background:#f1f5f9;border:1px solid #cbd5e1;border-radius:8px;padding:4px 10px;font-size:.88rem}
-.test-instructions{background:#fef3c7;border-left:5px solid #f59e0b;border-radius:10px;padding:14px 16px;margin-bottom:16px}
-.test-instructions h4{color:#92400e;margin-bottom:6px}
-.id-strip{background:white;border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;font-size:.9rem}
-.id-strip span{border-bottom:1.5px solid #94a3b8;min-height:22px;display:inline-block;min-width:160px}
-.long-answer{display:block;border-bottom:1.5px solid #94a3b8;min-height:30px;margin-top:6px}.long-answer+.long-answer{margin-top:18px}
-@media (max-width:720px){.hero h1{font-size:1.55rem}.page{padding:16px 12px 28px}}
-@media print{body{background:white}.toolbar{display:none}.hero,.objective-card,.section,.resource-card{box-shadow:none}}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.activity { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px; margin-bottom: 16px; }
+.activity:last-child { margin-bottom: 0; }
+.activity h4 { color: #0f172a; margin-bottom: 6px; font-size: 1rem; }
+.activity .lead { color: #475569; margin-bottom: 12px; font-size: 0.95rem; }
+.match-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 8px; }
+.match-card { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 14px; text-align: center; }
+.match-card .icon { font-size: 2.4rem; line-height: 1; display: block; margin-bottom: 8px; }
+.match-card .label-blank { display: block; border-bottom: 2px dashed #94a3b8; margin: 8px auto 4px; min-height: 22px; max-width: 80%; }
+.match-card .clue { font-size: 0.82rem; color: #64748b; }
+.options-bank { background: #ecfeff; border: 1px dashed #06b6d4; border-radius: 12px; padding: 12px 14px; margin-top: 12px; }
+.options-bank strong { display: block; color: #0e7490; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.options-bank .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: white; border: 1px solid #0e7490; color: #0e7490; padding: 5px 12px; border-radius: 999px; font-size: 0.86rem; font-weight: 600; }
+.answer-line { display: block; height: 38px; border-bottom: 2px solid #94a3b8; margin-top: 6px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 12px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.vocab-card .word { font-weight: 800; color: #1d4ed8; font-size: 1.02rem; margin-bottom: 4px; }
+.vocab-card .meaning { font-size: 0.92rem; color: #1f2937; margin-bottom: 6px; }
+.vocab-card .pron { font-size: 0.88rem; color: #475569; font-family: 'Courier New', monospace; }
+.phonics-key { margin-top: 14px; background: #fefce8; border: 1px solid #facc15; border-radius: 12px; padding: 12px 14px; font-size: 0.86rem; color: #713f12; }
+.phonics-key strong { display: block; margin-bottom: 4px; color: #854d0e; }
+.phonics-key code { background: white; border: 1px solid #facc15; border-radius: 4px; padding: 1px 6px; margin: 0 2px; font-family: 'Courier New', monospace; }
+.reading { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; margin-top: 10px; }
+.reading p { margin-bottom: 10px; }
+.reading p:last-child { margin-bottom: 0; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
+.question-card p { margin-bottom: 8px; }
+.toggle-btn { border: none; border-radius: 8px; background: #dbeafe; color: #1d4ed8; padding: 6px 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.data-table { width: 100%; border-collapse: collapse; margin-top: 12px; background: white; border-radius: 10px; overflow: hidden; }
+.data-table th, .data-table td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 0.92rem; vertical-align: top; }
+.data-table th { background: #1565c0; color: white; font-weight: 700; }
+.data-table td.empty { background: #f8fafc; min-height: 40px; }
+.exit-card { background: white; border: 2px dashed #7c3aed; border-radius: 12px; padding: 14px 16px; margin-top: 10px; }
+.exit-card h5 { color: #5b21b6; margin-bottom: 8px; font-size: 0.95rem; }
+.exit-card .prompt-line { display: block; border-bottom: 1.5px solid #c4b5fd; margin: 10px 0 4px; min-height: 32px; }
+.resource-card { padding: 18px 22px; border-left: 6px solid #0ea5e9; }
+.resource-card h4 { color: #0369a1; margin-bottom: 8px; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+.tf-list { list-style: none; padding: 0; margin-top: 8px; }
+.tf-list li { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+.tf-list .tf-opt { border: 1px solid #94a3b8; border-radius: 6px; padding: 3px 10px; font-size: 0.85rem; font-weight: 700; }
+.tf-list .tf-opt.t { color: #16a34a; border-color: #16a34a; }
+.tf-list .tf-opt.f { color: #dc2626; border-color: #dc2626; }
+.gap-text { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; line-height: 2; }
+.gap { display: inline-block; min-width: 110px; border-bottom: 2px solid #1d4ed8; text-align: center; font-weight: 700; color: #1d4ed8; }
+.quiz-grid { display: grid; gap: 10px; margin-top: 10px; }
+.quiz-item { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+.quiz-item .stem { font-weight: 600; margin-bottom: 6px; }
+.quiz-item .opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.quiz-item .opts label { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px 10px; font-size: 0.88rem; }
+.test-instructions { background: #fef3c7; border-left: 5px solid #f59e0b; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+.test-instructions h4 { color: #92400e; margin-bottom: 6px; }
+.id-strip { background: white; border: 1px solid #cbd5e1; border-radius: 10px; padding: 10px 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; font-size: 0.9rem; }
+.id-strip span { border-bottom: 1.5px solid #94a3b8; min-height: 22px; display: inline-block; min-width: 160px; }
+.long-answer { display: block; border-bottom: 1.5px solid #94a3b8; min-height: 30px; margin-top: 6px; }
+.long-answer + .long-answer { margin-top: 18px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
 </style></head><body>
 <div class="page"><div class="hero"><h1>Clase 7 — Unidad 2</h1><p>3°C — Electricidad · Evaluación escrita</p><div class="meta"><span>🎯 Evaluación Electricidad</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 7 de 7</span><span>📊 40 pts · 80 min</span></div></div>
 <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
 
-<div class="objective-card"><h2>Objetivo de la evaluación</h2><p>Demostrar comprensión lectora en inglés de textos técnicos breves sobre electricidad básica: conceptos, componentes, multímetro, cables y circuitos.</p></div>
-<div class="test-instructions"><h4>📋 Instrucciones</h4><p>• Prueba individual y sin diccionario.<br>• Lápiz pasta azul o negro. Respuestas en inglés o español según se indique.<br>• Tiempo: 80 min. Puntaje total: 40 pts.</p></div>
+<div class="objective-card"><h2>Objetivo de la evaluación</h2><p>Demostrar comprensión lectora y aplicación de vocabulario sobre diagnóstico básico, componentes, multimeter, cableado y decisiones entre series y parallel.</p></div>
+<div class="test-instructions"><h4>📋 Instrucciones</h4><p>• Prueba individual y sin diccionario.<br>• Responde en inglés o español según se indique.<br>• Tiempo sugerido: 80 min. Puntaje total: 40 pts.</p></div>
 <div class="id-strip"><div><strong>Nombre:</strong> <span></span></div><div><strong>Curso:</strong> 3°C</div><div><strong>Fecha:</strong> <span></span></div><div><strong>Puntaje:</strong> <span></span> / 40</div></div>
-<div class="section"><div class="section-header desarrollo">📝 Ítem I — Vocabulario (10 pts)</div><div class="section-body">
-<div class="activity"><h4>I.1 — Match the term with its definition (5 pts)</h4><table class="data-table"><tr><th>Term</th><th>Letter</th><th>Definition</th></tr><tr><td>voltage</td><td class="empty"></td><td>A. opposition to current, in ohms.</td></tr><tr><td>current</td><td class="empty"></td><td>B. closed path for the current.</td></tr><tr><td>resistance</td><td class="empty"></td><td>C. electrical pressure, in volts.</td></tr><tr><td>circuit</td><td class="empty"></td><td>D. flow of electrons, in amperes.</td></tr><tr><td>fuse</td><td class="empty"></td><td>E. protects the circuit from too much current.</td></tr></table></div>
-<div class="activity"><h4>I.2 — Complete with one word from the bank (5 pts)</h4><div class="gap-text">1. The red wire is the <span class="gap"></span>.<br>2. A <span class="gap"></span> opens and closes the circuit.<br>3. <span class="gap"></span> is measured in ohms.<br>4. In a <span class="gap"></span> circuit, if one lamp fails, the others stay on.<br>5. A <span class="gap"></span> measures V, A and Ω.</div><div class="options-bank"><strong>Word bank</strong><div class="chip-row"><span class="chip">phase</span><span class="chip">switch</span><span class="chip">resistance</span><span class="chip">parallel</span><span class="chip">multimeter</span></div></div></div>
-</div></div>
-<div class="section"><div class="section-header desarrollo">📖 Ítem II — Reading comprehension (20 pts)</div><div class="section-body">
-<div class="activity"><h4>II.1 — Read the text</h4><div class="reading"><p>Electricity is the movement of electrons through a wire. Three values describe it: voltage (V), current (A) and resistance (Ω).</p><p>A basic circuit always has a source (battery or outlet), a wire and a load (a lamp or a motor). A fuse or a breaker protects the circuit from too much current.</p><p>To measure voltage, the multimeter is connected in parallel with the circuit on. To measure resistance, the circuit must be disconnected. In Chile, color code: red or black is phase, blue is neutral, green/yellow is ground.</p></div></div>
-<div class="activity"><h4>II.2 — Answer (15 pts, 3 pts c/u)</h4><p style="margin-top:12px;"><strong>1.</strong> What are the three values that describe electricity?</p><span class="long-answer"></span><span class="long-answer"></span><p style="margin-top:12px;"><strong>2.</strong> What three elements does a basic circuit have?</p><span class="long-answer"></span><span class="long-answer"></span><p style="margin-top:12px;"><strong>3.</strong> What does a fuse do?</p><span class="long-answer"></span><span class="long-answer"></span><p style="margin-top:12px;"><strong>4.</strong> How is the multimeter connected to measure voltage?</p><span class="long-answer"></span><span class="long-answer"></span><p style="margin-top:12px;"><strong>5.</strong> What does each color mean in the Chilean code?</p><span class="long-answer"></span><span class="long-answer"></span></div>
-<div class="activity"><h4>II.3 — True or False (5 pts)</h4><p style="font-size:.9rem;color:#475569;">Marca T o F.</p><ul class="tf-list"><li><span>Current is measured in volts.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>A fuse protects the circuit.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>To measure resistance the circuit must be disconnected.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>The ground wire is red.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>In a parallel circuit, if one lamp fails, all lamps go off.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li></ul><p style="margin-top:8px;font-size:.88rem;"><strong>Justifica una con una frase del texto:</strong></p><span class="long-answer"></span><span class="long-answer"></span></div>
-</div></div>
-<div class="section"><div class="section-header cierre">✍️ Ítem III — Producción (10 pts)</div><div class="section-body">
-<div class="activity"><h4>III.1 — Short writing (5 pts)</h4><p class="lead">Imagina que eres el electricista. Escribe 3 a 5 frases en inglés explicando a un aprendiz <strong>cómo medir el voltaje en un enchufe</strong>, usando al menos 4 palabras del vocabulario.</p><span class="long-answer"></span><span class="long-answer"></span><span class="long-answer"></span><span class="long-answer"></span><span class="long-answer"></span></div>
-<div class="activity"><h4>III.2 — Decode in Spanish (5 pts)</h4><p class="lead">Lee el reporte y explica en español qué se hizo: <em>"Breaker off. Strip wires. Phase red, neutral blue, ground green. Switch in series with lamp. Breaker on. Multimeter: 220 V at outlet. Lamp ON."</em></p><span class="long-answer"></span><span class="long-answer"></span><span class="long-answer"></span></div>
-</div></div>
-<div class="resource-card"><h4>✅ Antes de entregar</h4><p>Revisa nombre, todas las respuestas y letra legible.</p></div>
+<div class="section"><div class="section-header desarrollo">📝 Ítem I — Vocabulario (10 pts)</div><div class="section-body"><div class="activity"><h4>I.1 — Match the term with its definition (5 pts)</h4><table class="data-table"><tr><th>Term</th><th>Letter</th><th>Definition</th></tr><tr><td>continuity</td><td class="empty"></td><td>A. branch that can keep working independently.</td></tr><tr><td>gauge</td><td class="empty"></td><td>B. thickness of a conductor.</td></tr><tr><td>parallel branch</td><td class="empty"></td><td>C. confirmed path through the circuit.</td></tr><tr><td>switch</td><td class="empty"></td><td>D. part that opens or closes the circuit.</td></tr><tr><td>reliability</td><td class="empty"></td><td>E. ability to keep working correctly.</td></tr></table></div><div class="activity"><h4>I.2 — Complete with one word from the bank (5 pts)</h4><div class="gap-text">1. The trainee uses the <span class="gap"></span> to confirm the hypothesis.<br>2. Clear cable <span class="gap"></span> reduces confusion in the box.<br>3. A room with three lamps often needs a <span class="gap"></span> circuit.<br>4. The most urgent <span class="gap"></span> must be solved first.<br>5. The final <span class="gap"></span> tells the next team what is pending.</div><div class="options-bank"><strong>Word bank</strong><div class="chip-row"><span class="chip">multimeter</span><span class="chip">labels</span><span class="chip">parallel</span><span class="chip">priority</span><span class="chip">handover</span></div></div></div></div></div>
+<div class="section"><div class="section-header desarrollo">📖 Ítem II — Reading comprehension (20 pts)</div><div class="section-body"><div class="activity"><h4>II.1 — Read the text</h4><div class="reading"><p>The school maintenance team checks one classroom because a lamp does not work. The other lamps still work normally.</p><p>The trainee uses the multimeter in continuity mode and finds that one switch connection is not passing current correctly. Cable labels are reviewed to avoid confusion before the branch is opened.</p><p>After the diagnosis, the team writes a short handover note: one switch connection pending repair, labels verified, and parallel circuit confirmed for the room lighting.</p></div></div><div class="activity"><h4>II.2 — Answer (15 pts)</h4><p style="margin-top:12px;"><strong>1.</strong> What is the original complaint from the classroom?</p><span class="long-answer"></span><span class="long-answer"></span><p style="margin-top:12px;"><strong>2.</strong> Which multimeter mode is used in the diagnosis?</p><span class="long-answer"></span><span class="long-answer"></span><p style="margin-top:12px;"><strong>3.</strong> What problem is found in the branch?</p><span class="long-answer"></span><span class="long-answer"></span><p style="margin-top:12px;"><strong>4.</strong> Why are cable labels reviewed?</p><span class="long-answer"></span><span class="long-answer"></span><p style="margin-top:12px;"><strong>5.</strong> What three points are written in the handover note?</p><span class="long-answer"></span><span class="long-answer"></span></div><div class="activity"><h4>II.3 — True or False (5 pts)</h4><ul class="tf-list"><li><span>All lamps in the classroom are off.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>The team uses continuity mode on the multimeter.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>The cable labels are ignored during diagnosis.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>The room lighting is confirmed as a parallel circuit.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li><li><span>The handover note includes one pending repair.</span><span class="tf-opt t">T</span><span class="tf-opt f">F</span></li></ul><p style="margin-top:8px;font-size:.88rem;"><strong>Justifica una con una frase del texto:</strong></p><span class="long-answer"></span><span class="long-answer"></span></div></div></div>
+<div class="section"><div class="section-header cierre">✍️ Ítem III — Producción (10 pts)</div><div class="section-body"><div class="activity"><h4>III.1 — Short writing (5 pts)</h4><p class="lead">Escribe 3 a 5 frases en inglés para explicar a otra cuadrilla <strong>qué se verificó hoy y qué debe repararse mañana</strong>, usando al menos 4 palabras de la unidad.</p><span class="long-answer"></span><span class="long-answer"></span><span class="long-answer"></span><span class="long-answer"></span><span class="long-answer"></span></div><div class="activity"><h4>III.2 — Decode in Spanish (5 pts)</h4><p class="lead">Lee el siguiente handover y explica en español qué ocurrió: <em>Complaint received. One switch connection without continuity. Labels verified. Parallel circuit confirmed. Repair pending next shift.</em></p><span class="long-answer"></span><span class="long-answer"></span><span class="long-answer"></span></div></div></div>
+<div class="resource-card"><h4>✅ Antes de entregar</h4><p>Revisa nombre, respuestas completas y letra legible.</p></div>
 
 <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 3° Medio TP.</p>
 </div><script>function toggleAnswer(id, btn){const a=document.getElementById(id);const o=a.classList.toggle('open');btn.textContent=o?'Ocultar respuesta':'Ver respuesta';}</script></body></html>

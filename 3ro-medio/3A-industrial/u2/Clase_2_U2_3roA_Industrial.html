@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Clase 2 — Unidad 2 — 3°A — Mecánica Industrial</title>
 <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.65}
-.page{max-width:1080px;margin:0 auto;padding:24px 18px 40px}
-.hero{background:linear-gradient(135deg,#0f766e,#155e75);color:white;border-radius:18px;padding:28px;box-shadow:0 18px 40px rgba(15,118,110,.18)}
-.hero h1{font-size:2rem;margin-bottom:6px}.hero p{color:rgba(255,255,255,.88)}
-.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.meta span{background:rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;font-size:.84rem}
-.toolbar{display:flex;justify-content:flex-end;margin:18px 0 10px}
-.print-btn{border:none;border-radius:10px;background:#0f172a;color:white;padding:10px 16px;font-weight:600;cursor:pointer}
-.objective-card,.section,.resource-card{background:white;border-radius:16px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:18px;overflow:hidden}
-.objective-card{padding:22px 24px;border-left:6px solid #0f766e}
-.objective-card h2{color:#0f766e;font-size:1.05rem;margin-bottom:8px}
-.section-header{color:white;font-weight:700;padding:14px 22px;font-size:1rem}
-.inicio{background:#2e7d32}.desarrollo{background:#1565c0}.cierre{background:#7c3aed}
-.section-body{padding:20px 22px 22px}
-.activity{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-bottom:16px}
-.activity:last-child{margin-bottom:0}.activity h4{color:#0f172a;margin-bottom:6px;font-size:1rem}
-.activity .lead{color:#475569;margin-bottom:12px;font-size:.95rem}
-.match-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
-.match-card{background:white;border:1px solid #cbd5e1;border-radius:12px;padding:14px;text-align:center}
-.match-card .icon{font-size:2.4rem;line-height:1;display:block;margin-bottom:8px}
-.match-card .label-blank{display:block;border-bottom:2px dashed #94a3b8;margin:8px auto 4px;min-height:22px;max-width:80%}
-.match-card .clue{font-size:.82rem;color:#64748b}
-.options-bank{background:#ecfeff;border:1px dashed #06b6d4;border-radius:12px;padding:12px 14px;margin-top:12px}
-.options-bank strong{display:block;color:#0e7490;margin-bottom:6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
-.options-bank .chip-row{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:white;border:1px solid #0e7490;color:#0e7490;padding:5px 12px;border-radius:999px;font-size:.86rem;font-weight:600}
-.answer-line{display:block;height:38px;border-bottom:2px solid #94a3b8;margin-top:6px}
-.glossary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:12px}
-.vocab-card{background:white;border:1px solid #dbeafe;border-radius:12px;padding:14px}
-.vocab-card .word{font-weight:800;color:#1d4ed8;font-size:1.02rem;margin-bottom:4px}
-.vocab-card .meaning{font-size:.92rem;color:#1f2937;margin-bottom:6px}
-.vocab-card .pron{font-size:.88rem;color:#475569;font-family:'Courier New',monospace}
-.phonics-key{margin-top:14px;background:#fefce8;border:1px solid #facc15;border-radius:12px;padding:12px 14px;font-size:.86rem;color:#713f12}
-.phonics-key strong{display:block;margin-bottom:4px;color:#854d0e}
-.phonics-key code{background:white;border:1px solid #facc15;border-radius:4px;padding:1px 6px;margin:0 2px;font-family:'Courier New',monospace}
-.reading{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-top:10px}
-.reading p{margin-bottom:10px}.reading p:last-child{margin-bottom:0}
-.question-card{background:white;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin-top:10px}
-.question-card p{margin-bottom:8px}
-.toggle-btn{border:none;border-radius:8px;background:#dbeafe;color:#1d4ed8;padding:6px 12px;font-weight:700;font-size:.85rem;cursor:pointer}
-.answer-box{display:none;background:#eefbf3;border-left:4px solid #16a34a;padding:10px 12px;border-radius:8px;margin-top:10px}
-.answer-box.open{display:block}
-.data-table{width:100%;border-collapse:collapse;margin-top:12px;background:white;border-radius:10px;overflow:hidden}
-.data-table th,.data-table td{border:1px solid #cbd5e1;padding:10px 12px;text-align:left;font-size:.92rem;vertical-align:top}
-.data-table th{background:#1565c0;color:white;font-weight:700}
-.data-table td.empty{background:#f8fafc;min-height:40px}
-.exit-card{background:white;border:2px dashed #7c3aed;border-radius:12px;padding:14px 16px;margin-top:10px}
-.exit-card h5{color:#5b21b6;margin-bottom:8px;font-size:.95rem}
-.exit-card .prompt-line{display:block;border-bottom:1.5px solid #c4b5fd;margin:10px 0 4px;min-height:32px}
-.resource-card{padding:18px 22px;border-left:6px solid #0ea5e9}
-.resource-card h4{color:#0369a1;margin-bottom:8px}
-.footer-note{text-align:center;color:#6b7280;font-size:.82rem;margin-top:28px}
-.tf-list{list-style:none;padding:0;margin-top:8px}
-.tf-list li{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;background:white;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin-bottom:8px}
-.tf-list .tf-opt{border:1px solid #94a3b8;border-radius:6px;padding:3px 10px;font-size:.85rem;font-weight:700}
-.tf-list .tf-opt.t{color:#16a34a;border-color:#16a34a}.tf-list .tf-opt.f{color:#dc2626;border-color:#dc2626}
-.gap-text{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;line-height:2}
-.gap{display:inline-block;min-width:110px;border-bottom:2px solid #1d4ed8;text-align:center;font-weight:700;color:#1d4ed8}
-.quiz-grid{display:grid;gap:10px;margin-top:10px}
-.quiz-item{background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px}
-.quiz-item .stem{font-weight:600;margin-bottom:6px}
-.quiz-item .opts{display:flex;flex-wrap:wrap;gap:8px}
-.quiz-item .opts label{background:#f1f5f9;border:1px solid #cbd5e1;border-radius:8px;padding:4px 10px;font-size:.88rem}
-.test-instructions{background:#fef3c7;border-left:5px solid #f59e0b;border-radius:10px;padding:14px 16px;margin-bottom:16px}
-.test-instructions h4{color:#92400e;margin-bottom:6px}
-.id-strip{background:white;border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;font-size:.9rem}
-.id-strip span{border-bottom:1.5px solid #94a3b8;min-height:22px;display:inline-block;min-width:160px}
-.long-answer{display:block;border-bottom:1.5px solid #94a3b8;min-height:30px;margin-top:6px}.long-answer+.long-answer{margin-top:18px}
-@media (max-width:720px){.hero h1{font-size:1.55rem}.page{padding:16px 12px 28px}}
-@media print{body{background:white}.toolbar{display:none}.hero,.objective-card,.section,.resource-card{box-shadow:none}}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.activity { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px; margin-bottom: 16px; }
+.activity:last-child { margin-bottom: 0; }
+.activity h4 { color: #0f172a; margin-bottom: 6px; font-size: 1rem; }
+.activity .lead { color: #475569; margin-bottom: 12px; font-size: 0.95rem; }
+.match-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 8px; }
+.match-card { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 14px; text-align: center; }
+.match-card .icon { font-size: 2.4rem; line-height: 1; display: block; margin-bottom: 8px; }
+.match-card .label-blank { display: block; border-bottom: 2px dashed #94a3b8; margin: 8px auto 4px; min-height: 22px; max-width: 80%; }
+.match-card .clue { font-size: 0.82rem; color: #64748b; }
+.options-bank { background: #ecfeff; border: 1px dashed #06b6d4; border-radius: 12px; padding: 12px 14px; margin-top: 12px; }
+.options-bank strong { display: block; color: #0e7490; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.options-bank .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: white; border: 1px solid #0e7490; color: #0e7490; padding: 5px 12px; border-radius: 999px; font-size: 0.86rem; font-weight: 600; }
+.answer-line { display: block; height: 38px; border-bottom: 2px solid #94a3b8; margin-top: 6px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 12px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.vocab-card .word { font-weight: 800; color: #1d4ed8; font-size: 1.02rem; margin-bottom: 4px; }
+.vocab-card .meaning { font-size: 0.92rem; color: #1f2937; margin-bottom: 6px; }
+.vocab-card .pron { font-size: 0.88rem; color: #475569; font-family: 'Courier New', monospace; }
+.phonics-key { margin-top: 14px; background: #fefce8; border: 1px solid #facc15; border-radius: 12px; padding: 12px 14px; font-size: 0.86rem; color: #713f12; }
+.phonics-key strong { display: block; margin-bottom: 4px; color: #854d0e; }
+.phonics-key code { background: white; border: 1px solid #facc15; border-radius: 4px; padding: 1px 6px; margin: 0 2px; font-family: 'Courier New', monospace; }
+.reading { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; margin-top: 10px; }
+.reading p { margin-bottom: 10px; }
+.reading p:last-child { margin-bottom: 0; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
+.question-card p { margin-bottom: 8px; }
+.toggle-btn { border: none; border-radius: 8px; background: #dbeafe; color: #1d4ed8; padding: 6px 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.data-table { width: 100%; border-collapse: collapse; margin-top: 12px; background: white; border-radius: 10px; overflow: hidden; }
+.data-table th, .data-table td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 0.92rem; vertical-align: top; }
+.data-table th { background: #1565c0; color: white; font-weight: 700; }
+.data-table td.empty { background: #f8fafc; min-height: 40px; }
+.exit-card { background: white; border: 2px dashed #7c3aed; border-radius: 12px; padding: 14px 16px; margin-top: 10px; }
+.exit-card h5 { color: #5b21b6; margin-bottom: 8px; font-size: 0.95rem; }
+.exit-card .prompt-line { display: block; border-bottom: 1.5px solid #c4b5fd; margin: 10px 0 4px; min-height: 32px; }
+.resource-card { padding: 18px 22px; border-left: 6px solid #0ea5e9; }
+.resource-card h4 { color: #0369a1; margin-bottom: 8px; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+.tf-list { list-style: none; padding: 0; margin-top: 8px; }
+.tf-list li { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+.tf-list .tf-opt { border: 1px solid #94a3b8; border-radius: 6px; padding: 3px 10px; font-size: 0.85rem; font-weight: 700; }
+.tf-list .tf-opt.t { color: #16a34a; border-color: #16a34a; }
+.tf-list .tf-opt.f { color: #dc2626; border-color: #dc2626; }
+.gap-text { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; line-height: 2; }
+.gap { display: inline-block; min-width: 110px; border-bottom: 2px solid #1d4ed8; text-align: center; font-weight: 700; color: #1d4ed8; }
+.quiz-grid { display: grid; gap: 10px; margin-top: 10px; }
+.quiz-item { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+.quiz-item .stem { font-weight: 600; margin-bottom: 6px; }
+.quiz-item .opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.quiz-item .opts label { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px 10px; font-size: 0.88rem; }
+.test-instructions { background: #fef3c7; border-left: 5px solid #f59e0b; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+.test-instructions h4 { color: #92400e; margin-bottom: 6px; }
+.id-strip { background: white; border: 1px solid #cbd5e1; border-radius: 10px; padding: 10px 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; font-size: 0.9rem; }
+.id-strip span { border-bottom: 1.5px solid #94a3b8; min-height: 22px; display: inline-block; min-width: 160px; }
+.long-answer { display: block; border-bottom: 1.5px solid #94a3b8; min-height: 30px; margin-top: 6px; }
+.long-answer + .long-answer { margin-top: 18px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
 </style></head><body>
-<div class="page"><div class="hero"><h1>Clase 2 — Unidad 2</h1><p>3°A — Mecánica Industrial · Measuring instruments</p><div class="meta"><span>🎯 Measurement</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 2 de 7</span><span>🧩 Caliper · micrometer</span></div></div>
+<div class="page"><div class="hero"><h1>Clase 2 — Unidad 2</h1><p>3°A — Mecánica Industrial · Measuring without wasting material</p><div class="meta"><span>🎯 Caliper vs. micrometer</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 2 de 7</span><span>🧩 Control de dimensión</span></div></div>
 <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-<div class="objective-card"><h2>Objetivo de la clase</h2><p>Identificar en inglés los instrumentos básicos de medición y su uso correcto en taller.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>🏷️ Actividad 1 — Label the diagram</h4><p class="lead">Identifica los 5 instrumentos de medición proyectados.</p><ul style="list-style:none;padding:0;"><li style="display:flex;gap:10px;align-items:center;padding:6px 0;border-bottom:1px dashed #cbd5e1;"><span style="background:#0f766e;color:white;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">1</span><span style="flex:1;border-bottom:2px dashed #94a3b8;min-height:22px;"></span></li><li style="display:flex;gap:10px;align-items:center;padding:6px 0;border-bottom:1px dashed #cbd5e1;"><span style="background:#0f766e;color:white;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">2</span><span style="flex:1;border-bottom:2px dashed #94a3b8;min-height:22px;"></span></li><li style="display:flex;gap:10px;align-items:center;padding:6px 0;border-bottom:1px dashed #cbd5e1;"><span style="background:#0f766e;color:white;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">3</span><span style="flex:1;border-bottom:2px dashed #94a3b8;min-height:22px;"></span></li><li style="display:flex;gap:10px;align-items:center;padding:6px 0;border-bottom:1px dashed #cbd5e1;"><span style="background:#0f766e;color:white;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">4</span><span style="flex:1;border-bottom:2px dashed #94a3b8;min-height:22px;"></span></li><li style="display:flex;gap:10px;align-items:center;padding:6px 0;border-bottom:1px dashed #cbd5e1;"><span style="background:#0f766e;color:white;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">5</span><span style="flex:1;border-bottom:2px dashed #94a3b8;min-height:22px;"></span></li></ul><div class="options-bank"><strong>Word bank</strong><div class="chip-row"><span class="chip">ruler</span><span class="chip">caliper</span><span class="chip">micrometer</span><span class="chip">tape measure</span><span class="chip">protractor</span></div></div></div><div class="activity"><h4>🔁 Quick recall</h4><p><em>Name one tool you used last class.</em></p><span class="answer-line"></span></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">measurement</div><div class="meaning">the action of finding size.</div><div class="pron">/mé-ʒer-ment/</div></div><div class="vocab-card"><div class="word">caliper</div><div class="meaning">measures inside/outside dimensions.</div><div class="pron">/cá-li-per/</div></div><div class="vocab-card"><div class="word">micrometer</div><div class="meaning">measures very small thicknesses.</div><div class="pron">/mái-cró-me-ter/</div></div><div class="vocab-card"><div class="word">millimeter</div><div class="meaning">unit of length (mm).</div><div class="pron">/mí-li-mi-ter/</div></div><div class="vocab-card"><div class="word">inch</div><div class="meaning">unit of length (in).</div><div class="pron">/íntʃ/</div></div><div class="vocab-card"><div class="word">accuracy</div><div class="meaning">how close to the true value.</div><div class="pron">/á-kiu-ra-si/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>working</em> · <code>/dʒ/</code> as in <em>engine</em></div></div><div class="activity"><h4>📖 Reading: Measuring a metal piece</h4><div class="reading"><p>When a student measures a metal piece, the right instrument depends on the precision needed.</p><p>A ruler measures length in centimeters or inches with an accuracy of 1 mm. A caliper measures inside and outside dimensions with an accuracy of 0.05 mm or 0.02 mm.</p><p>A micrometer is more precise: it measures thicknesses with an accuracy of 0.01 mm. It is used for screws, pins and small shafts where a small error matters.</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde con información del texto.</p><div class="question-card"><p><strong>1.</strong> What is the accuracy of a basic ruler?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">1 mm.</div></div><div class="question-card"><p><strong>2.</strong> What kind of dimensions does a caliper measure?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">Inside and outside dimensions.</div></div><div class="question-card"><p><strong>3.</strong> Which instrument has 0.01 mm accuracy?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">The micrometer.</div></div></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>📊 Pick the right instrument</h4><table class="data-table"><tr><th>Measurement</th><th>Best instrument</th></tr><tr><td><strong>Length of a steel bar in cm</strong></td><td class="empty"></td></tr><tr><td><strong>Inner diameter of a tube</strong></td><td class="empty"></td></tr><tr><td><strong>Thickness of a small screw</strong></td><td class="empty"></td></tr></table></div><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>Why precision matters</h5><p>Escribe en inglés una frase que explique <strong>por qué la precisión importa</strong> en el taller.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>Próxima clase: seguridad y EPP.</p></div>
+<div class="objective-card"><h2>Objetivo de la clase</h2><p>Distinguir en inglés el uso del caliper y del micrometer para tomar decisiones de medición en un contexto real de taller industrial.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>🔡 Actividad 1 — Fill the gaps</h4><p class="lead">Completa con palabras del banco antes de revisar la lectura.</p><div class="gap-text">1. A <span class="gap"></span> checks very small differences in thickness.<br>2. A <span class="gap"></span> is faster when you need inside and outside dimensions.<br>3. Wrong dimensions create <span class="gap"></span> and delay.</div><div class="options-bank"><strong>Word bank</strong><div class="chip-row"><span class="chip">micrometer</span><span class="chip">caliper</span><span class="chip">waste</span></div></div></div><div class="activity"><h4>🔁 Quick recall</h4><p>Piensa en la clase anterior: <em>why is measuring before cutting more professional than fixing the mistake later?</em></p><span class="answer-line"></span></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">dimension</div><div class="meaning">size of the piece.</div><div class="pron">/di-mén-ʃon/</div></div><div class="vocab-card"><div class="word">tolerance</div><div class="meaning">accepted difference from the target size.</div><div class="pron">/tó-le-rans/</div></div><div class="vocab-card"><div class="word">caliper</div><div class="meaning">tool for inside and outside dimensions.</div><div class="pron">/cá-li-per/</div></div><div class="vocab-card"><div class="word">micrometer</div><div class="meaning">tool for very precise thickness.</div><div class="pron">/mai-cró-mi-ter/</div></div><div class="vocab-card"><div class="word">scrap</div><div class="meaning">material lost because of an error.</div><div class="pron">/scráp/</div></div><div class="vocab-card"><div class="word">within tolerance</div><div class="meaning">correct and acceptable dimension.</div><div class="pron">/ui-dín tó-le-rans/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>grinding</em> · <code>/dʒ/</code> as in <em>job</em> · <code>/ʃ/</code> as in <em>shaft</em></div></div><div class="activity"><h4>📖 Reading: A small mistake, a big delay</h4><div class="reading"><p>A team in the workshop must make six identical aluminum spacers. The target dimension is 24.00 mm and the teacher explains that the acceptable tolerance is plus or minus 0.05 mm.</p><p>One student uses a ruler because it is faster. Another student asks for the caliper to check the first cut. The first spacer reads 24.30 mm, so the group stops before repeating the same mistake on the other five pieces.</p><p>After adjusting the process, they use the micrometer to verify the final thickness of the last spacer. This time the piece is within tolerance, and the group saves material, time and frustration.</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde y luego explica qué decisión del equipo evitó repetir el error seis veces.</p><div class="question-card"><p><strong>1.</strong> What is the target dimension for the spacer?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">24.00 mm.</div></div><div class="question-card"><p><strong>2.</strong> Why does the group stop after checking the first spacer?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">Because it reads 24.30 mm, so repeating the same process would create more wrong pieces.</div></div><div class="question-card"><p><strong>3.</strong> What is the benefit of using the micrometer at the end?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">It verifies that the final piece is within tolerance and helps avoid waste.</div></div></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>📊 Choose the right instrument</h4><table class="data-table"><tr><th>Workshop situation</th><th>Best option and why</th></tr><tr><td><strong>Quick check of outside diameter</strong></td><td class="empty"></td></tr><tr><td><strong>Very precise final thickness</strong></td><td class="empty"></td></tr><tr><td><strong>Inside width of a slot</strong></td><td class="empty"></td></tr><tr><td><strong>Confirm the first piece before production</strong></td><td class="empty"></td></tr></table></div><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>Advice for a classmate</h5><p>Escribe una recomendación en inglés para un compañero que quiere medir rápido pero bien, usando <em>check</em>, <em>recheck</em> o <em>tolerance</em>.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>Próxima clase: señales, PPE y decisiones seguras cuando el taller está bajo presión.</p></div>
 <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 3° Medio TP.</p>
 </div><script>function toggleAnswer(id, btn){const a=document.getElementById(id);const o=a.classList.toggle('open');btn.textContent=o?'Ocultar respuesta':'Ver respuesta';}</script></body></html>

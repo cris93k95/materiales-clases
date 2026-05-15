@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Clase 6 — Unidad 2 — 3°A — Mecánica Industrial</title>
 <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.65}
-.page{max-width:1080px;margin:0 auto;padding:24px 18px 40px}
-.hero{background:linear-gradient(135deg,#0f766e,#155e75);color:white;border-radius:18px;padding:28px;box-shadow:0 18px 40px rgba(15,118,110,.18)}
-.hero h1{font-size:2rem;margin-bottom:6px}.hero p{color:rgba(255,255,255,.88)}
-.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.meta span{background:rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;font-size:.84rem}
-.toolbar{display:flex;justify-content:flex-end;margin:18px 0 10px}
-.print-btn{border:none;border-radius:10px;background:#0f172a;color:white;padding:10px 16px;font-weight:600;cursor:pointer}
-.objective-card,.section,.resource-card{background:white;border-radius:16px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:18px;overflow:hidden}
-.objective-card{padding:22px 24px;border-left:6px solid #0f766e}
-.objective-card h2{color:#0f766e;font-size:1.05rem;margin-bottom:8px}
-.section-header{color:white;font-weight:700;padding:14px 22px;font-size:1rem}
-.inicio{background:#2e7d32}.desarrollo{background:#1565c0}.cierre{background:#7c3aed}
-.section-body{padding:20px 22px 22px}
-.activity{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-bottom:16px}
-.activity:last-child{margin-bottom:0}.activity h4{color:#0f172a;margin-bottom:6px;font-size:1rem}
-.activity .lead{color:#475569;margin-bottom:12px;font-size:.95rem}
-.match-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
-.match-card{background:white;border:1px solid #cbd5e1;border-radius:12px;padding:14px;text-align:center}
-.match-card .icon{font-size:2.4rem;line-height:1;display:block;margin-bottom:8px}
-.match-card .label-blank{display:block;border-bottom:2px dashed #94a3b8;margin:8px auto 4px;min-height:22px;max-width:80%}
-.match-card .clue{font-size:.82rem;color:#64748b}
-.options-bank{background:#ecfeff;border:1px dashed #06b6d4;border-radius:12px;padding:12px 14px;margin-top:12px}
-.options-bank strong{display:block;color:#0e7490;margin-bottom:6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
-.options-bank .chip-row{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:white;border:1px solid #0e7490;color:#0e7490;padding:5px 12px;border-radius:999px;font-size:.86rem;font-weight:600}
-.answer-line{display:block;height:38px;border-bottom:2px solid #94a3b8;margin-top:6px}
-.glossary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:12px}
-.vocab-card{background:white;border:1px solid #dbeafe;border-radius:12px;padding:14px}
-.vocab-card .word{font-weight:800;color:#1d4ed8;font-size:1.02rem;margin-bottom:4px}
-.vocab-card .meaning{font-size:.92rem;color:#1f2937;margin-bottom:6px}
-.vocab-card .pron{font-size:.88rem;color:#475569;font-family:'Courier New',monospace}
-.phonics-key{margin-top:14px;background:#fefce8;border:1px solid #facc15;border-radius:12px;padding:12px 14px;font-size:.86rem;color:#713f12}
-.phonics-key strong{display:block;margin-bottom:4px;color:#854d0e}
-.phonics-key code{background:white;border:1px solid #facc15;border-radius:4px;padding:1px 6px;margin:0 2px;font-family:'Courier New',monospace}
-.reading{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-top:10px}
-.reading p{margin-bottom:10px}.reading p:last-child{margin-bottom:0}
-.question-card{background:white;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin-top:10px}
-.question-card p{margin-bottom:8px}
-.toggle-btn{border:none;border-radius:8px;background:#dbeafe;color:#1d4ed8;padding:6px 12px;font-weight:700;font-size:.85rem;cursor:pointer}
-.answer-box{display:none;background:#eefbf3;border-left:4px solid #16a34a;padding:10px 12px;border-radius:8px;margin-top:10px}
-.answer-box.open{display:block}
-.data-table{width:100%;border-collapse:collapse;margin-top:12px;background:white;border-radius:10px;overflow:hidden}
-.data-table th,.data-table td{border:1px solid #cbd5e1;padding:10px 12px;text-align:left;font-size:.92rem;vertical-align:top}
-.data-table th{background:#1565c0;color:white;font-weight:700}
-.data-table td.empty{background:#f8fafc;min-height:40px}
-.exit-card{background:white;border:2px dashed #7c3aed;border-radius:12px;padding:14px 16px;margin-top:10px}
-.exit-card h5{color:#5b21b6;margin-bottom:8px;font-size:.95rem}
-.exit-card .prompt-line{display:block;border-bottom:1.5px solid #c4b5fd;margin:10px 0 4px;min-height:32px}
-.resource-card{padding:18px 22px;border-left:6px solid #0ea5e9}
-.resource-card h4{color:#0369a1;margin-bottom:8px}
-.footer-note{text-align:center;color:#6b7280;font-size:.82rem;margin-top:28px}
-.tf-list{list-style:none;padding:0;margin-top:8px}
-.tf-list li{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;background:white;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin-bottom:8px}
-.tf-list .tf-opt{border:1px solid #94a3b8;border-radius:6px;padding:3px 10px;font-size:.85rem;font-weight:700}
-.tf-list .tf-opt.t{color:#16a34a;border-color:#16a34a}.tf-list .tf-opt.f{color:#dc2626;border-color:#dc2626}
-.gap-text{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;line-height:2}
-.gap{display:inline-block;min-width:110px;border-bottom:2px solid #1d4ed8;text-align:center;font-weight:700;color:#1d4ed8}
-.quiz-grid{display:grid;gap:10px;margin-top:10px}
-.quiz-item{background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px}
-.quiz-item .stem{font-weight:600;margin-bottom:6px}
-.quiz-item .opts{display:flex;flex-wrap:wrap;gap:8px}
-.quiz-item .opts label{background:#f1f5f9;border:1px solid #cbd5e1;border-radius:8px;padding:4px 10px;font-size:.88rem}
-.test-instructions{background:#fef3c7;border-left:5px solid #f59e0b;border-radius:10px;padding:14px 16px;margin-bottom:16px}
-.test-instructions h4{color:#92400e;margin-bottom:6px}
-.id-strip{background:white;border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;font-size:.9rem}
-.id-strip span{border-bottom:1.5px solid #94a3b8;min-height:22px;display:inline-block;min-width:160px}
-.long-answer{display:block;border-bottom:1.5px solid #94a3b8;min-height:30px;margin-top:6px}.long-answer+.long-answer{margin-top:18px}
-@media (max-width:720px){.hero h1{font-size:1.55rem}.page{padding:16px 12px 28px}}
-@media print{body{background:white}.toolbar{display:none}.hero,.objective-card,.section,.resource-card{box-shadow:none}}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.activity { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px; margin-bottom: 16px; }
+.activity:last-child { margin-bottom: 0; }
+.activity h4 { color: #0f172a; margin-bottom: 6px; font-size: 1rem; }
+.activity .lead { color: #475569; margin-bottom: 12px; font-size: 0.95rem; }
+.match-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 8px; }
+.match-card { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 14px; text-align: center; }
+.match-card .icon { font-size: 2.4rem; line-height: 1; display: block; margin-bottom: 8px; }
+.match-card .label-blank { display: block; border-bottom: 2px dashed #94a3b8; margin: 8px auto 4px; min-height: 22px; max-width: 80%; }
+.match-card .clue { font-size: 0.82rem; color: #64748b; }
+.options-bank { background: #ecfeff; border: 1px dashed #06b6d4; border-radius: 12px; padding: 12px 14px; margin-top: 12px; }
+.options-bank strong { display: block; color: #0e7490; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.options-bank .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: white; border: 1px solid #0e7490; color: #0e7490; padding: 5px 12px; border-radius: 999px; font-size: 0.86rem; font-weight: 600; }
+.answer-line { display: block; height: 38px; border-bottom: 2px solid #94a3b8; margin-top: 6px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 12px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.vocab-card .word { font-weight: 800; color: #1d4ed8; font-size: 1.02rem; margin-bottom: 4px; }
+.vocab-card .meaning { font-size: 0.92rem; color: #1f2937; margin-bottom: 6px; }
+.vocab-card .pron { font-size: 0.88rem; color: #475569; font-family: 'Courier New', monospace; }
+.phonics-key { margin-top: 14px; background: #fefce8; border: 1px solid #facc15; border-radius: 12px; padding: 12px 14px; font-size: 0.86rem; color: #713f12; }
+.phonics-key strong { display: block; margin-bottom: 4px; color: #854d0e; }
+.phonics-key code { background: white; border: 1px solid #facc15; border-radius: 4px; padding: 1px 6px; margin: 0 2px; font-family: 'Courier New', monospace; }
+.reading { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; margin-top: 10px; }
+.reading p { margin-bottom: 10px; }
+.reading p:last-child { margin-bottom: 0; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
+.question-card p { margin-bottom: 8px; }
+.toggle-btn { border: none; border-radius: 8px; background: #dbeafe; color: #1d4ed8; padding: 6px 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.data-table { width: 100%; border-collapse: collapse; margin-top: 12px; background: white; border-radius: 10px; overflow: hidden; }
+.data-table th, .data-table td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 0.92rem; vertical-align: top; }
+.data-table th { background: #1565c0; color: white; font-weight: 700; }
+.data-table td.empty { background: #f8fafc; min-height: 40px; }
+.exit-card { background: white; border: 2px dashed #7c3aed; border-radius: 12px; padding: 14px 16px; margin-top: 10px; }
+.exit-card h5 { color: #5b21b6; margin-bottom: 8px; font-size: 0.95rem; }
+.exit-card .prompt-line { display: block; border-bottom: 1.5px solid #c4b5fd; margin: 10px 0 4px; min-height: 32px; }
+.resource-card { padding: 18px 22px; border-left: 6px solid #0ea5e9; }
+.resource-card h4 { color: #0369a1; margin-bottom: 8px; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+.tf-list { list-style: none; padding: 0; margin-top: 8px; }
+.tf-list li { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+.tf-list .tf-opt { border: 1px solid #94a3b8; border-radius: 6px; padding: 3px 10px; font-size: 0.85rem; font-weight: 700; }
+.tf-list .tf-opt.t { color: #16a34a; border-color: #16a34a; }
+.tf-list .tf-opt.f { color: #dc2626; border-color: #dc2626; }
+.gap-text { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; line-height: 2; }
+.gap { display: inline-block; min-width: 110px; border-bottom: 2px solid #1d4ed8; text-align: center; font-weight: 700; color: #1d4ed8; }
+.quiz-grid { display: grid; gap: 10px; margin-top: 10px; }
+.quiz-item { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+.quiz-item .stem { font-weight: 600; margin-bottom: 6px; }
+.quiz-item .opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.quiz-item .opts label { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px 10px; font-size: 0.88rem; }
+.test-instructions { background: #fef3c7; border-left: 5px solid #f59e0b; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+.test-instructions h4 { color: #92400e; margin-bottom: 6px; }
+.id-strip { background: white; border: 1px solid #cbd5e1; border-radius: 10px; padding: 10px 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; font-size: 0.9rem; }
+.id-strip span { border-bottom: 1.5px solid #94a3b8; min-height: 22px; display: inline-block; min-width: 160px; }
+.long-answer { display: block; border-bottom: 1.5px solid #94a3b8; min-height: 30px; margin-top: 6px; }
+.long-answer + .long-answer { margin-top: 18px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
 </style></head><body>
-<div class="page"><div class="hero"><h1>Clase 6 — Unidad 2</h1><p>3°A — Mecánica Industrial · Review</p><div class="meta"><span>🎯 Repaso integrador</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 6 de 7</span><span>🧩 Closing the workshop</span></div></div>
+<div class="page"><div class="hero"><h1>Clase 6 — Unidad 2</h1><p>3°A — Mecánica Industrial · Quality check and handover</p><div class="meta"><span>🎯 Inspection and report</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 6 de 7</span><span>🧩 Final workshop check</span></div></div>
 <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-<div class="objective-card"><h2>Objetivo de la clase</h2><p>Integrar el vocabulario y los textos técnicos de la Unidad 2 mediante actividades de repaso para preparar la evaluación.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>⚡ Actividad 1 — Speed quiz</h4><p class="lead">Marca la opción correcta.</p><div class="quiz-grid"><div class="quiz-item"><div class="stem">1. A lathe is used to…</div><div class="opts"><label>A) cut wood</label><label>B) turn metal pieces</label><label>C) measure length</label></div></div><div class="quiz-item"><div class="stem">2. PPE includes…</div><div class="opts"><label>A) hammer and file</label><label>B) helmet and goggles</label><label>C) lathe and vise</label></div></div><div class="quiz-item"><div class="stem">3. A micrometer measures with accuracy of…</div><div class="opts"><label>A) 1 mm</label><label>B) 0.05 mm</label><label>C) 0.01 mm</label></div></div><div class="quiz-item"><div class="stem">4. Copper is used for wires because it is…</div><div class="opts"><label>A) hard</label><label>B) magnetic</label><label>C) a good conductor</label></div></div><div class="quiz-item"><div class="stem">5. A red sign usually means…</div><div class="opts"><label>A) exit</label><label>B) prohibition</label><label>C) hazard</label></div></div><div class="quiz-item"><div class="stem">6. The first step of an operation is usually…</div><div class="opts"><label>A) cutting</label><label>B) marking</label><label>C) grinding</label></div></div></div></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">report</div><div class="meaning">a written summary of the work.</div><div class="pron">/ri-pórt/</div></div><div class="vocab-card"><div class="word">check</div><div class="meaning">to verify.</div><div class="pron">/tʃék/</div></div><div class="vocab-card"><div class="word">record</div><div class="meaning">to write down.</div><div class="pron">/ré-cord/</div></div><div class="vocab-card"><div class="word">clean</div><div class="meaning">to remove dirt.</div><div class="pron">/clín/</div></div><div class="vocab-card"><div class="word">tidy</div><div class="meaning">well organized.</div><div class="pron">/tái-di/</div></div><div class="vocab-card"><div class="word">finish</div><div class="meaning">final state of a surface.</div><div class="pron">/fí-niʃ/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>working</em> · <code>/dʒ/</code> as in <em>engine</em></div></div><div class="activity"><h4>📖 Reading: Closing the workshop</h4><div class="reading"><p>Before the end of class, every student writes a short report: tools used, material processed, measurements taken and any incident observed.</p><p>Then they check the area. The vise must be closed, the lathe stopped, the floor swept, and tools cleaned and returned to the board.</p><p>A tidy workshop is a safe workshop. The teacher checks the report and the area, signs the page, and the next group can enter without risk.</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde con información del texto.</p><div class="question-card"><p><strong>1.</strong> What four things does the student write in the report?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">Tools used, material processed, measurements taken and any incident observed.</div></div><div class="question-card"><p><strong>2.</strong> What must students do with tools at the end of class?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">Clean and return them to the board.</div></div><div class="question-card"><p><strong>3.</strong> Why is a tidy workshop a safe workshop?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">Because the next group can enter without risk (cleaner area = less hazard).</div></div></div><div class="activity"><h4>📊 Self-check</h4><table class="data-table"><tr><th>I can…</th><th>✅ / ❓</th></tr><tr><td><strong>name 5 workshop tools</strong></td><td class="empty"></td></tr><tr><td><strong>use a caliper and a micrometer</strong></td><td class="empty"></td></tr><tr><td><strong>list 4 PPE elements</strong></td><td class="empty"></td></tr><tr><td><strong>compare steel, aluminum, copper</strong></td><td class="empty"></td></tr><tr><td><strong>describe a basic operation</strong></td><td class="empty"></td></tr></table></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>Pre-test question</h5><p>Escribe una pregunta sobre algo que aún no entiendas antes de la prueba.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>Próxima clase: evaluación escrita.</p></div>
+<div class="objective-card"><h2>Objetivo de la clase</h2><p>Aplicar vocabulario en inglés relacionado con control de calidad e informe breve de taller para cerrar una tarea industrial con criterios claros.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>⚡ Actividad 1 — Speed quiz</h4><p class="lead">Marca la opción que mejor completa la idea.</p><div class="quiz-grid"><div class="quiz-item"><div class="stem">1. If the edge is still sharp, the piece needs...</div><div class="opts"><label>A) deburring</label><label>B) painting</label><label>C) heating</label></div></div><div class="quiz-item"><div class="stem">2. If a dimension is outside tolerance, the piece is...</div><div class="opts"><label>A) accepted</label><label>B) rejected</label><label>C) polished</label></div></div><div class="quiz-item"><div class="stem">3. A checklist is used to...</div><div class="opts"><label>A) guess the result</label><label>B) verify the task step by step</label><label>C) change the material</label></div></div><div class="quiz-item"><div class="stem">4. The handover note helps the next person to...</div><div class="opts"><label>A) continue the job with clear information</label><label>B) hide the mistake</label><label>C) skip the measurement</label></div></div><div class="quiz-item"><div class="stem">5. A professional close of shift includes...</div><div class="opts"><label>A) tools left anywhere</label><label>B) report, order and cleaning</label><label>C) only speed</label></div></div></div></div><div class="activity"><h4>🔁 Quick recall</h4><p>Piensa en toda la unidad: <em>what detail can make a part look finished but still fail inspection?</em></p><span class="answer-line"></span></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">inspection</div><div class="meaning">final verification of the piece.</div><div class="pron">/ins-pék-ʃon/</div></div><div class="vocab-card"><div class="word">checklist</div><div class="meaning">list used to confirm each point.</div><div class="pron">/tʃék-list/</div></div><div class="vocab-card"><div class="word">acceptable</div><div class="meaning">good enough to be received.</div><div class="pron">/ak-sép-ta-bel/</div></div><div class="vocab-card"><div class="word">sharp edge</div><div class="meaning">dangerous unfinished edge.</div><div class="pron">/ʃarp edʒ/</div></div><div class="vocab-card"><div class="word">record</div><div class="meaning">written note of what happened.</div><div class="pron">/ri-córd/</div></div><div class="vocab-card"><div class="word">handover</div><div class="meaning">giving the task to the next person.</div><div class="pron">/jánd-óu-ver/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>grinding</em> · <code>/dʒ/</code> as in <em>job</em> · <code>/ʃ/</code> as in <em>shaft</em></div></div><div class="activity"><h4>📖 Reading: End of shift: one piece, one decision</h4><div class="reading"><p>At the end of the workshop block, Team 2 finishes the support bracket and starts the inspection checklist. The dimension is correct, the hole position is correct and the bench is clean.</p><p>However, the teacher touches one corner and finds a sharp edge. He asks the team to deburr the part before calling it acceptable. In industry, a part is not finished only because the main shape is correct.</p><p>After correcting the edge, the team writes a short handover note: material used, final dimension, one correction made and one recommendation for the next group. The note saves time and prevents the same mistake tomorrow.</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde usando evidencia concreta del texto.</p><div class="question-card"><p><strong>1.</strong> Which three points are already correct before the teacher checks the edge?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">The dimension, the hole position and the clean bench.</div></div><div class="question-card"><p><strong>2.</strong> Why is the part not acceptable yet?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">Because it still has a sharp edge and needs deburring.</div></div><div class="question-card"><p><strong>3.</strong> What information goes into the handover note?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">Material used, final dimension, one correction made and one recommendation.</div></div></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>📊 Inspection and handover checklist</h4><table class="data-table"><tr><th>Checkpoint</th><th>Evidence or note</th></tr><tr><td><strong>Dimension within tolerance</strong></td><td class="empty"></td></tr><tr><td><strong>Hole position correct</strong></td><td class="empty"></td></tr><tr><td><strong>No sharp edges</strong></td><td class="empty"></td></tr><tr><td><strong>Short handover note written</strong></td><td class="empty"></td></tr></table></div><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>Handover note</h5><p>Escribe en inglés una línea de handover para la próxima pareja usando <em>dimension</em>, <em>acceptable</em>, <em>sharp edge</em> o <em>record</em>.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>Próxima clase: evaluación escrita de lectura y aplicación de la unidad 2.</p></div>
 <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 3° Medio TP.</p>
 </div><script>function toggleAnswer(id, btn){const a=document.getElementById(id);const o=a.classList.toggle('open');btn.textContent=o?'Ocultar respuesta':'Ver respuesta';}</script></body></html>

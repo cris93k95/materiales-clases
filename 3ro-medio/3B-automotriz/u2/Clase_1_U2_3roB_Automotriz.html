@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Clase 1 — Unidad 2 — 3°B — Mecánica Automotriz</title>
 <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.65}
-.page{max-width:1080px;margin:0 auto;padding:24px 18px 40px}
-.hero{background:linear-gradient(135deg,#0f766e,#155e75);color:white;border-radius:18px;padding:28px;box-shadow:0 18px 40px rgba(15,118,110,.18)}
-.hero h1{font-size:2rem;margin-bottom:6px}.hero p{color:rgba(255,255,255,.88)}
-.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.meta span{background:rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;font-size:.84rem}
-.toolbar{display:flex;justify-content:flex-end;margin:18px 0 10px}
-.print-btn{border:none;border-radius:10px;background:#0f172a;color:white;padding:10px 16px;font-weight:600;cursor:pointer}
-.objective-card,.section,.resource-card{background:white;border-radius:16px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:18px;overflow:hidden}
-.objective-card{padding:22px 24px;border-left:6px solid #0f766e}
-.objective-card h2{color:#0f766e;font-size:1.05rem;margin-bottom:8px}
-.section-header{color:white;font-weight:700;padding:14px 22px;font-size:1rem}
-.inicio{background:#2e7d32}.desarrollo{background:#1565c0}.cierre{background:#7c3aed}
-.section-body{padding:20px 22px 22px}
-.activity{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-bottom:16px}
-.activity:last-child{margin-bottom:0}.activity h4{color:#0f172a;margin-bottom:6px;font-size:1rem}
-.activity .lead{color:#475569;margin-bottom:12px;font-size:.95rem}
-.match-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
-.match-card{background:white;border:1px solid #cbd5e1;border-radius:12px;padding:14px;text-align:center}
-.match-card .icon{font-size:2.4rem;line-height:1;display:block;margin-bottom:8px}
-.match-card .label-blank{display:block;border-bottom:2px dashed #94a3b8;margin:8px auto 4px;min-height:22px;max-width:80%}
-.match-card .clue{font-size:.82rem;color:#64748b}
-.options-bank{background:#ecfeff;border:1px dashed #06b6d4;border-radius:12px;padding:12px 14px;margin-top:12px}
-.options-bank strong{display:block;color:#0e7490;margin-bottom:6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
-.options-bank .chip-row{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:white;border:1px solid #0e7490;color:#0e7490;padding:5px 12px;border-radius:999px;font-size:.86rem;font-weight:600}
-.answer-line{display:block;height:38px;border-bottom:2px solid #94a3b8;margin-top:6px}
-.glossary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:12px}
-.vocab-card{background:white;border:1px solid #dbeafe;border-radius:12px;padding:14px}
-.vocab-card .word{font-weight:800;color:#1d4ed8;font-size:1.02rem;margin-bottom:4px}
-.vocab-card .meaning{font-size:.92rem;color:#1f2937;margin-bottom:6px}
-.vocab-card .pron{font-size:.88rem;color:#475569;font-family:'Courier New',monospace}
-.phonics-key{margin-top:14px;background:#fefce8;border:1px solid #facc15;border-radius:12px;padding:12px 14px;font-size:.86rem;color:#713f12}
-.phonics-key strong{display:block;margin-bottom:4px;color:#854d0e}
-.phonics-key code{background:white;border:1px solid #facc15;border-radius:4px;padding:1px 6px;margin:0 2px;font-family:'Courier New',monospace}
-.reading{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-top:10px}
-.reading p{margin-bottom:10px}.reading p:last-child{margin-bottom:0}
-.question-card{background:white;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin-top:10px}
-.question-card p{margin-bottom:8px}
-.toggle-btn{border:none;border-radius:8px;background:#dbeafe;color:#1d4ed8;padding:6px 12px;font-weight:700;font-size:.85rem;cursor:pointer}
-.answer-box{display:none;background:#eefbf3;border-left:4px solid #16a34a;padding:10px 12px;border-radius:8px;margin-top:10px}
-.answer-box.open{display:block}
-.data-table{width:100%;border-collapse:collapse;margin-top:12px;background:white;border-radius:10px;overflow:hidden}
-.data-table th,.data-table td{border:1px solid #cbd5e1;padding:10px 12px;text-align:left;font-size:.92rem;vertical-align:top}
-.data-table th{background:#1565c0;color:white;font-weight:700}
-.data-table td.empty{background:#f8fafc;min-height:40px}
-.exit-card{background:white;border:2px dashed #7c3aed;border-radius:12px;padding:14px 16px;margin-top:10px}
-.exit-card h5{color:#5b21b6;margin-bottom:8px;font-size:.95rem}
-.exit-card .prompt-line{display:block;border-bottom:1.5px solid #c4b5fd;margin:10px 0 4px;min-height:32px}
-.resource-card{padding:18px 22px;border-left:6px solid #0ea5e9}
-.resource-card h4{color:#0369a1;margin-bottom:8px}
-.footer-note{text-align:center;color:#6b7280;font-size:.82rem;margin-top:28px}
-.tf-list{list-style:none;padding:0;margin-top:8px}
-.tf-list li{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;background:white;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin-bottom:8px}
-.tf-list .tf-opt{border:1px solid #94a3b8;border-radius:6px;padding:3px 10px;font-size:.85rem;font-weight:700}
-.tf-list .tf-opt.t{color:#16a34a;border-color:#16a34a}.tf-list .tf-opt.f{color:#dc2626;border-color:#dc2626}
-.gap-text{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;line-height:2}
-.gap{display:inline-block;min-width:110px;border-bottom:2px solid #1d4ed8;text-align:center;font-weight:700;color:#1d4ed8}
-.quiz-grid{display:grid;gap:10px;margin-top:10px}
-.quiz-item{background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px}
-.quiz-item .stem{font-weight:600;margin-bottom:6px}
-.quiz-item .opts{display:flex;flex-wrap:wrap;gap:8px}
-.quiz-item .opts label{background:#f1f5f9;border:1px solid #cbd5e1;border-radius:8px;padding:4px 10px;font-size:.88rem}
-.test-instructions{background:#fef3c7;border-left:5px solid #f59e0b;border-radius:10px;padding:14px 16px;margin-bottom:16px}
-.test-instructions h4{color:#92400e;margin-bottom:6px}
-.id-strip{background:white;border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;font-size:.9rem}
-.id-strip span{border-bottom:1.5px solid #94a3b8;min-height:22px;display:inline-block;min-width:160px}
-.long-answer{display:block;border-bottom:1.5px solid #94a3b8;min-height:30px;margin-top:6px}.long-answer+.long-answer{margin-top:18px}
-@media (max-width:720px){.hero h1{font-size:1.55rem}.page{padding:16px 12px 28px}}
-@media print{body{background:white}.toolbar{display:none}.hero,.objective-card,.section,.resource-card{box-shadow:none}}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.activity { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px; margin-bottom: 16px; }
+.activity:last-child { margin-bottom: 0; }
+.activity h4 { color: #0f172a; margin-bottom: 6px; font-size: 1rem; }
+.activity .lead { color: #475569; margin-bottom: 12px; font-size: 0.95rem; }
+.match-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 8px; }
+.match-card { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 14px; text-align: center; }
+.match-card .icon { font-size: 2.4rem; line-height: 1; display: block; margin-bottom: 8px; }
+.match-card .label-blank { display: block; border-bottom: 2px dashed #94a3b8; margin: 8px auto 4px; min-height: 22px; max-width: 80%; }
+.match-card .clue { font-size: 0.82rem; color: #64748b; }
+.options-bank { background: #ecfeff; border: 1px dashed #06b6d4; border-radius: 12px; padding: 12px 14px; margin-top: 12px; }
+.options-bank strong { display: block; color: #0e7490; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.options-bank .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: white; border: 1px solid #0e7490; color: #0e7490; padding: 5px 12px; border-radius: 999px; font-size: 0.86rem; font-weight: 600; }
+.answer-line { display: block; height: 38px; border-bottom: 2px solid #94a3b8; margin-top: 6px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 12px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.vocab-card .word { font-weight: 800; color: #1d4ed8; font-size: 1.02rem; margin-bottom: 4px; }
+.vocab-card .meaning { font-size: 0.92rem; color: #1f2937; margin-bottom: 6px; }
+.vocab-card .pron { font-size: 0.88rem; color: #475569; font-family: 'Courier New', monospace; }
+.phonics-key { margin-top: 14px; background: #fefce8; border: 1px solid #facc15; border-radius: 12px; padding: 12px 14px; font-size: 0.86rem; color: #713f12; }
+.phonics-key strong { display: block; margin-bottom: 4px; color: #854d0e; }
+.phonics-key code { background: white; border: 1px solid #facc15; border-radius: 4px; padding: 1px 6px; margin: 0 2px; font-family: 'Courier New', monospace; }
+.reading { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; margin-top: 10px; }
+.reading p { margin-bottom: 10px; }
+.reading p:last-child { margin-bottom: 0; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
+.question-card p { margin-bottom: 8px; }
+.toggle-btn { border: none; border-radius: 8px; background: #dbeafe; color: #1d4ed8; padding: 6px 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.data-table { width: 100%; border-collapse: collapse; margin-top: 12px; background: white; border-radius: 10px; overflow: hidden; }
+.data-table th, .data-table td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 0.92rem; vertical-align: top; }
+.data-table th { background: #1565c0; color: white; font-weight: 700; }
+.data-table td.empty { background: #f8fafc; min-height: 40px; }
+.exit-card { background: white; border: 2px dashed #7c3aed; border-radius: 12px; padding: 14px 16px; margin-top: 10px; }
+.exit-card h5 { color: #5b21b6; margin-bottom: 8px; font-size: 0.95rem; }
+.exit-card .prompt-line { display: block; border-bottom: 1.5px solid #c4b5fd; margin: 10px 0 4px; min-height: 32px; }
+.resource-card { padding: 18px 22px; border-left: 6px solid #0ea5e9; }
+.resource-card h4 { color: #0369a1; margin-bottom: 8px; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+.tf-list { list-style: none; padding: 0; margin-top: 8px; }
+.tf-list li { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+.tf-list .tf-opt { border: 1px solid #94a3b8; border-radius: 6px; padding: 3px 10px; font-size: 0.85rem; font-weight: 700; }
+.tf-list .tf-opt.t { color: #16a34a; border-color: #16a34a; }
+.tf-list .tf-opt.f { color: #dc2626; border-color: #dc2626; }
+.gap-text { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; line-height: 2; }
+.gap { display: inline-block; min-width: 110px; border-bottom: 2px solid #1d4ed8; text-align: center; font-weight: 700; color: #1d4ed8; }
+.quiz-grid { display: grid; gap: 10px; margin-top: 10px; }
+.quiz-item { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+.quiz-item .stem { font-weight: 600; margin-bottom: 6px; }
+.quiz-item .opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.quiz-item .opts label { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px 10px; font-size: 0.88rem; }
+.test-instructions { background: #fef3c7; border-left: 5px solid #f59e0b; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+.test-instructions h4 { color: #92400e; margin-bottom: 6px; }
+.id-strip { background: white; border: 1px solid #cbd5e1; border-radius: 10px; padding: 10px 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; font-size: 0.9rem; }
+.id-strip span { border-bottom: 1.5px solid #94a3b8; min-height: 22px; display: inline-block; min-width: 160px; }
+.long-answer { display: block; border-bottom: 1.5px solid #94a3b8; min-height: 30px; margin-top: 6px; }
+.long-answer + .long-answer { margin-top: 18px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
 </style></head><body>
-<div class="page"><div class="hero"><h1>Clase 1 — Unidad 2</h1><p>3°B — Mecánica Automotriz · Parts of a car</p><div class="meta"><span>🎯 Outside the car</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 1 de 7</span><span>🧩 Body parts</span></div></div>
+<div class="page"><div class="hero"><h1>Clase 1 — Unidad 2</h1><p>3°B — Mecánica Automotriz · Walkaround before receiving the car</p><div class="meta"><span>🎯 Visible parts and first report</span><span>📘 OA · Articulación TP</span><span>🗂 Clase 1 de 7</span><span>🧩 Customer arrival</span></div></div>
 <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-<div class="objective-card"><h2>Objetivo de la clase</h2><p>Reconocer en inglés las partes externas básicas de un automóvil y su función general.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>🖼️ Actividad 1 — Match picture with concept</h4><p class="lead">Observa las imágenes y escribe el concepto correcto.</p><div class="match-grid"><div class="match-card"><span class="icon">🚗</span><span class="label-blank"></span><span class="clue">The main body of the car.</span></div><div class="match-card"><span class="icon">🛞</span><span class="label-blank"></span><span class="clue">Each one of the four round parts that roll.</span></div><div class="match-card"><span class="icon">🚪</span><span class="label-blank"></span><span class="clue">You open it to enter the car.</span></div><div class="match-card"><span class="icon">💡</span><span class="label-blank"></span><span class="clue">It lights the road at night.</span></div></div><div class="options-bank"><strong>Word bank</strong><div class="chip-row"><span class="chip">body</span><span class="chip">wheel</span><span class="chip">door</span><span class="chip">headlight</span></div></div></div><div class="activity"><h4>🔁 Quick recall</h4><p><em>What part of a car is most important when it rains?</em></p><span class="answer-line"></span></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">body</div><div class="meaning">main metal structure.</div><div class="pron">/bó-di/</div></div><div class="vocab-card"><div class="word">hood</div><div class="meaning">front cover over the engine.</div><div class="pron">/húd/</div></div><div class="vocab-card"><div class="word">trunk</div><div class="meaning">rear storage area.</div><div class="pron">/tránk/</div></div><div class="vocab-card"><div class="word">bumper</div><div class="meaning">front or rear protection bar.</div><div class="pron">/bám-per/</div></div><div class="vocab-card"><div class="word">headlight</div><div class="meaning">front light.</div><div class="pron">/héd-lait/</div></div><div class="vocab-card"><div class="word">windshield</div><div class="meaning">front glass.</div><div class="pron">/uínd-ʃild/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>working</em> · <code>/dʒ/</code> as in <em>engine</em></div></div><div class="activity"><h4>📖 Reading: Outside the car</h4><div class="reading"><p>When we look at a car from outside, we see the body, four wheels, two or four doors and the headlights at the front.</p><p>The hood is the cover over the engine. The trunk is at the back and stores luggage. The bumpers protect the body in low-speed collisions.</p><p>At the front, the windshield gives the driver a clear view of the road. Wipers keep it clean in the rain.</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde con información del texto.</p><div class="question-card"><p><strong>1.</strong> Where is the hood located on the car?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">At the front, as the cover over the engine.</div></div><div class="question-card"><p><strong>2.</strong> What part stores luggage?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">The trunk.</div></div><div class="question-card"><p><strong>3.</strong> What gives the driver a clear view of the road?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">The windshield (kept clean by the wipers).</div></div></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>📊 Outside parts</h4><table class="data-table"><tr><th>Part</th><th>Function</th></tr><tr><td><strong>hood</strong></td><td class="empty"></td></tr><tr><td><strong>trunk</strong></td><td class="empty"></td></tr><tr><td><strong>bumper</strong></td><td class="empty"></td></tr><tr><td><strong>windshield</strong></td><td class="empty"></td></tr></table></div><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>In one sentence</h5><p>Escribe en inglés <strong>una parte exterior</strong> del auto y para qué sirve.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>Próxima clase: herramientas del taller automotriz.</p></div>
+<div class="objective-card"><h2>Objetivo de la clase</h2><p>Reconocer partes exteriores del automóvil y usarlas en inglés para describir daños o necesidades visibles durante la recepción del vehículo.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>🖼️ Actividad 1 — Match picture with concept</h4><p class="lead">Asocia cada pista con la revisión visual que haría el técnico al recibir el vehículo.</p><div class="match-grid"><div class="match-card"><span class="icon">💡</span><span class="label-blank"></span><span class="clue">It helps the driver see at night.</span></div><div class="match-card"><span class="icon">🛞</span><span class="label-blank"></span><span class="clue">Its pressure and tread affect safety.</span></div><div class="match-card"><span class="icon">🪟</span><span class="label-blank"></span><span class="clue">It must be clean and without cracks.</span></div><div class="match-card"><span class="icon">🚪</span><span class="label-blank"></span><span class="clue">The customer says it closes badly.</span></div></div><div class="options-bank"><strong>Word bank</strong><div class="chip-row"><span class="chip">headlight</span><span class="chip">tire</span><span class="chip">windshield</span><span class="chip">door</span></div></div></div><div class="activity"><h4>🔁 Quick recall</h4><p>Piensa en el primer minuto con un cliente: <em>what can you check before opening the hood?</em></p><span class="answer-line"></span></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">walkaround</div><div class="meaning">inspection around the vehicle.</div><div class="pron">/uók-a-ráund/</div></div><div class="vocab-card"><div class="word">scratch</div><div class="meaning">light damage on the paint.</div><div class="pron">/scrátʃ/</div></div><div class="vocab-card"><div class="word">dent</div><div class="meaning">small hit on the metal.</div><div class="pron">/dént/</div></div><div class="vocab-card"><div class="word">tread</div><div class="meaning">pattern on the tire surface.</div><div class="pron">/tréd/</div></div><div class="vocab-card"><div class="word">crack</div><div class="meaning">line showing broken material.</div><div class="pron">/crák/</div></div><div class="vocab-card"><div class="word">work order</div><div class="meaning">paper that records the vehicle problem.</div><div class="pron">/uérk ór-der/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>working</em> · <code>/dʒ/</code> as in <em>job</em> · <code>/ʃ/</code> as in <em>shift</em></div></div><div class="activity"><h4>📖 Reading: First walkaround with the customer</h4><div class="reading"><p>A silver pickup enters the workshop with a customer complaint: the left headlight is weak and the front tire loses pressure every week.</p><p>Before opening the hood, the service advisor and the student do a short walkaround. They check the windshield for cracks, the tire tread, the door alignment and two scratches near the bumper.</p><p>The student writes the visible problems on the work order so the mechanic starts with clear information instead of guessing.</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde usando evidencia del texto y una idea propia cuando se te pida.</p><div class="question-card"><p><strong>1.</strong> Which two main complaints appear before the hood is opened?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">A weak left headlight and a front tire that loses pressure.</div></div><div class="question-card"><p><strong>2.</strong> Why do they inspect the windshield, tire tread and door alignment?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">To detect visible problems and record them before the mechanic starts.</div></div><div class="question-card"><p><strong>3.</strong> What is the benefit of writing the visible problems on the work order?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">It gives the mechanic clear information instead of guessing.</div></div></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>📊 Walkaround report</h4><table class="data-table"><tr><th>Vehicle area</th><th>What should be checked or reported?</th></tr><tr><td><strong>Headlight</strong></td><td class="empty"></td></tr><tr><td><strong>Front tire</strong></td><td class="empty"></td></tr><tr><td><strong>Windshield</strong></td><td class="empty"></td></tr><tr><td><strong>Body and bumper</strong></td><td class="empty"></td></tr></table></div><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>Work order line</h5><p>Escribe en inglés una línea breve para la work order con un problema visible del auto.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>Próxima clase: herramientas del taller y cómo preparar una inspección segura sin dañar el vehículo.</p></div>
 <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 3° Medio TP.</p>
 </div><script>function toggleAnswer(id, btn){const a=document.getElementById(id);const o=a.classList.toggle('open');btn.textContent=o?'Ocultar respuesta':'Ver respuesta';}</script></body></html>
