@@ -1,275 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 9 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
-        .hero p { color: rgba(255,255,255,0.88); }
-        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-        .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
-        .cierre { background: #7c3aed; }
-        .section-body { padding: 20px 22px 22px; }
-        .section-body ul { margin-left: 20px; }
-        .section-body li { margin-bottom: 8px; }
-        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-        .activity-card p { margin-bottom: 10px; }
-        .task-steps { margin-left: 20px; }
-        .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-        .focus-card ul { margin-left: 18px; }
-        .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-        .reading-box p { margin-bottom: 10px; }
-        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-        .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
-        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
-        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-        .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 9 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.section-body ul, .section-body ol { margin-left: 20px; }
+.section-body li { margin-bottom: 8px; }
+.review-box, .reading-box, .task-box, .eval-box, .apply-box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+.apply-box { border-color: #fdba74; background: #fff7ed; }
+.apply-box h4 { color: #c2410c; margin-bottom: 8px; }
+.apply-box .intro { background: white; border-left: 4px solid #ea580c; padding: 10px 12px; border-radius: 8px; margin: 10px 0 12px; font-size: 0.95rem; }
+.apply-box .check { background: #ecfdf5; border-left: 4px solid #16a34a; padding: 10px 14px; border-radius: 8px; margin-top: 12px; }
+.apply-box .check h5 { color: #166534; margin-bottom: 6px; }
+.review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+.meaning { font-size: 0.92rem; color: #1f2937; }
+.pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+.focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; margin-top: 10px; }
+.focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+.focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.reading-box p { margin-bottom: 10px; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+.toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+.exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+.resource-card { padding: 18px 22px; }
+.resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+.rubric-summary { background: #fef3c7; border-left: 4px solid #d97706; padding: 12px 14px; border-radius: 10px; margin-top: 12px; font-size: 0.95rem; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
+</style>
 </head>
 <body>
-    <div class="page">
-        <div class="hero">
-            <h1>Clase 9 — Unidad 2</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · How Things Work — Processes and Descriptions</p>
-            <div class="meta">
-                <span>🎯 Organizar la explicación técnica</span>
-                <span>📘 OA9 · OA12</span>
-                <span>🗂 Clase 9</span>
-                <span>🎤 Trabajo oral de cierre semestral · Etapa 3/5</span>
-                <span>🧩 Clase de trabajo</span>
-            </div>
-        </div>
-
-        <div class="toolbar">
-            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
-        </div>
-
-        <div class="objective-card">
-            <h2>Objetivo de la clase</h2>
-            <p>Comprender fichas técnicas y manuales simplificados en inglés, extrayendo información clave sobre especificaciones de equipos.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the new text and the new language focus.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and circle the technical action linked to the practice project.</li><li>Recuerda la idea central de la clase pasada: comprendimos un texto sobre automatización industrial y comparamos prácticas tradicionales y modernas.</li><li>Predict which specifications, warnings, or functions may appear in a technical sheet or simplified manual.</li><li>Share one thing you would look for first in a manual used in workshop practice.</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>En la clase anterior comparamos procesos manuales y automatizados con vocabulario técnico básico.</li><li>Escribe una diferencia o una ventaja que recuerdes del texto.</li><li>Explica cómo esa mirada técnica te ayudará hoy a leer fichas y manuales con mayor precisión.</li></ul></div>
-    <div class="review-box">
-        <h4>🎤 Ruta del trabajo oral</h4>
-        <p><strong>Trabajo oral de cierre semestral</strong> · Etapa 3/5 · Entrega prevista: primera semana de junio.</p>
-        <p><strong>Meta de hoy:</strong> Ordenar la explicación con inicio, desarrollo y cierre en inglés.</p>
-        <p><strong>Producto esperado:</strong> Guion oral breve con opening, sequence, safety note y closing.</p>
-        <ul><li>Choose one process, machine, or mechanism connected to workshop practice.</li><li>Explain materials, components, steps, and one relevant safety point.</li><li>Use passive voice, relative clauses, and at least six technical words.</li><li>Close with one practical conclusion about why the process matters.</li></ul>
-    </div>
-    
-    </div>
-    </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
-            <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The tool kit is checked before the task begins.</li><li>The checklist gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
-            </div>
-            </div>
-    </div>
-    
-
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">process</div>
-                <div class="meaning">a sequence of actions used to complete a task</div>
-                <div class="pronunciation">Pron.: PRO-ses</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">component</div>
-                <div class="meaning">one part of a machine, circuit, or larger system</div>
-                <div class="pronunciation">Pron.: kom-POU-nent</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="pronunciation">Pron.: TUL</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">measure</div>
-                <div class="meaning">to find size, amount, or distance accurately</div>
-                <div class="pronunciation">Pron.: ME-zher</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">connect</div>
-                <div class="meaning">to join parts so the system can work correctly</div>
-                <div class="pronunciation">Pron.: ko-NEKT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">repair</div>
-                <div class="meaning">to fix something that is damaged or not working</div>
-                <div class="pronunciation">Pron.: ri-PAIR</div>
-            </div>
-            </div>
-                </div>
-
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Model — Organizar la explicación técnica</h4>
-                    <p class="reading-note">Modelo guiado A2 para la etapa 3/5 del trabajo oral de cierre semestral: Ordenar la explicación con inicio, desarrollo y cierre en inglés.</p>
-                    <p>With the evidence ready, the student organizes the oral explanation into a clear opening, a sequence of actions, and a practical conclusion.</p><p>Simple connectors help the message sound natural: first, then, after that, finally. Passive voice and relative clauses make the description more technical.</p><p>The speaker chooses where to use vocabulary like process and component so the explanation sounds connected to the English of the workshop.</p><p>An outline replaces long sentences. Short notes are easier to remember and allow the student to speak instead of reading every line.</p><p>A good oral text at this stage sounds ordered, useful, and focused on what another student technician really needs to understand.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What task or problem is described in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text explains how to build the structure of the oral explanation.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What happens before the main procedure starts?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the final version, the student prepares an opening, a sequence of steps, and a conclusion.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">Key details include connectors, passive voice, relative clauses, and technical words like process and component.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The language focus shows how grammar and organization help technical ideas sound clearer.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">At the end, the student has an outline that is easier to speak from than a full script.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Technical communication improves when ideas are organized into clear parts with useful language frames.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Ruta del trabajo oral</h4>
-                    
-            <p><strong>Trabajo oral de cierre semestral</strong> · Etapa 3/5</p>
-            <p><strong>Prompt:</strong> <em>Describe a technical process or mechanism from workshop practice, using clear sequence, technical vocabulary, and one safety detail.</em></p>
-            <ol class="task-steps"><li>Write a short oral outline with opening, sequence of steps, safety note, and closing.</li><li>Add passive voice, one relative clause, and connectors such as first, then, and finally.</li><li>Practise a 45-second version without reading full sentences.</li></ol>
-            <p><strong>Producto esperado:</strong> Guion oral breve con opening, sequence, safety note y closing.</p>
-            <ul><li>Choose one process, machine, or mechanism connected to workshop practice.</li><li>Explain materials, components, steps, and one relevant safety point.</li><li>Use passive voice, relative clauses, and at least six technical words.</li><li>Close with one practical conclusion about why the process matters.</li></ul>
-            
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve. Evidencia de etapa: Guion oral breve con opening, sequence, safety note y closing.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🟣 Cierre — Oral Project Checkpoint</h4>
-        <p>Close the lesson by checking progress on the oral task and defining the next step in the sequence.</p>
-        <ol class="task-steps"><li>Review your notes and identify the strongest contribution from today's stage.</li><li>Compare your progress with a partner before writing your final exit ticket.</li><li>Complete the three checkpoint prompts below.</li></ol>
-        
-            <div class="exit-ticket">
-                <h5>Exit ticket prompts</h5>
-                <ul><li>Write your opening sentence and your final conclusion in short note form.</li><li>Check whether your explanation already has a clear order and one strong connector.</li><li>Name the section of the presentation that still needs more detail or clearer English.</li></ul>
-            </div>
-            
-    </div>
-    </div>
-        </div>
-
-        <div class="resource-card">
-            <h4>📦 Recursos sugeridos</h4>
-            <p>Recursos: Fichas técnicas reales o adaptadas impresas (3), datasheet original como ejemplo, tabla de extracción de información. Producto de avance: Guion oral breve con opening, sequence, safety note y closing.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
-        </div>
-
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
-    </div>
-
-    <script>
-        function toggleAnswer(id, button) {
-            const answer = document.getElementById(id);
-            const isOpen = answer.classList.toggle('open');
-            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-        }
-    </script>
+<div class="page">
+<div class="hero">
+<h1>Clase 9 &mdash; Unidad 2</h1>
+<p>1&deg; Medio &mdash; Ingles General (Lu+Ju) &middot; How Things Work &mdash; Processes and Descriptions</p>
+<div class="meta">
+<span>&#x1F3AF; Comprender fichas tecnicas y manuales simplificados en ingles, extrayendo informacion clav...</span>
+<span>&#x1F4D8; OA9 · OA12</span>
+<span>&#x1F5C2; Clase 9</span>
+<span>&#x1F9E9; Clase de trabajo</span>
+</div>
+</div>
+<div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+<div class="objective-card"><h2>Objetivo de la clase</h2><p>Comprender fichas tecnicas y manuales simplificados en ingles, extrayendo informacion clave sobre especificaciones de equipos.</p></div>
+<div class="section"><div class="section-header inicio">&#x1F7E2; Inicio</div><div class="section-body"><div class="task-box"><h4>&#x1F50E; Actividad 1 &mdash; Activate and Predict</h4><ol class="task-steps"><li>Observa una ficha tecnica real en ingles (multimetro, taladro o impresora). <em>Technical datasheets are almost always in English. Can you understand this?</em></li><li>Identifica que comprendes y que no comprendes; subraya 3 palabras clave.</li><li>Idea central: <em>You don't need to understand every word. You need to find the KEY information.</em></li></ol></div><div class="review-box"><h4>&#x1F501; Repaso rapido de la clase anterior</h4><p>En la Clase 8 debatimos sobre automatizacion industrial usando opiniones y conectores de contraste.</p></div></div></div><div class="section"><div class="section-header desarrollo">&#x1F535; Desarrollo</div><div class="section-body"><div class="task-box"><h4>&#x1F9E0; Actividad 2 &mdash; Language Focus</h4><p>En una ficha tecnica leemos para <strong>encontrar un dato</strong> (potencia, peso, voltaje), no para entender cada frase. Esa es la habilidad de <em>scanning</em>.</p><div class="focus-card"><h5>Scanning para extraer especificaciones</h5><div class="focus-subtitle">Examples</div><ul><li>Scan for <strong>numbers</strong>: 220 V, 50 Hz, 2.5 kg.</li><li>Scan for <strong>units</strong>: V (voltage), A (current), W (power), kg (weight), mm (size).</li><li>Scan for <strong>key fields</strong>: <em>Model, Power supply, Dimensions, Warranty, Safety</em>.</li><li>Frame to summarize: <em>The ___ operates at ___ V and weighs ___ kg.</em></li></ul><div class="focus-subtitle">Sentence frames &amp; tips</div><ul><li>First locate the field, then read only its value.</li><li>Ignore marketing text; focus on the data box.</li><li>If a value is missing, write <em>not specified</em> instead of guessing.</li></ul></div></div><div class="task-box"><h4>&#x1F4DA; Actividad 3 &mdash; Vocabulary for reading</h4><p>Revisa estas palabras clave antes de leer. Cada tarjeta incluye una definicion breve en ingles y una guia de pronunciacion para que el vocabulario apoye la comprension del texto.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">dimensions</div><div class="meaning">the measurements of an object: length, width, height</div><div class="pronunciation">Pron.: di-MEN-shons</div></div><div class="vocab-card"><div class="word">weight</div><div class="meaning">how heavy an object is, usually in kg</div><div class="pronunciation">Pron.: WEIT</div></div><div class="vocab-card"><div class="word">power supply</div><div class="meaning">the input the device needs to operate (V, Hz)</div><div class="pronunciation">Pron.: PAU-er su-PLAI</div></div><div class="vocab-card"><div class="word">voltage rating</div><div class="meaning">the maximum voltage the device can handle safely</div><div class="pronunciation">Pron.: VOUL-tedj REI-ting</div></div><div class="vocab-card"><div class="word">capacity</div><div class="meaning">the maximum amount or load the device can manage</div><div class="pronunciation">Pron.: ka-PA-si-ti</div></div><div class="vocab-card"><div class="word">warranty</div><div class="meaning">the period during which the maker repairs defects for free</div><div class="pronunciation">Pron.: WO-ren-ti</div></div><div class="vocab-card"><div class="word">model number</div><div class="meaning">the unique code that identifies the product</div><div class="pronunciation">Pron.: MO-del NAM-ber</div></div><div class="vocab-card"><div class="word">safety</div><div class="meaning">the conditions to operate the device without risk</div><div class="pronunciation">Pron.: SEIF-ti</div></div></div></div><div class="reading-box"><h4>&#x1F4D6; Actividad 4 &mdash; Reading Text &mdash; Three Simplified Technical Datasheets</h4><p><strong>Datasheet 1 &mdash; Power Drill TR-450:</strong> Power supply: 220 V / 50 Hz. Power: 450 W. Weight: 1.8 kg. Chuck size: 10 mm. Functions: drilling in metal, wood and plastic. Warranty: 12 months. Safety: do not use without protective glasses.</p><p><strong>Datasheet 2 &mdash; Digital Multimeter DM-900:</strong> Power supply: 9 V battery. Functions: DC voltage 0&ndash;600 V, AC voltage 0&ndash;600 V, current up to 10 A, resistance up to 20 M&Omega;. Display: 3.5 digits. Weight: 0.4 kg. Warranty: 24 months. Safety: never measure voltage on the resistance setting.</p><p><strong>Datasheet 3 &mdash; Small Offset Press OP-220:</strong> Power supply: 220 V / 50 Hz. Maximum sheet size: 360 x 520 mm. Speed: up to 7,000 sheets per hour. Weight: 1,200 kg. Warranty: 36 months. Safety: keep hands away from the rollers during operation.</p><p>All three datasheets follow the same pattern: identification of the equipment, power supply, main specifications, warranty and safety rules. Reading them well is a basic professional skill in any technical job.</p></div><div class="task-box"><h4>&#x1F4DD; Actividad 5 &mdash; Reading comprehension</h4><p>Responde regresando al texto. Busca evidencia concreta antes de revisar la respuesta sugerida.</p><div class="question-card"><p><strong>1.</strong> What is the power of the TR-450 drill?</p><button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button><div class="answer-box" id="answer-1">450 W.</div></div><div class="question-card"><p><strong>2.</strong> Up to how many amperes can the DM-900 multimeter measure?</p><button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button><div class="answer-box" id="answer-2">Up to 10 A.</div></div><div class="question-card"><p><strong>3.</strong> How fast can the OP-220 offset press print?</p><button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button><div class="answer-box" id="answer-3">Up to 7,000 sheets per hour.</div></div><div class="question-card"><p><strong>4.</strong> Which device has the longest warranty and how long is it?</p><button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button><div class="answer-box" id="answer-4">The OP-220 offset press, with 36 months of warranty.</div></div><div class="question-card"><p><strong>5.</strong> Which safety rule is given for the multimeter?</p><button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button><div class="answer-box" id="answer-5">Never measure voltage when the device is set to the resistance scale.</div></div><div class="question-card"><p><strong>6.</strong> Infer: why do all three datasheets include a safety section?</p><button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button><div class="answer-box" id="answer-6">Because every technical device has a real risk if it is used incorrectly, and the manufacturer must inform the user to prevent accidents and protect itself legally.</div></div></div><div class="apply-box"><h4>&#x1F680; Actividad 6 &mdash; Apply &amp; Extend: tu tabla comparativa profesional</h4><div class="intro">Vas a tomar decisiones tecnicas como un comprador real. Esto exige comparar, no solo describir.</div><ol class="task-steps"><li>Construye una <strong>tabla comparativa</strong> de los 3 equipos con estas filas: <em>Power supply, Weight, Main use, Warranty, Most important safety rule</em>.</li><li>Imagina que un taller solo puede comprar UNO. Elige UNO y escribe un <strong>parrafo de recomendacion</strong> de 4 oraciones.</li><li>Tu parrafo debe usar al menos 1 frame de opinion (<em>I recommend / In my opinion</em>) y 1 conector de contraste (<em>however, although, on the other hand</em>).</li><li>Cierra con una <strong>condicion</strong>: <em>I would change my recommendation if ___.</em></li></ol><div class="check"><h5>&#x2705; Auto-chequeo antes de entregar</h5><ul><li>Mi tabla tiene los datos exactos (con unidades), no aproximaciones.</li><li>Mi recomendacion incluye al menos un argumento tecnico y uno economico.</li><li>Uso un conector de contraste correctamente.</li><li>Mi condicion final es realista, no inventada.</li></ul></div></div><div class="eval-box"><h4>&#x1F4CB; Seguimiento de la clase</h4><p>Formativa: observacion de participacion, revision de la Actividad 6 y registro de cierre escrito.</p></div></div></div><div class="section"><div class="section-header cierre">&#x1F7E3; Cierre</div><div class="section-body"><div class="exit-ticket"><h5>Exit ticket &amp; reflexion</h5><ul><li>&iquest;Podrias leer una ficha tecnica real ahora? &iquest;Que te falta aprender?</li><li>Escribe 3 cosas que se pueden encontrar en una ficha tecnica.</li><li>Trae una ficha tecnica o caja de un producto en ingles para la proxima clase.</li></ul></div></div></div><div class="resource-card"><h4>&#x1F4E6; Recursos sugeridos</h4><p>3 fichas tecnicas reales o adaptadas, tabla comparativa en blanco, datasheet ejemplo.</p></div>
+<p class="footer-note">Guia de trabajo para estudiantes &mdash; Materiales de Clases 2026.</p>
+</div>
+<script>
+function toggleAnswer(id, button) {
+  const answer = document.getElementById(id);
+  const isOpen = answer.classList.toggle('open');
+  button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+}
+</script>
 </body>
 </html>

@@ -1,353 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 1 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
-        .hero p { color: rgba(255,255,255,0.88); }
-        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-        .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
-        .cierre { background: #7c3aed; }
-        .section-body { padding: 20px 22px 22px; }
-        .section-body ul { margin-left: 20px; }
-        .section-body li { margin-bottom: 8px; }
-        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-        .activity-card p { margin-bottom: 10px; }
-        .task-steps { margin-left: 20px; }
-        .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-        .grammar-banner { background: linear-gradient(135deg, #fff7ed, #eff6ff); border: 1px solid #fed7aa; border-radius: 14px; padding: 18px; margin-bottom: 16px; }
-        .grammar-banner h4 { color: #9a3412; margin-bottom: 10px; }
-        .grammar-banner p { margin-bottom: 10px; }
-        .grammar-legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
-        .legend-card { background: white; border-radius: 12px; border: 1px solid #e5e7eb; padding: 14px; }
-        .legend-card h5 { color: #0f172a; margin-bottom: 8px; font-size: 0.96rem; }
-        .pill { display: inline-block; border-radius: 999px; padding: 4px 10px; font-size: 0.84rem; font-weight: 700; margin: 0 6px 6px 0; }
-        .pill-pronoun { background: #dbeafe; color: #1d4ed8; }
-        .pill-be { background: #dcfce7; color: #166534; }
-        .pill-verb { background: #fee2e2; color: #b91c1c; }
-        .pattern-line { font-weight: 700; margin: 8px 0 0; }
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-        .focus-card ul { margin-left: 18px; }
-        .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-        .reading-box p { margin-bottom: 10px; }
-        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-        .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
-        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
-        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-        .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 1 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.section-body ul, .section-body ol { margin-left: 20px; }
+.section-body li { margin-bottom: 8px; }
+.review-box, .reading-box, .task-box, .eval-box, .apply-box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+.apply-box { border-color: #fdba74; background: #fff7ed; }
+.apply-box h4 { color: #c2410c; margin-bottom: 8px; }
+.apply-box .intro { background: white; border-left: 4px solid #ea580c; padding: 10px 12px; border-radius: 8px; margin: 10px 0 12px; font-size: 0.95rem; }
+.apply-box .check { background: #ecfdf5; border-left: 4px solid #16a34a; padding: 10px 14px; border-radius: 8px; margin-top: 12px; }
+.apply-box .check h5 { color: #166534; margin-bottom: 6px; }
+.review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+.meaning { font-size: 0.92rem; color: #1f2937; }
+.pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+.focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; margin-top: 10px; }
+.focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+.focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.reading-box p { margin-bottom: 10px; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+.toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+.exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+.resource-card { padding: 18px 22px; }
+.resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+.rubric-summary { background: #fef3c7; border-left: 4px solid #d97706; padding: 12px 14px; border-radius: 10px; margin-top: 12px; font-size: 0.95rem; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
+</style>
 </head>
 <body>
-    <div class="page">
-        <div class="hero">
-            <h1>Clase 1 — Unidad 2</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · How Things Work — Processes and Descriptions</p>
-            <div class="meta">
-                <span>🎯 la estructura de la Passive Voice en Present Simple para describir procesos...</span>
-                <span>📘 OA9 · OA8</span>
-                <span>🗂 Clase 1</span>
-                
-                <span>🧩 Clase de trabajo</span>
-            </div>
-        </div>
-
-        <div class="toolbar">
-            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
-        </div>
-
-        <div class="objective-card">
-            <h2>Objetivo de la clase</h2>
-            <p>Comprender la estructura de la Passive Voice en Present Simple para describir procesos técnicos donde el agente no es relevante.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
-            <div class="section-body">
-    <div class="grammar-banner">
-        <h4>🌈 Passive Voice in Present Simple — color guide</h4>
-        <p>Use the passive voice when the action or process is more important than the person. In this class, the subject is usually a part, a tool, or a product.</p>
-        <p class="pattern-line"><span class="pill pill-pronoun">subject / pronoun</span> + <span class="pill pill-be">am / is / are</span> + <span class="pill pill-verb">regular verb + ed</span></p>
-        <div class="grammar-legend">
-            <div class="legend-card">
-                <h5>🔵 Pronouns and technical subjects</h5>
-                <p><span class="pill pill-pronoun">I</span> <span class="pill pill-pronoun">you</span> <span class="pill pill-pronoun">he</span> <span class="pill pill-pronoun">she</span> <span class="pill pill-pronoun">it</span> <span class="pill pill-pronoun">we</span> <span class="pill pill-pronoun">they</span></p>
-                <p>In today&apos;s text, the most common subjects are <strong>it</strong>, <strong>they</strong>, and technical nouns such as <strong>the frame</strong> or <strong>the cables</strong>.</p>
-            </div>
-            <div class="legend-card">
-                <h5>🟢 Verb to be in present simple</h5>
-                <ul>
-                    <li><span class="pill pill-pronoun">I</span> + <span class="pill pill-be">am</span></li>
-                    <li><span class="pill pill-pronoun">he / she / it / the frame</span> + <span class="pill pill-be">is</span></li>
-                    <li><span class="pill pill-pronoun">you / we / they / the cables</span> + <span class="pill pill-be">are</span></li>
-                </ul>
-            </div>
-            <div class="legend-card">
-                <h5>🔴 Regular verbs only in the text</h5>
-                <p><span class="pill pill-verb">cleaned</span> <span class="pill pill-verb">painted</span> <span class="pill pill-verb">installed</span> <span class="pill pill-verb">connected</span> <span class="pill pill-verb">tested</span></p>
-                <p>Only regular verbs are used in the reading so the passive pattern is easier to notice and copy.</p>
-            </div>
-        </div>
-        <div class="review-box">
-            <h4>Model sentences</h4>
-            <ul>
-                <li><span class="pill pill-pronoun">The frame</span> <span class="pill pill-be">is</span> <span class="pill pill-verb">cleaned</span>.</li>
-                <li><span class="pill pill-pronoun">The doors</span> <span class="pill pill-be">are</span> <span class="pill pill-verb">installed</span>.</li>
-                <li><span class="pill pill-pronoun">The engine</span> <span class="pill pill-be">is</span> <span class="pill pill-verb">tested</span>.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the new text and the new language focus.</p>
-        <ol class="task-steps"><li>Read the color guide and underline the three parts of the passive pattern: subject, <em>to be</em>, and regular verb.</li><li>Nombra 2 objetos técnicos que pueden aparecer en un proceso de ensamblaje.</li><li>Predict 3 parts or actions that may appear in a text about how a car is assembled.</li><li>Share one sentence with a partner using the model: <em>The ______ is/are ______.</em></li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la unidad anterior</h4><ul><li>Nombra 3 palabras técnicas que recuerdes de la unidad anterior.</li><li>Completa una oración con una idea clave que todavía recuerdes.</li><li>Comenta con tu compañero dónde usarías ese contenido en un taller o laboratorio.</li></ul></div>
-    </div>
-    </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
-            <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The text is short, coherent, and written with repeated passive voice so the structure can be understood in context.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Why is passive voice used here?</h5>
-                <p>In technical reading, the process is usually more important than the worker. For that reason, the product or the part becomes the subject of the sentence.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The frame is cleaned before the next stage.</li><li>The cables are connected after the seats are installed.</li><li>The engine is tested at the end of the process.</li></ul>
-            </div>
-            <div class="focus-card">
-                <h5>Singular and plural patterns</h5>
-                <p>Use <strong>is</strong> with singular subjects and <strong>are</strong> with plural subjects.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The frame <strong>is</strong> cleaned.</li><li>The engine <strong>is</strong> tested.</li><li>The doors <strong>are</strong> installed.</li><li>The cables <strong>are</strong> connected.</li></ul>
-            </div>
-            <div class="focus-card">
-                <h5>Question frames for this reading</h5>
-                <p>Use these question models to answer with passive voice.</p>
-                <div class="focus-subtitle">Question stems</div>
-                <ul><li>What is cleaned first?</li><li>Which parts are installed next?</li><li>What is tested in the final stage?</li></ul>
-                <div class="focus-subtitle">Answer stems</div>
-                <ul><li>The frame is cleaned first.</li><li>The doors are installed next.</li><li>The engine is tested in the final stage.</li></ul>
-            </div>
-            </div>
-    </div>
-    
-
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review these 10 key words before reading. They are directly connected to the process in the text and will help you understand each stage more easily.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">frame</div>
-                <div class="meaning">the metal base of the car; estructura</div>
-                <div class="pronunciation">Pron.: FREIM</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">paint</div>
-                <div class="meaning">color material used on a surface; pintura</div>
-                <div class="pronunciation">Pron.: PEINT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">door</div>
-                <div class="meaning">the side part used to enter the car; puerta</div>
-                <div class="pronunciation">Pron.: DOR</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">seat</div>
-                <div class="meaning">the place where a person sits; asiento</div>
-                <div class="pronunciation">Pron.: SIIT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">cable</div>
-                <div class="meaning">a wire that joins electrical parts; cable</div>
-                <div class="pronunciation">Pron.: KEI-bol</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">brake</div>
-                <div class="meaning">the part that helps stop the car; freno</div>
-                <div class="pronunciation">Pron.: BREIK</div>
-            </div>
-
-            <div class="vocab-card">
-                <div class="word">engine</div>
-                <div class="meaning">the machine that gives power to the car; motor</div>
-                <div class="pronunciation">Pron.: EN-yin</div>
-            </div>
-
-            <div class="vocab-card">
-                <div class="word">checklist</div>
-                <div class="meaning">a list of steps used to verify the process; lista de verificación</div>
-                <div class="pronunciation">Pron.: CHEK-list</div>
-            </div>
-
-            <div class="vocab-card">
-                <div class="word">install</div>
-                <div class="meaning">to put a part in the correct place; instalar</div>
-                <div class="pronunciation">Pron.: in-STOL</div>
-            </div>
-
-            <div class="vocab-card">
-                <div class="word">test</div>
-                <div class="meaning">to check if something works correctly; probar</div>
-                <div class="pronunciation">Pron.: TEST</div>
-            </div>
-            </div>
-                </div>
-
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Text — Process and Description</h4>
-                    <p class="reading-note">Texto graduado A2-B1 inicial: secuencia clara, ideas conectadas y Passive Voice repetida con verbos regulares.</p>
-                    <p><strong>How a Training Car Is Assembled</strong></p>
-                    <p>A training car is assembled in the school workshop. The process is organized in six simple steps, so the text is easy to follow.</p>
-                    <p>First, the metal frame is cleaned. Then, blue paint is added, and the frame is painted.</p>
-                    <p>Next, the doors are installed and the seats are installed. After that, the cables are connected inside the car.</p>
-                    <p>In the next stage, the brakes are checked and the engine is tested. Each stage is recorded on a checklist.</p>
-                    <p>At the end, a safety label is added and the final result is presented to the class. The complete process is explained again with short notes.</p>
-                    <p>For that reason, the passive pattern is repeated many times in the text. The action is important, but the person is not named.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Use passive voice in your answers whenever possible.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What is assembled in the school workshop?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">A training car is assembled in the school workshop.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What is done first to the metal frame?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">The metal frame is cleaned first.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which parts are installed after the frame is painted?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">The doors and the seats are installed after the frame is painted.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> What is connected inside the car?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The cables are connected inside the car.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What is checked and tested in the next stage?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">The brakes are checked and the engine is tested in the next stage.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> Why is the process easy to follow?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">The process is organized in simple steps, and each stage is recorded on a checklist.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Síntesis técnica</h4>
-                    
-        <ol class="task-steps">
-            <li>Write three passive sentences about the process using at least four words from the glossary.</li>
-            <li>Choose one stage and explain it with one singular subject and one plural subject.</li>
-            <li>Answer this question in one sentence: <em>Why is passive voice useful in technical texts?</em></li>
-        </ol>
-        
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
-        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
-        <ol class="task-steps"><li>Review your notes and choose the most useful passive sentence from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below using the passive pattern.</li></ol>
-        
-        <div class="exit-ticket">
-            <h5>Exit ticket prompts</h5>
-            <ul><li>Write one passive sentence that summarizes the first stage of the process.</li><li>Write one new passive sentence with a plural subject.</li><li>Explain in one short sentence why the person is not named in this type of text.</li></ul>
-        </div>
-        
-    </div>
-    </div>
-        </div>
-
-        <div class="resource-card">
-            <h4>📦 Recursos sugeridos</h4>
-            <p>Recursos: guía de gramática con código de colores, texto impreso "How a Training Car Is Assembled", checklist visual del proceso, y ejercicios breves de respuesta en Passive Voice.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: modelar dos respuestas orales en voz pasiva antes de la lectura y dejar el patrón visible en la pizarra durante toda la clase.</p>
-        </div>
-
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
-    </div>
-
-    <script>
-        function toggleAnswer(id, button) {
-            const answer = document.getElementById(id);
-            const isOpen = answer.classList.toggle('open');
-            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-        }
-    </script>
+<div class="page">
+<div class="hero">
+<h1>Clase 1 &mdash; Unidad 2</h1>
+<p>1&deg; Medio &mdash; Ingles General (Lu+Ju) &middot; How Things Work &mdash; Processes and Descriptions</p>
+<div class="meta">
+<span>&#x1F3AF; Comprender la estructura de la Passive Voice en Present Simple para describir procesos tec...</span>
+<span>&#x1F4D8; OA8 · OA9</span>
+<span>&#x1F5C2; Clase 1</span>
+<span>&#x1F9E9; Clase de trabajo</span>
+</div>
+</div>
+<div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+<div class="objective-card"><h2>Objetivo de la clase</h2><p>Comprender la estructura de la Passive Voice en Present Simple para describir procesos tecnicos donde el agente no es relevante.</p></div>
+<div class="section"><div class="section-header inicio">&#x1F7E2; Inicio</div><div class="section-body"><div class="task-box"><h4>&#x1F50E; Actividad 1 &mdash; Activate and Predict</h4><ol class="task-steps"><li>Lee el objetivo y subraya la accion central: <em>understand the structure of Passive Voice</em>.</li><li>Bienvenida a la Unidad 2: <em>In Unit 1 we learned about tools. Now we learn HOW things are made and HOW things work.</em></li><li>Reflexiona: en un manual tecnico, lo importante es <strong>WHAT is done</strong>, no quien lo hace. Esa es la razon para usar voz pasiva.</li><li>Predice tres pasos del proceso de ensamblaje de un automovil.</li></ol></div><div class="review-box"><h4>&#x1F501; Repaso rapido de la clase anterior</h4><p>Es la primera clase de la Unidad 2; conectamos con la Unidad 1 (tools and specialties).</p></div></div></div><div class="section"><div class="section-header desarrollo">&#x1F535; Desarrollo</div><div class="section-body"><div class="task-box"><h4>&#x1F9E0; Actividad 2 &mdash; Language Focus</h4><p>Usa esta estructura cuando el proceso o el resultado es mas importante que el agente que realiza la accion.</p><div class="focus-card"><h5>Passive Voice in Present Simple</h5><div class="focus-subtitle">Examples</div><ul><li>Cars <strong>are assembled</strong> in factories.</li><li>The oil <strong>is changed</strong> every 5,000 km.</li><li>Steel <strong>is heated</strong> to 1,500 &deg;C before it is shaped.</li><li>The voltage <strong>is measured</strong> with a multimeter.</li></ul><div class="focus-subtitle">Sentence frames &amp; tips</div><ul><li>Subject + <em>is/are</em> + past participle (+ by agent).</li><li>Active: <em>The technician inspects the panel.</em> &rarr; Passive: <em>The panel is inspected.</em></li><li>Useful verbs: <em>made, used, designed, installed, tested, assembled, repaired, replaced</em>.</li></ul></div></div><div class="task-box"><h4>&#x1F4DA; Actividad 3 &mdash; Vocabulary for reading</h4><p>Revisa estas palabras clave antes de leer. Cada tarjeta incluye una definicion breve en ingles y una guia de pronunciacion para que el vocabulario apoye la comprension del texto.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">assemble</div><div class="meaning">to put parts together to form a whole</div><div class="pronunciation">Pron.: a-SEM-bl</div></div><div class="vocab-card"><div class="word">inspect</div><div class="meaning">to look at something carefully to check for problems</div><div class="pronunciation">Pron.: in-SPEKT</div></div><div class="vocab-card"><div class="word">install</div><div class="meaning">to put a system or part in its correct working place</div><div class="pronunciation">Pron.: in-STOL</div></div><div class="vocab-card"><div class="word">test</div><div class="meaning">to use or measure something to see if it works</div><div class="pronunciation">Pron.: TEST</div></div><div class="vocab-card"><div class="word">replace</div><div class="meaning">to put a new part in place of an old one</div><div class="pronunciation">Pron.: ri-PLEIS</div></div><div class="vocab-card"><div class="word">design</div><div class="meaning">to plan how a product or process will be made</div><div class="pronunciation">Pron.: di-ZAIN</div></div></div></div><div class="reading-box"><h4>&#x1F4D6; Actividad 4 &mdash; Reading Text &mdash; How a Car Is Assembled</h4><p>In a modern car factory, a car is assembled in a long production line. Each station is responsible for one specific job. The body of the car is welded first, and then it is painted in a clean cabin.</p><p>After the paint is dry, the engine is installed by a team of technicians. The wires, the lights and the brakes are connected in the next stations. Every connection is tested before the car moves forward.</p><p>Near the end of the line, the seats, the windows and the wheels are added. The dashboard is checked, the software is updated and the doors are aligned.</p><p>Finally, the car is started and a short road test is done. If a defect is found, the car is sent back to the correct station and the problem is repaired before delivery.</p></div><div class="task-box"><h4>&#x1F4DD; Actividad 5 &mdash; Reading comprehension</h4><p>Responde regresando al texto. Busca evidencia concreta antes de revisar la respuesta sugerida.</p><div class="question-card"><p><strong>1.</strong> Which part of the car is welded first?</p><button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button><div class="answer-box" id="answer-1">The body of the car is welded first.</div></div><div class="question-card"><p><strong>2.</strong> When is the engine installed?</p><button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button><div class="answer-box" id="answer-2">It is installed after the paint is dry.</div></div><div class="question-card"><p><strong>3.</strong> What is tested at every connection station?</p><button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button><div class="answer-box" id="answer-3">Each electrical and mechanical connection is tested before the car moves forward.</div></div><div class="question-card"><p><strong>4.</strong> What happens at the end of the line if a defect is found?</p><button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button><div class="answer-box" id="answer-4">The car is sent back to the correct station and the problem is repaired.</div></div><div class="question-card"><p><strong>5.</strong> Why does the text use Passive Voice almost always?</p><button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button><div class="answer-box" id="answer-5">Because the focus is on the process and the result, not on the worker who does each action.</div></div><div class="question-card"><p><strong>6.</strong> Infer: why is each station responsible for only one job?</p><button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button><div class="answer-box" id="answer-6">Because it makes the process faster, more reliable and easier to inspect for quality.</div></div></div><div class="apply-box"><h4>&#x1F680; Actividad 6 &mdash; Apply &amp; Extend: del texto a tu especialidad</h4><div class="intro">No repitas el glosario ni el texto. <strong>Transfiere</strong> la estructura del proceso a un mecanismo de tu especialidad preferida.</div><ol class="task-steps"><li>Elige UN proceso tecnico que conozcas (cambio de aceite, soldadura simple, conexion de un enchufe, impresion de un afiche, prueba de un circuito).</li><li>Escribe el proceso en <strong>4 oraciones en Passive Voice</strong>, conectadas con <em>first, then, after that, finally</em>.</li><li>Agrega UNA oracion donde expliques por que el agente <strong>no es importante</strong> en ese proceso.</li><li>Marca con color: sujeto (azul), verbo <em>to be</em> (verde), past participle (rojo).</li></ol><div class="check"><h5>&#x2705; Auto-chequeo antes de entregar</h5><ul><li>Mis 4 oraciones describen pasos diferentes, no el mismo paso repetido.</li><li>Use Passive Voice (is/are + past participle), no Active Voice.</li><li>Incluyo al menos 2 verbos tecnicos del glosario y 2 verbos nuevos buscados por mi.</li><li>Mi oracion final justifica el uso de pasiva con un argumento tecnico real.</li></ul></div></div><div class="eval-box"><h4>&#x1F4CB; Seguimiento de la clase</h4><p>Formativa: observacion de participacion, revision de la Actividad 6 y registro de cierre escrito.</p></div></div></div><div class="section"><div class="section-header cierre">&#x1F7E3; Cierre</div><div class="section-body"><div class="exit-ticket"><h5>Exit ticket &amp; reflexion</h5><ul><li>Escribe 3 oraciones en Passive Voice sobre un proceso de tu especialidad preferida.</li><li>Comparte una de tus oraciones con un companero y corrijan errores juntos.</li><li>Anota una pregunta o duda gramatical para la proxima clase.</li></ul></div></div></div><div class="resource-card"><h4>&#x1F4E6; Recursos sugeridos</h4><p>Presentacion gramatical, hoja de transformacion activa/pasiva, texto <em>How a Car Is Assembled</em> impreso, marcadores de 3 colores.</p></div>
+<p class="footer-note">Guia de trabajo para estudiantes &mdash; Materiales de Clases 2026.</p>
+</div>
+<script>
+function toggleAnswer(id, button) {
+  const answer = document.getElementById(id);
+  const isOpen = answer.classList.toggle('open');
+  button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+}
+</script>
 </body>
 </html>
