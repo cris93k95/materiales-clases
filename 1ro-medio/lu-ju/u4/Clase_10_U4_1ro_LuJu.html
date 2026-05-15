@@ -1,84 +1,269 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clase 10 - Unidad 4 - 1ro Medio - Ingles General (Lu+Ju)</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-.hero h1 { font-size: 2rem; margin-bottom: 6px; }
-.hero p { color: rgba(255,255,255,0.88); }
-.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-.inicio { background: #2e7d32; }
-.desarrollo { background: #1565c0; }
-.cierre { background: #7c3aed; }
-.section-body { padding: 20px 22px 22px; }
-.section-body ul, .section-body ol { margin-left: 20px; }
-.section-body li { margin-bottom: 8px; }
-.review-box, .reading-box, .task-box, .eval-box, .apply-box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-.apply-box { border-color: #fdba74; background: #fff7ed; }
-.apply-box h4 { color: #c2410c; margin-bottom: 8px; }
-.apply-box .intro { background: white; border-left: 4px solid #ea580c; padding: 10px 12px; border-radius: 8px; margin: 10px 0 12px; font-size: 0.95rem; }
-.apply-box .check { background: #ecfdf5; border-left: 4px solid #16a34a; padding: 10px 14px; border-radius: 8px; margin-top: 12px; }
-.apply-box .check h5 { color: #166534; margin-bottom: 6px; }
-.review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-.word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-.meaning { font-size: 0.92rem; color: #1f2937; }
-.pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-.focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; margin-top: 10px; }
-.focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-.focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-.reading-box p { margin-bottom: 10px; }
-.reading-note { font-size: 0.92rem; color: #475569; margin-bottom: 10px; }
-.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-.toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-.answer-box.open { display: block; }
-.exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-.exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-.resource-card { padding: 18px 22px; }
-.resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-.rubric-summary { background: #fef3c7; border-left: 4px solid #d97706; padding: 12px 14px; border-radius: 10px; margin-top: 12px; font-size: 0.95rem; }
-.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
-@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 10 — Unidad 4 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
+        .hero p { color: rgba(255,255,255,0.88); }
+        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #7c3aed; }
+        .section-body { padding: 20px 22px 22px; }
+        .section-body ul { margin-left: 20px; }
+        .section-body li { margin-bottom: 8px; }
+        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+        .activity-card p { margin-bottom: 10px; }
+        .task-steps { margin-left: 20px; }
+        .task-steps li { margin-bottom: 8px; }
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .meaning { font-size: 0.92rem; color: #1f2937; }
+        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
+        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card ul { margin-left: 18px; }
+        .focus-card li { margin-bottom: 6px; }
+        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .reading-box p { margin-bottom: 10px; }
+        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+        .answer-box.open { display: block; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
+        .activity-table th { background: #e2e8f0; }
+        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
+        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+        .exit-ticket ul { margin-left: 18px; }
+        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+        @media (max-width: 720px) {
+            .hero h1 { font-size: 1.55rem; }
+            .page { padding: 16px 12px 28px; }
+        }
+        @media print {
+            body { background: white; }
+            .toolbar { display: none; }
+            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
+        }
+    </style>
 </head>
 <body>
-<div class="page"><div class="hero">
-<h1>Clase 10 - Unidad 4</h1>
-<p>1&deg; Medio - Ingles General (Lu+Ju) &middot; Safety, Innovation and Future Pathways</p>
-<div class="meta">
-<span>&#x1F3AF; Presentar oralmente una innovacion tecnica vinculada a una especialidad, explicando su uti...</span>
-<span>&#x1F4D8; OA7 · OA8</span>
-<span>&#x1F5C2; Clase 10</span>
-<span>&#x1F9E9; Evaluacion - Nota 1</span>
-</div>
-</div>
-<div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-<div class="objective-card"><h2>Objetivo de la clase</h2><p>Presentar oralmente una innovacion tecnica vinculada a una especialidad, explicando su utilidad, desafios y proyeccion laboral.</p></div>
-<div class="section"><div class="section-header inicio">Inicio</div><div class="section-body"><div class="task-box"><h4>Antes de comenzar</h4><ul><li>Revisar la estructura esperada: innovation -> tools -> benefits -> challenge -> personal opinion.</li><li>Recordar criterios de la rubrica y el tiempo de exposicion.</li><li>Organizar notas breves y evitar lectura completa.</li></ul></div><div class="review-box"><h4>Conexion con la clase anterior</h4><p>Las clases 6-9 entregaron cuatro enfoques de innovacion; hoy se convierten en presentaciones orales breves.</p></div></div></div><div class="section"><div class="section-header desarrollo">Desarrollo - Aplicacion de la evaluacion</div><div class="section-body"><div class="eval-box"><h4>Preparation time</h4><p>Los estudiantes ordenan ideas y seleccionan vocabulario clave para una presentacion de 2-3 minutos.</p></div><div class="eval-box"><h4>Oral presentations</h4><p>Cada estudiante explica una innovacion, responde una pregunta breve y demuestra comprension del impacto laboral y tecnico.</p></div><div class="rubric-summary"><strong>Resumen evaluativo:</strong><ul style="margin-top:6px; margin-left:18px;"><li>Organizacion de ideas - 3 pts</li><li>Vocabulario tecnico y claridad - 3 pts</li><li>Explicacion de beneficios y desafios - 3 pts</li><li>Pronunciacion y fluidez - 3 pts</li><li>Opinion personal fundamentada - 3 pts</li><li><strong>Total: 15 puntos · escala 60%</strong></li></ul></div></div></div><div class="section"><div class="section-header cierre">Cierre</div><div class="section-body"><div class="exit-ticket"><h5>Cierre de la clase</h5><ul><li>Feedback general sobre claridad, uso de vocabulario y control del tiempo.</li><li>Recordatorio: la unidad sigue con proyecto final y habilidades para el futuro.</li><li>Anota una idea interesante que escuchaste de un companero.</li></ul></div></div></div><div class="resource-card"><h4>Recursos sugeridos</h4><p>Rubrica oral, tarjetas de innovacion, speaking frame y lista de presentacion.</p></div>
-<p class="footer-note">Guia de trabajo para estudiantes - Materiales de Clases 2026.</p>
-</div>
-<script>
-function toggleAnswer(id, button) {
-  const answer = document.getElementById(id);
-  const isOpen = answer.classList.toggle('open');
-  button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-}
-</script>
+    <div class="page">
+        <div class="hero">
+            <h1>Clase 10 — Unidad 4</h1>
+            <p>1° Medio — Inglés General (Lu+Ju) · artículo sobre "Top 10 Jobs That Will Change in the Next 20 Years" con preguntas de comprensión</p>
+            <div class="meta">
+                <span>🎯 Evaluación oral de procedimiento técnico</span>
+                <span>📘 📝 NOTA 3</span>
+                <span>🗂 Clase 10</span>
+                
+                <span>📝 Evaluación</span>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+        </div>
+
+        <div class="objective-card">
+            <h2>Objetivo de la clase</h2>
+            <p>Expresar oralmente conocimiento sobre innovación tecnológica en su especialidad, utilizando vocabulario técnico, tag questions y estructuras gramaticales del año.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🔎 Actividad 1 — Activate and Predict</h4>
+        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
+        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to artículo sobre "Top 10 Jobs That Will Change in the Next 20 Years" con preguntas de comprensión.</li><li>Recuerda la idea central de la clase pasada: Comprender información sobre innovaciones en la industria Gráfica, analizando tendencias...</li><li>Predict which tools, risks, or key ideas may appear when working with artículo sobre "Top 10 Jobs That Will Change in the Next 20 Years" con preguntas de comprensión in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
+        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Comprender información sobre innovaciones en la industria Gráfica, analizando tendencias...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+    </div>
+    </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-body">
+                
+    <div class="task-box activity-card">
+        <h4>🧠 Actividad 2 — Language Focus</h4>
+        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <div class="focus-grid">
+            <div class="focus-card">
+                <h5>Tag questions to confirm information</h5>
+                <p>Use a short question at the end of the sentence to confirm a fact, a safety check, or a shared assumption.</p>
+                <div class="focus-subtitle">Examples</div>
+                <ul><li>The tool kit is ready, isn't it?</li><li>The team checked the result, didn't they?</li><li>The system has been tested, hasn't it?</li></ul>
+                <div class="focus-subtitle">Sentence frames</div>
+                <ul><li>The ___ is safe, isn't it?</li><li>You checked the ___, didn't you?</li><li>The team has finished, haven't they?</li></ul>
+            </div>
+            </div>
+    </div>
+    
+
+                <div class="task-box">
+                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
+                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
+                    <div class="glossary-grid">
+            <div class="vocab-card">
+                <div class="word">process</div>
+                <div class="meaning">a sequence of actions used to complete a task</div>
+                <div class="pronunciation">Pron.: PRO-ses</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">component</div>
+                <div class="meaning">one part of a machine, circuit, or larger system</div>
+                <div class="pronunciation">Pron.: kom-POU-nent</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">tool</div>
+                <div class="meaning">an object used to do a practical or technical job</div>
+                <div class="pronunciation">Pron.: TUL</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">measure</div>
+                <div class="meaning">to find size, amount, or distance accurately</div>
+                <div class="pronunciation">Pron.: ME-zher</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">connect</div>
+                <div class="meaning">to join parts so the system can work correctly</div>
+                <div class="pronunciation">Pron.: ko-NEKT</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">repair</div>
+                <div class="meaning">to fix something that is damaged or not working</div>
+                <div class="pronunciation">Pron.: ri-PAIR</div>
+            </div>
+            </div>
+                </div>
+
+                <div class="reading-box">
+                    <h4>📖 Actividad 4 — Presentation Model — artículo sobre "Top 10 Jobs That Will Change in the Next 20 Years" con preguntas de comprensión</h4>
+                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
+                    <p>Before the oral presentation begins, the student technician reviews artículo sobre "Top 10 Jobs That Will Change in the Next 20 Years" con preguntas de comprensión in the school technical workshop. The speaker must explain why this topic matters and what conclusion the audience should remember.</p><p>First, the explanation introduces Expresar oralmente conocimiento sobre innovación tecnológica en su especialidad, utilizando vocabulario técnico, tag questions y estructuras gramaticales del año. The speaker gives enough context so the audience understands the situation before the technical details appear.</p><p>Next, the speaker links the topic to evidence from the tool kit and the checklist. Technical vocabulary is selected carefully so the explanation sounds precise instead of vague.</p><p>After that, the speaker adds one difficulty, one decision, and one recommendation linked to artículo sobre "Top 10 Jobs That Will Change in the Next 20 Years" con preguntas de comprensión. This middle section is important because it shows control of both content and professional reasoning.</p><p>Finally, the explanation closes with the result and one reflection about what the audience should remember. The model text shows that a good oral report is organized, informative, and easy to follow.</p>
+                </div>
+
+                <div class="task-box">
+                    <h4>📝 Actividad 5 — Reading comprehension</h4>
+                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
+                    
+            <div class="question-card">
+                <p><strong>1.</strong> What task or problem is described in the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-1">The speaker prepares an English explanation about artículo sobre "Top 10 Jobs That Will Change in the Next 20 Years" con preguntas de comprensión.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>2.</strong> What happens before the main procedure starts?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-2">The first action is introducing the context of expresar oralmente conocimiento sobre innovación tecnológica en su especialidad, utilizando vocabulario técnico, tag questions y estructuras gramaticales del año and connecting it to the workplace.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-3">The text mentions the tool kit, the checklist, and the technical vocabulary linked to the explanation.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-4">The model shows the language focus through clear sequencing and precise sentence patterns.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-5">The speaker closes with the result and one final reflection.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-6">It can be inferred that the speaker needs to be organized, accurate, and audience-aware.</div>
+            </div>
+            
+                </div>
+
+                <div class="task-box">
+                    <h4>🛠 Actividad 6 — Trabajo Oral Evaluado</h4>
+                    
+            <ol class="task-steps">
+                <li>Plan a 60-90 second explanation with a clear opening, middle, and closing.</li>
+                <li>Name the purpose of the task, the tools or materials involved, and the order of the main actions.</li>
+                <li>Add one difficulty or key decision and one safety recommendation linked to the task.</li>
+                <li>Rehearse with the frames <em>first</em>, <em>then</em>, <em>after that</em>, and <em>finally</em>.</li>
+                <li>Before presenting, check clarity, technical vocabulary, logical sequence, and pronunciation.</li>
+            </ol>
+            
+                </div>
+
+                <div class="eval-box">
+                    <h4>📋 Seguimiento de la clase</h4>
+                    <p>Evaluación: SUMATIVA — Nota 3 del semestre 2 (Interrogación Oral). Rúbrica 5 criterios × 3 niveles = 15 pts, escala 60%. Criterios: (1) Conocimiento del tema (innovación en la especialidad), (2) Vocabulario técnico, (3) Gramática (tag questions, structures del año), (4) Fluidez y pronunciación, (5) Capacidad de responder preguntas espontáneas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
+        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
+        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
+        
+        <div class="exit-ticket">
+            <h5>Exit ticket prompts</h5>
+            <ul><li>Write the opening sentence you will use in your oral explanation.</li><li>Add one technical term from the glossary and one safety recommendation.</li><li>Check that your closing sentence states a result or takeaway clearly.</li></ul>
+        </div>
+        
+    </div>
+    </div>
+        </div>
+
+        <div class="resource-card">
+            <h4>📦 Recursos sugeridos</h4>
+            <p>Texto adaptado, pizarra, guía de apoyo y recursos visuales de la especialidad.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+        </div>
+
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+    </div>
+
+    <script>
+        function toggleAnswer(id, button) {
+            const answer = document.getElementById(id);
+            const isOpen = answer.classList.toggle('open');
+            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+        }
+    </script>
 </body>
 </html>

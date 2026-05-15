@@ -734,6 +734,9 @@ def short_title(class_data, unit_number, eval_kind, oral_sequence=None):
         return "Evaluación oral de procedimiento técnico"
     if eval_kind == "reading":
         return "Prueba de comprensión lectora"
+    lesson_cue = extract_lesson_cue(class_data)
+    if lesson_cue["title"]:
+        return truncate_text(lesson_cue["title"], 82)
     cleaned = re.sub(
         r"^(Comprender|Aplicar|Analizar|Describir|Identificar|Participar|Organizar|Producir|Evaluar|Demostrar|Reflexionar|Sintetizar)\s+",
         "",
@@ -779,6 +782,72 @@ def review_prompt(previous_class, unit_number):
             "Escribe una palabra o estructura que todavía recuerdes usar.",
             "Explica en una frase cómo ese contenido se conecta con la actividad de hoy.",
         ],
+    }
+
+
+LESSON_CUE_LABELS = [
+    ("reading", "Reading focus"),
+    ("video", "Video analysis"),
+    ("case study", "Case study"),
+    ("debate", "Debate prompt"),
+    ("role-play", "Role-play"),
+    ("project", "Project task"),
+    ("presentation", "Presentation model"),
+    ("simulation", "Simulation"),
+]
+
+
+def normalize_lesson_cue(text):
+    cleaned = clean_text(text)
+    cleaned = re.sub(r"\bTexto adaptado.*$", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\bPrimera reproducción.*$", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\bsegunda reproducción.*$", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\bquick-write.*$", "", cleaned, flags=re.IGNORECASE)
+    return cleaned.strip(" .;:-")
+
+
+def extract_lesson_cue(class_data):
+    phases = class_data.get("phases", {})
+    for phase_name in ("desarrollo", "inicio", "cierre"):
+        for item in phases.get(phase_name, []):
+            normalized = normalize_lesson_cue(item)
+            lowered = normalized.lower()
+            for prefix, label in LESSON_CUE_LABELS:
+                if lowered.startswith(prefix):
+                    body = re.sub(r"^[A-Za-zÀ-ÿ\-/ ]+(?:\(.*?\))?:\s*", "", normalized, count=1)
+                    parts = re.split(r"\s+[—-]\s+", body, maxsplit=1)
+                    title = parts[0].strip(" '‘’\"“”")
+                    detail = parts[1].strip() if len(parts) > 1 else class_data["objective"]
+                    detail = normalize_lesson_cue(detail)
+                    if title:
+                        return {
+                            "label": label,
+                            "title": title,
+                            "detail": detail or class_data["objective"],
+                        }
+
+            if phase_name == "desarrollo" and ":" in normalized:
+                body = normalized.split(":", 1)[1].strip()
+                if ":" in body and "—" not in body and " - " not in body:
+                    tail = body.rsplit(":", 1)[-1].strip()
+                    if len(tail) > 12:
+                        body = tail
+                parts = re.split(r"\s+[—-]\s+", body, maxsplit=1)
+                title = parts[0].strip(" '‘’\"“”")
+                detail = parts[1].strip() if len(parts) > 1 else class_data["objective"]
+                detail = normalize_lesson_cue(detail)
+                if title:
+                    return {
+                        "label": "Class focus",
+                        "title": title,
+                        "detail": detail or class_data["objective"],
+                    }
+
+    fallback = truncate_text(class_data["objective"], 72)
+    return {
+        "label": "Class focus",
+        "title": fallback,
+        "detail": class_data["objective"],
     }
 
 
@@ -1133,83 +1202,82 @@ def build_reading_content(course, unit_number, unit_title, class_data, glossary,
     profile = level_profile(course["course_key"])
     context = COURSE_CONTEXT[course["course_key"]]
     focus = infer_focus(class_data["objective"])
+    lesson_cue = extract_lesson_cue(class_data)
     focus_blocks = detect_language_focuses(class_data["objective"], context)
     tool_one = context["equipment"][0]
     tool_two = context["equipment"][1]
-    key_word = glossary[0][0]
-    support_word = glossary[1][0]
     language_focus = focus_blocks[0]["label"]
-    focus_label = FOCUS_DESCRIPTIONS.get(focus, "a technical task")
+    topic_title = lesson_cue["title"]
+    topic_detail = lesson_cue["detail"]
+    title = f"{lesson_cue['label']} — {topic_title}" if topic_title else FOCUS_TITLES.get(focus, "Reading Text — Technical English in context")
 
     if profile["cefr"] == "A2":
         paragraphs = [
-            f"In the {context['workplace']}, a student team is working on {focus_label} linked to {unit_title}. Their task is to understand how a {context['product']} is prepared, checked, and explained in English.",
-            f"Before the main procedure begins, the {tool_one} is prepared and the class reads a short note about {key_word}. The teacher asks students to notice the technical verbs and the words that help the reader follow the order of the task.",
-            f"During the activity, the {tool_two} is used to complete an important stage of the job. Each action is recorded in clear sentences so the next person can understand what is done, what is checked, and what must happen next.",
-            f"A small difficulty appears when one step is not fully clear, so the students compare evidence, review the glossary, and revisit the example box for {language_focus}. This helps them decide which detail is essential and which detail only gives extra context.",
-            f"In the final stage, the group writes a short conclusion, explains the result, and suggests one safety action. The reading shows that technical English is useful because it supports accuracy, teamwork, and better decisions in the workshop.",
+            f"In the {context['workplace']}, the class explores {topic_title} as part of {unit_title}. Students use English to understand how this topic affects the daily work around the {context['product']}.",
+            f"The first notes focus on {topic_detail}. The teacher asks students to identify the most useful technical verbs and the details that explain why the topic matters in practice.",
+            f"During the activity, the {tool_one} and the {tool_two} appear as reference points for connecting the text with a real workshop, lab, or production task. The class decides which information is essential and which information only adds context.",
+            f"When an idea is not fully clear, students return to the glossary and the examples for {language_focus}. This helps them explain sequence, cause, or comparison with more precision.",
+            f"In the final stage, the group writes a short conclusion about {topic_title} and adds one recommendation, safety point, or workplace implication. The reading shows that technical English supports accuracy, teamwork, and better decisions.",
         ]
         answers = [
-            f"The text describes {focus_label} in the {context['workplace']}.",
-            f"Before the main task starts, the team prepares the {tool_one} and reads the note about {key_word}.",
+            f"The text describes {topic_title} in the {context['workplace']}.",
+            f"Before the main task starts, the class reviews {topic_detail.lower()} and links it to the {tool_one}.",
             f"The {tool_one}, the {tool_two}, and the glossary notes are important sources of information.",
             f"The text highlights {language_focus} through model sentences and technical examples.",
-            "The team finishes by explaining the result and suggesting one safety action.",
+            f"The team finishes by explaining the result or implication of {topic_title}.",
             "Good technical work depends on clear notes, accurate vocabulary, and careful checking.",
         ]
     else:
         paragraphs = [
-            f"At the start of the shift in the {context['workplace']}, a team is asked to solve {focus_label} connected to {unit_title}. The text follows the way technical information is interpreted before any action is taken.",
-            f"The supervisor first reviews the record of the previous task, the available materials, and the quality criteria expected for the {context['product']}. This context matters because the team cannot choose a valid response until the evidence is organized.",
-            f"As the procedure develops, the {tool_one} and the {tool_two} provide the key evidence for the decision-making process. Notes, measurements, and short explanations are compared in order to distinguish routine data from signs of a real problem or opportunity.",
-            f"The writer also uses {language_focus} to connect ideas precisely and to clarify relationships between cause, sequence, contrast, or responsibility. Because of that, the reader can understand not only what happens, but also why a certain action is preferred.",
-            f"By the end of the text, the team reaches a justified conclusion, records the outcome, and proposes one improvement for future work. The passage suggests that technical English is valuable when evidence must be communicated clearly to classmates, supervisors, or clients.",
+            f"At the start of the shift in the {context['workplace']}, the team studies {topic_title} as part of {unit_title}. The discussion is grounded in {topic_detail}.",
+            f"The supervisor asks the group to connect the topic with the quality, efficiency, or safety demands of the {context['product']}. Before proposing an opinion, the team has to separate evidence from assumption.",
+            f"As the reading develops, the {tool_one} and the {tool_two} act as concrete reference points for interpreting the situation. Notes, measurements, and short explanations are compared in order to distinguish routine data from a real challenge or opportunity.",
+            f"The writer also uses {language_focus} to compare benefits, limits, and decisions linked to {topic_title}. Because of that, the reader can understand not only what happens, but also why one response may be more useful than another.",
+            f"By the end of the text, the team reaches a justified conclusion about {topic_title} and proposes one improvement for future work. The passage suggests that technical English becomes more valuable when evidence must be communicated clearly to classmates, supervisors, or clients.",
         ]
         answers = [
-            f"The text presents {focus_label} in a professional setting.",
-            f"Before the procedure advances, the team reviews previous records, materials, and quality criteria for the {context['product']}.",
+            f"The text presents {topic_title} in a professional setting.",
+            f"Before the procedure advances, the team reviews the context and evidence linked to {topic_detail.lower()}.",
             f"The {tool_one}, the {tool_two}, and the written notes guide the team's decisions.",
             f"The text uses {language_focus} to organize relationships between ideas more precisely.",
-            "The team reaches a justified conclusion and proposes one improvement for future work.",
+            f"The team reaches a justified conclusion about {topic_title} and proposes one improvement for future work.",
             "The broader lesson is that technical communication must be evidence-based, accurate, and easy to transfer to others.",
         ]
 
     if eval_kind == "oral":
-        title = FOCUS_TITLES["oral"]
+        title = f"Presentation Model — {topic_title}" if topic_title else FOCUS_TITLES["oral"]
         paragraphs = [
-            f"Before the oral presentation begins, the {context['role']} studies a short technical situation in the {context['workplace']}. The speaker must explain the purpose of the task and the expected result in a clear order.",
-            f"First, the {tool_one} is checked and the main objective is stated. The explanation does not start with isolated words; it starts with a complete idea that helps the audience understand the context.",
-            f"Next, the speaker describes the central action carried out with the {tool_two}. Technical vocabulary is selected carefully so the explanation sounds precise instead of vague.",
-            f"After that, the speaker adds one difficulty, one decision, and one safety recommendation. This middle section is important because it shows control of both content and professional reasoning.",
-            f"Finally, the explanation closes with the result and one reflection about what the audience should remember. The model text shows that a good oral report is organized, informative, and easy to follow.",
+            f"Before the oral presentation begins, the {context['role']} reviews {topic_title} in the {context['workplace']}. The speaker must explain why this topic matters and what conclusion the audience should remember.",
+            f"First, the explanation introduces {topic_detail}. The speaker gives enough context so the audience understands the situation before the technical details appear.",
+            f"Next, the speaker links the topic to evidence from the {tool_one} and the {tool_two}. Technical vocabulary is selected carefully so the explanation sounds precise instead of vague.",
+            f"After that, the speaker adds one difficulty, one decision, and one recommendation linked to {topic_title}. This middle section is important because it shows control of both content and professional reasoning.",
+            "Finally, the explanation closes with the result and one reflection about what the audience should remember. The model text shows that a good oral report is organized, informative, and easy to follow.",
         ]
         answers = [
-            "The speaker prepares an English explanation of a technical task.",
-            f"The first action is checking the {tool_one} and stating the purpose of the task.",
+            f"The speaker prepares an English explanation about {topic_title}.",
+            f"The first action is introducing the context of {topic_detail.lower()} and connecting it to the workplace.",
             f"The text mentions the {tool_one}, the {tool_two}, and the technical vocabulary linked to the explanation.",
             "The model shows the language focus through clear sequencing and precise sentence patterns.",
             "The speaker closes with the result and one final reflection.",
             "It can be inferred that the speaker needs to be organized, accurate, and audience-aware.",
         ]
     elif eval_kind == "reading":
-        title = "Reading Assessment Text"
+        title = f"Reading Assessment — {topic_title}" if topic_title else "Reading Assessment Text"
         paragraphs = [
-            f"A team in the {context['workplace']} is completing a final task for Unit {unit_number}. The aim is to review how a {context['product']} is prepared, checked, and communicated in English under realistic workshop conditions.",
-            f"Before the work starts, the team reviews the instructions, the available materials, and the criteria that will be used to judge quality. This initial control prevents confusion later in the process.",
+            f"A team in the {context['workplace']} is completing a final task about {topic_title} for Unit {unit_number}. The aim is to review how this topic is interpreted, checked, and communicated in English under realistic technical conditions.",
+            f"Before the work starts, the team reviews the instructions, the available materials, and the criteria linked to {topic_detail.lower()}. This initial control prevents confusion later in the process.",
             f"During the main stage, the {tool_one} and the {tool_two} are used to gather evidence and complete the technical task. At the same time, the team writes short notes that explain what has been done and what still needs attention.",
-            f"A disagreement appears when two students interpret one instruction differently, so they return to the text, compare evidence, and justify their reading. This moment shows why careful comprehension matters in technical settings.",
-            f"At the end, the group compares the result with the original instructions and proposes one improvement for the next attempt. The assessment text suggests that clear reading, accurate vocabulary, and evidence-based decisions improve safety and teamwork.",
+            "A disagreement appears when two students interpret one instruction differently, so they return to the text, compare evidence, and justify their reading. This moment shows why careful comprehension matters in technical settings.",
+            f"At the end, the group compares the result with the original instructions and proposes one improvement connected to {topic_title}. The assessment text suggests that clear reading, accurate vocabulary, and evidence-based decisions improve safety and teamwork.",
         ]
         answers = [
-            f"The team is reviewing a final Unit {unit_number} technical task in a realistic workshop situation.",
-            f"They begin by reviewing instructions, materials, and quality criteria before touching the equipment.",
+            f"The team is reviewing a final Unit {unit_number} task about {topic_title} in a realistic technical setting.",
+            f"They begin by reviewing instructions, materials, and the criteria linked to {topic_detail.lower()} before touching the equipment.",
             f"The {tool_one}, the {tool_two}, and the written notes provide the key evidence.",
             f"The text shows {language_focus} through the way information is clarified and justified.",
             "The group ends by proposing one improvement for the next attempt.",
             "It can be inferred that careful reading is essential before using equipment or reporting results.",
         ]
-    else:
-        title = FOCUS_TITLES.get(focus, "Reading Text — Technical English in context")
 
     return {
         "title": title,
@@ -1313,15 +1381,17 @@ def build_activity_card(title, intro, items, extra_html=""):
 
 def build_launch_html(course, class_data, review, oral_sequence=None):
     context = COURSE_CONTEXT[course["course_key"]]
+    lesson_cue = extract_lesson_cue(class_data)
+    cue_anchor = lesson_cue["title"] if lesson_cue["title"] else f"the {context['product']}"
     steps = [
-        f"Read the objective of the lesson and circle the technical action linked to the {context['product']}.",
+        f"Read the objective of the lesson and underline the main technical challenge linked to {cue_anchor}.",
         review["steps"][0],
-        f"Predict which tools or key ideas may appear in a text about the {context['specialty']} context.",
+        f"Predict which tools, risks, or key ideas may appear when working with {cue_anchor} in the {context['specialty']} context.",
         "Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?",
     ]
     return build_activity_card(
         "🔎 Actividad 1 — Activate and Predict",
-        "Start the class by connecting prior knowledge with the new text and the new language focus.",
+        "Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.",
         steps,
         build_review_html(review) + (build_oral_sequence_box(oral_sequence) if oral_sequence else ""),
     )
@@ -1595,6 +1665,8 @@ def build_class_html(course, unit_number, unit_info, class_data, previous_class)
         if not oral_sequence["is_delivery"]:
             evaluation_note = f"{evaluation_note} Evidencia de etapa: {oral_sequence['stage_output']}"
     link_title = short_title(class_data, unit_number, eval_kind, oral_sequence)
+    lesson_cue = extract_lesson_cue(class_data)
+    hero_subtitle = truncate_text(lesson_cue["title"], 110) if lesson_cue["title"] else unit_info["unit_title"]
     launch_html = build_launch_html(course, class_data, review, oral_sequence)
     closure_html = build_closure_html(course, class_data, reading, eval_kind, oral_sequence)
     language_support_html = build_language_support_html(course, class_data)
@@ -1673,7 +1745,7 @@ def build_class_html(course, unit_number, unit_info, class_data, previous_class)
     <div class=\"page\">
         <div class=\"hero\">
             <h1>Clase {class_data['unit_index']} — Unidad {unit_number}</h1>
-            <p>{course['course_label']} · {unit_info['unit_title']}</p>
+            <p>{course['course_label']} · {hero_subtitle}</p>
             <div class=\"meta\">
                 <span>🎯 {link_title}</span>
                 <span>📘 {badge_text}</span>

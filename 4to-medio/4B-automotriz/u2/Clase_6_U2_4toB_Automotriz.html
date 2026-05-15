@@ -1,84 +1,275 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Clase 6 — Unidad 2 — 4°B — Mecánica Automotriz</title>
-<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-.hero h1 { font-size: 2rem; margin-bottom: 6px; }
-.hero p { color: rgba(255,255,255,0.88); }
-.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-.inicio { background: #2e7d32; } .desarrollo { background: #1565c0; } .cierre { background: #7c3aed; }
-.section-body { padding: 20px 22px 22px; }
-.activity { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px; margin-bottom: 16px; }
-.activity:last-child { margin-bottom: 0; }
-.activity h4 { color: #0f172a; margin-bottom: 6px; font-size: 1rem; }
-.activity .lead { color: #475569; margin-bottom: 12px; font-size: 0.95rem; }
-.match-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 8px; }
-.match-card { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 14px; text-align: center; }
-.match-card .icon { font-size: 2.4rem; line-height: 1; display: block; margin-bottom: 8px; }
-.match-card .label-blank { display: block; border-bottom: 2px dashed #94a3b8; margin: 8px auto 4px; min-height: 22px; max-width: 80%; }
-.match-card .clue { font-size: 0.82rem; color: #64748b; }
-.options-bank { background: #ecfeff; border: 1px dashed #06b6d4; border-radius: 12px; padding: 12px 14px; margin-top: 12px; }
-.options-bank strong { display: block; color: #0e7490; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-.options-bank .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip { background: white; border: 1px solid #0e7490; color: #0e7490; padding: 5px 12px; border-radius: 999px; font-size: 0.86rem; font-weight: 600; }
-.answer-line { display: block; height: 38px; border-bottom: 2px solid #94a3b8; margin-top: 6px; }
-.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 12px; }
-.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-.vocab-card .word { font-weight: 800; color: #1d4ed8; font-size: 1.02rem; margin-bottom: 4px; }
-.vocab-card .meaning { font-size: 0.92rem; color: #1f2937; margin-bottom: 6px; }
-.vocab-card .pron { font-size: 0.88rem; color: #475569; font-family: 'Courier New', monospace; }
-.phonics-key { margin-top: 14px; background: #fefce8; border: 1px solid #facc15; border-radius: 12px; padding: 12px 14px; font-size: 0.86rem; color: #713f12; }
-.phonics-key strong { display: block; margin-bottom: 4px; color: #854d0e; }
-.phonics-key code { background: white; border: 1px solid #facc15; border-radius: 4px; padding: 1px 6px; margin: 0 2px; font-family: 'Courier New', monospace; }
-.reading { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; margin-top: 10px; }
-.reading p { margin-bottom: 10px; } .reading p:last-child { margin-bottom: 0; }
-.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
-.question-card p { margin-bottom: 8px; }
-.toggle-btn { border: none; border-radius: 8px; background: #dbeafe; color: #1d4ed8; padding: 6px 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
-.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-.answer-box.open { display: block; }
-.data-table { width: 100%; border-collapse: collapse; margin-top: 12px; background: white; border-radius: 10px; overflow: hidden; }
-.data-table th, .data-table td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 0.92rem; vertical-align: top; }
-.data-table th { background: #1565c0; color: white; font-weight: 700; }
-.data-table td.empty { background: #f8fafc; min-height: 40px; }
-.exit-card { background: white; border: 2px dashed #7c3aed; border-radius: 12px; padding: 14px 16px; margin-top: 10px; }
-.exit-card h5 { color: #5b21b6; margin-bottom: 8px; font-size: 0.95rem; }
-.exit-card .prompt-line { display: block; border-bottom: 1.5px solid #c4b5fd; margin: 10px 0 4px; min-height: 32px; }
-.resource-card { padding: 18px 22px; border-left: 6px solid #0ea5e9; }
-.resource-card h4 { color: #0369a1; margin-bottom: 8px; }
-.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-.tf-list { list-style: none; padding: 0; margin-top: 8px; }
-.tf-list li { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
-.tf-list .tf-opt { border: 1px solid #94a3b8; border-radius: 6px; padding: 3px 10px; font-size: 0.85rem; font-weight: 700; }
-.tf-list .tf-opt.t { color: #16a34a; border-color: #16a34a; }
-.tf-list .tf-opt.f { color: #dc2626; border-color: #dc2626; }
-.gap-text { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; line-height: 2; }
-.gap { display: inline-block; min-width: 110px; border-bottom: 2px solid #1d4ed8; text-align: center; font-weight: 700; color: #1d4ed8; }
-.quiz-grid { display: grid; gap: 10px; margin-top: 10px; }
-.quiz-item { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
-.quiz-item .stem { font-weight: 600; margin-bottom: 6px; }
-.quiz-item .opts { display: flex; flex-wrap: wrap; gap: 8px; }
-.quiz-item .opts label { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px 10px; font-size: 0.88rem; }
-.test-instructions { background: #fef3c7; border-left: 5px solid #f59e0b; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
-.test-instructions h4 { color: #92400e; margin-bottom: 6px; }
-.id-strip { background: white; border: 1px solid #cbd5e1; border-radius: 10px; padding: 10px 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; font-size: 0.9rem; }
-.id-strip span { border-bottom: 1.5px solid #94a3b8; min-height: 22px; display: inline-block; min-width: 160px; }
-.long-answer { display: block; border-bottom: 1.5px solid #94a3b8; min-height: 30px; margin-top: 6px; }
-.long-answer + .long-answer { margin-top: 18px; }
-@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
-@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
-</style></head><body>
-<div class="page"><div class="hero"><h1>Clase 6 — Unidad 2</h1><p>4°B — Mecánica Automotriz · Diagnosis review</p><div class="meta"><span>🎯 Diagnosis &amp; repaso</span><span>📘 OA8 · OA9 · Articulación TP</span><span>🗂 Clase 6 de 7</span><span>🧩 Repaso integrador</span></div></div>
-<div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-<div class="objective-card"><h2>Objetivo de la clase</h2><p>Integrar el vocabulario y los contenidos de la Unidad 2 (motor, frenos, suspensión, dirección, eléctrico) en actividades de diagnóstico antes de la evaluación.</p></div><div class="section"><div class="section-header inicio">🟢 Inicio</div><div class="section-body"><div class="activity"><h4>⚡ Actividad 1 — Speed quiz</h4><p class="lead">Marca la opción correcta.</p><div class="quiz-grid"><div class="quiz-item"><div class="stem">1. The piston moves inside the…</div><div class="opts"><label>A) cylinder</label><label>B) caliper</label><label>C) battery</label></div></div><div class="quiz-item"><div class="stem">2. The spark plug…</div><div class="opts"><label>A) holds the wheel</label><label>B) creates the spark</label><label>C) charges the battery</label></div></div><div class="quiz-item"><div class="stem">3. The caliper pushes the…</div><div class="opts"><label>A) pads against the disc</label><label>B) fluid into the engine</label><label>C) cylinder up</label></div></div><div class="quiz-item"><div class="stem">4. Worn brake pads make the braking distance…</div><div class="opts"><label>A) shorter</label><label>B) longer</label><label>C) the same</label></div></div><div class="quiz-item"><div class="stem">5. The alternator…</div><div class="opts"><label>A) starts the engine</label><label>B) charges the battery</label><label>C) stops the car</label></div></div><div class="quiz-item"><div class="stem">6. The tie rod…</div><div class="opts"><label>A) absorbs bumps</label><label>B) moves the front wheels</label><label>C) opens the valve</label></div></div></div></div></div></div><div class="section"><div class="section-header desarrollo">🔵 Desarrollo</div><div class="section-body"><div class="activity"><h4>📚 Key vocabulary</h4><p class="lead">Pronunciación entre / / con tilde en sílaba tónica.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">symptom</div><div class="meaning">a sign of a problem.</div><div class="pron">/símp-tom/</div></div><div class="vocab-card"><div class="word">diagnosis</div><div class="meaning">the result of finding the cause.</div><div class="pron">/dái-ag-nó-sis/</div></div><div class="vocab-card"><div class="word">leak</div><div class="meaning">a place where fluid escapes.</div><div class="pron">/lík/</div></div><div class="vocab-card"><div class="word">noise</div><div class="meaning">an unusual sound.</div><div class="pron">/nóis/</div></div><div class="vocab-card"><div class="word">warning light</div><div class="meaning">a light on the dashboard.</div><div class="pron">/uór-niŋ láit/</div></div><div class="vocab-card"><div class="word">check</div><div class="meaning">to inspect or test.</div><div class="pron">/tʃék/</div></div></div><div class="phonics-key"><strong>Phonics key</strong> <code>/θ/</code> as in <em>three</em> · <code>/ŋ/</code> as in <em>working</em> · <code>/dʒ/</code> as in <em>engine</em></div></div><div class="activity"><h4>📖 Reading: Talking to the mechanic</h4><div class="reading"><p>A customer says: "I hear a noise when I press the brake pedal, and the warning light is on." The mechanic listens, takes notes and checks the car.</p><p>First, the mechanic checks the brake pads: they are worn. Then he checks the brake fluid: there is a small leak near the caliper.</p><p>The mechanic writes the diagnosis on the work order and explains it to the customer in simple English: "You need new pads and a new caliper. The job takes two hours."</p></div></div><div class="activity"><h4>📝 Read and answer</h4><p class="lead">Responde con información del texto.</p><div class="question-card"><p><strong>1.</strong> What are the two symptoms the customer reports?</p><button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button><div class="answer-box" id="a1">A noise when pressing the brake pedal and the warning light is on.</div></div><div class="question-card"><p><strong>2.</strong> What does the mechanic find on the brake pads and on the fluid?</p><button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button><div class="answer-box" id="a2">The pads are worn and there is a small leak near the caliper.</div></div><div class="question-card"><p><strong>3.</strong> How long does the job take?</p><button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button><div class="answer-box" id="a3">Two hours.</div></div></div><div class="activity"><h4>📊 Diagnosis worksheet</h4><table class="data-table"><tr><th>Symptom</th><th>Suspected cause</th><th>Action</th></tr><tr><td><strong>Engine does not start</strong></td><td class="empty"></td><td class="empty"></td></tr><tr><td><strong>Strange noise when braking</strong></td><td class="empty"></td><td class="empty"></td></tr><tr><td><strong>Battery light on</strong></td><td class="empty"></td><td class="empty"></td></tr></table></div></div></div><div class="section"><div class="section-header cierre">🟣 Cierre</div><div class="section-body"><div class="activity"><h4>📊 Self-check before the test</h4><table class="data-table"><tr><th>I can…</th><th>✅ / ❓</th></tr><tr><td><strong>name 4 engine parts</strong></td><td class="empty"></td></tr><tr><td><strong>explain the brake system</strong></td><td class="empty"></td></tr><tr><td><strong>describe the suspension</strong></td><td class="empty"></td></tr><tr><td><strong>read battery voltage</strong></td><td class="empty"></td></tr><tr><td><strong>describe a symptom in English</strong></td><td class="empty"></td></tr></table></div><div class="activity"><h4>🎫 Exit ticket</h4><div class="exit-card"><h5>One question for next class</h5><p>Escribe una pregunta sobre algo que aún no entiendas y quieras repasar antes de la prueba.</p><span class="prompt-line"></span></div></div></div></div><div class="resource-card"><h4>📦 Para la próxima clase</h4><p>La próxima clase es la evaluación escrita.</p></div>
-<p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · Articulación TP.</p>
-</div><script>function toggleAnswer(id, btn){const a=document.getElementById(id);const o=a.classList.toggle('open');btn.textContent=o?'Ocultar respuesta':'Ver respuesta';}</script></body></html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 6 — Unidad 2 — 4°B — Mecánica Automotriz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
+        .hero p { color: rgba(255,255,255,0.88); }
+        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #7c3aed; }
+        .section-body { padding: 20px 22px 22px; }
+        .section-body ul { margin-left: 20px; }
+        .section-body li { margin-bottom: 8px; }
+        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+        .activity-card p { margin-bottom: 10px; }
+        .task-steps { margin-left: 20px; }
+        .task-steps li { margin-bottom: 8px; }
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .meaning { font-size: 0.92rem; color: #1f2937; }
+        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
+        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card ul { margin-left: 18px; }
+        .focus-card li { margin-bottom: 6px; }
+        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .reading-box p { margin-bottom: 10px; }
+        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+        .answer-box.open { display: block; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
+        .activity-table th { background: #e2e8f0; }
+        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
+        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+        .exit-ticket ul { margin-left: 18px; }
+        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+        @media (max-width: 720px) {
+            .hero h1 { font-size: 1.55rem; }
+            .page { padding: 16px 12px 28px; }
+        }
+        @media print {
+            body { background: white; }
+            .toolbar { display: none; }
+            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="hero">
+            <h1>Clase 6 — Unidad 2</h1>
+            <p>4°B — Mecánica Automotriz · Texto nuevo breve sobre un tema integrador de mecánica automotriz. 5 preguntas de comprensión + 1 pregunta de...</p>
+            <div class="meta">
+                <span>🎯 Trabajo oral — análisis técnico</span>
+                <span>📘 OA1 · OA2 · OA3 · OA4 · EVALUACIÓN</span>
+                <span>🗂 Clase anual 14</span>
+                <span>🎤 Trabajo oral de junio · Etapa 5/5</span>
+                <span>📝 Evaluación</span>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+        </div>
+
+        <div class="objective-card">
+            <h2>Objetivo de la clase</h2>
+            <p>Integrar habilidades de comprensión lectora, expresión oral y pensamiento crítico desarrolladas durante el semestre en Mecánica Automotriz.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🔎 Actividad 1 — Activate and Predict</h4>
+        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
+        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to Texto nuevo breve sobre un tema integrador de mecánica automotriz. 5 preguntas de comprensión + 1 pregunta de análisis. (15 pts).</li><li>Recuerda la idea central de la clase pasada: Comprender y analizar un texto técnico en inglés sobre mecánica automotriz, respondiendo...</li><li>Predict which tools, risks, or key ideas may appear when working with Texto nuevo breve sobre un tema integrador de mecánica automotriz. 5 preguntas de comprensión + 1 pregunta de análisis. (15 pts) in the mecánica automotriz avanzada context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
+        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Comprender y analizar un texto técnico en inglés sobre mecánica automotriz, respondiendo...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+    <div class="review-box">
+        <h4>🎤 Ruta del trabajo oral</h4>
+        <p><strong>Trabajo oral de junio</strong> · Etapa 5/5 · Entrega prevista: primera semana de junio.</p>
+        <p><strong>Meta de hoy:</strong> Presentar el análisis técnico y defender oralmente una solución viable.</p>
+        <p><strong>Producto esperado:</strong> Presentación oral con preguntas de seguimiento y cierre reflexivo.</p>
+        <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
+    </div>
+    
+    </div>
+    </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-body">
+                
+    <div class="task-box activity-card">
+        <h4>🧠 Actividad 2 — Language Focus</h4>
+        <p>Use these examples before reading. The class text is written at B1 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <div class="focus-grid">
+            <div class="focus-card">
+                <h5>Technical English in context</h5>
+                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
+                <div class="focus-subtitle">Examples</div>
+                <ul><li>The OBD scanner is checked before the task begins.</li><li>The service tablet gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
+                <div class="focus-subtitle">Sentence frames</div>
+                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
+            </div>
+            </div>
+    </div>
+    
+
+                <div class="task-box">
+                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
+                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
+                    <div class="glossary-grid">
+            <div class="vocab-card">
+                <div class="word">diagnostic</div>
+                <div class="meaning">an analysis used to identify the cause of a problem</div>
+                <div class="pronunciation">Pron.: daiag-NOS-tik</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">hybrid</div>
+                <div class="meaning">a system that combines two kinds of power or technology</div>
+                <div class="pronunciation">Pron.: JAI-brid</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">torque</div>
+                <div class="meaning">the turning force that makes a part rotate</div>
+                <div class="pronunciation">Pron.: TORK</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">alignment</div>
+                <div class="meaning">the correct position of parts so they work properly</div>
+                <div class="pronunciation">Pron.: a-LAIN-ment</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">fault code</div>
+                <div class="meaning">a digital message that identifies a system problem</div>
+                <div class="pronunciation">Pron.: FOLT koud</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">service</div>
+                <div class="meaning">maintenance or repair work done on equipment or vehicles</div>
+                <div class="pronunciation">Pron.: SER-vis</div>
+            </div>
+            </div>
+                </div>
+
+                <div class="reading-box">
+                    <h4>📖 Actividad 4 — Reading Model — Trabajo oral final de junio</h4>
+                    <p class="reading-note">Modelo guiado B1 para la etapa 5/5 del trabajo oral de junio: Presentar el análisis técnico y defender oralmente una solución viable.</p>
+                    <p>During the final oral task, the speaker presents the technical case, explains the key evidence, and defends one practical recommendation for the situation.</p><p>A strong presentation sounds organized from the first sentence: the audience understands the context, the problem, the evidence, and the proposed response.</p><p>Precise vocabulary such as diagnostic and hybrid helps the analysis sound professional and connected to mecánica automotriz avanzada rather than generic.</p><p>After the presentation, follow-up questions test whether the speaker can justify the recommendation and adapt the explanation in real time.</p><p>The final objective is to show technical judgement, clear English, and the ability to defend a solution under brief questioning.</p>
+                </div>
+
+                <div class="task-box">
+                    <h4>📝 Actividad 5 — Reading comprehension</h4>
+                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
+                    
+            <div class="question-card">
+                <p><strong>1.</strong> What operational or communicative challenge is presented in the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-1">The text describes the final oral presentation of the technical case and recommendation.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>2.</strong> Which prior checks or contextual details shape the task?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-2">Before the conclusion, the speaker explains the problem, supports it with evidence, and defends one practical solution.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>3.</strong> What evidence or technical details guide the team's decisions?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-3">Important details include the workplace context, the recommendation, and the technical vocabulary used to justify it.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>4.</strong> How does the writer use the language focus of the lesson to clarify meaning?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-4">The language focus shows that professional English requires both content control and the ability to respond to questions.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>5.</strong> What conclusion or recommendation emerges from the situation?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-5">At the end, the audience understands the case and the logic behind the proposed action.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>6.</strong> What broader lesson about technical communication can be inferred?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-6">A strong oral analysis shows technical judgement, evidence, and communication skills together.</div>
+            </div>
+            
+                </div>
+
+                <div class="task-box">
+                    <h4>🛠 Actividad 6 — Actividad Aplicada — Ruta del trabajo oral</h4>
+                    
+            <p><strong>Trabajo oral de junio</strong> · Etapa 5/5</p>
+            <p><strong>Prompt:</strong> <em>Present a technical workplace case, explain the evidence, and defend a practical solution with justified recommendations.</em></p>
+            <ol class="task-steps"><li>Present the technical case, defend your recommendation, and close with a professional conclusion.</li><li>Respond to follow-up questions using evidence from the sequence of classes.</li><li>Write one reflective note about what made your analysis convincing or unclear.</li></ol>
+            <p><strong>Producto esperado:</strong> Presentación oral con preguntas de seguimiento y cierre reflexivo.</p>
+            <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
+            
+                </div>
+
+                <div class="eval-box">
+                    <h4>📋 Seguimiento de la clase</h4>
+                    <p>SUMATIVA — Nota 3 Semestre 1: Evaluación integradora. 45 pts (15 lectura + 15 oral + 15 reflexión crítica). Exigencia 60%.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🟣 Cierre — Oral Project Checkpoint</h4>
+        <p>Close the lesson by checking progress on the oral task and defining the next step in the sequence.</p>
+        <ol class="task-steps"><li>Review your notes and identify the strongest contribution from today's stage.</li><li>Compare your progress with a partner before writing your final exit ticket.</li><li>Complete the three checkpoint prompts below.</li></ol>
+        
+            <div class="exit-ticket">
+                <h5>Exit ticket prompts</h5>
+                <ul><li>Reflect on one part of your oral work that sounded clear and professional.</li><li>Write the follow-up question that was easiest or hardest to answer.</li><li>State one concrete improvement for your next technical presentation in English.</li></ul>
+            </div>
+            
+    </div>
+    </div>
+        </div>
+
+        <div class="resource-card">
+            <h4>📦 Recursos sugeridos</h4>
+            <p>Prueba integrada (texto + preguntas + escenarios orales + ficha de reflexión), rúbrica oral. Producto de avance: Presentación oral con preguntas de seguimiento y cierre reflexivo.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+        </div>
+
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+    </div>
+
+    <script>
+        function toggleAnswer(id, button) {
+            const answer = document.getElementById(id);
+            const isOpen = answer.classList.toggle('open');
+            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+        }
+    </script>
+</body>
+</html>

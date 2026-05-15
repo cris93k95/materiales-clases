@@ -1,84 +1,284 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clase 11 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-.hero h1 { font-size: 2rem; margin-bottom: 6px; }
-.hero p { color: rgba(255,255,255,0.88); }
-.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-.inicio { background: #2e7d32; }
-.desarrollo { background: #1565c0; }
-.cierre { background: #7c3aed; }
-.section-body { padding: 20px 22px 22px; }
-.section-body ul, .section-body ol { margin-left: 20px; }
-.section-body li { margin-bottom: 8px; }
-.review-box, .reading-box, .task-box, .eval-box, .apply-box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-.apply-box { border-color: #fdba74; background: #fff7ed; }
-.apply-box h4 { color: #c2410c; margin-bottom: 8px; }
-.apply-box .intro { background: white; border-left: 4px solid #ea580c; padding: 10px 12px; border-radius: 8px; margin: 10px 0 12px; font-size: 0.95rem; }
-.apply-box .check { background: #ecfdf5; border-left: 4px solid #16a34a; padding: 10px 14px; border-radius: 8px; margin-top: 12px; }
-.apply-box .check h5 { color: #166534; margin-bottom: 6px; }
-.review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-.word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-.meaning { font-size: 0.92rem; color: #1f2937; }
-.pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-.focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; margin-top: 10px; }
-.focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-.focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-.reading-box p { margin-bottom: 10px; }
-.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-.toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-.answer-box.open { display: block; }
-.exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-.exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-.resource-card { padding: 18px 22px; }
-.resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-.rubric-summary { background: #fef3c7; border-left: 4px solid #d97706; padding: 12px 14px; border-radius: 10px; margin-top: 12px; font-size: 0.95rem; }
-.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
-@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 11 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
+        .hero p { color: rgba(255,255,255,0.88); }
+        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #7c3aed; }
+        .section-body { padding: 20px 22px 22px; }
+        .section-body ul { margin-left: 20px; }
+        .section-body li { margin-bottom: 8px; }
+        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+        .activity-card p { margin-bottom: 10px; }
+        .task-steps { margin-left: 20px; }
+        .task-steps li { margin-bottom: 8px; }
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .meaning { font-size: 0.92rem; color: #1f2937; }
+        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
+        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card ul { margin-left: 18px; }
+        .focus-card li { margin-bottom: 6px; }
+        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .reading-box p { margin-bottom: 10px; }
+        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+        .answer-box.open { display: block; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
+        .activity-table th { background: #e2e8f0; }
+        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
+        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+        .exit-ticket ul { margin-left: 18px; }
+        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+        @media (max-width: 720px) {
+            .hero h1 { font-size: 1.55rem; }
+            .page { padding: 16px 12px 28px; }
+        }
+        @media print {
+            body { background: white; }
+            .toolbar { display: none; }
+            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
+        }
+    </style>
 </head>
 <body>
-<div class="page">
-<div class="hero">
-<h1>Clase 11 &mdash; Unidad 2</h1>
-<p>1&deg; Medio &mdash; Ingles General (Lu+Ju) &middot; How Things Work &mdash; Processes and Descriptions</p>
-<div class="meta">
-<span>&#x1F3AF; Describir oralmente un proceso o mecanismo tecnico demostrando uso de Passive Voice, Relat...</span>
-<span>&#x1F4D8; OA5 · OA8 · OA7</span>
-<span>&#x1F5C2; Clase 11</span>
-<span>&#x1F9E9; Evaluacion — Nota 3 (Interrogacion oral)</span>
-</div>
-</div>
-<div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-<div class="objective-card"><h2>Objetivo de la clase</h2><p>Describir oralmente un proceso o mecanismo tecnico demostrando uso de Passive Voice, Relative Clauses y vocabulario tecnico apropiado.</p></div>
-<div class="section"><div class="section-header inicio">&#x1F7E2; Inicio</div><div class="section-body"><div class="task-box"><h4>&#x1F4DD; Antes de comenzar</h4><ul><li>Instrucciones finales. Rubrica visible. Ambiente de confianza.</li><li>Orden de interrogacion confirmado en la pizarra.</li><li>Recordatorio: cada estudiante dispone de 2-3 minutos.</li></ul></div><div class="review-box"><h4>&#x1F501; Conexion con la clase anterior</h4><p>En la Clase 10 preparamos y ensayamos la descripcion oral; hoy se evalua.</p></div></div></div><div class="section"><div class="section-header desarrollo">&#x1F535; Desarrollo &mdash; Aplicacion de la evaluacion</div><div class="section-body"><div class="eval-box"><h4>&#x1F4DD; Interrogacion oral individual</h4><p>Cada estudiante pasa al frente (2-3 min) y describe su proceso/mecanismo tecnico. El docente puede hacer 1-2 preguntas de seguimiento: <em>Why is this step important? What happens if this is not done correctly?</em></p></div><div class="eval-box"><h4>&#x1F4DD; Escucha activa entre pares</h4><p>Mientras esperas tu turno, completa una ficha de evaluacion entre pares (opcional). Identifica al menos 2 cosas bien logradas por tus companeros.</p></div><div class="rubric-summary"><strong>Resumen evaluativo:</strong><ul style="margin-top:6px; margin-left:18px;"><li>Passive Voice (4+ oraciones correctas) — 3 pts</li><li>Relative Clauses (2+ correctas) — 3 pts</li><li>Vocabulario tecnico (8+ palabras) — 3 pts</li><li>Claridad y coherencia — 3 pts</li><li>Pronunciacion y fluidez — 3 pts</li><li><strong>Total: 15 puntos · Exigencia 60%</strong></li></ul></div></div></div><div class="section"><div class="section-header cierre">&#x1F7E3; Cierre</div><div class="section-body"><div class="exit-ticket"><h5>Cierre de la clase</h5><ul><li>Feedback general: fortalezas y areas de mejora comunes.</li><li>Si quedan estudiantes pendientes, continuan en la proxima clase.</li><li>Reflexiona: &iquest;que harias diferente si volvieras a presentar?</li></ul></div></div></div><div class="resource-card"><h4>&#x1F4E6; Recursos sugeridos</h4><p>Rubrica de interrogacion oral, fichas de evaluacion entre pares, cronometro, materiales de apoyo visual del estudiante.</p></div>
-<p class="footer-note">Guia de trabajo para estudiantes &mdash; Materiales de Clases 2026.</p>
-</div>
-<script>
-function toggleAnswer(id, button) {
-  const answer = document.getElementById(id);
-  const isOpen = answer.classList.toggle('open');
-  button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-}
-</script>
+    <div class="page">
+        <div class="hero">
+            <h1>Clase 11 — Unidad 2</h1>
+            <p>1° Medio — Inglés General (Lu+Ju) · Why is this step important?" "What happens if this is not done correctly?</p>
+            <div class="meta">
+                <span>🎯 Trabajo oral — proceso técnico</span>
+                <span>📘 EVALUACIÓN — NOTA 3</span>
+                <span>🗂 Clase 11</span>
+                <span>🎤 Trabajo oral de cierre semestral · Etapa 5/5</span>
+                <span>📝 Evaluación</span>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+        </div>
+
+        <div class="objective-card">
+            <h2>Objetivo de la clase</h2>
+            <p>Describir oralmente un proceso o mecanismo técnico demostrando uso de Passive Voice, Relative Clauses y vocabulario técnico apropiado.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🔎 Actividad 1 — Activate and Predict</h4>
+        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
+        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to Why is this step important?" "What happens if this is not done correctly?.</li><li>Recuerda la idea central de la clase pasada: Describir objetos técnicos en detalle (material, tamaño, función, uso) utilizando Passive...</li><li>Predict which tools, risks, or key ideas may appear when working with Why is this step important?" "What happens if this is not done correctly? in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
+        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Describir objetos técnicos en detalle (material, tamaño, función, uso) utilizando Passive...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+    <div class="review-box">
+        <h4>🎤 Ruta del trabajo oral</h4>
+        <p><strong>Trabajo oral de cierre semestral</strong> · Etapa 5/5 · Entrega prevista: primera semana de junio.</p>
+        <p><strong>Meta de hoy:</strong> Presentar el proceso técnico y responder preguntas simples de seguimiento.</p>
+        <p><strong>Producto esperado:</strong> Presentación oral individual con autoevaluación breve.</p>
+        <ul><li>Choose one process, machine, or mechanism connected to workshop practice.</li><li>Explain materials, components, steps, and one relevant safety point.</li><li>Use passive voice, relative clauses, and at least six technical words.</li><li>Close with one practical conclusion about why the process matters.</li></ul>
+    </div>
+    
+    </div>
+    </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-body">
+                
+    <div class="task-box activity-card">
+        <h4>🧠 Actividad 2 — Language Focus</h4>
+        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <div class="focus-grid">
+            <div class="focus-card">
+                <h5>Passive Voice in technical English</h5>
+                <p>Use passive voice when the process or result is more important than the person who performs the action.</p>
+                <div class="focus-subtitle">Examples</div>
+                <ul><li>The practice project is checked before the main task begins.</li><li>The tool kit is used during the second stage of the procedure.</li><li>The final result is recorded after the inspection.</li></ul>
+                <div class="focus-subtitle">Sentence frames</div>
+                <ul><li>The ___ is prepared before ...</li><li>The ___ is tested so that ...</li><li>At the end, the ___ is reported.</li></ul>
+            </div>
+            
+            <div class="focus-card">
+                <h5>Relative clauses for precise definitions</h5>
+                <p>Use who, which, or that to add essential information about a person, tool, or process.</p>
+                <div class="focus-subtitle">Examples</div>
+                <ul><li>A technician is a person who checks the practice project carefully.</li><li>The tool kit is a tool that helps the team collect evidence.</li><li>A report which includes measurements is easier to verify.</li></ul>
+                <div class="focus-subtitle">Sentence frames</div>
+                <ul><li>A ___ is a tool that ...</li><li>A technician is someone who ...</li><li>The report which ... shows that ...</li></ul>
+            </div>
+            </div>
+    </div>
+    
+
+                <div class="task-box">
+                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
+                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
+                    <div class="glossary-grid">
+            <div class="vocab-card">
+                <div class="word">process</div>
+                <div class="meaning">a sequence of actions used to complete a task</div>
+                <div class="pronunciation">Pron.: PRO-ses</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">component</div>
+                <div class="meaning">one part of a machine, circuit, or larger system</div>
+                <div class="pronunciation">Pron.: kom-POU-nent</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">tool</div>
+                <div class="meaning">an object used to do a practical or technical job</div>
+                <div class="pronunciation">Pron.: TUL</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">measure</div>
+                <div class="meaning">to find size, amount, or distance accurately</div>
+                <div class="pronunciation">Pron.: ME-zher</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">connect</div>
+                <div class="meaning">to join parts so the system can work correctly</div>
+                <div class="pronunciation">Pron.: ko-NEKT</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">repair</div>
+                <div class="meaning">to fix something that is damaged or not working</div>
+                <div class="pronunciation">Pron.: ri-PAIR</div>
+            </div>
+            </div>
+                </div>
+
+                <div class="reading-box">
+                    <h4>📖 Actividad 4 — Reading Model — Trabajo oral final de proceso técnico</h4>
+                    <p class="reading-note">Modelo guiado A2 para la etapa 5/5 del trabajo oral de cierre semestral: Presentar el proceso técnico y responder preguntas simples de seguimiento.</p>
+                    <p>On presentation day, the student introduces the chosen process, explains the main steps, and highlights one important technical or safety detail.</p><p>The oral task must sound organized, with a clear beginning, a logical sequence, and a short conclusion about why the process matters in practice.</p><p>Strong answers reuse vocabulary from the unit, especially terms such as process and component, instead of speaking only in general words.</p><p>After the explanation, the teacher may ask one or two simple follow-up questions to check understanding, confidence, and use of English.</p><p>The final goal is not only to speak, but to show that the student can explain technical knowledge clearly to another person.</p>
+                </div>
+
+                <div class="task-box">
+                    <h4>📝 Actividad 5 — Reading comprehension</h4>
+                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
+                    
+            <div class="question-card">
+                <p><strong>1.</strong> What task or problem is described in the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-1">The text describes the final oral presentation of the technical process.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>2.</strong> What happens before the main procedure starts?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-2">Before the conclusion, the student introduces the topic, explains the steps, and answers follow-up questions.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-3">Important details include the sequence of actions, the safety note, and vocabulary such as process and component.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-4">The language focus shows that technical English must be both accurate and understandable for the audience.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-5">At the end, the listener understands why the process matters in real workshop practice.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-6">A solid oral task shows knowledge, sequence, and confidence at the same time.</div>
+            </div>
+            
+                </div>
+
+                <div class="task-box">
+                    <h4>🛠 Actividad 6 — Actividad Aplicada — Ruta del trabajo oral</h4>
+                    
+            <p><strong>Trabajo oral de cierre semestral</strong> · Etapa 5/5</p>
+            <p><strong>Prompt:</strong> <em>Describe a technical process or mechanism from workshop practice, using clear sequence, technical vocabulary, and one safety detail.</em></p>
+            <ol class="task-steps"><li>Deliver the oral task individually using your final outline and visual support if needed.</li><li>Answer one or two follow-up questions from the teacher or classmates.</li><li>Complete a short self-assessment about clarity, technical vocabulary, and confidence.</li></ol>
+            <p><strong>Producto esperado:</strong> Presentación oral individual con autoevaluación breve.</p>
+            <ul><li>Choose one process, machine, or mechanism connected to workshop practice.</li><li>Explain materials, components, steps, and one relevant safety point.</li><li>Use passive voice, relative clauses, and at least six technical words.</li><li>Close with one practical conclusion about why the process matters.</li></ul>
+            
+                </div>
+
+                <div class="eval-box">
+                    <h4>📋 Seguimiento de la clase</h4>
+                    <p>Evaluación: SUMATIVA — Nota 3 del semestre (Expresión Oral – Interrogación). Rúbrica de 5 criterios × 3 niveles = 15 puntos. Escala 60%.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🟣 Cierre — Oral Project Checkpoint</h4>
+        <p>Close the lesson by checking progress on the oral task and defining the next step in the sequence.</p>
+        <ol class="task-steps"><li>Review your notes and identify the strongest contribution from today's stage.</li><li>Compare your progress with a partner before writing your final exit ticket.</li><li>Complete the three checkpoint prompts below.</li></ol>
+        
+            <div class="exit-ticket">
+                <h5>Exit ticket prompts</h5>
+                <ul><li>Reflect on one part of your oral work that sounded clear and professional.</li><li>Write the follow-up question that was easiest or hardest to answer.</li><li>State one concrete improvement for your next technical presentation in English.</li></ul>
+            </div>
+            
+    </div>
+    </div>
+        </div>
+
+        <div class="resource-card">
+            <h4>📦 Recursos sugeridos</h4>
+            <p>Recursos: Rúbrica de interrogación oral, fichas de evaluación entre pares, cronómetro. Producto de avance: Presentación oral individual con autoevaluación breve.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+        </div>
+
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+    </div>
+
+    <script>
+        function toggleAnswer(id, button) {
+            const answer = document.getElementById(id);
+            const isOpen = answer.classList.toggle('open');
+            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+        }
+    </script>
 </body>
 </html>

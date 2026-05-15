@@ -1,84 +1,273 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clase 8 — Unidad 1 — 1° Medio — Inglés General (Lu+Ju)</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-.hero h1 { font-size: 2rem; margin-bottom: 6px; }
-.hero p { color: rgba(255,255,255,0.88); }
-.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-.inicio { background: #2e7d32; }
-.desarrollo { background: #1565c0; }
-.cierre { background: #7c3aed; }
-.section-body { padding: 20px 22px 22px; }
-.section-body ul, .section-body ol { margin-left: 20px; }
-.section-body li { margin-bottom: 8px; }
-.review-box, .reading-box, .task-box, .eval-box, .apply-box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-.apply-box { border-color: #fdba74; background: #fff7ed; }
-.apply-box h4 { color: #c2410c; margin-bottom: 8px; }
-.apply-box .intro { background: white; border-left: 4px solid #ea580c; padding: 10px 12px; border-radius: 8px; margin: 10px 0 12px; font-size: 0.95rem; }
-.apply-box .check { background: #ecfdf5; border-left: 4px solid #16a34a; padding: 10px 14px; border-radius: 8px; margin-top: 12px; }
-.apply-box .check h5 { color: #166534; margin-bottom: 6px; }
-.review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-.word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-.meaning { font-size: 0.92rem; color: #1f2937; }
-.pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-.focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; margin-top: 10px; }
-.focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-.focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-.reading-box p { margin-bottom: 10px; }
-.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-.toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-.answer-box.open { display: block; }
-.exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-.exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-.resource-card { padding: 18px 22px; }
-.resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-.rubric-summary { background: #fef3c7; border-left: 4px solid #d97706; padding: 12px 14px; border-radius: 10px; margin-top: 12px; font-size: 0.95rem; }
-.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
-@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 8 — Unidad 1 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
+        .hero p { color: rgba(255,255,255,0.88); }
+        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #7c3aed; }
+        .section-body { padding: 20px 22px 22px; }
+        .section-body ul { margin-left: 20px; }
+        .section-body li { margin-bottom: 8px; }
+        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+        .activity-card p { margin-bottom: 10px; }
+        .task-steps { margin-left: 20px; }
+        .task-steps li { margin-bottom: 8px; }
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .meaning { font-size: 0.92rem; color: #1f2937; }
+        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
+        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card ul { margin-left: 18px; }
+        .focus-card li { margin-bottom: 6px; }
+        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .reading-box p { margin-bottom: 10px; }
+        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+        .answer-box.open { display: block; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
+        .activity-table th { background: #e2e8f0; }
+        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
+        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+        .exit-ticket ul { margin-left: 18px; }
+        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+        @media (max-width: 720px) {
+            .hero h1 { font-size: 1.55rem; }
+            .page { padding: 16px 12px 28px; }
+        }
+        @media print {
+            body { background: white; }
+            .toolbar { display: none; }
+            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
+        }
+    </style>
 </head>
 <body>
-<div class="page">
-<div class="hero">
-<h1>Clase 8 &mdash; Unidad 1</h1>
-<p>1&deg; Medio &mdash; Ingles General (Lu+Ju) &middot; Technical English: Tools, Specialties &amp; First Grammar</p>
-<div class="meta">
-<span>&#x1F3AF; Sintetizar y aplicar el vocabulario tecnico de las cinco especialidades en actividades int...</span>
-<span>&#x1F4D8; OA8 · OA9 · OA5</span>
-<span>&#x1F5C2; Clase 8</span>
-<span>&#x1F9E9; Clase de trabajo</span>
-</div>
-</div>
-<div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-<div class="objective-card"><h2>Objetivo de la clase</h2><p>Sintetizar y aplicar el vocabulario tecnico de las cinco especialidades en actividades integradas de comprension lectora y produccion oral.</p></div>
-<div class="section"><div class="section-header inicio">&#x1F7E2; Inicio</div><div class="section-body"><div class="task-box"><h4>&#x1F50E; Actividad 1 &mdash; Activate and Predict</h4><ol class="task-steps"><li><em>Vocabulary Relay Race</em>: equipos de 5 compiten identificando imagenes tecnicas.</li><li>Recuento: <em>we have explored 5 specialties. Today we bring them all together.</em></li><li>Energizar: <em>which specialty has caught your attention so far?</em></li></ol></div><div class="review-box"><h4>&#x1F501; Repaso rapido de la clase anterior</h4><p>En las Clases 2-7 exploramos las 5 especialidades; hoy las integramos en una sola clase.</p></div></div></div><div class="section"><div class="section-header desarrollo">&#x1F535; Desarrollo</div><div class="section-body"><div class="task-box"><h4>&#x1F9E0; Actividad 2 &mdash; Language Focus</h4><p>Vas a leer 5 mini-perfiles, uno por especialidad, y comparar lo que hacen, las herramientas que usan y lo que les gusta.</p><div class="focus-card"><h5>Cross-specialty comparison</h5><div class="focus-subtitle">Examples</div><ul><li><strong>Compare verbs:</strong> repair (automotive) / weld (industrial) / install (electrical) / build (electronics) / design (graphic).</li><li><strong>Compare tools:</strong> wrench / lathe / multimeter / soldering iron / printing press.</li><li><strong>Compare workplaces:</strong> workshop / factory / building / lab / studio.</li><li><strong>Compare focus:</strong> mechanical / industrial / electrical / digital / visual.</li></ul><div class="focus-subtitle">Sentence frames &amp; tips</div><ul><li><em>Camila works as an electrician. She installs wiring systems.</em></li><li><em>Andres is a graphic designer. He designs logos and posters.</em></li><li>Use simple Present and the verb of the specialty.</li></ul></div></div><div class="task-box"><h4>&#x1F4DA; Actividad 3 &mdash; Vocabulary for reading</h4><p>Revisa estas palabras clave antes de leer. Cada tarjeta incluye una definicion breve en ingles y una guia de pronunciacion para que el vocabulario apoye la comprension del texto.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">specialty</div><div class="meaning">a specific area of technical work</div><div class="pronunciation">Pron.: SPE-shol-ti</div></div><div class="vocab-card"><div class="word">workshop</div><div class="meaning">the place where mechanics and technicians work</div><div class="pronunciation">Pron.: WERK-shop</div></div><div class="vocab-card"><div class="word">factory</div><div class="meaning">a place where industrial products are made</div><div class="pronunciation">Pron.: FAK-to-ri</div></div><div class="vocab-card"><div class="word">install</div><div class="meaning">to put a system in its working place</div><div class="pronunciation">Pron.: in-STOL</div></div><div class="vocab-card"><div class="word">repair</div><div class="meaning">to fix something that is broken</div><div class="pronunciation">Pron.: ri-PER</div></div><div class="vocab-card"><div class="word">build</div><div class="meaning">to construct something piece by piece</div><div class="pronunciation">Pron.: BILD</div></div><div class="vocab-card"><div class="word">design</div><div class="meaning">to create the visual plan of something</div><div class="pronunciation">Pron.: di-ZAIN</div></div><div class="vocab-card"><div class="word">operate</div><div class="meaning">to make a machine work</div><div class="pronunciation">Pron.: O-pe-reit</div></div></div></div><div class="reading-box"><h4>&#x1F4D6; Actividad 4 &mdash; Reading Text &mdash; Five Careers, Five Futures</h4><p><strong>1. Andres &mdash; Automotive:</strong> I work at a small automotive workshop. Every day I check engines, change oil and inspect brakes. I use wrenches, screwdrivers and a multimeter. I like the satisfaction of solving a mechanical problem.</p><p><strong>2. Sofia &mdash; Industrial:</strong> I work at a metal structures factory. I cut and weld steel pieces using a welding torch and a grinding wheel. I always wear my PPE. I like the precision and the strength of the metal.</p><p><strong>3. Camila &mdash; Electricity:</strong> I install wiring systems in new buildings. I work with cables, switches, outlets and circuit breakers. I use a multimeter every day. I like making sure that everything works safely.</p><p><strong>4. Matias &mdash; Electronics:</strong> I build small electronic devices in a lab. I solder resistors and microcontrollers on PCBs. I use a soldering iron and a oscilloscope. I like the challenge of programming and the beauty of a clean circuit.</p><p><strong>5. Valentina &mdash; Graphic Arts:</strong> I design posters and books in a small studio. I prepare digital files and check proofs before printing. I work with offset printing and CMYK. I like creating something visual that people will see and use.</p></div><div class="task-box"><h4>&#x1F4DD; Actividad 5 &mdash; Reading comprehension</h4><p>Responde regresando al texto. Busca evidencia concreta antes de revisar la respuesta sugerida.</p><div class="question-card"><p><strong>1.</strong> Who works with a welding torch?</p><button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button><div class="answer-box" id="answer-1">Sofia (industrial).</div></div><div class="question-card"><p><strong>2.</strong> Which two professionals use a multimeter?</p><button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button><div class="answer-box" id="answer-2">Andres (automotive) and Camila (electricity).</div></div><div class="question-card"><p><strong>3.</strong> What does Valentina prepare before printing?</p><button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button><div class="answer-box" id="answer-3">Digital files and proofs.</div></div><div class="question-card"><p><strong>4.</strong> Where does Matias work?</p><button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button><div class="answer-box" id="answer-4">In a lab, building small electronic devices.</div></div><div class="question-card"><p><strong>5.</strong> Which professional mentions wearing PPE?</p><button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button><div class="answer-box" id="answer-5">Sofia (industrial).</div></div><div class="question-card"><p><strong>6.</strong> Infer: which two specialties seem closest to each other and why?</p><button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button><div class="answer-box" id="answer-6">Electricity and electronics, because both work with circuits and use a multimeter, but electricity focuses on energy distribution while electronics focuses on signal control.</div></div></div><div class="apply-box"><h4>&#x1F680; Actividad 6 &mdash; Apply &amp; Extend: tu perfil profesional FUTURO</h4><div class="intro">Hoy escribes el mini-perfil de la persona que quieres ser. Lo necesitaras de base para la Nota 1 (presentacion oral).</div><ol class="task-steps"><li>Elige UNA de las 5 especialidades como tu vocacion principal.</li><li>Escribe tu perfil siguiendo la estructura del texto: <em>name + specialty + daily tasks + tools you use + workplace + what you like</em>.</li><li>Usa al menos <strong>2 verbos tecnicos</strong> de tu especialidad y <strong>3 herramientas/equipos</strong> nombrados en ingles.</li><li>Cierra con UNA oracion mostrando proyeccion: <em>In 5 years, I want to ___.</em></li></ol><div class="check"><h5>&#x2705; Auto-chequeo antes de entregar</h5><ul><li>Mi perfil cabe en 5-7 oraciones, no es una lista.</li><li>Mis herramientas estan correctamente nombradas en ingles.</li><li>Mi proyeccion es realista y concreta.</li><li>Mi texto se puede leer en voz alta sin trabarse: ya estoy preparando la Nota 1.</li></ul></div></div><div class="eval-box"><h4>&#x1F4CB; Seguimiento de la clase</h4><p>Formativa: observacion de participacion, revision de la Actividad 6 y registro de cierre escrito.</p></div></div></div><div class="section"><div class="section-header cierre">&#x1F7E3; Cierre</div><div class="section-body"><div class="exit-ticket"><h5>Exit ticket &amp; reflexion</h5><ul><li>Reflexion: <em>which specialty vocabulary was easiest? Which was the hardest? Why?</em></li><li>Anticipar gramatica: <em>Next class we learn Present Perfect for experiences.</em></li><li>Guarda tu perfil; sera la base de tu Nota 1.</li></ul></div></div></div><div class="resource-card"><h4>&#x1F4E6; Recursos sugeridos</h4><p>Bingo tecnico, textos 5 perfiles impresos, tabla comparativa, plantilla de perfil personal.</p></div>
-<p class="footer-note">Guia de trabajo para estudiantes &mdash; Materiales de Clases 2026.</p>
-</div>
-<script>
-function toggleAnswer(id, button) {
-  const answer = document.getElementById(id);
-  const isOpen = answer.classList.toggle('open');
-  button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-}
-</script>
+    <div class="page">
+        <div class="hero">
+            <h1>Clase 8 — Unidad 1</h1>
+            <p>1° Medio — Inglés General (Lu+Ju) · Los estudiantes reciben cartones de bingo con palabras técnicas. El docente lee definiciones o describe el...</p>
+            <div class="meta">
+                <span>🎯 Los estudiantes reciben cartones de bingo con palabras técnicas. El docente lee...</span>
+                <span>📘 OA8 · OA9 · OA5</span>
+                <span>🗂 Clase 8</span>
+                
+                <span>🧩 Clase de trabajo</span>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+        </div>
+
+        <div class="objective-card">
+            <h2>Objetivo de la clase</h2>
+            <p>Sintetizar y aplicar el vocabulario técnico de las cinco especialidades en actividades integradas de comprensión lectora y producción oral.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🔎 Actividad 1 — Activate and Predict</h4>
+        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
+        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to Los estudiantes reciben cartones de bingo con palabras técnicas. El docente lee definiciones o describe el objeto/concepto sin nombrarlo. Los estudiantes marcan la palabra correcta. Quien completa una línea gana.</li><li>Recuerda la idea central de la clase pasada: Comprender un texto descriptivo sobre los procesos de la industria gráfica e identificar...</li><li>Predict which tools, risks, or key ideas may appear when working with Los estudiantes reciben cartones de bingo con palabras técnicas. El docente lee definiciones o describe el objeto/concepto sin nombrarlo. Los estudiantes marcan la palabra correcta. Quien completa una línea gana in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
+        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Comprender un texto descriptivo sobre los procesos de la industria gráfica e identificar...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+    </div>
+    </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-body">
+                
+    <div class="task-box activity-card">
+        <h4>🧠 Actividad 2 — Language Focus</h4>
+        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <div class="focus-grid">
+            <div class="focus-card">
+                <h5>Technical English in context</h5>
+                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
+                <div class="focus-subtitle">Examples</div>
+                <ul><li>The tool kit is checked before the task begins.</li><li>The checklist gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
+                <div class="focus-subtitle">Sentence frames</div>
+                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
+            </div>
+            </div>
+    </div>
+    
+
+                <div class="task-box">
+                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
+                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
+                    <div class="glossary-grid">
+            <div class="vocab-card">
+                <div class="word">process</div>
+                <div class="meaning">a sequence of actions used to complete a task</div>
+                <div class="pronunciation">Pron.: PRO-ses</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">component</div>
+                <div class="meaning">one part of a machine, circuit, or larger system</div>
+                <div class="pronunciation">Pron.: kom-POU-nent</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">tool</div>
+                <div class="meaning">an object used to do a practical or technical job</div>
+                <div class="pronunciation">Pron.: TUL</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">measure</div>
+                <div class="meaning">to find size, amount, or distance accurately</div>
+                <div class="pronunciation">Pron.: ME-zher</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">connect</div>
+                <div class="meaning">to join parts so the system can work correctly</div>
+                <div class="pronunciation">Pron.: ko-NEKT</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">repair</div>
+                <div class="meaning">to fix something that is damaged or not working</div>
+                <div class="pronunciation">Pron.: ri-PAIR</div>
+            </div>
+            </div>
+                </div>
+
+                <div class="reading-box">
+                    <h4>📖 Actividad 4 — Class focus — Los estudiantes reciben cartones de bingo con palabras técnicas. El docente lee definiciones o describe el objeto/concepto sin nombrarlo. Los estudiantes marcan la palabra correcta. Quien completa una línea gana</h4>
+                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
+                    <p>In the school technical workshop, the class explores Los estudiantes reciben cartones de bingo con palabras técnicas. El docente lee definiciones o describe el objeto/concepto sin nombrarlo. Los estudiantes marcan la palabra correcta. Quien completa una línea gana as part of The World of Technical Work. Students use English to understand how this topic affects the daily work around the practice project.</p><p>The first notes focus on Sintetizar y aplicar el vocabulario técnico de las cinco especialidades en actividades integradas de comprensión lectora y producción oral. The teacher asks students to identify the most useful technical verbs and the details that explain why the topic matters in practice.</p><p>During the activity, the tool kit and the checklist appear as reference points for connecting the text with a real workshop, lab, or production task. The class decides which information is essential and which information only adds context.</p><p>When an idea is not fully clear, students return to the glossary and the examples for Technical English. This helps them explain sequence, cause, or comparison with more precision.</p><p>In the final stage, the group writes a short conclusion about Los estudiantes reciben cartones de bingo con palabras técnicas. El docente lee definiciones o describe el objeto/concepto sin nombrarlo. Los estudiantes marcan la palabra correcta. Quien completa una línea gana and adds one recommendation, safety point, or workplace implication. The reading shows that technical English supports accuracy, teamwork, and better decisions.</p>
+                </div>
+
+                <div class="task-box">
+                    <h4>📝 Actividad 5 — Reading comprehension</h4>
+                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
+                    
+            <div class="question-card">
+                <p><strong>1.</strong> What task or problem is described in the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-1">The text describes Los estudiantes reciben cartones de bingo con palabras técnicas. El docente lee definiciones o describe el objeto/concepto sin nombrarlo. Los estudiantes marcan la palabra correcta. Quien completa una línea gana in the school technical workshop.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>2.</strong> What happens before the main procedure starts?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-2">Before the main task starts, the class reviews sintetizar y aplicar el vocabulario técnico de las cinco especialidades en actividades integradas de comprensión lectora y producción oral and links it to the tool kit.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-3">The tool kit, the checklist, and the glossary notes are important sources of information.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-4">The text highlights Technical English through model sentences and technical examples.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-5">The team finishes by explaining the result or implication of Los estudiantes reciben cartones de bingo con palabras técnicas. El docente lee definiciones o describe el objeto/concepto sin nombrarlo. Los estudiantes marcan la palabra correcta. Quien completa una línea gana.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-6">Good technical work depends on clear notes, accurate vocabulary, and careful checking.</div>
+            </div>
+            
+                </div>
+
+                <div class="task-box">
+                    <h4>🛠 Actividad 6 — Actividad Aplicada — Speaking frames</h4>
+                    
+            <ol class="task-steps">
+                <li>Use the frames to organize your explanation in a clear order.</li>
+                <li>Replace the blanks with technical vocabulary from the glossary and the reading.</li>
+                <li>Practise once with a partner and once independently before presenting.</li>
+            </ol>
+            <ul>
+                <li><em>First, the technician checks...</em></li>
+                <li><em>Then, the team uses...</em></li>
+                <li><em>The main problem is...</em></li>
+                <li><em>Finally, the result is...</em></li>
+            </ul>
+            
+                </div>
+
+                <div class="eval-box">
+                    <h4>📋 Seguimiento de la clase</h4>
+                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
+        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
+        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
+        
+        <div class="exit-ticket">
+            <h5>Exit ticket prompts</h5>
+            <ul><li>Write one sentence that summarizes the main idea of the text.</li><li>Use one glossary term and one language structure from the class in a new sentence.</li><li>Explain what detail or instruction would help you repeat the task more safely next time.</li></ul>
+        </div>
+        
+    </div>
+    </div>
+        </div>
+
+        <div class="resource-card">
+            <h4>📦 Recursos sugeridos</h4>
+            <p>Recursos: Cartones de bingo técnico, textos "Five Careers, Five Futures" impresos, tabla comparativa impresa, proyector.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+        </div>
+
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+    </div>
+
+    <script>
+        function toggleAnswer(id, button) {
+            const answer = document.getElementById(id);
+            const isOpen = answer.classList.toggle('open');
+            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+        }
+    </script>
 </body>
 </html>

@@ -1,84 +1,269 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clase 10 - Unidad 3 - 1ro Medio - Ingles General (Lu+Ju)</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-.hero h1 { font-size: 2rem; margin-bottom: 6px; }
-.hero p { color: rgba(255,255,255,0.88); }
-.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-.inicio { background: #2e7d32; }
-.desarrollo { background: #1565c0; }
-.cierre { background: #7c3aed; }
-.section-body { padding: 20px 22px 22px; }
-.section-body ul, .section-body ol { margin-left: 20px; }
-.section-body li { margin-bottom: 8px; }
-.review-box, .reading-box, .task-box, .eval-box, .apply-box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-.apply-box { border-color: #fdba74; background: #fff7ed; }
-.apply-box h4 { color: #c2410c; margin-bottom: 8px; }
-.apply-box .intro { background: white; border-left: 4px solid #ea580c; padding: 10px 12px; border-radius: 8px; margin: 10px 0 12px; font-size: 0.95rem; }
-.apply-box .check { background: #ecfdf5; border-left: 4px solid #16a34a; padding: 10px 14px; border-radius: 8px; margin-top: 12px; }
-.apply-box .check h5 { color: #166534; margin-bottom: 6px; }
-.review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-.word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-.meaning { font-size: 0.92rem; color: #1f2937; }
-.pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-.focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; margin-top: 10px; }
-.focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-.focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-.reading-box p { margin-bottom: 10px; }
-.reading-note { font-size: 0.92rem; color: #475569; margin-bottom: 10px; }
-.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-.toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-.answer-box.open { display: block; }
-.exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-.exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-.resource-card { padding: 18px 22px; }
-.resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-.rubric-summary { background: #fef3c7; border-left: 4px solid #d97706; padding: 12px 14px; border-radius: 10px; margin-top: 12px; font-size: 0.95rem; }
-.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
-@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 10 — Unidad 3 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
+        .hero p { color: rgba(255,255,255,0.88); }
+        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+        .inicio { background: #2e7d32; }
+        .desarrollo { background: #1565c0; }
+        .cierre { background: #7c3aed; }
+        .section-body { padding: 20px 22px 22px; }
+        .section-body ul { margin-left: 20px; }
+        .section-body li { margin-bottom: 8px; }
+        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+        .activity-card p { margin-bottom: 10px; }
+        .task-steps { margin-left: 20px; }
+        .task-steps li { margin-bottom: 8px; }
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .meaning { font-size: 0.92rem; color: #1f2937; }
+        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
+        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card ul { margin-left: 18px; }
+        .focus-card li { margin-bottom: 6px; }
+        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .reading-box p { margin-bottom: 10px; }
+        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+        .answer-box.open { display: block; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
+        .activity-table th { background: #e2e8f0; }
+        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
+        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+        .exit-ticket ul { margin-left: 18px; }
+        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+        @media (max-width: 720px) {
+            .hero h1 { font-size: 1.55rem; }
+            .page { padding: 16px 12px 28px; }
+        }
+        @media print {
+            body { background: white; }
+            .toolbar { display: none; }
+            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
+        }
+    </style>
 </head>
 <body>
-<div class="page"><div class="hero">
-<h1>Clase 10 - Unidad 3</h1>
-<p>1&deg; Medio - Ingles General (Lu+Ju) &middot; Problem Solving - Case Studies, Diagnosis and Solutions</p>
-<div class="meta">
-<span>&#x1F3AF; Comprender informacion especifica en un estudio de caso sobre problemas de calidad de impr...</span>
-<span>&#x1F4D8; OA9 · OA12</span>
-<span>&#x1F5C2; Clase 10</span>
-<span>&#x1F9E9; Clase de trabajo</span>
-</div>
-</div>
-<div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-<div class="objective-card"><h2>Objetivo de la clase</h2><p>Comprender informacion especifica en un estudio de caso sobre problemas de calidad de impresion, completando la rotacion de las cinco especialidades.</p></div>
-<div class="section"><div class="section-header inicio">Inicio</div><div class="section-body"><div class="task-box"><h4>Actividad 1 - Activate and Predict</h4><ol><li>Observa el escenario de grafica y predice: Magazine photos looked dull and yellowish instead of vibrant and accurate.</li><li>Activa conocimientos previos: que herramientas, piezas o medidas de seguridad serian necesarias?</li><li>Anota una hipotesis inicial antes de leer el caso completo.</li></ol></div><div class="review-box"><h4>Repaso rapido de la clase anterior</h4><p>En la Clase 9 trabajaste la explicacion oral. Ahora cierras la ronda de especialidades con un caso de grafica.</p></div></div></div><div class="section"><div class="section-header desarrollo">Desarrollo</div><div class="section-body"><div class="task-box"><h4>Actividad 2 - Language Focus</h4><p>Los estudios de caso tecnicos se entienden mejor cuando separas sintoma, diagnostico, causa y solucion, y cuando reconoces las estructuras que conectan la informacion.</p><div class="focus-card"><h5>Cause and solution in print-quality cases</h5><div class="focus-subtitle">Examples</div><ul><li><strong>Relative clause:</strong> The technician <strong>who</strong> arrived first checked the press technician first checked the ink levels and the computer CMYK settings.</li><li><strong>Cause:</strong> The problem happened because the print head was dirty and one cartridge was expired and had lost color quality.</li><li><strong>Solution:</strong> The team acted so that the technician cleaned the print heads, replaced the cartridge and recalibrated the machine so that the printed colors matched the design again.</li><li><strong>Connector set:</strong> although, both...and, so that, which and that.</li></ul><div class="focus-subtitle">Sentence frames and tips</div><ul><li><em>The problem was that ___.</em></li><li><em>The technician who/which/that ___ first checked ___.</em></li><li><em>Although ___, the real cause was ___.</em></li><li><em>Both ___ and ___ had to be corrected so that ___.</em></li></ul></div></div><div class="task-box"><h4>Actividad 3 - Vocabulary for the class</h4><p>Revisa este vocabulario clave antes del texto o del input principal. Las tarjetas te ayudan a fijar significado, pronunciacion y uso tecnico.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">print head</div><div class="meaning">the part that distributes ink during printing</div><div class="pronunciation">Pron.: PRINT hed</div></div><div class="vocab-card"><div class="word">calibration</div><div class="meaning">the process of adjusting a machine for correct results</div><div class="pronunciation">Pron.: ka-li-BREI-shon</div></div><div class="vocab-card"><div class="word">cartridge</div><div class="meaning">the container that holds printer ink</div><div class="pronunciation">Pron.: KAR-tridj</div></div><div class="vocab-card"><div class="word">alignment</div><div class="meaning">the correct positioning of colors or parts</div><div class="pronunciation">Pron.: a-LAIN-ment</div></div><div class="vocab-card"><div class="word">CMYK</div><div class="meaning">the four base printing colors</div><div class="pronunciation">Pron.: SII-EM-WAI-KEI</div></div><div class="vocab-card"><div class="word">expired</div><div class="meaning">too old to be used safely or effectively</div><div class="pronunciation">Pron.: ik-SPAI-erd</div></div><div class="vocab-card"><div class="word">dull</div><div class="meaning">not bright or vivid in color</div><div class="pronunciation">Pron.: DAL</div></div><div class="vocab-card"><div class="word">vibrant</div><div class="meaning">strong, bright and full of color</div><div class="pronunciation">Pron.: VAI-brant</div></div></div></div><div class="reading-box"><h4>Actividad 4 - Reading Text - The Colors That Didn't Match</h4><p>A report from the grafica area described a problem that could not be ignored. Magazine photos looked dull and yellowish instead of vibrant and accurate.. The staff member who received the complaint wrote down the exact symptoms before touching any tool.</p><p>The first diagnostic step was simple but important: the press technician first checked the ink levels and the computer CMYK settings. This prevented random replacement of parts and helped the technician focus on evidence instead of guessing.</p><p>After the inspection, the team discovered the root cause: the print head was dirty and one cartridge was expired and had lost color quality. The technician explained why the symptom was misleading and why an early assumption would have wasted time and money.</p><p>Finally, the technician cleaned the print heads, replaced the cartridge and recalibrated the machine so that the printed colors matched the design again. The case ends with a lesson that applies to all technical fields: a clear diagnosis saves resources, improves safety, and builds trust with the client or the work team.</p></div><div class="task-box"><h4>Actividad 5 - Comprehension and evidence</h4><p>Responde con evidencia. Vuelve al texto, al transcript o al modelo antes de revisar la respuesta sugerida.</p><div class="question-card"><p><strong>1.</strong> What is the main symptom described in the case?</p><button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button><div class="answer-box" id="answer-1">Magazine photos looked dull and yellowish instead of vibrant and accurate.</div></div><div class="question-card"><p><strong>2.</strong> What was the first diagnostic step?</p><button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button><div class="answer-box" id="answer-2">the press technician first checked the ink levels and the computer CMYK settings</div></div><div class="question-card"><p><strong>3.</strong> What was the real root cause?</p><button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button><div class="answer-box" id="answer-3">the print head was dirty and one cartridge was expired and had lost color quality</div></div><div class="question-card"><p><strong>4.</strong> How was the problem solved?</p><button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button><div class="answer-box" id="answer-4">the technician cleaned the print heads, replaced the cartridge and recalibrated the machine so that the printed colors matched the design again</div></div><div class="question-card"><p><strong>5.</strong> Why is the first check important in this kind of case?</p><button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button><div class="answer-box" id="answer-5">Because it reduces guesswork and allows the technician to collect evidence before replacing parts.</div></div><div class="question-card"><p><strong>6.</strong> What general lesson does the case teach?</p><button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button><div class="answer-box" id="answer-6">That a structured diagnosis leads to safer, faster and more reliable solutions.</div></div></div><div class="apply-box"><h4>Actividad 6 - Apply &amp; Extend: tarjeta de troubleshooting de impresion</h4><div class="intro">Vas a crear una tarjeta util para una imprenta o taller escolar. Debe ayudar a detectar rapido un defecto visual.</div><ol><li>Elige un defecto distinto: blurred text, paper jam, wrong alignment, toner streaks, trim marks visible.</li><li>Disena una card con 4 bloques: <em>visible symptom - first check - probable cause - correction</em>.</li><li>Incluye una linea final: <em>How to verify the result</em>.</li><li>Usa al menos 1 relative clause y 1 conector de proposito o contraste.</li></ol><div class="check"><h5>Auto-chequeo antes de entregar</h5><ul><li>Mi defecto no repite el caso del color amarillo.</li><li>Mi first check es rapido y realista.</li><li>Mi verificacion final confirma la calidad del resultado.</li><li>La tarjeta sirve a una persona que necesita actuar rapido.</li></ul></div></div><div class="eval-box"><h4>Seguimiento de la clase</h4><p>Formativa: observacion de participacion, revision de la Actividad 6 y registro del cierre.</p></div></div></div><div class="section"><div class="section-header cierre">Cierre</div><div class="section-body"><div class="exit-ticket"><h5>Exit ticket and reflection</h5><ul><li>Ordena de memoria los 5 casos de especialidad vistos en la unidad.</li><li>Elige cual fue el mas complejo y explica por que.</li><li>Anota 3 palabras de grafica que no conocias.</li></ul></div></div></div><div class="resource-card"><h4>Recursos sugeridos</h4><p>Caso impreso, ejemplos visuales de impresiones defectuosas, tabla comparativa de los 5 casos.</p></div>
-<p class="footer-note">Guia de trabajo para estudiantes - Materiales de Clases 2026.</p>
-</div>
-<script>
-function toggleAnswer(id, button) {
-  const answer = document.getElementById(id);
-  const isOpen = answer.classList.toggle('open');
-  button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-}
-</script>
+    <div class="page">
+        <div class="hero">
+            <h1>Clase 10 — Unidad 3</h1>
+            <p>1° Medio — Inglés General (Lu+Ju) · Reading – Case Study 5: Gráfica (25 min): "The Colors That Didn't Match" A graphic design company which...</p>
+            <div class="meta">
+                <span>🎯 Evaluación oral de procedimiento técnico</span>
+                <span>📘 OA9 · OA12</span>
+                <span>🗂 Clase 10</span>
+                
+                <span>📝 Evaluación</span>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+        </div>
+
+        <div class="objective-card">
+            <h2>Objetivo de la clase</h2>
+            <p>Comprender información específica en un estudio de caso sobre problemas de calidad de impresión (Gráfica), completando la rotación de las cinco especialidades.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🔎 Actividad 1 — Activate and Predict</h4>
+        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
+        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to Reading – Case Study 5: Gráfica (25 min): "The Colors That Didn't Match" A graphic design company which prints magazines received a complaint from a client. The printed photos, which should have been vibrant, looked dull and yellowish. The technician who handles the press first checked the ink levels, which were normal. Although the CMYK settings were correct on the computer, the colors that appeared on paper were wrong. She then cleaned the print heads that distribute the ink and ran a calibration test. The problem was caused by both a dirty print head and an expired ink cartridge that had lost its color quality. She replaced the cartridge and recalibrated the machine so that the colors would match the original design. Lectura con técnica Jigsaw: dividir el párrafo en 3 partes. Cada grupo lee una parte y luego comparte con los demás para reconstruir la historia completa. Comprehension: What was the client's complaint? Was the computer setting wrong? What two things caused the problem? How was it resolved?.</li><li>Recuerda la idea central de la clase pasada: Describir oralmente problemas técnicos y sus soluciones utilizando la estructura...</li><li>Predict which tools, risks, or key ideas may appear when working with Reading – Case Study 5: Gráfica (25 min): "The Colors That Didn't Match" A graphic design company which prints magazines received a complaint from a client. The printed photos, which should have been vibrant, looked dull and yellowish. The technician who handles the press first checked the ink levels, which were normal. Although the CMYK settings were correct on the computer, the colors that appeared on paper were wrong. She then cleaned the print heads that distribute the ink and ran a calibration test. The problem was caused by both a dirty print head and an expired ink cartridge that had lost its color quality. She replaced the cartridge and recalibrated the machine so that the colors would match the original design. Lectura con técnica Jigsaw: dividir el párrafo en 3 partes. Cada grupo lee una parte y luego comparte con los demás para reconstruir la historia completa. Comprehension: What was the client's complaint? Was the computer setting wrong? What two things caused the problem? How was it resolved? in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
+        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Describir oralmente problemas técnicos y sus soluciones utilizando la estructura...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+    </div>
+    </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-body">
+                
+    <div class="task-box activity-card">
+        <h4>🧠 Actividad 2 — Language Focus</h4>
+        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <div class="focus-grid">
+            <div class="focus-card">
+                <h5>Technical English in context</h5>
+                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
+                <div class="focus-subtitle">Examples</div>
+                <ul><li>The tool kit is checked before the task begins.</li><li>The checklist gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
+                <div class="focus-subtitle">Sentence frames</div>
+                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
+            </div>
+            </div>
+    </div>
+    
+
+                <div class="task-box">
+                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
+                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
+                    <div class="glossary-grid">
+            <div class="vocab-card">
+                <div class="word">process</div>
+                <div class="meaning">a sequence of actions used to complete a task</div>
+                <div class="pronunciation">Pron.: PRO-ses</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">component</div>
+                <div class="meaning">one part of a machine, circuit, or larger system</div>
+                <div class="pronunciation">Pron.: kom-POU-nent</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">tool</div>
+                <div class="meaning">an object used to do a practical or technical job</div>
+                <div class="pronunciation">Pron.: TUL</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">measure</div>
+                <div class="meaning">to find size, amount, or distance accurately</div>
+                <div class="pronunciation">Pron.: ME-zher</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">connect</div>
+                <div class="meaning">to join parts so the system can work correctly</div>
+                <div class="pronunciation">Pron.: ko-NEKT</div>
+            </div>
+            
+            <div class="vocab-card">
+                <div class="word">repair</div>
+                <div class="meaning">to fix something that is damaged or not working</div>
+                <div class="pronunciation">Pron.: ri-PAIR</div>
+            </div>
+            </div>
+                </div>
+
+                <div class="reading-box">
+                    <h4>📖 Actividad 4 — Presentation Model — Reading – Case Study 5: Gráfica (25 min): "The Colors That Didn't Match" A graphic design company which prints magazines received a complaint from a client. The printed photos, which should have been vibrant, looked dull and yellowish. The technician who handles the press first checked the ink levels, which were normal. Although the CMYK settings were correct on the computer, the colors that appeared on paper were wrong. She then cleaned the print heads that distribute the ink and ran a calibration test. The problem was caused by both a dirty print head and an expired ink cartridge that had lost its color quality. She replaced the cartridge and recalibrated the machine so that the colors would match the original design. Lectura con técnica Jigsaw: dividir el párrafo en 3 partes. Cada grupo lee una parte y luego comparte con los demás para reconstruir la historia completa. Comprehension: What was the client's complaint? Was the computer setting wrong? What two things caused the problem? How was it resolved?</h4>
+                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
+                    <p>Before the oral presentation begins, the student technician reviews Reading – Case Study 5: Gráfica (25 min): "The Colors That Didn't Match" A graphic design company which prints magazines received a complaint from a client. The printed photos, which should have been vibrant, looked dull and yellowish. The technician who handles the press first checked the ink levels, which were normal. Although the CMYK settings were correct on the computer, the colors that appeared on paper were wrong. She then cleaned the print heads that distribute the ink and ran a calibration test. The problem was caused by both a dirty print head and an expired ink cartridge that had lost its color quality. She replaced the cartridge and recalibrated the machine so that the colors would match the original design. Lectura con técnica Jigsaw: dividir el párrafo en 3 partes. Cada grupo lee una parte y luego comparte con los demás para reconstruir la historia completa. Comprehension: What was the client's complaint? Was the computer setting wrong? What two things caused the problem? How was it resolved? in the school technical workshop. The speaker must explain why this topic matters and what conclusion the audience should remember.</p><p>First, the explanation introduces Comprender información específica en un estudio de caso sobre problemas de calidad de impresión (Gráfica), completando la rotación de las cinco especialidades. The speaker gives enough context so the audience understands the situation before the technical details appear.</p><p>Next, the speaker links the topic to evidence from the tool kit and the checklist. Technical vocabulary is selected carefully so the explanation sounds precise instead of vague.</p><p>After that, the speaker adds one difficulty, one decision, and one recommendation linked to Reading – Case Study 5: Gráfica (25 min): "The Colors That Didn't Match" A graphic design company which prints magazines received a complaint from a client. The printed photos, which should have been vibrant, looked dull and yellowish. The technician who handles the press first checked the ink levels, which were normal. Although the CMYK settings were correct on the computer, the colors that appeared on paper were wrong. She then cleaned the print heads that distribute the ink and ran a calibration test. The problem was caused by both a dirty print head and an expired ink cartridge that had lost its color quality. She replaced the cartridge and recalibrated the machine so that the colors would match the original design. Lectura con técnica Jigsaw: dividir el párrafo en 3 partes. Cada grupo lee una parte y luego comparte con los demás para reconstruir la historia completa. Comprehension: What was the client's complaint? Was the computer setting wrong? What two things caused the problem? How was it resolved?. This middle section is important because it shows control of both content and professional reasoning.</p><p>Finally, the explanation closes with the result and one reflection about what the audience should remember. The model text shows that a good oral report is organized, informative, and easy to follow.</p>
+                </div>
+
+                <div class="task-box">
+                    <h4>📝 Actividad 5 — Reading comprehension</h4>
+                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
+                    
+            <div class="question-card">
+                <p><strong>1.</strong> What task or problem is described in the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-1">The speaker prepares an English explanation about Reading – Case Study 5: Gráfica (25 min): "The Colors That Didn't Match" A graphic design company which prints magazines received a complaint from a client. The printed photos, which should have been vibrant, looked dull and yellowish. The technician who handles the press first checked the ink levels, which were normal. Although the CMYK settings were correct on the computer, the colors that appeared on paper were wrong. She then cleaned the print heads that distribute the ink and ran a calibration test. The problem was caused by both a dirty print head and an expired ink cartridge that had lost its color quality. She replaced the cartridge and recalibrated the machine so that the colors would match the original design. Lectura con técnica Jigsaw: dividir el párrafo en 3 partes. Cada grupo lee una parte y luego comparte con los demás para reconstruir la historia completa. Comprehension: What was the client's complaint? Was the computer setting wrong? What two things caused the problem? How was it resolved?.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>2.</strong> What happens before the main procedure starts?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-2">The first action is introducing the context of comprender información específica en un estudio de caso sobre problemas de calidad de impresión (gráfica), completando la rotación de las cinco especialidades and connecting it to the workplace.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-3">The text mentions the tool kit, the checklist, and the technical vocabulary linked to the explanation.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-4">The model shows the language focus through clear sequencing and precise sentence patterns.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-5">The speaker closes with the result and one final reflection.</div>
+            </div>
+            
+            <div class="question-card">
+                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
+                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+                <div class="answer-box" id="answer-6">It can be inferred that the speaker needs to be organized, accurate, and audience-aware.</div>
+            </div>
+            
+                </div>
+
+                <div class="task-box">
+                    <h4>🛠 Actividad 6 — Trabajo Oral Evaluado</h4>
+                    
+            <ol class="task-steps">
+                <li>Plan a 60-90 second explanation with a clear opening, middle, and closing.</li>
+                <li>Name the purpose of the task, the tools or materials involved, and the order of the main actions.</li>
+                <li>Add one difficulty or key decision and one safety recommendation linked to the task.</li>
+                <li>Rehearse with the frames <em>first</em>, <em>then</em>, <em>after that</em>, and <em>finally</em>.</li>
+                <li>Before presenting, check clarity, technical vocabulary, logical sequence, and pronunciation.</li>
+            </ol>
+            
+                </div>
+
+                <div class="eval-box">
+                    <h4>📋 Seguimiento de la clase</h4>
+                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-body">
+    <div class="task-box activity-card">
+        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
+        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
+        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
+        
+        <div class="exit-ticket">
+            <h5>Exit ticket prompts</h5>
+            <ul><li>Write the opening sentence you will use in your oral explanation.</li><li>Add one technical term from the glossary and one safety recommendation.</li><li>Check that your closing sentence states a result or takeaway clearly.</li></ul>
+        </div>
+        
+    </div>
+    </div>
+        </div>
+
+        <div class="resource-card">
+            <h4>📦 Recursos sugeridos</h4>
+            <p>Recursos: Estudio de caso impreso, ejemplos de impresiones defectuosas, tabla comparativa de 5 casos, vocabulario gráfica con imágenes.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+        </div>
+
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+    </div>
+
+    <script>
+        function toggleAnswer(id, button) {
+            const answer = document.getElementById(id);
+            const isOpen = answer.classList.toggle('open');
+            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+        }
+    </script>
 </body>
 </html>
