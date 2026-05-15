@@ -1,267 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 19 — Unidad 4 — 1° Medio — Inglés General (Lu+Ju)</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
-        .hero p { color: rgba(255,255,255,0.88); }
-        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-        .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
-        .cierre { background: #7c3aed; }
-        .section-body { padding: 20px 22px 22px; }
-        .section-body ul { margin-left: 20px; }
-        .section-body li { margin-bottom: 8px; }
-        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-        .activity-card p { margin-bottom: 10px; }
-        .task-steps { margin-left: 20px; }
-        .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-        .focus-card ul { margin-left: 18px; }
-        .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-        .reading-box p { margin-bottom: 10px; }
-        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-        .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
-        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
-        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-        .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 19 - Unidad 4 - 1ro Medio - Ingles General (Lu+Ju)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.section-body ul, .section-body ol { margin-left: 20px; }
+.section-body li { margin-bottom: 8px; }
+.review-box, .reading-box, .task-box, .eval-box, .apply-box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+.apply-box { border-color: #fdba74; background: #fff7ed; }
+.apply-box h4 { color: #c2410c; margin-bottom: 8px; }
+.apply-box .intro { background: white; border-left: 4px solid #ea580c; padding: 10px 12px; border-radius: 8px; margin: 10px 0 12px; font-size: 0.95rem; }
+.apply-box .check { background: #ecfdf5; border-left: 4px solid #16a34a; padding: 10px 14px; border-radius: 8px; margin-top: 12px; }
+.apply-box .check h5 { color: #166534; margin-bottom: 6px; }
+.review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+.meaning { font-size: 0.92rem; color: #1f2937; }
+.pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+.focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; margin-top: 10px; }
+.focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+.focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.reading-box p { margin-bottom: 10px; }
+.reading-note { font-size: 0.92rem; color: #475569; margin-bottom: 10px; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+.toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+.exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+.resource-card { padding: 18px 22px; }
+.resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+.rubric-summary { background: #fef3c7; border-left: 4px solid #d97706; padding: 12px 14px; border-radius: 10px; margin-top: 12px; font-size: 0.95rem; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
+</style>
 </head>
 <body>
-    <div class="page">
-        <div class="hero">
-            <h1>Clase 19 — Unidad 4</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · Innovation, Safety & My Future</p>
-            <div class="meta">
-                <span>🎯 comprensión lectora, dominio gramatical y conocimiento de vocabulario técnico de...</span>
-                <span>📘 📝 NOTA 5</span>
-                <span>🗂 Clase 19</span>
-                
-                <span>📝 Evaluación</span>
-            </div>
-        </div>
-
-        <div class="toolbar">
-            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
-        </div>
-
-        <div class="objective-card">
-            <h2>Objetivo de la clase</h2>
-            <p>Demostrar comprensión lectora, dominio gramatical y conocimiento de vocabulario técnico de todo el año escolar mediante una evaluación integradora final.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the new text and the new language focus.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and circle the technical action linked to the practice project.</li><li>Recuerda la idea central de la clase pasada: completaste las presentaciones del proyecto final y reflexionaste sobre tu aprendizaje.</li><li>Predict which reading strategies have helped you most during this unit.</li><li>Share one sentence with a partner naming the strategy that works best for you in technical texts.</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda un aprendizaje importante obtenido en las presentaciones finales.</li><li>Escribe una estrategia de lectura que uses para encontrar ideas clave.</li><li>Explica cómo esa estrategia te ayudará en la evaluación integradora.</li></ul></div>
-    </div>
-    </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
-            <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The tool kit is checked before the task begins.</li><li>The checklist gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
-            </div>
-            </div>
-    </div>
-    
-
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">process</div>
-                <div class="meaning">a sequence of actions used to complete a task</div>
-                <div class="pronunciation">Pron.: PRO-ses</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">component</div>
-                <div class="meaning">one part of a machine, circuit, or larger system</div>
-                <div class="pronunciation">Pron.: kom-POU-nent</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="pronunciation">Pron.: TUL</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">measure</div>
-                <div class="meaning">to find size, amount, or distance accurately</div>
-                <div class="pronunciation">Pron.: ME-zher</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">connect</div>
-                <div class="meaning">to join parts so the system can work correctly</div>
-                <div class="pronunciation">Pron.: ko-NEKT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">repair</div>
-                <div class="meaning">to fix something that is damaged or not working</div>
-                <div class="pronunciation">Pron.: ri-PAIR</div>
-            </div>
-            </div>
-                </div>
-
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Text — Review and Professional Reflection</h4>
-                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
-                    <p>In the school technical workshop, a student team is working on an end-of-unit reflection on workshop learning linked to Innovation, Safety & My Future. Their task is to understand how a practice project is prepared, checked, and explained in English.</p><p>Before the main procedure begins, the tool kit is prepared and the class reads a short note about process. The teacher asks students to notice the technical verbs and the words that help the reader follow the order of the task.</p><p>During the activity, the checklist is used to complete an important stage of the job. Each action is recorded in clear sentences so the next person can understand what is done, what is checked, and what must happen next.</p><p>A small difficulty appears when one step is not fully clear, so the students compare evidence, review the glossary, and revisit the example box for Technical English. This helps them decide which detail is essential and which detail only gives extra context.</p><p>In the final stage, the group writes a short conclusion, explains the result, and suggests one safety action. The reading shows that technical English is useful because it supports accuracy, teamwork, and better decisions in the workshop.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What task or problem is described in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text describes an end-of-unit reflection on workshop learning in the school technical workshop.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What happens before the main procedure starts?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the main task starts, the team prepares the tool kit and reads the note about process.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">The tool kit, the checklist, and the glossary notes are important sources of information.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The text highlights Technical English through model sentences and technical examples.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">The team finishes by explaining the result and suggesting one safety action.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Good technical work depends on clear notes, accurate vocabulary, and careful checking.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Síntesis técnica</h4>
-                    
-        <ol class="task-steps">
-            <li>Resume the main idea of the class in relation to formación técnico-profesional general.</li>
-            <li>Write two pieces of evidence from the text that support your summary.</li>
-            <li>Explain how the reading connects with a real task from the workshop, lab, or production area.</li>
-        </ol>
-        
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Evaluación: SUMATIVA — Nota 5 del semestre 2 (Evaluación Integradora Final). 80 puntos, escala 60%. Cubre TODO el contenido del año: vocabulario técnico, comprensión lectora, Present Perfect, Used to, Passive Voice, Relative Clauses, Connectors, Tag Questions.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
-        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
-        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
-        
-        <div class="exit-ticket">
-            <h5>Exit ticket prompts</h5>
-            <ul><li>Write one sentence that summarizes the main idea of the text.</li><li>Use one glossary term and one language structure from the class in a new sentence.</li><li>Explain what detail or instruction would help you repeat the task more safely next time.</li></ul>
-        </div>
-        
-    </div>
-    </div>
-        </div>
-
-        <div class="resource-card">
-            <h4>📦 Recursos sugeridos</h4>
-            <p>Texto adaptado, pizarra, guía de apoyo y recursos visuales de la especialidad.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
-        </div>
-
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
-    </div>
-
-    <script>
-        function toggleAnswer(id, button) {
-            const answer = document.getElementById(id);
-            const isOpen = answer.classList.toggle('open');
-            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-        }
-    </script>
+<div class="page"><div class="hero">
+<h1>Clase 19 - Unidad 4</h1>
+<p>1&deg; Medio - Ingles General (Lu+Ju) &middot; Safety, Innovation and Future Pathways</p>
+<div class="meta">
+<span>&#x1F3AF; Demostrar comprension lectora y manejo gramatical integrando seguridad, innovacion y proye...</span>
+<span>&#x1F4D8; OA9 · OA8 · OA12</span>
+<span>&#x1F5C2; Clase 19</span>
+<span>&#x1F9E9; Evaluacion - Prueba final integradora</span>
+</div>
+</div>
+<div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+<div class="objective-card"><h2>Objetivo de la clase</h2><p>Demostrar comprension lectora y manejo gramatical integrando seguridad, innovacion y proyeccion profesional en una prueba escrita de cierre anual.</p></div>
+<div class="section"><div class="section-header inicio">Inicio</div><div class="section-body"><div class="task-box"><h4>Antes de comenzar</h4><ul><li>Leer instrucciones generales y estructura de la prueba.</li><li>Recordar estrategias: leer preguntas, ubicar evidencia, revisar conectores y formas breves.</li><li>Aclarar dudas antes de comenzar.</li></ul></div><div class="review-box"><h4>Conexion con la clase anterior</h4><p>Tras el proyecto final, cerramos con una evaluacion escrita integradora de la unidad y del anio.</p></div></div></div><div class="section"><div class="section-header desarrollo">Desarrollo - Aplicacion de la evaluacion</div><div class="section-body"><div class="eval-box"><h4>Seccion I - Safety and Innovation Vocabulary</h4><p>Seleccion multiple, matching y uso en contexto de vocabulario trabajado en la unidad.</p></div><div class="eval-box"><h4>Seccion II - Reading Comprehension</h4><p>Textos breves sobre seguridad, innovacion y habilidades futuras con preguntas de evidencia e inferencia.</p></div><div class="eval-box"><h4>Seccion III - Grammar in Context</h4><p>Tag questions, relative clauses, connectors y transformaciones contextualizadas en situaciones tecnicas.</p></div><div class="eval-box"><h4>Seccion IV - Personal Response</h4><p>Breve respuesta escrita sobre habilidades, seguridad o proyecto futuro con apoyo de estructuras vistas.</p></div><div class="rubric-summary"><strong>Resumen evaluativo:</strong><ul style="margin-top:6px; margin-left:18px;"><li>Evaluacion sumativa integradora del cierre anual.</li><li>Tiempo estimado: 70-80 minutos.</li><li>Foco: seguridad, innovacion, proyecto y gramatica contextualizada.</li></ul></div></div></div><div class="section"><div class="section-header cierre">Cierre</div><div class="section-body"><div class="exit-ticket"><h5>Cierre de la clase</h5><ul><li>Entrega de pruebas y comentario general sobre el cierre del proceso.</li><li>La siguiente clase se dedica a reflexion anual y cierre del trabajo.</li><li>Reconocimiento al camino recorrido en el anio.</li></ul></div></div></div><div class="resource-card"><h4>Recursos sugeridos</h4><p>Prueba impresa, hojas de respuesta, reloj visible o cronometro.</p></div>
+<p class="footer-note">Guia de trabajo para estudiantes - Materiales de Clases 2026.</p>
+</div>
+<script>
+function toggleAnswer(id, button) {
+  const answer = document.getElementById(id);
+  const isOpen = answer.classList.toggle('open');
+  button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+}
+</script>
 </body>
 </html>

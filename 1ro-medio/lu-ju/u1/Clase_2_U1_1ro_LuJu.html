@@ -1,196 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 2 — 1° Medio — Inglés General (Lu+Ju)</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
-        .header { background: linear-gradient(135deg, #0d47a1, #1565c0); color: white; padding: 34px 20px; text-align: center; }
-        .header h1 { font-size: 1.85em; margin-bottom: 5px; }
-        .header .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
-        .header .meta span { background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.85em; }
-        .container { max-width: 930px; margin: 24px auto; padding: 0 15px; }
-        .card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
-        .card h3 { color: #1565c0; margin-bottom: 8px; }
-        ul, ol { margin-left: 20px; }
-        li { margin-bottom: 7px; }
-        .section-title { color: white; font-weight: 600; padding: 10px 14px; border-radius: 8px; margin-bottom: 10px; display: inline-block; }
-        .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
-        .cierre { background: #6a1b9a; }
-        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 10px; }
-        .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; }
-        .vocab-card .word { font-weight: 700; color: #0d47a1; }
-        .vocab-card .meaning { font-size: 0.8em; color: #666; margin-top: 4px; display: none; }
-        .vocab-card.revealed .meaning { display: block; }
-        .vocab-card .hint { font-size: 0.72em; color: #888; margin-top: 4px; }
-        .vocab-card.revealed .hint { display: none; }
-        .reading-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }
-        .reading-note { font-size: 0.9em; color: #546e7a; margin-bottom: 10px; }
-        .task-box { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; margin-top: 10px; }
-        .support-box { background: #f7f9fc; border-color: #dbe4f0; }
-        .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 12px; }
-        .support-grid h4 { color: #0d47a1; margin-bottom: 6px; }
-        .quiz-item { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
-        .quiz-options { display: flex; gap: 10px; margin-top: 8px; }
-        .quiz-btn { padding: 7px 14px; border-radius: 8px; border: 2px solid #e0e0e0; background: white; cursor: pointer; }
-        .quiz-btn.correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 700; }
-        .quiz-btn.incorrect { border-color: #c62828; background: #ffebee; color: #c62828; }
-        .ticket-input { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 8px; }
-        .score { font-weight: 700; color: #1565c0; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 2 — Unidad 1 — 1° Medio — Inglés General (Lu+Ju)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.section-body ul, .section-body ol { margin-left: 20px; }
+.section-body li { margin-bottom: 8px; }
+.review-box, .reading-box, .task-box, .eval-box, .apply-box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+.apply-box { border-color: #fdba74; background: #fff7ed; }
+.apply-box h4 { color: #c2410c; margin-bottom: 8px; }
+.apply-box .intro { background: white; border-left: 4px solid #ea580c; padding: 10px 12px; border-radius: 8px; margin: 10px 0 12px; font-size: 0.95rem; }
+.apply-box .check { background: #ecfdf5; border-left: 4px solid #16a34a; padding: 10px 14px; border-radius: 8px; margin-top: 12px; }
+.apply-box .check h5 { color: #166534; margin-bottom: 6px; }
+.review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+.meaning { font-size: 0.92rem; color: #1f2937; }
+.pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+.focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; margin-top: 10px; }
+.focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+.focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.reading-box p { margin-bottom: 10px; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+.toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+.exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+.resource-card { padding: 18px 22px; }
+.resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+.rubric-summary { background: #fef3c7; border-left: 4px solid #d97706; padding: 12px 14px; border-radius: 10px; margin-top: 12px; font-size: 0.95rem; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
+</style>
 </head>
 <body>
-<div class="header">
-    <h1>CLASS 2 — 1° MEDIO — INGLÉS GENERAL (LU+JU)</h1>
-    <div class="meta">
-        <span>📘 OA1 · OA3</span>
-        <span>⏱ 90 min</span>
-        <span>📗 A2</span>
-        <span>🧭 Guía de estudiante completa</span>
-    </div>
+<div class="page">
+<div class="hero">
+<h1>Clase 2 &mdash; Unidad 1</h1>
+<p>1&deg; Medio &mdash; Ingles General (Lu+Ju) &middot; Technical English: Tools, Specialties &amp; First Grammar</p>
+<div class="meta">
+<span>&#x1F3AF; Reconocer y categorizar vocabulario tecnico basico de herramientas comunes a las cinco esp...</span>
+<span>&#x1F4D8; OA9 · OA1</span>
+<span>&#x1F5C2; Clase 2</span>
+<span>&#x1F9E9; Clase de trabajo</span>
 </div>
-
-<div class="container">
-    <div class="card"><h3>🎯 Objetivo de la clase</h3><p>Reconocer y categorizar vocabulario técnico básico de herramientas comunes a las cinco especialidades técnico-profesionales.</p></div>
-
-    <div class="card">
-        <div class="section-title inicio">Inicio (15 min)</div>
-        <p>Prepare the reading by activating prior knowledge and predicting the professional context of the text.</p>
-        <ol><li>Read the objective and highlight two words that show today's reading focus.</li><li>Review key vocabulary from class 1: hammer, screwdriver, wrench, wire.</li><li>Predict what kind of professional routine, problem, or career situation will appear in the text.</li><li>Share one prediction with a partner before reading.</li></ol>
-    </div>
-
-    <div class="card">
-        <div class="section-title desarrollo">Desarrollo (60 min)</div>
-        <h3 style="margin-top:14px;">📖 Activity 1 — Vocabulary Review</h3>
-        <p>Open each card to review a short technical definition in English before reading.</p>
-        <div class="vocab-grid">
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
-                <div class="word">hammer</div>
-                <div class="meaning">a hand tool used to hit nails or shape material</div>
-                <div class="hint">👆 clic para ver</div>
-            </div>
-            
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
-                <div class="word">screwdriver</div>
-                <div class="meaning">a tool used to tighten or loosen screws</div>
-                <div class="hint">👆 clic para ver</div>
-            </div>
-            
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
-                <div class="word">wrench</div>
-                <div class="meaning">a tool used to turn bolts or nuts</div>
-                <div class="hint">👆 clic para ver</div>
-            </div>
-            
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
-                <div class="word">wire</div>
-                <div class="meaning">a metal conductor that carries electricity</div>
-                <div class="hint">👆 clic para ver</div>
-            </div>
-            
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
-                <div class="word">circuit</div>
-                <div class="meaning">a complete path that lets electricity move</div>
-                <div class="hint">👆 clic para ver</div>
-            </div>
-            
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
-                <div class="word">engine</div>
-                <div class="meaning">the machine that produces power in a vehicle</div>
-                <div class="hint">👆 clic para ver</div>
-            </div>
-            
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
-                <div class="word">battery</div>
-                <div class="meaning">a device that stores electrical energy</div>
-                <div class="hint">👆 clic para ver</div>
-            </div>
-            
-            <div class="vocab-card" onclick="this.classList.toggle('revealed')">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="hint">👆 clic para ver</div>
-            </div>
-            </div>
-
-        
-    <div class="task-box support-box">
-        <h3>🧠 Activity 2 — Reading support</h3>
-        <p>Use these examples and frames before reading so you can identify task, evidence, and result more easily.</p>
-        <div class="support-grid">
-            <div>
-                <h4>Model ideas</h4>
-                <ul><li>The text explains when the hammer is used.</li><li>The student identifies the screwdriver before answering the questions.</li><li>The reader follows the sequence first, then the purpose, and finally the result.</li></ul>
-            </div>
-            <div>
-                <h4>Frames to reuse</h4>
-                <ul><li>First, the technician ...</li><li>Then, the professional uses ...</li><li>At the end, the result is ...</li></ul>
-            </div>
-        </div>
-    </div>
-    
-
-        <h3 style="margin-top:14px;">📚 Activity 3 — Reading</h3>
-        <div class="reading-box">
-            <p class="reading-note">Texto graduado A2: cinco parrafos, secuencia clara y apoyo de vocabulario para comprender la rutina tecnica.</p>
-            <p>Sofía is a first-year technical student. Every day, she learns about tools and safety rules in the workshop. The reading introduces the workplace, the people involved, and the main task in simple language.</p><p>Before the routine continues, the student notices words such as hammer and screwdriver. These words are important because they explain what is used, what is checked, and what should happen next.</p><p>In class, she reads a short text about a mechanic who checks engines, changes oil, and uses different tools. The actions appear in a clear order so the reader can follow the procedure without losing the main idea.</p><p>While reading, the student identifies the purpose of each action, the safety detail, and the result of the task. This helps the class connect vocabulary with real workshop decisions.</p><p>After reading, she identifies key words and explains what each tool is used for. By the end of the text, the reader can explain the routine, justify one decision, and connect the lesson objective with reconocer y categorizar vocabulario técnico básico de herramientas comunes a las cinco especialidades técnico-profesionales.</p>
-        </div>
-
-        <h3 style="margin-top:14px;">📝 Activity 4 — Comprehension Questions</h3>
-        <div class="task-box">
-            <p>Answer using evidence from the text. Underline the sentence that helps you answer each question.</p>
-            <ol><li>What is the main task or routine described in the text?</li><li>Which tool, system, or material appears first in the reading?</li><li>What actions help the reader understand the sequence of the job?</li><li>Which technical words are essential for understanding the text?</li><li>Why is English useful in this professional situation?</li><li>What idea from the text can you use in your own future workshop context?</li></ol>
-        </div>
-
-        <h3 style="margin-top:14px;">📊 Activity 5 — Task / Tool / Evidence Table</h3>
-        <div class="task-box">
-            <p>Transfer information from the reading into the organizer. Keep the wording specific and professional.</p>
-            <table style="width:100%; border-collapse: collapse;">
-                <tr><th style="border:1px solid #ddd; padding:8px;">Task or responsibility</th><th style="border:1px solid #ddd; padding:8px;">Tool / system</th><th style="border:1px solid #ddd; padding:8px;">Evidence from the text</th></tr>
-                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
-                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
-                <tr><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td><td style="border:1px solid #ddd; padding:8px;">&nbsp;</td></tr>
-            </table>
-        </div>
-
-        <h3 style="margin-top:14px;">✅ Activity 6 — True/False Check</h3>
-        
-    <div class="quiz-item"><p>1. The text describes professional technical tasks.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button></div></div>
-    <div class="quiz-item"><p>2. English is not necessary in technical jobs.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,false)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,true)">FALSE</button></div></div>
-    <div class="quiz-item"><p>3. The routine includes specific tools and procedures.</p><div class="quiz-options"><button class="quiz-btn" onclick="checkAnswer(this,true)">TRUE</button><button class="quiz-btn" onclick="checkAnswer(this,false)">FALSE</button></div></div>
-    
-
-        <h3 style="margin-top:14px;">🗣 Activity 7 — Speaking Frames</h3>
-        <div class="task-box">
-            <p><strong>Use these frames in pairs:</strong></p>
-            <ul><li>Every day, the technician checks ...</li><li>First ..., then ..., finally ...</li><li>The most important skill is ... because ...</li></ul>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="section-title cierre">Cierre (15 min)</div>
-        <ol><li>Summarize the main idea of the text in one complete sentence.</li><li>Choose one technical term and explain why it was important for comprehension.</li><li>State one professional skill from the reading that matters for your own future pathway.</li></ol>
-        <h3 style="margin-top:10px;">🎫 Exit Ticket</h3>
-        <input class="ticket-input" placeholder="1) One key word from the reading and its definition in English" />
-        <input class="ticket-input" placeholder="2) One sentence explaining the main professional skill from the text" />
-        <input class="ticket-input" placeholder="3) Reflection: What was the most useful skill in this lesson?" />
-        <p class="score" id="totalScore" style="margin-top:8px;">0 / 3 puntos</p>
-    </div>
 </div>
-
+<div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+<div class="objective-card"><h2>Objetivo de la clase</h2><p>Reconocer y categorizar vocabulario tecnico basico de herramientas comunes a las cinco especialidades tecnico-profesionales.</p></div>
+<div class="section"><div class="section-header inicio">&#x1F7E2; Inicio</div><div class="section-body"><div class="task-box"><h4>&#x1F50E; Actividad 1 &mdash; Activate and Predict</h4><ol class="task-steps"><li>Lluvia de ideas: <em>What tools do you know in English?</em> Anota lo que digan tus companeros.</li><li>Muestra docente: 4-5 herramientas reales o en imagenes. Identificarlas oralmente.</li><li>Conexion: <em>every technician needs to know tools by their name. Today we learn 20.</em></li></ol></div><div class="review-box"><h4>&#x1F501; Repaso rapido de la clase anterior</h4><p>En la Clase 1 hicimos el diagnostico; hoy comenzamos formalmente con vocabulario de herramientas.</p></div></div></div><div class="section"><div class="section-header desarrollo">&#x1F535; Desarrollo</div><div class="section-body"><div class="task-box"><h4>&#x1F9E0; Actividad 2 &mdash; Language Focus</h4><p>Estas herramientas aparecen en automotriz, mecanica industrial, electricidad, electronica y artes graficas. Conocerlas por su nombre en ingles es la base del semestre.</p><div class="focus-card"><h5>Tools across the 5 specialties</h5><div class="focus-subtitle">Examples</div><ul><li><strong>Cutting:</strong> hacksaw, wire cutter, scissors.</li><li><strong>Measuring:</strong> measuring tape, caliper, multimeter, level.</li><li><strong>Joining:</strong> welding torch, soldering iron, clamp.</li><li><strong>Safety:</strong> safety goggles, gloves, helmet.</li></ul><div class="focus-subtitle">Sentence frames &amp; tips</div><ul><li><em>A ___ is used to ___.</em></li><li><em>You need a ___ when you want to ___.</em></li><li>Pronunciation tip: stress falls on the first syllable in most tool names (HAM-mer, PLI-ers, WREN-ch).</li></ul></div></div><div class="task-box"><h4>&#x1F4DA; Actividad 3 &mdash; Vocabulary for reading</h4><p>Revisa estas palabras clave antes de leer. Cada tarjeta incluye una definicion breve en ingles y una guia de pronunciacion para que el vocabulario apoye la comprension del texto.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">hammer</div><div class="meaning">a tool with a heavy head used to hit nails</div><div class="pronunciation">Pron.: HA-mer</div></div><div class="vocab-card"><div class="word">screwdriver</div><div class="meaning">a tool used to turn screws</div><div class="pronunciation">Pron.: SKRU-drai-ver</div></div><div class="vocab-card"><div class="word">wrench</div><div class="meaning">a tool used to tighten or loosen nuts and bolts</div><div class="pronunciation">Pron.: RENCH</div></div><div class="vocab-card"><div class="word">pliers</div><div class="meaning">a tool used to grip or cut wire</div><div class="pronunciation">Pron.: PLAI-erz</div></div><div class="vocab-card"><div class="word">drill</div><div class="meaning">a tool used to make round holes</div><div class="pronunciation">Pron.: DRIL</div></div><div class="vocab-card"><div class="word">multimeter</div><div class="meaning">an instrument that measures voltage, current and resistance</div><div class="pronunciation">Pron.: MUL-ti-mii-ter</div></div><div class="vocab-card"><div class="word">soldering iron</div><div class="meaning">a tool used to melt solder and join electronic parts</div><div class="pronunciation">Pron.: SOL-de-ring AI-ron</div></div><div class="vocab-card"><div class="word">measuring tape</div><div class="meaning">a flexible ruler used to measure distance</div><div class="pronunciation">Pron.: ME-zhe-ring TEIP</div></div><div class="vocab-card"><div class="word">safety goggles</div><div class="meaning">protective glasses for the eyes</div><div class="pronunciation">Pron.: SEIF-ti GO-glz</div></div><div class="vocab-card"><div class="word">gloves</div><div class="meaning">items that protect the hands</div><div class="pronunciation">Pron.: GLAVZ</div></div><div class="vocab-card"><div class="word">welding torch</div><div class="meaning">the tool used to weld metal with intense flame</div><div class="pronunciation">Pron.: WEL-ding TORCH</div></div><div class="vocab-card"><div class="word">caliper</div><div class="meaning">an instrument used to measure thickness with precision</div><div class="pronunciation">Pron.: KA-li-per</div></div></div></div><div class="reading-box"><h4>&#x1F4D6; Actividad 4 &mdash; Reading Text &mdash; The Right Tool for the Right Job</h4><p>Mr. Soto is a supervisor in a small workshop. Every day, he sees young workers make the same mistake: they use the wrong tool for the job. A wrench is not a hammer. A screwdriver is not a chisel. And pliers are not a wrench.</p><p>When you use the wrong tool, three things can happen: the work is bad, the tool breaks, or someone gets hurt. Last month, a young worker tried to remove a nut with pliers. The pliers slipped and his finger was injured.</p><p>A good technician always asks two questions before starting: <em>what is the job?</em> and <em>what is the correct tool?</em> If the right tool is not available, the work waits. It is better to wait ten minutes than to lose ten weeks of work because of an injury.</p><p>Mr. Soto says it every morning: <em>the right tool for the right job. No shortcuts. No excuses.</em></p></div><div class="task-box"><h4>&#x1F4DD; Actividad 5 &mdash; Reading comprehension</h4><p>Responde regresando al texto. Busca evidencia concreta antes de revisar la respuesta sugerida.</p><div class="question-card"><p><strong>1.</strong> What is the common mistake of young workers?</p><button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button><div class="answer-box" id="answer-1">They use the wrong tool for the job.</div></div><div class="question-card"><p><strong>2.</strong> Give two examples of wrong tool use from the text.</p><button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button><div class="answer-box" id="answer-2">Using a wrench as a hammer, or using pliers as a wrench (also: using a screwdriver as a chisel).</div></div><div class="question-card"><p><strong>3.</strong> What happened to the young worker last month?</p><button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button><div class="answer-box" id="answer-3">He tried to remove a nut with pliers; the pliers slipped and his finger was injured.</div></div><div class="question-card"><p><strong>4.</strong> What two questions should a good technician ask before starting?</p><button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button><div class="answer-box" id="answer-4">What is the job, and what is the correct tool?</div></div><div class="question-card"><p><strong>5.</strong> Why is it better to wait ten minutes?</p><button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button><div class="answer-box" id="answer-5">Because waiting is much better than losing weeks of work because of an injury.</div></div><div class="question-card"><p><strong>6.</strong> Infer: why does Mr. Soto repeat the rule every morning?</p><button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button><div class="answer-box" id="answer-6">Because workers forget under pressure and only constant repetition turns the rule into a real safety habit.</div></div></div><div class="apply-box"><h4>&#x1F680; Actividad 6 &mdash; Apply &amp; Extend: tu inventario tecnico personal</h4><div class="intro">No basta con saber nombres: hay que conectarlos con tareas reales. Crea tu propio inventario profesional.</div><ol class="task-steps"><li>Elige UNA especialidad de las 5 (automotive, industrial, electricity, electronics, graphic arts).</li><li>Lista <strong>8 herramientas</strong> en ingles que un trabajador de esa especialidad usa.</li><li>Para cada una escribe: <em>name &mdash; what it is for (use <em>is used to</em>) &mdash; one risk if used incorrectly</em>.</li><li>Cierra con una <strong>regla de seguridad</strong> propia que aplique a tu lista, escrita en imperativo (<em>Always wear...</em>, <em>Never use...</em>).</li></ol><div class="check"><h5>&#x2705; Auto-chequeo antes de entregar</h5><ul><li>Mi lista tiene exactamente 8 herramientas, todas relevantes a la misma especialidad.</li><li>Cada herramienta usa la estructura <em>is used to + verb</em>.</li><li>Identifico un riesgo concreto, no <em>it is dangerous</em>.</li><li>Mi regla de seguridad es accionable y especifica.</li></ul></div></div><div class="eval-box"><h4>&#x1F4CB; Seguimiento de la clase</h4><p>Formativa: observacion de participacion, revision de la Actividad 6 y registro de cierre escrito.</p></div></div></div><div class="section"><div class="section-header cierre">&#x1F7E3; Cierre</div><div class="section-body"><div class="exit-ticket"><h5>Exit ticket &amp; reflexion</h5><ul><li>Memory game: el docente muestra una imagen y tu dices el nombre en ingles.</li><li>Escribe 3 herramientas que aprendiste hoy y que NO conocias antes.</li><li>Investiga 2 herramientas de tu especialidad preferida que no esten en la lista.</li></ul></div></div></div><div class="resource-card"><h4>&#x1F4E6; Recursos sugeridos</h4><p>Herramientas reales o imagenes, flashcards, plantilla de inventario.</p></div>
+<p class="footer-note">Guia de trabajo para estudiantes &mdash; Materiales de Clases 2026.</p>
+</div>
 <script>
-    let score = 0;
-    function checkAnswer(btn, isCorrect) {
-        const buttons = btn.parentElement.querySelectorAll('.quiz-btn');
-        buttons.forEach(b => b.disabled = true);
-        if (isCorrect) { btn.classList.add('correct'); score++; }
-        else { btn.classList.add('incorrect'); buttons.forEach(b => { if (b !== btn) b.classList.add('correct'); }); }
-        document.getElementById('totalScore').textContent = score + ' / 3 puntos';
-    }
+function toggleAnswer(id, button) {
+  const answer = document.getElementById(id);
+  const isOpen = answer.classList.toggle('open');
+  button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+}
 </script>
 </body>
 </html>

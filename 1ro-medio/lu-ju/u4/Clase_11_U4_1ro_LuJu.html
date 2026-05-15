@@ -1,285 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 11 — Unidad 4 — 1° Medio — Inglés General (Lu+Ju)</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
-        .hero p { color: rgba(255,255,255,0.88); }
-        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-        .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
-        .cierre { background: #7c3aed; }
-        .section-body { padding: 20px 22px 22px; }
-        .section-body ul { margin-left: 20px; }
-        .section-body li { margin-bottom: 8px; }
-        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-        .activity-card p { margin-bottom: 10px; }
-        .task-steps { margin-left: 20px; }
-        .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-        .focus-card ul { margin-left: 18px; }
-        .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-        .reading-box p { margin-bottom: 10px; }
-        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-        .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
-        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
-        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-        .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 11 - Unidad 4 - 1ro Medio - Ingles General (Lu+Ju)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
+.hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+.hero h1 { font-size: 2rem; margin-bottom: 6px; }
+.hero p { color: rgba(255,255,255,0.88); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
+.toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
+.print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+.objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+.objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
+.objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+.section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
+.inicio { background: #2e7d32; }
+.desarrollo { background: #1565c0; }
+.cierre { background: #7c3aed; }
+.section-body { padding: 20px 22px 22px; }
+.section-body ul, .section-body ol { margin-left: 20px; }
+.section-body li { margin-bottom: 8px; }
+.review-box, .reading-box, .task-box, .eval-box, .apply-box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+.apply-box { border-color: #fdba74; background: #fff7ed; }
+.apply-box h4 { color: #c2410c; margin-bottom: 8px; }
+.apply-box .intro { background: white; border-left: 4px solid #ea580c; padding: 10px 12px; border-radius: 8px; margin: 10px 0 12px; font-size: 0.95rem; }
+.apply-box .check { background: #ecfdf5; border-left: 4px solid #16a34a; padding: 10px 14px; border-radius: 8px; margin-top: 12px; }
+.apply-box .check h5 { color: #166534; margin-bottom: 6px; }
+.review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+.vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
+.word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+.meaning { font-size: 0.92rem; color: #1f2937; }
+.pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
+.focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; margin-top: 10px; }
+.focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+.focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.reading-box p { margin-bottom: 10px; }
+.reading-note { font-size: 0.92rem; color: #475569; margin-bottom: 10px; }
+.question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
+.toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+.answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
+.answer-box.open { display: block; }
+.exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
+.exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
+.resource-card { padding: 18px 22px; }
+.resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+.rubric-summary { background: #fef3c7; border-left: 4px solid #d97706; padding: 12px 14px; border-radius: 10px; margin-top: 12px; font-size: 0.95rem; }
+.footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+@media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
+</style>
 </head>
 <body>
-    <div class="page">
-        <div class="hero">
-            <h1>Clase 11 — Unidad 4</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · Innovation, Safety & My Future</p>
-            <div class="meta">
-                <span>🎯 Consolidar todas las estructuras gramaticales del año (Present Perfect, Used to,...</span>
-                <span>📘 OA8</span>
-                <span>🗂 Clase 11</span>
-                
-                <span>🧩 Clase de trabajo</span>
-            </div>
-        </div>
-
-        <div class="toolbar">
-            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
-        </div>
-
-        <div class="objective-card">
-            <h2>Objetivo de la clase</h2>
-            <p>Consolidar todas las estructuras gramaticales del año (Present Perfect, Used to, Passive Voice, Relative Clauses, Connectors, Tag Questions) en contextos técnico-profesionales integrados.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the new text and the new language focus.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and circle the technical action linked to the practice project.</li><li>Recuerda la idea central de la clase pasada: presentaste oralmente una innovación tecnológica de tu especialidad con vocabulario técnico.</li><li>Predict where Present Perfect, Passive Voice, Relative Clauses, and Connectors appear in real technical texts.</li><li>Share one sentence with a partner combining one grammar structure with a technical idea from your specialty.</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Escribe una oración con Present Perfect sobre una experiencia técnica.</li><li>Anota una frase en Passive Voice sobre un proceso de tu especialidad.</li><li>Explica por qué integrar estructuras te ayudará en las clases que siguen.</li></ul></div>
-    </div>
-    </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
-            <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Passive Voice in technical English</h5>
-                <p>Use passive voice when the process or result is more important than the person who performs the action.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The practice project is checked before the main task begins.</li><li>The tool kit is used during the second stage of the procedure.</li><li>The final result is recorded after the inspection.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>The ___ is prepared before ...</li><li>The ___ is tested so that ...</li><li>At the end, the ___ is reported.</li></ul>
-            </div>
-            
-            <div class="focus-card">
-                <h5>Relative clauses for precise definitions</h5>
-                <p>Use who, which, or that to add essential information about a person, tool, or process.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>A technician is a person who checks the practice project carefully.</li><li>The tool kit is a tool that helps the team collect evidence.</li><li>A report which includes measurements is easier to verify.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>A ___ is a tool that ...</li><li>A technician is someone who ...</li><li>The report which ... shows that ...</li></ul>
-            </div>
-            
-            <div class="focus-card">
-                <h5>Tag questions to confirm information</h5>
-                <p>Use a short question at the end of the sentence to confirm a fact, a safety check, or a shared assumption.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The tool kit is ready, isn't it?</li><li>The team checked the result, didn't they?</li><li>The system has been tested, hasn't it?</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>The ___ is safe, isn't it?</li><li>You checked the ___, didn't you?</li><li>The team has finished, haven't they?</li></ul>
-            </div>
-            </div>
-    </div>
-    
-
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">process</div>
-                <div class="meaning">a sequence of actions used to complete a task</div>
-                <div class="pronunciation">Pron.: PRO-ses</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">component</div>
-                <div class="meaning">one part of a machine, circuit, or larger system</div>
-                <div class="pronunciation">Pron.: kom-POU-nent</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="pronunciation">Pron.: TUL</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">measure</div>
-                <div class="meaning">to find size, amount, or distance accurately</div>
-                <div class="pronunciation">Pron.: ME-zher</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">connect</div>
-                <div class="meaning">to join parts so the system can work correctly</div>
-                <div class="pronunciation">Pron.: ko-NEKT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">repair</div>
-                <div class="meaning">to fix something that is damaged or not working</div>
-                <div class="pronunciation">Pron.: ri-PAIR</div>
-            </div>
-            </div>
-                </div>
-
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Text — Review and Professional Reflection</h4>
-                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
-                    <p>In the school technical workshop, a student team is working on an end-of-unit reflection on workshop learning linked to Innovation, Safety & My Future. Their task is to understand how a practice project is prepared, checked, and explained in English.</p><p>Before the main procedure begins, the tool kit is prepared and the class reads a short note about process. The teacher asks students to notice the technical verbs and the words that help the reader follow the order of the task.</p><p>During the activity, the checklist is used to complete an important stage of the job. Each action is recorded in clear sentences so the next person can understand what is done, what is checked, and what must happen next.</p><p>A small difficulty appears when one step is not fully clear, so the students compare evidence, review the glossary, and revisit the example box for Passive Voice. This helps them decide which detail is essential and which detail only gives extra context.</p><p>In the final stage, the group writes a short conclusion, explains the result, and suggests one safety action. The reading shows that technical English is useful because it supports accuracy, teamwork, and better decisions in the workshop.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What task or problem is described in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text describes an end-of-unit reflection on workshop learning in the school technical workshop.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What happens before the main procedure starts?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the main task starts, the team prepares the tool kit and reads the note about process.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">The tool kit, the checklist, and the glossary notes are important sources of information.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The text highlights Passive Voice through model sentences and technical examples.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">The team finishes by explaining the result and suggesting one safety action.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Good technical work depends on clear notes, accurate vocabulary, and careful checking.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Síntesis técnica</h4>
-                    
-        <ol class="task-steps">
-            <li>Resume the main idea of the class in relation to formación técnico-profesional general.</li>
-            <li>Write two pieces of evidence from the text that support your summary.</li>
-            <li>Explain how the reading connects with a real task from the workshop, lab, or production area.</li>
-        </ol>
-        
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
-        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
-        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
-        
-        <div class="exit-ticket">
-            <h5>Exit ticket prompts</h5>
-            <ul><li>Write one sentence that summarizes the main idea of the text.</li><li>Use one glossary term and one language structure from the class in a new sentence.</li><li>Explain what detail or instruction would help you repeat the task more safely next time.</li></ul>
-        </div>
-        
-    </div>
-    </div>
-        </div>
-
-        <div class="resource-card">
-            <h4>📦 Recursos sugeridos</h4>
-            <p>Recursos: Ruleta virtual (Wordwall o similar), worksheet de consolidación (30 ejercicios), proyector.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
-        </div>
-
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
-    </div>
-
-    <script>
-        function toggleAnswer(id, button) {
-            const answer = document.getElementById(id);
-            const isOpen = answer.classList.toggle('open');
-            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-        }
-    </script>
+<div class="page"><div class="hero">
+<h1>Clase 11 - Unidad 4</h1>
+<p>1&deg; Medio - Ingles General (Lu+Ju) &middot; Safety, Innovation and Future Pathways</p>
+<div class="meta">
+<span>&#x1F3AF; Consolidar el uso de tag questions y otras estructuras del anio mediante actividades de co...</span>
+<span>&#x1F4D8; OA8</span>
+<span>&#x1F5C2; Clase 11</span>
+<span>&#x1F9E9; Clase de trabajo</span>
+</div>
+</div>
+<div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+<div class="objective-card"><h2>Objetivo de la clase</h2><p>Consolidar el uso de tag questions y otras estructuras del anio mediante actividades de correccion y transformacion en contexto tecnico.</p></div>
+<div class="section"><div class="section-header inicio">Inicio</div><div class="section-body"><div class="task-box"><h4>Actividad 1 - Activate and Predict</h4><ol><li>Participa en un error hunt con frases tomadas de temas de seguridad e innovacion.</li><li>Clasifica los errores: tag questions, relative clauses, connectors, agreement.</li><li>Define en que punto personal necesitas mas apoyo.</li></ol></div><div class="review-box"><h4>Repaso rapido de la clase anterior</h4><p>La evaluacion oral ya paso; ahora fortalecemos herramientas gramaticales antes del proyecto final.</p></div></div></div><div class="section"><div class="section-header desarrollo">Desarrollo</div><div class="section-body"><div class="task-box"><h4>Actividad 2 - Language Focus</h4><p>La gramatica final no se revisa como lista de reglas aisladas. Se revisa donde se rompe el mensaje tecnico: confirmaciones, relaciones y secuencia.</p><div class="focus-card"><h5>Grammar clinic before the final project</h5><div class="focus-subtitle">Examples</div><ul><li>The printer is off, <strong>isn't it</strong>?</li><li>The sensor <strong>that</strong> controls the system needs calibration.</li><li><strong>Although</strong> the line is fast, safety checks still matter.</li><li>We changed both the cable <strong>and</strong> the connector.</li></ul><div class="focus-subtitle">Sentence frames and tips</div><ul><li><em>This rule is clear, isn't it?</em></li><li><em>The tool that ___ is ___.</em></li><li><em>Although ___, ___.</em></li><li><em>Both ___ and ___ ___.</em></li></ul></div></div><div class="task-box"><h4>Actividad 3 - Vocabulary for the class</h4><p>Revisa este vocabulario clave antes del texto o del input principal. Las tarjetas te ayudan a fijar significado, pronunciacion y uso tecnico.</p><div class="glossary-grid"><div class="vocab-card"><div class="word">grammar clinic</div><div class="meaning">a focused review of language problems</div><div class="pronunciation">Pron.: GRA-mar KLI-nik</div></div><div class="vocab-card"><div class="word">error pattern</div><div class="meaning">a mistake that appears repeatedly</div><div class="pronunciation">Pron.: E-ror PA-tern</div></div><div class="vocab-card"><div class="word">self-correction</div><div class="meaning">fixing your own mistake after noticing it</div><div class="pronunciation">Pron.: self ko-REK-shon</div></div><div class="vocab-card"><div class="word">transformation</div><div class="meaning">changing a sentence into a new form</div><div class="pronunciation">Pron.: trans-for-MEI-shon</div></div><div class="vocab-card"><div class="word">accuracy</div><div class="meaning">correct and precise language use</div><div class="pronunciation">Pron.: AK-iu-ra-si</div></div><div class="vocab-card"><div class="word">agreement</div><div class="meaning">matching parts of a sentence correctly</div><div class="pronunciation">Pron.: a-GRII-ment</div></div><div class="vocab-card"><div class="word">feedback code</div><div class="meaning">a short mark used to show what kind of error appears</div><div class="pronunciation">Pron.: FIID-bak koud</div></div><div class="vocab-card"><div class="word">repair sentence</div><div class="meaning">a sentence improved after error correction</div><div class="pronunciation">Pron.: ri-PER SEN-tens</div></div></div></div><div class="reading-box"><h4>Actividad 4 - Reading Text - Why Grammar Still Matters in Technical English</h4><p>Students sometimes believe grammar is separate from technical content. In reality, bad grammar can change instructions, weaken a diagnosis or confuse a recommendation. A wrong tag question can make a safety check sound strange. A missing connector can hide the logic of a solution.</p><p>Before a final project, a grammar clinic helps students notice patterns in their own mistakes. The goal is not perfection; it is clearer professional communication.</p></div><div class="task-box"><h4>Actividad 5 - Comprehension and evidence</h4><p>Responde con evidencia. Vuelve al texto, al transcript o al modelo antes de revisar la respuesta sugerida.</p><div class="question-card"><p><strong>1.</strong> Why can bad grammar be a technical problem?</p><button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button><div class="answer-box" id="answer-1">Because it can change instructions, weaken a diagnosis or confuse a recommendation.</div></div><div class="question-card"><p><strong>2.</strong> What example does the text give about tag questions?</p><button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button><div class="answer-box" id="answer-2">That a wrong tag question can make a safety check sound strange.</div></div><div class="question-card"><p><strong>3.</strong> What can a missing connector hide?</p><button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button><div class="answer-box" id="answer-3">The logic of a solution.</div></div><div class="question-card"><p><strong>4.</strong> What is the goal of a grammar clinic?</p><button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button><div class="answer-box" id="answer-4">Clearer professional communication, not perfection.</div></div><div class="question-card"><p><strong>5.</strong> Why is this class placed before the final project?</p><button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button><div class="answer-box" id="answer-5">Because students need to notice and correct their own recurring mistakes before presenting or writing final work.</div></div><div class="question-card"><p><strong>6.</strong> Infer: why is self-correction valuable in a workplace?</p><button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button><div class="answer-box" id="answer-6">Because technicians do not always have a teacher next to them, so noticing and fixing mistakes independently matters.</div></div></div><div class="apply-box"><h4>Actividad 6 - Apply &amp; Extend: hoja de correccion personal</h4><div class="intro">Saldras con un mini-manual de tus errores frecuentes y como corregirlos.</div><ol><li>Completa una tabla con 4 filas: <em>my error - corrected version - rule - new example</em>.</li><li>Incluye al menos un error de tag question y uno de otra estructura del anio.</li><li>Escribe dos repair sentences vinculadas a seguridad o innovacion.</li><li>Guarda la hoja para usarla en las clases 14-18.</li></ol><div class="check"><h5>Auto-chequeo antes de entregar</h5><ul><li>Mis errores son reales y propios.</li><li>Cada correccion incluye una regla breve.</li><li>Mis nuevas oraciones estan en contexto tecnico.</li><li>Podre revisar esta hoja antes del proyecto.</li></ul></div></div><div class="eval-box"><h4>Seguimiento de la clase</h4><p>Formativa: observacion de participacion, revision de la Actividad 6 y registro del cierre.</p></div></div></div><div class="section"><div class="section-header cierre">Cierre</div><div class="section-body"><div class="exit-ticket"><h5>Exit ticket and reflection</h5><ul><li>Escribe el error que no quieres repetir mas.</li><li>Comparte una regla breve que te ayudo hoy.</li><li>La proxima clase mira al futuro profesional de manera mas amplia.</li></ul></div></div></div><div class="resource-card"><h4>Recursos sugeridos</h4><p>Worksheet de correccion, tarjetas de error hunt, feedback codes y correccion guiada.</p></div>
+<p class="footer-note">Guia de trabajo para estudiantes - Materiales de Clases 2026.</p>
+</div>
+<script>
+function toggleAnswer(id, button) {
+  const answer = document.getElementById(id);
+  const isOpen = answer.classList.toggle('open');
+  button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
+}
+</script>
 </body>
 </html>
