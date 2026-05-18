@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 5 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <title>Clase 5 — Unidad 2 — 1° Medio — Electronic Components &amp; Relative Clauses</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
         .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero { background: linear-gradient(135deg, #6d28d9, #4c1d95); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(109, 40, 217, 0.18); }
         .hero h1 { font-size: 2rem; margin-bottom: 6px; }
         .hero p { color: rgba(255,255,255,0.88); }
         .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
@@ -17,8 +17,8 @@
         .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
         .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
         .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #6d28d9; }
+        .objective-card h2 { color: #6d28d9; font-size: 1.05rem; margin-bottom: 8px; }
         .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
         .inicio { background: #2e7d32; }
         .desarrollo { background: #1565c0; }
@@ -32,52 +32,60 @@
         .task-steps { margin-left: 20px; }
         .task-steps li { margin-bottom: 8px; }
         .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .vocab-card { background: white; border: 1px solid #ddd6fe; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #6d28d9; margin-bottom: 4px; }
         .meaning { font-size: 0.92rem; color: #1f2937; }
         .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
         .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card { background: white; border: 1px solid #ddd6fe; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #6d28d9; margin-bottom: 8px; font-size: 0.98rem; }
         .focus-card ul { margin-left: 18px; }
         .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
         .reading-box p { margin-bottom: 10px; }
         .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #ede9fe; color: #6d28d9; padding: 8px 12px; font-weight: 700; cursor: pointer; }
         .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
         .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.92rem; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; vertical-align: top; }
+        .activity-table th { background: #ede9fe; color: #4c1d95; }
         .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
         .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
         .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
         .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .resource-card h4 { color: #6d28d9; margin-bottom: 8px; }
         .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        /* Relative clause color coding */
+        .rc-noun { background: #fef3c7; color: #92400e; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+        .rc-pron { background: #ede9fe; color: #6d28d9; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .rc-clause { background: #dcfce7; color: #166534; padding: 1px 5px; border-radius: 4px; }
+        .rc-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; font-size: 0.82rem; }
+        .rc-legend span { padding: 3px 9px; border-radius: 999px; font-weight: 600; }
+        .sounds-box { border: 1px solid #ddd6fe; background: #f5f3ff; border-radius: 14px; padding: 18px; margin-top: 16px; }
+        .sounds-box h4 { color: #6d28d9; margin-bottom: 10px; }
+        .sounds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+        .sound-card { background: white; border: 1px solid #ddd6fe; border-radius: 12px; padding: 12px 14px; }
+        .sound-ipa { font-size: 1.4rem; color: #6d28d9; font-weight: 800; margin-bottom: 4px; }
+        .sound-name { font-size: 0.85rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+        .sound-examples { font-size: 0.92rem; color: #1f2937; }
+        .sound-tip { font-size: 0.82rem; color: #6b7280; margin-top: 6px; font-style: italic; }
+        .component-section { background: white; border-left: 4px solid #6d28d9; border-radius: 10px; padding: 12px 16px; margin: 12px 0; }
+        .component-section h5 { color: #4c1d95; margin-bottom: 6px; }
+        @media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+        @media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; } }
     </style>
 </head>
 <body>
     <div class="page">
         <div class="hero">
             <h1>Clase 5 — Unidad 2</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · A resistor is a component which limits the flow of current." / "An electrician is a person who installs...</p>
+            <p>1° Medio — Inglés General (Lu+Ju) · Componentes electrónicos + introducción a Relative Clauses</p>
             <div class="meta">
-                <span>🎯 A resistor is a component which limits the flow of current." / "An electrician is...</span>
-                <span>📘 OA9 · OA1</span>
-                <span>🗂 Clase 5</span>
-                
-                <span>🧩 Clase de trabajo</span>
+                <span>🎯 Describir componentes electrónicos con relative clauses</span>
+                <span>📘 OA1 · OA9</span>
+                <span>🗂 Clase 5 — Unidad 2</span>
+                <span>🗓 Semana 12 · mayo</span>
+                <span>🧩 Lectura enciclopédica + ficha técnica + juego oral</span>
             </div>
         </div>
 
@@ -87,173 +95,266 @@
 
         <div class="objective-card">
             <h2>Objetivo de la clase</h2>
-            <p>Comprender un texto descriptivo sobre el funcionamiento de componentes electrónicos, identificando la función de cada componente mediante lectura detallada.</p>
+            <p>Comprender un texto descriptivo sobre el funcionamiento de <strong>componentes electrónicos</strong> e identificar la función de cada uno usando <strong>Relative Clauses</strong> (<em>which / that / who</em>).</p>
         </div>
 
         <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-header inicio">🟢 Inicio (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to A resistor is a component which limits the flow of current." / "An electrician is a person who installs wiring systems..</li><li>Recuerda la idea central de la clase pasada: Comprender un texto técnico sobre detección de fallas en sistemas eléctricos...</li><li>Predict which tools, risks, or key ideas may appear when working with A resistor is a component which limits the flow of current." / "An electrician is a person who installs wiring systems. in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Comprender un texto técnico sobre detección de fallas en sistemas eléctricos...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+        <h4>🔎 Actividad 1 — ¿Qué hay en una placa madre?</h4>
+        <p>El docente muestra la placa madre de un computador (real o imagen proyectada) y la pasa por las filas.</p>
+        <ol class="task-steps">
+            <li>Pregunta detonante: <em>"What is this? What components can you identify?"</em></li>
+            <li>Los estudiantes nombran lo que reconocen (resistor, capacitor, transistor, LED, sensor…). El docente anota en la pizarra.</li>
+            <li>Repaso rápido (Unidad 1): <em>"Each component has a specific function. Can you describe what a resistor does? What about a capacitor?"</em></li>
+        </ol>
+        <p style="margin-top: 10px; color:#475569;"><em>El docente NO entrega aún las respuestas: estas se construyen con el texto en la Actividad 4.</em></p>
     </div>
-    </div>
+            </div>
         </div>
 
         <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
             <div class="section-body">
-                
+
     <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <h4>🔠 Actividad 2 — Grammar focus: Relative Clauses</h4>
+        <p>Una <em>relative clause</em> da más información sobre un sustantivo. Se conecta con un <em>relative pronoun</em>.</p>
+        <div class="rc-legend">
+            <span class="rc-noun">Sustantivo</span>
+            <span class="rc-pron">Pronombre relativo</span>
+            <span class="rc-clause">Cláusula relativa (info extra)</span>
+        </div>
         <div class="focus-grid">
             <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The tool kit is checked before the task begins.</li><li>The checklist gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
+                <h5>which / that → para cosas</h5>
+                <ul>
+                    <li><span class="rc-noun">A resistor</span> is a component <span class="rc-pron">which</span> <span class="rc-clause">limits the flow of current</span>.</li>
+                    <li><span class="rc-noun">An LED</span> is a small light <span class="rc-pron">that</span> <span class="rc-clause">turns on when current passes through it</span>.</li>
+                </ul>
             </div>
+            <div class="focus-card">
+                <h5>who → para personas</h5>
+                <ul>
+                    <li><span class="rc-noun">An electrician</span> is a person <span class="rc-pron">who</span> <span class="rc-clause">installs wiring systems</span>.</li>
+                    <li><span class="rc-noun">A technician</span> is someone <span class="rc-pron">who</span> <span class="rc-clause">repairs electronic devices</span>.</li>
+                </ul>
             </div>
+            <div class="focus-card">
+                <h5>where → para lugares</h5>
+                <ul>
+                    <li><span class="rc-noun">A workshop</span> is a place <span class="rc-pron">where</span> <span class="rc-clause">repairs are done</span>.</li>
+                </ul>
+            </div>
+        </div>
+        <p style="margin-top: 12px; color:#475569;"><strong>Consejo:</strong> <em>which</em> y <em>that</em> son intercambiables para objetos. <em>That</em> es más común en lenguaje hablado.</p>
     </div>
-    
 
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">process</div>
-                <div class="meaning">a sequence of actions used to complete a task</div>
-                <div class="pronunciation">Pron.: PRO-ses</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">component</div>
-                <div class="meaning">one part of a machine, circuit, or larger system</div>
-                <div class="pronunciation">Pron.: kom-POU-nent</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="pronunciation">Pron.: TUL</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">measure</div>
-                <div class="meaning">to find size, amount, or distance accurately</div>
-                <div class="pronunciation">Pron.: ME-zher</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">connect</div>
-                <div class="meaning">to join parts so the system can work correctly</div>
-                <div class="pronunciation">Pron.: ko-NEKT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">repair</div>
-                <div class="meaning">to fix something that is damaged or not working</div>
-                <div class="pronunciation">Pron.: ri-PAIR</div>
-            </div>
-            </div>
+    <div class="task-box">
+        <h4>🧠 Actividad 3 — Vocabulary &amp; pronunciation</h4>
+
+        <div class="sounds-box">
+            <h4>🔊 Sounds in focus</h4>
+            <p style="font-size:0.92rem; color:#475569;">Sonidos clave del vocabulario electrónico.</p>
+            <div class="sounds-grid">
+                <div class="sound-card">
+                    <div class="sound-ipa">/k/</div>
+                    <div class="sound-name">"c" dura</div>
+                    <div class="sound-examples"><em>component</em>, <em>capacitor</em>, <em>circuit</em>, <em>conductor</em></div>
+                    <div class="sound-tip">Antes de "a", "o" o consonante, la "c" inglesa suena como /k/, igual que en español "casa".</div>
                 </div>
-
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Class focus — A resistor is a component which limits the flow of current." / "An electrician is a person who installs wiring systems.</h4>
-                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
-                    <p>In the school technical workshop, the class explores A resistor is a component which limits the flow of current." / "An electrician is a person who installs wiring systems. as part of How Things Work — Processes and Descriptions. Students use English to understand how this topic affects the daily work around the practice project.</p><p>The first notes focus on Comprender un texto descriptivo sobre el funcionamiento de componentes electrónicos, identificando la función de cada componente mediante lectura detallada. The teacher asks students to identify the most useful technical verbs and the details that explain why the topic matters in practice.</p><p>During the activity, the tool kit and the checklist appear as reference points for connecting the text with a real workshop, lab, or production task. The class decides which information is essential and which information only adds context.</p><p>When an idea is not fully clear, students return to the glossary and the examples for Technical English. This helps them explain sequence, cause, or comparison with more precision.</p><p>In the final stage, the group writes a short conclusion about A resistor is a component which limits the flow of current." / "An electrician is a person who installs wiring systems. and adds one recommendation, safety point, or workplace implication. The reading shows that technical English supports accuracy, teamwork, and better decisions.</p>
+                <div class="sound-card">
+                    <div class="sound-ipa">/s/</div>
+                    <div class="sound-name">"c" suave</div>
+                    <div class="sound-examples"><em>resistor</em>, <em>sensor</em>, <em>device</em>, <em>circuit</em></div>
+                    <div class="sound-tip">Antes de "e" o "i", la "c" suena como /s/, igual que en "cinco" (en español latino).</div>
                 </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What task or problem is described in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text describes A resistor is a component which limits the flow of current." / "An electrician is a person who installs wiring systems. in the school technical workshop.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What happens before the main procedure starts?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the main task starts, the class reviews comprender un texto descriptivo sobre el funcionamiento de componentes electrónicos, identificando la función de cada componente mediante lectura detallada and links it to the tool kit.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">The tool kit, the checklist, and the glossary notes are important sources of information.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The text highlights Technical English through model sentences and technical examples.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">The team finishes by explaining the result or implication of A resistor is a component which limits the flow of current." / "An electrician is a person who installs wiring systems..</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Good technical work depends on clear notes, accurate vocabulary, and careful checking.</div>
-            </div>
-            
+                <div class="sound-card">
+                    <div class="sound-ipa">/r/</div>
+                    <div class="sound-name">"r" americana</div>
+                    <div class="sound-examples"><em>resistor</em>, <em>transformer</em>, <em>diode</em>, <em>relay</em></div>
+                    <div class="sound-tip">No vibra como la "r" española. La lengua se enrolla hacia atrás sin tocar el paladar.</div>
                 </div>
+            </div>
+        </div>
 
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Síntesis técnica</h4>
-                    
+        <div class="glossary-grid">
+            <div class="vocab-card"><div class="word">resistor</div><div class="meaning">resistencia (limita el paso de corriente)</div><div class="pronunciation">Pron.: ri-SIS-tor</div></div>
+            <div class="vocab-card"><div class="word">capacitor</div><div class="meaning">condensador (almacena carga eléctrica)</div><div class="pronunciation">Pron.: ka-PA-si-tor</div></div>
+            <div class="vocab-card"><div class="word">diode</div><div class="meaning">diodo (deja pasar la corriente en un solo sentido)</div><div class="pronunciation">Pron.: DAI-oud</div></div>
+            <div class="vocab-card"><div class="word">transistor</div><div class="meaning">transistor (amplifica o controla señales)</div><div class="pronunciation">Pron.: tran-SIS-tor</div></div>
+            <div class="vocab-card"><div class="word">LED</div><div class="meaning">diodo emisor de luz</div><div class="pronunciation">Pron.: EL-I-DI / LED</div></div>
+            <div class="vocab-card"><div class="word">relay</div><div class="meaning">relé (interruptor controlado eléctricamente)</div><div class="pronunciation">Pron.: RI-lei</div></div>
+            <div class="vocab-card"><div class="word">sensor</div><div class="meaning">sensor (detecta una variable física)</div><div class="pronunciation">Pron.: SEN-sor</div></div>
+            <div class="vocab-card"><div class="word">to limit</div><div class="meaning">limitar, restringir</div><div class="pronunciation">Pron.: tu LI-mit</div></div>
+            <div class="vocab-card"><div class="word">to store</div><div class="meaning">almacenar</div><div class="pronunciation">Pron.: tu STOR</div></div>
+            <div class="vocab-card"><div class="word">to amplify</div><div class="meaning">amplificar</div><div class="pronunciation">Pron.: tu AM-pli-fai</div></div>
+            <div class="vocab-card"><div class="word">to detect</div><div class="meaning">detectar</div><div class="pronunciation">Pron.: tu di-TEKT</div></div>
+            <div class="vocab-card"><div class="word">to convert</div><div class="meaning">convertir, transformar</div><div class="pronunciation">Pron.: tu kon-VERT</div></div>
+        </div>
+    </div>
+
+    <div class="reading-box">
+        <h4>📖 Actividad 4 — Reading: <em>Electronic Components — What They Are and How They Work</em></h4>
+        <p class="reading-note">Texto enciclopédico. Lee cada sección y subraya cada relative clause (<em>which / that / who</em>).</p>
+
+        <div class="component-section">
+            <h5>1. Resistor</h5>
+            <p>A resistor is a small component <strong>which</strong> limits the flow of electric current in a circuit. It is used to protect other parts, such as LEDs, from being damaged by too much current. Resistors are made of carbon or metal film and have colored bands <strong>that</strong> indicate their value in ohms.</p>
+        </div>
+
+        <div class="component-section">
+            <h5>2. Capacitor</h5>
+            <p>A capacitor is a device <strong>that</strong> stores electrical energy for a short period of time. It can release this energy quickly when needed. Capacitors are used in power supplies, audio circuits and camera flashes. They are sometimes called the "small batteries" of a circuit.</p>
+        </div>
+
+        <div class="component-section">
+            <h5>3. Diode</h5>
+            <p>A diode is a component <strong>which</strong> allows current to flow in only one direction. It is often used to convert alternating current (AC) into direct current (DC), a process <strong>that</strong> is essential in chargers and adapters.</p>
+        </div>
+
+        <div class="component-section">
+            <h5>4. Transistor</h5>
+            <p>A transistor is a tiny semiconductor <strong>that</strong> can amplify or switch electrical signals. It is the basic building block of modern electronics: every computer, every phone and every TV contains millions of transistors <strong>which</strong> work together to process information.</p>
+        </div>
+
+        <div class="component-section">
+            <h5>5. LED (Light Emitting Diode)</h5>
+            <p>An LED is a small light <strong>that</strong> turns on when current passes through it. It uses very little energy and lasts much longer than a normal bulb. LEDs are found in screens, traffic lights and indicators on every electronic device.</p>
+        </div>
+
+        <div class="component-section">
+            <h5>6. Relay</h5>
+            <p>A relay is an electromechanical switch <strong>which</strong> uses a small current to control a larger current. It is very common in cars, washing machines and industrial control systems. The technician <strong>who</strong> installs a relay must check that it is connected correctly.</p>
+        </div>
+
+        <div class="component-section">
+            <h5>7. Sensor</h5>
+            <p>A sensor is a device <strong>that</strong> detects a physical change — like temperature, light, movement or pressure — and converts it into an electrical signal. Examples are the temperature sensor of a car, the light sensor of a phone screen and the motion sensor of a security alarm.</p>
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>🗂 Actividad 5 — Ficha técnica por componente</h4>
+        <p>Completa la tabla usando información del texto. Después comparen con un compañero.</p>
+        <table class="activity-table">
+            <tr><th>Component</th><th>What it is</th><th>How it works</th><th>Where it is used</th></tr>
+            <tr><td>Resistor</td><td>____________________</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>Capacitor</td><td>____________________</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>Diode</td><td>____________________</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>Transistor</td><td>____________________</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>LED</td><td>____________________</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>Relay</td><td>____________________</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>Sensor</td><td>____________________</td><td>____________________</td><td>____________________</td></tr>
+        </table>
+        <button class="toggle-btn" onclick="toggleAnswer('answer-fichas', this)">Ver clave de las fichas</button>
+        <div class="answer-box" id="answer-fichas">
+            <strong>Resistor:</strong> small component / limits the flow of current / protects LEDs &amp; other parts.<br>
+            <strong>Capacitor:</strong> device that stores energy / releases it quickly / power supplies, audio, camera flashes.<br>
+            <strong>Diode:</strong> component / allows current in only one direction / chargers and adapters (AC→DC).<br>
+            <strong>Transistor:</strong> tiny semiconductor / amplifies or switches signals / computers, phones, TVs.<br>
+            <strong>LED:</strong> small light / turns on with current, low consumption / screens, traffic lights, indicators.<br>
+            <strong>Relay:</strong> electromechanical switch / small current controls a larger current / cars, washing machines, industrial control.<br>
+            <strong>Sensor:</strong> device / detects physical change and converts it into electrical signal / cars, phones, alarms.
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>📝 Actividad 6 — Comprehension &amp; Relative Clauses</h4>
+
+        <div class="question-card">
+            <p><strong>1.</strong> ¿Qué hace un <em>resistor</em> y para qué se usa?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-1">Limita el paso de la corriente. Se usa para proteger otros componentes (como LEDs) de un exceso de corriente.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>2.</strong> ¿Por qué los condensadores se llaman a veces "small batteries"?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-2">Porque almacenan energía eléctrica y la liberan rápidamente cuando se necesita, igual que una batería pequeña.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>3.</strong> ¿Qué función cumple un diodo en un cargador (charger)?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-3">Convertir la corriente alterna (AC) en corriente continua (DC), permitiendo que el dispositivo se cargue correctamente.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>4.</strong> ¿Por qué los transistores son tan importantes hoy en día?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-4">Porque amplifican y conmutan señales eléctricas, y son la base de toda la electrónica moderna: cada computador, teléfono y TV tiene millones de ellos.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>5.</strong> Completa con <em>which / that / who</em>:</p>
+            <ul>
+                <li>a) A capacitor is a component ____ stores energy.</li>
+                <li>b) A technician is a person ____ repairs electronics.</li>
+                <li>c) An LED is a light ____ uses very little energy.</li>
+                <li>d) A sensor is a device ____ detects physical changes.</li>
+            </ul>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-5">a) which/that · b) who · c) which/that · d) which/that. <em>Who</em> es solo para personas; <em>which/that</em> son intercambiables para cosas.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>6.</strong> Inferencia: si quitamos todos los transistores de un teléfono, ¿qué pasaría?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-6">El teléfono no podría procesar información: no encendería, no podría correr aplicaciones, no podría comunicarse. Los transistores son el "cerebro" de todo dispositivo electrónico moderno.</div>
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>🗣 Actividad 7 — "Explain the component" (juego oral)</h4>
+        <p>Cada estudiante recibe una tarjeta con un componente. Sin decir el nombre, debe describirlo a su grupo usando relative clauses. Los demás adivinan.</p>
         <ol class="task-steps">
-            <li>Resume the main idea of the class in relation to formación técnico-profesional general.</li>
-            <li>Write two pieces of evidence from the text that support your summary.</li>
-            <li>Explain how the reading connects with a real task from the workshop, lab, or production area.</li>
+            <li>Empezar con: <em>"It is a component which/that…"</em></li>
+            <li>Continuar con: <em>"It is used in/for…"</em></li>
+            <li>Si nadie adivina, dar una segunda pista: <em>"It is found in…"</em></li>
         </ol>
-        
-                </div>
+        <p style="margin-top: 10px; color:#475569;"><strong>Ejemplo modelo (componente = LED):</strong> <em>"It is a small light that turns on when current passes through it. It is used in screens and traffic lights. It uses very little energy."</em></p>
+    </div>
 
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve.</p>
-                </div>
+    <div class="eval-box">
+        <h4>📋 Seguimiento de la clase</h4>
+        <p><strong>Formativa:</strong> el docente circula durante el juego oral. Criterios: (1) uso correcto de <em>which/that/who</em>, (2) descripción precisa de la función del componente, (3) vocabulario técnico (limit, store, amplify, detect, convert), (4) escucha activa al adivinar.</p>
+    </div>
+
             </div>
         </div>
 
         <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-header cierre">🟣 Cierre (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
-        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
-        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
-        
+        <h4>🟣 Cierre — Debate breve + exit ticket</h4>
+        <ol class="task-steps">
+            <li><strong>Mini-debate (8 min):</strong> <em>"What is the most important electronic component? Why?"</em> Cada grupo defiende uno (resistor / capacitor / transistor / sensor). El docente modera y cierra con: <em>"All components work together — that's why electronics is teamwork."</em></li>
+            <li><strong>Exit ticket (5 min):</strong> ver más abajo.</li>
+        </ol>
+
         <div class="exit-ticket">
-            <h5>Exit ticket prompts</h5>
-            <ul><li>Write one sentence that summarizes the main idea of the text.</li><li>Use one glossary term and one language structure from the class in a new sentence.</li><li>Explain what detail or instruction would help you repeat the task more safely next time.</li></ul>
+            <h5>🎫 Exit ticket</h5>
+            <ul>
+                <li>Escribe una oración con relative clause sobre un componente:<br>
+                    <em>"A __________ is a component which/that __________."</em></li>
+                <li>Entrega tu hoja firmada al salir.</li>
+            </ul>
         </div>
-        
     </div>
-    </div>
+            </div>
         </div>
 
         <div class="resource-card">
             <h4>📦 Recursos sugeridos</h4>
-            <p>Recursos: Imagen/placa madre real, texto enciclopédico impreso, fichas técnicas para completar, tarjetas de componentes para juego.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+            <p><strong>Materiales:</strong> placa madre real o imagen ampliada, texto <em>"Electronic Components: What They Are and How They Work"</em> impreso, ficha técnica en blanco (1 por estudiante), tarjetas de componentes (7 tarjetas mínimo, una por componente del texto) para el juego oral.</p>
+            <p><strong>Apoyos visuales opcionales:</strong> fotos individuales de cada componente, video corto de 1 min "What is a transistor?", esquema simple de un circuito con LED + resistor.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Diferenciación: estudiantes avanzados escriben 2-3 oraciones con relative clauses combinadas. Estudiantes con apoyo trabajan en parejas y usan el modelo del exit ticket.</p>
         </div>
 
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 1° Medio · Unidad 2 · Clase 5.</p>
     </div>
 
     <script>

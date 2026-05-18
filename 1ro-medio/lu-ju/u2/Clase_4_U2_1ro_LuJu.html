@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 4 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <title>Clase 4 — Unidad 2 — 1° Medio — Troubleshooting Electrical Faults</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
         .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero { background: linear-gradient(135deg, #ca8a04, #b45309); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(202, 138, 4, 0.18); }
         .hero h1 { font-size: 2rem; margin-bottom: 6px; }
         .hero p { color: rgba(255,255,255,0.88); }
         .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
@@ -17,8 +17,8 @@
         .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
         .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
         .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #ca8a04; }
+        .objective-card h2 { color: #ca8a04; font-size: 1.05rem; margin-bottom: 8px; }
         .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
         .inicio { background: #2e7d32; }
         .desarrollo { background: #1565c0; }
@@ -32,52 +32,60 @@
         .task-steps { margin-left: 20px; }
         .task-steps li { margin-bottom: 8px; }
         .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .vocab-card { background: white; border: 1px solid #fde68a; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #b45309; margin-bottom: 4px; }
         .meaning { font-size: 0.92rem; color: #1f2937; }
         .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
         .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card { background: white; border: 1px solid #fde68a; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #b45309; margin-bottom: 8px; font-size: 0.98rem; }
         .focus-card ul { margin-left: 18px; }
         .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
         .reading-box p { margin-bottom: 10px; }
         .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #fef3c7; color: #b45309; padding: 8px 12px; font-weight: 700; cursor: pointer; }
         .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
         .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.92rem; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; vertical-align: top; }
+        .activity-table th { background: #fef3c7; color: #92400e; }
         .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
         .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
         .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
         .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .resource-card h4 { color: #b45309; margin-bottom: 8px; }
         .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        .pv-subject { background: #fef3c7; color: #92400e; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+        .pv-aux { background: #dbeafe; color: #1e40af; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .pv-pp { background: #dcfce7; color: #166534; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .pv-agent { background: #fce7f3; color: #9d174d; padding: 1px 5px; border-radius: 4px; font-style: italic; }
+        .pv-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; font-size: 0.82rem; }
+        .pv-legend span { padding: 3px 9px; border-radius: 999px; font-weight: 600; }
+        .sounds-box { border: 1px solid #fde68a; background: #fffbeb; border-radius: 14px; padding: 18px; margin-top: 16px; }
+        .sounds-box h4 { color: #b45309; margin-bottom: 10px; }
+        .sounds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+        .sound-card { background: white; border: 1px solid #fde68a; border-radius: 12px; padding: 12px 14px; }
+        .sound-ipa { font-size: 1.4rem; color: #b45309; font-weight: 800; margin-bottom: 4px; }
+        .sound-name { font-size: 0.85rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+        .sound-examples { font-size: 0.92rem; color: #1f2937; }
+        .sound-tip { font-size: 0.82rem; color: #6b7280; margin-top: 6px; font-style: italic; }
+        .roleplay-box { background: white; border: 2px dashed #fde68a; border-radius: 12px; padding: 14px; margin-top: 12px; }
+        .roleplay-box .role { font-weight: 700; color: #b45309; }
+        @media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+        @media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; } }
     </style>
 </head>
 <body>
     <div class="page">
         <div class="hero">
             <h1>Clase 4 — Unidad 2</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · circuit breaker panel, main switch, branch circuit, load, amperage, insulation, conductor, neutral wire, live...</p>
+            <p>1° Medio — Inglés General (Lu+Ju) · Diagnóstico de fallas eléctricas residenciales — <em>Troubleshooting a Residential Electrical Fault</em></p>
             <div class="meta">
-                <span>🎯 circuit breaker panel, main switch, branch circuit, load, amperage, insulation,...</span>
-                <span>📘 OA9 · OA8</span>
-                <span>🗂 Clase 4</span>
-                
-                <span>🧩 Clase de trabajo</span>
+                <span>🎯 Comprender un caso técnico eléctrico</span>
+                <span>📘 OA8 · OA9</span>
+                <span>🗂 Clase 4 — Unidad 2</span>
+                <span>🗓 Semana 11 · mayo</span>
+                <span>🧩 Vocabulario eléctrico + Passive Voice + role-play</span>
             </div>
         </div>
 
@@ -87,178 +95,228 @@
 
         <div class="objective-card">
             <h2>Objetivo de la clase</h2>
-            <p>Comprender un texto técnico sobre detección de fallas en sistemas eléctricos residenciales, utilizando vocabulario de Electricidad y Passive Voice.</p>
+            <p>Comprender un texto técnico sobre <strong>detección de fallas en sistemas eléctricos residenciales</strong>, utilizando vocabulario de Electricidad y Passive Voice para explicar el proceso de diagnóstico.</p>
         </div>
 
         <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-header inicio">🟢 Inicio (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to circuit breaker panel, main switch, branch circuit, load, amperage, insulation, conductor, neutral wire, live wire, earth wire . Relacionar con un diagrama de un panel eléctrico residencial.</li><li>Recuerda la idea central de la clase pasada: Analizar un estudio de caso sobre diagnóstico de falla automotriz, aplicando estrategias...</li><li>Predict which tools, risks, or key ideas may appear when working with circuit breaker panel, main switch, branch circuit, load, amperage, insulation, conductor, neutral wire, live wire, earth wire . Relacionar con un diagrama de un panel eléctrico residencial in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Analizar un estudio de caso sobre diagnóstico de falla automotriz, aplicando estrategias...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+        <h4>🔎 Actividad 1 — Cuando se va la luz en casa</h4>
+        <p>El docente lanza al curso la pregunta y recoge experiencias reales (2-3 estudiantes voluntarios responden en español o inglés; el docente las pasa a inglés).</p>
+        <ul>
+            <li><em>"What do you do at home when the lights go out?"</em></li>
+            <li><em>"What could cause a power outage?"</em></li>
+        </ul>
+        <p style="margin-top: 12px;">El docente escribe en la pizarra las posibles causas que surgen y agrega términos técnicos:</p>
+        <ul>
+            <li><strong>power outage</strong> — corte de luz</li>
+            <li><strong>short circuit</strong> — cortocircuito</li>
+            <li><strong>overload</strong> — sobrecarga</li>
+            <li><strong>tripped breaker</strong> — automático/disyuntor saltado</li>
+            <li><strong>faulty wiring</strong> — cableado defectuoso</li>
+            <li><strong>grounding</strong> — puesta a tierra</li>
+        </ul>
     </div>
-    </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
-            <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Passive Voice in technical English</h5>
-                <p>Use passive voice when the process or result is more important than the person who performs the action.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The practice project is checked before the main task begins.</li><li>The tool kit is used during the second stage of the procedure.</li><li>The final result is recorded after the inspection.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>The ___ is prepared before ...</li><li>The ___ is tested so that ...</li><li>At the end, the ___ is reported.</li></ul>
-            </div>
-            </div>
-    </div>
-    
-
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">process</div>
-                <div class="meaning">a sequence of actions used to complete a task</div>
-                <div class="pronunciation">Pron.: PRO-ses</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">component</div>
-                <div class="meaning">one part of a machine, circuit, or larger system</div>
-                <div class="pronunciation">Pron.: kom-POU-nent</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="pronunciation">Pron.: TUL</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">measure</div>
-                <div class="meaning">to find size, amount, or distance accurately</div>
-                <div class="pronunciation">Pron.: ME-zher</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">connect</div>
-                <div class="meaning">to join parts so the system can work correctly</div>
-                <div class="pronunciation">Pron.: ko-NEKT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">repair</div>
-                <div class="meaning">to fix something that is damaged or not working</div>
-                <div class="pronunciation">Pron.: ri-PAIR</div>
-            </div>
-            </div>
-                </div>
-
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Class focus — circuit breaker panel, main switch, branch circuit, load, amperage, insulation, conductor, neutral wire, live wire, earth wire . Relacionar con un diagrama de un panel eléctrico residencial</h4>
-                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
-                    <p>In the school technical workshop, the class explores circuit breaker panel, main switch, branch circuit, load, amperage, insulation, conductor, neutral wire, live wire, earth wire . Relacionar con un diagrama de un panel eléctrico residencial as part of How Things Work — Processes and Descriptions. Students use English to understand how this topic affects the daily work around the practice project.</p><p>The first notes focus on Comprender un texto técnico sobre detección de fallas en sistemas eléctricos residenciales, utilizando vocabulario de Electricidad y Passive Voice. The teacher asks students to identify the most useful technical verbs and the details that explain why the topic matters in practice.</p><p>During the activity, the tool kit and the checklist appear as reference points for connecting the text with a real workshop, lab, or production task. The class decides which information is essential and which information only adds context.</p><p>When an idea is not fully clear, students return to the glossary and the examples for Passive Voice. This helps them explain sequence, cause, or comparison with more precision.</p><p>In the final stage, the group writes a short conclusion about circuit breaker panel, main switch, branch circuit, load, amperage, insulation, conductor, neutral wire, live wire, earth wire . Relacionar con un diagrama de un panel eléctrico residencial and adds one recommendation, safety point, or workplace implication. The reading shows that technical English supports accuracy, teamwork, and better decisions.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What task or problem is described in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text describes circuit breaker panel, main switch, branch circuit, load, amperage, insulation, conductor, neutral wire, live wire, earth wire . Relacionar con un diagrama de un panel eléctrico residencial in the school technical workshop.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What happens before the main procedure starts?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the main task starts, the class reviews comprender un texto técnico sobre detección de fallas en sistemas eléctricos residenciales, utilizando vocabulario de electricidad y passive voice and links it to the tool kit.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">The tool kit, the checklist, and the glossary notes are important sources of information.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The text highlights Passive Voice through model sentences and technical examples.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">The team finishes by explaining the result or implication of circuit breaker panel, main switch, branch circuit, load, amperage, insulation, conductor, neutral wire, live wire, earth wire . Relacionar con un diagrama de un panel eléctrico residencial.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Good technical work depends on clear notes, accurate vocabulary, and careful checking.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Problema, evidencia y solución</h4>
-                    
-            <ol class="task-steps">
-                <li>Identify the central problem or reportable issue in the text.</li>
-                <li>Select the technical evidence that supports the diagnosis or conclusion.</li>
-                <li>Write a solution or recommendation that matches the evidence and the professional context.</li>
-            </ol>
-            <table class="activity-table">
-                <tr><th>Problem</th><th>Evidence from the text</th><th>Possible solution</th></tr>
-                <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-                <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-            </table>
-            
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve.</p>
-                </div>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
+            <div class="section-body">
+
+    <div class="task-box">
+        <h4>🧠 Actividad 2 — Vocabulary expansion + diagrama eléctrico</h4>
+        <p>El docente muestra un diagrama de un panel eléctrico residencial e indica cada parte mientras los estudiantes anotan.</p>
+
+        <div class="sounds-box">
+            <h4>🔊 Sounds in focus</h4>
+            <p style="font-size:0.92rem; color:#475569;">Sonidos clave del vocabulario eléctrico. Practícalos antes de leer.</p>
+            <div class="sounds-grid">
+                <div class="sound-card">
+                    <div class="sound-ipa">/ɜːr/</div>
+                    <div class="sound-name">"er" larga</div>
+                    <div class="sound-examples"><em>circuit</em>, <em>earth</em>, <em>burnt</em>, <em>worn</em></div>
+                    <div class="sound-tip">Boca relajada, sonido entre "er" español y una "e" alargada. La "r" americana es suave.</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/aɪ/</div>
+                    <div class="sound-name">diptongo "ai"</div>
+                    <div class="sound-examples"><em>wire</em>, <em>live</em>, <em>line</em>, <em>type</em></div>
+                    <div class="sound-tip">Se pronuncia como "ai" en español ("aire"): empieza en "a" y termina en "i".</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/v/</div>
+                    <div class="sound-name">"v" labiodental</div>
+                    <div class="sound-examples"><em>voltage</em>, <em>live</em>, <em>device</em></div>
+                    <div class="sound-tip">Dientes superiores sobre el labio inferior, con vibración. No es "b" española.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="vocab-card"><div class="word">circuit breaker panel</div><div class="meaning">tablero eléctrico con automáticos</div><div class="pronunciation">Pron.: SER-kit BREI-ker PA-nel</div></div>
+            <div class="vocab-card"><div class="word">main switch</div><div class="meaning">interruptor general (el "principal")</div><div class="pronunciation">Pron.: MEIN SUICH</div></div>
+            <div class="vocab-card"><div class="word">branch circuit</div><div class="meaning">circuito derivado (cocina, dormitorios…)</div><div class="pronunciation">Pron.: BRANCH SER-kit</div></div>
+            <div class="vocab-card"><div class="word">load</div><div class="meaning">carga eléctrica conectada</div><div class="pronunciation">Pron.: LOUD</div></div>
+            <div class="vocab-card"><div class="word">amperage</div><div class="meaning">amperaje, intensidad de corriente</div><div class="pronunciation">Pron.: AM-pe-reich</div></div>
+            <div class="vocab-card"><div class="word">insulation</div><div class="meaning">aislamiento del cable</div><div class="pronunciation">Pron.: in-su-LEI-shon</div></div>
+            <div class="vocab-card"><div class="word">conductor</div><div class="meaning">conductor (cable que lleva corriente)</div><div class="pronunciation">Pron.: kon-DAK-tor</div></div>
+            <div class="vocab-card"><div class="word">live wire</div><div class="meaning">cable activo / fase (con tensión)</div><div class="pronunciation">Pron.: LAIV UAI-er</div></div>
+            <div class="vocab-card"><div class="word">neutral wire</div><div class="meaning">cable neutro</div><div class="pronunciation">Pron.: NIU-tral UAI-er</div></div>
+            <div class="vocab-card"><div class="word">earth wire</div><div class="meaning">cable de tierra</div><div class="pronunciation">Pron.: ERTH UAI-er</div></div>
+            <div class="vocab-card"><div class="word">multimeter</div><div class="meaning">multímetro (mide voltaje, corriente, resistencia)</div><div class="pronunciation">Pron.: MAL-ti-MI-ter</div></div>
+            <div class="vocab-card"><div class="word">insulation test</div><div class="meaning">prueba de aislamiento</div><div class="pronunciation">Pron.: in-su-LEI-shon TEST</div></div>
+        </div>
+    </div>
+
+    <div class="task-box activity-card">
+        <h4>🔠 Actividad 3 — Mini-review de Passive Voice</h4>
+        <p>Antes de leer, recordemos cómo aparece la Passive Voice en este contexto técnico.</p>
+        <div class="pv-legend">
+            <span class="pv-subject">Sujeto</span>
+            <span class="pv-aux">was / were / is</span>
+            <span class="pv-pp">Past participle</span>
+            <span class="pv-agent">by + agente (opcional)</span>
+        </div>
+        <ul>
+            <li><span class="pv-subject">The breaker</span> <span class="pv-aux">was</span> <span class="pv-pp">tripped</span>.</li>
+            <li><span class="pv-subject">The wire</span> <span class="pv-aux">was</span> <span class="pv-pp">damaged</span> <span class="pv-agent">by an overload</span>.</li>
+            <li><span class="pv-subject">The circuit</span> <span class="pv-aux">is</span> <span class="pv-pp">inspected</span> with a multimeter.</li>
+            <li><span class="pv-subject">The faulty cable</span> <span class="pv-aux">was</span> <span class="pv-pp">replaced</span>.</li>
+        </ul>
+    </div>
+
+    <div class="reading-box">
+        <h4>📖 Actividad 4 — Reading: <em>Troubleshooting a Residential Electrical Fault</em></h4>
+        <p class="reading-note">Caso real. Lee marcando con un ✓ cada paso del proceso de diagnóstico.</p>
+        <p><strong>Troubleshooting a Residential Electrical Fault</strong></p>
+        <p>Last Tuesday, an electrician named Pablo <strong>was called</strong> to a house in the south of Santiago. The owner, Mrs. Rojas, complained that the breakers in the kitchen circuit kept tripping every time the microwave and the kettle <strong>were used</strong> at the same time. <em>"There must be something wrong with the wiring,"</em> she said.</p>
+        <p>Pablo started with a <strong>visual inspection</strong>. The breaker panel <strong>was checked</strong> first. He noticed that the kitchen breaker was rated only at 16 amps, but the kitchen had a microwave, a kettle, a fridge and a small oven. <em>"The circuit might be overloaded,"</em> he thought.</p>
+        <p>Next, the outlets <strong>were inspected</strong>. Behind the microwave, one outlet looked slightly burnt. Pablo turned off the main switch and removed the cover. The insulation of the live wire <strong>was found</strong> to be melted, and the copper was exposed.</p>
+        <p>Then, the wires <strong>were tested</strong> with a multimeter. Voltage <strong>was measured</strong>: 230 V, normal. The continuity of the neutral wire <strong>was checked</strong>: correct. But the insulation test showed a low resistance between the live wire and the earth — a clear sign of a short to ground.</p>
+        <p>Pablo explained his diagnosis to Mrs. Rojas: <em>"The damaged wire was the main cause. The circuit was also overloaded. Both problems need to be fixed."</em></p>
+        <p>The damaged section of cable <strong>was replaced</strong> with a new one with proper insulation. The kitchen circuit <strong>was upgraded</strong> from 16 to 20 amps, and a separate branch <strong>was added</strong> for the microwave. Finally, everything <strong>was tested</strong> again: no more tripping, no more burnt smell. The job <strong>was completed</strong> in three hours.</p>
+        <p>Before leaving, Pablo gave Mrs. Rojas a recommendation: <em>"Never plug high-power devices into the same outlet. If a breaker trips often, it should be checked. It's not just an annoyance — it's a warning."</em></p>
+    </div>
+
+    <div class="task-box">
+        <h4>🗂 Actividad 5 — Diagnostic table</h4>
+        <p>Completa la tabla con la información del texto.</p>
+        <table class="activity-table">
+            <tr><th>Step</th><th>Action</th><th>Tool used</th><th>Result</th></tr>
+            <tr><td>1</td><td>Visual inspection</td><td>(eyes / hands)</td><td>____________________</td></tr>
+            <tr><td>2</td><td>Inspect outlets</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>3</td><td>Voltage test</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>4</td><td>Continuity test (neutral)</td><td>multimeter</td><td>____________________</td></tr>
+            <tr><td>5</td><td>Insulation test</td><td>multimeter</td><td>____________________</td></tr>
+            <tr><td>6</td><td>Solution</td><td>tools + new cable</td><td>____________________</td></tr>
+        </table>
+        <button class="toggle-btn" onclick="toggleAnswer('answer-table', this)">Ver clave de la tabla</button>
+        <div class="answer-box" id="answer-table">
+            1. Breaker rated only at 16 A; circuit may be overloaded.<br>
+            2. Visual / screwdriver — one outlet looked slightly burnt; live wire insulation melted, copper exposed.<br>
+            3. Multimeter — 230 V, normal.<br>
+            4. Continuity correct (neutral OK).<br>
+            5. Low resistance between live wire and earth — short to ground.<br>
+            6. Damaged cable was replaced; circuit upgraded from 16 to 20 A; separate branch added for the microwave.
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>📝 Actividad 6 — Comprehension &amp; Passive Voice</h4>
+
+        <div class="question-card">
+            <p><strong>1.</strong> ¿Cuál era la queja inicial de la Sra. Rojas?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-1">Los automáticos de la cocina saltaban cada vez que usaba el microondas y el hervidor al mismo tiempo.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>2.</strong> ¿Por qué Pablo midió el aislamiento (insulation test)?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-2">Para detectar si había una fuga de corriente del cable activo hacia tierra. El resultado mostró baja resistencia entre <em>live wire</em> y <em>earth</em>, lo que indica un short to ground.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>3.</strong> ¿Cuáles fueron las DOS causas del problema?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-3">(1) El cable dañado con aislamiento derretido y (2) la sobrecarga del circuito.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>4.</strong> ¿Qué pasaría si el cable defectuoso no se reemplazara?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-4">Podría provocar un cortocircuito permanente, descarga eléctrica a quien tocara el aparato o incluso un incendio en la pared. El texto sugiere riesgo cuando dice <em>"It's not just an annoyance — it's a warning."</em></div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>5.</strong> Subraya 5 oraciones en Passive Voice del texto y escríbelas.</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-5">Ejemplos: <em>was called, were used, was checked, were inspected, was found, were tested, was measured, was replaced, was upgraded, was added, was completed</em>. Todas siguen la estructura <strong>was/were + past participle</strong>.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>6.</strong> Inferencia: ¿qué consejo final dio Pablo y qué quiso decir con <em>"It's not just an annoyance — it's a warning"</em>?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-6">Que no se conecten varios aparatos de alta potencia en el mismo enchufe y que si el breaker salta seguido, hay que revisarlo. No es solo una molestia, es una señal de peligro.</div>
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>🗣 Actividad 7 — Role-play: electricista &amp; cliente</h4>
+        <p>En parejas, preparen y representen la conversación. Mínimo 4 oraciones en Passive Voice cada uno.</p>
+        <div class="roleplay-box">
+            <p><span class="role">Cliente:</span> describe el síntoma (lo que pasa en la casa) y pregunta qué encontró el electricista.</p>
+            <p><span class="role">Electricista:</span> explica el diagnóstico paso a paso usando Passive Voice y propone la solución.</p>
+            <p style="margin-top: 10px; color:#475569;"><strong>Modelos útiles:</strong></p>
+            <ul>
+                <li><em>"The breaker panel <strong>was checked</strong> first."</em></li>
+                <li><em>"The wire <strong>was found</strong> to be damaged."</em></li>
+                <li><em>"The circuit <strong>needs to be replaced</strong>."</em></li>
+                <li><em>"The breaker panel <strong>will be inspected</strong> next week."</em></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="eval-box">
+        <h4>📋 Seguimiento de la clase</h4>
+        <p><strong>Formativa:</strong> el docente circula durante el role-play. Criterios: (1) uso de al menos 4 oraciones en Passive Voice, (2) vocabulario eléctrico correcto, (3) orden lógico del diagnóstico, (4) interacción fluida cliente-electricista.</p>
+    </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header cierre">🟣 Cierre (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
-        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
-        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
-        
+        <h4>🟣 Cierre — Presentaciones + reflexión de seguridad</h4>
+        <ol class="task-steps">
+            <li><strong>Presentación (8 min):</strong> 2-3 parejas presentan su role-play frente al curso.</li>
+            <li><strong>Conexión con la realidad (4 min):</strong> el docente cierra con la idea: <em>"Electrical faults can be dangerous. That's why electricians follow a systematic process: visual inspection → measurement → isolation test → repair."</em></li>
+            <li><strong>Ticket de salida (3 min):</strong> ver más abajo.</li>
+        </ol>
+
         <div class="exit-ticket">
-            <h5>Exit ticket prompts</h5>
-            <ul><li>Write one sentence that summarizes the main idea of the text.</li><li>Use one glossary term and one language structure from the class in a new sentence.</li><li>Explain what detail or instruction would help you repeat the task more safely next time.</li></ul>
+            <h5>🎫 Exit ticket</h5>
+            <ul>
+                <li>Escribe los 3 pasos principales que sigue un electricista para diagnosticar una falla.</li>
+                <li>Usa Passive Voice en al menos 2 de los 3 pasos.</li>
+            </ul>
         </div>
-        
     </div>
-    </div>
+            </div>
         </div>
 
         <div class="resource-card">
             <h4>📦 Recursos sugeridos</h4>
-            <p>Recursos: Diagrama de panel eléctrico residencial, texto caso de estudio impreso, tabla de diagnóstico impresa, tarjetas para role-play.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+            <p><strong>Materiales:</strong> diagrama de un panel eléctrico residencial (impreso o proyectado), texto <em>"Troubleshooting a Residential Electrical Fault"</em> impreso, tabla de diagnóstico en blanco, tarjetas para role-play (rol "cliente" / rol "electricista" con pistas).</p>
+            <p><strong>Apoyos visuales opcionales:</strong> foto real de un outlet quemado, foto de un multímetro, esquema simple de un short to ground.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Diferenciación: estudiantes avanzados añaden <em>by + agente</em> y modal pasivo (<em>"must be replaced", "should be inspected"</em>). Estudiantes con apoyo trabajan con el modelo a la vista.</p>
         </div>
 
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 1° Medio · Unidad 2 · Clase 4.</p>
     </div>
 
     <script>
