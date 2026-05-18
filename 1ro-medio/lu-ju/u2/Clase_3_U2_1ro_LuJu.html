@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 3 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <title>Clase 3 — Unidad 2 — 1° Medio — Cause-Effect & The Overheating Engine</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
         .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero { background: linear-gradient(135deg, #b91c1c, #7c2d12); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(185, 28, 28, 0.18); }
         .hero h1 { font-size: 2rem; margin-bottom: 6px; }
         .hero p { color: rgba(255,255,255,0.88); }
         .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
@@ -17,8 +17,8 @@
         .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
         .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
         .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #b91c1c; }
+        .objective-card h2 { color: #b91c1c; font-size: 1.05rem; margin-bottom: 8px; }
         .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
         .inicio { background: #2e7d32; }
         .desarrollo { background: #1565c0; }
@@ -32,19 +32,19 @@
         .task-steps { margin-left: 20px; }
         .task-steps li { margin-bottom: 8px; }
         .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .vocab-card { background: white; border: 1px solid #fecaca; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #b91c1c; margin-bottom: 4px; }
         .meaning { font-size: 0.92rem; color: #1f2937; }
         .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
         .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card { background: white; border: 1px solid #fecaca; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #b91c1c; margin-bottom: 8px; font-size: 0.98rem; }
         .focus-card ul { margin-left: 18px; }
         .focus-card li { margin-bottom: 6px; }
         .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
         .reading-box p { margin-bottom: 10px; }
         .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #fee2e2; color: #b91c1c; padding: 8px 12px; font-weight: 700; cursor: pointer; }
         .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
         .answer-box.open { display: block; }
         .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
@@ -54,30 +54,42 @@
         .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
         .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
         .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .resource-card h4 { color: #b91c1c; margin-bottom: 8px; }
         .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        /* Color coding cause-effect */
+        .ce-cause { background: #fef3c7; color: #92400e; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+        .ce-conn { background: #fee2e2; color: #b91c1c; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .ce-effect { background: #dcfce7; color: #166534; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+        .ce-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; font-size: 0.82rem; }
+        .ce-legend span { padding: 3px 9px; border-radius: 999px; font-weight: 600; }
+        /* Sounds in focus */
+        .sounds-box { border: 1px solid #fecaca; background: #fef2f2; border-radius: 14px; padding: 18px; margin-top: 16px; }
+        .sounds-box h4 { color: #b91c1c; margin-bottom: 10px; }
+        .sounds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+        .sound-card { background: white; border: 1px solid #fecaca; border-radius: 12px; padding: 12px 14px; }
+        .sound-ipa { font-size: 1.4rem; color: #b91c1c; font-weight: 800; margin-bottom: 4px; }
+        .sound-name { font-size: 0.85rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+        .sound-examples { font-size: 0.92rem; color: #1f2937; }
+        .sound-tip { font-size: 0.82rem; color: #6b7280; margin-top: 6px; font-style: italic; }
+        /* Diagnostic diagram */
+        .diag-chain { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 12px; }
+        .diag-step { background: white; border: 2px solid #fecaca; border-radius: 12px; padding: 12px; text-align: center; }
+        .diag-step strong { display: block; color: #b91c1c; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+        @media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+        @media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; } }
     </style>
 </head>
 <body>
     <div class="page">
         <div class="hero">
             <h1>Clase 3 — Unidad 2</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · symptom, cause, diagnosis, repair, test, check, replace, adjust, overheating, leak, short circuit, worn out,...</p>
+            <p>1° Medio — Inglés General (Lu+Ju) · Cause-effect connectors + case study — <em>The Mystery of the Overheating Engine</em></p>
             <div class="meta">
-                <span>🎯 symptom, cause, diagnosis, repair, test, check, replace, adjust, overheating,...</span>
-                <span>📘 OA9 · OA12 · OA7</span>
-                <span>🗂 Clase 3</span>
-                
-                <span>🧩 Clase de trabajo</span>
+                <span>🎯 Identificar causa, efecto y solución en un diagnóstico</span>
+                <span>📘 OA7 · OA9 · OA12</span>
+                <span>🗂 Clase 3 — Unidad 2</span>
+                <span>🗓 Semana 11 · mayo</span>
+                <span>🧩 Lectura técnica + diagrama + discusión</span>
             </div>
         </div>
 
@@ -87,178 +99,229 @@
 
         <div class="objective-card">
             <h2>Objetivo de la clase</h2>
-            <p>Analizar un estudio de caso sobre diagnóstico de falla automotriz, aplicando estrategias de lectura para identificar causa, efecto y solución.</p>
+            <p>Analizar un estudio de caso sobre <strong>diagnóstico de falla automotriz</strong>, aplicando estrategias de lectura para identificar <strong>causa, efecto y solución</strong>, y usando conectores en inglés.</p>
         </div>
 
         <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-header inicio">🟢 Inicio (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to symptom, cause, diagnosis, repair, test, check, replace, adjust, overheating, leak, short circuit, worn out, cracked, loose.</li><li>Recuerda la idea central de la clase pasada: Aplicar la Passive Voice para comprender y describir el proceso de fabricación de una...</li><li>Predict which tools, risks, or key ideas may appear when working with symptom, cause, diagnosis, repair, test, check, replace, adjust, overheating, leak, short circuit, worn out, cracked, loose in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Aplicar la Passive Voice para comprender y describir el proceso de fabricación de una...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+        <h4>🔎 Actividad 1 — Conectores de causa-efecto + brainstorm</h4>
+        <p>El docente escribe en la pizarra los siguientes conectores y un ejemplo de cada uno:</p>
+        <div class="ce-legend">
+            <span class="ce-cause">Causa</span>
+            <span class="ce-conn">Conector</span>
+            <span class="ce-effect">Efecto</span>
+        </div>
+        <ul>
+            <li><span class="ce-cause">The engine overheated</span> <span class="ce-conn">because</span> <span class="ce-cause">the coolant was low</span>.</li>
+            <li><span class="ce-cause">The battery was dead</span>, <span class="ce-conn">so</span> <span class="ce-effect">the car wouldn't start</span>.</li>
+            <li><span class="ce-cause">The oil leaked</span>. <span class="ce-conn">As a result</span>, <span class="ce-effect">the engine was damaged</span>.</li>
+            <li><span class="ce-cause">The brakes were worn out</span>; <span class="ce-conn">therefore</span>, <span class="ce-effect">the car couldn't stop quickly</span>.</li>
+            <li>The mechanic replaced the part <span class="ce-conn">so that</span> the car could work again.</li>
+        </ul>
+        <p style="margin-top: 12px;"><strong>Pregunta detonante:</strong> el docente lanza al curso: <em>"A car won't start. What could be the problem?"</em> y anota en la pizarra las posibles fallas que aparezcan (dead battery, no fuel, faulty starter, broken wires…).</p>
     </div>
-    </div>
+            </div>
         </div>
 
         <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
             <div class="section-body">
-                
+
+    <div class="task-box">
+        <h4>🧠 Actividad 2 — Vocabulary: problems and diagnosis</h4>
+
+        <div class="sounds-box">
+            <h4>🔊 Sounds in focus</h4>
+            <p style="font-size:0.92rem; color:#475569;">Estos sonidos aparecen en el vocabulario técnico de fallas. Practícalos antes de leer.</p>
+            <div class="sounds-grid">
+                <div class="sound-card">
+                    <div class="sound-ipa">/ɔː/</div>
+                    <div class="sound-name">"o" larga</div>
+                    <div class="sound-examples"><em>cause</em>, <em>fault</em>, <em>warning</em>, <em>short</em></div>
+                    <div class="sound-tip">Boca redonda y abierta, sonido largo: parecido a una "o" prolongada.</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/θ/</div>
+                    <div class="sound-name">"th" sordo</div>
+                    <div class="sound-examples"><em>thermostat</em>, <em>three</em>, <em>thick</em></div>
+                    <div class="sound-tip">Punta de la lengua entre los dientes, sale aire sin vibrar.</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/iː/</div>
+                    <div class="sound-name">"i" larga</div>
+                    <div class="sound-examples"><em>leak</em>, <em>overheating</em>, <em>need</em>, <em>repeat</em></div>
+                    <div class="sound-tip">Como una "i" española pero más larga y tensa.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="vocab-card"><div class="word">symptom</div><div class="meaning">síntoma, señal que indica un problema</div><div class="pronunciation">Pron.: SIMP-tom</div></div>
+            <div class="vocab-card"><div class="word">cause</div><div class="meaning">causa, razón del problema</div><div class="pronunciation">Pron.: COZ</div></div>
+            <div class="vocab-card"><div class="word">diagnosis</div><div class="meaning">diagnóstico, identificación del problema</div><div class="pronunciation">Pron.: dai-ag-NOU-sis</div></div>
+            <div class="vocab-card"><div class="word">overheating</div><div class="meaning">sobrecalentamiento</div><div class="pronunciation">Pron.: o-ver-JI-ting</div></div>
+            <div class="vocab-card"><div class="word">leak</div><div class="meaning">fuga, escape (de líquido o gas)</div><div class="pronunciation">Pron.: LIK</div></div>
+            <div class="vocab-card"><div class="word">thermostat</div><div class="meaning">termostato (regula la temperatura)</div><div class="pronunciation">Pron.: THER-mos-tat</div></div>
+            <div class="vocab-card"><div class="word">coolant</div><div class="meaning">refrigerante del motor</div><div class="pronunciation">Pron.: KU-lant</div></div>
+            <div class="vocab-card"><div class="word">water pump</div><div class="meaning">bomba de agua</div><div class="pronunciation">Pron.: UA-ter PAMP</div></div>
+            <div class="vocab-card"><div class="word">warning light</div><div class="meaning">luz testigo, luz de advertencia del tablero</div><div class="pronunciation">Pron.: UOR-ning LAIT</div></div>
+            <div class="vocab-card"><div class="word">replace</div><div class="meaning">reemplazar, cambiar una pieza por otra</div><div class="pronunciation">Pron.: ri-PLEIS</div></div>
+            <div class="vocab-card"><div class="word">check</div><div class="meaning">revisar, comprobar</div><div class="pronunciation">Pron.: CHEK</div></div>
+            <div class="vocab-card"><div class="word">stuck closed</div><div class="meaning">trabado en posición cerrada (no abre)</div><div class="pronunciation">Pron.: STAK KLOUSD</div></div>
+        </div>
+    </div>
+
     <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <h4>🔠 Actividad 3 — Connectors focus</h4>
+        <p>Antes de leer el caso, fijémonos en cómo se usan los conectores de causa-efecto.</p>
         <div class="focus-grid">
             <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The tool kit is checked before the task begins.</li><li>The checklist gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
+                <h5>Connectors that introduce a <em>CAUSE</em></h5>
+                <ul>
+                    <li><strong>because</strong> → seguido de una oración con sujeto y verbo: <em>"The engine stopped <strong>because</strong> the oil leaked."</em></li>
+                    <li><strong>because of</strong> → seguido de un sustantivo: <em>"The engine stopped <strong>because of</strong> the oil leak."</em></li>
+                    <li><strong>since</strong> → equivalente a <em>because</em>, más formal.</li>
+                </ul>
             </div>
+            <div class="focus-card">
+                <h5>Connectors that introduce an <em>EFFECT</em></h5>
+                <ul>
+                    <li><strong>so</strong> → conecta dos oraciones: <em>"It was hot, <strong>so</strong> the engine overheated."</em></li>
+                    <li><strong>therefore</strong> / <strong>as a result</strong> → más formal, va al inicio de la 2.ª oración: <em>"The thermostat failed. <strong>As a result</strong>, the coolant didn't circulate."</em></li>
+                    <li><strong>so that</strong> → introduce un propósito: <em>"The mechanic replaced the part <strong>so that</strong> the engine could work again."</em></li>
+                </ul>
             </div>
+        </div>
     </div>
-    
 
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">process</div>
-                <div class="meaning">a sequence of actions used to complete a task</div>
-                <div class="pronunciation">Pron.: PRO-ses</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">component</div>
-                <div class="meaning">one part of a machine, circuit, or larger system</div>
-                <div class="pronunciation">Pron.: kom-POU-nent</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="pronunciation">Pron.: TUL</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">measure</div>
-                <div class="meaning">to find size, amount, or distance accurately</div>
-                <div class="pronunciation">Pron.: ME-zher</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">connect</div>
-                <div class="meaning">to join parts so the system can work correctly</div>
-                <div class="pronunciation">Pron.: ko-NEKT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">repair</div>
-                <div class="meaning">to fix something that is damaged or not working</div>
-                <div class="pronunciation">Pron.: ri-PAIR</div>
-            </div>
-            </div>
-                </div>
+    <div class="reading-box">
+        <h4>📖 Actividad 4 — Reading: <em>The Mystery of the Overheating Engine</em></h4>
+        <p class="reading-note">Pre-reading: solo con el título, ¿de qué crees que tratará el texto? Comparte 1 predicción con tu compañero antes de leer.</p>
+        <p><strong>The Mystery of the Overheating Engine</strong></p>
+        <p>One Monday morning, Mr. Pérez drove to a small auto repair shop. He was worried <span class="ce-conn">because</span> his car was overheating every time he drove for more than ten minutes. <em>"There must be a problem with the engine,"</em> he told the mechanic. <em>"The warning light is always on."</em></p>
+        <p>The mechanic, Diego, opened the hood and started the diagnosis. <em>"Let's see what's wrong,"</em> he said.</p>
+        <p>First, the coolant level <strong>was checked</strong>. It was a little low, <span class="ce-conn">so</span> Diego added more coolant. He started the engine again, but after a few minutes the temperature was still high. <em>"It's not just the coolant,"</em> he thought.</p>
+        <p>Then, the radiator <strong>was inspected</strong>. There were no leaks and the fan worked correctly. The water pump <strong>was tested</strong> too: it pushed coolant normally through the system. <em>"Something is blocking the circulation,"</em> Diego said.</p>
+        <p>Finally, Diego removed the thermostat and put it in hot water. The thermostat didn't open. <em>"Here's the problem!"</em> he said. The thermostat <strong>was stuck closed</strong>, <span class="ce-conn">so</span> the coolant couldn't reach the radiator. <span class="ce-conn">As a result</span>, the engine kept overheating.</p>
+        <p>The thermostat <strong>was replaced</strong> with a new one. The engine <strong>was started</strong> again and the temperature stayed normal. The warning light went off. <em>"Now your car is safe,"</em> Diego said with a smile.</p>
+        <p>Mr. Pérez thanked him. <em>"I never imagined that such a small part could cause such a big problem,"</em> he said. Diego laughed: <em>"In an engine, every small part is important."</em></p>
+    </div>
 
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Class focus — symptom, cause, diagnosis, repair, test, check, replace, adjust, overheating, leak, short circuit, worn out, cracked, loose</h4>
-                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
-                    <p>In the school technical workshop, the class explores symptom, cause, diagnosis, repair, test, check, replace, adjust, overheating, leak, short circuit, worn out, cracked, loose as part of How Things Work — Processes and Descriptions. Students use English to understand how this topic affects the daily work around the practice project.</p><p>The first notes focus on Analizar un estudio de caso sobre diagnóstico de falla automotriz, aplicando estrategias de lectura para identificar causa, efecto y solución. The teacher asks students to identify the most useful technical verbs and the details that explain why the topic matters in practice.</p><p>During the activity, the tool kit and the checklist appear as reference points for connecting the text with a real workshop, lab, or production task. The class decides which information is essential and which information only adds context.</p><p>When an idea is not fully clear, students return to the glossary and the examples for Technical English. This helps them explain sequence, cause, or comparison with more precision.</p><p>In the final stage, the group writes a short conclusion about symptom, cause, diagnosis, repair, test, check, replace, adjust, overheating, leak, short circuit, worn out, cracked, loose and adds one recommendation, safety point, or workplace implication. The reading shows that technical English supports accuracy, teamwork, and better decisions.</p>
-                </div>
+    <div class="task-box">
+        <h4>🧭 Actividad 5 — Diagrama causa-efecto</h4>
+        <p>Completa cada caja del diagnóstico usando información del texto.</p>
+        <div class="diag-chain">
+            <div class="diag-step"><strong>Symptom</strong>____________________</div>
+            <div class="diag-step"><strong>Possible causes</strong>____________________</div>
+            <div class="diag-step"><strong>Tests performed</strong>____________________</div>
+            <div class="diag-step"><strong>Actual cause</strong>____________________</div>
+            <div class="diag-step"><strong>Solution</strong>____________________</div>
+        </div>
+        <button class="toggle-btn" onclick="toggleAnswer('answer-diag', this)">Ver clave del diagrama</button>
+        <div class="answer-box" id="answer-diag">
+            <strong>Symptom:</strong> The engine overheats; the warning light is always on.<br>
+            <strong>Possible causes:</strong> low coolant, broken radiator, faulty water pump, stuck thermostat.<br>
+            <strong>Tests performed:</strong> coolant level checked, radiator inspected, water pump tested, thermostat tested in hot water.<br>
+            <strong>Actual cause:</strong> The thermostat was stuck closed, so the coolant couldn't circulate.<br>
+            <strong>Solution:</strong> The thermostat was replaced with a new one.
+        </div>
+    </div>
 
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What task or problem is described in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text describes symptom, cause, diagnosis, repair, test, check, replace, adjust, overheating, leak, short circuit, worn out, cracked, loose in the school technical workshop.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What happens before the main procedure starts?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the main task starts, the class reviews analizar un estudio de caso sobre diagnóstico de falla automotriz, aplicando estrategias de lectura para identificar causa, efecto y solución and links it to the tool kit.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">The tool kit, the checklist, and the glossary notes are important sources of information.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The text highlights Technical English through model sentences and technical examples.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">The team finishes by explaining the result or implication of symptom, cause, diagnosis, repair, test, check, replace, adjust, overheating, leak, short circuit, worn out, cracked, loose.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Good technical work depends on clear notes, accurate vocabulary, and careful checking.</div>
-            </div>
-            
-                </div>
+    <div class="task-box">
+        <h4>📝 Actividad 6 — Comprehension &amp; connectors</h4>
 
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Problema, evidencia y solución</h4>
-                    
-            <ol class="task-steps">
-                <li>Identify the central problem or reportable issue in the text.</li>
-                <li>Select the technical evidence that supports the diagnosis or conclusion.</li>
-                <li>Write a solution or recommendation that matches the evidence and the professional context.</li>
-            </ol>
-            <table class="activity-table">
-                <tr><th>Problem</th><th>Evidence from the text</th><th>Possible solution</th></tr>
-                <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-                <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-            </table>
-            
-                </div>
+        <div class="question-card">
+            <p><strong>1.</strong> ¿Cuál era el síntoma que tenía el auto del Sr. Pérez?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-1">Se sobrecalentaba después de 10 minutos y la luz testigo siempre estaba encendida: <em>"his car was overheating… The warning light is always on."</em></div>
+        </div>
 
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve.</p>
-                </div>
+        <div class="question-card">
+            <p><strong>2.</strong> ¿Qué fue lo primero que revisó Diego y por qué no resolvió el problema?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-2">Revisó el nivel de refrigerante y agregó más, pero la temperatura siguió alta, así que entendió que no era solo el refrigerante.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>3.</strong> ¿Cuál fue la causa real del problema?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-3">El termostato estaba trabado en posición cerrada (<em>stuck closed</em>), por lo que el refrigerante no podía llegar al radiador.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>4.</strong> Subraya 3 conectores de causa-efecto del texto y escríbelos aquí.</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-4">Ejemplos del texto: <em>because</em> (línea 1), <em>so</em> (varias veces), <em>as a result</em> (final del diagnóstico). También aparecen Passive Voice: <em>was checked, was inspected, was tested, was replaced</em>.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>5.</strong> Une cada causa con su efecto usando un conector (<em>because / so / as a result</em>):</p>
+            <ul>
+                <li>a) The thermostat was stuck closed ____ the coolant couldn't circulate.</li>
+                <li>b) The engine overheated ____ the warning light turned on.</li>
+                <li>c) Mr. Pérez went to the shop ____ his car was overheating.</li>
+            </ul>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-5">a) <em>so / as a result</em> · b) <em>so / as a result</em> · c) <em>because</em></div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>6.</strong> Inferencia: ¿qué habría pasado si Diego no hubiera revisado el termostato?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-6">El motor habría seguido sobrecalentándose y, como consecuencia, podría haberse dañado seriamente (deformación del block, cabeza del motor, etc.). El texto sugiere esa idea cuando dice <em>"In an engine, every small part is important."</em></div>
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>🗣 Actividad 7 — Discussion en grupos de 4</h4>
+        <p>Cada grupo discute las 3 preguntas (10-12 min) y luego comparte su respuesta más interesante con el curso.</p>
+        <ol class="task-steps">
+            <li><em>"Was the mechanic's diagnostic process logical? Why?"</em></li>
+            <li><em>"What would have happened if the mechanic hadn't checked the thermostat?"</em></li>
+            <li><em>"Have you ever seen a car overheat (in your family, on the street, in a video)? What happened?"</em></li>
+        </ol>
+    </div>
+
+    <div class="eval-box">
+        <h4>📋 Seguimiento de la clase</h4>
+        <p><strong>Formativa:</strong> el docente circula durante la lectura y la discusión. Criterios: (1) identificación correcta de causa-efecto-solución, (2) uso de al menos 2 conectores diferentes al hablar, (3) referencia al texto al responder, (4) participación equitativa en el grupo.</p>
+    </div>
+
             </div>
         </div>
 
         <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-header cierre">🟣 Cierre (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
-        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
-        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
-        
+        <h4>🟣 Cierre — Quick write + sharing</h4>
+        <ol class="task-steps">
+            <li><strong>Quick write (8 min):</strong> cada estudiante escribe 2 oraciones sobre <em>cualquier</em> falla técnica usando 2 conectores diferentes de causa-efecto.<br>
+                <em>Ejemplo modelo: "The engine overheated <strong>because</strong> the thermostat was stuck. <strong>As a result</strong>, the coolant could not circulate."</em></li>
+            <li><strong>Sharing (7 min):</strong> 3-4 estudiantes voluntarios leen sus oraciones. La clase identifica el conector y dice si está bien usado.</li>
+        </ol>
+
         <div class="exit-ticket">
-            <h5>Exit ticket prompts</h5>
-            <ul><li>Write one sentence that summarizes the main idea of the text.</li><li>Use one glossary term and one language structure from the class in a new sentence.</li><li>Explain what detail or instruction would help you repeat the task more safely next time.</li></ul>
+            <h5>🎫 Exit ticket</h5>
+            <ul>
+                <li>Entrega tu hoja con las 2 oraciones (causa-efecto) firmadas con tu nombre.</li>
+                <li>Subraya el conector que usaste en cada oración.</li>
+            </ul>
         </div>
-        
     </div>
-    </div>
+            </div>
         </div>
 
         <div class="resource-card">
             <h4>📦 Recursos sugeridos</h4>
-            <p>Recursos: Texto caso de estudio impreso, diagrama causa-efecto impreso, flashcards de vocabulario de fallas, tarjetas de conectores.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+            <p><strong>Materiales:</strong> texto <em>"The Mystery of the Overheating Engine"</em> impreso (1 por estudiante o pareja), diagrama causa-efecto en blanco impreso, flashcards de vocabulario de fallas (overheating, leak, thermostat, coolant, etc.), tarjetas grandes con los conectores (<em>because, so, as a result, therefore, so that</em>) para usar en la pizarra.</p>
+            <p><strong>Apoyos visuales opcionales:</strong> esquema del circuito de refrigeración del motor (radiator, water pump, thermostat, coolant); video corto sobre cómo trabaja un termostato.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Diferenciación: estudiantes avanzados escriben 3 oraciones usando 3 conectores diferentes. Estudiantes que necesiten apoyo trabajan con un compañero o tienen el modelo a la vista.</p>
         </div>
 
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 1° Medio · Unidad 2 · Clase 3.</p>
     </div>
 
     <script>

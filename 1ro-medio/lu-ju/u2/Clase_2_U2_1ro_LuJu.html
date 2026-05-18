@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 2 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <title>Clase 2 — Unidad 2 — 1° Medio — Passive Voice & How a Gear Is Made</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -56,28 +56,38 @@
         .exit-ticket ul { margin-left: 18px; }
         .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
         .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        .pv-subject { background: #fef3c7; color: #92400e; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+        .pv-aux { background: #dbeafe; color: #1e40af; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .pv-pp { background: #dcfce7; color: #166534; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .pv-agent { background: #fce7f3; color: #9d174d; padding: 1px 5px; border-radius: 4px; font-style: italic; }
+        .pv-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; font-size: 0.82rem; }
+        .pv-legend span { padding: 3px 9px; border-radius: 999px; font-weight: 600; }
+        .sounds-box { border: 1px solid #fbcfe8; background: #fdf2f8; border-radius: 14px; padding: 18px; margin-top: 16px; }
+        .sounds-box h4 { color: #9d174d; margin-bottom: 10px; }
+        .sounds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+        .sound-card { background: white; border: 1px solid #fbcfe8; border-radius: 12px; padding: 12px 14px; }
+        .sound-ipa { font-size: 1.4rem; color: #be185d; font-weight: 800; margin-bottom: 4px; }
+        .sound-name { font-size: 0.85rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+        .sound-examples { font-size: 0.92rem; color: #1f2937; }
+        .sound-tip { font-size: 0.82rem; color: #6b7280; margin-top: 6px; font-style: italic; }
+        .flow-list { counter-reset: step; list-style: none; margin: 12px 0 0 0; padding: 0; }
+        .flow-list li { counter-increment: step; background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 12px 14px 12px 48px; margin-bottom: 10px; position: relative; }
+        .flow-list li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 26px; height: 26px; background: #1565c0; color: white; border-radius: 50%; text-align: center; line-height: 26px; font-weight: 700; font-size: 0.9rem; }
+        @media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+        @media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; } }
     </style>
 </head>
 <body>
     <div class="page">
         <div class="hero">
             <h1>Clase 2 — Unidad 2</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · is cast, is forged, is cut…</p>
+            <p>1° Medio — Inglés General (Lu+Ju) · Passive Voice en procesos industriales — <em>How a gear is made</em></p>
             <div class="meta">
-                <span>🎯 is cast, is forged, is cut…</span>
+                <span>🎯 Passive Voice aplicada a procesos de fabricación</span>
                 <span>📘 OA8 · OA9</span>
-                <span>🗂 Clase 2</span>
-                
-                <span>🧩 Clase de trabajo</span>
+                <span>🗂 Clase 2 — Unidad 2</span>
+                <span>🗓 Semana 10 · mayo</span>
+                <span>🧩 Lectura técnica + flowchart + práctica oral</span>
             </div>
         </div>
 
@@ -87,173 +97,218 @@
 
         <div class="objective-card">
             <h2>Objetivo de la clase</h2>
-            <p>Aplicar la Passive Voice para comprender y describir el proceso de fabricación de una pieza mecánica industrial.</p>
+            <p>Aplicar la <strong>Passive Voice</strong> para comprender y describir el proceso de fabricación de una pieza mecánica industrial (un engranaje), desde el metal crudo hasta el producto terminado.</p>
         </div>
 
         <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-header inicio">🟢 Inicio (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to is cast, is forged, is cut….</li><li>Recuerda la idea central de la clase pasada: Comprender la estructura de la Passive Voice en Present Simple para describir procesos...</li><li>Predict which tools, risks, or key ideas may appear when working with is cast, is forged, is cut… in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Comprender la estructura de la Passive Voice en Present Simple para describir procesos...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
-    </div>
-    </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
-            <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Passive Voice in technical English</h5>
-                <p>Use passive voice when the process or result is more important than the person who performs the action.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The practice project is checked before the main task begins.</li><li>The tool kit is used during the second stage of the procedure.</li><li>The final result is recorded after the inspection.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>The ___ is prepared before ...</li><li>The ___ is tested so that ...</li><li>At the end, the ___ is reported.</li></ul>
-            </div>
-            </div>
-    </div>
-    
-
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">process</div>
-                <div class="meaning">a sequence of actions used to complete a task</div>
-                <div class="pronunciation">Pron.: PRO-ses</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">component</div>
-                <div class="meaning">one part of a machine, circuit, or larger system</div>
-                <div class="pronunciation">Pron.: kom-POU-nent</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="pronunciation">Pron.: TUL</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">measure</div>
-                <div class="meaning">to find size, amount, or distance accurately</div>
-                <div class="pronunciation">Pron.: ME-zher</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">connect</div>
-                <div class="meaning">to join parts so the system can work correctly</div>
-                <div class="pronunciation">Pron.: ko-NEKT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">repair</div>
-                <div class="meaning">to fix something that is damaged or not working</div>
-                <div class="pronunciation">Pron.: ri-PAIR</div>
-            </div>
-            </div>
-                </div>
-
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Class focus — is cast, is forged, is cut…</h4>
-                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
-                    <p>In the school technical workshop, the class explores is cast, is forged, is cut… as part of How Things Work — Processes and Descriptions. Students use English to understand how this topic affects the daily work around the practice project.</p><p>The first notes focus on Aplicar la Passive Voice para comprender y describir el proceso de fabricación de una pieza mecánica industrial. The teacher asks students to identify the most useful technical verbs and the details that explain why the topic matters in practice.</p><p>During the activity, the tool kit and the checklist appear as reference points for connecting the text with a real workshop, lab, or production task. The class decides which information is essential and which information only adds context.</p><p>When an idea is not fully clear, students return to the glossary and the examples for Passive Voice. This helps them explain sequence, cause, or comparison with more precision.</p><p>In the final stage, the group writes a short conclusion about is cast, is forged, is cut… and adds one recommendation, safety point, or workplace implication. The reading shows that technical English supports accuracy, teamwork, and better decisions.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What task or problem is described in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text describes is cast, is forged, is cut… in the school technical workshop.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What happens before the main procedure starts?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the main task starts, the class reviews aplicar la passive voice para comprender y describir el proceso de fabricación de una pieza mecánica industrial and links it to the tool kit.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">The tool kit, the checklist, and the glossary notes are important sources of information.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The text highlights Passive Voice through model sentences and technical examples.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">The team finishes by explaining the result or implication of is cast, is forged, is cut….</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Good technical work depends on clear notes, accurate vocabulary, and careful checking.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Síntesis técnica</h4>
-                    
+        <h4>🔎 Actividad 1 — Repaso oral y objeto real</h4>
+        <p>El docente dice una oración en activa y los estudiantes la transforman a pasiva en voz alta (rapidez, voluntarios).</p>
         <ol class="task-steps">
-            <li>Resume the main idea of the class in relation to formación técnico-profesional general.</li>
-            <li>Write two pieces of evidence from the text that support your summary.</li>
-            <li>Explain how the reading connects with a real task from the workshop, lab, or production area.</li>
+            <li>El docente muestra un objeto metálico simple (tornillo, tuerca o un trozo de ángulo de acero) y lo hace circular por el curso.</li>
+            <li>Pregunta a la clase: <em>"How do you think this was made? What steps were probably followed?"</em></li>
+            <li>Anota en la pizarra las ideas que aparezcan (en inglés o en español, el docente las pasa a inglés).</li>
         </ol>
-        
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve.</p>
-                </div>
+        <div class="review-box">
+            <h4>🔁 Active → Passive (oral)</h4>
+            <ul>
+                <li><em>A worker cuts the metal.</em> → <em>The metal <strong>is cut</strong>.</em></li>
+                <li><em>A machine drills the holes.</em> → <em>The holes <strong>are drilled</strong>.</em></li>
+                <li><em>The technician inspected the gear.</em> → <em>The gear <strong>was inspected</strong>.</em></li>
+            </ul>
+        </div>
+    </div>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
+            <div class="section-body">
+
+    <div class="task-box activity-card">
+        <h4>🧠 Actividad 2 — Vocabulary: industrial processes</h4>
+        <p>Estos son los verbos que aparecen en la lectura. Practica tanto la forma base como el past participle: úsalos en Passive Voice.</p>
+        <div class="pv-legend">
+            <span class="pv-subject">Sujeto</span>
+            <span class="pv-aux">is / are</span>
+            <span class="pv-pp">Past participle</span>
+        </div>
+        <table class="activity-table">
+            <tr><th>Verbo (base)</th><th>Past participle</th><th>Ejemplo en Passive Voice</th></tr>
+            <tr><td>cast</td><td>cast</td><td><span class="pv-subject">The metal</span> <span class="pv-aux">is</span> <span class="pv-pp">cast</span> in a mold.</td></tr>
+            <tr><td>forge</td><td>forged</td><td><span class="pv-subject">The piece</span> <span class="pv-aux">is</span> <span class="pv-pp">forged</span> under high pressure.</td></tr>
+            <tr><td>cut</td><td>cut</td><td><span class="pv-subject">The block</span> <span class="pv-aux">is</span> <span class="pv-pp">cut</span> to the correct size.</td></tr>
+            <tr><td>grind</td><td>ground</td><td><span class="pv-subject">The surface</span> <span class="pv-aux">is</span> <span class="pv-pp">ground</span> until it is smooth.</td></tr>
+            <tr><td>drill</td><td>drilled</td><td><span class="pv-subject">The holes</span> <span class="pv-aux">are</span> <span class="pv-pp">drilled</span> with precision.</td></tr>
+            <tr><td>polish</td><td>polished</td><td><span class="pv-subject">The gear</span> <span class="pv-aux">is</span> <span class="pv-pp">polished</span> for a clean finish.</td></tr>
+            <tr><td>measure</td><td>measured</td><td><span class="pv-subject">Each tooth</span> <span class="pv-aux">is</span> <span class="pv-pp">measured</span> with a caliper.</td></tr>
+            <tr><td>inspect</td><td>inspected</td><td><span class="pv-subject">The final piece</span> <span class="pv-aux">is</span> <span class="pv-pp">inspected</span> before delivery.</td></tr>
+        </table>
+    </div>
+
+    <div class="task-box">
+        <h4>📚 Actividad 3 — Vocabulary cards</h4>
+        <p>Palabras clave que aparecen en el texto <em>How a Gear Is Made</em>.</p>
+
+        <div class="sounds-box">
+            <h4>🔊 Sounds in focus</h4>
+            <p style="font-size:0.92rem; color:#475569;">Estos sonidos aparecen en el vocabulario y la lectura. Practícalos antes de leer.</p>
+            <div class="sounds-grid">
+                <div class="sound-card">
+                    <div class="sound-ipa">/ʃ/</div>
+                    <div class="sound-name">sonido "sh"</div>
+                    <div class="sound-examples"><em>shape</em>, <em>finish</em>, <em>polished</em>, <em>machine</em></div>
+                    <div class="sound-tip">Aire continuo entre los dientes, como pedir silencio: <em>"shhh…"</em></div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/dʒ/</div>
+                    <div class="sound-name">sonido "j" inglesa</div>
+                    <div class="sound-examples"><em>gear</em>, <em>edge</em>, <em>large</em>, <em>engineer</em></div>
+                    <div class="sound-tip">Combinación de "d" + "y" (como "ye" pero más fuerte). No se pronuncia como la "j" española.</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/θ/</div>
+                    <div class="sound-name">sonido "th" sordo</div>
+                    <div class="sound-examples"><em>thick</em>, <em>tooth</em>, <em>smooth</em>, <em>three</em></div>
+                    <div class="sound-tip">La punta de la lengua toca los dientes superiores y sale aire.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="vocab-card"><div class="word">raw metal</div><div class="meaning">metal sin procesar, materia prima</div><div class="pronunciation">Pron.: RO ME-tal</div></div>
+            <div class="vocab-card"><div class="word">gear</div><div class="meaning">engranaje, rueda dentada que transmite movimiento</div><div class="pronunciation">Pron.: GUIR</div></div>
+            <div class="vocab-card"><div class="word">mold</div><div class="meaning">molde donde el metal líquido toma forma</div><div class="pronunciation">Pron.: MOLD</div></div>
+            <div class="vocab-card"><div class="word">tooth (teeth)</div><div class="meaning">diente del engranaje (plural irregular)</div><div class="pronunciation">Pron.: TUTH / TITH</div></div>
+            <div class="vocab-card"><div class="word">surface</div><div class="meaning">superficie exterior de la pieza</div><div class="pronunciation">Pron.: SER-feis</div></div>
+            <div class="vocab-card"><div class="word">smooth</div><div class="meaning">liso, sin asperezas</div><div class="pronunciation">Pron.: SMUTH</div></div>
+            <div class="vocab-card"><div class="word">caliper</div><div class="meaning">pie de metro, instrumento para medir con precisión</div><div class="pronunciation">Pron.: KA-li-per</div></div>
+            <div class="vocab-card"><div class="word">finished product</div><div class="meaning">producto terminado, listo para entregar</div><div class="pronunciation">Pron.: FI-nisht PRO-dakt</div></div>
+        </div>
+    </div>
+
+    <div class="reading-box">
+        <h4>📖 Actividad 4 — Reading: <em>From Raw Metal to Finished Product — How a Gear Is Made</em></h4>
+        <p class="reading-note">Texto A2. Mientras lees, subraya cada verbo en Passive Voice y enumera los pasos del proceso.</p>
+        <p><strong>From Raw Metal to Finished Product</strong></p>
+        <p>A gear is a small piece, but its production is a long and careful process. In a metal workshop, every gear <strong>is made</strong> step by step until it can move smoothly inside a machine.</p>
+        <p>First, the raw metal <strong>is selected</strong>. Steel <strong>is preferred</strong> because it is hard and resistant. The metal <strong>is heated</strong> in a furnace until it becomes soft and easy to shape. Then it <strong>is cast</strong> in a mold that gives the gear its first circular form.</p>
+        <p>After the metal cools down, the rough piece <strong>is cut</strong> to the correct diameter. Each tooth of the gear <strong>is shaped</strong> by a special machine called a hobbing machine. The teeth must be exactly equal, so the surface <strong>is ground</strong> until it is smooth.</p>
+        <p>Next, small holes <strong>are drilled</strong> in the center of the gear so it can be attached to an axle. The whole piece <strong>is polished</strong> to remove any sharp edges. Finally, each gear <strong>is measured</strong> with a caliper and <strong>is inspected</strong> by a quality technician.</p>
+        <p>When a gear passes all the controls, it <strong>is packed</strong> and <strong>is sent</strong> to the assembly line, where it will be installed in an engine, a motorbike, or any other machine. From raw metal to finished product, every step <strong>is checked</strong> so the gear works correctly for years.</p>
+    </div>
+
+    <div class="task-box">
+        <h4>🗂 Actividad 5 — Flowchart del proceso</h4>
+        <p>Trabajando con el texto, completa el flowchart en orden. Usa solo Passive Voice (3-4 palabras por paso). Después, compara con la clave.</p>
+        <ol class="flow-list">
+            <li>The raw metal ____________________ (selected/heated).</li>
+            <li>The metal ____________________ in a mold.</li>
+            <li>The piece ____________________ to the correct size.</li>
+            <li>Each tooth ____________________ by the hobbing machine.</li>
+            <li>The surface ____________________ until it is smooth.</li>
+            <li>Small holes ____________________ in the center.</li>
+            <li>The gear ____________________ to remove sharp edges.</li>
+            <li>The piece ____________________ with a caliper.</li>
+            <li>The finished gear ____________________ to the assembly line.</li>
+        </ol>
+        <button class="toggle-btn" onclick="toggleAnswer('answer-flow', this)">Ver clave del flowchart</button>
+        <div class="answer-box" id="answer-flow">
+            1. is selected and heated · 2. is cast · 3. is cut · 4. is shaped · 5. is ground · 6. are drilled · 7. is polished · 8. is measured / is inspected · 9. is sent (packed)
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>📝 Actividad 6 — Reading comprehension</h4>
+        <p>Responde con evidencia del texto antes de mirar la clave.</p>
+
+        <div class="question-card">
+            <p><strong>1.</strong> ¿Por qué se prefiere acero (steel) para fabricar engranajes?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-1">Porque es duro y resistente: <em>"Steel is preferred because it is hard and resistant."</em></div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>2.</strong> ¿Qué máquina especial se usa para formar los dientes del engranaje?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-2">Una <em>hobbing machine</em>: <em>"Each tooth of the gear is shaped by a special machine called a hobbing machine."</em></div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>3.</strong> ¿Para qué se hacen agujeros en el centro del engranaje?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-3">Para poder unirlo a un eje (axle): <em>"so it can be attached to an axle."</em></div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>4.</strong> ¿Quién revisa el engranaje al final del proceso?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-4">Un técnico de calidad: <em>"each gear is measured with a caliper and is inspected by a quality technician."</em></div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>5.</strong> Inferencia: ¿qué pasaría si los dientes no fueran exactamente iguales?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-5">El engranaje no se movería suavemente y dañaría la máquina. El texto dice: <em>"The teeth must be exactly equal, so the surface is ground until it is smooth."</em></div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>6.</strong> Identifica 5 verbos en Passive Voice del texto y escríbelos.</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-6">Ejemplos: <em>is made, is selected, is heated, is cast, is cut, is shaped, is ground, are drilled, is polished, is measured, is inspected, is packed, is sent, is checked</em>. Todos siguen la estructura <strong>is/are + past participle</strong>.</div>
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>🗣 Actividad 7 — Oral practice en parejas</h4>
+        <p>Con el flowchart como apoyo visual, describan el proceso completo en voz alta.</p>
+        <ol class="task-steps">
+            <li><strong>Estudiante A</strong> describe los pasos 1 a 5 (selected → ground).</li>
+            <li><strong>Estudiante B</strong> describe los pasos 6 a 9 (drilled → sent).</li>
+            <li>Luego intercambian roles. Foco: cada oración debe estar en Passive Voice y usar <em>First, Then, Next, After that, Finally</em> para conectar.</li>
+            <li>El compañero marca con un ✓ cada vez que escuche una pasiva bien formada.</li>
+        </ol>
+    </div>
+
+    <div class="eval-box">
+        <h4>📋 Seguimiento de la clase</h4>
+        <p><strong>Formativa:</strong> el docente observa la práctica oral. Criterios: (1) uso correcto de <em>is/are + past participle</em>, (2) orden lógico de los pasos, (3) conectores de secuencia, (4) vocabulario del proceso.</p>
+    </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header cierre">🟣 Cierre (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
-        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
-        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
-        
+        <h4>🟣 Cierre — Presentación corta + reflexión</h4>
+        <ol class="task-steps">
+            <li><strong>Presentación (10 min):</strong> 2-3 parejas voluntarias describen el proceso completo ante la clase usando el flowchart.</li>
+            <li><strong>Reflexión grupal (5 min):</strong> <em>"Why is Passive Voice so common in technical texts?"</em> El docente recoge ideas y cierra con la respuesta esperada: <em>importa el proceso y el resultado, no quién lo hace</em>.</li>
+        </ol>
+
         <div class="exit-ticket">
-            <h5>Exit ticket prompts</h5>
-            <ul><li>Write one sentence that summarizes the main idea of the text.</li><li>Use one glossary term and one language structure from the class in a new sentence.</li><li>Explain what detail or instruction would help you repeat the task more safely next time.</li></ul>
+            <h5>🎫 Exit ticket</h5>
+            <ul>
+                <li>Escribe 2 oraciones en Passive Voice describiendo cualquier paso del proceso de fabricación del engranaje.</li>
+                <li>Subraya el sujeto, el auxiliar y el past participle en cada oración.</li>
+            </ul>
         </div>
-        
     </div>
-    </div>
+            </div>
         </div>
 
         <div class="resource-card">
             <h4>📦 Recursos sugeridos</h4>
-            <p>Recursos: Objeto metálico real, texto con imágenes impreso, flashcards de procesos industriales, flowchart template.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+            <p><strong>Materiales:</strong> un objeto metálico real (tornillo, tuerca, ángulo de acero), texto <em>"From Raw Metal to Finished Product"</em> impreso con imágenes (1 por pareja), flowchart template impreso, flashcards de verbos industriales.</p>
+            <p><strong>Apoyos visuales opcionales:</strong> video corto (60-90 s) sobre fabricación de engranajes; imágenes de cada paso (cast → cut → grind → drill → polish → inspect).</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Diferenciación: estudiantes avanzados pueden añadir una oración con <em>by + agente</em> (ej: <em>"The teeth are shaped by a hobbing machine."</em>).</p>
         </div>
 
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 1° Medio · Unidad 2 · Clase 2.</p>
     </div>
 
     <script>
