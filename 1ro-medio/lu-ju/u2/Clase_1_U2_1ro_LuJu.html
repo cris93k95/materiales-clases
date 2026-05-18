@@ -56,6 +56,22 @@
         .exit-ticket ul { margin-left: 18px; }
         .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
         .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
+        /* Color coding Passive Voice */
+        .pv-subject { background: #fef3c7; color: #92400e; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+        .pv-aux { background: #dbeafe; color: #1e40af; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .pv-pp { background: #dcfce7; color: #166534; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .pv-agent { background: #fce7f3; color: #9d174d; padding: 1px 5px; border-radius: 4px; font-style: italic; }
+        .pv-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; font-size: 0.82rem; }
+        .pv-legend span { padding: 3px 9px; border-radius: 999px; font-weight: 600; }
+        /* Sounds in focus */
+        .sounds-box { border: 1px solid #fbcfe8; background: #fdf2f8; border-radius: 14px; padding: 18px; margin-top: 16px; }
+        .sounds-box h4 { color: #9d174d; margin-bottom: 10px; }
+        .sounds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+        .sound-card { background: white; border: 1px solid #fbcfe8; border-radius: 12px; padding: 12px 14px; }
+        .sound-ipa { font-size: 1.4rem; color: #be185d; font-weight: 800; margin-bottom: 4px; }
+        .sound-name { font-size: 0.85rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+        .sound-examples { font-size: 0.92rem; color: #1f2937; }
+        .sound-tip { font-size: 0.82rem; color: #6b7280; margin-top: 6px; font-style: italic; }
         @media (max-width: 720px) {
             .hero h1 { font-size: 1.55rem; }
             .page { padding: 16px 12px 28px; }
@@ -127,37 +143,43 @@
         <div class="focus-grid">
             <div class="focus-card">
                 <h5>Passive Voice — Present Simple</h5>
-                <p>Estructura: <strong>Subject + is / are + past participle</strong>. Se usa para procesos que ocurren de forma regular o estandarizada.</p>
+                <p>Estructura: <span class="pv-subject">Subject</span> + <span class="pv-aux">is / are</span> + <span class="pv-pp">past participle</span>. Se usa para procesos que ocurren de forma regular o estandarizada.</p>
+                <div class="pv-legend">
+                    <span class="pv-subject">Sujeto</span>
+                    <span class="pv-aux">Auxiliar (is/are)</span>
+                    <span class="pv-pp">Past participle</span>
+                    <span class="pv-agent">by + agente (opcional)</span>
+                </div>
                 <div class="focus-subtitle">Ejemplos por especialidad</div>
                 <ul>
-                    <li><em>Cars <strong>are assembled</strong> in factories.</em> (Automotriz)</li>
-                    <li><em>The oil <strong>is changed</strong> every 5,000 km.</em> (Automotriz)</li>
-                    <li><em>Steel <strong>is heated</strong> to 1,500°C.</em> (Industrial)</li>
-                    <li><em>Wires <strong>are connected</strong> to the circuit breaker.</em> (Electricidad)</li>
-                    <li><em>Components <strong>are soldered</strong> to the PCB.</em> (Electrónica)</li>
-                    <li><em>The file <strong>is prepared</strong> for printing.</em> (Gráfica)</li>
+                    <li><span class="pv-subject">Cars</span> <span class="pv-aux">are</span> <span class="pv-pp">assembled</span> in factories. (Automotriz)</li>
+                    <li><span class="pv-subject">The oil</span> <span class="pv-aux">is</span> <span class="pv-pp">changed</span> every 5,000 km. (Automotriz)</li>
+                    <li><span class="pv-subject">Steel</span> <span class="pv-aux">is</span> <span class="pv-pp">heated</span> to 1,500°C. (Industrial)</li>
+                    <li><span class="pv-subject">Wires</span> <span class="pv-aux">are</span> <span class="pv-pp">connected</span> to the circuit breaker. (Electricidad)</li>
+                    <li><span class="pv-subject">Components</span> <span class="pv-aux">are</span> <span class="pv-pp">soldered</span> to the PCB. (Electrónica)</li>
+                    <li><span class="pv-subject">The file</span> <span class="pv-aux">is</span> <span class="pv-pp">prepared</span> for printing. (Gráfica)</li>
                 </ul>
                 <div class="focus-subtitle">Sentence frames</div>
                 <ul>
-                    <li>The ___ <strong>is</strong> ___ed before ...</li>
-                    <li>The pieces <strong>are</strong> ___ed together so that ...</li>
-                    <li>At the end, the result <strong>is</strong> checked.</li>
+                    <li><span class="pv-subject">The ___</span> <span class="pv-aux">is</span> <span class="pv-pp">___ed</span> before ...</li>
+                    <li><span class="pv-subject">The pieces</span> <span class="pv-aux">are</span> <span class="pv-pp">___ed</span> together so that ...</li>
+                    <li>At the end, <span class="pv-subject">the result</span> <span class="pv-aux">is</span> <span class="pv-pp">checked</span>.</li>
                 </ul>
             </div>
 
             <div class="focus-card">
                 <h5>Passive Voice — Past Simple</h5>
-                <p>Estructura: <strong>Subject + was / were + past participle</strong>. Se usa para procesos que ya terminaron o para reportar lo que se hizo.</p>
+                <p>Estructura: <span class="pv-subject">Subject</span> + <span class="pv-aux">was / were</span> + <span class="pv-pp">past participle</span>. Se usa para procesos que ya terminaron o para reportar lo que se hizo.</p>
                 <div class="focus-subtitle">Ejemplos</div>
                 <ul>
-                    <li><em>The engine <strong>was repaired</strong> yesterday.</em></li>
-                    <li><em>The circuits <strong>were tested</strong> last week.</em></li>
-                    <li><em>The pieces <strong>were welded</strong> together by the technician.</em></li>
+                    <li><span class="pv-subject">The engine</span> <span class="pv-aux">was</span> <span class="pv-pp">repaired</span> yesterday.</li>
+                    <li><span class="pv-subject">The circuits</span> <span class="pv-aux">were</span> <span class="pv-pp">tested</span> last week.</li>
+                    <li><span class="pv-subject">The pieces</span> <span class="pv-aux">were</span> <span class="pv-pp">welded</span> together <span class="pv-agent">by the technician</span>.</li>
                 </ul>
                 <div class="focus-subtitle">¿Cuándo agregar "by + agente"?</div>
                 <ul>
-                    <li>Solo si la persona o equipo es realmente importante: <em>"The car was designed <strong>by</strong> a Chilean engineer."</em></li>
-                    <li>Si no aporta información clave, lo omitimos: <em>"The car is assembled in Brazil."</em></li>
+                    <li>Solo si la persona o equipo es realmente importante: <span class="pv-subject">The car</span> <span class="pv-aux">was</span> <span class="pv-pp">designed</span> <span class="pv-agent">by a Chilean engineer</span>.</li>
+                    <li>Si no aporta información clave, lo omitimos: <span class="pv-subject">The car</span> <span class="pv-aux">is</span> <span class="pv-pp">assembled</span> in Brazil.</li>
                 </ul>
             </div>
         </div>
@@ -183,6 +205,32 @@
     <div class="task-box">
         <h4>📚 Actividad 4 — Vocabulary for the reading</h4>
         <p>Repasa estas palabras antes de leer. Aparecen en el texto <em>How a Car Is Assembled</em>.</p>
+
+        <div class="sounds-box">
+            <h4>🔊 Sounds in focus — sonidos del inglés técnico</h4>
+            <p style="font-size:0.92rem; color:#475569;">Estos tres sonidos aparecen en el vocabulario y en la lectura. No existen exactamente en español: presta atención a cómo se producen antes de leer.</p>
+            <div class="sounds-grid">
+                <div class="sound-card">
+                    <div class="sound-ipa">/ʃ/</div>
+                    <div class="sound-name">sonido "sh"</div>
+                    <div class="sound-examples"><em>chassis</em>, <em>shape</em>, <em>washed</em>, <em>finish</em></div>
+                    <div class="sound-tip">Aire continuo entre los dientes. Como pedir silencio: <em>“shhh…”</em>.</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/tʃ/</div>
+                    <div class="sound-name">sonido "ch"</div>
+                    <div class="sound-examples"><em>check</em>, <em>chain</em>, <em>quality check</em>, <em>technician</em></div>
+                    <div class="sound-tip">Igual que la "ch" en español de <em>chao</em>. Corto y seco.</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/θ/</div>
+                    <div class="sound-name">sonido "th" sordo</div>
+                    <div class="sound-examples"><em>thin</em>, <em>thick</em>, <em>thread</em>, <em>three</em></div>
+                    <div class="sound-tip">La punta de la lengua toca los dientes superiores y sale aire (no es "t" ni "s").</div>
+                </div>
+            </div>
+        </div>
+
         <div class="glossary-grid">
             <div class="vocab-card"><div class="word">to assemble</div><div class="meaning">unir todas las piezas para formar el producto final</div><div class="pronunciation">Pron.: a-SEM-bol</div></div>
             <div class="vocab-card"><div class="word">frame / chassis</div><div class="meaning">estructura base sobre la que se construye el auto</div><div class="pronunciation">Pron.: FREIM / CHA-sis</div></div>
