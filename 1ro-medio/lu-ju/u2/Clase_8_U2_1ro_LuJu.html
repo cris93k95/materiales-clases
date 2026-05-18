@@ -3,81 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 8 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <title>Clase 8 — Unidad 2 — 1° Medio — Automation in Chilean Industry</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
         .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero { background: linear-gradient(135deg, #047857, #065f46); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(4, 120, 87, 0.18); }
         .hero h1 { font-size: 2rem; margin-bottom: 6px; }
         .hero p { color: rgba(255,255,255,0.88); }
         .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
         .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
         .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
         .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #047857; }
+        .objective-card h2 { color: #047857; font-size: 1.05rem; margin-bottom: 8px; }
         .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
         .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
+        .desarrollo { background: #047857; }
         .cierre { background: #7c3aed; }
         .section-body { padding: 20px 22px 22px; }
         .section-body ul { margin-left: 20px; }
         .section-body li { margin-bottom: 8px; }
-        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+        .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+        .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
         .activity-card p { margin-bottom: 10px; }
         .task-steps { margin-left: 20px; }
         .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
         .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card { background: white; border: 1px solid #bbf7d0; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #047857; margin-bottom: 8px; font-size: 0.98rem; }
         .focus-card ul { margin-left: 18px; }
         .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
         .reading-box p { margin-bottom: 10px; }
         .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #d1fae5; color: #047857; padding: 8px 12px; font-weight: 700; cursor: pointer; }
         .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
         .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.92rem; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; vertical-align: top; }
+        .activity-table th { background: #d1fae5; color: #064e3b; }
         .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
         .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
         .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
         .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .resource-card h4 { color: #047857; margin-bottom: 8px; }
         .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        /* Pro/Anti color coding */
+        .pro { background: #d1fae5; color: #065f46; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .anti { background: #fee2e2; color: #b91c1c; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; font-size: 0.82rem; }
+        .legend span { padding: 3px 9px; border-radius: 999px; font-weight: 600; }
+        .sounds-box { border: 1px solid #bbf7d0; background: #ecfdf5; border-radius: 14px; padding: 18px; margin-top: 16px; }
+        .sounds-box h4 { color: #047857; margin-bottom: 10px; }
+        .sounds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+        .sound-card { background: white; border: 1px solid #bbf7d0; border-radius: 12px; padding: 12px 14px; }
+        .sound-ipa { font-size: 1.4rem; color: #047857; font-weight: 800; margin-bottom: 4px; }
+        .sound-name { font-size: 0.85rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+        .sound-examples { font-size: 0.92rem; color: #1f2937; }
+        .sound-tip { font-size: 0.82rem; color: #6b7280; margin-top: 6px; font-style: italic; }
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 10px; }
+        .glossary-card { background: white; border: 1px solid #d1fae5; border-radius: 10px; padding: 10px 12px; }
+        .glossary-card strong { color: #047857; }
+        .glossary-card .pron { color: #6b7280; font-style: italic; font-size: 0.88rem; }
+        .debate-card { background: white; border-left: 5px solid #047857; border-radius: 10px; padding: 14px 16px; margin: 14px 0; }
+        .debate-card.anti-card { border-left-color: #b91c1c; }
+        @media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+        @media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
     </style>
 </head>
 <body>
     <div class="page">
         <div class="hero">
             <h1>Clase 8 — Unidad 2</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · automation, robot, sensor, PLC (Programmable Logic Controller), conveyor belt, production line, efficiency,...</p>
+            <p>1° Medio — Inglés General (Lu+Ju) · Automation in Chilean industry — Reading + mini-debate</p>
             <div class="meta">
-                <span>🎯 Recolectar pasos y vocabulario clave</span>
+                <span>🎯 Comprender un texto sobre automatización y discutir sus implicaciones</span>
                 <span>📘 OA1 · OA9 · OA7</span>
-                <span>🗂 Clase 8</span>
-                <span>🎤 Trabajo oral de cierre semestral · Etapa 2/5</span>
-                <span>🧩 Clase de trabajo</span>
+                <span>🗂 Clase 8 — Unidad 2</span>
+                <span>🗓 Semana 13 · mayo/junio</span>
+                <span>🧩 Vocabulary + reading + mini-debate</span>
             </div>
         </div>
 
@@ -87,181 +93,234 @@
 
         <div class="objective-card">
             <h2>Objetivo de la clase</h2>
-            <p>Comprender un texto sobre automatización industrial y discutir sus implicaciones comparando prácticas tradicionales con modernas.</p>
+            <p>Comprender un texto sobre <strong>automatización industrial en Chile</strong> y discutir oralmente sus ventajas y desventajas comparando prácticas tradicionales con modernas, usando vocabulario técnico y conectores.</p>
         </div>
 
         <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-header inicio">🟢 Inicio (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to automation, robot, sensor, PLC (Programmable Logic Controller), conveyor belt, production line, efficiency, precision, quality control, maintenance, downtime, production rate.</li><li>Recuerda la idea central de la clase pasada: Comprender y utilizar conectores de contraste y causa-efecto para describir problemas y...</li><li>Predict which tools, risks, or key ideas may appear when working with automation, robot, sensor, PLC (Programmable Logic Controller), conveyor belt, production line, efficiency, precision, quality control, maintenance, downtime, production rate in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Comprender y utilizar conectores de contraste y causa-efecto para describir problemas y...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
-    <div class="review-box">
-        <h4>🎤 Ruta del trabajo oral</h4>
-        <p><strong>Trabajo oral de cierre semestral</strong> · Etapa 2/5 · Entrega prevista: primera semana de junio.</p>
-        <p><strong>Meta de hoy:</strong> Extraer pasos, datos y vocabulario útil desde textos, diagramas o fichas.</p>
-        <p><strong>Producto esperado:</strong> Banco de evidencias con pasos, especificaciones y palabras clave.</p>
-        <ul><li>Choose one process, machine, or mechanism connected to workshop practice.</li><li>Explain materials, components, steps, and one relevant safety point.</li><li>Use passive voice, relative clauses, and at least six technical words.</li><li>Close with one practical conclusion about why the process matters.</li></ul>
+        <h4>🎥 Actividad 1 — Video: una fábrica automatizada</h4>
+        <p>El docente muestra un video corto (2-3 min) de una fábrica automatizada con robots (sugerencia: <em>"How cars are made — Factory tour"</em> en YouTube; basta con un fragmento sin audio si es necesario).</p>
+        <p>Mientras ven el video, los estudiantes responden en silencio en su cuaderno:</p>
+        <ul>
+            <li><em>"What did you see?"</em></li>
+            <li><em>"Are there any humans? Where?"</em></li>
+            <li><em>"What are the robots doing?"</em></li>
+        </ul>
+        <p>Después de 1-2 minutos, 4 voluntarios comparten su respuesta. El docente escribe en la pizarra, grande:</p>
+        <p style="text-align:center; font-size:1.1rem; padding: 10px; background:#ecfdf5; border-radius: 8px; color:#065f46;"><strong>"Automation: is it good or bad for workers?"</strong></p>
+        <p>Esta pregunta queda en la pizarra durante toda la clase y se retoma al cierre.</p>
     </div>
-    
-    </div>
-    </div>
+            </div>
         </div>
 
         <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-header desarrollo">🟢 Desarrollo (60 min)</div>
             <div class="section-body">
-                
+
     <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <h4>📚 Actividad 2 — Vocabulary: la fábrica moderna</h4>
+
+        <div class="sounds-box">
+            <h4>🔊 Sounds in focus</h4>
+            <p style="font-size:0.92rem; color:#475569;">Sonidos clave para pronunciar bien el vocabulario técnico de esta clase.</p>
+            <div class="sounds-grid">
+                <div class="sound-card">
+                    <div class="sound-ipa">/ʃ/</div>
+                    <div class="sound-name">"sh"</div>
+                    <div class="sound-examples"><em>machine</em>, <em>production</em>, <em>precision</em>, <em>specialty</em></div>
+                    <div class="sound-tip">Sonido largo y silbante, como cuando pides silencio: "shhh".</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/eɪ/</div>
+                    <div class="sound-name">"a" larga inglesa</div>
+                    <div class="sound-examples"><em>automation</em>, <em>maintenance</em>, <em>rate</em>, <em>safety</em></div>
+                    <div class="sound-tip">Como "ei" en español ("rey"). Atención: <em>automation</em> = "o-to-MEI-shon".</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/aʊ/</div>
+                    <div class="sound-name">diptongo "au"</div>
+                    <div class="sound-examples"><em>down</em>, <em>downtime</em>, <em>about</em>, <em>output</em></div>
+                    <div class="sound-tip">Como "au" en español. <em>Downtime</em> = "DAUN-taim".</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-card"><strong>automation</strong> <span class="pron">(o-to-MEI-shon)</span> — automatización</div>
+            <div class="glossary-card"><strong>robot</strong> <span class="pron">(RO-bot)</span> — robot</div>
+            <div class="glossary-card"><strong>sensor</strong> <span class="pron">(SEN-sor)</span> — sensor</div>
+            <div class="glossary-card"><strong>PLC</strong> <span class="pron">(pi-el-SI)</span> — Programmable Logic Controller (controlador lógico programable)</div>
+            <div class="glossary-card"><strong>conveyor belt</strong> <span class="pron">(kon-VEI-or belt)</span> — cinta transportadora</div>
+            <div class="glossary-card"><strong>production line</strong> <span class="pron">(pro-DAK-shon lain)</span> — línea de producción</div>
+            <div class="glossary-card"><strong>efficiency</strong> <span class="pron">(e-FI-shen-si)</span> — eficiencia</div>
+            <div class="glossary-card"><strong>precision</strong> <span class="pron">(pre-SI-shon)</span> — precisión</div>
+            <div class="glossary-card"><strong>quality control</strong> <span class="pron">(KUO-li-ti kon-TROL)</span> — control de calidad</div>
+            <div class="glossary-card"><strong>maintenance</strong> <span class="pron">(MEIN-te-nans)</span> — mantención</div>
+            <div class="glossary-card"><strong>downtime</strong> <span class="pron">(DAUN-taim)</span> — tiempo de inactividad</div>
+            <div class="glossary-card"><strong>production rate</strong> <span class="pron">(pro-DAK-shon reit)</span> — tasa de producción</div>
+        </div>
+    </div>
+
+    <div class="reading-box">
+        <h4>📖 Actividad 3 — Reading: <em>The Rise of Automation in Chilean Industry</em></h4>
+        <p class="reading-note">Mientras lees, <strong>subraya con VERDE</strong> las ventajas (advantages) y <strong>con ROJO</strong> las desventajas (disadvantages) que se mencionan.</p>
+
+        <p>In the last twenty years, automation <strong>has changed</strong> the way Chilean industry works. Robots, sensors and computerized systems <strong>are now used</strong> in factories from Arica to Punta Arenas. In the automotive sector, for example, parts <strong>are assembled</strong> by robotic arms <span class="pro">because</span> they are faster and more precise than human workers. In modern printing shops, the ink colors <strong>are controlled</strong> by sensors, <span class="pro">so</span> the final image is exactly the same in every copy. Even residential electricians now use programmable systems <span class="pro">to</span> turn lights and heating on and off automatically.</p>
+
+        <p>Automation offers clear advantages. The <strong>production rate</strong> is much higher: a robotic line can produce in one hour what a manual line produces in one day. <strong>Precision</strong> is also better, <span class="pro">because</span> machines do not get tired and do not make mistakes when they are well programmed. <strong>Quality control</strong> improves: cameras and sensors detect defects that a person could miss. <span class="pro">As a result</span>, fewer products are wasted.</p>
+
+        <p><span class="anti">However</span>, automation also brings problems. Many jobs that <strong>were done</strong> by people are now done by machines. <span class="anti">Although</span> new jobs appear (technicians, programmers, maintenance staff), workers often need to learn new skills quickly. Older workers, in particular, may feel that their experience is no longer valued. <span class="anti">On the other hand</span>, automated systems are expensive: the machines, the software and the <strong>maintenance</strong> have a high cost, and any <strong>downtime</strong> means a big loss of money.</p>
+
+        <p>In Chile, the impact <strong>is being seen</strong> in many sectors. Mining companies in the north use automated trucks that are operated from a control room in Santiago. <span class="anti">While</span> these trucks are safer for the operators, they reduce the number of drivers needed on site. In factories around Santiago and Concepción, packaging <strong>is now done</strong> by machines that work 24 hours a day. <span class="pro">Therefore</span>, production grows, <span class="anti">but</span> some workers are reassigned or trained for new tasks.</p>
+
+        <p>The future of Chilean industry will not be 100% automated, <span class="anti">but</span> it will require workers who understand both the technical specialty <strong>and</strong> the basics of English. <span class="pro">Because</span> most manuals, sensors and software come from other countries, the ability to read and communicate in English <strong>is becoming</strong> as important as the technical skill itself.</p>
+    </div>
+
+    <div class="task-box">
+        <h4>🗂 Actividad 4 — Advantages vs. Disadvantages</h4>
+        <p>Completa la tabla con la información del texto.</p>
+        <table class="activity-table">
+            <tr><th>Aspecto</th><th class="pro">Advantages (PRO)</th><th class="anti">Disadvantages (ANTI)</th></tr>
+            <tr><td>Production rate</td><td>______</td><td>______</td></tr>
+            <tr><td>Precision &amp; quality</td><td>______</td><td>______</td></tr>
+            <tr><td>Workers</td><td>______</td><td>______</td></tr>
+            <tr><td>Cost</td><td>______</td><td>______</td></tr>
+        </table>
+        <button class="toggle-btn" onclick="toggleAnswer('answer-table', this)">Ver clave</button>
+        <div class="answer-box" id="answer-table">
+            <strong>Production rate:</strong> PRO — mucho más alta (1 hora ≈ 1 día de trabajo manual) · ANTI — exige mantención constante; si hay <em>downtime</em>, la producción cae.<br>
+            <strong>Precision &amp; quality:</strong> PRO — máquinas no se cansan, mejor control de calidad por sensores · ANTI — depende de buena programación; un error de software afecta toda la línea.<br>
+            <strong>Workers:</strong> PRO — aparecen nuevos cargos (técnicos, programadores, mantención) · ANTI — desaparecen puestos manuales; trabajadores deben aprender nuevas habilidades; los mayores se pueden sentir desvalorizados.<br>
+            <strong>Cost:</strong> PRO — menos desperdicio, menos errores · ANTI — alta inversión inicial (máquinas, software, mantención) y pérdidas grandes en cada <em>downtime</em>.
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>📝 Actividad 5 — Comprehension &amp; inference</h4>
+
+        <div class="question-card">
+            <p><strong>1.</strong> Según el texto, ¿qué pueden detectar las cámaras y sensores que una persona podría no detectar?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-1">Defectos en los productos. La máquina no se cansa y no se distrae, así que mantiene el mismo nivel de control en todos los productos.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>2.</strong> ¿Por qué la automatización es especialmente útil en la minería del norte de Chile?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-2">Porque permite operar camiones desde una sala de control en Santiago, lo cual es más seguro para los operadores (que no están expuestos a las condiciones extremas de la mina).</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>3.</strong> ¿Qué desventaja menciona el texto sobre los trabajadores mayores?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-3">Pueden sentir que su experiencia ya no se valora, porque las nuevas tareas exigen aprender habilidades distintas (software, programación, sensores).</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>4.</strong> ¿Por qué el texto dice que el inglés se ha vuelto tan importante como la habilidad técnica?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-4">Porque la mayoría de los manuales, sensores y software vienen de otros países (en inglés). Leer y comunicarse en inglés permite trabajar con esa tecnología.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>5.</strong> Inferencia: ¿qué significa que el futuro de la industria chilena <em>"no será 100% automatizado"</em>?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-5">Que las máquinas no van a reemplazar a todos los trabajadores. Habrá tareas que seguirán siendo humanas (decisiones, mantención, supervisión), pero combinadas con tecnología y manejo de inglés técnico.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>6.</strong> Identifica 2 conectores de causa-efecto y 2 de contraste que aparecen en el texto.</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-6">Causa-efecto: <em>because, so, as a result, therefore</em>. Contraste: <em>however, although, on the other hand, while, but</em>.</div>
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>🗣 Actividad 6 — Mini-debate: <em>Automation in Chilean industry</em></h4>
+        <p>El curso se divide en <strong>2 grupos</strong>:</p>
         <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The tool kit is checked before the task begins.</li><li>The checklist gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
+            <div class="focus-card" style="border-color:#bbf7d0;">
+                <h5><span class="pro">PRO-automation</span></h5>
+                <ul>
+                    <li>Argumenta a favor de la automatización en Chile.</li>
+                    <li>Usa vocabulario: <em>efficiency, precision, quality control, production rate, safety</em>.</li>
+                    <li>Usa conectores: <em>because, so, therefore, as a result</em>.</li>
+                </ul>
             </div>
+            <div class="focus-card" style="border-color:#fecaca;">
+                <h5><span class="anti">ANTI-automation</span></h5>
+                <ul>
+                    <li>Argumenta en contra de la automatización masiva.</li>
+                    <li>Usa vocabulario: <em>jobs, workers, downtime, cost, maintenance, skills</em>.</li>
+                    <li>Usa conectores: <em>however, although, on the other hand, while, but</em>.</li>
+                </ul>
             </div>
+        </div>
+        <p style="margin-top:12px;"><strong>Preparación (10 min):</strong> cada grupo escribe <strong>3 argumentos</strong> en una hoja, en oraciones completas, usando al menos 2 palabras del vocabulario y 2 conectores.</p>
+
+        <div class="debate-card">
+            <strong>Modelos PRO:</strong>
+            <ul>
+                <li><em>"Automation increases the production rate <span class="pro">because</span> machines do not get tired."</em></li>
+                <li><em>"Quality control improves with sensors, <span class="pro">so</span> fewer products are wasted."</em></li>
+            </ul>
+        </div>
+        <div class="debate-card anti-card">
+            <strong>Modelos ANTI:</strong>
+            <ul>
+                <li><em>"Many workers lose their jobs. <span class="anti">However</span>, the new jobs require different skills."</em></li>
+                <li><em>"<span class="anti">Although</span> automation is precise, the maintenance cost is very high."</em></li>
+            </ul>
+        </div>
+
+        <p style="margin-top:10px;"><strong>Mini-debate (15 min):</strong> cada grupo presenta sus 3 argumentos (1-2 voceros por equipo). El otro grupo puede hacer <strong>una pregunta de réplica</strong>. El docente modera y anota en la pizarra los conectores usados.</p>
     </div>
-    
 
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">process</div>
-                <div class="meaning">a sequence of actions used to complete a task</div>
-                <div class="pronunciation">Pron.: PRO-ses</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">component</div>
-                <div class="meaning">one part of a machine, circuit, or larger system</div>
-                <div class="pronunciation">Pron.: kom-POU-nent</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="pronunciation">Pron.: TUL</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">measure</div>
-                <div class="meaning">to find size, amount, or distance accurately</div>
-                <div class="pronunciation">Pron.: ME-zher</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">connect</div>
-                <div class="meaning">to join parts so the system can work correctly</div>
-                <div class="pronunciation">Pron.: ko-NEKT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">repair</div>
-                <div class="meaning">to fix something that is damaged or not working</div>
-                <div class="pronunciation">Pron.: ri-PAIR</div>
-            </div>
-            </div>
-                </div>
+    <div class="eval-box">
+        <h4>📋 Seguimiento de la clase</h4>
+        <p><strong>Formativa:</strong> el docente observa el debate y completa una rúbrica simple por equipo: (1) uso de al menos 2 palabras del vocabulario por argumento, (2) uso correcto de al menos 1 conector por argumento, (3) coherencia del argumento con el rol PRO/ANTI, (4) escucha y réplica al otro grupo.</p>
+    </div>
 
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Model — Recolectar pasos y vocabulario clave</h4>
-                    <p class="reading-note">Modelo guiado A2 para la etapa 2/5 del trabajo oral de cierre semestral: Extraer pasos, datos y vocabulario útil desde textos, diagramas o fichas.</p>
-                    <p>After choosing the topic, the student reads a short manual, diagram, or data sheet to identify the order of actions in the process.</p><p>Important notes include the main components, one measurement or technical specification, and the safety detail that cannot be forgotten during the explanation.</p><p>The vocabulary bank grows with words that will appear in the oral task, especially terms linked to tool kit, checklist, and the workshop routine.</p><p>The student groups information into beginning, middle, and final result so the explanation will sound organized instead of improvised.</p><p>At this stage, the goal is not to memorize a script yet, but to collect solid evidence that can support the speaking task later.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What task or problem is described in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text focuses on collecting steps, technical details, and vocabulary that will support the oral task.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What happens before the main procedure starts?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before speaking, the student reads sources and organizes the information into a logical order.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">Important details include components, a technical specification, a safety point, and words related to tool kit and checklist.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The language focus is on selecting precise information that can later be explained clearly in English.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">At the end, the student has an evidence bank instead of only a general idea.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Good oral work depends on evidence taken from texts, diagrams, and technical notes.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Ruta del trabajo oral</h4>
-                    
-            <p><strong>Trabajo oral de cierre semestral</strong> · Etapa 2/5</p>
-            <p><strong>Prompt:</strong> <em>Describe a technical process or mechanism from workshop practice, using clear sequence, technical vocabulary, and one safety detail.</em></p>
-            <ol class="task-steps"><li>Extract the main steps, one technical specification, and one safety detail from the text or diagram.</li><li>Build an evidence bank with vocabulary you will need in the oral task.</li><li>Check with a partner that the sequence is logical and complete.</li></ol>
-            <p><strong>Producto esperado:</strong> Banco de evidencias con pasos, especificaciones y palabras clave.</p>
-            <ul><li>Choose one process, machine, or mechanism connected to workshop practice.</li><li>Explain materials, components, steps, and one relevant safety point.</li><li>Use passive voice, relative clauses, and at least six technical words.</li><li>Close with one practical conclusion about why the process matters.</li></ul>
-            
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve. Evidencia de etapa: Banco de evidencias con pasos, especificaciones y palabras clave.</p>
-                </div>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-header cierre">🟣 Cierre (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🟣 Cierre — Oral Project Checkpoint</h4>
-        <p>Close the lesson by checking progress on the oral task and defining the next step in the sequence.</p>
-        <ol class="task-steps"><li>Review your notes and identify the strongest contribution from today's stage.</li><li>Compare your progress with a partner before writing your final exit ticket.</li><li>Complete the three checkpoint prompts below.</li></ol>
-        
-            <div class="exit-ticket">
-                <h5>Exit ticket prompts</h5>
-                <ul><li>Write two pieces of evidence or technical details you collected today.</li><li>Identify the vocabulary item that will be most useful in your presentation.</li><li>Explain what information is still missing before you can build the oral outline.</li></ul>
+        <h4>🟣 Cierre — Reflexión personal y conexión</h4>
+        <p>El docente vuelve a la pregunta inicial de la pizarra y plantea:</p>
+        <p style="text-align:center; font-size:1.05rem; padding: 10px; background:#ecfdf5; border-radius: 8px; color:#065f46;"><strong>"Do you think automation will change YOUR specialty? How?"</strong></p>
+        <p>Cada estudiante escribe <strong>3 oraciones</strong> de opinión personal en su cuaderno, usando obligatoriamente al menos uno de estos inicios:</p>
+        <ul>
+            <li><em>"I believe automation will…"</em></li>
+            <li><em>"In my opinion, in my specialty…"</em></li>
+            <li><em>"<span class="anti">Although</span> automation is useful, …"</em></li>
+        </ul>
+        <p>4-5 voluntarios comparten su quick write. El docente cierra con una idea breve:</p>
+        <p style="font-style:italic; color:#475569;"><em>"Understanding these changes in English will help you adapt to the modern workplace, no matter the specialty."</em></p>
+
+        <div class="exit-ticket">
+            <h5>🎫 Exit ticket</h5>
+            <ul>
+                <li>Escribe <strong>1 ventaja</strong> y <strong>1 desventaja</strong> de la automatización, cada una en una oración con un conector distinto.</li>
+                <li>Subraya el conector y entrega tu hoja al salir.</li>
+            </ul>
+        </div>
+    </div>
             </div>
-            
-    </div>
-    </div>
         </div>
 
         <div class="resource-card">
             <h4>📦 Recursos sugeridos</h4>
-            <p>Recursos: Video de fábrica automatizada, texto impreso, tarjetas para debate (PRO/ANTI), pizarra para argumentos. Producto de avance: Banco de evidencias con pasos, especificaciones y palabras clave.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+            <p><strong>Materiales:</strong> video corto de fábrica automatizada (proyector o celular), texto impreso (1 copia por estudiante), tarjetas PRO/ANTI para repartir grupos, pizarra para listar argumentos y conectores, marcadores verde y rojo para subrayar.</p>
+            <p><strong>Apoyos visuales opcionales:</strong> imágenes de líneas de producción automatizadas (auto, imprenta, minería), foto de una sala de control de mina, foto de un PLC.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Diferenciación: estudiantes avanzados redactan 5 argumentos y usan al menos 3 conectores distintos. Estudiantes con apoyo trabajan con un banco de oraciones modelo PRO/ANTI y eligen 3 para defender.</p>
         </div>
 
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 1° Medio · Unidad 2 · Clase 8.</p>
     </div>
 
     <script>
