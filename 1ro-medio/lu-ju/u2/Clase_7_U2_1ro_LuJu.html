@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 7 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <title>Clase 7 — Unidad 2 — 1° Medio — Connectors &amp; Technical Incident Reports</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
         .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero { background: linear-gradient(135deg, #1e40af, #312e81); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(30, 64, 175, 0.18); }
         .hero h1 { font-size: 2rem; margin-bottom: 6px; }
         .hero p { color: rgba(255,255,255,0.88); }
         .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
@@ -17,8 +17,8 @@
         .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
         .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
         .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #1e40af; }
+        .objective-card h2 { color: #1e40af; font-size: 1.05rem; margin-bottom: 8px; }
         .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
         .inicio { background: #2e7d32; }
         .desarrollo { background: #1565c0; }
@@ -31,53 +31,56 @@
         .activity-card p { margin-bottom: 10px; }
         .task-steps { margin-left: 20px; }
         .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
         .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card { background: white; border: 1px solid #c7d2fe; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #1e40af; margin-bottom: 8px; font-size: 0.98rem; }
         .focus-card ul { margin-left: 18px; }
         .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
         .reading-box p { margin-bottom: 10px; }
         .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1e40af; padding: 8px 12px; font-weight: 700; cursor: pointer; }
         .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
         .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.92rem; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; vertical-align: top; }
+        .activity-table th { background: #dbeafe; color: #1e3a8a; }
         .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
         .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
         .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
         .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .resource-card h4 { color: #1e40af; margin-bottom: 8px; }
         .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        /* Connector color coding */
+        .conn-ce { background: #dbeafe; color: #1e40af; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .conn-ct { background: #fee2e2; color: #b91c1c; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .conn-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; font-size: 0.82rem; }
+        .conn-legend span { padding: 3px 9px; border-radius: 999px; font-weight: 600; }
+        .sounds-box { border: 1px solid #c7d2fe; background: #eef2ff; border-radius: 14px; padding: 18px; margin-top: 16px; }
+        .sounds-box h4 { color: #1e40af; margin-bottom: 10px; }
+        .sounds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+        .sound-card { background: white; border: 1px solid #c7d2fe; border-radius: 12px; padding: 12px 14px; }
+        .sound-ipa { font-size: 1.4rem; color: #1e40af; font-weight: 800; margin-bottom: 4px; }
+        .sound-name { font-size: 0.85rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+        .sound-examples { font-size: 0.92rem; color: #1f2937; }
+        .sound-tip { font-size: 0.82rem; color: #6b7280; margin-top: 6px; font-style: italic; }
+        .report-card { background: white; border-left: 5px solid #1e40af; border-radius: 10px; padding: 14px 16px; margin: 14px 0; }
+        .report-card h5 { color: #1e3a8a; margin-bottom: 8px; }
+        .report-card .report-meta { font-size: 0.78rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+        @media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+        @media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; } }
     </style>
 </head>
 <body>
     <div class="page">
         <div class="hero">
             <h1>Clase 7 — Unidad 2</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · unir oraciones con el conector correcto (10 ejercicios)</p>
+            <p>1° Medio — Inglés General (Lu+Ju) · Connectors of cause-effect &amp; contrast — Technical incident reports</p>
             <div class="meta">
-                <span>🎯 Definir el proceso del trabajo oral</span>
+                <span>🎯 Describir problemas y soluciones técnicas con conectores</span>
                 <span>📘 OA8 · OA9</span>
-                <span>🗂 Clase 7</span>
-                <span>🎤 Trabajo oral de cierre semestral · Etapa 1/5</span>
-                <span>🧩 Clase de trabajo</span>
+                <span>🗂 Clase 7 — Unidad 2</span>
+                <span>🗓 Semana 13 · mayo</span>
+                <span>🧩 Grammar focus + 3 reportes + escritura en parejas</span>
             </div>
         </div>
 
@@ -87,181 +90,260 @@
 
         <div class="objective-card">
             <h2>Objetivo de la clase</h2>
-            <p>Comprender y utilizar conectores de contraste y causa-efecto para describir problemas y soluciones en contextos técnicos.</p>
+            <p>Comprender y utilizar <strong>conectores de causa-efecto y contraste</strong> para describir problemas, causas, acciones y resultados en informes técnicos.</p>
         </div>
 
         <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-header inicio">🟢 Inicio (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to unir oraciones con el conector correcto (10 ejercicios).</li><li>Recuerda la idea central de la clase pasada: Comprender un texto sobre el proceso de impresión offset, aplicando estrategias de...</li><li>Predict which tools, risks, or key ideas may appear when working with unir oraciones con el conector correcto (10 ejercicios) in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Comprender un texto sobre el proceso de impresión offset, aplicando estrategias de...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
-    <div class="review-box">
-        <h4>🎤 Ruta del trabajo oral</h4>
-        <p><strong>Trabajo oral de cierre semestral</strong> · Etapa 1/5 · Entrega prevista: primera semana de junio.</p>
-        <p><strong>Meta de hoy:</strong> Elegir un proceso o mecanismo y fijar el foco de la explicación.</p>
-        <p><strong>Producto esperado:</strong> Ficha de planificación con tema, propósito y vocabulario base.</p>
-        <ul><li>Choose one process, machine, or mechanism connected to workshop practice.</li><li>Explain materials, components, steps, and one relevant safety point.</li><li>Use passive voice, relative clauses, and at least six technical words.</li><li>Close with one practical conclusion about why the process matters.</li></ul>
+        <h4>🔎 Actividad 1 — ¿Por qué? y ¿con qué resultado?</h4>
+        <p>El docente escribe en la pizarra una oración corta y la usa como detonante:</p>
+        <p style="text-align:center; font-size:1.1rem; padding: 10px; background:#eef2ff; border-radius: 8px;"><em>"The machine stopped."</em></p>
+        <p>Pregunta al curso (rápido, voluntarios):</p>
+        <ul>
+            <li><em>"WHY did it stop?"</em> (recoge causas)</li>
+            <li><em>"What was the RESULT?"</em> (recoge efectos)</li>
+        </ul>
+        <p>Luego presenta las dos categorías de conectores que se trabajarán hoy:</p>
+        <div class="conn-legend">
+            <span class="conn-ce">Causa-efecto</span>
+            <span class="conn-ct">Contraste</span>
+        </div>
+        <ul>
+            <li><strong>Causa-efecto:</strong> <span class="conn-ce">because</span>, <span class="conn-ce">so</span>, <span class="conn-ce">therefore</span>, <span class="conn-ce">as a result</span>, <span class="conn-ce">so that</span>, <span class="conn-ce">due to</span>.</li>
+            <li><strong>Contraste:</strong> <span class="conn-ct">although</span>, <span class="conn-ct">however</span>, <span class="conn-ct">but</span>, <span class="conn-ct">on the other hand</span>, <span class="conn-ct">even though</span>, <span class="conn-ct">while</span>.</li>
+        </ul>
+        <p style="margin-top:10px;"><strong>Ejemplo modelo combinado:</strong><br>
+        <em>"The machine stopped <span class="conn-ce">because</span> the motor overheated. <span class="conn-ct">However</span>, the operator restarted it after 30 minutes."</em></p>
     </div>
-    
-    </div>
-    </div>
+            </div>
         </div>
 
         <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
             <div class="section-body">
-                
+
     <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <h4>🔠 Actividad 2 — Grammar focus: posición y uso</h4>
+
+        <div class="sounds-box">
+            <h4>🔊 Sounds in focus</h4>
+            <p style="font-size:0.92rem; color:#475569;">Conectores con sonidos que cuesta pronunciar. Practícalos en voz alta antes del reading.</p>
+            <div class="sounds-grid">
+                <div class="sound-card">
+                    <div class="sound-ipa">/ð/</div>
+                    <div class="sound-name">"th" sonoro</div>
+                    <div class="sound-examples"><em>therefore</em>, <em>although</em>, <em>other</em></div>
+                    <div class="sound-tip">Punta de la lengua entre los dientes, vibra (con voz). Parecido a la "d" suave del español "lado".</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/aʊ/</div>
+                    <div class="sound-name">diptongo "au"</div>
+                    <div class="sound-examples"><em>although</em>, <em>however</em>, <em>about</em>, <em>out</em></div>
+                    <div class="sound-tip">Como "au" en español ("auto"): empieza en "a" y termina en "u".</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/w/</div>
+                    <div class="sound-name">"w" inicial</div>
+                    <div class="sound-examples"><em>while</em>, <em>was</em>, <em>worker</em>, <em>warning</em></div>
+                    <div class="sound-tip">Labios redondos como para soplar. No es "v" ni "g". Empieza con sonido de "u".</div>
+                </div>
+            </div>
+        </div>
+
         <div class="focus-grid">
             <div class="focus-card">
-                <h5>Connectors for cause, contrast, and result</h5>
-                <p>Use connectors to show why something happens, how two ideas differ, or what result follows from a decision.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The part was replaced because it was damaged.</li><li>However, the second option required more time.</li><li>As a result, the final system worked more safely.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>___ because ...</li><li>However, ...</li><li>As a result, ...</li></ul>
+                <h5><span class="conn-ce">Causa-efecto</span></h5>
+                <ul>
+                    <li><strong>because</strong> + oración con sujeto y verbo: <em>"It stopped <strong>because</strong> the motor overheated."</em></li>
+                    <li><strong>due to</strong> + sustantivo: <em>"It stopped <strong>due to</strong> overheating."</em></li>
+                    <li><strong>so</strong> conecta dos oraciones: <em>"The motor overheated, <strong>so</strong> the machine stopped."</em></li>
+                    <li><strong>therefore</strong> / <strong>as a result</strong>: van al inicio de la 2.ª oración, con coma. <em>"The motor overheated. <strong>As a result</strong>, the machine stopped."</em></li>
+                    <li><strong>so that</strong> = propósito: <em>"We replaced the part <strong>so that</strong> the machine could restart."</em></li>
+                </ul>
             </div>
+            <div class="focus-card">
+                <h5><span class="conn-ct">Contraste</span></h5>
+                <ul>
+                    <li><strong>but</strong>: conecta dos ideas opuestas en una oración. <em>"It was repaired <strong>but</strong> it failed again."</em></li>
+                    <li><strong>however</strong>: inicio de la 2.ª oración, con coma. <em>"It was repaired. <strong>However</strong>, it failed again."</em></li>
+                    <li><strong>although</strong> / <strong>even though</strong>: al inicio o al medio. <em>"<strong>Although</strong> the system was new, it failed."</em></li>
+                    <li><strong>while</strong>: contraste paralelo. <em>"<strong>While</strong> offset prints in batches, digital prints one by one."</em></li>
+                    <li><strong>on the other hand</strong>: presenta el otro lado. <em>"Digital is fast. <strong>On the other hand</strong>, offset is cheaper for large runs."</em></li>
+                </ul>
             </div>
+        </div>
     </div>
-    
 
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">process</div>
-                <div class="meaning">a sequence of actions used to complete a task</div>
-                <div class="pronunciation">Pron.: PRO-ses</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">component</div>
-                <div class="meaning">one part of a machine, circuit, or larger system</div>
-                <div class="pronunciation">Pron.: kom-POU-nent</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="pronunciation">Pron.: TUL</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">measure</div>
-                <div class="meaning">to find size, amount, or distance accurately</div>
-                <div class="pronunciation">Pron.: ME-zher</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">connect</div>
-                <div class="meaning">to join parts so the system can work correctly</div>
-                <div class="pronunciation">Pron.: ko-NEKT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">repair</div>
-                <div class="meaning">to fix something that is damaged or not working</div>
-                <div class="pronunciation">Pron.: ri-PAIR</div>
-            </div>
-            </div>
-                </div>
+    <div class="task-box">
+        <h4>✍️ Actividad 3 — Une las oraciones con el conector correcto</h4>
+        <p>Reescribe cada par usando un conector apropiado (causa-efecto o contraste).</p>
+        <ol class="task-steps">
+            <li>The fuse blew. The lights went off.</li>
+            <li>The mechanic checked the brakes. He didn't find the problem.</li>
+            <li>The water pump was new. It failed after a week.</li>
+            <li>The thermostat was stuck. The engine overheated.</li>
+            <li>We added more coolant. The temperature stayed high.</li>
+            <li>The cable was damaged. We replaced it.</li>
+            <li>Offset is slow to set up. It is cheaper for large runs.</li>
+            <li>The breaker tripped. The microwave and the kettle were used together.</li>
+        </ol>
+        <button class="toggle-btn" onclick="toggleAnswer('answer-mix', this)">Ver clave</button>
+        <div class="answer-box" id="answer-mix">
+            1. The fuse blew, <span class="conn-ce">so</span> the lights went off.<br>
+            2. The mechanic checked the brakes, <span class="conn-ct">but</span> he didn't find the problem.<br>
+            3. <span class="conn-ct">Although</span> the water pump was new, it failed after a week.<br>
+            4. The engine overheated <span class="conn-ce">because</span> the thermostat was stuck.<br>
+            5. We added more coolant. <span class="conn-ct">However</span>, the temperature stayed high.<br>
+            6. The cable was damaged, <span class="conn-ce">so</span> we replaced it.<br>
+            7. Offset is slow to set up. <span class="conn-ct">On the other hand</span>, it is cheaper for large runs.<br>
+            8. The breaker tripped <span class="conn-ce">because</span> the microwave and the kettle were used together.<br>
+            <em>Otras combinaciones también pueden ser correctas. Lo importante es que el conector exprese bien la relación.</em>
+        </div>
+    </div>
 
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Model — Definir el proceso del trabajo oral</h4>
-                    <p class="reading-note">Modelo guiado A2 para la etapa 1/5 del trabajo oral de cierre semestral: Elegir un proceso o mecanismo y fijar el foco de la explicación.</p>
-                    <p>In the school technical workshop, the student chooses one process or mechanism for the final oral task. The topic must be connected to real practice and easy to explain step by step.</p><p>The first planning card includes the name of the process, one important material, and one useful tool such as the tool kit. It also explains why the process matters for safe work.</p><p>The teacher asks the class to think about audience and purpose: who needs the explanation, and what must that person understand after listening?</p><p>A partner checks whether the topic is clear, realistic, and supported by vocabulary from the unit like process and component.</p><p>By the end of the lesson, the student has a simple topic plan for the June oral task and knows what information must still be collected.</p>
-                </div>
+    <div class="reading-box">
+        <h4>📖 Actividad 4 — Reading: <em>Technical Incident Reports</em></h4>
+        <p class="reading-note">Tres informes breves. Mientras lees, <strong>subraya con AZUL</strong> los conectores de causa-efecto y <strong>con ROJO</strong> los de contraste.</p>
 
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What task or problem is described in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text presents the first stage of the oral task: choosing a process or mechanism connected to workshop practice.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What happens before the main procedure starts?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the full explanation starts, the student defines the topic, audience, and purpose of the oral task.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">Important details include one material, one tool like the tool kit, and vocabulary such as process and component.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The text uses planning language to show that technical speaking needs order and preparation, not improvisation.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">At the end, the student has a clear topic plan and knows what information is still needed.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">A good technical explanation begins with a realistic topic and a clear idea of why the process matters.</div>
-            </div>
-            
-                </div>
+        <div class="report-card">
+            <div class="report-meta">Report #1 · Automotive workshop</div>
+            <h5>Engine failure during routine inspection</h5>
+            <p>A Toyota Hilux <strong>was brought</strong> to the workshop for a routine check. The mechanic noticed an oil leak under the engine. The vehicle was tested, and the oil pressure dropped quickly <span class="conn-ce">because</span> the seal of the oil pan was broken. <span class="conn-ce">As a result</span>, the engine could not be lubricated correctly. The seal <strong>was replaced</strong> and the oil <strong>was changed</strong>. <span class="conn-ct">However</span>, the customer was advised to monitor the oil level for the next two weeks, <span class="conn-ce">since</span> the engine had already worked without enough lubrication for several days.</p>
+        </div>
 
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Ruta del trabajo oral</h4>
-                    
-            <p><strong>Trabajo oral de cierre semestral</strong> · Etapa 1/5</p>
-            <p><strong>Prompt:</strong> <em>Describe a technical process or mechanism from workshop practice, using clear sequence, technical vocabulary, and one safety detail.</em></p>
-            <ol class="task-steps"><li>Choose one process, machine, or mechanism from workshop practice.</li><li>Complete a planning card with topic, purpose, audience, and five key words.</li><li>Explain your choice to a partner in 30 seconds using one opening sentence.</li></ol>
-            <p><strong>Producto esperado:</strong> Ficha de planificación con tema, propósito y vocabulario base.</p>
-            <ul><li>Choose one process, machine, or mechanism connected to workshop practice.</li><li>Explain materials, components, steps, and one relevant safety point.</li><li>Use passive voice, relative clauses, and at least six technical words.</li><li>Close with one practical conclusion about why the process matters.</li></ul>
-            
-                </div>
+        <div class="report-card">
+            <div class="report-meta">Report #2 · Residential electrical installation</div>
+            <h5>Tripped breaker in a kitchen circuit</h5>
+            <p>An electrician <strong>was called</strong> to a house in Maipú. The main breaker in the kitchen tripped every morning when the family used the microwave and the kettle at the same time. The circuit <strong>was inspected</strong> with a multimeter. <span class="conn-ct">Although</span> the wiring was in good condition, the breaker was rated only at 16 A, which was not enough for that load. <span class="conn-ce">Therefore</span>, the breaker <strong>was replaced</strong> by a 20 A one and a new branch circuit <strong>was added</strong> for the microwave. <span class="conn-ct">However</span>, the family was reminded not to connect a heater to the same line.</p>
+        </div>
 
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve. Evidencia de etapa: Ficha de planificación con tema, propósito y vocabulario base.</p>
-                </div>
+        <div class="report-card">
+            <div class="report-meta">Report #3 · Industrial printing press</div>
+            <h5>Color registration failure during a magazine run</h5>
+            <p>During a magazine print run, the operator noticed that the cyan and magenta colors did not align correctly on the paper. The press <strong>was stopped</strong> and the registration system <strong>was checked</strong>. The problem <strong>was caused</strong> by a small misalignment of the blanket cylinder, <span class="conn-ce">due to</span> a worn bearing. <span class="conn-ct">Even though</span> the misalignment was less than 1 mm, the final image looked blurry. The bearing <strong>was replaced</strong> and the press <strong>was re-calibrated</strong>. <span class="conn-ce">As a result</span>, the next 5,000 copies were printed without defects. <span class="conn-ct">However</span>, 800 copies <strong>had been wasted</strong> before the issue was detected.</p>
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>🗂 Actividad 5 — Problem / Cause / Action / Result</h4>
+        <p>Completa la tabla con la información de los 3 reportes.</p>
+        <table class="activity-table">
+            <tr><th>Report</th><th>Problem</th><th>Cause</th><th>Action</th><th>Result</th></tr>
+            <tr><td>#1 Automotive</td><td>______</td><td>______</td><td>______</td><td>______</td></tr>
+            <tr><td>#2 Electrical</td><td>______</td><td>______</td><td>______</td><td>______</td></tr>
+            <tr><td>#3 Printing</td><td>______</td><td>______</td><td>______</td><td>______</td></tr>
+        </table>
+        <button class="toggle-btn" onclick="toggleAnswer('answer-pcar', this)">Ver clave de la tabla</button>
+        <div class="answer-box" id="answer-pcar">
+            <strong>#1:</strong> Oil leak / oil pressure drop · broken oil pan seal · seal replaced + oil changed · engine restored, monitoring recommended.<br>
+            <strong>#2:</strong> Breaker trips with microwave + kettle · breaker too low (16 A) for the load · breaker upgraded to 20 A + new branch for microwave · stable operation, warning about additional heaters.<br>
+            <strong>#3:</strong> Cyan and magenta out of register · worn bearing in blanket cylinder caused misalignment · bearing replaced + press re-calibrated · next 5,000 copies OK; 800 copies wasted.
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>📝 Actividad 6 — Comprehension &amp; connectors</h4>
+
+        <div class="question-card">
+            <p><strong>1.</strong> En el Reporte #1, ¿cuál fue la <em>causa</em> real de la caída de presión de aceite?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-1">El sello (seal) del cárter (oil pan) estaba roto, así que el motor perdía aceite y no podía lubricarse correctamente.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>2.</strong> En el Reporte #2, ¿por qué se cambió el breaker, si el cableado estaba en buen estado?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-2">Porque el breaker original era de solo 16 A y no soportaba la carga combinada del microondas y el hervidor. Se reemplazó por uno de 20 A.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>3.</strong> En el Reporte #3, ¿cuántas copias se perdieron antes de detectar el problema?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-3">800 copias se desperdiciaron antes de detectar el desalineamiento.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>4.</strong> Identifica 3 conectores de causa-efecto y 3 de contraste que aparecen en los reportes.</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-4">Causa-efecto: <em>because, as a result, since, therefore, due to</em>. Contraste: <em>however, although, even though</em>.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>5.</strong> Completa con el conector más apropiado (<em>because / however / although / so / as a result</em>):</p>
+            <ul>
+                <li>a) The seal was broken, ____ the oil leaked out.</li>
+                <li>b) ____ the wiring was OK, the breaker was too small.</li>
+                <li>c) The press was re-calibrated. ____ , 800 copies had already been wasted.</li>
+                <li>d) The bearing was worn ____ it had not been replaced for years.</li>
+            </ul>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-5">a) <em>so / as a result</em> · b) <em>Although</em> · c) <em>However</em> · d) <em>because</em>.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>6.</strong> Inferencia: ¿qué tienen en común los 3 reportes en cuanto a <em>cómo se redactan</em>?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-6">Los 3 siguen la misma estructura: descripción del problema → diagnóstico (causa) → acción tomada → resultado. Todos usan Passive Voice (<em>was brought, was called, was inspected, was replaced</em>) y conectores de causa-efecto y contraste para enlazar las ideas.</div>
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>✍️ Actividad 7 — Writing + Oral: tu propio incidente técnico</h4>
+        <p>En parejas, inventen un <strong>incidente técnico ficticio</strong> (5-6 oraciones) usando al menos <strong>3 conectores diferentes</strong> (mínimo 1 de causa-efecto y 1 de contraste).</p>
+        <ol class="task-steps">
+            <li>Elijan un contexto: taller automotriz, instalación eléctrica, imprenta, fábrica…</li>
+            <li>Describan: (a) Problema observado, (b) Diagnóstico/causa, (c) Acción tomada, (d) Resultado.</li>
+            <li>Lean su reporte oralmente a otra pareja, como si fuera un informe formal.</li>
+            <li>La otra pareja debe identificar los conectores usados y clasificarlos (causa-efecto / contraste).</li>
+        </ol>
+        <p style="margin-top: 10px; color:#475569;"><strong>Modelo de apertura:</strong> <em>"On Monday morning, a __________ was brought / called to __________. The technician noticed that __________."</em></p>
+    </div>
+
+    <div class="eval-box">
+        <h4>📋 Seguimiento de la clase</h4>
+        <p><strong>Formativa:</strong> el docente revisa los reportes escritos. Criterios: (1) uso correcto de al menos 3 conectores diferentes, (2) estructura Problem / Cause / Action / Result clara, (3) al menos 2 oraciones en Passive Voice, (4) coherencia técnica.</p>
+    </div>
+
             </div>
         </div>
 
         <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-header cierre">🟣 Cierre (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🟣 Cierre — Oral Project Checkpoint</h4>
-        <p>Close the lesson by checking progress on the oral task and defining the next step in the sequence.</p>
-        <ol class="task-steps"><li>Review your notes and identify the strongest contribution from today's stage.</li><li>Compare your progress with a partner before writing your final exit ticket.</li><li>Complete the three checkpoint prompts below.</li></ol>
-        
-            <div class="exit-ticket">
-                <h5>Exit ticket prompts</h5>
-                <ul><li>Write the process or case you chose and explain why it is useful for the oral task.</li><li>List the first technical words you still need to understand better.</li><li>Note one question you must answer before the next class.</li></ul>
+        <h4>🟣 Cierre — Reportes orales + poster final</h4>
+        <ol class="task-steps">
+            <li><strong>Presentaciones (8 min):</strong> 3-4 parejas leen su reporte ante el curso. La clase identifica los conectores y los clasifica.</li>
+            <li><strong>Poster de conectores (5 min):</strong> el docente arma con los estudiantes un poster que queda en la sala, con los conectores clasificados en dos columnas (causa-efecto / contraste). Sirve de referencia para las próximas clases.</li>
+            <li><strong>Cierre conceptual (2 min):</strong> <em>"In technical English, connectors make your description sound professional. Every good incident report uses them."</em></li>
+        </ol>
+
+        <div class="exit-ticket">
+            <h5>🎫 Exit ticket</h5>
+            <ul>
+                <li>Escribe 2 oraciones describiendo un problema técnico (real o ficticio):
+                    <ul>
+                        <li>1 con conector de <strong>causa-efecto</strong>.</li>
+                        <li>1 con conector de <strong>contraste</strong>.</li>
+                    </ul>
+                </li>
+                <li>Subraya el conector y entrega tu hoja al salir.</li>
+            </ul>
+        </div>
+    </div>
             </div>
-            
-    </div>
-    </div>
         </div>
 
         <div class="resource-card">
             <h4>📦 Recursos sugeridos</h4>
-            <p>Recursos: Poster de conectores, 3 informes de incidentes impresos, ejercicios de conectores impresos, tabla de análisis. Producto de avance: Ficha de planificación con tema, propósito y vocabulario base.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+            <p><strong>Materiales:</strong> poster de conectores (causa-efecto vs. contraste), 3 informes de incidentes impresos (1 set por pareja), hoja de ejercicios de conectores impresa, tabla Problem/Cause/Action/Result en blanco, 2 colores de marcadores (azul y rojo) para subrayar.</p>
+            <p><strong>Apoyos visuales opcionales:</strong> diagrama flecha (causa → efecto) y diagrama de balanza (idea ↔ contraste). Tarjetas grandes con cada conector para usar en la pizarra.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Diferenciación: estudiantes avanzados escriben 8 oraciones y usan 5 conectores distintos. Estudiantes con apoyo trabajan con el modelo de apertura y un banco de conectores reducido (because, so, but, however).</p>
         </div>
 
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 1° Medio · Unidad 2 · Clase 7.</p>
     </div>
 
     <script>

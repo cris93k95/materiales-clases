@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 6 — Unidad 2 — 1° Medio — Inglés General (Lu+Ju)</title>
+    <title>Clase 6 — Unidad 2 — 1° Medio — The Offset Printing Process</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
         .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
+        .hero { background: linear-gradient(135deg, #0e7490, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(14, 116, 144, 0.18); }
         .hero h1 { font-size: 2rem; margin-bottom: 6px; }
         .hero p { color: rgba(255,255,255,0.88); }
         .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
@@ -17,8 +17,8 @@
         .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
         .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
         .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #0e7490; }
+        .objective-card h2 { color: #0e7490; font-size: 1.05rem; margin-bottom: 8px; }
         .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
         .inicio { background: #2e7d32; }
         .desarrollo { background: #1565c0; }
@@ -32,52 +32,61 @@
         .task-steps { margin-left: 20px; }
         .task-steps li { margin-bottom: 8px; }
         .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
+        .vocab-card { background: white; border: 1px solid #a5f3fc; border-radius: 12px; padding: 14px; }
+        .word { font-weight: 800; color: #0e7490; margin-bottom: 4px; }
         .meaning { font-size: 0.92rem; color: #1f2937; }
         .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
         .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
+        .focus-card { background: white; border: 1px solid #a5f3fc; border-radius: 12px; padding: 14px; }
+        .focus-card h5 { color: #0e7490; margin-bottom: 8px; font-size: 0.98rem; }
         .focus-card ul { margin-left: 18px; }
         .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
         .reading-box p { margin-bottom: 10px; }
         .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #cffafe; color: #0e7490; padding: 8px 12px; font-weight: 700; cursor: pointer; }
         .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
         .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
+        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.92rem; }
+        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; vertical-align: top; }
+        .activity-table th { background: #cffafe; color: #155e75; }
         .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
         .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
         .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
         .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .resource-card h4 { color: #0e7490; margin-bottom: 8px; }
         .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        .pv-subject { background: #fef3c7; color: #92400e; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+        .pv-aux { background: #dbeafe; color: #1e40af; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .pv-pp { background: #dcfce7; color: #166534; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+        .pv-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; font-size: 0.82rem; }
+        .pv-legend span { padding: 3px 9px; border-radius: 999px; font-weight: 600; }
+        .sounds-box { border: 1px solid #a5f3fc; background: #ecfeff; border-radius: 14px; padding: 18px; margin-top: 16px; }
+        .sounds-box h4 { color: #0e7490; margin-bottom: 10px; }
+        .sounds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+        .sound-card { background: white; border: 1px solid #a5f3fc; border-radius: 12px; padding: 12px 14px; }
+        .sound-ipa { font-size: 1.4rem; color: #0e7490; font-weight: 800; margin-bottom: 4px; }
+        .sound-name { font-size: 0.85rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+        .sound-examples { font-size: 0.92rem; color: #1f2937; }
+        .sound-tip { font-size: 0.82rem; color: #6b7280; margin-top: 6px; font-style: italic; }
+        .kwl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+        .kwl-cell { background: white; border: 2px solid #a5f3fc; border-radius: 12px; padding: 14px; min-height: 120px; }
+        .kwl-cell h5 { color: #0e7490; margin-bottom: 8px; font-size: 0.95rem; }
+        .kwl-cell .kwl-label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+        @media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } .kwl-grid { grid-template-columns: 1fr; } }
+        @media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; } }
     </style>
 </head>
 <body>
     <div class="page">
         <div class="hero">
             <h1>Clase 6 — Unidad 2</h1>
-            <p>1° Medio — Inglés General (Lu+Ju) · plate, roller, blanket cylinder, impression cylinder, fountain solution, registration, color separation,...</p>
+            <p>1° Medio — Inglés General (Lu+Ju) · The offset printing process — lectura técnica + K-W-L chart</p>
             <div class="meta">
-                <span>🎯 plate, roller, blanket cylinder, impression cylinder, fountain solution,...</span>
+                <span>🎯 Identificar etapas y materiales de la impresión offset</span>
                 <span>📘 OA9 · OA12</span>
-                <span>🗂 Clase 6</span>
-                
-                <span>🧩 Clase de trabajo</span>
+                <span>🗂 Clase 6 — Unidad 2</span>
+                <span>🗓 Semana 12 · mayo</span>
+                <span>🧩 Reading strategies (skimming/scanning) + comparación</span>
             </div>
         </div>
 
@@ -87,173 +96,256 @@
 
         <div class="objective-card">
             <h2>Objetivo de la clase</h2>
-            <p>Comprender un texto sobre el proceso de impresión offset, aplicando estrategias de lectura para identificar etapas y materiales involucrados.</p>
+            <p>Comprender un texto sobre el <strong>proceso de impresión offset</strong>, aplicando estrategias de lectura (skimming y scanning) para identificar etapas y materiales, y comparar con la impresión digital.</p>
         </div>
 
         <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-header inicio">🟢 Inicio (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to plate, roller, blanket cylinder, impression cylinder, fountain solution, registration, color separation, substrate, drying, trimming, folding . Relacionar con diagrama de una prensa offset.</li><li>Recuerda la idea central de la clase pasada: Comprender un texto descriptivo sobre el funcionamiento de componentes electrónicos,...</li><li>Predict which tools, risks, or key ideas may appear when working with plate, roller, blanket cylinder, impression cylinder, fountain solution, registration, color separation, substrate, drying, trimming, folding . Relacionar con diagrama de una prensa offset in the formación técnico-profesional general context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Comprender un texto descriptivo sobre el funcionamiento de componentes electrónicos,...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
+        <h4>🔎 Actividad 1 — Producto impreso real + K-W-L chart</h4>
+        <p>El docente muestra una revista o un catálogo a color de buena calidad y los hace circular por el curso.</p>
+        <ol class="task-steps">
+            <li>Pregunta detonante: <em>"This was printed using a process called <strong>offset printing</strong>. Do you know what that means?"</em></li>
+            <li>Pre-reading strategy: el docente entrega el K-W-L chart. Los estudiantes completan ahora <strong>solo</strong> las columnas K (What I Know) y W (What I Want to know).</li>
+            <li>La columna L (What I Learned) se completará al final, después de la lectura.</li>
+        </ol>
+
+        <div class="kwl-grid">
+            <div class="kwl-cell">
+                <div class="kwl-label">K — Know</div>
+                <h5>What I already know about offset printing</h5>
+                <p style="color:#94a3b8; font-size:0.85rem;">(escribe 2 ideas en inglés o español)</p>
+            </div>
+            <div class="kwl-cell">
+                <div class="kwl-label">W — Want to know</div>
+                <h5>What I want to learn</h5>
+                <p style="color:#94a3b8; font-size:0.85rem;">(escribe 2 preguntas)</p>
+            </div>
+            <div class="kwl-cell" style="border-style: dashed;">
+                <div class="kwl-label">L — Learned</div>
+                <h5>What I learned (después de leer)</h5>
+                <p style="color:#94a3b8; font-size:0.85rem;">(escribe 3 cosas nuevas)</p>
+            </div>
+        </div>
     </div>
-    </div>
+            </div>
         </div>
 
         <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-header desarrollo">🔵 Desarrollo (60 min)</div>
             <div class="section-body">
-                
+
+    <div class="task-box">
+        <h4>🧠 Actividad 2 — Vocabulary + diagrama de la prensa offset</h4>
+        <p>El docente proyecta o entrega el diagrama de una prensa offset y va señalando cada parte mientras los estudiantes anotan.</p>
+
+        <div class="sounds-box">
+            <h4>🔊 Sounds in focus</h4>
+            <p style="font-size:0.92rem; color:#475569;">Sonidos clave del vocabulario gráfico. Practícalos antes de leer.</p>
+            <div class="sounds-grid">
+                <div class="sound-card">
+                    <div class="sound-ipa">/ɔː/</div>
+                    <div class="sound-name">"o" larga</div>
+                    <div class="sound-examples"><em>offset</em>, <em>roller</em>, <em>color</em>, <em>water</em></div>
+                    <div class="sound-tip">Boca abierta y redonda, sonido prolongado, parecido a una "o" larga.</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/ɪ/</div>
+                    <div class="sound-name">"i" corta</div>
+                    <div class="sound-examples"><em>printing</em>, <em>ink</em>, <em>fix</em>, <em>image</em></div>
+                    <div class="sound-tip">Sonido corto y relajado entre "e" y "i" española. No estires la vocal.</div>
+                </div>
+                <div class="sound-card">
+                    <div class="sound-ipa">/eɪ/</div>
+                    <div class="sound-name">diptongo "ei"</div>
+                    <div class="sound-examples"><em>plate</em>, <em>paper</em>, <em>registration</em>, <em>separation</em></div>
+                    <div class="sound-tip">Como "ei" en español ("rey"): empieza en "e" y termina en "i".</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="vocab-card"><div class="word">plate</div><div class="meaning">plancha (lleva la imagen a imprimir)</div><div class="pronunciation">Pron.: PLEIT</div></div>
+            <div class="vocab-card"><div class="word">roller</div><div class="meaning">rodillo (transporta tinta o agua)</div><div class="pronunciation">Pron.: ROU-ler</div></div>
+            <div class="vocab-card"><div class="word">blanket cylinder</div><div class="meaning">cilindro de caucho (recibe la imagen y la pasa al papel)</div><div class="pronunciation">Pron.: BLANG-ket SI-lin-der</div></div>
+            <div class="vocab-card"><div class="word">impression cylinder</div><div class="meaning">cilindro de impresión (presiona el papel)</div><div class="pronunciation">Pron.: im-PRE-shon SI-lin-der</div></div>
+            <div class="vocab-card"><div class="word">fountain solution</div><div class="meaning">solución de fuente (agua + químicos)</div><div class="pronunciation">Pron.: FAUN-ten so-LU-shon</div></div>
+            <div class="vocab-card"><div class="word">registration</div><div class="meaning">registro (alineación exacta de los colores)</div><div class="pronunciation">Pron.: re-yis-TREI-shon</div></div>
+            <div class="vocab-card"><div class="word">color separation</div><div class="meaning">separación de colores (CMYK)</div><div class="pronunciation">Pron.: KA-lor se-pa-REI-shon</div></div>
+            <div class="vocab-card"><div class="word">substrate</div><div class="meaning">sustrato (papel, cartón u otro material)</div><div class="pronunciation">Pron.: SAB-streit</div></div>
+            <div class="vocab-card"><div class="word">drying</div><div class="meaning">secado de la tinta</div><div class="pronunciation">Pron.: DRAI-ing</div></div>
+            <div class="vocab-card"><div class="word">trimming</div><div class="meaning">corte / refilado final</div><div class="pronunciation">Pron.: TRI-ming</div></div>
+            <div class="vocab-card"><div class="word">folding</div><div class="meaning">plegado (doblar el pliego)</div><div class="pronunciation">Pron.: FOL-ding</div></div>
+            <div class="vocab-card"><div class="word">print run</div><div class="meaning">tirada (cantidad de copias)</div><div class="pronunciation">Pron.: PRINT RAN</div></div>
+        </div>
+    </div>
+
     <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at A2 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
+        <h4>🔠 Actividad 3 — Passive Voice review (con color)</h4>
+        <p>El texto que leerás está mayormente en Passive Voice. Recuerda la estructura:</p>
+        <div class="pv-legend">
+            <span class="pv-subject">Sujeto</span>
+            <span class="pv-aux">is / are</span>
+            <span class="pv-pp">Past participle</span>
+        </div>
+        <ul>
+            <li><span class="pv-subject">The plate</span> <span class="pv-aux">is</span> <span class="pv-pp">prepared</span> from the digital file.</li>
+            <li><span class="pv-subject">The image</span> <span class="pv-aux">is</span> <span class="pv-pp">transferred</span> to the blanket cylinder.</li>
+            <li><span class="pv-subject">The colors</span> <span class="pv-aux">are</span> <span class="pv-pp">separated</span> into CMYK.</li>
+        </ul>
+    </div>
+
+    <div class="reading-box">
+        <h4>📖 Actividad 4 — Reading: <em>The Offset Printing Process Step by Step</em></h4>
+        <p class="reading-note">Lee 2 veces. <strong>Primera lectura (skimming, 3 min):</strong> identifica cuántas etapas hay. <strong>Segunda lectura (scanning, 7 min):</strong> busca información específica para cada etapa.</p>
+        <p><strong>The Offset Printing Process Step by Step</strong></p>
+        <p>Offset printing is one of the most widely used techniques in the graphic arts industry. It is called "offset" because the ink is not transferred directly from the plate to the paper, but to an intermediate rubber surface first. This method gives excellent image quality and is ideal for medium and large print runs.</p>
+        <p><strong>1. File preparation.</strong> The job starts in a computer. The design <strong>is created</strong> in a graphic software and <strong>is checked</strong> for fonts, images and bleed. The colors <strong>are separated</strong> into four basic inks: <em>cyan, magenta, yellow and black</em> (CMYK).</p>
+        <p><strong>2. Plate making.</strong> A thin aluminum plate <strong>is exposed</strong> to a laser, which records the image. One plate <strong>is made</strong> for each color, so a full-color job requires four plates.</p>
+        <p><strong>3. Inking and water.</strong> On the press, ink and a special fountain solution (water with chemicals) <strong>are applied</strong> to the plate. The image area accepts ink and rejects water; the non-image area does the opposite.</p>
+        <p><strong>4. Image transfer.</strong> The plate transfers the image to a rubber blanket cylinder. Then the blanket <strong>is pressed</strong> against the paper by the impression cylinder. This is the moment when the print is made.</p>
+        <p><strong>5. Color registration.</strong> Each of the four colors <strong>is printed</strong> one after the other. The papers must pass through the machine in perfect alignment, or the colors will not register correctly.</p>
+        <p><strong>6. Drying.</strong> The ink <strong>is dried</strong> using heat, ultraviolet light or air, depending on the type of ink and paper used.</p>
+        <p><strong>7. Finishing.</strong> Finally, the sheets <strong>are trimmed</strong>, folded and sometimes bound. The product <strong>is inspected</strong> and packed for delivery.</p>
+        <p>The whole process can take a few hours for a small job and several days for a large one, but the quality and consistency are why offset is still the standard for books, magazines, posters and packaging.</p>
+    </div>
+
+    <div class="task-box">
+        <h4>🗂 Actividad 5 — Order the images</h4>
+        <p>Imagina que tienes 7 imágenes del proceso. Ordénalas según la secuencia del texto y escribe el nombre de la etapa.</p>
+        <table class="activity-table">
+            <tr><th>Orden</th><th>Etapa (en inglés)</th><th>¿Qué pasa? (en español, breve)</th></tr>
+            <tr><td>1</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>2</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>3</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>4</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>5</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>6</td><td>____________________</td><td>____________________</td></tr>
+            <tr><td>7</td><td>____________________</td><td>____________________</td></tr>
+        </table>
+        <button class="toggle-btn" onclick="toggleAnswer('answer-order', this)">Ver clave del orden</button>
+        <div class="answer-box" id="answer-order">
+            1. File preparation — diseño digital y separación CMYK.<br>
+            2. Plate making — láser graba la imagen en una plancha de aluminio (1 por color).<br>
+            3. Inking and water — tinta + solución de fuente sobre la plancha.<br>
+            4. Image transfer — plancha → blanket cylinder → papel (con impression cylinder).<br>
+            5. Color registration — los 4 colores se imprimen en orden y deben quedar alineados.<br>
+            6. Drying — secado de la tinta (calor / UV / aire).<br>
+            7. Finishing — corte, plegado, encuadernado, inspección y embalaje.
+        </div>
+    </div>
+
+    <div class="task-box">
+        <h4>📝 Actividad 6 — Reading comprehension</h4>
+
+        <div class="question-card">
+            <p><strong>1.</strong> ¿Por qué este proceso se llama <em>offset</em>?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-1">Porque la tinta no pasa directo de la plancha al papel: primero se transfiere a un cilindro de caucho intermedio (<em>"the ink is not transferred directly from the plate to the paper, but to an intermediate rubber surface first."</em>).</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>2.</strong> ¿Cuáles son los 4 colores básicos del sistema CMYK?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-2">Cyan, magenta, yellow y black.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>3.</strong> ¿Cuántas planchas necesita un trabajo a todo color y por qué?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-3">Cuatro planchas, una por cada color (CMYK).</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>4.</strong> ¿Qué hace la <em>fountain solution</em>?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-4">Es una mezcla de agua con químicos que se aplica a la plancha. El área de la imagen acepta tinta y rechaza agua; el área sin imagen acepta agua y rechaza tinta.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>5.</strong> ¿Qué pasa si la <em>color registration</em> falla?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-5">Los colores no quedan alineados; la imagen sale "movida" o con bordes de color desplazados.</div>
+        </div>
+
+        <div class="question-card">
+            <p><strong>6.</strong> ¿Por qué offset sigue siendo el estándar para libros, revistas y packaging?</p>
+            <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
+            <div class="answer-box" id="answer-6">Por su calidad de imagen y consistencia, especialmente en tiradas medianas y grandes (<em>"the quality and consistency are why offset is still the standard…"</em>).</div>
+        </div>
+    </div>
+
+    <div class="task-box activity-card">
+        <h4>⚖️ Actividad 7 — Comparative discussion: offset vs. digital</h4>
+        <p>En grupos de 3-4, discutan y escriban <strong>3 diferencias</strong> usando conectores de contraste.</p>
         <div class="focus-grid">
             <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The tool kit is checked before the task begins.</li><li>The checklist gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
+                <h5>Conectores útiles</h5>
+                <ul>
+                    <li><strong>however</strong> — sin embargo (inicio de oración).</li>
+                    <li><strong>on the other hand</strong> — por otro lado.</li>
+                    <li><strong>although</strong> / <strong>even though</strong> — aunque (al inicio o al medio).</li>
+                    <li><strong>while</strong> — mientras que.</li>
+                </ul>
             </div>
+            <div class="focus-card">
+                <h5>Ideas para comparar</h5>
+                <ul>
+                    <li>Cantidad de copias (large vs. small runs).</li>
+                    <li>Tiempo de preparación.</li>
+                    <li>Costo por copia.</li>
+                    <li>Calidad de color.</li>
+                </ul>
             </div>
+            <div class="focus-card">
+                <h5>Ejemplo modelo</h5>
+                <ul>
+                    <li><em>"Offset is ideal for large runs. <strong>On the other hand</strong>, digital is better for short jobs."</em></li>
+                    <li><em>"<strong>Although</strong> offset takes longer to prepare, its quality is superior."</em></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    
 
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">process</div>
-                <div class="meaning">a sequence of actions used to complete a task</div>
-                <div class="pronunciation">Pron.: PRO-ses</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">component</div>
-                <div class="meaning">one part of a machine, circuit, or larger system</div>
-                <div class="pronunciation">Pron.: kom-POU-nent</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">tool</div>
-                <div class="meaning">an object used to do a practical or technical job</div>
-                <div class="pronunciation">Pron.: TUL</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">measure</div>
-                <div class="meaning">to find size, amount, or distance accurately</div>
-                <div class="pronunciation">Pron.: ME-zher</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">connect</div>
-                <div class="meaning">to join parts so the system can work correctly</div>
-                <div class="pronunciation">Pron.: ko-NEKT</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">repair</div>
-                <div class="meaning">to fix something that is damaged or not working</div>
-                <div class="pronunciation">Pron.: ri-PAIR</div>
-            </div>
-            </div>
-                </div>
+    <div class="eval-box">
+        <h4>📋 Seguimiento de la clase</h4>
+        <p><strong>Formativa:</strong> el docente revisa el orden de las etapas y la columna L del K-W-L. Criterios: (1) identifica las 7 etapas, (2) usa vocabulario técnico, (3) emplea al menos 2 conectores de contraste, (4) participa en la comparación grupal.</p>
+    </div>
 
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Class focus — plate, roller, blanket cylinder, impression cylinder, fountain solution, registration, color separation, substrate, drying, trimming, folding . Relacionar con diagrama de una prensa offset</h4>
-                    <p class="reading-note">Texto graduado A2: ideas claras, detalle tecnico suficiente y vocabulario reutilizable para hablar y escribir.</p>
-                    <p>In the school technical workshop, the class explores plate, roller, blanket cylinder, impression cylinder, fountain solution, registration, color separation, substrate, drying, trimming, folding . Relacionar con diagrama de una prensa offset as part of How Things Work — Processes and Descriptions. Students use English to understand how this topic affects the daily work around the practice project.</p><p>The first notes focus on Comprender un texto sobre el proceso de impresión offset, aplicando estrategias de lectura para identificar etapas y materiales involucrados. The teacher asks students to identify the most useful technical verbs and the details that explain why the topic matters in practice.</p><p>During the activity, the tool kit and the checklist appear as reference points for connecting the text with a real workshop, lab, or production task. The class decides which information is essential and which information only adds context.</p><p>When an idea is not fully clear, students return to the glossary and the examples for Technical English. This helps them explain sequence, cause, or comparison with more precision.</p><p>In the final stage, the group writes a short conclusion about plate, roller, blanket cylinder, impression cylinder, fountain solution, registration, color separation, substrate, drying, trimming, folding . Relacionar con diagrama de una prensa offset and adds one recommendation, safety point, or workplace implication. The reading shows that technical English supports accuracy, teamwork, and better decisions.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What task or problem is described in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text describes plate, roller, blanket cylinder, impression cylinder, fountain solution, registration, color separation, substrate, drying, trimming, folding . Relacionar con diagrama de una prensa offset in the school technical workshop.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> What happens before the main procedure starts?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the main task starts, the class reviews comprender un texto sobre el proceso de impresión offset, aplicando estrategias de lectura para identificar etapas y materiales involucrados and links it to the tool kit.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> Which tools, parts, or notes are important in the reading?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">The tool kit, the checklist, and the glossary notes are important sources of information.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the text show the main language focus of the class?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The text highlights Technical English through model sentences and technical examples.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What result, decision, or solution appears at the end?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">The team finishes by explaining the result or implication of plate, roller, blanket cylinder, impression cylinder, fountain solution, registration, color separation, substrate, drying, trimming, folding . Relacionar con diagrama de una prensa offset.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What can you infer about good technical work from the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Good technical work depends on clear notes, accurate vocabulary, and careful checking.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Síntesis técnica</h4>
-                    
-        <ol class="task-steps">
-            <li>Resume the main idea of the class in relation to formación técnico-profesional general.</li>
-            <li>Write two pieces of evidence from the text that support your summary.</li>
-            <li>Explain how the reading connects with a real task from the workshop, lab, or production area.</li>
-        </ol>
-        
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa: observación de participación, revisión de respuestas y salida escrita breve.</p>
-                </div>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-header cierre">🟣 Cierre (15 min)</div>
             <div class="section-body">
     <div class="task-box activity-card">
-        <h4>🟣 Cierre — Exit Ticket and Reflection</h4>
-        <p>Close the lesson by checking comprehension, transferring language to a new context, and recording one final insight.</p>
-        <ol class="task-steps"><li>Review your notes and choose the most useful technical idea from the class.</li><li>Discuss your answer with a partner before writing the final version.</li><li>Complete the three exit-ticket prompts below.</li></ol>
-        
+        <h4>🟣 Cierre — Compartir + revisar K-W-L</h4>
+        <ol class="task-steps">
+            <li><strong>Sharing (7 min):</strong> cada grupo comparte una diferencia entre offset y digital usando un conector de contraste.</li>
+            <li><strong>Conexión laboral (3 min):</strong> el docente cierra con: <em>"If you study graphic arts or work in a print shop, you will work with these machines every day."</em></li>
+            <li><strong>Revisar K-W-L (5 min):</strong> los estudiantes completan ahora la columna L. <em>"Did you learn what you wanted? What surprised you?"</em></li>
+        </ol>
+
         <div class="exit-ticket">
-            <h5>Exit ticket prompts</h5>
-            <ul><li>Write one sentence that summarizes the main idea of the text.</li><li>Use one glossary term and one language structure from the class in a new sentence.</li><li>Explain what detail or instruction would help you repeat the task more safely next time.</li></ul>
+            <h5>🎫 Exit ticket</h5>
+            <ul>
+                <li>Escribe en tu hoja las 3 cosas más importantes que aprendiste sobre la impresión offset.</li>
+                <li>Usa al menos una oración en Passive Voice.</li>
+            </ul>
         </div>
-        
     </div>
-    </div>
+            </div>
         </div>
 
         <div class="resource-card">
             <h4>📦 Recursos sugeridos</h4>
-            <p>Recursos: Producto impreso de calidad, diagrama de prensa offset, texto impreso, K-W-L chart, imágenes del proceso para ordenar.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+            <p><strong>Materiales:</strong> producto impreso real de buena calidad (revista, catálogo, afiche), diagrama de una prensa offset, texto <em>"The Offset Printing Process Step by Step"</em> impreso, K-W-L chart en blanco, set de 7 imágenes del proceso para ordenar.</p>
+            <p><strong>Apoyos visuales opcionales:</strong> video corto (60-90 s) "How offset printing works", muestras de pruebas de color (CMYK), plancha de offset usada (si hay acceso).</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Diferenciación: estudiantes avanzados redactan un párrafo (5 oraciones) comparando offset y digital con 3 conectores. Estudiantes con apoyo trabajan con el modelo del Actividad 7.</p>
         </div>
 
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 1° Medio · Unidad 2 · Clase 6.</p>
     </div>
 
     <script>
