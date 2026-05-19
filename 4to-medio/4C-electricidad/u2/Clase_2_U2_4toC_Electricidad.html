@@ -3,265 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 2 — Unidad 2 — 4°C — Electricidad</title>
+    <title>Clase 2 — Unidad 2 — 4°C — The Blackout That Changed Everything</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
         .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
-        .hero p { color: rgba(255,255,255,0.88); }
+        .hero { background: linear-gradient(135deg, #ca8a04, #854d0e); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(202, 138, 4, 0.18); }
+        .hero h1 { font-size: 2rem; margin-bottom: 6px; } .hero p { color: rgba(255,255,255,0.88); }
         .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
         .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
         .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
         .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #ca8a04; }
+        .objective-card h2 { color: #ca8a04; font-size: 1.05rem; margin-bottom: 8px; }
         .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-        .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
-        .cierre { background: #7c3aed; }
+        .inicio { background: #2e7d32; } .desarrollo { background: #ca8a04; } .cierre { background: #7c3aed; }
         .section-body { padding: 20px 22px 22px; }
-        .section-body ul { margin-left: 20px; }
-        .section-body li { margin-bottom: 8px; }
-        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+        .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+        .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
         .activity-card p { margin-bottom: 10px; }
-        .task-steps { margin-left: 20px; }
-        .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-        .focus-card ul { margin-left: 18px; }
-        .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .task-steps { margin-left: 20px; } .task-steps li { margin-bottom: 8px; }
         .reading-box p { margin-bottom: 10px; }
         .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #fef3c7; color: #854d0e; padding: 8px 12px; font-weight: 700; cursor: pointer; }
         .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
         .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
+        .organizer { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 12px; }
+        .org-card { background: white; border: 2px solid #fde68a; border-radius: 12px; padding: 14px; }
+        .org-card h5 { color: #ca8a04; margin-bottom: 8px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .org-card ul { margin-left: 16px; } .org-card li { margin-bottom: 6px; font-size: 0.92rem; }
         .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
         .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
         .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-        .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .resource-card h4 { color: #ca8a04; margin-bottom: 8px; }
         .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 10px; }
+        .glossary-card { background: white; border: 1px solid #fde68a; border-radius: 10px; padding: 10px 12px; }
+        .glossary-card strong { color: #ca8a04; }
+        .glossary-card .pron { color: #6b7280; font-style: italic; font-size: 0.88rem; }
+        .connectors-box { background: #fef3c7; border-radius: 10px; padding: 12px 14px; margin-top: 12px; }
+        .connectors-box strong { color: #713f12; }
+        @media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+        @media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
     </style>
 </head>
 <body>
     <div class="page">
         <div class="hero">
             <h1>Clase 2 — Unidad 2</h1>
-            <p>4°C — Electricidad · Case Study: The Blackout That Changed Everything</p>
+            <p>4°C — Electricidad · Case Study: <em>The Blackout That Changed Everything</em></p>
             <div class="meta">
-                <span>🎯 Reunir evidencia y vocabulario especializado</span>
-                <span>📘 OA1 · OA3</span>
-                <span>🗂 Clase anual 10</span>
-                <span>🎤 Trabajo oral de junio · Etapa 2/5</span>
-                <span>🧩 Clase de trabajo</span>
+                <span>🎯 Analizar problema laboral real (Problem → Causes → Effects → Solutions)</span>
+                <span>📘 OA1 · OA3 · OA4</span>
+                <span>🗂 Clase 2 — Unidad 2 (Clase 10 del año)</span>
+                <span>🗓 Semana 14 · mayo</span>
+                <span>🧩 Lectura B1 + organizador 4 cuadrantes + propuesta grupal</span>
             </div>
         </div>
 
-        <div class="toolbar">
-            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
-        </div>
+        <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
 
         <div class="objective-card">
             <h2>Objetivo de la clase</h2>
-            <p>Evaluar un problema laboral presentado en un estudio de caso de Electricidad, proponiendo soluciones fundamentadas en inglés.</p>
+            <p>Analizar un <strong>problema laboral real</strong> en una red de distribución eléctrica usando el organizador <strong>Problem → Causes → Effects → Solutions</strong>, y proponer en grupo una solución técnica fundamentada en inglés con conectores de causa-efecto.</p>
         </div>
 
         <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-header inicio">🟢 Inicio (15 min)</div>
             <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to Case Study: The Blackout That Changed Everything.</li><li>Recuerda la idea central de la clase pasada: Analizar críticamente un estudio de caso sobre tendencias globales que afectan al campo...</li><li>Predict which tools, risks, or key ideas may appear when working with Case Study: The Blackout That Changed Everything in the electricidad avanzada context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Analizar críticamente un estudio de caso sobre tendencias globales que afectan al campo...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
-    <div class="review-box">
-        <h4>🎤 Ruta del trabajo oral</h4>
-        <p><strong>Trabajo oral de junio</strong> · Etapa 2/5 · Entrega prevista: primera semana de junio.</p>
-        <p><strong>Meta de hoy:</strong> Reunir evidencia desde reportes, manuales o lecturas y fijar vocabulario clave.</p>
-        <p><strong>Producto esperado:</strong> Banco de evidencia con datos, conceptos y citas útiles para hablar.</p>
-        <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
-    </div>
-    
-    </div>
-    </div>
+                <div class="task-box activity-card">
+                    <h4>🔎 Recap + activación</h4>
+                    <p>El docente conecta con la clase anterior: <em>"Last class we read about Chile's renewable energy revolution. Today, a real problem: what happens when poor maintenance causes an entire city to lose power?"</em></p>
+                    <p>Brainstorm (3 min): <em>"Have you ever experienced a long blackout? How long? What was the cause?"</em></p>
+                    <div class="connectors-box">
+                        <strong>🔗 Conectores clave de hoy (causa-efecto):</strong>
+                        <p><em>because</em> · <em>so</em> · <em>as a result</em> · <em>therefore</em> · <em>due to</em> · <em>this caused</em></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-header desarrollo">🟨 Desarrollo (60 min)</div>
             <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at B1 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The switchgear is checked before the task begins.</li><li>The three-phase panel gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
-            </div>
-            </div>
-    </div>
-    
 
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
+                <div class="task-box activity-card">
+                    <h4>📚 Vocabulario clave del case study</h4>
                     <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">switchgear</div>
-                <div class="meaning">equipment that controls, protects, and isolates power systems</div>
-                <div class="pronunciation">Pron.: SWICH-guir</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">load</div>
-                <div class="meaning">the amount of power demanded by a system</div>
-                <div class="pronunciation">Pron.: LOUD</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">transformer</div>
-                <div class="meaning">equipment that changes electrical voltage levels</div>
-                <div class="pronunciation">Pron.: trans-FOR-mer</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">grounding</div>
-                <div class="meaning">a safety connection that sends electricity safely to the earth</div>
-                <div class="pronunciation">Pron.: GRAUN-ding</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">regulator</div>
-                <div class="meaning">a device that keeps a value, such as voltage, stable</div>
-                <div class="pronunciation">Pron.: RE-gu-lei-ter</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">phase</div>
-                <div class="meaning">one part of a multi-part electrical power cycle</div>
-                <div class="pronunciation">Pron.: FEIS</div>
-            </div>
-            </div>
+                        <div class="glossary-card"><strong>blackout / power outage</strong> <span class="pron">(BLAK-aut / PAU-er AU-tich)</span> — apagón</div>
+                        <div class="glossary-card"><strong>substation</strong> <span class="pron">(SAB-stei-shon)</span> — subestación</div>
+                        <div class="glossary-card"><strong>transformer</strong> <span class="pron">(trans-FOR-mer)</span> — transformador</div>
+                        <div class="glossary-card"><strong>overload</strong> <span class="pron">(O-ver-loud)</span> — sobrecarga</div>
+                        <div class="glossary-card"><strong>short circuit</strong> <span class="pron">(short SUR-kit)</span> — cortocircuito</div>
+                        <div class="glossary-card"><strong>insulation</strong> <span class="pron">(in-su-LEI-shon)</span> — aislación</div>
+                        <div class="glossary-card"><strong>circuit breaker</strong> <span class="pron">(SUR-kit BREI-ker)</span> — interruptor automático</div>
+                        <div class="glossary-card"><strong>distribution network</strong> <span class="pron">(dis-tri-BIU-shon NET-uork)</span> — red de distribución</div>
+                        <div class="glossary-card"><strong>thermal imaging</strong> <span class="pron">(ZER-mal I-mey-ying)</span> — termografía</div>
+                        <div class="glossary-card"><strong>protocol</strong> <span class="pron">(PRO-to-kol)</span> — protocolo</div>
+                    </div>
                 </div>
 
                 <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Model — Reunir evidencia y vocabulario especializado</h4>
-                    <p class="reading-note">Modelo guiado B1 para la etapa 2/5 del trabajo oral de junio: Reunir evidencia desde reportes, manuales o lecturas y fijar vocabulario clave.</p>
-                    <p>Once the case is chosen, the team gathers evidence from manuals, reports, data tables, or class readings to support the future presentation.</p><p>Useful notes include the main cause of the problem, its impact on the workplace, and the technical references connected to equipment such as the switchgear or three-phase panel.</p><p>The vocabulary bank becomes more precise because the speaker needs words that describe evidence, risk, sequence, and recommendation in a professional tone.</p><p>Instead of copying full paragraphs, the group organizes information into short evidence points that can be explained naturally during the oral task.</p><p>A strong oral analysis begins with reliable evidence, not only with opinions or isolated vocabulary.</p>
+                    <h4>📖 Actividad 1 — Reading the case (20 min): <em>The Blackout That Changed Everything</em></h4>
+                    <p class="reading-note">Texto adaptado nivel B1. Lectura individual silenciosa, luego segunda lectura completando el organizador.</p>
+
+                    <p><strong>1.</strong> On a hot Saturday in February 2024, the city of Quillota (Region of Valparaíso) lost electricity for 14 hours. More than 80,000 people were without power, traffic lights stopped working, hospitals had to use emergency generators, three supermarkets lost USD 120,000 in frozen products, and several elderly residents had to be transferred because of the heat. The cause? A single failed <strong>transformer</strong> in the main <strong>substation</strong>.</p>
+
+                    <p><strong>2.</strong> The Superintendencia de Electricidad y Combustibles (SEC) opened an investigation. The official report, written in English for the international insurer, concluded that the transformer had failed <strong>due to</strong> a slow degradation of the <strong>insulation</strong>: a defect that <strong>thermal imaging</strong> can detect months in advance. <strong>However</strong>, the last thermal inspection of that substation had been done 18 months earlier — even though the maintenance <strong>protocol</strong> required an inspection every 6 months.</p>
+
+                    <p><strong>3.</strong> Why was the protocol not followed? The investigation found three reasons. <strong>First</strong>, the regional team had only two qualified technicians for thermal imaging, and one had retired 10 months earlier and was never replaced. <strong>Second</strong>, the digital maintenance system had been updated in 2023 and several alerts were no longer reaching the supervisors. <strong>Third</strong>, the team in charge had not been trained to read the new English-language software interface introduced after the system upgrade.</p>
+
+                    <p><strong>4.</strong> The day of the blackout, the transformer reached 137°C — far above its safe limit of 95°C. The <strong>circuit breaker</strong> activated correctly, <strong>but</strong> the entire substation went offline because there was no backup line ready to redistribute the load. <strong>As a result</strong>, the whole northern sector of the city lost power. The repair team needed 14 hours to install a replacement transformer from Santiago.</p>
+
+                    <p><strong>5.</strong> SEC fined the distribution company UF 2,500 (about USD 100,000) and ordered three corrective actions: <strong>first</strong>, hire and certify at least four additional thermal imaging technicians in the region; <strong>second</strong>, audit and fix the alert system to ensure every maintenance task is visible to supervisors; <strong>third</strong>, run a mandatory English training program for all technicians who use the new SCADA software. The company also voluntarily decided to install one redundant backup line at every critical substation.</p>
+
+                    <p><strong>6.</strong> One year later, Quillota has had zero unplanned blackouts longer than 30 minutes. The case is now part of SEC's training material for new inspectors. The lead investigator, engineer Patricia Soto, says: <em>"The blackout was not caused by one big failure. It was caused by many small invisible failures — and one of them was language. We cannot maintain modern grids if we cannot read modern software."</em></p>
                 </div>
 
                 <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What operational or communicative challenge is presented in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text focuses on gathering evidence and technical vocabulary for the oral analysis.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> Which prior checks or contextual details shape the task?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before speaking, the team reviews reports, readings, or tables and organizes the most relevant information.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> What evidence or technical details guide the team's decisions?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">Important details include causes, consequences, and references connected to the switchgear or three-phase panel.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the writer use the language focus of the lesson to clarify meaning?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The language focus shows that good oral arguments depend on evidence rather than unsupported opinion.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What conclusion or recommendation emerges from the situation?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">At the end, the group has a stronger evidence bank to use in the presentation.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What broader lesson about technical communication can be inferred?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Reliable evidence makes the final recommendation more convincing and professional.</div>
-            </div>
-            
+                    <h4>🗂 Actividad 2 — Graphic organizer (15 min)</h4>
+                    <div class="organizer">
+                        <div class="org-card"><h5>🔴 Problem</h5><ul><li>______</li><li>______</li></ul></div>
+                        <div class="org-card"><h5>🟡 Causes</h5><ul><li>______</li><li>______</li><li>______</li></ul></div>
+                        <div class="org-card"><h5>🟠 Effects</h5><ul><li>______</li><li>______</li><li>______</li></ul></div>
+                        <div class="org-card"><h5>🟢 Solutions</h5><ul><li>______</li><li>______</li><li>______</li></ul></div>
+                    </div>
+                    <button class="toggle-btn" onclick="toggleAnswer('org-answer', this)">Ver clave sugerida</button>
+                    <div class="answer-box" id="org-answer">
+                        <strong>Problem:</strong> Apagón de 14 horas en Quillota (80,000 personas), causado por falla de un transformador en la subestación principal.<br>
+                        <strong>Causes:</strong> (1) Última termografía hecha 18 meses antes (protocolo exige 6). (2) Sólo 2 técnicos termográficos, uno jubilado no reemplazado. (3) Alertas del sistema digital no llegaban a supervisores; software SCADA nuevo en inglés sin capacitación.<br>
+                        <strong>Effects:</strong> 80,000 personas sin luz, hospitales con generadores, USD 120,000 en pérdidas de supermercados, traslado de adultos mayores, multa UF 2,500 (~USD 100k).<br>
+                        <strong>Solutions:</strong> (1) Contratar 4+ técnicos termográficos. (2) Auditar y corregir sistema de alertas. (3) Capacitación obligatoria en inglés para SCADA. (4) Línea de respaldo redundante en cada subestación crítica.
+                    </div>
                 </div>
 
                 <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Ruta del trabajo oral</h4>
-                    
-            <p><strong>Trabajo oral de junio</strong> · Etapa 2/5</p>
-            <p><strong>Prompt:</strong> <em>Present a technical workplace case, explain the evidence, and defend a practical solution with justified recommendations.</em></p>
-            <ol class="task-steps"><li>Collect evidence from reports, manuals, tables, or previous readings.</li><li>Organize the notes into problem, cause, consequence, and possible recommendation.</li><li>Highlight the vocabulary that makes the analysis sound professional and precise.</li></ol>
-            <p><strong>Producto esperado:</strong> Banco de evidencia con datos, conceptos y citas útiles para hablar.</p>
-            <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
-            
+                    <h4>📝 Actividad 3 — Comprehension &amp; analysis (6 preguntas)</h4>
+
+                    <div class="question-card">
+                        <p><strong>1. (Explícita)</strong> ¿Cuántas horas duró el apagón y a cuántas personas afectó?</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a1">14 horas, más de 80,000 personas en Quillota.</div>
+                    </div>
+                    <div class="question-card">
+                        <p><strong>2. (Explícita)</strong> ¿Cuál fue la causa técnica directa de la falla del transformador?</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a2">Degradación lenta de la aislación, detectable por termografía. La temperatura llegó a 137°C (límite seguro: 95°C).</div>
+                    </div>
+                    <div class="question-card">
+                        <p><strong>3. (Explícita)</strong> ¿Cada cuánto tiempo exigía el protocolo hacer inspección termográfica y cada cuánto se hizo realmente?</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a3">Protocolo: cada 6 meses. Realidad: la última inspección fue 18 meses antes.</div>
+                    </div>
+                    <div class="question-card">
+                        <p><strong>4. (Inferencia)</strong> ¿Por qué la ingeniera Patricia Soto dice que <em>"language was one of the small invisible failures"</em>?</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a4', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a4">Porque el nuevo software SCADA estaba en inglés y los técnicos no fueron capacitados para leerlo. Las alertas del sistema digital no llegaron a los supervisores porque nadie las entendía. El inglés técnico es parte invisible de la mantención moderna.</div>
+                    </div>
+                    <div class="question-card">
+                        <p><strong>5. (Análisis personal)</strong> Si tú trabajaras en una subestación y vieras que un protocolo no se está cumpliendo, ¿qué harías? ¿Por qué?</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a5', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a5">Respuesta personal con autodiagnóstico ético + 1-2 acciones concretas (reportar a supervisor, dejar registro escrito, escalar a SEC, etc.).</div>
+                    </div>
+                    <div class="question-card">
+                        <p><strong>6. (Crítica)</strong> SEC multó a la empresa con UF 2,500. ¿Es esto suficiente? Justifica con 2 argumentos.</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a6', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a6">Respuesta personal. Pueden argumentar que es proporcional al daño, o insuficiente (USD 100k vs. impacto humano y comercial), o que las multas no cambian la cultura técnica. Debe incluir 2 argumentos con conectores.</div>
+                    </div>
+                </div>
+
+                <div class="task-box">
+                    <h4>🗣 Actividad 4 — Solución grupal (15 min)</h4>
+                    <p>En grupos de <strong>3-4</strong>, propongan <strong>una cuarta solución</strong> distinta a las que ordenó SEC. Construyan 3 oraciones:</p>
+                    <ol class="task-steps">
+                        <li><em>"The root cause of the blackout was __________ because __________."</em></li>
+                        <li><em>"As a result, we propose __________."</em></li>
+                        <li><em>"Therefore, the distribution company should __________."</em></li>
+                    </ol>
                 </div>
 
                 <div class="eval-box">
                     <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa — calidad del diagrama de análisis y de las propuestas de solución. Evidencia de etapa: Banco de evidencia con datos, conceptos y citas útiles para hablar.</p>
+                    <p><strong>Formativa:</strong> el docente recoge el organizador y observa las propuestas. Criterios: (1) organizador completo, (2) 3 oraciones + 2 conectores, (3) 4+ palabras del vocabulario, (4) participación.</p>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-header cierre">🟣 Cierre (15 min)</div>
             <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🟣 Cierre — Oral Project Checkpoint</h4>
-        <p>Close the lesson by checking progress on the oral task and defining the next step in the sequence.</p>
-        <ol class="task-steps"><li>Review your notes and identify the strongest contribution from today's stage.</li><li>Compare your progress with a partner before writing your final exit ticket.</li><li>Complete the three checkpoint prompts below.</li></ol>
-        
-            <div class="exit-ticket">
-                <h5>Exit ticket prompts</h5>
-                <ul><li>Write two pieces of evidence or technical details you collected today.</li><li>Identify the vocabulary item that will be most useful in your presentation.</li><li>Explain what information is still missing before you can build the oral outline.</li></ul>
+                <div class="task-box activity-card">
+                    <h4>🗣 Sharing + exit ticket</h4>
+                    <p>Cada grupo presenta su propuesta. El docente cierra: <em>"In electricity, what you don't measure, you don't know. What you don't read, you don't measure. And what you don't speak in English, you don't read."</em></p>
+                    <p>Preview: <em>"Next two classes we will prepare and hold a structured debate about solar vs. wind energy in Chile."</em></p>
+                    <div class="exit-ticket">
+                        <h5>🎫 Exit ticket</h5>
+                        <p style="background:#fffbeb; padding:10px; border-radius:8px; color:#854d0e;"><em>"The most important lesson from this case study is __________ because __________."</em></p>
+                    </div>
+                </div>
             </div>
-            
-    </div>
-    </div>
         </div>
 
         <div class="resource-card">
             <h4>📦 Recursos sugeridos</h4>
-            <p>Texto impreso del estudio de caso, diagrama de análisis (Problem-Cause-Solution), tarjetas para propuestas. Producto de avance: Banco de evidencia con datos, conceptos y citas útiles para hablar.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+            <p><strong>Materiales:</strong> texto impreso, organizador 4 cuadrantes, ficha de conectores, 6 preguntas, pizarra para propuestas.</p>
+            <p><strong>Apoyos visuales opcionales:</strong> foto de subestación, termografía real de transformador caliente, captura de pantalla de SCADA en inglés.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Diferenciación: avanzados usan condicional (<em>"If the inspection had been done…"</em>). Apoyo: banco de frases.</p>
         </div>
 
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 4°C Electricidad · Unidad 2 · Clase 2.</p>
     </div>
 
     <script>

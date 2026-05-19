@@ -3,265 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 2 — Unidad 2 — 4°E — Electrónica</title>
+    <title>Clase 2 — Unidad 2 — 4°E — The IoT Security Breach</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
         .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
-        .hero p { color: rgba(255,255,255,0.88); }
+        .hero { background: linear-gradient(135deg, #4338ca, #312e81); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(67, 56, 202, 0.18); }
+        .hero h1 { font-size: 2rem; margin-bottom: 6px; } .hero p { color: rgba(255,255,255,0.88); }
         .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
         .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
         .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
         .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
+        .objective-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
+        .objective-card { padding: 22px 24px; border-left: 6px solid #4338ca; }
+        .objective-card h2 { color: #4338ca; font-size: 1.05rem; margin-bottom: 8px; }
         .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-        .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
-        .cierre { background: #7c3aed; }
+        .inicio { background: #2e7d32; } .desarrollo { background: #4338ca; } .cierre { background: #7c3aed; }
         .section-body { padding: 20px 22px 22px; }
-        .section-body ul { margin-left: 20px; }
-        .section-body li { margin-bottom: 8px; }
-        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
+        .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
+        .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
         .activity-card p { margin-bottom: 10px; }
-        .task-steps { margin-left: 20px; }
-        .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-        .focus-card ul { margin-left: 18px; }
-        .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .task-steps { margin-left: 20px; } .task-steps li { margin-bottom: 8px; }
         .reading-box p { margin-bottom: 10px; }
         .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #e0e7ff; color: #4338ca; padding: 8px 12px; font-weight: 700; cursor: pointer; }
         .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
         .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
+        .organizer { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 12px; }
+        .org-card { background: white; border: 2px solid #c7d2fe; border-radius: 12px; padding: 14px; }
+        .org-card h5 { color: #4338ca; margin-bottom: 8px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .org-card ul { margin-left: 16px; } .org-card li { margin-bottom: 6px; font-size: 0.92rem; }
         .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
         .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
         .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-        .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
+        .resource-card h4 { color: #4338ca; margin-bottom: 8px; }
         .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 10px; }
+        .glossary-card { background: white; border: 1px solid #c7d2fe; border-radius: 10px; padding: 10px 12px; }
+        .glossary-card strong { color: #4338ca; }
+        .glossary-card .pron { color: #6b7280; font-style: italic; font-size: 0.88rem; }
+        .connectors-box { background: #e0e7ff; border-radius: 10px; padding: 12px 14px; margin-top: 12px; }
+        .connectors-box strong { color: #312e81; }
+        @media (max-width: 720px) { .hero h1 { font-size: 1.55rem; } .page { padding: 16px 12px 28px; } }
+        @media print { body { background: white; } .toolbar { display: none; } .hero, .objective-card, .section, .resource-card { box-shadow: none; } }
     </style>
 </head>
 <body>
     <div class="page">
         <div class="hero">
             <h1>Clase 2 — Unidad 2</h1>
-            <p>4°E — Electrónica · Case Study: The IoT Security Breach</p>
+            <p>4°E — Electrónica · Case Study: <em>The IoT Security Breach</em></p>
             <div class="meta">
-                <span>🎯 Reunir evidencia y vocabulario especializado</span>
-                <span>📘 OA1 · OA3</span>
-                <span>🗂 Clase anual 10</span>
-                <span>🎤 Trabajo oral de junio · Etapa 2/5</span>
-                <span>🧩 Clase de trabajo</span>
+                <span>🎯 Analizar problema laboral real (Problem → Causes → Effects → Solutions)</span>
+                <span>📘 OA1 · OA3 · OA4</span>
+                <span>🗂 Clase 2 — Unidad 2 (Clase 10 del año)</span>
+                <span>🗓 Semana 14 · mayo</span>
+                <span>🧩 Lectura B1 + organizador 4 cuadrantes + propuesta grupal</span>
             </div>
         </div>
 
-        <div class="toolbar">
-            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
-        </div>
+        <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
 
         <div class="objective-card">
             <h2>Objetivo de la clase</h2>
-            <p>Evaluar un problema laboral presentado en un estudio de caso de Electrónica, proponiendo soluciones fundamentadas en inglés.</p>
+            <p>Analizar un <strong>problema laboral real</strong> de ciberseguridad en dispositivos médicos IoT, usando el organizador <strong>Problem → Causes → Effects → Solutions</strong>, y proponer en grupo una solución técnica fundamentada en inglés con conectores de causa-efecto.</p>
         </div>
 
         <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
+            <div class="section-header inicio">🟢 Inicio (15 min)</div>
             <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to Case Study: The IoT Security Breach.</li><li>Recuerda la idea central de la clase pasada: Analizar críticamente un estudio de caso sobre tendencias globales que afectan al campo...</li><li>Predict which tools, risks, or key ideas may appear when working with Case Study: The IoT Security Breach in the electrónica avanzada context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Analizar críticamente un estudio de caso sobre tendencias globales que afectan al campo...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
-    <div class="review-box">
-        <h4>🎤 Ruta del trabajo oral</h4>
-        <p><strong>Trabajo oral de junio</strong> · Etapa 2/5 · Entrega prevista: primera semana de junio.</p>
-        <p><strong>Meta de hoy:</strong> Reunir evidencia desde reportes, manuales o lecturas y fijar vocabulario clave.</p>
-        <p><strong>Producto esperado:</strong> Banco de evidencia con datos, conceptos y citas útiles para hablar.</p>
-        <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
-    </div>
-    
-    </div>
-    </div>
+                <div class="task-box activity-card">
+                    <h4>🔎 Recap + activación</h4>
+                    <p>El docente conecta con la clase anterior: <em>"Last class we read about the e-waste crisis. Today, a different challenge: what happens when connected medical devices are hacked?"</em></p>
+                    <p>Brainstorm (3 min): <em>"Name 3 devices in your home that connect to internet. Are they secure?"</em></p>
+                    <div class="connectors-box">
+                        <strong>🔗 Conectores clave de hoy (causa-efecto):</strong>
+                        <p><em>because</em> · <em>so</em> · <em>as a result</em> · <em>therefore</em> · <em>due to</em> · <em>this caused</em></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
+            <div class="section-header desarrollo">🟪 Desarrollo (60 min)</div>
             <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at B1 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The microcontroller is checked before the task begins.</li><li>The firmware file gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
-            </div>
-            </div>
-    </div>
-    
 
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
+                <div class="task-box activity-card">
+                    <h4>📚 Vocabulario clave del case study</h4>
                     <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">firmware</div>
-                <div class="meaning">software stored inside a device to control its functions</div>
-                <div class="pronunciation">Pron.: FERM-uer</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">microcontroller</div>
-                <div class="meaning">a small programmable chip used to control a system</div>
-                <div class="pronunciation">Pron.: MAI-kro-kon-TRO-ler</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">embedded</div>
-                <div class="meaning">built into a device as part of its internal system</div>
-                <div class="pronunciation">Pron.: em-BE-did</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">datasheet</div>
-                <div class="meaning">a technical document that lists specifications and limits</div>
-                <div class="pronunciation">Pron.: DEI-ta-shit</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">sensor</div>
-                <div class="meaning">a device that detects change and sends information</div>
-                <div class="pronunciation">Pron.: SEN-sor</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">signal</div>
-                <div class="meaning">electrical information that carries data</div>
-                <div class="pronunciation">Pron.: SIG-nal</div>
-            </div>
-            </div>
+                        <div class="glossary-card"><strong>IoT (Internet of Things)</strong> <span class="pron">(ai-ou-ti)</span> — internet de las cosas</div>
+                        <div class="glossary-card"><strong>vulnerability</strong> <span class="pron">(val-ne-ra-BI-li-ti)</span> — vulnerabilidad</div>
+                        <div class="glossary-card"><strong>firmware</strong> <span class="pron">(FERM-uer)</span> — firmware</div>
+                        <div class="glossary-card"><strong>patch / update</strong> <span class="pron">(pach / AP-deit)</span> — parche / actualización</div>
+                        <div class="glossary-card"><strong>default password</strong> <span class="pron">(de-FOLT PAS-uord)</span> — contraseña por defecto</div>
+                        <div class="glossary-card"><strong>breach</strong> <span class="pron">(briich)</span> — vulneración / brecha</div>
+                        <div class="glossary-card"><strong>ransomware</strong> <span class="pron">(RAN-som-uer)</span> — ransomware</div>
+                        <div class="glossary-card"><strong>encryption</strong> <span class="pron">(en-KRIP-shon)</span> — encriptación</div>
+                        <div class="glossary-card"><strong>network segmentation</strong> <span class="pron">(NET-uork seg-men-TEI-shon)</span> — segmentación de red</div>
+                        <div class="glossary-card"><strong>backup</strong> <span class="pron">(BAK-ap)</span> — respaldo</div>
+                    </div>
                 </div>
 
                 <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Model — Reunir evidencia y vocabulario especializado</h4>
-                    <p class="reading-note">Modelo guiado B1 para la etapa 2/5 del trabajo oral de junio: Reunir evidencia desde reportes, manuales o lecturas y fijar vocabulario clave.</p>
-                    <p>Once the case is chosen, the team gathers evidence from manuals, reports, data tables, or class readings to support the future presentation.</p><p>Useful notes include the main cause of the problem, its impact on the workplace, and the technical references connected to equipment such as the microcontroller or firmware file.</p><p>The vocabulary bank becomes more precise because the speaker needs words that describe evidence, risk, sequence, and recommendation in a professional tone.</p><p>Instead of copying full paragraphs, the group organizes information into short evidence points that can be explained naturally during the oral task.</p><p>A strong oral analysis begins with reliable evidence, not only with opinions or isolated vocabulary.</p>
+                    <h4>📖 Actividad 1 — Reading the case (20 min): <em>The IoT Security Breach</em></h4>
+                    <p class="reading-note">Texto adaptado nivel B1. Lectura individual silenciosa, luego segunda lectura completando el organizador.</p>
+
+                    <p><strong>1.</strong> In June 2023, the Hospital Regional de Antofagasta detected an unusual problem at 3:42 a.m.: 12 of its <strong>IoT</strong> infusion pumps (bombas de infusión inteligentes) started sending error signals to the nurses' monitoring station. By 4:30 a.m., the hospital had lost remote control of 38 connected medical devices: infusion pumps, vital-sign monitors and three networked X-ray machines. A message appeared on the central display: <em>"Your data is encrypted. Pay 50 BTC in 72 hours."</em> The hospital had been hit by <strong>ransomware</strong>.</p>
+
+                    <p><strong>2.</strong> The IT security team and the hospital's biomedical electronics technicians worked together for 36 hours to isolate the threat. Patients were safe — manual procedures replaced the automated ones — <strong>but</strong> three scheduled surgeries had to be postponed, and the X-ray service was offline for 4 days. The hospital did not pay the ransom; <strong>instead</strong>, it restored systems from <strong>backups</strong> stored offline.</p>
+
+                    <p><strong>3.</strong> The forensic investigation, written in English by an international cybersecurity firm, identified the root <strong>vulnerability</strong>. The hacked devices were modern, but their <strong>firmware</strong> had not been <strong>updated</strong> in 18 months because the IT department considered patching "too risky for medical equipment". <strong>In addition</strong>, the manufacturer's <strong>default passwords</strong> (admin/admin, admin/1234) had never been changed on 22 of the 38 devices.</p>
+
+                    <p><strong>4.</strong> The third critical mistake was <strong>network segmentation</strong>. All IoT medical devices, all administrative computers and the public Wi-Fi for visitors shared the same network. <strong>As a result</strong>, the malware that entered through a phishing email opened by an administrative employee could move freely to the medical devices in 12 minutes. A properly segmented network would have stopped it inside the administrative zone.</p>
+
+                    <p><strong>5.</strong> The Ministry of Health and the SEREMI fined the hospital and ordered four corrective actions. <strong>First</strong>, an immediate firmware update of all IoT medical equipment, with a scheduled patching calendar every 90 days. <strong>Second</strong>, mandatory replacement of all default passwords and use of strong <strong>encryption</strong> on every connection. <strong>Third</strong>, full network segmentation: medical devices, administrative network and public Wi-Fi must run on separate VLANs. <strong>Fourth</strong>, a training program for biomedical technicians in basic cybersecurity, with materials in English from the FDA and the IEC 62443 standard.</p>
+
+                    <p><strong>6.</strong> One year later, no further breaches have been detected. Biomedical electronics technician Camila Reyes, who led the local recovery team, says: <em>"We used to think security was an IT problem. Now we know it is part of every electronics technician's job. If a device connects to the internet, we are responsible for protecting it — and most of the documentation is in English."</em></p>
                 </div>
 
                 <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What operational or communicative challenge is presented in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text focuses on gathering evidence and technical vocabulary for the oral analysis.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> Which prior checks or contextual details shape the task?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before speaking, the team reviews reports, readings, or tables and organizes the most relevant information.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> What evidence or technical details guide the team's decisions?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">Important details include causes, consequences, and references connected to the microcontroller or firmware file.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the writer use the language focus of the lesson to clarify meaning?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The language focus shows that good oral arguments depend on evidence rather than unsupported opinion.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What conclusion or recommendation emerges from the situation?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">At the end, the group has a stronger evidence bank to use in the presentation.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What broader lesson about technical communication can be inferred?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Reliable evidence makes the final recommendation more convincing and professional.</div>
-            </div>
-            
+                    <h4>🗂 Actividad 2 — Graphic organizer (15 min)</h4>
+                    <div class="organizer">
+                        <div class="org-card"><h5>🔴 Problem</h5><ul><li>______</li><li>______</li></ul></div>
+                        <div class="org-card"><h5>🟡 Causes</h5><ul><li>______</li><li>______</li><li>______</li></ul></div>
+                        <div class="org-card"><h5>🟠 Effects</h5><ul><li>______</li><li>______</li><li>______</li></ul></div>
+                        <div class="org-card"><h5>🟢 Solutions</h5><ul><li>______</li><li>______</li><li>______</li></ul></div>
+                    </div>
+                    <button class="toggle-btn" onclick="toggleAnswer('org-answer', this)">Ver clave sugerida</button>
+                    <div class="answer-box" id="org-answer">
+                        <strong>Problem:</strong> Ataque ransomware al Hospital de Antofagasta. 38 dispositivos IoT médicos secuestrados, pedido de 50 BTC.<br>
+                        <strong>Causes:</strong> (1) Firmware no actualizado en 18 meses. (2) Contraseñas por defecto sin cambiar (22 de 38 equipos). (3) Sin segmentación de red — IoT médico, administrativo y Wi-Fi público compartían misma red.<br>
+                        <strong>Effects:</strong> 3 cirugías postergadas, servicio de Rayos X 4 días offline, 36 horas de respuesta de emergencia, multa del MINSAL.<br>
+                        <strong>Solutions:</strong> (1) Calendario de parches cada 90 días. (2) Cambio obligatorio de claves + encriptación. (3) Segmentación en VLANs separadas. (4) Capacitación en ciberseguridad para biomédicos (FDA / IEC 62443 en inglés).
+                    </div>
                 </div>
 
                 <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Ruta del trabajo oral</h4>
-                    
-            <p><strong>Trabajo oral de junio</strong> · Etapa 2/5</p>
-            <p><strong>Prompt:</strong> <em>Present a technical workplace case, explain the evidence, and defend a practical solution with justified recommendations.</em></p>
-            <ol class="task-steps"><li>Collect evidence from reports, manuals, tables, or previous readings.</li><li>Organize the notes into problem, cause, consequence, and possible recommendation.</li><li>Highlight the vocabulary that makes the analysis sound professional and precise.</li></ol>
-            <p><strong>Producto esperado:</strong> Banco de evidencia con datos, conceptos y citas útiles para hablar.</p>
-            <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
-            
+                    <h4>📝 Actividad 3 — Comprehension &amp; analysis (6 preguntas)</h4>
+
+                    <div class="question-card">
+                        <p><strong>1. (Explícita)</strong> ¿Cuántos dispositivos médicos fueron afectados y qué tipo de ataque sufrieron?</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a1', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a1">38 dispositivos IoT (bombas de infusión, monitores de signos vitales, 3 máquinas de rayos X). Ataque de tipo ransomware con rescate de 50 BTC.</div>
+                    </div>
+                    <div class="question-card">
+                        <p><strong>2. (Explícita)</strong> ¿Por qué el IT department no había actualizado el firmware en 18 meses?</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a2', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a2">Porque consideraban que parchar equipos médicos era "demasiado riesgoso" (preferían no tocar lo que funcionaba).</div>
+                    </div>
+                    <div class="question-card">
+                        <p><strong>3. (Explícita)</strong> ¿Qué cuatro medidas correctivas ordenó el Ministerio de Salud?</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a3', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a3">(1) Actualización inmediata de firmware + calendario cada 90 días. (2) Cambio de claves por defecto y encriptación obligatoria. (3) Segmentación de red en VLANs separadas. (4) Capacitación en ciberseguridad para técnicos biomédicos.</div>
+                    </div>
+                    <div class="question-card">
+                        <p><strong>4. (Inferencia)</strong> ¿Por qué la segmentación de red habría detenido al malware "en la zona administrativa"?</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a4', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a4">Porque si los dispositivos médicos hubieran estado en una VLAN separada de la red administrativa y del Wi-Fi público, el malware que entró por phishing no habría podido "saltar" desde el computador administrativo a las bombas de infusión. La segmentación crea barreras lógicas.</div>
+                    </div>
+                    <div class="question-card">
+                        <p><strong>5. (Análisis personal)</strong> Camila Reyes dice: <em>"Security is part of every electronics technician's job."</em> ¿Estás de acuerdo? ¿Qué tendrías que aprender tú este año?</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a5', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a5">Respuesta personal con postura + 1-2 acciones concretas (curso de ciberseguridad básica, lectura de IEC 62443, práctica con configuración de routers/VLAN, etc.).</div>
+                    </div>
+                    <div class="question-card">
+                        <p><strong>6. (Crítica)</strong> El hospital decidió NO pagar el rescate. ¿Fue la decisión correcta? Da 2 argumentos.</p>
+                        <button class="toggle-btn" onclick="toggleAnswer('a6', this)">Ver respuesta</button>
+                        <div class="answer-box" id="a6">Respuesta personal. A favor: no pagar desincentiva a los atacantes, no garantiza recuperar datos, los backups funcionaron. En contra: pudo poner en riesgo vidas si los backups fallaban. Debe incluir 2 argumentos con conectores.</div>
+                    </div>
+                </div>
+
+                <div class="task-box">
+                    <h4>🗣 Actividad 4 — Solución grupal (15 min)</h4>
+                    <p>En grupos de <strong>3-4</strong>, propongan <strong>una quinta solución</strong> distinta a las 4 ordenadas. Construyan 3 oraciones:</p>
+                    <ol class="task-steps">
+                        <li><em>"The most critical vulnerability was __________ because __________."</em></li>
+                        <li><em>"As a result, we propose __________."</em></li>
+                        <li><em>"Therefore, the hospital should __________."</em></li>
+                    </ol>
                 </div>
 
                 <div class="eval-box">
                     <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa — calidad del diagrama de análisis y de las propuestas de solución. Evidencia de etapa: Banco de evidencia con datos, conceptos y citas útiles para hablar.</p>
+                    <p><strong>Formativa:</strong> el docente recoge el organizador y observa las propuestas. Criterios: (1) organizador completo, (2) 3 oraciones + 2 conectores, (3) 4+ palabras del vocabulario, (4) participación.</p>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
+            <div class="section-header cierre">🟣 Cierre (15 min)</div>
             <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🟣 Cierre — Oral Project Checkpoint</h4>
-        <p>Close the lesson by checking progress on the oral task and defining the next step in the sequence.</p>
-        <ol class="task-steps"><li>Review your notes and identify the strongest contribution from today's stage.</li><li>Compare your progress with a partner before writing your final exit ticket.</li><li>Complete the three checkpoint prompts below.</li></ol>
-        
-            <div class="exit-ticket">
-                <h5>Exit ticket prompts</h5>
-                <ul><li>Write two pieces of evidence or technical details you collected today.</li><li>Identify the vocabulary item that will be most useful in your presentation.</li><li>Explain what information is still missing before you can build the oral outline.</li></ul>
+                <div class="task-box activity-card">
+                    <h4>🗣 Sharing + exit ticket</h4>
+                    <p>Cada grupo presenta. El docente cierra: <em>"Every device with an IP address is a door. Some doors have strong locks. Others use admin/admin. The technician decides which kind of door we install."</em></p>
+                    <p>Preview: <em>"Next two classes we will prepare and hold a structured debate about e-waste and the right to repair."</em></p>
+                    <div class="exit-ticket">
+                        <h5>🎫 Exit ticket</h5>
+                        <p style="background:#eef2ff; padding:10px; border-radius:8px; color:#312e81;"><em>"The most important lesson from this case study is __________ because __________."</em></p>
+                    </div>
+                </div>
             </div>
-            
-    </div>
-    </div>
         </div>
 
         <div class="resource-card">
             <h4>📦 Recursos sugeridos</h4>
-            <p>Texto impreso del estudio de caso, diagrama de análisis (Problem-Cause-Solution), tarjetas para propuestas. Producto de avance: Banco de evidencia con datos, conceptos y citas útiles para hablar.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
+            <p><strong>Materiales:</strong> texto impreso, organizador 4 cuadrantes, ficha de conectores, 6 preguntas, pizarra para propuestas.</p>
+            <p><strong>Apoyos visuales opcionales:</strong> diagrama de red segmentada (VLANs), captura de pantalla de mensaje ransomware real, esquema de bomba de infusión IoT.</p>
+            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Diferenciación: avanzados usan condicional (<em>"If the firmware had been updated…"</em>). Apoyo: banco de frases.</p>
         </div>
 
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
+        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 4°E Electrónica · Unidad 2 · Clase 2.</p>
     </div>
 
     <script>
