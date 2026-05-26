@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-15",
+  "lastUpdated": "2026-05-26",
   "classes": {
     "1ro-lu-ju/u1/Clase_1": {
       "status": "pending",
@@ -298,12 +298,14 @@
       "title": "Clase 2 — Robots in the Factory"
     },
     "3A-industrial/u2/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — Ficha con mini-textos (3-4 párrafos) presentando argumentos a favor y en contra...."
+      "status": "done",
+      "title": "Clase 3 — Debate Prep: preparar el mini-debate (A2)",
+      "date": "2026-05-26"
     },
     "3A-industrial/u2/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — Find 3 specific pieces of information\" (5 min) 6 preguntas de comprensión con..."
+      "status": "done",
+      "title": "Clase 4 — Mini-Debate Day (A2)",
+      "date": "2026-05-26"
     },
     "3A-industrial/u2/Clase_5": {
       "status": "pending",
@@ -414,12 +416,14 @@
       "title": "Clase 2 — The Electric Vehicle Revolution"
     },
     "3B-automotriz/u2/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — Ficha con mini-textos (3-4 párrafos) presentando argumentos a favor y en contra...."
+      "status": "done",
+      "title": "Clase 3 — Debate Prep: preparar el mini-debate (A2)",
+      "date": "2026-05-26"
     },
     "3B-automotriz/u2/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — Find 3 specific pieces of information\" (5 min) 6 preguntas de comprensión con..."
+      "status": "done",
+      "title": "Clase 4 — Mini-Debate Day (A2)",
+      "date": "2026-05-26"
     },
     "3B-automotriz/u2/Clase_5": {
       "status": "pending",
@@ -530,12 +534,14 @@
       "title": "Clase 2 — Solar vs. Wind Energy"
     },
     "3C-electricidad/u2/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — Ficha con mini-textos (3-4 párrafos) presentando argumentos a favor y en contra...."
+      "status": "done",
+      "title": "Clase 3 — Debate Prep: preparar el mini-debate (A2)",
+      "date": "2026-05-26"
     },
     "3C-electricidad/u2/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — Find 3 specific pieces of information\" (5 min) 6 preguntas de comprensión con..."
+      "status": "done",
+      "title": "Clase 4 — Mini-Debate Day (A2)",
+      "date": "2026-05-26"
     },
     "3C-electricidad/u2/Clase_5": {
       "status": "pending",
@@ -646,12 +652,14 @@
       "title": "Clase 2 — Green Printing"
     },
     "3D-grafica/u2/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — Ficha con mini-textos (3-4 párrafos) presentando argumentos a favor y en contra...."
+      "status": "done",
+      "title": "Clase 3 — Debate Prep: preparar el mini-debate (A2)",
+      "date": "2026-05-26"
     },
     "3D-grafica/u2/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — Find 3 specific pieces of information\" (5 min) 6 preguntas de comprensión con..."
+      "status": "done",
+      "title": "Clase 4 — Mini-Debate Day (A2)",
+      "date": "2026-05-26"
     },
     "3D-grafica/u2/Clase_5": {
       "status": "pending",
@@ -762,12 +770,14 @@
       "title": "Clase 2 — The E-Waste Crisis"
     },
     "3E-electronica/u2/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — Ficha con mini-textos (3-4 párrafos) presentando argumentos a favor y en contra...."
+      "status": "done",
+      "title": "Clase 3 — Debate Prep: preparar el mini-debate (A2)",
+      "date": "2026-05-26"
     },
     "3E-electronica/u2/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — Find 3 specific pieces of information\" (5 min) 6 preguntas de comprensión con..."
+      "status": "done",
+      "title": "Clase 4 — Mini-Debate Day (A2)",
+      "date": "2026-05-26"
     },
     "3E-electronica/u2/Clase_5": {
       "status": "pending",
@@ -878,12 +888,14 @@
       "title": "Clase 2 — Reunir evidencia y vocabulario especializado"
     },
     "4A-industrial/u2/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — Construir el argumento oral"
+      "status": "done",
+      "title": "Clase 3 — Debate Prep: organizar argumentos PRO/CON (B1)",
+      "date": "2026-05-26"
     },
     "4A-industrial/u2/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — Ensayar con retroalimentación crítica"
+      "status": "done",
+      "title": "Clase 4 — Debate Day: debate estructurado (B1)",
+      "date": "2026-05-26"
     },
     "4A-industrial/u2/Clase_5": {
       "status": "pending",
@@ -978,12 +990,14 @@
       "title": "Clase 2 — Reunir evidencia y vocabulario especializado"
     },
     "4B-automotriz/u2/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — Construir el argumento oral"
+      "status": "done",
+      "title": "Clase 3 — Debate Prep: organizar argumentos PRO/CON (B1)",
+      "date": "2026-05-26"
     },
     "4B-automotriz/u2/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — Ensayar con retroalimentación crítica"
+      "status": "done",
+      "title": "Clase 4 — Debate Day: debate estructurado (B1)",
+      "date": "2026-05-26"
     },
     "4B-automotriz/u2/Clase_5": {
       "status": "pending",
@@ -1078,12 +1092,14 @@
       "title": "Clase 2 — Reunir evidencia y vocabulario especializado"
     },
     "4C-electricidad/u2/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — Construir el argumento oral"
+      "status": "done",
+      "title": "Clase 3 — Debate Prep: organizar argumentos PRO/CON (B1)",
+      "date": "2026-05-26"
     },
     "4C-electricidad/u2/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — Ensayar con retroalimentación crítica"
+      "status": "done",
+      "title": "Clase 4 — Debate Day: debate estructurado (B1)",
+      "date": "2026-05-26"
     },
     "4C-electricidad/u2/Clase_5": {
       "status": "pending",
@@ -1178,12 +1194,14 @@
       "title": "Clase 2 — Reunir evidencia y vocabulario especializado"
     },
     "4E-electronica/u2/Clase_3": {
-      "status": "pending",
-      "title": "Clase 3 — Construir el argumento oral"
+      "status": "done",
+      "title": "Clase 3 — Debate Prep: organizar argumentos PRO/CON (B1)",
+      "date": "2026-05-26"
     },
     "4E-electronica/u2/Clase_4": {
-      "status": "pending",
-      "title": "Clase 4 — Ensayar con retroalimentación crítica"
+      "status": "done",
+      "title": "Clase 4 — Debate Day: debate estructurado (B1)",
+      "date": "2026-05-26"
     },
     "4E-electronica/u2/Clase_5": {
       "status": "pending",
