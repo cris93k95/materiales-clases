@@ -3,273 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 3 — Unidad 2 — 4°A — Mecánica Industrial</title>
+    <title>Clase 3 — Unidad 2 — 4°A — Debate Prep: Automation vs. Jobs</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
-        .hero p { color: rgba(255,255,255,0.88); }
-        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-        .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
-        .cierre { background: #7c3aed; }
-        .section-body { padding: 20px 22px 22px; }
-        .section-body ul { margin-left: 20px; }
-        .section-body li { margin-bottom: 8px; }
-        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-        .activity-card p { margin-bottom: 10px; }
-        .task-steps { margin-left: 20px; }
-        .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-        .focus-card ul { margin-left: 18px; }
-        .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-        .reading-box p { margin-bottom: 10px; }
-        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-        .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
-        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
-        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-        .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Inter',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.65}
+        .page{max-width:1080px;margin:0 auto;padding:24px 18px 40px}
+        .hero{background:linear-gradient(135deg,#0f766e,#155e75);color:white;border-radius:18px;padding:28px;box-shadow:0 18px 40px rgba(15,118,110,.18)}
+        .hero h1{font-size:2rem;margin-bottom:6px} .hero p{color:rgba(255,255,255,.88)}
+        .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+        .meta span{background:rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;font-size:.84rem}
+        .toolbar{display:flex;justify-content:flex-end;margin:18px 0 10px}
+        .print-btn{border:none;border-radius:10px;background:#0f172a;color:white;padding:10px 16px;font-weight:600;cursor:pointer}
+        .objective-card,.section,.resource-card{background:white;border-radius:16px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:18px;overflow:hidden}
+        .objective-card{padding:22px 24px;border-left:6px solid #0f766e}
+        .objective-card h2{color:#0f766e;font-size:1.05rem;margin-bottom:8px}
+        .section-header{color:white;font-weight:700;padding:14px 22px;font-size:1rem}
+        .inicio{background:#2e7d32} .desarrollo{background:#0f766e} .cierre{background:#7c3aed}
+        .section-body{padding:20px 22px 22px}
+        .task-box,.eval-box,.resource-card,.motion-box{border:1px solid #e5e7eb;border-radius:14px;padding:18px;background:#f8fafc;margin-top:16px}
+        .task-box h4,.eval-box h4{color:#0f172a;margin-bottom:10px}
+        .motion-box{background:#ccfbf1;border:2px solid #0f766e}
+        .motion-box h3{color:#0f766e;font-size:1.1rem;margin-bottom:8px}
+        .motion-box p{font-size:1.05rem;font-style:italic;color:#115e59}
+        .teams{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+        .team-card{border-radius:12px;padding:16px;border:2px solid}
+        .team-pro{background:#ecfdf5;border-color:#16a34a} .team-pro h4{color:#15803d;margin-bottom:6px}
+        .team-con{background:#fef2f2;border-color:#dc2626} .team-con h4{color:#b91c1c;margin-bottom:6px}
+        .lang-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px}
+        .lang-card{background:white;border:1px solid #99f6e4;border-radius:10px;padding:10px 12px}
+        .lang-card strong{color:#0f766e;display:block;margin-bottom:4px}
+        .lang-card em{color:#6b7280;font-style:italic;font-size:.9rem}
+        .argument-planner{background:white;border:1px solid #e5e7eb;border-radius:12px;padding:14px;margin-top:12px}
+        .argument-planner h5{color:#0f766e;margin-bottom:8px}
+        .argument-planner ol{margin-left:20px} .argument-planner li{margin-bottom:6px}
+        .fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+        .fact-col{background:white;border-radius:10px;padding:14px;border:1px solid #e5e7eb}
+        .fact-col h5{margin-bottom:8px}
+        .fact-col.pro h5{color:#15803d} .fact-col.con h5{color:#b91c1c}
+        .fact-col ul{margin-left:18px} .fact-col li{margin-bottom:6px;font-size:.92rem}
+        .exit-ticket{background:white;border:1px dashed #cbd5e1;border-radius:12px;padding:14px;margin-top:12px}
+        .resource-card h4{color:#0f766e;margin-bottom:8px}
+        .footer-note{text-align:center;color:#6b7280;font-size:.82rem;margin-top:28px}
+        @media (max-width:720px){.teams,.fact-grid{grid-template-columns:1fr}}
+        @media print{body{background:white}.toolbar{display:none}.hero,.objective-card,.section,.resource-card{box-shadow:none}}
     </style>
 </head>
 <body>
-    <div class="page">
-        <div class="hero">
-            <h1>Clase 3 — Unidad 2</h1>
-            <p>4°A — Mecánica Industrial · Lee un texto corto con datos que apoyan su postura. Identifica 3 argumentos principales. Prepara evidencia de...</p>
-            <div class="meta">
-                <span>🎯 Construir el argumento oral</span>
-                <span>📘 OA3 · OA4</span>
-                <span>🗂 Clase anual 11</span>
-                <span>🎤 Trabajo oral de junio · Etapa 3/5</span>
-                <span>🧩 Clase de trabajo</span>
+<div class="page">
+    <div class="hero">
+        <h1>Clase 3 — Unidad 2</h1>
+        <p>4°A — Mecánica Industrial · Debate Preparation</p>
+        <div class="meta">
+            <span>🎯 Preparar argumentos PRO/CON para debate estructurado</span>
+            <span>📘 OA4 · OA5 · OA6 (expresión oral)</span>
+            <span>🗂 Clase 3 — Unidad 2 (Clase 11 del año)</span>
+            <span>🗓 Semana 14 · mayo</span>
+            <span>🧩 Próxima clase: DEBATE</span>
+        </div>
+    </div>
+
+    <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+
+    <div class="objective-card">
+        <h2>Objetivo de la clase</h2>
+        <p>Preparar argumentos sólidos PRO y CON para un <strong>debate estructurado</strong> sobre automatización en fábricas chilenas, utilizando lenguaje de debate en inglés (B1) y el modelo <strong>Claim + Evidence + Reasoning</strong>.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (15 min)</div>
+        <div class="section-body">
+            <div class="motion-box">
+                <h3>📣 Motion (la afirmación que se debatirá)</h3>
+                <p><em>"Chilean factories should invest heavily in automation, even if it means fewer manual jobs."</em></p>
+            </div>
+            <div class="teams">
+                <div class="team-card team-pro">
+                    <h4>✅ TEAM PRO (a favor)</h4>
+                    <p>Defienden: la automatización es buena para Chile. Trae productividad, competitividad y mejores empleos técnicos.</p>
+                </div>
+                <div class="team-card team-con">
+                    <h4>❌ TEAM CON (en contra)</h4>
+                    <p>Defienden: la automatización es un riesgo. Destruye empleos, aumenta desigualdad y deja atrás a trabajadores mayores.</p>
+                </div>
+            </div>
+            <p style="margin-top:12px;font-size:.9rem;color:#475569;">El docente divide al curso en 2 grandes equipos. Cada equipo se subdivide en grupos de 3-4 para preparar argumentos.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header desarrollo">🟦 Desarrollo (60 min)</div>
+        <div class="section-body">
+
+            <div class="task-box">
+                <h4>📚 Actividad 1 — Debate language (10 min)</h4>
+                <p>El docente presenta y modela el lenguaje formal del debate. Los estudiantes practican cada expresión con un ejemplo.</p>
+                <div class="lang-grid">
+                    <div class="lang-card"><strong>Opening</strong><em>"Good afternoon. Our team strongly believes that…"</em></div>
+                    <div class="lang-card"><strong>Stating a claim</strong><em>"Our first argument is that…"</em></div>
+                    <div class="lang-card"><strong>Adding evidence</strong><em>"According to a study by…"</em> · <em>"The data shows that…"</em></div>
+                    <div class="lang-card"><strong>Reasoning</strong><em>"This is important because…"</em> · <em>"Therefore…"</em></div>
+                    <div class="lang-card"><strong>Refuting</strong><em>"We disagree with our opponents because…"</em> · <em>"On the contrary…"</em></div>
+                    <div class="lang-card"><strong>Adding</strong><em>"Furthermore…"</em> · <em>"In addition…"</em> · <em>"Moreover…"</em></div>
+                    <div class="lang-card"><strong>Conceding</strong><em>"We agree that…, however…"</em></div>
+                    <div class="lang-card"><strong>Closing</strong><em>"In conclusion, automation should/should not…"</em></div>
+                </div>
+            </div>
+
+            <div class="task-box">
+                <h4>🔎 Actividad 2 — Fact sheet (15 min): evidencia para ambos equipos</h4>
+                <p>Lectura individual + subrayado por color (verde = útil para PRO, rojo = útil para CON):</p>
+                <div class="fact-grid">
+                    <div class="fact-col pro">
+                        <h5>📈 Datos PRO automation</h5>
+                        <ul>
+                            <li>Productividad sube 30-45% en fábricas chilenas que automatizan (Cámara Chilena de la Construcción 2023).</li>
+                            <li>Chile necesita 50,000 técnicos calificados en automatización al 2030 (CORFO).</li>
+                            <li>El salario promedio de un técnico CNC es 2.4 veces el de un operario manual.</li>
+                            <li>Países competidores (Brasil, México) automatizan más rápido que Chile.</li>
+                            <li>Trabajos peligrosos (soldadura, fundición) se reducen drásticamente.</li>
+                            <li>Industrias 4.0 producen menos defectos y menos accidentes laborales.</li>
+                        </ul>
+                    </div>
+                    <div class="fact-col con">
+                        <h5>📉 Datos CON automation</h5>
+                        <ul>
+                            <li>Hasta 30% de empleos manufactureros podrían desaparecer en 20 años (McKinsey).</li>
+                            <li>Trabajadores mayores de 50 difícilmente se recapacitan en inglés técnico y software.</li>
+                            <li>Inversión en 1 robot industrial = USD 60,000-150,000 (no accesible para PYMEs).</li>
+                            <li>Pueblos con una sola fábrica grande (ej. mineras del norte) sufren más al automatizar.</li>
+                            <li>Aumenta la brecha salarial entre técnicos y operarios no calificados.</li>
+                            <li>Dependencia de proveedores extranjeros y manuales en inglés.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-box">
+                <h4>✍️ Actividad 3 — Argument planner (25 min, en grupos)</h4>
+                <p>Cada subgrupo (3-4 estudiantes) prepara <strong>3 argumentos</strong> en su lado, usando el modelo <strong>Claim → Evidence → Reasoning</strong>.</p>
+                <div class="argument-planner">
+                    <h5>Argumento 1</h5>
+                    <ol>
+                        <li><strong>Claim:</strong> "We strongly believe that __________."</li>
+                        <li><strong>Evidence:</strong> "According to __________, __________."</li>
+                        <li><strong>Reasoning:</strong> "This is important because __________. Therefore, __________."</li>
+                    </ol>
+                </div>
+                <div class="argument-planner">
+                    <h5>Argumento 2</h5>
+                    <ol>
+                        <li><strong>Claim:</strong> __________</li>
+                        <li><strong>Evidence:</strong> __________</li>
+                        <li><strong>Reasoning:</strong> __________</li>
+                    </ol>
+                </div>
+                <div class="argument-planner">
+                    <h5>Argumento 3 (rebuttal anticipado)</h5>
+                    <p>Prepara una respuesta al argumento que esperas que el otro equipo use:</p>
+                    <ol>
+                        <li><em>"Our opponents will probably say that __________."</em></li>
+                        <li><em>"We disagree because __________."</em></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="task-box">
+                <h4>🎤 Actividad 4 — Practice round (10 min)</h4>
+                <p>Cada grupo presenta UN argumento a otro grupo del mismo equipo. Reciben feedback con esta rúbrica simple:</p>
+                <ol style="margin-left:20px;margin-top:8px;">
+                    <li>¿Tiene Claim + Evidence + Reasoning?</li>
+                    <li>¿Usa al menos 2 expresiones de debate language?</li>
+                    <li>¿Se entiende claramente la postura?</li>
+                </ol>
+            </div>
+
+            <div class="eval-box">
+                <h4>📋 Seguimiento</h4>
+                <p><strong>Formativa:</strong> el docente recoge el argument planner de cada grupo. Criterios: 3 argumentos completos + uso de 4+ expresiones de debate language + 1 evidencia con número/cita.</p>
             </div>
         </div>
-
-        <div class="toolbar">
-            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
-        </div>
-
-        <div class="objective-card">
-            <h2>Objetivo de la clase</h2>
-            <p>Construir argumentos fundamentados en inglés para defender una postura sobre un tema controversial en Mecánica Industrial.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to Lee un texto corto con datos que apoyan su postura. Identifica 3 argumentos principales. Prepara evidencia de los textos leídos en la unidad. Redacta un opening statement (2-3 oraciones).</li><li>Recuerda la idea central de la clase pasada: Evaluar un problema laboral presentado en un estudio de caso de Mecánica Industrial,...</li><li>Predict which tools, risks, or key ideas may appear when working with Lee un texto corto con datos que apoyan su postura. Identifica 3 argumentos principales. Prepara evidencia de los textos leídos en la unidad. Redacta un opening statement (2-3 oraciones) in the mecánica industrial avanzada context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Evaluar un problema laboral presentado en un estudio de caso de Mecánica Industrial,...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
-    <div class="review-box">
-        <h4>🎤 Ruta del trabajo oral</h4>
-        <p><strong>Trabajo oral de junio</strong> · Etapa 3/5 · Entrega prevista: primera semana de junio.</p>
-        <p><strong>Meta de hoy:</strong> Organizar la intervención con problema, evidencia, propuesta y cierre profesional.</p>
-        <p><strong>Producto esperado:</strong> Esquema oral con opening, evidence, recommendation y closing.</p>
-        <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
     </div>
-    
-    </div>
-    </div>
-        </div>
 
-        <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
-            <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at B1 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The CNC machine is checked before the task begins.</li><li>The maintenance log gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
-            </div>
-            </div>
-    </div>
-    
-
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">maintenance</div>
-                <div class="meaning">the routine work done to keep equipment operating well</div>
-                <div class="pronunciation">Pron.: MEIN-te-nans</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">inspection</div>
-                <div class="meaning">a careful check used to verify condition or quality</div>
-                <div class="pronunciation">Pron.: ins-PEK-shon</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">CNC</div>
-                <div class="meaning">computer-controlled equipment used for precise machining</div>
-                <div class="pronunciation">Pron.: si-en-SI</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">quality</div>
-                <div class="meaning">the degree to which a result meets the expected standard</div>
-                <div class="pronunciation">Pron.: KWO-li-ti</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">schedule</div>
-                <div class="meaning">the planned time and order for tasks or maintenance</div>
-                <div class="pronunciation">Pron.: SKE-dyul</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">downtime</div>
-                <div class="meaning">the period when a machine is stopped and unavailable</div>
-                <div class="pronunciation">Pron.: DAUN-taim</div>
-            </div>
-            </div>
-                </div>
-
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Model — Construir el argumento oral</h4>
-                    <p class="reading-note">Modelo guiado B1 para la etapa 3/5 del trabajo oral de junio: Organizar la intervención con problema, evidencia, propuesta y cierre profesional.</p>
-                    <p>At this stage, the oral intervention is organized into four parts: opening, case description, evidence-based recommendation, and professional closing.</p><p>The speaker decides how to connect ideas with cause-effect language, contrast, and justification so the audience can follow the argument step by step.</p><p>Technical vocabulary such as maintenance and inspection is placed where it strengthens meaning rather than where it sounds memorized or forced.</p><p>The presentation outline stays concise: the goal is to defend an idea with clarity, not to read a long text from paper or screen.</p><p>By the end of the lesson, the case has become a structured oral argument with a clear recommendation and professional tone.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What operational or communicative challenge is presented in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text explains how to structure the oral argument into clear professional sections.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> Which prior checks or contextual details shape the task?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the final version, the speaker organizes the case description, the evidence, the recommendation, and the closing.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> What evidence or technical details guide the team's decisions?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">Key details include connectors for cause and contrast, plus technical words such as maintenance and inspection.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the writer use the language focus of the lesson to clarify meaning?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The language focus shows how structure helps the audience follow a technical recommendation step by step.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What conclusion or recommendation emerges from the situation?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">At the end, the case has become a concise oral argument rather than a collection of disconnected notes.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What broader lesson about technical communication can be inferred?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Professional speaking is stronger when the listener can clearly follow the problem, evidence, and solution.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Ruta del trabajo oral</h4>
-                    
-            <p><strong>Trabajo oral de junio</strong> · Etapa 3/5</p>
-            <p><strong>Prompt:</strong> <em>Present a technical workplace case, explain the evidence, and defend a practical solution with justified recommendations.</em></p>
-            <ol class="task-steps"><li>Build the oral outline with opening, case description, evidence, recommendation, and closing.</li><li>Add cause-effect and contrast connectors so the audience can follow your reasoning.</li><li>Practise a one-minute version focused on clarity and professional tone.</li></ol>
-            <p><strong>Producto esperado:</strong> Esquema oral con opening, evidence, recommendation y closing.</p>
-            <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
-            
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa — calidad de argumentos preparados y coherencia del opening statement. Evidencia de etapa: Esquema oral con opening, evidence, recommendation y closing.</p>
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <div class="task-box">
+                <h4>🗣 Compartir + preview del debate</h4>
+                <p>Cada equipo (PRO/CON) escoge a 1 vocero para leer en voz alta su <strong>mejor argumento</strong>. El docente anota en la pizarra las expresiones de debate language más usadas.</p>
+                <p>Reglas del debate de la próxima clase:</p>
+                <ol style="margin-left:20px;margin-top:6px;">
+                    <li>Opening statement PRO (2 min) → Opening statement CON (2 min)</li>
+                    <li>Cross-examination (3 + 3 min)</li>
+                    <li>Rebuttal PRO (2 min) → Rebuttal CON (2 min)</li>
+                    <li>Closing PRO (1 min) → Closing CON (1 min)</li>
+                </ol>
+                <div class="exit-ticket">
+                    <h5>🎫 Exit ticket</h5>
+                    <p style="background:#f0fdfa;padding:10px;border-radius:8px;color:#0f766e;"><em>"The strongest argument my team has is __________ because __________."</em></p>
                 </div>
             </div>
         </div>
-
-        <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🟣 Cierre — Oral Project Checkpoint</h4>
-        <p>Close the lesson by checking progress on the oral task and defining the next step in the sequence.</p>
-        <ol class="task-steps"><li>Review your notes and identify the strongest contribution from today's stage.</li><li>Compare your progress with a partner before writing your final exit ticket.</li><li>Complete the three checkpoint prompts below.</li></ol>
-        
-            <div class="exit-ticket">
-                <h5>Exit ticket prompts</h5>
-                <ul><li>Write your opening sentence and your final conclusion in short note form.</li><li>Check whether your explanation already has a clear order and one strong connector.</li><li>Name the section of the presentation that still needs more detail or clearer English.</li></ul>
-            </div>
-            
-    </div>
-    </div>
-        </div>
-
-        <div class="resource-card">
-            <h4>📦 Recursos sugeridos</h4>
-            <p>Textos de apoyo con datos y estadísticas, ficha de argumentación, vocabulary de debate, pizarra. Producto de avance: Esquema oral con opening, evidence, recommendation y closing.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
-        </div>
-
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
     </div>
 
-    <script>
-        function toggleAnswer(id, button) {
-            const answer = document.getElementById(id);
-            const isOpen = answer.classList.toggle('open');
-            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-        }
-    </script>
+    <div class="resource-card">
+        <h4>📦 Recursos sugeridos</h4>
+        <p><strong>Materiales:</strong> fact sheet impresa, argument planner (3 hojas por grupo), ficha de debate language, cronómetro para próxima clase.</p>
+        <p style="margin-top:10px;color:#64748b;font-size:.9rem;">Diferenciación: estudiantes con apoyo reciben argument planner con frases pre-rellenas. Avanzados deben usar al menos 6 expresiones de debate language y citar 2 fuentes.</p>
+    </div>
+
+    <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 4°A Mecánica Industrial · Unidad 2 · Clase 3 (Debate Prep).</p>
+</div>
 </body>
 </html>

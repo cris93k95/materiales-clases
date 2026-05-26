@@ -3,273 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 3 — Unidad 2 — 4°C — Electricidad</title>
+    <title>Clase 3 — Unidad 2 — 4°C — Debate Prep: Solar vs. Wind</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
-        .hero p { color: rgba(255,255,255,0.88); }
-        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-        .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
-        .cierre { background: #7c3aed; }
-        .section-body { padding: 20px 22px 22px; }
-        .section-body ul { margin-left: 20px; }
-        .section-body li { margin-bottom: 8px; }
-        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-        .activity-card p { margin-bottom: 10px; }
-        .task-steps { margin-left: 20px; }
-        .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-        .focus-card ul { margin-left: 18px; }
-        .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-        .reading-box p { margin-bottom: 10px; }
-        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-        .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
-        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
-        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-        .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Inter',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.65}
+        .page{max-width:1080px;margin:0 auto;padding:24px 18px 40px}
+        .hero{background:linear-gradient(135deg,#ca8a04,#854d0e);color:white;border-radius:18px;padding:28px;box-shadow:0 18px 40px rgba(202,138,4,.2)}
+        .hero h1{font-size:2rem;margin-bottom:6px} .hero p{color:rgba(255,255,255,.92)}
+        .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+        .meta span{background:rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;font-size:.84rem}
+        .toolbar{display:flex;justify-content:flex-end;margin:18px 0 10px}
+        .print-btn{border:none;border-radius:10px;background:#0f172a;color:white;padding:10px 16px;font-weight:600;cursor:pointer}
+        .objective-card,.section,.resource-card{background:white;border-radius:16px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:18px;overflow:hidden}
+        .objective-card{padding:22px 24px;border-left:6px solid #ca8a04}
+        .objective-card h2{color:#854d0e;font-size:1.05rem;margin-bottom:8px}
+        .section-header{color:white;font-weight:700;padding:14px 22px;font-size:1rem}
+        .inicio{background:#2e7d32} .desarrollo{background:#ca8a04} .cierre{background:#7c3aed}
+        .section-body{padding:20px 22px 22px}
+        .task-box,.eval-box,.resource-card,.motion-box{border:1px solid #e5e7eb;border-radius:14px;padding:18px;background:#f8fafc;margin-top:16px}
+        .task-box h4,.eval-box h4{color:#0f172a;margin-bottom:10px}
+        .motion-box{background:#fef3c7;border:2px solid #ca8a04}
+        .motion-box h3{color:#854d0e;font-size:1.1rem;margin-bottom:8px}
+        .motion-box p{font-size:1.05rem;font-style:italic;color:#713f12}
+        .teams{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+        .team-card{border-radius:12px;padding:16px;border:2px solid}
+        .team-pro{background:#fffbeb;border-color:#f59e0b} .team-pro h4{color:#b45309;margin-bottom:6px}
+        .team-con{background:#eff6ff;border-color:#2563eb} .team-con h4{color:#1d4ed8;margin-bottom:6px}
+        .lang-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px}
+        .lang-card{background:white;border:1px solid #fde68a;border-radius:10px;padding:10px 12px}
+        .lang-card strong{color:#854d0e;display:block;margin-bottom:4px}
+        .lang-card em{color:#6b7280;font-style:italic;font-size:.9rem}
+        .argument-planner{background:white;border:1px solid #e5e7eb;border-radius:12px;padding:14px;margin-top:12px}
+        .argument-planner h5{color:#854d0e;margin-bottom:8px}
+        .argument-planner ol{margin-left:20px} .argument-planner li{margin-bottom:6px}
+        .fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+        .fact-col{background:white;border-radius:10px;padding:14px;border:1px solid #e5e7eb}
+        .fact-col h5{margin-bottom:8px}
+        .fact-col.pro h5{color:#b45309} .fact-col.con h5{color:#1d4ed8}
+        .fact-col ul{margin-left:18px} .fact-col li{margin-bottom:6px;font-size:.92rem}
+        .exit-ticket{background:white;border:1px dashed #cbd5e1;border-radius:12px;padding:14px;margin-top:12px}
+        .resource-card h4{color:#854d0e;margin-bottom:8px}
+        .footer-note{text-align:center;color:#6b7280;font-size:.82rem;margin-top:28px}
+        @media (max-width:720px){.teams,.fact-grid{grid-template-columns:1fr}}
+        @media print{body{background:white}.toolbar{display:none}.hero,.objective-card,.section,.resource-card{box-shadow:none}}
     </style>
 </head>
 <body>
-    <div class="page">
-        <div class="hero">
-            <h1>Clase 3 — Unidad 2</h1>
-            <p>4°C — Electricidad · Lee un texto corto con datos que apoyan su postura. Identifica 3 argumentos principales. Prepara evidencia de...</p>
-            <div class="meta">
-                <span>🎯 Construir el argumento oral</span>
-                <span>📘 OA3 · OA4</span>
-                <span>🗂 Clase anual 11</span>
-                <span>🎤 Trabajo oral de junio · Etapa 3/5</span>
-                <span>🧩 Clase de trabajo</span>
+<div class="page">
+    <div class="hero">
+        <h1>Clase 3 — Unidad 2</h1>
+        <p>4°C — Electricidad · Debate Preparation</p>
+        <div class="meta">
+            <span>🎯 Preparar argumentos SOLAR/WIND para debate estructurado</span>
+            <span>📘 OA4 · OA5 · OA6</span>
+            <span>🗂 Clase 3 — Unidad 2</span>
+            <span>🗓 Semana 14 · mayo</span>
+            <span>🧩 Próxima clase: DEBATE</span>
+        </div>
+    </div>
+
+    <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+
+    <div class="objective-card">
+        <h2>Objetivo de la clase</h2>
+        <p>Preparar argumentos sólidos para un <strong>debate estructurado</strong> sobre si Chile debe priorizar inversión en energía SOLAR o EÓLICA, usando lenguaje de debate B1 y el modelo <strong>Claim + Evidence + Reasoning</strong>.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (15 min)</div>
+        <div class="section-body">
+            <div class="motion-box">
+                <h3>📣 Motion</h3>
+                <p><em>"Chile should invest more in SOLAR energy than in WIND energy as its main renewable source."</em></p>
+            </div>
+            <div class="teams">
+                <div class="team-card team-pro">
+                    <h4>☀️ TEAM SOLAR</h4>
+                    <p>Defienden: el Desierto de Atacama es el lugar con mayor radiación solar del mundo. Solar es el futuro de Chile.</p>
+                </div>
+                <div class="team-card team-con">
+                    <h4>💨 TEAM WIND</h4>
+                    <p>Defienden: los vientos de Magallanes y la costa son recursos únicos. Wind produce 24/7, no solo de día.</p>
+                </div>
+            </div>
+            <p style="margin-top:12px;font-size:.9rem;color:#475569;">Curso dividido en 2 equipos, subgrupos de 3-4.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header desarrollo">🟦 Desarrollo (60 min)</div>
+        <div class="section-body">
+
+            <div class="task-box">
+                <h4>📚 Actividad 1 — Debate language (10 min)</h4>
+                <div class="lang-grid">
+                    <div class="lang-card"><strong>Opening</strong><em>"Good afternoon. Our team strongly believes that…"</em></div>
+                    <div class="lang-card"><strong>Claim</strong><em>"Our first argument is that…"</em></div>
+                    <div class="lang-card"><strong>Evidence</strong><em>"According to…"</em> · <em>"The data shows…"</em></div>
+                    <div class="lang-card"><strong>Reasoning</strong><em>"This matters because…"</em> · <em>"Therefore…"</em></div>
+                    <div class="lang-card"><strong>Refuting</strong><em>"On the contrary…"</em> · <em>"We disagree because…"</em></div>
+                    <div class="lang-card"><strong>Adding</strong><em>"Furthermore…"</em> · <em>"Moreover…"</em></div>
+                    <div class="lang-card"><strong>Conceding</strong><em>"We agree that…, however…"</em></div>
+                    <div class="lang-card"><strong>Closing</strong><em>"In conclusion, Chile should invest in…"</em></div>
+                </div>
+            </div>
+
+            <div class="task-box">
+                <h4>🔎 Actividad 2 — Fact sheet (15 min)</h4>
+                <div class="fact-grid">
+                    <div class="fact-col pro">
+                        <h5>☀️ Datos PRO Solar</h5>
+                        <ul>
+                            <li>El Desierto de Atacama recibe 2,500 kWh/m²/año — el doble que Alemania, líder solar mundial.</li>
+                            <li>Chile produce ya el 20% de su electricidad con energía solar.</li>
+                            <li>Costo nivelado solar fotovoltaico: USD 25/MWh (más barato que carbón y gas).</li>
+                            <li>Una planta solar se construye en 12-18 meses; un parque eólico tarda 2-3 años.</li>
+                            <li>Paneles solares no hacen ruido y no afectan aves migratorias.</li>
+                            <li>Permite generación distribuida: paneles en techos residenciales en todo Chile.</li>
+                        </ul>
+                    </div>
+                    <div class="fact-col con">
+                        <h5>💨 Datos PRO Wind</h5>
+                        <ul>
+                            <li>Magallanes tiene vientos promedio de 11 m/s (Alemania: 6 m/s). Potencial 126 GW.</li>
+                            <li>Wind genera energía 24/7, también de noche cuando solar no funciona.</li>
+                            <li>Una turbina de 4 MW abastece a ~3,000 hogares chilenos.</li>
+                            <li>Wind tiene factor de planta 45% en Magallanes (solar: ~28% en Atacama).</li>
+                            <li>Chile firmó proyectos de hidrógeno verde con base eólica (HIF, Total).</li>
+                            <li>Wind ocupa menos terreno por MWh que solar a gran escala.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-box">
+                <h4>✍️ Actividad 3 — Argument planner (25 min)</h4>
+                <div class="argument-planner">
+                    <h5>Argumento 1</h5>
+                    <ol>
+                        <li><strong>Claim:</strong> "We strongly believe that __________."</li>
+                        <li><strong>Evidence:</strong> "According to __________, __________."</li>
+                        <li><strong>Reasoning:</strong> "This is important because __________. Therefore, __________."</li>
+                    </ol>
+                </div>
+                <div class="argument-planner">
+                    <h5>Argumento 2</h5>
+                    <ol>
+                        <li><strong>Claim:</strong> __________</li>
+                        <li><strong>Evidence:</strong> __________</li>
+                        <li><strong>Reasoning:</strong> __________</li>
+                    </ol>
+                </div>
+                <div class="argument-planner">
+                    <h5>Argumento 3 (rebuttal)</h5>
+                    <ol>
+                        <li><em>"Our opponents will probably say that __________."</em></li>
+                        <li><em>"We disagree because __________."</em></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="task-box">
+                <h4>🎤 Actividad 4 — Practice round (10 min)</h4>
+                <p>Presentación de UN argumento intra-equipo + feedback (Claim/Evidence/Reasoning + 2 expresiones + claridad).</p>
+            </div>
+
+            <div class="eval-box">
+                <h4>📋 Seguimiento</h4>
+                <p><strong>Formativa:</strong> docente recoge argument planner. Criterios: 3 argumentos completos + 4+ expresiones + 1 dato citado.</p>
             </div>
         </div>
-
-        <div class="toolbar">
-            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
-        </div>
-
-        <div class="objective-card">
-            <h2>Objetivo de la clase</h2>
-            <p>Construir argumentos fundamentados en inglés para defender una postura sobre un tema controversial en Electricidad.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to Lee un texto corto con datos que apoyan su postura. Identifica 3 argumentos principales. Prepara evidencia de los textos leídos en la unidad. Redacta un opening statement (2-3 oraciones).</li><li>Recuerda la idea central de la clase pasada: Evaluar un problema laboral presentado en un estudio de caso de Electricidad, proponiendo...</li><li>Predict which tools, risks, or key ideas may appear when working with Lee un texto corto con datos que apoyan su postura. Identifica 3 argumentos principales. Prepara evidencia de los textos leídos en la unidad. Redacta un opening statement (2-3 oraciones) in the electricidad avanzada context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Evaluar un problema laboral presentado en un estudio de caso de Electricidad, proponiendo...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
-    <div class="review-box">
-        <h4>🎤 Ruta del trabajo oral</h4>
-        <p><strong>Trabajo oral de junio</strong> · Etapa 3/5 · Entrega prevista: primera semana de junio.</p>
-        <p><strong>Meta de hoy:</strong> Organizar la intervención con problema, evidencia, propuesta y cierre profesional.</p>
-        <p><strong>Producto esperado:</strong> Esquema oral con opening, evidence, recommendation y closing.</p>
-        <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
     </div>
-    
-    </div>
-    </div>
-        </div>
 
-        <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
-            <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at B1 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The switchgear is checked before the task begins.</li><li>The three-phase panel gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
-            </div>
-            </div>
-    </div>
-    
-
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">switchgear</div>
-                <div class="meaning">equipment that controls, protects, and isolates power systems</div>
-                <div class="pronunciation">Pron.: SWICH-guir</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">load</div>
-                <div class="meaning">the amount of power demanded by a system</div>
-                <div class="pronunciation">Pron.: LOUD</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">transformer</div>
-                <div class="meaning">equipment that changes electrical voltage levels</div>
-                <div class="pronunciation">Pron.: trans-FOR-mer</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">grounding</div>
-                <div class="meaning">a safety connection that sends electricity safely to the earth</div>
-                <div class="pronunciation">Pron.: GRAUN-ding</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">regulator</div>
-                <div class="meaning">a device that keeps a value, such as voltage, stable</div>
-                <div class="pronunciation">Pron.: RE-gu-lei-ter</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">phase</div>
-                <div class="meaning">one part of a multi-part electrical power cycle</div>
-                <div class="pronunciation">Pron.: FEIS</div>
-            </div>
-            </div>
-                </div>
-
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Model — Construir el argumento oral</h4>
-                    <p class="reading-note">Modelo guiado B1 para la etapa 3/5 del trabajo oral de junio: Organizar la intervención con problema, evidencia, propuesta y cierre profesional.</p>
-                    <p>At this stage, the oral intervention is organized into four parts: opening, case description, evidence-based recommendation, and professional closing.</p><p>The speaker decides how to connect ideas with cause-effect language, contrast, and justification so the audience can follow the argument step by step.</p><p>Technical vocabulary such as switchgear and load is placed where it strengthens meaning rather than where it sounds memorized or forced.</p><p>The presentation outline stays concise: the goal is to defend an idea with clarity, not to read a long text from paper or screen.</p><p>By the end of the lesson, the case has become a structured oral argument with a clear recommendation and professional tone.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What operational or communicative challenge is presented in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text explains how to structure the oral argument into clear professional sections.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> Which prior checks or contextual details shape the task?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before the final version, the speaker organizes the case description, the evidence, the recommendation, and the closing.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> What evidence or technical details guide the team's decisions?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">Key details include connectors for cause and contrast, plus technical words such as switchgear and load.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the writer use the language focus of the lesson to clarify meaning?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The language focus shows how structure helps the audience follow a technical recommendation step by step.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What conclusion or recommendation emerges from the situation?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">At the end, the case has become a concise oral argument rather than a collection of disconnected notes.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What broader lesson about technical communication can be inferred?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Professional speaking is stronger when the listener can clearly follow the problem, evidence, and solution.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Ruta del trabajo oral</h4>
-                    
-            <p><strong>Trabajo oral de junio</strong> · Etapa 3/5</p>
-            <p><strong>Prompt:</strong> <em>Present a technical workplace case, explain the evidence, and defend a practical solution with justified recommendations.</em></p>
-            <ol class="task-steps"><li>Build the oral outline with opening, case description, evidence, recommendation, and closing.</li><li>Add cause-effect and contrast connectors so the audience can follow your reasoning.</li><li>Practise a one-minute version focused on clarity and professional tone.</li></ol>
-            <p><strong>Producto esperado:</strong> Esquema oral con opening, evidence, recommendation y closing.</p>
-            <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
-            
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa — calidad de argumentos preparados y coherencia del opening statement. Evidencia de etapa: Esquema oral con opening, evidence, recommendation y closing.</p>
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <div class="task-box">
+                <h4>🗣 Compartir + preview del debate</h4>
+                <p>Vocero por equipo lee el <strong>mejor argumento</strong>. Reglas del debate:</p>
+                <ol style="margin-left:20px;margin-top:6px;">
+                    <li>Opening SOLAR (2 min) → Opening WIND (2 min)</li>
+                    <li>Cross-examination (3 + 3 min)</li>
+                    <li>Rebuttal SOLAR (2 min) → Rebuttal WIND (2 min)</li>
+                    <li>Closing SOLAR (1 min) → Closing WIND (1 min)</li>
+                </ol>
+                <div class="exit-ticket">
+                    <h5>🎫 Exit ticket</h5>
+                    <p style="background:#fffbeb;padding:10px;border-radius:8px;color:#854d0e;"><em>"The strongest argument my team has is __________ because __________."</em></p>
                 </div>
             </div>
         </div>
-
-        <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🟣 Cierre — Oral Project Checkpoint</h4>
-        <p>Close the lesson by checking progress on the oral task and defining the next step in the sequence.</p>
-        <ol class="task-steps"><li>Review your notes and identify the strongest contribution from today's stage.</li><li>Compare your progress with a partner before writing your final exit ticket.</li><li>Complete the three checkpoint prompts below.</li></ol>
-        
-            <div class="exit-ticket">
-                <h5>Exit ticket prompts</h5>
-                <ul><li>Write your opening sentence and your final conclusion in short note form.</li><li>Check whether your explanation already has a clear order and one strong connector.</li><li>Name the section of the presentation that still needs more detail or clearer English.</li></ul>
-            </div>
-            
-    </div>
-    </div>
-        </div>
-
-        <div class="resource-card">
-            <h4>📦 Recursos sugeridos</h4>
-            <p>Textos de apoyo con datos y estadísticas, ficha de argumentación, vocabulary de debate, pizarra. Producto de avance: Esquema oral con opening, evidence, recommendation y closing.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
-        </div>
-
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
     </div>
 
-    <script>
-        function toggleAnswer(id, button) {
-            const answer = document.getElementById(id);
-            const isOpen = answer.classList.toggle('open');
-            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-        }
-    </script>
+    <div class="resource-card">
+        <h4>📦 Recursos sugeridos</h4>
+        <p><strong>Materiales:</strong> fact sheet impresa, argument planner, ficha de debate language, mapa de Chile con radiación solar y vientos.</p>
+        <p style="margin-top:10px;color:#64748b;font-size:.9rem;">Diferenciación: con apoyo, frases pre-rellenas; avanzados, 6+ expresiones y 2 fuentes.</p>
+    </div>
+
+    <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 4°C Electricidad · Unidad 2 · Clase 3 (Debate Prep).</p>
+</div>
 </body>
 </html>
