@@ -3,273 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 4 — Unidad 2 — 4°B — Mecánica Automotriz</title>
+    <title>Clase 4 — Unidad 2 — 4°B — Debate Day: Ban Combustion Cars?</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.65; }
-        .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 40px; }
-        .hero { background: linear-gradient(135deg, #0f766e, #155e75); color: white; border-radius: 18px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18); }
-        .hero h1 { font-size: 2rem; margin-bottom: 6px; }
-        .hero p { color: rgba(255,255,255,0.88); }
-        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-        .meta span { background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; }
-        .toolbar { display: flex; justify-content: flex-end; margin: 18px 0 10px; }
-        .print-btn { border: none; border-radius: 10px; background: #0f172a; color: white; padding: 10px 16px; font-weight: 600; cursor: pointer; }
-        .objective-card, .support-card, .section, .resource-card { background: white; border-radius: 16px; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); margin-bottom: 18px; overflow: hidden; }
-        .objective-card { padding: 22px 24px; border-left: 6px solid #0f766e; }
-        .objective-card h2 { color: #0f766e; font-size: 1.05rem; margin-bottom: 8px; }
-        .section-header { color: white; font-weight: 700; padding: 14px 22px; font-size: 1rem; }
-        .inicio { background: #2e7d32; }
-        .desarrollo { background: #1565c0; }
-        .cierre { background: #7c3aed; }
-        .section-body { padding: 20px 22px 22px; }
-        .section-body ul { margin-left: 20px; }
-        .section-body li { margin-bottom: 8px; }
-        .review-box, .reading-box, .task-box, .eval-box, .resource-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; background: #f8fafc; margin-top: 16px; }
-        .review-box h4, .reading-box h4, .task-box h4, .eval-box h4 { color: #0f172a; margin-bottom: 10px; }
-        .activity-card p { margin-bottom: 10px; }
-        .task-steps { margin-left: 20px; }
-        .task-steps li { margin-bottom: 8px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
-        .vocab-card { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 14px; }
-        .word { font-weight: 800; color: #1d4ed8; margin-bottom: 4px; }
-        .meaning { font-size: 0.92rem; color: #1f2937; }
-        .pronunciation { font-size: 0.8rem; color: #64748b; margin-top: 6px; }
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 14px; }
-        .focus-card { background: white; border: 1px solid #d6e4ff; border-radius: 12px; padding: 14px; }
-        .focus-card h5 { color: #1d4ed8; margin-bottom: 8px; font-size: 0.98rem; }
-        .focus-card ul { margin-left: 18px; }
-        .focus-card li { margin-bottom: 6px; }
-        .focus-subtitle { margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-        .reading-box p { margin-bottom: 10px; }
-        .question-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .toggle-btn { margin-top: 10px; border: none; border-radius: 10px; background: #dbeafe; color: #1d4ed8; padding: 8px 12px; font-weight: 700; cursor: pointer; }
-        .answer-box { display: none; background: #eefbf3; border-left: 4px solid #16a34a; padding: 10px 12px; border-radius: 8px; margin-top: 10px; }
-        .answer-box.open { display: block; }
-        .activity-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        .activity-table th, .activity-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
-        .activity-table th { background: #e2e8f0; }
-        .reading-note { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
-        .exit-ticket { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin-top: 12px; }
-        .exit-ticket h5 { color: #0f172a; margin-bottom: 8px; }
-        .exit-ticket ul { margin-left: 18px; }
-        .resource-card h4 { color: #0f766e; margin-bottom: 8px; }
-        .footer-note { text-align: center; color: #6b7280; font-size: 0.82rem; margin-top: 28px; }
-        @media (max-width: 720px) {
-            .hero h1 { font-size: 1.55rem; }
-            .page { padding: 16px 12px 28px; }
-        }
-        @media print {
-            body { background: white; }
-            .toolbar { display: none; }
-            .hero, .objective-card, .support-card, .section, .resource-card { box-shadow: none; }
-        }
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Inter',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.65}
+        .page{max-width:1080px;margin:0 auto;padding:24px 18px 40px}
+        .hero{background:linear-gradient(135deg,#b91c1c,#7f1d1d);color:white;border-radius:18px;padding:28px;box-shadow:0 18px 40px rgba(185,28,28,.18)}
+        .hero h1{font-size:2rem;margin-bottom:6px} .hero p{color:rgba(255,255,255,.88)}
+        .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+        .meta span{background:rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;font-size:.84rem}
+        .toolbar{display:flex;justify-content:flex-end;margin:18px 0 10px}
+        .print-btn{border:none;border-radius:10px;background:#0f172a;color:white;padding:10px 16px;font-weight:600;cursor:pointer}
+        .objective-card,.section,.resource-card{background:white;border-radius:16px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:18px;overflow:hidden}
+        .objective-card{padding:22px 24px;border-left:6px solid #b91c1c}
+        .objective-card h2{color:#b91c1c;font-size:1.05rem;margin-bottom:8px}
+        .section-header{color:white;font-weight:700;padding:14px 22px;font-size:1rem}
+        .inicio{background:#2e7d32} .desarrollo{background:#b91c1c} .cierre{background:#7c3aed}
+        .section-body{padding:20px 22px 22px}
+        .task-box,.eval-box,.resource-card,.motion-box{border:1px solid #e5e7eb;border-radius:14px;padding:18px;background:#f8fafc;margin-top:16px}
+        .task-box h4,.eval-box h4{color:#0f172a;margin-bottom:10px}
+        .motion-box{background:#fee2e2;border:2px solid #b91c1c}
+        .motion-box h3{color:#b91c1c;font-size:1.1rem;margin-bottom:8px}
+        .motion-box p{font-size:1.05rem;font-style:italic;color:#7f1d1d}
+        .debate-flow{display:grid;gap:10px;margin-top:14px}
+        .flow-row{display:grid;grid-template-columns:90px 1fr 1fr;gap:10px;align-items:stretch}
+        .flow-row .timecol{background:#b91c1c;color:white;border-radius:10px;padding:10px;text-align:center;font-weight:700;display:flex;flex-direction:column;justify-content:center}
+        .flow-row .timecol small{display:block;opacity:.85;font-weight:500;font-size:.72rem}
+        .flow-pro,.flow-con{border-radius:10px;padding:10px 12px;font-size:.92rem}
+        .flow-pro{background:#ecfdf5;border:1px solid #16a34a}
+        .flow-con{background:#fef2f2;border:1px solid #dc2626}
+        .flow-pro strong{color:#15803d} .flow-con strong{color:#b91c1c}
+        .rubric{width:100%;border-collapse:collapse;margin-top:10px;font-size:.9rem}
+        .rubric th,.rubric td{border:1px solid #e5e7eb;padding:8px;text-align:left}
+        .rubric th{background:#b91c1c;color:white}
+        .rubric td:first-child{font-weight:600;background:#fef2f2}
+        .self-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+        .self-card{background:white;border:1px solid #fecaca;border-radius:12px;padding:14px}
+        .self-card h5{color:#b91c1c;margin-bottom:6px}
+        .exit-ticket{background:white;border:1px dashed #cbd5e1;border-radius:12px;padding:14px;margin-top:12px}
+        .resource-card h4{color:#b91c1c;margin-bottom:8px}
+        .footer-note{text-align:center;color:#6b7280;font-size:.82rem;margin-top:28px}
+        @media (max-width:720px){.flow-row{grid-template-columns:70px 1fr}.flow-row .flow-con{grid-column:2}.self-grid{grid-template-columns:1fr}}
+        @media print{body{background:white}.toolbar{display:none}.hero,.objective-card,.section,.resource-card{box-shadow:none}}
     </style>
 </head>
 <body>
-    <div class="page">
-        <div class="hero">
-            <h1>Clase 4 — Unidad 2</h1>
-            <p>4°B — Mecánica Automotriz · Estructura: Opening statements (2 min cada grupo). Argument round 1 (3 argumentos por lado, 2 min cada uno)....</p>
-            <div class="meta">
-                <span>🎯 Ensayar con retroalimentación crítica</span>
-                <span>📘 OA3 · OA4</span>
-                <span>🗂 Clase anual 12</span>
-                <span>🎤 Trabajo oral de junio · Etapa 4/5</span>
-                <span>🧩 Clase de trabajo</span>
+<div class="page">
+    <div class="hero">
+        <h1>Clase 4 — Unidad 2</h1>
+        <p>4°B — Mecánica Automotriz · Debate Day 🎤</p>
+        <div class="meta">
+            <span>🎯 Realizar el debate estructurado y autoevaluar</span>
+            <span>📘 OA4 · OA5 · OA6</span>
+            <span>🗂 Clase 4 — Unidad 2</span>
+            <span>🗓 Semana 15 · mayo</span>
+            <span>🧩 Evaluación oral formativa</span>
+        </div>
+    </div>
+
+    <div class="toolbar"><button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+
+    <div class="objective-card">
+        <h2>Objetivo de la clase</h2>
+        <p>Realizar un <strong>debate estructurado en inglés</strong> aplicando el lenguaje de debate y los argumentos preparados en la Clase 3, demostrando uso del modelo Claim+Evidence+Reasoning.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header inicio">🟢 Inicio (10 min)</div>
+        <div class="section-body">
+            <div class="motion-box">
+                <h3>📣 Motion</h3>
+                <p><em>"The Chilean government should BAN the sale of new combustion-engine cars by 2035."</em></p>
+            </div>
+            <div class="task-box">
+                <h4>🔥 Warm-up + reglas</h4>
+                <ol style="margin-left:20px">
+                    <li>Cada equipo se reúne 5 min para revisar argumentos y elegir roles (apertura, cross-exam, rebuttal, cierre).</li>
+                    <li>Reglas: respeto, escuchar antes de responder, usar inglés (B1) y debate language.</li>
+                    <li>Sorteo: ¿quién abre, PRO o CON?</li>
+                </ol>
             </div>
         </div>
+    </div>
 
-        <div class="toolbar">
-            <button class="print-btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+    <div class="section">
+        <div class="section-header desarrollo">🟦 Desarrollo (65 min) — The Debate</div>
+        <div class="section-body">
+            <div class="debate-flow">
+                <div class="flow-row"><div class="timecol">2 min<small>each</small></div><div class="flow-pro"><strong>1. Opening PRO</strong><br>Postura + 2 argumentos.</div><div class="flow-con"><strong>2. Opening CON</strong><br>Postura + 2 argumentos.</div></div>
+                <div class="flow-row"><div class="timecol">3 min<small>each</small></div><div class="flow-pro"><strong>3. Cross-exam PRO→CON</strong><br>3 preguntas.</div><div class="flow-con"><strong>4. Cross-exam CON→PRO</strong><br>3 preguntas.</div></div>
+                <div class="flow-row"><div class="timecol">2 min<small>each</small></div><div class="flow-pro"><strong>5. Rebuttal PRO</strong></div><div class="flow-con"><strong>6. Rebuttal CON</strong></div></div>
+                <div class="flow-row"><div class="timecol">1 min<small>each</small></div><div class="flow-pro"><strong>7. Closing PRO</strong></div><div class="flow-con"><strong>8. Closing CON</strong></div></div>
+            </div>
+
+            <div class="task-box">
+                <h4>👨‍⚖️ Jury task — Peer evaluation (rubric)</h4>
+                <table class="rubric">
+                    <thead><tr><th>Criterio</th><th>PRO (1-5)</th><th>CON (1-5)</th></tr></thead>
+                    <tbody>
+                        <tr><td>Claridad de los argumentos</td><td></td><td></td></tr>
+                        <tr><td>Uso de evidencia (datos/citas)</td><td></td><td></td></tr>
+                        <tr><td>Uso de debate language (5+ expresiones)</td><td></td><td></td></tr>
+                        <tr><td>Rebuttal efectivo</td><td></td><td></td></tr>
+                        <tr><td>Pronunciación e inglés general</td><td></td><td></td></tr>
+                        <tr><td><strong>TOTAL</strong></td><td></td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="eval-box">
+                <h4>📋 Seguimiento docente</h4>
+                <p><strong>Evaluación formativa oral:</strong> participación, 1 fortaleza y 1 área a mejorar por estudiante.</p>
+            </div>
         </div>
-
-        <div class="objective-card">
-            <h2>Objetivo de la clase</h2>
-            <p>Defender una postura personal de manera crítica y fundamentada en un debate estructurado en inglés sobre un tema de Mecánica Automotriz.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header inicio">🟢 Inicio</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🔎 Actividad 1 — Activate and Predict</h4>
-        <p>Start the class by connecting prior knowledge with the concrete technical situation you are about to read, watch, or discuss.</p>
-        <ol class="task-steps"><li>Read the objective of the lesson and underline the main technical challenge linked to Estructura: Opening statements (2 min cada grupo). Argument round 1 (3 argumentos por lado, 2 min cada uno). Rebuttal round (cada grupo responde al otro, 5 min). Open floor (preguntas y respuestas libres, 10 min). Closing statements (2 min cada grupo).</li><li>Recuerda la idea central de la clase pasada: Construir argumentos fundamentados en inglés para defender una postura sobre un tema...</li><li>Predict which tools, risks, or key ideas may appear when working with Estructura: Opening statements (2 min cada grupo). Argument round 1 (3 argumentos por lado, 2 min cada uno). Rebuttal round (cada grupo responde al otro, 5 min). Open floor (preguntas y respuestas libres, 10 min). Closing statements (2 min cada grupo) in the mecánica automotriz avanzada context.</li><li>Share one sentence with a partner: what do you already know and what do you still need to clarify before reading?</li></ol>
-        <div class="review-box"><h4>🔁 Repaso rápido de la clase anterior</h4><ul><li>Recuerda la idea central de la clase pasada: Construir argumentos fundamentados en inglés para defender una postura sobre un tema...</li><li>Escribe una palabra o estructura que todavía recuerdes usar.</li><li>Explica en una frase cómo ese contenido se conecta con la actividad de hoy.</li></ul></div>
-    <div class="review-box">
-        <h4>🎤 Ruta del trabajo oral</h4>
-        <p><strong>Trabajo oral de junio</strong> · Etapa 4/5 · Entrega prevista: primera semana de junio.</p>
-        <p><strong>Meta de hoy:</strong> Ensayar con un compañero, ajustar pronunciación y fortalecer la justificación.</p>
-        <p><strong>Producto esperado:</strong> Ensayo con checklist de claridad, evidencia y manejo del tiempo.</p>
-        <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
     </div>
-    
-    </div>
-    </div>
-        </div>
 
-        <div class="section">
-            <div class="section-header desarrollo">🔵 Desarrollo</div>
-            <div class="section-body">
-                
-    <div class="task-box activity-card">
-        <h4>🧠 Actividad 2 — Language Focus</h4>
-        <p>Use these examples before reading. The class text is written at B1 level and the structures below will help you understand, discuss, and write about the topic with more precision.</p>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h5>Technical English in context</h5>
-                <p>Focus on how the text combines action, evidence, and technical vocabulary to make the task clear and repeatable.</p>
-                <div class="focus-subtitle">Examples</div>
-                <ul><li>The OBD scanner is checked before the task begins.</li><li>The service tablet gives evidence for the next decision.</li><li>The final note explains the result and the safety action.</li></ul>
-                <div class="focus-subtitle">Sentence frames</div>
-                <ul><li>First, the team ...</li><li>The key evidence is ...</li><li>The final result shows that ...</li></ul>
+    <div class="section">
+        <div class="section-header cierre">🟣 Cierre (15 min)</div>
+        <div class="section-body">
+            <div class="task-box">
+                <h4>🗳 Votación + reflexión</h4>
+                <ol style="margin-left:20px">
+                    <li><strong>Voto del jurado:</strong> ¿qué equipo argumentó mejor?</li>
+                    <li><strong>Feedback grupal</strong> (5 min): 3 momentos destacados + 2 áreas a mejorar.</li>
+                </ol>
             </div>
-            </div>
-    </div>
-    
-
-                <div class="task-box">
-                    <h4>📚 Actividad 3 — Vocabulary for reading</h4>
-                    <p>Review the key words before reading. Each card includes a short definition in English and pronunciation support so the vocabulary helps with comprehension, not only with translation.</p>
-                    <div class="glossary-grid">
-            <div class="vocab-card">
-                <div class="word">diagnostic</div>
-                <div class="meaning">an analysis used to identify the cause of a problem</div>
-                <div class="pronunciation">Pron.: daiag-NOS-tik</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">hybrid</div>
-                <div class="meaning">a system that combines two kinds of power or technology</div>
-                <div class="pronunciation">Pron.: JAI-brid</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">torque</div>
-                <div class="meaning">the turning force that makes a part rotate</div>
-                <div class="pronunciation">Pron.: TORK</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">alignment</div>
-                <div class="meaning">the correct position of parts so they work properly</div>
-                <div class="pronunciation">Pron.: a-LAIN-ment</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">fault code</div>
-                <div class="meaning">a digital message that identifies a system problem</div>
-                <div class="pronunciation">Pron.: FOLT koud</div>
-            </div>
-            
-            <div class="vocab-card">
-                <div class="word">service</div>
-                <div class="meaning">maintenance or repair work done on equipment or vehicles</div>
-                <div class="pronunciation">Pron.: SER-vis</div>
-            </div>
-            </div>
+            <div class="task-box">
+                <h4>🪞 Auto-evaluación individual</h4>
+                <div class="self-grid">
+                    <div class="self-card"><h5>✅ Fortalezas</h5><p><em>"I did well at __________."</em></p></div>
+                    <div class="self-card"><h5>🎯 Mejoras</h5><p><em>"Next time I want to improve __________."</em></p></div>
                 </div>
-
-                <div class="reading-box">
-                    <h4>📖 Actividad 4 — Reading Model — Ensayar con retroalimentación crítica</h4>
-                    <p class="reading-note">Modelo guiado B1 para la etapa 4/5 del trabajo oral de junio: Ensayar con un compañero, ajustar pronunciación y fortalecer la justificación.</p>
-                    <p>Before the final delivery, the speaker rehearses the technical case with a partner who listens critically and notes strengths and weak points.</p><p>Feedback focuses on clarity of the problem, quality of evidence, pronunciation of key terms, and whether the recommendation sounds feasible in a real workplace.</p><p>The rehearsal may include a quick visual aid, a diagram, or a short note card that helps the speaker control time without losing eye contact with the audience.</p><p>After the rehearsal, the outline is adjusted so the final version sounds more direct, better supported, and easier to defend under questions.</p><p>This stage turns information into performance: the goal is not only to know the case, but to communicate it convincingly.</p>
-                </div>
-
-                <div class="task-box">
-                    <h4>📝 Actividad 5 — Reading comprehension</h4>
-                    <p>Answer the questions by returning to the text. Focus on evidence, sequence, language use, and professional meaning before checking the answer key.</p>
-                    
-            <div class="question-card">
-                <p><strong>1.</strong> What operational or communicative challenge is presented in the text?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-1', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-1">The text presents the rehearsal stage with peer feedback before the final oral task.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>2.</strong> Which prior checks or contextual details shape the task?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-2', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-2">Before delivery, the speaker practises timing, pronunciation, and the defence of the recommendation.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>3.</strong> What evidence or technical details guide the team's decisions?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-3', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-3">Important details include feedback on clarity, evidence, feasibility, and oral control during questioning.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>4.</strong> How does the writer use the language focus of the lesson to clarify meaning?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-4', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-4">The language focus shows that technical accuracy still needs clear spoken delivery and confident transitions.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>5.</strong> What conclusion or recommendation emerges from the situation?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-5', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-5">At the end, the outline is revised into a stronger final version.</div>
-            </div>
-            
-            <div class="question-card">
-                <p><strong>6.</strong> What broader lesson about technical communication can be inferred?</p>
-                <button class="toggle-btn" onclick="toggleAnswer('answer-6', this)">Ver respuesta</button>
-                <div class="answer-box" id="answer-6">Feedback helps turn a prepared case into a persuasive oral performance.</div>
-            </div>
-            
-                </div>
-
-                <div class="task-box">
-                    <h4>🛠 Actividad 6 — Actividad Aplicada — Ruta del trabajo oral</h4>
-                    
-            <p><strong>Trabajo oral de junio</strong> · Etapa 4/5</p>
-            <p><strong>Prompt:</strong> <em>Present a technical workplace case, explain the evidence, and defend a practical solution with justified recommendations.</em></p>
-            <ol class="task-steps"><li>Rehearse the case with a partner who checks evidence, feasibility, pronunciation, and timing.</li><li>Adjust the recommendation so it sounds realistic for the workplace context.</li><li>Prepare the final note card or visual support for the June oral task.</li></ol>
-            <p><strong>Producto esperado:</strong> Ensayo con checklist de claridad, evidencia y manejo del tiempo.</p>
-            <ul><li>Present one technical case, workplace situation, or operational problem.</li><li>Explain evidence, causes, and consequences using precise technical language.</li><li>Defend one feasible solution or recommendation for the scenario.</li><li>Close with a professional conclusion and answer follow-up questions.</li></ul>
-            
-                </div>
-
-                <div class="eval-box">
-                    <h4>📋 Seguimiento de la clase</h4>
-                    <p>Formativa — participación en debate, calidad de argumentos y uso de inglés. Evidencia de etapa: Ensayo con checklist de claridad, evidencia y manejo del tiempo.</p>
+                <div class="exit-ticket">
+                    <h5>🎫 Exit ticket — Reflection</h5>
+                    <p style="background:#fef2f2;padding:10px;border-radius:8px;color:#b91c1c;"><em>"After this debate, my opinion about banning combustion cars in Chile is __________ because __________."</em></p>
                 </div>
             </div>
         </div>
-
-        <div class="section">
-            <div class="section-header cierre">🟣 Cierre</div>
-            <div class="section-body">
-    <div class="task-box activity-card">
-        <h4>🟣 Cierre — Oral Project Checkpoint</h4>
-        <p>Close the lesson by checking progress on the oral task and defining the next step in the sequence.</p>
-        <ol class="task-steps"><li>Review your notes and identify the strongest contribution from today's stage.</li><li>Compare your progress with a partner before writing your final exit ticket.</li><li>Complete the three checkpoint prompts below.</li></ol>
-        
-            <div class="exit-ticket">
-                <h5>Exit ticket prompts</h5>
-                <ul><li>Write one strength and one improvement point from today's rehearsal.</li><li>Note the technical word or phrase you need to pronounce more clearly.</li><li>Explain what you will adjust before the final oral delivery.</li></ul>
-            </div>
-            
-    </div>
-    </div>
-        </div>
-
-        <div class="resource-card">
-            <h4>📦 Recursos sugeridos</h4>
-            <p>Disposición de aula para debate, vocabulario de debate en pizarra, ficha de evaluación de pares, timer. Producto de avance: Ensayo con checklist de claridad, evidencia y manejo del tiempo.</p>
-            <p style="margin-top: 10px; color: #64748b; font-size: 0.9rem;">Sugerencia: cerrar la sesión con un ticket de salida breve donde el estudiante escriba una palabra nueva, una idea clave y una aplicación técnica real.</p>
-        </div>
-
-        <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026.</p>
     </div>
 
-    <script>
-        function toggleAnswer(id, button) {
-            const answer = document.getElementById(id);
-            const isOpen = answer.classList.toggle('open');
-            button.textContent = isOpen ? 'Ocultar respuesta' : 'Ver respuesta';
-        }
-    </script>
+    <div class="resource-card">
+        <h4>📦 Recursos sugeridos</h4>
+        <p><strong>Materiales:</strong> cronómetro, rúbrica de jurado impresa, pizarra para puntajes.</p>
+        <p style="margin-top:10px;color:#64748b;font-size:.9rem;">Diferenciación: apoyo lee apuntes en openings; avanzados hablan sin apuntes en rebuttal.</p>
+    </div>
+
+    <p class="footer-note">Guía de trabajo para estudiantes — Materiales de Clases 2026 · 4°B Mecánica Automotriz · Unidad 2 · Clase 4 (Debate Day).</p>
+</div>
 </body>
 </html>
