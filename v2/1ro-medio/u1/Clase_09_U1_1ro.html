@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 9 — U1 — 1ro Medio | Script Writing for the Video</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#1e3a8a,#3730a3,#6366f1); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#3730a3; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #e0e7ff; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #6366f1; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#3730a3; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#3730a3; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #6366f1; padding:0 4px; color:#3730a3; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#3730a3; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#3730a3; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 1 · Clase 9/12</span>
+  <h1>Script Writing for the Video</h1>
+  <p class="sub">Building &#x27;My Future Career&#x27;</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 1ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Integrated review: To Be + Simple Present + Can + Have to + connectors</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA14 — Organizar un guion oral breve aplicando estructuras gramaticales aprendidas.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Redactar un guion (script) de 2-3 minutos para el video &#x27;My Future Career&#x27; integrando contenidos de la unidad.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text — Model Script — My Future Career</h2>
+    <div class="text-block">
+      <p>Hello! My name is Valentina. I am 15 years old and I am a 1st Medio student. I would choose Electronics as my future specialty because I love understanding how small devices work, like smartphones and drones.</p>
+      <p>An electronics technician can identify components, can test circuits, and can solder small connections. However, you have to be very patient, because mistakes are easy to make with tiny parts. You also need to read technical English to learn from international manuals.</p>
+      <p>In ten years, I want to design educational drones for Chilean schools. I am excited about my future career because it combines my passion for technology with my desire to help my community. Thank you for watching my video!</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>script</strong></td><td class='ipa'>/skrɪpt/</td><td>guion</td></tr>
+      <tr><td>2</td><td><strong>introduction</strong></td><td class='ipa'>/ˌɪntrəˈdʌkʃən/</td><td>introducción</td></tr>
+      <tr><td>3</td><td><strong>body</strong></td><td class='ipa'>/ˈbɒdi/</td><td>desarrollo (de un texto)</td></tr>
+      <tr><td>4</td><td><strong>conclusion</strong></td><td class='ipa'>/kənˈkluːʒən/</td><td>conclusión</td></tr>
+      <tr><td>5</td><td><strong>audience</strong></td><td class='ipa'>/ˈɔːdiəns/</td><td>audiencia</td></tr>
+      <tr><td>6</td><td><strong>message</strong></td><td class='ipa'>/ˈmesɪdʒ/</td><td>mensaje</td></tr>
+      <tr><td>7</td><td><strong>structure</strong></td><td class='ipa'>/ˈstrʌktʃər/</td><td>estructura</td></tr>
+      <tr><td>8</td><td><strong>clarity</strong></td><td class='ipa'>/ˈklærəti/</td><td>claridad</td></tr>
+      <tr><td>9</td><td><strong>passion</strong></td><td class='ipa'>/ˈpæʃən/</td><td>pasión</td></tr>
+      <tr><td>10</td><td><strong>community</strong></td><td class='ipa'>/kəˈmjuːnəti/</td><td>comunidad</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Integrated review: To Be + Simple Present + Can + Have to + connectors</div>
+    <ol class="activity">
+      <li>My name <span class="gap">&nbsp;___&nbsp;</span> Valentina.</li>
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> a 1st Medio student.</li>
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> choose Electronics <span class="gap">&nbsp;___&nbsp;</span> I love technology.</li>
+      <li>A technician <span class="gap">&nbsp;___&nbsp;</span> identify components.</li>
+      <li>You <span class="gap">&nbsp;___&nbsp;</span> be very patient.</li>
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> excited about my future.</li>
+      <li>She <span class="gap">&nbsp;___&nbsp;</span> test circuits with a multimeter.</li>
+      <li>We <span class="gap">&nbsp;___&nbsp;</span> read manuals in English.</li>
+      <li>Drones <span class="gap">&nbsp;___&nbsp;</span> designed by skilled technicians.</li>
+      <li>Thank you <span class="gap">&nbsp;___&nbsp;</span> watching my video!</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-9').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-9">
+      <strong>Answer key:</strong>
+      <ol><li>is</li><li>am</li><li>would / because</li><li>can</li><li>have to / need to</li><li>am</li><li>can</li><li>have to / need to</li><li>are</li><li>for</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>Script</strong></td><td>Written text of what someone will say.</td></tr>
+      <tr><td>2</td><td><strong>Introduction</strong></td><td>First part of a presentation.</td></tr>
+      <tr><td>3</td><td><strong>Body</strong></td><td>Main part of a text or presentation.</td></tr>
+      <tr><td>4</td><td><strong>Conclusion</strong></td><td>Final part of a presentation.</td></tr>
+      <tr><td>5</td><td><strong>Audience</strong></td><td>People who watch or listen.</td></tr>
+      <tr><td>6</td><td><strong>Message</strong></td><td>The main idea being communicated.</td></tr>
+      <tr><td>7</td><td><strong>Structure</strong></td><td>The way parts are organized.</td></tr>
+      <tr><td>8</td><td><strong>Clarity</strong></td><td>The quality of being easy to understand.</td></tr>
+      <tr><td>9</td><td><strong>Passion</strong></td><td>Strong interest or enthusiasm.</td></tr>
+      <tr><td>10</td><td><strong>Community</strong></td><td>A group of people living in the same area.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What specialty does Valentina choose?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What can an electronics technician do?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What does Valentina want to design in 10 years?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why does Valentina mention &#x27;Chilean schools&#x27; in her conclusion?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>Identify the three parts of Valentina&#x27;s script (introduction, body, conclusion). Where does each begin?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Why is having a clear conclusion important in a video script?</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: Write the FIRST paragraph of your own &#x27;My Future Career&#x27; script (3-4 sentences).</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_08_U1_1ro.html" class="">← Clase anterior</a>
+    <a href="../index.html">📚 Índice U1</a>
+    <a href="Clase_10_U1_1ro.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">1ro Medio · Unidad 1 — Discovering My Future Career · Clase 9/12 · 2026</div>
+</body>
+</html>

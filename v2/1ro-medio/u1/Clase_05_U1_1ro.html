@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 5 — U1 — 1ro Medio | Electronics — Circuits Around Us</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#1e3a8a,#3730a3,#6366f1); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#3730a3; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #e0e7ff; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #6366f1; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#3730a3; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#3730a3; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #6366f1; padding:0 4px; color:#3730a3; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#3730a3; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#3730a3; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 1 · Clase 5/12</span>
+  <h1>Electronics — Circuits Around Us</h1>
+  <p class="sub">Specialty 4 of 5</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 1ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Can — questions &amp; short answers (Yes, I can. / No, I can&#x27;t.)</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA12 — Formular preguntas con Can para indagar sobre habilidades técnicas.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Formular preguntas con Can y dar respuestas cortas para indagar habilidades técnicas en electrónica.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text — Inside a Smartphone</h2>
+    <div class="text-block">
+      <p>Can you imagine your life without a smartphone? Inside that small device, hundreds of electronic components work together: resistors, capacitors, transistors, and a microchip that processes everything in milliseconds.</p>
+      <p>An electronics technician can identify, test, and replace these components. Can they fix a broken phone screen? Yes, they can — with the right tools and steady hands. Can they solder microchips at home? Usually no, they can&#x27;t, because this requires specialized equipment.</p>
+      <p>The world of electronics is constantly changing. Can students learn it quickly? Yes, they can, if they are curious and patient. Every robot, drone, and electric vehicle depends on electronic technicians who understand how circuits behave.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>smartphone</strong></td><td class='ipa'>/ˈsmɑːrtfoʊn/</td><td>teléfono inteligente</td></tr>
+      <tr><td>2</td><td><strong>resistor</strong></td><td class='ipa'>/rɪˈzɪstər/</td><td>resistencia</td></tr>
+      <tr><td>3</td><td><strong>capacitor</strong></td><td class='ipa'>/kəˈpæsɪtər/</td><td>condensador</td></tr>
+      <tr><td>4</td><td><strong>transistor</strong></td><td class='ipa'>/trænˈzɪstər/</td><td>transistor</td></tr>
+      <tr><td>5</td><td><strong>microchip</strong></td><td class='ipa'>/ˈmaɪkroʊtʃɪp/</td><td>microchip</td></tr>
+      <tr><td>6</td><td><strong>circuit</strong></td><td class='ipa'>/ˈsɜːrkɪt/</td><td>circuito</td></tr>
+      <tr><td>7</td><td><strong>to solder</strong></td><td class='ipa'>/tu ˈsɒldər/</td><td>soldar (electrónica)</td></tr>
+      <tr><td>8</td><td><strong>component</strong></td><td class='ipa'>/kəmˈpoʊnənt/</td><td>componente</td></tr>
+      <tr><td>9</td><td><strong>device</strong></td><td class='ipa'>/dɪˈvaɪs/</td><td>dispositivo</td></tr>
+      <tr><td>10</td><td><strong>drone</strong></td><td class='ipa'>/droʊn/</td><td>dron</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Can — questions &amp; short answers (Yes, I can. / No, I can&#x27;t.)</div>
+    <ol class="activity">
+      <li><span class="gap">&nbsp;___&nbsp;</span> you fix a smartphone? Yes, I <span class="gap">&nbsp;___&nbsp;</span>.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> a technician solder a microchip at home? No, usually they <span class="gap">&nbsp;___&nbsp;</span>.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> students learn electronics quickly?</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> this drone fly in the rain? No, it <span class="gap">&nbsp;___&nbsp;</span>.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> resistors store energy? No, they <span class="gap">&nbsp;___&nbsp;</span>.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> you identify a capacitor in this board?</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> they replace this broken screen? Yes, they <span class="gap">&nbsp;___&nbsp;</span>.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> a microchip work without electricity? No, it <span class="gap">&nbsp;___&nbsp;</span>.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> we test the circuit now?</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> the technician read the diagram? Yes, she <span class="gap">&nbsp;___&nbsp;</span>.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-5').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-5">
+      <strong>Answer key:</strong>
+      <ol><li>Can / can</li><li>Can / can&#x27;t</li><li>Can</li><li>Can / can&#x27;t</li><li>Can / can&#x27;t</li><li>Can</li><li>Can / can</li><li>Can / can&#x27;t</li><li>Can</li><li>Can / can</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>Resistor</strong></td><td>Component that limits the flow of electric current.</td></tr>
+      <tr><td>2</td><td><strong>Capacitor</strong></td><td>Component that stores electrical energy temporarily.</td></tr>
+      <tr><td>3</td><td><strong>Transistor</strong></td><td>Component that amplifies or switches signals.</td></tr>
+      <tr><td>4</td><td><strong>Microchip</strong></td><td>Very small electronic device that processes data.</td></tr>
+      <tr><td>5</td><td><strong>Circuit</strong></td><td>Closed loop where electricity flows.</td></tr>
+      <tr><td>6</td><td><strong>To solder</strong></td><td>To join metal parts using melted material.</td></tr>
+      <tr><td>7</td><td><strong>Component</strong></td><td>Each individual part of an electronic system.</td></tr>
+      <tr><td>8</td><td><strong>Device</strong></td><td>A machine or piece of equipment with a function.</td></tr>
+      <tr><td>9</td><td><strong>Drone</strong></td><td>Unmanned aerial vehicle controlled remotely.</td></tr>
+      <tr><td>10</td><td><strong>Smartphone</strong></td><td>Portable device that combines phone and computer.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Name four components inside a smartphone.</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What can an electronics technician do?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Can a technician solder microchips at home? Why or why not?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why does soldering microchips require specialized equipment?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>Why does the text say &#x27;the world of electronics is constantly changing&#x27;? Give an example.</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Which is more important for an electronics technician: speed or precision? Explain.</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: Write 5 Yes/No questions with CAN about a classmate&#x27;s technical abilities.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_04_U1_1ro.html" class="">← Clase anterior</a>
+    <a href="../index.html">📚 Índice U1</a>
+    <a href="Clase_06_U1_1ro.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">1ro Medio · Unidad 1 — Discovering My Future Career · Clase 5/12 · 2026</div>
+</body>
+</html>

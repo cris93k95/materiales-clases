@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 11 — U1 — 1ro Medio | Recording Session (Work-in-Progress)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#1e3a8a,#3730a3,#6366f1); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#3730a3; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #e0e7ff; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #6366f1; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#3730a3; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#3730a3; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #6366f1; padding:0 4px; color:#3730a3; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#3730a3; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#3730a3; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 1 · Clase 11/12</span>
+  <h1>Recording Session (Work-in-Progress)</h1>
+  <p class="sub">Self-correction &amp; final adjustments</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 1ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Self-correction language: &#x27;I should change…&#x27;, &#x27;I need to improve…&#x27;</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA13 — Autoevaluar la propia producción oral y aplicar mejoras.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Grabar una primera versión del video y aplicar autocorrecciones identificadas en la grabación.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text — Five Tips for a Great Video</h2>
+    <div class="text-block">
+      <p>First, look at the camera, not at the script. Eye contact is essential for a strong connection with your audience. If you need notes, keep them small and use them only as a reference.</p>
+      <p>Second, speak slowly and clearly. Many students rush because they are nervous, but a slow rhythm helps the audience understand. Third, smile naturally — your face shows your confidence.</p>
+      <p>Fourth, check your light and sound before recording. A dark video or a noisy room ruins your work. Finally, watch your recording before submitting it. Ask yourself: &#x27;Should I change this sentence? Do I need to improve this word?&#x27; Self-correction is the secret of every good communicator.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>recording</strong></td><td class='ipa'>/rɪˈkɔːrdɪŋ/</td><td>grabación</td></tr>
+      <tr><td>2</td><td><strong>eye contact</strong></td><td class='ipa'>/aɪ ˈkɒntækt/</td><td>contacto visual</td></tr>
+      <tr><td>3</td><td><strong>rhythm</strong></td><td class='ipa'>/ˈrɪðəm/</td><td>ritmo</td></tr>
+      <tr><td>4</td><td><strong>nervous</strong></td><td class='ipa'>/ˈnɜːrvəs/</td><td>nervioso/a</td></tr>
+      <tr><td>5</td><td><strong>confidence</strong></td><td class='ipa'>/ˈkɒnfɪdəns/</td><td>confianza</td></tr>
+      <tr><td>6</td><td><strong>light</strong></td><td class='ipa'>/laɪt/</td><td>luz</td></tr>
+      <tr><td>7</td><td><strong>sound</strong></td><td class='ipa'>/saʊnd/</td><td>sonido</td></tr>
+      <tr><td>8</td><td><strong>to submit</strong></td><td class='ipa'>/tu səbˈmɪt/</td><td>entregar / enviar</td></tr>
+      <tr><td>9</td><td><strong>self-correction</strong></td><td class='ipa'>/self kəˈrekʃən/</td><td>autocorrección</td></tr>
+      <tr><td>10</td><td><strong>communicator</strong></td><td class='ipa'>/kəˈmjuːnɪkeɪtər/</td><td>comunicador/a</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Self-correction language: &#x27;I should change…&#x27;, &#x27;I need to improve…&#x27;</div>
+    <ol class="activity">
+      <li><span class="gap">&nbsp;___&nbsp;</span> I look at the camera or at my notes?</li>
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> to speak more slowly.</li>
+      <li>Eye contact <span class="gap">&nbsp;___&nbsp;</span> essential.</li>
+      <li>You <span class="gap">&nbsp;___&nbsp;</span> check the light before recording.</li>
+      <li>Many students <span class="gap">&nbsp;___&nbsp;</span> because they are nervous.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> I change this sentence?</li>
+      <li>Self-correction <span class="gap">&nbsp;___&nbsp;</span> the secret of every communicator.</li>
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> improve my pronunciation of &#x27;electrician&#x27;.</li>
+      <li>A dark video <span class="gap">&nbsp;___&nbsp;</span> your work.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> we use notes? Yes, but small ones.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-11').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-11">
+      <strong>Answer key:</strong>
+      <ol><li>Should</li><li>need</li><li>is</li><li>should / have to</li><li>rush</li><li>Should</li><li>is</li><li>need to / have to</li><li>ruins</li><li>Can</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>Recording</strong></td><td>An audio or video file captured electronically.</td></tr>
+      <tr><td>2</td><td><strong>Eye contact</strong></td><td>Looking directly at someone&#x27;s eyes.</td></tr>
+      <tr><td>3</td><td><strong>Rhythm</strong></td><td>A regular pattern of sounds or movements.</td></tr>
+      <tr><td>4</td><td><strong>Nervous</strong></td><td>Worried or anxious.</td></tr>
+      <tr><td>5</td><td><strong>Confidence</strong></td><td>Belief in one&#x27;s abilities.</td></tr>
+      <tr><td>6</td><td><strong>Light</strong></td><td>Brightness needed to see something.</td></tr>
+      <tr><td>7</td><td><strong>Sound</strong></td><td>Audio that we can hear.</td></tr>
+      <tr><td>8</td><td><strong>To submit</strong></td><td>To deliver or hand in work.</td></tr>
+      <tr><td>9</td><td><strong>Self-correction</strong></td><td>Identifying and fixing one&#x27;s own mistakes.</td></tr>
+      <tr><td>10</td><td><strong>Communicator</strong></td><td>A person who shares ideas effectively.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Where should you look while recording?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Why should you speak slowly?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What two technical things should you check before recording?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why does the text say &#x27;eye contact creates a strong connection&#x27;?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>Why is self-correction called &#x27;the secret of every good communicator&#x27;?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Which tip is the most difficult to apply for you? Why?</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: After recording, write 2 sentences using &#x27;I should…&#x27; and &#x27;I need to…&#x27; to plan improvements.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_10_U1_1ro.html" class="">← Clase anterior</a>
+    <a href="../index.html">📚 Índice U1</a>
+    <a href="Clase_12_U1_1ro.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">1ro Medio · Unidad 1 — Discovering My Future Career · Clase 11/12 · 2026</div>
+</body>
+</html>

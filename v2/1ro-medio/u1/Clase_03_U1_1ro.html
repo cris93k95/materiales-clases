@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 3 — U1 — 1ro Medio | Automotive Mechanics — Under the Hood</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#1e3a8a,#3730a3,#6366f1); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#3730a3; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #e0e7ff; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #6366f1; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#3730a3; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#3730a3; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #6366f1; padding:0 4px; color:#3730a3; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#3730a3; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#3730a3; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 1 · Clase 3/12</span>
+  <h1>Automotive Mechanics — Under the Hood</h1>
+  <p class="sub">Specialty 2 of 5</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 1ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Simple Present — negative &amp; questions (do/does)</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA10 — Formular preguntas y respuestas simples sobre rutinas técnicas en Presente Simple.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Producir oraciones negativas e interrogativas en Presente Simple usando do/does.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text — Sofía, the Future Mechanic</h2>
+    <div class="text-block">
+      <p>Sofía wants to be an automotive mechanic. She is sixteen years old and she is fascinated by cars. But Sofía does not study only because she likes cars — she studies because she wants to understand how every part of an engine works.</p>
+      <p>Does she enjoy getting dirty with engine oil? Yes, she does! In the workshop, she opens the hood and checks the battery, the spark plugs, and the engine belts. She also replaces the brake pads and rotates the tires.</p>
+      <p>Sofía&#x27;s father does not believe that girls can be good mechanics. But Sofía proves him wrong every day. Do her classmates respect her work? Yes, they do — because she is one of the best in her class.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>hood</strong></td><td class='ipa'>/hʊd/</td><td>capó</td></tr>
+      <tr><td>2</td><td><strong>engine</strong></td><td class='ipa'>/ˈendʒɪn/</td><td>motor</td></tr>
+      <tr><td>3</td><td><strong>battery</strong></td><td class='ipa'>/ˈbætəri/</td><td>batería</td></tr>
+      <tr><td>4</td><td><strong>spark plug</strong></td><td class='ipa'>/spɑːrk plʌɡ/</td><td>bujía</td></tr>
+      <tr><td>5</td><td><strong>engine belt</strong></td><td class='ipa'>/ˈendʒɪn belt/</td><td>correa del motor</td></tr>
+      <tr><td>6</td><td><strong>brake pad</strong></td><td class='ipa'>/breɪk pæd/</td><td>pastilla de freno</td></tr>
+      <tr><td>7</td><td><strong>tire</strong></td><td class='ipa'>/ˈtaɪər/</td><td>neumático</td></tr>
+      <tr><td>8</td><td><strong>oil</strong></td><td class='ipa'>/ɔɪl/</td><td>aceite</td></tr>
+      <tr><td>9</td><td><strong>mechanic</strong></td><td class='ipa'>/məˈkænɪk/</td><td>mecánico/a</td></tr>
+      <tr><td>10</td><td><strong>to replace</strong></td><td class='ipa'>/tu rɪˈpleɪs/</td><td>reemplazar</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Simple Present — negative &amp; questions (do/does)</div>
+    <ol class="activity">
+      <li>Sofía <span class="gap">&nbsp;___&nbsp;</span> not study only because she likes cars.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> she enjoy her work? Yes, she <span class="gap">&nbsp;___&nbsp;</span>.</li>
+      <li>Her father <span class="gap">&nbsp;___&nbsp;</span> not believe in her.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> you change engine oil at home?</li>
+      <li>They <span class="gap">&nbsp;___&nbsp;</span> not replace tires every month.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> the mechanic check the battery every day?</li>
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> not understand this engine part.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> Sofía&#x27;s classmates respect her? Yes, they <span class="gap">&nbsp;___&nbsp;</span>.</li>
+      <li>We <span class="gap">&nbsp;___&nbsp;</span> not work on Sundays.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> the engine make a strange noise?</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-3').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-3">
+      <strong>Answer key:</strong>
+      <ol><li>does</li><li>Does / does</li><li>does</li><li>Do</li><li>do</li><li>Does</li><li>do</li><li>Do / do</li><li>do</li><li>Does</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>Hood</strong></td><td>Metal cover over the engine of a car.</td></tr>
+      <tr><td>2</td><td><strong>Battery</strong></td><td>Device that stores electrical energy for the car.</td></tr>
+      <tr><td>3</td><td><strong>Spark plug</strong></td><td>Part that ignites the fuel in an engine.</td></tr>
+      <tr><td>4</td><td><strong>Engine belt</strong></td><td>Rubber band that connects engine parts.</td></tr>
+      <tr><td>5</td><td><strong>Brake pad</strong></td><td>Part that creates friction to stop the car.</td></tr>
+      <tr><td>6</td><td><strong>Tire</strong></td><td>Rubber ring fitted around a wheel.</td></tr>
+      <tr><td>7</td><td><strong>Oil</strong></td><td>Liquid that lubricates engine parts.</td></tr>
+      <tr><td>8</td><td><strong>Mechanic</strong></td><td>A person who repairs vehicles.</td></tr>
+      <tr><td>9</td><td><strong>To replace</strong></td><td>To put something new in place of something old.</td></tr>
+      <tr><td>10</td><td><strong>To rotate</strong></td><td>To change the position of tires for even wear.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>How old is Sofía?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What does Sofía check under the hood?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What does she replace and rotate?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why does Sofía&#x27;s father probably think girls cannot be mechanics?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>How does Sofía respond to her father&#x27;s opinion? What does her behavior show?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Should gender influence the choice of a technical specialty? Justify your answer.</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: Write 2 questions and 2 negative sentences in Simple Present about a mechanic.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_02_U1_1ro.html" class="">← Clase anterior</a>
+    <a href="../index.html">📚 Índice U1</a>
+    <a href="Clase_04_U1_1ro.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">1ro Medio · Unidad 1 — Discovering My Future Career · Clase 3/12 · 2026</div>
+</body>
+</html>
