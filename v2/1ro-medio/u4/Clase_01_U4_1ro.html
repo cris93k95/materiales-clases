@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 1 — U4 — 1ro Medio | Dreams, Goals &amp; Plans</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#0f172a,#2563eb,#14b8a6); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#2563eb; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #dbeafe; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #14b8a6; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#2563eb; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#2563eb; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #14b8a6; padding:0 4px; color:#2563eb; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#2563eb; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#2563eb; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 4 · Clase 1/12</span>
+  <h1>Dreams, Goals &amp; Plans</h1>
+  <p class="sub">Starting the future unit</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 1ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Future with WILL — predictions and spontaneous decisions</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA10 — Comprender y producir enunciados sobre planes y predicciones futuras.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Distinguir dreams, goals y plans usando will para predicciones vocacionales.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text — The Future Starts in 1st Medio</h2>
+    <div class="text-block">
+      <p>In 1st Medio, many students feel that the future is far away. But every decision made today will influence tomorrow. If a student learns English, practices responsibility, and explores technical areas, they will have more options after graduation.</p>
+      <p>A dream is something you imagine. A goal is something you decide to achieve. A plan is the path you will follow to reach it. For example, &#x27;I will become an automotive technician&#x27; is a goal; &#x27;I will practice with tools every week&#x27; is part of the plan.</p>
+      <p>No one knows the future perfectly. Some students will choose a specialty and later change their minds. Others will discover a talent they did not expect. The important thing is to keep learning and to make decisions with information, not fear.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>dream</strong></td><td class='ipa'>/driːm/</td><td>sueño</td></tr>
+      <tr><td>2</td><td><strong>goal</strong></td><td class='ipa'>/ɡoʊl/</td><td>meta</td></tr>
+      <tr><td>3</td><td><strong>plan</strong></td><td class='ipa'>/plæn/</td><td>plan</td></tr>
+      <tr><td>4</td><td><strong>future</strong></td><td class='ipa'>/ˈfjuːtʃər/</td><td>futuro</td></tr>
+      <tr><td>5</td><td><strong>decision</strong></td><td class='ipa'>/dɪˈsɪʒən/</td><td>decisión</td></tr>
+      <tr><td>6</td><td><strong>graduation</strong></td><td class='ipa'>/ˌɡrædʒuˈeɪʃən/</td><td>graduación</td></tr>
+      <tr><td>7</td><td><strong>option</strong></td><td class='ipa'>/ˈɒpʃən/</td><td>opción</td></tr>
+      <tr><td>8</td><td><strong>path</strong></td><td class='ipa'>/pæθ/</td><td>camino</td></tr>
+      <tr><td>9</td><td><strong>talent</strong></td><td class='ipa'>/ˈtælənt/</td><td>talento</td></tr>
+      <tr><td>10</td><td><strong>fear</strong></td><td class='ipa'>/fɪər/</td><td>miedo</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Future with WILL — predictions and spontaneous decisions</div>
+    <ol class="activity">
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> become a responsible student.</li>
+      <li>My choices <span class="gap">&nbsp;___&nbsp;</span> influence my future.</li>
+      <li>Some students <span class="gap">&nbsp;___&nbsp;</span> change their minds.</li>
+      <li>We <span class="gap">&nbsp;___&nbsp;</span> have more options if we study.</li>
+      <li>She <span class="gap">&nbsp;___&nbsp;</span> discover a new talent.</li>
+      <li>They <span class="gap">&nbsp;___&nbsp;</span> make decisions with information.</li>
+      <li>I think English <span class="gap">&nbsp;___&nbsp;</span> help me in TP.</li>
+      <li>My class <span class="gap">&nbsp;___&nbsp;</span> explore five specialties.</li>
+      <li>He <span class="gap">&nbsp;___&nbsp;</span> practice every week.</li>
+      <li>The future <span class="gap">&nbsp;___&nbsp;</span> start today.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-1').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-1">
+      <strong>Answer key:</strong>
+      <ol><li>will</li><li>will</li><li>will</li><li>will</li><li>will</li><li>will</li><li>will</li><li>will</li><li>will</li><li>will</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>Goal</strong></td><td>Something you want to achieve in the future.</td></tr>
+      <tr><td>2</td><td><strong>Plan</strong></td><td>A set of actions for reaching a goal.</td></tr>
+      <tr><td>3</td><td><strong>Skill</strong></td><td>An ability developed through practice.</td></tr>
+      <tr><td>4</td><td><strong>Training</strong></td><td>Practice and instruction for a job or task.</td></tr>
+      <tr><td>5</td><td><strong>Opportunity</strong></td><td>A chance to do something useful or important.</td></tr>
+      <tr><td>6</td><td><strong>Challenge</strong></td><td>A difficult task that requires effort.</td></tr>
+      <tr><td>7</td><td><strong>Decision</strong></td><td>A choice made after thinking.</td></tr>
+      <tr><td>8</td><td><strong>Internship</strong></td><td>Short work experience for learning.</td></tr>
+      <tr><td>9</td><td><strong>Portfolio</strong></td><td>Collection of evidence of one&#x27;s work.</td></tr>
+      <tr><td>10</td><td><strong>Teamwork</strong></td><td>Working with others to reach a shared objective.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What is the difference between a dream and a goal?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What will influence tomorrow, according to the text?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What is one example of a plan?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why should decisions be made with information, not fear?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>Explain how learning English today can affect a student&#x27;s future options.</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Do you think 1st Medio is too early to think about a career? Justify.</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: Write one dream, one goal, and one plan using will.</div>
+  </section>
+
+  <div class="nav">
+    <a href="#" class="disabled">← Clase anterior</a>
+    <a href="index.html">📚 Índice U4</a>
+    <a href="Clase_02_U4_1ro.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">1ro Medio · Unidad 4 — My Plans Ahead · Clase 1/12 · 2026</div>
+</body>
+</html>
