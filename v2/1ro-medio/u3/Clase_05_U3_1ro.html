@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 5 — U3 — 1ro Medio | Nikola Tesla — The Electrical Genius</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#9a3412,#c2410c,#ea580c); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#9a3412; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #ffedd5; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #ea580c; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#9a3412; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#9a3412; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #ea580c; padding:0 4px; color:#9a3412; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#9a3412; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#9a3412; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 3 · Clase 5/12</span>
+  <h1>Nikola Tesla — The Electrical Genius</h1>
+  <p class="sub">Mini-biography #1 (Electricity)</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 1ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Past Simple — applied to biographies</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA10 — Comprender biografías técnicas breves identificando hechos relevantes en pasado.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Identificar la cronología y aportes de Nikola Tesla en una biografía técnica.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text — Nikola Tesla (1856–1943)</h2>
+    <div class="text-block">
+      <p>Nikola Tesla was born in 1856 in a small village in Croatia. As a child, he was very curious and intelligent. He studied physics, mathematics, and engineering at the Polytechnic in Graz, Austria.</p>
+      <p>In 1884, Tesla moved to New York and worked with Thomas Edison for a short time. They didn&#x27;t agree about electricity: Edison defended direct current (DC), but Tesla believed in alternating current (AC). Tesla left Edison&#x27;s company and created his own designs.</p>
+      <p>In 1888, Tesla invented the AC induction motor — a discovery that changed the world. Power stations, factories, and homes were soon connected with AC systems. He also worked with wireless transmission and radio. Tesla died in 1943, alone and poor. Today, electric cars and renewable energy carry his legacy.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>genius</strong></td><td class='ipa'>/ˈdʒiːniəs/</td><td>genio</td></tr>
+      <tr><td>2</td><td><strong>village</strong></td><td class='ipa'>/ˈvɪlɪdʒ/</td><td>aldea</td></tr>
+      <tr><td>3</td><td><strong>physics</strong></td><td class='ipa'>/ˈfɪzɪks/</td><td>física</td></tr>
+      <tr><td>4</td><td><strong>engineering</strong></td><td class='ipa'>/ˌendʒɪˈnɪərɪŋ/</td><td>ingeniería</td></tr>
+      <tr><td>5</td><td><strong>direct current (DC)</strong></td><td class='ipa'>/dəˈrekt ˈkɜːrənt/</td><td>corriente continua</td></tr>
+      <tr><td>6</td><td><strong>alternating current (AC)</strong></td><td class='ipa'>/ˈɔːltərneɪtɪŋ ˈkɜːrənt/</td><td>corriente alterna</td></tr>
+      <tr><td>7</td><td><strong>induction motor</strong></td><td class='ipa'>/ɪnˈdʌkʃən ˈmoʊtər/</td><td>motor de inducción</td></tr>
+      <tr><td>8</td><td><strong>power station</strong></td><td class='ipa'>/ˈpaʊər ˈsteɪʃən/</td><td>central eléctrica</td></tr>
+      <tr><td>9</td><td><strong>wireless</strong></td><td class='ipa'>/ˈwaɪərləs/</td><td>inalámbrico/a</td></tr>
+      <tr><td>10</td><td><strong>legacy</strong></td><td class='ipa'>/ˈleɡəsi/</td><td>legado</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Past Simple — applied to biographies</div>
+    <ol class="activity">
+      <li>Tesla <span class="gap">&nbsp;___&nbsp;</span> (be) born in 1856.</li>
+      <li>He <span class="gap">&nbsp;___&nbsp;</span> (study) physics and engineering.</li>
+      <li>In 1884, he <span class="gap">&nbsp;___&nbsp;</span> (move) to New York.</li>
+      <li>He <span class="gap">&nbsp;___&nbsp;</span> (work) with Edison for a short time.</li>
+      <li>They <span class="gap">&nbsp;___&nbsp;</span> (not / agree) about electricity.</li>
+      <li>Tesla <span class="gap">&nbsp;___&nbsp;</span> (leave) Edison&#x27;s company.</li>
+      <li>In 1888, he <span class="gap">&nbsp;___&nbsp;</span> (invent) the AC induction motor.</li>
+      <li>Power stations <span class="gap">&nbsp;___&nbsp;</span> (be) connected with AC systems.</li>
+      <li>Tesla <span class="gap">&nbsp;___&nbsp;</span> (die) in 1943.</li>
+      <li>His legacy <span class="gap">&nbsp;___&nbsp;</span> (live) on today.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-5').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-5">
+      <strong>Answer key:</strong>
+      <ol><li>was</li><li>studied</li><li>moved</li><li>worked</li><li>didn&#x27;t agree</li><li>left</li><li>invented</li><li>were</li><li>died</li><li>lives</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>Genius</strong></td><td>Person with extraordinary intelligence.</td></tr>
+      <tr><td>2</td><td><strong>Physics</strong></td><td>Science of matter and energy.</td></tr>
+      <tr><td>3</td><td><strong>Engineering</strong></td><td>Application of science to design machines.</td></tr>
+      <tr><td>4</td><td><strong>Direct current</strong></td><td>Electricity that flows in one direction.</td></tr>
+      <tr><td>5</td><td><strong>Alternating current</strong></td><td>Electricity that changes direction periodically.</td></tr>
+      <tr><td>6</td><td><strong>Induction motor</strong></td><td>Motor based on electromagnetic induction.</td></tr>
+      <tr><td>7</td><td><strong>Power station</strong></td><td>Facility that generates electrical energy.</td></tr>
+      <tr><td>8</td><td><strong>Wireless</strong></td><td>Without physical cables.</td></tr>
+      <tr><td>9</td><td><strong>Legacy</strong></td><td>What someone leaves to future generations.</td></tr>
+      <tr><td>10</td><td><strong>Discovery</strong></td><td>Finding something for the first time.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>When and where was Tesla born?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Who did Tesla work with in New York?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What did Tesla invent in 1888?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why did Tesla and Edison disagree?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>How does the text contrast Tesla&#x27;s contributions with his personal fate (&#x27;alone and poor&#x27;)?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Is it fair that great inventors sometimes die poor? Justify with reference to today&#x27;s world.</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: Write 4 facts about Tesla using past simple.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_04_U3_1ro.html" class="">← Clase anterior</a>
+    <a href="index.html">📚 Índice U3</a>
+    <a href="Clase_06_U3_1ro.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">1ro Medio · Unidad 3 — Innovators & Stories · Clase 5/12 · 2026</div>
+</body>
+</html>

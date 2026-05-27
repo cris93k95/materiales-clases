@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 12 — U3 — 1ro Medio | 🎤 Final Presentation — Mini-Bio Showcase</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#9a3412,#c2410c,#ea580c); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#9a3412; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #ffedd5; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #ea580c; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#9a3412; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#9a3412; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #ea580c; padding:0 4px; color:#9a3412; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#9a3412; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#9a3412; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 3 · Clase 12/12</span>
+  <h1>🎤 Final Presentation — Mini-Bio Showcase</h1>
+  <p class="sub">Group presentation + written delivery</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 1ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> INTEGRATED — Past Simple + Past Continuous + connectors</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA13/OA14 — Producir oral y escritamente una biografía técnica coherente.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Presentar oralmente en grupo la mini-biografía redactada y entregarla escrita al docente.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text — Today&#x27;s Plan &amp; Evaluation Criteria</h2>
+    <div class="text-block">
+      <p>Today is the showcase day. Each group of 3-4 students presents the mini-biography they wrote. The order is decided by a draw. Each presentation lasts about 3 minutes, and every student speaks at least once.</p>
+      <p>The evaluation has two parts. Part 1 (10 points): WRITTEN BIOGRAPHY — correct use of past simple, past continuous, connectors, and technical vocabulary. The text must be 100-150 words. Part 2 (10 points): ORAL PRESENTATION — clarity, pronunciation, eye contact, and teamwork.</p>
+      <p>Remember: a biography is not a long list of dates. It is a story about a real person who changed the world. Choose carefully, speak clearly, and feel proud of your work. After all the presentations, the class will vote for the best &#x27;INNOVATOR OF THE UNIT&#x27;. Good luck — and enjoy the showcase!</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>showcase</strong></td><td class='ipa'>/ˈʃoʊkeɪs/</td><td>muestra / exhibición</td></tr>
+      <tr><td>2</td><td><strong>group</strong></td><td class='ipa'>/ɡruːp/</td><td>grupo</td></tr>
+      <tr><td>3</td><td><strong>draw (lottery)</strong></td><td class='ipa'>/drɔː/</td><td>sorteo</td></tr>
+      <tr><td>4</td><td><strong>delivery</strong></td><td class='ipa'>/dɪˈlɪvəri/</td><td>entrega</td></tr>
+      <tr><td>5</td><td><strong>clarity</strong></td><td class='ipa'>/ˈklærəti/</td><td>claridad</td></tr>
+      <tr><td>6</td><td><strong>teamwork</strong></td><td class='ipa'>/ˈtiːmwɜːrk/</td><td>trabajo en equipo</td></tr>
+      <tr><td>7</td><td><strong>vote</strong></td><td class='ipa'>/voʊt/</td><td>voto</td></tr>
+      <tr><td>8</td><td><strong>innovator</strong></td><td class='ipa'>/ˈɪnəveɪtər/</td><td>innovador/a</td></tr>
+      <tr><td>9</td><td><strong>criterion</strong></td><td class='ipa'>/kraɪˈtɪəriən/</td><td>criterio</td></tr>
+      <tr><td>10</td><td><strong>to enjoy</strong></td><td class='ipa'>/tu ɪnˈdʒɔɪ/</td><td>disfrutar</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> INTEGRATED — Past Simple + Past Continuous + connectors</div>
+    <ol class="activity">
+      <li>Today <span class="gap">&nbsp;___&nbsp;</span> (be) the showcase day.</li>
+      <li>Each group <span class="gap">&nbsp;___&nbsp;</span> (present) their biography.</li>
+      <li>Yesterday we <span class="gap">&nbsp;___&nbsp;</span> (practice) our presentation.</li>
+      <li>While I <span class="gap">&nbsp;___&nbsp;</span> (write) my paragraph, my partner <span class="gap">&nbsp;___&nbsp;</span> (search) for facts.</li>
+      <li>Marie Curie <span class="gap">&nbsp;___&nbsp;</span> (be) a great innovator.</li>
+      <li>She <span class="gap">&nbsp;___&nbsp;</span> (win) two Nobel Prizes.</li>
+      <li>Each presentation <span class="gap">&nbsp;___&nbsp;</span> (last) 3 minutes.</li>
+      <li>Tesla <span class="gap">&nbsp;___&nbsp;</span> (live) in a difficult time.</li>
+      <li>Last class, we <span class="gap">&nbsp;___&nbsp;</span> (choose) our innovator together.</li>
+      <li>Now we <span class="gap">&nbsp;___&nbsp;</span> (be) ready to present!</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-12').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-12">
+      <strong>Answer key:</strong>
+      <ol><li>is</li><li>presents</li><li>practiced</li><li>was writing / was searching</li><li>was</li><li>won</li><li>lasts</li><li>lived</li><li>chose</li><li>are</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>Showcase</strong></td><td>Public display of skills or work.</td></tr>
+      <tr><td>2</td><td><strong>Group</strong></td><td>Set of people working together.</td></tr>
+      <tr><td>3</td><td><strong>Draw</strong></td><td>Random selection method.</td></tr>
+      <tr><td>4</td><td><strong>Delivery</strong></td><td>The act of submitting work.</td></tr>
+      <tr><td>5</td><td><strong>Clarity</strong></td><td>Quality of being easy to understand.</td></tr>
+      <tr><td>6</td><td><strong>Teamwork</strong></td><td>Cooperation in a group.</td></tr>
+      <tr><td>7</td><td><strong>Vote</strong></td><td>Formal expression of choice.</td></tr>
+      <tr><td>8</td><td><strong>Innovator</strong></td><td>Person who introduces new ideas.</td></tr>
+      <tr><td>9</td><td><strong>Criterion</strong></td><td>Standard for judging.</td></tr>
+      <tr><td>10</td><td><strong>To enjoy</strong></td><td>To take pleasure in something.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>How long does each presentation last?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>How many points does the written biography have?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What does the class do after all the presentations?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why does the text say &#x27;a biography is not a long list of dates&#x27;?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>Why are written and oral parts evaluated separately?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Is group voting a fair way to choose the best innovator? Justify.</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: Submit your written biography to the teacher. Self-evaluate your presentation on a 1-10 scale.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_11_U3_1ro.html" class="">← Clase anterior</a>
+    <a href="index.html">📚 Índice U3</a>
+    <a href="#" class="disabled">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">1ro Medio · Unidad 3 — Innovators & Stories · Clase 12/12 · 2026</div>
+</body>
+</html>
