@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 8 — U1 — 1ro Medio | Sequence Connectors — Mastering the Flow</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#0f766e,#0ea5a4,#10b981); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#0f766e; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #d1fae5; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #10b981; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#0f766e; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#0f766e; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #10b981; padding:0 4px; color:#0f766e; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#0f766e; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#0f766e; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 2 · Clase 8/12</span>
+  <h1>Sequence Connectors — Mastering the Flow</h1>
+  <p class="sub">First · Then · Next · After · Finally</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 1ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Sequence connectors + passive voice (review)</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA14 — Producir descripciones secuenciales coherentes usando conectores temporales.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Aplicar conectores secuenciales para organizar la descripción de un proceso técnico.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text — How to Describe Any Process Like a Pro</h2>
+    <div class="text-block">
+      <p>Every good process description follows a clear order. The most useful connectors are: &#x27;First&#x27; (to start), &#x27;Then&#x27; or &#x27;Next&#x27; (to continue), &#x27;After that&#x27; (to indicate the result of a previous step), &#x27;While&#x27; or &#x27;During&#x27; (to show simultaneous actions), and &#x27;Finally&#x27; (to close the description).</p>
+      <p>For example: &#x27;First, the bread is sliced. Then, butter is spread on each slice. Next, ham and cheese are added. After that, the sandwich is closed. While the sandwich is prepared, juice is poured into a glass. Finally, breakfast is served.&#x27;</p>
+      <p>Using these connectors transforms a list of steps into a smooth, professional description. They help your audience follow your explanation easily, in any technical or daily context.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>connector</strong></td><td class='ipa'>/kəˈnektər/</td><td>conector</td></tr>
+      <tr><td>2</td><td><strong>sequence</strong></td><td class='ipa'>/ˈsiːkwəns/</td><td>secuencia</td></tr>
+      <tr><td>3</td><td><strong>order</strong></td><td class='ipa'>/ˈɔːrdər/</td><td>orden</td></tr>
+      <tr><td>4</td><td><strong>simultaneous</strong></td><td class='ipa'>/ˌsɪməlˈteɪniəs/</td><td>simultáneo/a</td></tr>
+      <tr><td>5</td><td><strong>step</strong></td><td class='ipa'>/step/</td><td>paso / etapa</td></tr>
+      <tr><td>6</td><td><strong>flow</strong></td><td class='ipa'>/floʊ/</td><td>fluidez / flujo</td></tr>
+      <tr><td>7</td><td><strong>description</strong></td><td class='ipa'>/dɪˈskrɪpʃən/</td><td>descripción</td></tr>
+      <tr><td>8</td><td><strong>smooth</strong></td><td class='ipa'>/smuːð/</td><td>fluido/a</td></tr>
+      <tr><td>9</td><td><strong>clearly</strong></td><td class='ipa'>/ˈklɪərli/</td><td>claramente</td></tr>
+      <tr><td>10</td><td><strong>audience</strong></td><td class='ipa'>/ˈɔːdiəns/</td><td>audiencia</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Sequence connectors + passive voice (review)</div>
+    <ol class="activity">
+      <li><span class="gap">&nbsp;___&nbsp;</span>, the bread is sliced.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span>, butter is spread on each slice.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span>, ham and cheese are added.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> that, the sandwich is closed.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> the sandwich is prepared, juice is poured.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span>, breakfast is served.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span>, the customer is greeted.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> the order is taken, the food is cooked.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span> the food is served, the bill is prepared.</li>
+      <li><span class="gap">&nbsp;___&nbsp;</span>, the customer pays and leaves.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-8').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-8">
+      <strong>Answer key:</strong>
+      <ol><li>First</li><li>Then</li><li>Next</li><li>After</li><li>While</li><li>Finally</li><li>First</li><li>After</li><li>While</li><li>Finally</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>First</strong></td><td>Used to mark the beginning of a sequence.</td></tr>
+      <tr><td>2</td><td><strong>Then</strong></td><td>Used to indicate the next step.</td></tr>
+      <tr><td>3</td><td><strong>Next</strong></td><td>Synonym of &#x27;then&#x27; for continuation.</td></tr>
+      <tr><td>4</td><td><strong>After that</strong></td><td>Used after completing a previous step.</td></tr>
+      <tr><td>5</td><td><strong>While</strong></td><td>Used for simultaneous actions.</td></tr>
+      <tr><td>6</td><td><strong>During</strong></td><td>Synonym of &#x27;while&#x27; followed by a noun.</td></tr>
+      <tr><td>7</td><td><strong>Finally</strong></td><td>Used to close the sequence.</td></tr>
+      <tr><td>8</td><td><strong>Step</strong></td><td>A single stage in a process.</td></tr>
+      <tr><td>9</td><td><strong>Sequence</strong></td><td>Ordered series of steps.</td></tr>
+      <tr><td>10</td><td><strong>Smooth</strong></td><td>Flowing without interruption.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What connector is used to start a description?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What connectors show simultaneous actions?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What connector closes the description?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why do connectors transform &#x27;a list of steps&#x27; into &#x27;a smooth description&#x27;?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>Why is the order of connectors so important in technical writing?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Is it possible to describe a process without sequence connectors? What is lost?</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: Write the process of brushing your teeth using all 5 connectors and passive voice.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_07_U2_1ro.html" class="">← Clase anterior</a>
+    <a href="../index.html">📚 Índice U1</a>
+    <a href="Clase_09_U2_1ro.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">1ro Medio · Unidad 2 — How It Works · Clase 8/12 · 2026</div>
+</body>
+</html>

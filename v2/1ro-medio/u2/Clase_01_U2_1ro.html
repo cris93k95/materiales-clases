@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 1 — U1 — 1ro Medio | What Is Passive Voice?</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#0f766e,#0ea5a4,#10b981); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#0f766e; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #d1fae5; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #10b981; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#0f766e; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#0f766e; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #10b981; padding:0 4px; color:#0f766e; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#0f766e; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#0f766e; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 2 · Clase 1/12</span>
+  <h1>What Is Passive Voice?</h1>
+  <p class="sub">Introduction — when and why</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 1ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Passive Voice (Simple Present) — is/are + past participle</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA10 — Identificar la voz pasiva en textos técnicos y comprender su función comunicativa.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Reconocer la estructura de la voz pasiva en presente y diferenciarla de la voz activa.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text — Why Do Technicians Use Passive Voice?</h2>
+    <div class="text-block">
+      <p>In technical English, the passive voice is used very often. Why? Because in a workshop or factory, the most important thing is NOT who does the action — it is what is done. For example, technicians say &#x27;The engine is repaired&#x27; instead of &#x27;A mechanic repairs the engine&#x27;. The focus is on the engine, not on the mechanic.</p>
+      <p>The structure is simple: subject + is/are + past participle. &#x27;Cars are produced in factories.&#x27; &#x27;Energy is transformed by solar panels.&#x27; &#x27;A logo is designed by Camila.&#x27; The agent (the person who does the action) is introduced with the word &#x27;by&#x27;, but very often it is not mentioned at all.</p>
+      <p>Passive voice is found in manuals, instructions, scientific texts, and process descriptions. Every TP student should master it, because manuals in English are written with passive structures on almost every page.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>passive voice</strong></td><td class='ipa'>/ˈpæsɪv vɔɪs/</td><td>voz pasiva</td></tr>
+      <tr><td>2</td><td><strong>active voice</strong></td><td class='ipa'>/ˈæktɪv vɔɪs/</td><td>voz activa</td></tr>
+      <tr><td>3</td><td><strong>subject</strong></td><td class='ipa'>/ˈsʌbdʒɪkt/</td><td>sujeto</td></tr>
+      <tr><td>4</td><td><strong>agent</strong></td><td class='ipa'>/ˈeɪdʒənt/</td><td>agente (quien ejecuta la acción)</td></tr>
+      <tr><td>5</td><td><strong>past participle</strong></td><td class='ipa'>/pɑːst ˈpɑːrtɪsɪpəl/</td><td>participio pasado</td></tr>
+      <tr><td>6</td><td><strong>focus</strong></td><td class='ipa'>/ˈfoʊkəs/</td><td>foco / énfasis</td></tr>
+      <tr><td>7</td><td><strong>structure</strong></td><td class='ipa'>/ˈstrʌktʃər/</td><td>estructura</td></tr>
+      <tr><td>8</td><td><strong>manual</strong></td><td class='ipa'>/ˈmænjuəl/</td><td>manual</td></tr>
+      <tr><td>9</td><td><strong>instruction</strong></td><td class='ipa'>/ɪnˈstrʌkʃən/</td><td>instrucción</td></tr>
+      <tr><td>10</td><td><strong>process</strong></td><td class='ipa'>/ˈprɒses/</td><td>proceso</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Passive Voice (Simple Present) — is/are + past participle</div>
+    <ol class="activity">
+      <li>The engine <span class="gap">&nbsp;___&nbsp;</span> repaired by a mechanic.</li>
+      <li>Cars <span class="gap">&nbsp;___&nbsp;</span> produced in factories.</li>
+      <li>Energy <span class="gap">&nbsp;___&nbsp;</span> transformed by solar panels.</li>
+      <li>Logos <span class="gap">&nbsp;___&nbsp;</span> designed by graphic designers.</li>
+      <li>English <span class="gap">&nbsp;___&nbsp;</span> spoken in many factories.</li>
+      <li>The tools <span class="gap">&nbsp;___&nbsp;</span> cleaned every day.</li>
+      <li>A circuit <span class="gap">&nbsp;___&nbsp;</span> tested with a multimeter.</li>
+      <li>Manuals <span class="gap">&nbsp;___&nbsp;</span> written in English.</li>
+      <li>The lathe <span class="gap">&nbsp;___&nbsp;</span> operated by Daniel.</li>
+      <li>Mistakes <span class="gap">&nbsp;___&nbsp;</span> corrected during rehearsal.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-1').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-1">
+      <strong>Answer key:</strong>
+      <ol><li>is</li><li>are</li><li>is</li><li>are</li><li>is</li><li>are</li><li>is</li><li>are</li><li>is</li><li>are</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>Passive voice</strong></td><td>Structure where the subject receives the action.</td></tr>
+      <tr><td>2</td><td><strong>Active voice</strong></td><td>Structure where the subject does the action.</td></tr>
+      <tr><td>3</td><td><strong>Subject</strong></td><td>The main noun of the sentence.</td></tr>
+      <tr><td>4</td><td><strong>Agent</strong></td><td>The person or thing that performs the action.</td></tr>
+      <tr><td>5</td><td><strong>Past participle</strong></td><td>Third form of a verb (worked, made, done).</td></tr>
+      <tr><td>6</td><td><strong>By</strong></td><td>Preposition that introduces the agent.</td></tr>
+      <tr><td>7</td><td><strong>Focus</strong></td><td>The element of the sentence we want to highlight.</td></tr>
+      <tr><td>8</td><td><strong>Manual</strong></td><td>Technical book with instructions.</td></tr>
+      <tr><td>9</td><td><strong>Process</strong></td><td>A series of actions to achieve a result.</td></tr>
+      <tr><td>10</td><td><strong>Structure</strong></td><td>The way grammar elements are arranged.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What is the structure of the passive voice in present?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Which word introduces the agent in a passive sentence?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Where can passive voice be found, according to the text?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why is the focus on the engine and not on the mechanic in technical English?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>Compare &#x27;A mechanic repairs the engine&#x27; with &#x27;The engine is repaired&#x27;. What changes?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Why should TP students &#x27;master&#x27; passive voice for international manuals?</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: Transform 3 active sentences into passive voice.</div>
+  </section>
+
+  <div class="nav">
+    <a href="#" class="disabled">← Clase anterior</a>
+    <a href="../index.html">📚 Índice U1</a>
+    <a href="Clase_02_U2_1ro.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">1ro Medio · Unidad 2 — How It Works · Clase 1/12 · 2026</div>
+</body>
+</html>

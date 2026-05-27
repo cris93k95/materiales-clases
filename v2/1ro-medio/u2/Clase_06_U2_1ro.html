@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 6 — U1 — 1ro Medio | Electronics — How a Smartphone Is Assembled</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#0f766e,#0ea5a4,#10b981); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#0f766e; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #d1fae5; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #10b981; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#0f766e; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#0f766e; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #10b981; padding:0 4px; color:#0f766e; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#0f766e; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#0f766e; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 2 · Clase 6/12</span>
+  <h1>Electronics — How a Smartphone Is Assembled</h1>
+  <p class="sub">Process description #4</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 1ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Passive Voice — long process descriptions + while/during</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA10 — Comprender descripciones de procesos industriales electrónicos en voz pasiva.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Identificar etapas del ensamblaje electrónico y describirlas usando voz pasiva.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text — How a Smartphone Is Assembled in a Factory</h2>
+    <div class="text-block">
+      <p>First, the main board (PCB) is manufactured in a clean room. Components such as resistors, capacitors, and microchips are placed on the board by automated machines. Then, the components are soldered using a precise heating process.</p>
+      <p>After that, the board is tested electronically. While the board is tested, the screen is prepared in another section of the factory. The battery is also assembled separately. During this stage, every component is verified for quality.</p>
+      <p>Next, the main board, screen, battery, and case are joined together. The phone is closed and the software is installed. Finally, the device is packaged with its charger, cable, and manual. The product is now ready to be shipped.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>PCB (printed circuit board)</strong></td><td class='ipa'>/piː siː biː/</td><td>placa de circuito impreso</td></tr>
+      <tr><td>2</td><td><strong>clean room</strong></td><td class='ipa'>/kliːn ruːm/</td><td>sala blanca</td></tr>
+      <tr><td>3</td><td><strong>to manufacture</strong></td><td class='ipa'>/tu ˌmænjəˈfæktʃər/</td><td>fabricar</td></tr>
+      <tr><td>4</td><td><strong>to assemble</strong></td><td class='ipa'>/tu əˈsembəl/</td><td>ensamblar</td></tr>
+      <tr><td>5</td><td><strong>automated</strong></td><td class='ipa'>/ˈɔːtəmeɪtɪd/</td><td>automatizado/a</td></tr>
+      <tr><td>6</td><td><strong>to ship</strong></td><td class='ipa'>/tu ʃɪp/</td><td>enviar / despachar</td></tr>
+      <tr><td>7</td><td><strong>quality control</strong></td><td class='ipa'>/ˈkwɒləti kənˈtroʊl/</td><td>control de calidad</td></tr>
+      <tr><td>8</td><td><strong>case</strong></td><td class='ipa'>/keɪs/</td><td>carcasa</td></tr>
+      <tr><td>9</td><td><strong>battery</strong></td><td class='ipa'>/ˈbætəri/</td><td>batería</td></tr>
+      <tr><td>10</td><td><strong>charger</strong></td><td class='ipa'>/ˈtʃɑːrdʒər/</td><td>cargador</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Passive Voice — long process descriptions + while/during</div>
+    <ol class="activity">
+      <li>The main board <span class="gap">&nbsp;___&nbsp;</span> manufactured in a clean room.</li>
+      <li>Components <span class="gap">&nbsp;___&nbsp;</span> placed by automated machines.</li>
+      <li>The components <span class="gap">&nbsp;___&nbsp;</span> soldered with a heating process.</li>
+      <li>The board <span class="gap">&nbsp;___&nbsp;</span> tested electronically.</li>
+      <li>The screen <span class="gap">&nbsp;___&nbsp;</span> prepared in another section.</li>
+      <li>The battery <span class="gap">&nbsp;___&nbsp;</span> assembled separately.</li>
+      <li>Every component <span class="gap">&nbsp;___&nbsp;</span> verified for quality.</li>
+      <li>The phone <span class="gap">&nbsp;___&nbsp;</span> closed and the software <span class="gap">&nbsp;___&nbsp;</span> installed.</li>
+      <li>The device <span class="gap">&nbsp;___&nbsp;</span> packaged with its accessories.</li>
+      <li>The product <span class="gap">&nbsp;___&nbsp;</span> ready to be shipped.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-6').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-6">
+      <strong>Answer key:</strong>
+      <ol><li>is</li><li>are</li><li>are</li><li>is</li><li>is</li><li>is</li><li>is</li><li>is / is</li><li>is</li><li>is</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>PCB</strong></td><td>Flat board with electronic circuits printed on it.</td></tr>
+      <tr><td>2</td><td><strong>Clean room</strong></td><td>Sterile environment for sensitive manufacturing.</td></tr>
+      <tr><td>3</td><td><strong>To manufacture</strong></td><td>To produce items on a large scale.</td></tr>
+      <tr><td>4</td><td><strong>To assemble</strong></td><td>To put parts together to make a product.</td></tr>
+      <tr><td>5</td><td><strong>Automated</strong></td><td>Operated by machines without human action.</td></tr>
+      <tr><td>6</td><td><strong>To ship</strong></td><td>To send products from a factory to customers.</td></tr>
+      <tr><td>7</td><td><strong>Quality control</strong></td><td>Process of checking products for defects.</td></tr>
+      <tr><td>8</td><td><strong>Case</strong></td><td>Outer shell that protects the device.</td></tr>
+      <tr><td>9</td><td><strong>Battery</strong></td><td>Energy storage component.</td></tr>
+      <tr><td>10</td><td><strong>Charger</strong></td><td>Device that supplies energy to a battery.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Where is the PCB manufactured?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What is done while the board is tested?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What is included in the final package?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why does the factory use a &#x27;clean room&#x27; to manufacture the PCB?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>Why are batteries and screens assembled in separate sections?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Should consumers know how their smartphones are assembled? Justify.</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: Write 3 passive sentences using &#x27;while&#x27; or &#x27;during&#x27;.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_05_U2_1ro.html" class="">← Clase anterior</a>
+    <a href="../index.html">📚 Índice U1</a>
+    <a href="Clase_07_U2_1ro.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">1ro Medio · Unidad 2 — How It Works · Clase 6/12 · 2026</div>
+</body>
+</html>
