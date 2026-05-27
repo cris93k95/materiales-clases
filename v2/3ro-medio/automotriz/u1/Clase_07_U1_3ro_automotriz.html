@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 7 — U1 — 3ro Medio | Why My Specialty Matters</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#991b1b,#dc2626,#f97316); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#991b1b; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #e5e7eb; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #dc2626; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#991b1b; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#991b1b; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #dc2626; padding:0 4px; color:#991b1b; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#991b1b; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#991b1b; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 1 · Clase 7/12 · 3ro Medio</span>
+  <h1>Why My Specialty Matters</h1>
+  <p class="sub">3ro B · Mecánica Automotriz · U1</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 3ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Because / so / therefore</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA9/OA10/OA13 — Comprender textos técnicos adaptados, usar vocabulario de la especialidad y producir una presentación oral breve sobre habilidades técnicas.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Aplicar inglés técnico para argumentar relevancia social de la especialidad en Mecánica Automotriz.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text (6 paragraphs) — Why My Specialty Matters in Mecánica Automotriz</h2>
+    <div class="text-block">
+      <p>Sofía is a 3rd year student in Mecánica Automotriz. This unit is called 'My Technical Skills' because students are preparing an individual video presentation in English. In the video, each student must describe three tools or pieces of equipment, explain two systems or processes, and justify why automotive mechanics is important for society.</p>
+      <p>The class focus today is 'Why My Specialty Matters'. In the automotive workshop, technical English is not decorative; it is a practical tool for understanding manuals, safety labels, diagrams, software menus, and international vocabulary. Students use English to name objects accurately and to explain what they can do with them.</p>
+      <p>For this specialty, the first technical references are scanner, multimeter, torque wrench, hydraulic jack. These words appear in workshop routines, teacher explanations, catalogues, short manuals, and safety instructions. When students pronounce them correctly, they sound more professional and can participate in technical conversations with more confidence.</p>
+      <p>The main processes connected to this lesson include explaining the four-stroke engine cycle and checking lubrication and cooling. Students do not need to master every advanced detail yet, but they do need to explain the basic purpose, the main steps, and the safety conditions of each process in simple English.</p>
+      <p>This content also connects with the year focus for Mecánica Automotriz: basic diagnosis, engine parts, four-stroke cycle. These topics will return during the year in reading tasks, technical vocabulary work, oral activities, and written comprehension. The objective is to build a bridge between English class and real TP learning, not to study isolated words.</p>
+      <p>By the end of the lesson, students should have evidence for their final video. They should be able to say what they know, what they can do, what they still need to practice, and why their specialty matters. In social terms, transport, emergency services, families, and local businesses depend on safe and reliable vehicles. That is why technical skills are also civic skills.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>society</strong></td><td class='ipa'>/səˈsaɪəti/</td><td>sociedad</td></tr>
+      <tr><td>2</td><td><strong>service</strong></td><td class='ipa'>/ˈsɜːrvɪs/</td><td>servicio</td></tr>
+      <tr><td>3</td><td><strong>impact</strong></td><td class='ipa'>/ˈɪmpækt/</td><td>impacto</td></tr>
+      <tr><td>4</td><td><strong>scanner</strong></td><td class='ipa'>/ˈskænər/</td><td>escáner automotriz</td></tr>
+      <tr><td>5</td><td><strong>multimeter</strong></td><td class='ipa'>/ˈmʌltiˌmiːtər/</td><td>multímetro</td></tr>
+      <tr><td>6</td><td><strong>torque wrench</strong></td><td class='ipa'>/tɔːrk rentʃ/</td><td>torquímetro</td></tr>
+      <tr><td>7</td><td><strong>hydraulic jack</strong></td><td class='ipa'>/haɪˈdrɔːlɪk dʒæk/</td><td>gato hidráulico</td></tr>
+      <tr><td>8</td><td><strong>spark plug</strong></td><td class='ipa'>/spɑːrk plʌɡ/</td><td>bujía</td></tr>
+      <tr><td>9</td><td><strong>brake pad</strong></td><td class='ipa'>/breɪk pæd/</td><td>pastilla de freno</td></tr>
+      <tr><td>10</td><td><strong>radiator</strong></td><td class='ipa'>/ˈreɪdieɪtər/</td><td>radiador</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Because / so / therefore</div>
+    <ol class="activity">
+      <li>My specialty is important <span class="gap">&nbsp;___&nbsp;</span> it solves real problems.</li>
+      <li>Technicians protect people, <span class="gap">&nbsp;___&nbsp;</span> safety matters.</li>
+      <li>The community needs this work, <span class="gap">&nbsp;___&nbsp;</span> students train seriously.</li>
+      <li>I chose this field <span class="gap">&nbsp;___&nbsp;</span> I like practical work.</li>
+      <li>Technology changes, <span class="gap">&nbsp;___&nbsp;</span> technicians keep learning.</li>
+      <li>Good service builds trust, <span class="gap">&nbsp;___&nbsp;</span> communication is important.</li>
+      <li>This job supports society <span class="gap">&nbsp;___&nbsp;</span> it keeps systems working.</li>
+      <li>We learn English, <span class="gap">&nbsp;___&nbsp;</span> manuals are often in English.</li>
+      <li>A technician must be responsible, <span class="gap">&nbsp;___&nbsp;</span> mistakes can be serious.</li>
+      <li>This field creates opportunities, <span class="gap">&nbsp;___&nbsp;</span> it matters for young people.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-7').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-7">
+      <strong>Answer key:</strong>
+      <ol><li>because</li><li>therefore</li><li>so</li><li>because</li><li>therefore</li><li>so</li><li>because</li><li>because</li><li>because</li><li>therefore</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>society</strong></td><td>People living together in organized communities.</td></tr>
+      <tr><td>2</td><td><strong>service</strong></td><td>Work done to help people or keep systems operating.</td></tr>
+      <tr><td>3</td><td><strong>impact</strong></td><td>Effect or influence on people or situations.</td></tr>
+      <tr><td>4</td><td><strong>scanner</strong></td><td>Technical term in the specialty related to escáner automotriz.</td></tr>
+      <tr><td>5</td><td><strong>multimeter</strong></td><td>Technical term in the specialty related to multímetro.</td></tr>
+      <tr><td>6</td><td><strong>torque wrench</strong></td><td>Technical term in the specialty related to torquímetro.</td></tr>
+      <tr><td>7</td><td><strong>hydraulic jack</strong></td><td>Technical term in the specialty related to gato hidráulico.</td></tr>
+      <tr><td>8</td><td><strong>spark plug</strong></td><td>Technical term in the specialty related to bujía.</td></tr>
+      <tr><td>9</td><td><strong>brake pad</strong></td><td>Technical term in the specialty related to pastilla de freno.</td></tr>
+      <tr><td>10</td><td><strong>radiator</strong></td><td>Technical term in the specialty related to radiador.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Why is the specialty important?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What builds trust?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Why do technicians keep learning?</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why does the text connect service with community needs?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>Explain how technical work can support society beyond the workshop.</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Which TP specialty has the greatest social impact? Defend your answer respectfully.</div>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: write 3 sentences that can be used later in your 'My Technical Skills' video.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_06_U1_3ro_automotriz.html" class="">← Clase anterior</a>
+    <a href="index.html">📚 Índice U1</a>
+    <a href="Clase_08_U1_3ro_automotriz.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">3ro Medio · Unidad 1 — My Technical Skills · Mecánica Automotriz · Clase 7/12 · 2026</div>
+</body>
+</html>
