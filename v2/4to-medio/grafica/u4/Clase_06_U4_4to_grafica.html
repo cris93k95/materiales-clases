@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 6 — U4 — 4to Medio | Advanced Reading Test</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#6b21a8,#a855f7,#ec4899); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#6b21a8; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #e5e7eb; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #a855f7; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#6b21a8; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#6b21a8; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #a855f7; padding:0 4px; color:#6b21a8; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#6b21a8; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#6b21a8; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 4 · Clase 6/12 · 4to Medio</span>
+  <h1>Advanced Reading Test</h1>
+  <p class="sub">4to D · Gráfica · Unit 4</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 4to Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Integrated reading assessment</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA9/OA10/OA13/OA14 — Comprender textos tecnicos y laborales, utilizar vocabulario TP, producir respuestas escritas y orales para empleabilidad y comunicacion tecnica.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Apply technical and workplace English to complete an advanced reading assessment in Gráfica.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text (6 paragraphs) — Advanced Reading Test in Gráfica</h2>
+    <div class="text-block">
+      <p>Camila is a 4th year student in Gráfica. The lesson 'Advanced Reading Test' belongs to Unit 4, 'Innovation, Project Defense &amp; Closure', and connects English with employability, technical reading, and real transition to work or further training. This text is written as an adapted workplace document for a TP student preparing for graduation.</p>
+      <p>The interdisciplinary TP plan says that English in 4to Medio must support employability and technical comprehension in Gráfica. For this specialty, the main technical source focus is documents and materials linked to the recently acquired equipment in the specialty. Therefore, reading, speaking, and writing activities must use information that sounds useful in the graphic production lab and not only in a general English classroom.</p>
+      <p>The vocabulary from this text includes these ten terms: substrate, proof, registration, finishing unit, maintenance log, preflight, procedure, safety precaution, manual, evidence. Students should not memorize the words as isolated items. They should connect each term with a job task, a document, a safety decision, a procedure, a customer interaction, or a project defense in English.</p>
+      <p>One process connected to this lesson is recording equipment maintenance after use. Another related process is reading the equipment manual before operation. In both cases, the student needs to identify the purpose, the required materials or information, the safety precautions, and the expected result before explaining the process orally or answering reading questions.</p>
+      <p>This class also connects with digital print workflow. The language focus is Integrated reading assessment, because students need grammar that helps them describe responsibilities, interpret instructions, justify decisions, and communicate professionally. If the grammar is used with technical content, it becomes a tool for workplace communication instead of a separate rule.</p>
+      <p>The final product of the unit is Advanced reading test + final project defense in English. The expected evidence in the TP plan includes explanatory video with professional vocabulary from the graphic production area and technical reading assessment based on documentation for the recently acquired graphic production equipment. In social terms, schools, companies, public campaigns, local businesses, and community organizations need clear printed and digital communication produced with professional workflows. For that reason, English supports employability, safety, technical rigor, and professional confidence.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>substrate</strong></td><td class='ipa'>/ˈsʌbstreɪt/</td><td>sustrato</td></tr>
+      <tr><td>2</td><td><strong>proof</strong></td><td class='ipa'>/pruːf/</td><td>prueba de impresión</td></tr>
+      <tr><td>3</td><td><strong>registration</strong></td><td class='ipa'>/ˌredʒɪˈstreɪʃən/</td><td>registro</td></tr>
+      <tr><td>4</td><td><strong>finishing unit</strong></td><td class='ipa'>/ˈfɪnɪʃɪŋ ˈjuːnɪt/</td><td>unidad de terminación</td></tr>
+      <tr><td>5</td><td><strong>maintenance log</strong></td><td class='ipa'>/ˈmeɪntənəns lɔːɡ/</td><td>registro de mantención</td></tr>
+      <tr><td>6</td><td><strong>preflight</strong></td><td class='ipa'>/ˈpriːflaɪt/</td><td>revisión previa</td></tr>
+      <tr><td>7</td><td><strong>procedure</strong></td><td class='ipa'>/prəˈsiːdʒər/</td><td>procedimiento</td></tr>
+      <tr><td>8</td><td><strong>safety precaution</strong></td><td class='ipa'>/ˈseɪfti prɪˈkɔːʃən/</td><td>precaución de seguridad</td></tr>
+      <tr><td>9</td><td><strong>manual</strong></td><td class='ipa'>/ˈmænjuəl/</td><td>manual</td></tr>
+      <tr><td>10</td><td><strong>evidence</strong></td><td class='ipa'>/ˈevɪdəns/</td><td>evidencia</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Integrated reading assessment</div>
+    <ol class="activity">
+      <li>Innovation <span class="gap">&nbsp;___&nbsp;</span> change a technical workplace.</li>
+      <li>A risk <span class="gap">&nbsp;___&nbsp;</span> be identified before a project starts.</li>
+      <li>Two solutions <span class="gap">&nbsp;___&nbsp;</span> compared with evidence.</li>
+      <li>The advanced test <span class="gap">&nbsp;___&nbsp;</span> inference and critical thinking.</li>
+      <li>A project defense <span class="gap">&nbsp;___&nbsp;</span> a problem and a solution.</li>
+      <li>Students <span class="gap">&nbsp;___&nbsp;</span> explain why their decision is appropriate.</li>
+      <li>Visual support <span class="gap">&nbsp;___&nbsp;</span> help the audience understand.</li>
+      <li>Questions <span class="gap">&nbsp;___&nbsp;</span> answered with clear reasons.</li>
+      <li>The final defense <span class="gap">&nbsp;___&nbsp;</span> evaluated with a rubric.</li>
+      <li>Professional reflection <span class="gap">&nbsp;___&nbsp;</span> next steps.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-6').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-6">
+      <strong>Answer key:</strong>
+      <ol><li>can</li><li>should</li><li>are</li><li>includes</li><li>presents</li><li>must</li><li>can</li><li>are</li><li>is</li><li>identifies</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>substrate</strong></td><td>The material printed on, such as paper, vinyl, or cardboard.</td></tr>
+      <tr><td>2</td><td><strong>proof</strong></td><td>A test print used to check quality before final production.</td></tr>
+      <tr><td>3</td><td><strong>registration</strong></td><td>Correct alignment of colors or printed elements.</td></tr>
+      <tr><td>4</td><td><strong>finishing unit</strong></td><td>Equipment used for cutting, folding, laminating, or binding.</td></tr>
+      <tr><td>5</td><td><strong>maintenance log</strong></td><td>A record of cleaning, checks, and equipment service.</td></tr>
+      <tr><td>6</td><td><strong>preflight</strong></td><td>A check of a file before printing.</td></tr>
+      <tr><td>7</td><td><strong>procedure</strong></td><td>A series of ordered steps for completing a task.</td></tr>
+      <tr><td>8</td><td><strong>safety precaution</strong></td><td>An action taken to reduce risk before work.</td></tr>
+      <tr><td>9</td><td><strong>manual</strong></td><td>A document with instructions, warnings, and technical information.</td></tr>
+      <tr><td>10</td><td><strong>evidence</strong></td><td>Information that supports a conclusion or decision.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What specialty is the text about?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What is the title of today's lesson?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Name two technical terms or processes mentioned in the text.</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why does the text connect English with employability in this specialty?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>How does the text show the relationship between technical reading and professional communication?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Should TP students use English to explain real workplace procedures? Justify your answer with one idea from the text.</div>
+  </section>
+  <section class="card">
+    <h2>🎤 Assessment Link</h2>
+    <p><strong>Linked instrument:</strong> <a href="../../rubricas/advanced-reading.html">Advanced Reading reference</a> · <a href="../../rubricas/final-defense.html">Final Project Defense rubric</a></p>
+    <p style="margin-top:8px;"><strong>Unit task:</strong> Complete advanced reading tasks and defend a final technical project in English using evidence, vocabulary, and professional answers.</p>
+    <p style="margin-top:8px; color:#475569;">Evidence comes from the 4to Medio TP interdisciplinary plan: employability, technical reading, oral procedure explanation, advanced reading, and final project defense.</p>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: write 3 lines that can be reused in your CV, interview, procedure explanation, reading answer, or final project defense.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_05_U4_4to_grafica.html" class="">← Clase anterior</a>
+    <a href="index.html">📚 Índice U4</a>
+    <a href="Clase_07_U4_4to_grafica.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">4to Medio · Unidad 4 — Innovation, Project Defense & Closure · Gráfica · Clase 6/12 · 2026</div>
+</body>
+</html>

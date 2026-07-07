@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 5 — U1 — 3ro Medio | Systems I Understand</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#92400e,#f59e0b,#facc15); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#92400e; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #e5e7eb; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #f59e0b; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#92400e; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#92400e; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #f59e0b; padding:0 4px; color:#92400e; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#92400e; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#92400e; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 1 · Clase 5/12 · 3ro Medio</span>
+  <h1>Systems I Understand</h1>
+  <p class="sub">3ro C · Electricidad · Unit 1</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 3ro Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> There is / there are + present simple</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA9/OA10/OA13/OA14 — Comprender textos tecnicos adaptados, usar vocabulario de especialidad y producir respuestas orales/escritas en ingles tecnico.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Apply technical English to describe systems or processes in the specialty in Electricidad.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text (6 paragraphs) — Systems I Understand in Electricidad</h2>
+    <div class="text-block">
+      <p>Mateo is a 3rd year student in Electricidad. The lesson 'Systems I Understand' belongs to Unit 1, 'My Technical Skills', a unit focused on technical identity, tools, systems, and social importance. The reading is written as an adapted technical workplace text, similar to the kind of explanation students may find in a manual, training note, or workshop guide.</p>
+      <p>In the electrical workshop, English is used to identify tools, follow procedures, read labels, and explain decisions. This is especially important for electricity because many manuals, digital interfaces, catalogues, and safety warnings use international English terms. The language objective today is connected to There is / there are + present simple.</p>
+      <p>The technical vocabulary for this class includes tools and concepts such as multimeter, voltage tester, circuit breaker, wire stripper. These terms are not decorative words for a list; they are words that help students describe real work. When a student says the word accurately, writes it correctly, and understands its purpose, the student is closer to professional communication.</p>
+      <p>The first process connected to this lesson is explaining how green hydrogen can use renewable electricity. The second process is reading a single-line diagram. Students are not expected to master every advanced detail yet, but they should understand the purpose of the process, identify the main steps, and explain at least one risk or quality requirement in simple English.</p>
+      <p>This lesson also connects with renewable energy systems. A system has parts, inputs, outputs, rules, and possible failures. If students learn to describe those elements in English, they can answer reading questions, prepare subtitles, write short reports, and speak about their technical skills with more confidence.</p>
+      <p>The final purpose is not only to pass an English activity. By the end of the lesson, students should collect ideas for an oral or written product connected to the unit. In social terms, homes, schools, hospitals, industry, and renewable energy projects depend on safe electrical installations. For that reason, technical English supports employability, safety, service, and civic responsibility.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>multimeter</strong></td><td class='ipa'>/ˈmʌltiˌmiːtər/</td><td>multímetro</td></tr>
+      <tr><td>2</td><td><strong>voltage tester</strong></td><td class='ipa'>/ˈvoʊltɪdʒ ˈtestər/</td><td>probador de voltaje</td></tr>
+      <tr><td>3</td><td><strong>circuit breaker</strong></td><td class='ipa'>/ˈsɜːrkɪt ˌbreɪkər/</td><td>disyuntor</td></tr>
+      <tr><td>4</td><td><strong>wire stripper</strong></td><td class='ipa'>/ˈwaɪər ˈstrɪpər/</td><td>pelacables</td></tr>
+      <tr><td>5</td><td><strong>conduit</strong></td><td class='ipa'>/ˈkɒnduɪt/</td><td>canalización</td></tr>
+      <tr><td>6</td><td><strong>solar panel</strong></td><td class='ipa'>/ˈsoʊlər ˈpænəl/</td><td>panel solar</td></tr>
+      <tr><td>7</td><td><strong>fault</strong></td><td class='ipa'>/fɔːlt/</td><td>falla</td></tr>
+      <tr><td>8</td><td><strong>maintenance</strong></td><td class='ipa'>/ˈmeɪntənəns/</td><td>mantención</td></tr>
+      <tr><td>9</td><td><strong>diagram</strong></td><td class='ipa'>/ˈdaɪəɡræm/</td><td>diagrama</td></tr>
+      <tr><td>10</td><td><strong>report</strong></td><td class='ipa'>/rɪˈpɔːrt/</td><td>informe</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> There is / there are + present simple</div>
+    <ol class="activity">
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> a student in this specialty.</li>
+      <li>My specialty <span class="gap">&nbsp;___&nbsp;</span> useful for society.</li>
+      <li>Technicians <span class="gap">&nbsp;___&nbsp;</span> technical vocabulary.</li>
+      <li>We <span class="gap">&nbsp;___&nbsp;</span> three tools in the video.</li>
+      <li>A good technician <span class="gap">&nbsp;___&nbsp;</span> safety rules.</li>
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> explain two processes.</li>
+      <li>The final video <span class="gap">&nbsp;___&nbsp;</span> subtitles.</li>
+      <li>My classmates <span class="gap">&nbsp;___&nbsp;</span> pronunciation.</li>
+      <li>The rubric <span class="gap">&nbsp;___&nbsp;</span> 24 points.</li>
+      <li>This unit <span class="gap">&nbsp;___&nbsp;</span> technical identity.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-5').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-5">
+      <strong>Answer key:</strong>
+      <ol><li>am</li><li>is</li><li>use</li><li>describe</li><li>follows</li><li>can</li><li>needs</li><li>practice</li><li>has</li><li>builds</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>multimeter</strong></td><td>A technical term in the specialty related to multímetro.</td></tr>
+      <tr><td>2</td><td><strong>voltage tester</strong></td><td>A technical term in the specialty related to probador de voltaje.</td></tr>
+      <tr><td>3</td><td><strong>circuit breaker</strong></td><td>A technical term in the specialty related to disyuntor.</td></tr>
+      <tr><td>4</td><td><strong>wire stripper</strong></td><td>A technical term in the specialty related to pelacables.</td></tr>
+      <tr><td>5</td><td><strong>conduit</strong></td><td>A technical term in the specialty related to canalización.</td></tr>
+      <tr><td>6</td><td><strong>solar panel</strong></td><td>A technical term in the specialty related to panel solar.</td></tr>
+      <tr><td>7</td><td><strong>fault</strong></td><td>A defect or problem in a component or system.</td></tr>
+      <tr><td>8</td><td><strong>maintenance</strong></td><td>Actions done to keep equipment working correctly.</td></tr>
+      <tr><td>9</td><td><strong>diagram</strong></td><td>A simplified drawing that explains parts or connections.</td></tr>
+      <tr><td>10</td><td><strong>report</strong></td><td>A written or oral explanation of what happened or was done.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What specialty is the text about?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What is the title of today's lesson?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Name two technical tools, systems, or processes mentioned in the text.</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why is English useful in this specialty according to the text?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>How does the text connect technical vocabulary with professional communication?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Do you think technical English should be evaluated in TP specialties? Justify your answer with one reason from the text.</div>
+  </section>
+  <section class="card">
+    <h2>🎤 Oral Production Assessment</h2>
+    <p><strong>Linked instrument:</strong> <a href="../../rubricas/my-technical-skills.html">Video Presentation: My Technical Skills — 3ro Medio rubric</a></p>
+    <p style="margin-top:8px;"><strong>Unit task:</strong> Video Presentation: My Technical Skills. Include 3 tools/equipment, 2 systems/processes, social importance, and English subtitles.</p>
+    <p style="margin-top:8px; color:#475569;">Rubric criteria used as reference: Content, Technical Vocabulary, Pronunciation, Fluency, Structure, and Subtitles.</p>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: write 3 lines that can be reused in your oral/written product for this unit.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_04_U1_3ro_electricidad.html" class="">← Clase anterior</a>
+    <a href="index.html">📚 Índice U1</a>
+    <a href="Clase_06_U1_3ro_electricidad.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">3ro Medio · Unidad 1 — My Technical Skills · Electricidad · Clase 5/12 · 2026</div>
+</body>
+</html>

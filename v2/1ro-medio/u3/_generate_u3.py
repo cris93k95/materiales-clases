@@ -831,6 +831,130 @@ CLASES = [
     },
 ]
 
+MATCH_LABELS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+
+def shuffled_matching_rows(pairs, class_number):
+    definitions = [definition for concept, definition in pairs]
+    if len(definitions) > 1:
+        shift = (class_number % (len(definitions) - 1)) + 1
+        definitions = definitions[shift:] + definitions[:shift]
+    rows = []
+    for index, ((concept, _), definition) in enumerate(zip(pairs, definitions)):
+        rows.append((index + 1, concept, f"{MATCH_LABELS[index]}. {definition}"))
+    return rows
+
+
+def normalize_term(term):
+    return "".join(ch for ch in term.upper() if ch.isalpha())
+
+
+def make_blank_cells(length):
+    return " ".join("___" for _ in range(max(length, 1)))
+
+
+def rotate_text(text, step):
+    if len(text) < 2:
+        return text
+    shift = step % len(text)
+    if shift == 0:
+        shift = 1
+    return text[shift:] + text[:shift]
+
+
+def render_crossword(vocab):
+    clues = []
+    for index, (word, meaning, _) in enumerate(vocab[:6], start=1):
+        normalized = normalize_term(word)
+        direction = "Across" if index <= 3 else "Down"
+        clues.append(
+            f"<li><strong>{direction} {index}.</strong> {esc(meaning)} "
+            f"<small>({len(normalized)} letters)</small><br>{make_blank_cells(len(normalized))}</li>"
+        )
+    return (
+        "<section class=\"card\">"
+        "<h2>🧩 Vocabulary Challenge — Mini Crossword</h2>"
+        "<p style=\"margin-bottom:12px;color:#64748b;\">Read each clue and write the technical word in English. Ignore spaces when counting letters.</p>"
+        f"<ol class=\"activity\">{''.join(clues)}</ol>"
+        "</section>"
+    )
+
+
+def render_word_search(vocab):
+    words = [normalize_term(word) for word, _, _ in vocab[:6]]
+    width = max(11, max(len(word) for word in words))
+    alphabet = "TECHNICALWORDS"
+    rows = []
+    for row_index, word in enumerate(words):
+        offset = (row_index * 2) % max(1, width - len(word) + 1)
+        filler = []
+        for col_index in range(width - len(word)):
+            filler.append(alphabet[(row_index + col_index) % len(alphabet)])
+        row = "".join(filler[:offset]) + word + "".join(filler[offset:])
+        rows.append(row[:width])
+    while len(rows) < width:
+        row_index = len(rows)
+        rows.append("".join(alphabet[(row_index + col_index) % len(alphabet)] for col_index in range(width)))
+    word_bank = ", ".join(esc(word) for word, _, _ in vocab[:6])
+    grid = "<br>".join(" ".join(row) for row in rows)
+    return (
+        "<section class=\"card\">"
+        "<h2>🔎 Vocabulary Challenge — Word Search</h2>"
+        f"<p style=\"margin-bottom:12px;color:#64748b;\">Find these words in the grid: {word_bank}.</p>"
+        f"<div style=\"font-family:monospace;line-height:1.7;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px;letter-spacing:0.12em;\">{grid}</div>"
+        "</section>"
+    )
+
+
+def render_unscramble(vocab, class_number):
+    rows = []
+    for index, (word, meaning, _) in enumerate(vocab[:6], start=1):
+        normalized = normalize_term(word)
+        scrambled = rotate_text(normalized, class_number + index)
+        if scrambled == normalized:
+            scrambled = normalized[::-1]
+        rows.append(
+            f"<li><strong>{esc(scrambled)}</strong> — {esc(meaning)}<br>{make_blank_cells(len(normalized))}</li>"
+        )
+    return (
+        "<section class=\"card\">"
+        "<h2>🔤 Vocabulary Challenge — Unscramble the Terms</h2>"
+        "<p style=\"margin-bottom:12px;color:#64748b;\">Unscramble each technical word and write the correct version in English.</p>"
+        f"<ol class=\"activity\">{''.join(rows)}</ol>"
+        "</section>"
+    )
+
+
+def render_clue_bank(vocab):
+    clues = []
+    for index, (word, meaning, _) in enumerate(vocab[:6], start=1):
+        normalized = normalize_term(word)
+        clues.append(
+            f"<li><strong>Clue {index}.</strong> {esc(meaning)} "
+            f"<small>({len(normalized)} letters)</small><br>{make_blank_cells(len(normalized))}</li>"
+        )
+    return (
+        "<section class=\"card\">"
+        "<h2>🕵️ Vocabulary Challenge — Definition Detective</h2>"
+        "<p style=\"margin-bottom:12px;color:#64748b;\">Match each definition with the correct English term from today's vocabulary.</p>"
+        f"<ol class=\"activity\">{''.join(clues)}</ol>"
+        "</section>"
+    )
+
+
+def build_vocab_activity(vocab, class_number, class_title):
+    lowered = class_title.lower()
+    if "showcase" in lowered or "presentation" in lowered:
+        return ""
+    selector = (class_number - 1) % 4
+    if selector == 0:
+        return render_crossword(vocab)
+    if selector == 1:
+        return render_word_search(vocab)
+    if selector == 2:
+        return render_unscramble(vocab, class_number)
+    return render_clue_bank(vocab)
+
 def build_class(c, prev_num, next_num):
     text_html = "\n      ".join(f"<p>{esc(p)}</p>" for p in c["text"])
     vocab_rows = "\n      ".join(
@@ -843,8 +967,8 @@ def build_class(c, prev_num, next_num):
     )
     fill_answers = "".join(f"<li>{esc(a)}</li>" for q,a in c["fill_gap"])
     match_rows = "\n      ".join(
-        f"<tr><td>{i+1}</td><td><strong>{esc(concept)}</strong></td><td>{esc(defn)}</td></tr>"
-        for i,(concept,defn) in enumerate(c["matching"])
+        f"<tr><td>{row_num}</td><td><strong>{esc(concept)}</strong></td><td>{esc(defn)}</td></tr>"
+        for row_num, concept, defn in shuffled_matching_rows(c["matching"], c["num"])
     )
     rq = []
     for q in c["reading"]["explicit"]:
@@ -883,6 +1007,13 @@ def build_class(c, prev_num, next_num):
         prev_class=prev_class,
         next_class=next_class,
     )
+    vocab_activity_html = build_vocab_activity(c["vocab"], c["num"], c["title"])
+    if vocab_activity_html:
+        html_out = html_out.replace(
+            "  </section>\n\n  <section class=\"card\">\n    <h2>📝 Fill in the Gap (10 items)</h2>",
+            f"  </section>\n\n  {vocab_activity_html}\n\n  <section class=\"card\">\n    <h2>📝 Fill in the Gap (10 items)</h2>",
+            1,
+        )
     # U3 color: warm amber/rose (innovators & stories)
     html_out = html_out.replace(
         "linear-gradient(135deg,#1e3a8a,#3730a3,#6366f1)",

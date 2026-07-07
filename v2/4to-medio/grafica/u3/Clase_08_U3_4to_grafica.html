@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 8 — U3 — 4to Medio | Procedure Script</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#6b21a8,#a855f7,#ec4899); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#6b21a8; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #e5e7eb; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #a855f7; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#6b21a8; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#6b21a8; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #a855f7; padding:0 4px; color:#6b21a8; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#6b21a8; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#6b21a8; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 3 · Clase 8/12 · 4to Medio</span>
+  <h1>Procedure Script</h1>
+  <p class="sub">4to D · Gráfica · Unit 3</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 4to Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Sequencing + purpose clauses</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA9/OA10/OA13/OA14 — Comprender textos tecnicos y laborales, utilizar vocabulario TP, producir respuestas escritas y orales para empleabilidad y comunicacion tecnica.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Apply technical and workplace English to write a 3-4 minute procedure script in Gráfica.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text (6 paragraphs) — Procedure Script in Gráfica</h2>
+    <div class="text-block">
+      <p>A trainee drafts a procedure script for preflighting a print-ready file before the oral presentation. The script is not a full paragraph to memorize. It is a structured guide with an opening, a logical sequence, and a final explanation of why the task matters.</p>
+      <p>In the opening section, the trainee names the purpose of the procedure and the materials required. In the middle section, the script moves through the key stages, including checks related to registration, finishing unit, and maintenance log.</p>
+      <p>The first version is too dense, so the instructor asks for shorter sentences and clearer transitions. A good script should support speaking, not trap the speaker inside a wall of text.</p>
+      <p>The class also connects the script to production and finishing workflow. When the procedure belongs to a wider system, the conclusion should show the expected result and how the task supports quality or safety in the full workflow.</p>
+      <p>Students then highlight purpose clauses such as 'to verify,' 'to prevent,' and 'in order to confirm.' Those phrases help the speaker explain not only what happens, but why each action exists.</p>
+      <p>The final script looks smaller than the first draft, but it communicates more. In technical English, clarity is stronger than quantity when the goal is oral explanation.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>registration</strong></td><td class='ipa'>/ˌredʒɪˈstreɪʃən/</td><td>registro</td></tr>
+      <tr><td>2</td><td><strong>finishing unit</strong></td><td class='ipa'>/ˈfɪnɪʃɪŋ ˈjuːnɪt/</td><td>unidad de terminación</td></tr>
+      <tr><td>3</td><td><strong>maintenance log</strong></td><td class='ipa'>/ˈmeɪntənəns lɔːɡ/</td><td>registro de mantención</td></tr>
+      <tr><td>4</td><td><strong>preflight</strong></td><td class='ipa'>/ˈpriːflaɪt/</td><td>revisión previa</td></tr>
+      <tr><td>5</td><td><strong>bleed</strong></td><td class='ipa'>/bliːd/</td><td>sangrado</td></tr>
+      <tr><td>6</td><td><strong>digital press</strong></td><td class='ipa'>/ˈdɪdʒɪtəl pres/</td><td>prensa digital</td></tr>
+      <tr><td>7</td><td><strong>manual</strong></td><td class='ipa'>/ˈmænjuəl/</td><td>manual</td></tr>
+      <tr><td>8</td><td><strong>evidence</strong></td><td class='ipa'>/ˈevɪdəns/</td><td>evidencia</td></tr>
+      <tr><td>9</td><td><strong>technical report</strong></td><td class='ipa'>/ˈteknɪkəl rɪˈpɔːrt/</td><td>informe técnico</td></tr>
+      <tr><td>10</td><td><strong>project defense</strong></td><td class='ipa'>/ˈprɑːdʒekt dɪˈfens/</td><td>defensa de proyecto</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Sequencing + purpose clauses</div>
+    <ol class="activity">
+      <li>First, the procedure <span class="gap">&nbsp;___&nbsp;</span> introduced.</li>
+      <li>The technician <span class="gap">&nbsp;___&nbsp;</span> safety precautions before starting.</li>
+      <li>Each step <span class="gap">&nbsp;___&nbsp;</span> in a clear order.</li>
+      <li>The student <span class="gap">&nbsp;___&nbsp;</span> use full sentences, not only words.</li>
+      <li>A checklist <span class="gap">&nbsp;___&nbsp;</span> prevent mistakes.</li>
+      <li>If the system fails, the technician <span class="gap">&nbsp;___&nbsp;</span> stop and check evidence.</li>
+      <li>The oral explanation <span class="gap">&nbsp;___&nbsp;</span> three to four minutes.</li>
+      <li>Technical terms <span class="gap">&nbsp;___&nbsp;</span> pronounced clearly.</li>
+      <li>The conclusion <span class="gap">&nbsp;___&nbsp;</span> why the procedure matters.</li>
+      <li>Peer feedback <span class="gap">&nbsp;___&nbsp;</span> the final performance.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-8').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-8">
+      <strong>Answer key:</strong>
+      <ol><li>is</li><li>explains</li><li>is described</li><li>should</li><li>can</li><li>must</li><li>lasts</li><li>are</li><li>explains</li><li>improves</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>registration</strong></td><td>A. An oral presentation that explains and justifies a project.</td></tr>
+      <tr><td>2</td><td><strong>finishing unit</strong></td><td>B. Correct alignment of colors or printed elements.</td></tr>
+      <tr><td>3</td><td><strong>maintenance log</strong></td><td>C. Equipment used for cutting, folding, laminating, or binding.</td></tr>
+      <tr><td>4</td><td><strong>preflight</strong></td><td>D. A record of cleaning, checks, and equipment service.</td></tr>
+      <tr><td>5</td><td><strong>bleed</strong></td><td>E. A check of a file before printing.</td></tr>
+      <tr><td>6</td><td><strong>digital press</strong></td><td>F. Extra image area that extends beyond the cut line.</td></tr>
+      <tr><td>7</td><td><strong>manual</strong></td><td>G. A printing machine that produces documents directly from digital files.</td></tr>
+      <tr><td>8</td><td><strong>evidence</strong></td><td>H. A document with instructions, warnings, and technical information.</td></tr>
+      <tr><td>9</td><td><strong>technical report</strong></td><td>I. Information that supports a conclusion or decision.</td></tr>
+      <tr><td>10</td><td><strong>project defense</strong></td><td>J. A structured explanation of a technical situation.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What specialty is the text about?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What is the title of today's lesson?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Name two technical terms or processes mentioned in the text.</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why does the text connect English with employability in this specialty?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>How does the text show the relationship between technical reading and professional communication?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Should TP students use English to explain real workplace procedures? Justify your answer with one idea from the text.</div>
+  </section>
+  <section class="card">
+    <h2>🎤 Assessment Link</h2>
+    <p><strong>Linked instrument:</strong> <a href="../../rubricas/procedure-oral.html">Technical Procedure Oral rubric</a></p>
+    <p style="margin-top:8px;"><strong>Unit task:</strong> Explain a technical procedure in English for 3-4 minutes. Model procedure for this specialty: digital print production: read the job ticket, preflight the file, calibrate color, print a proof, correct settings, and produce the final run.</p>
+    <p style="margin-top:8px; color:#475569;">Evidence comes from the 4to Medio TP interdisciplinary plan: employability, technical reading, oral procedure explanation, advanced reading, and final project defense.</p>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: write 3 lines that can be reused in your CV, interview, procedure explanation, reading answer, or final project defense.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_07_U3_4to_grafica.html" class="">← Clase anterior</a>
+    <a href="index.html">📚 Índice U3</a>
+    <a href="Clase_09_U3_4to_grafica.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">4to Medio · Unidad 3 — Technical Documentation & Procedures · Gráfica · Clase 8/12 · 2026</div>
+</body>
+</html>

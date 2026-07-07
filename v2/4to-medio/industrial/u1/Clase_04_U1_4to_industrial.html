@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 4 — U1 — 4to Medio | Objective and Skills</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; color:#0f172a; line-height:1.65; }
+.hero { background:linear-gradient(135deg,#166534,#16a34a,#22c55e); color:#fff; padding:38px 24px; text-align:center; }
+.hero .tag { display:inline-block; background:rgba(255,255,255,0.18); padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:600; letter-spacing:1px; margin-bottom:10px; }
+.hero h1 { font-size:2rem; font-weight:800; margin-bottom:6px; }
+.hero .sub { opacity:0.9; font-size:1rem; font-weight:400; }
+.meta-bar { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:0.88rem; }
+.meta-bar div { color:#475569; }
+.meta-bar strong { color:#1e293b; }
+.container { max-width:980px; margin:24px auto; padding:0 16px; }
+section.card { background:#fff; border-radius:14px; padding:24px; margin-bottom:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); }
+.card h2 { font-size:1.25rem; color:#166534; margin-bottom:14px; display:flex; align-items:center; gap:10px; padding-bottom:8px; border-bottom:2px solid #e5e7eb; }
+.card h3 { font-size:1rem; color:#1e293b; margin:14px 0 8px; }
+.text-block p { margin-bottom:10px; text-align:justify; color:#1e293b; }
+.text-block { background:#f8fafc; border-left:4px solid #16a34a; padding:16px 18px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:0.92rem; }
+th { background:#166534; color:#fff; padding:10px; text-align:left; }
+td { padding:9px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top; }
+tr:nth-child(even) td { background:#f8fafc; }
+.ipa { font-family:'Doulos SIL','Charis SIL',Georgia,serif; color:#7c3aed; font-weight:600; }
+ol.activity { counter-reset:item; list-style:none; padding-left:0; }
+ol.activity li { counter-increment:item; margin-bottom:10px; padding-left:34px; position:relative; }
+ol.activity li::before { content:counter(item); position:absolute; left:0; top:0; background:#166534; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; }
+.gap { display:inline-block; min-width:90px; border-bottom:2px solid #16a34a; padding:0 4px; color:#166534; font-weight:600; }
+.answer-key { display:none; background:#fef3c7; padding:12px 14px; border-radius:8px; margin-top:10px; border-left:4px solid #f59e0b; }
+.answer-key.show { display:block; }
+button.toggle { background:#166534; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.85rem; margin-top:10px; }
+button.toggle:hover { background:#1e1b4b; }
+.reading-q { background:#eef2ff; padding:12px 14px; border-radius:8px; margin-bottom:8px; }
+.reading-q.explicit { border-left:4px solid #10b981; }
+.reading-q.implicit { border-left:4px solid #3b82f6; }
+.reading-q.analysis { border-left:4px solid #f59e0b; }
+.reading-q.critical { border-left:4px solid #ef4444; }
+.reading-q .qtype { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#64748b; margin-bottom:4px; }
+.grammar-box { background:#fffbeb; border:1px dashed #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.grammar-box strong { color:#92400e; }
+.closure-box { background:#ecfdf5; border-left:4px solid #10b981; padding:14px 16px; border-radius:8px; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; }
+.nav a { flex:1; text-align:center; background:#166534; color:#fff; padding:12px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+.nav a.disabled { background:#cbd5e1; pointer-events:none; }
+.footer { text-align:center; color:#64748b; font-size:0.82rem; padding:20px 0 30px; }
+@media (max-width:720px) { .hero h1 { font-size:1.5rem; } .card { padding:18px; } th,td { padding:7px; font-size:0.85rem; } }
+@media print { button.toggle,.nav { display:none; } .answer-key { display:block; } }
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="tag">Unidad 1 · Clase 4/12 · 4to Medio</span>
+  <h1>Objective and Skills</h1>
+  <p class="sub">4to A · Mecánica Industrial · Unit 1</p>
+</div>
+<div class="meta-bar">
+  <div><strong>Nivel:</strong> 4to Medio</div>
+  <div><strong>Asignatura:</strong> Inglés</div>
+  <div><strong>Duración:</strong> 90 min</div>
+  <div><strong>Gramática:</strong> Action verbs + can / be able to</div>
+</div>
+
+<div class="container">
+
+  <section class="card">
+    <h2>🎯 Objetivo de Aprendizaje</h2>
+    <p><strong>OA:</strong> OA9/OA10/OA13/OA14 — Comprender textos tecnicos y laborales, utilizar vocabulario TP, producir respuestas escritas y orales para empleabilidad y comunicacion tecnica.</p>
+    <p style="margin-top:8px;"><strong>Objetivo de la clase:</strong> Apply technical and workplace English to write an objective and skill statements for a TP job in Mecánica Industrial.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Reading Text (6 paragraphs) — Objective and Skills in Mecánica Industrial</h2>
+    <div class="text-block">
+      <p>Diego is a 4th year student in Mecánica Industrial. The lesson 'Objective and Skills' belongs to Unit 1, 'Professional Profile &amp; Workplace English', and connects English with employability, technical reading, and real transition to work or further training. This text is written as an adapted workplace document for a TP student preparing for graduation.</p>
+      <p>The interdisciplinary TP plan says that English in 4to Medio must support employability and technical comprehension in Mecánica Industrial. For this specialty, the main technical source focus is CNC and MasterCAM documents consulted with the specialty teachers. Therefore, reading, speaking, and writing activities must use information that sounds useful in the industrial workshop and not only in a general English classroom.</p>
+      <p>The vocabulary from this text includes these ten terms: spindle, feed rate, workpiece, fixture, G-code, coolant, technical vocabulary, work order, procedure, safety precaution. Students should not memorize the words as isolated items. They should connect each term with a job task, a document, a safety decision, a procedure, a customer interaction, or a project defense in English.</p>
+      <p>One process connected to this lesson is selecting feed rate and spindle speed. Another related process is simulating a machining operation. In both cases, the student needs to identify the purpose, the required materials or information, the safety precautions, and the expected result before explaining the process orally or answering reading questions.</p>
+      <p>This class also connects with machine safety protocol. The language focus is Action verbs + can / be able to, because students need grammar that helps them describe responsibilities, interpret instructions, justify decisions, and communicate professionally. If the grammar is used with technical content, it becomes a tool for workplace communication instead of a separate rule.</p>
+      <p>The final product of the unit is CV in English + Mock Job Interview video. The expected evidence in the TP plan includes written English assessment on CNC and MasterCAM concepts, instructions, and terminology and technical reading assessment based on MasterCAM and CNC materials. In social terms, manufacturing, mining, maintenance companies, hospitals, and public services need technicians who can read CNC instructions and follow safe machining procedures. For that reason, English supports employability, safety, technical rigor, and professional confidence.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔤 Vocabulary (10 words with IPA)</h2>
+    <table>
+      <tr><th>#</th><th>English</th><th>Pronunciation (IPA)</th><th>Español</th></tr>
+      <tr><td>1</td><td><strong>spindle</strong></td><td class='ipa'>/ˈspɪndəl/</td><td>husillo</td></tr>
+      <tr><td>2</td><td><strong>feed rate</strong></td><td class='ipa'>/fiːd reɪt/</td><td>velocidad de avance</td></tr>
+      <tr><td>3</td><td><strong>workpiece</strong></td><td class='ipa'>/ˈwɜːrkpiːs/</td><td>pieza de trabajo</td></tr>
+      <tr><td>4</td><td><strong>fixture</strong></td><td class='ipa'>/ˈfɪkstʃər/</td><td>dispositivo de sujeción</td></tr>
+      <tr><td>5</td><td><strong>G-code</strong></td><td class='ipa'>/ˈdʒiː koʊd/</td><td>código G</td></tr>
+      <tr><td>6</td><td><strong>coolant</strong></td><td class='ipa'>/ˈkuːlənt/</td><td>refrigerante</td></tr>
+      <tr><td>7</td><td><strong>technical vocabulary</strong></td><td class='ipa'>/ˈteknɪkəl voʊˈkæbjəleri/</td><td>vocabulario técnico</td></tr>
+      <tr><td>8</td><td><strong>work order</strong></td><td class='ipa'>/wɜːrk ˈɔːrdər/</td><td>orden de trabajo</td></tr>
+      <tr><td>9</td><td><strong>procedure</strong></td><td class='ipa'>/prəˈsiːdʒər/</td><td>procedimiento</td></tr>
+      <tr><td>10</td><td><strong>safety precaution</strong></td><td class='ipa'>/ˈseɪfti prɪˈkɔːʃən/</td><td>precaución de seguridad</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📝 Fill in the Gap (10 items)</h2>
+    <div class="grammar-box"><strong>Grammar focus:</strong> Action verbs + can / be able to</div>
+    <ol class="activity">
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> applying for a position connected to my specialty.</li>
+      <li>My CV <span class="gap">&nbsp;___&nbsp;</span> technical skills and education.</li>
+      <li>A good objective <span class="gap">&nbsp;___&nbsp;</span> clear and specific.</li>
+      <li>I <span class="gap">&nbsp;___&nbsp;</span> operate basic tools safely.</li>
+      <li>The interviewer <span class="gap">&nbsp;___&nbsp;</span> at least four questions.</li>
+      <li>The interviewee <span class="gap">&nbsp;___&nbsp;</span> use the CV as support.</li>
+      <li>Technical vocabulary <span class="gap">&nbsp;___&nbsp;</span> the answer more professional.</li>
+      <li>We <span class="gap">&nbsp;___&nbsp;</span> two general and two technical questions.</li>
+      <li>Pronunciation <span class="gap">&nbsp;___&nbsp;</span> important in a video interview.</li>
+      <li>The final video <span class="gap">&nbsp;___&nbsp;</span> approximately five minutes.</li>
+    </ol>
+    <button class="toggle" onclick="document.getElementById('ans-fill-4').classList.toggle('show')">Mostrar/Ocultar respuestas</button>
+    <div class="answer-key" id="ans-fill-4">
+      <strong>Answer key:</strong>
+      <ol><li>am</li><li>includes</li><li>is</li><li>can</li><li>asks</li><li>can</li><li>makes</li><li>prepare</li><li>is</li><li>lasts</li></ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔗 Matching (10 pairs)</h2>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Definition</th></tr>
+      <tr><td>1</td><td><strong>spindle</strong></td><td>The rotating part of a machine that holds or moves the cutting tool.</td></tr>
+      <tr><td>2</td><td><strong>feed rate</strong></td><td>The speed at which the tool moves through the material.</td></tr>
+      <tr><td>3</td><td><strong>workpiece</strong></td><td>The material or part being machined.</td></tr>
+      <tr><td>4</td><td><strong>fixture</strong></td><td>A device that holds the workpiece in the correct position.</td></tr>
+      <tr><td>5</td><td><strong>G-code</strong></td><td>Programming language used to control CNC machine movements.</td></tr>
+      <tr><td>6</td><td><strong>coolant</strong></td><td>Liquid used to reduce heat during machining.</td></tr>
+      <tr><td>7</td><td><strong>technical vocabulary</strong></td><td>Words used in a specific technical field.</td></tr>
+      <tr><td>8</td><td><strong>work order</strong></td><td>A document that explains a task to be completed.</td></tr>
+      <tr><td>9</td><td><strong>procedure</strong></td><td>A series of ordered steps for completing a task.</td></tr>
+      <tr><td>10</td><td><strong>safety precaution</strong></td><td>An action taken to reduce risk before work.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📚 Reading Comprehension (6 questions — English only)</h2>
+    <p style="margin-bottom:12px; color:#64748b; font-size:0.88rem;">3 explicit · 1 implicit · 1 analysis · 1 critical</p>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What specialty is the text about?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>What is the title of today's lesson?</div>
+    <div class="reading-q explicit"><div class="qtype">Explicit</div>Name two technical terms or processes mentioned in the text.</div>
+    <div class="reading-q implicit"><div class="qtype">Implicit (inference)</div>Why does the text connect English with employability in this specialty?</div>
+    <div class="reading-q analysis"><div class="qtype">Analysis</div>How does the text show the relationship between technical reading and professional communication?</div>
+    <div class="reading-q critical"><div class="qtype">Critical thinking</div>Should TP students use English to explain real workplace procedures? Justify your answer with one idea from the text.</div>
+  </section>
+  <section class="card">
+    <h2>🎤 Assessment Link</h2>
+    <p><strong>Linked instrument:</strong> <a href="../../rubricas/cv-ingles.html">CV in English rubric</a> · <a href="../../rubricas/mock-interview.html">Mock Job Interview rubric</a></p>
+    <p style="margin-top:8px;"><strong>Unit task:</strong> Prepare a CV in English oriented to a TP job and record a paired mock job interview video with at least 4 questions: 2 general and 2 technical.</p>
+    <p style="margin-top:8px; color:#475569;">Evidence comes from the 4to Medio TP interdisciplinary plan: employability, technical reading, oral procedure explanation, advanced reading, and final project defense.</p>
+  </section>
+
+  <section class="card">
+    <h2>🚪 Cierre / Exit Ticket</h2>
+    <div class="closure-box">Exit ticket: write 3 lines that can be reused in your CV, interview, procedure explanation, reading answer, or final project defense.</div>
+  </section>
+
+  <div class="nav">
+    <a href="Clase_03_U1_4to_industrial.html" class="">← Clase anterior</a>
+    <a href="index.html">📚 Índice U1</a>
+    <a href="Clase_05_U1_4to_industrial.html" class="">Próxima clase →</a>
+  </div>
+</div>
+
+<div class="footer">4to Medio · Unidad 1 — Professional Profile & Workplace English · Mecánica Industrial · Clase 4/12 · 2026</div>
+</body>
+</html>
