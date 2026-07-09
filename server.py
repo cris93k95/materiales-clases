@@ -115,7 +115,7 @@ class InjectingHandler(http.server.SimpleHTTPRequestHandler):
 
 
 handler = partial(InjectingHandler, directory=SITE_ROOT)
-handler.extensions_map.update({".html": "text/html; charset=utf-8"})
+handler.func.extensions_map.update({".html": "text/html; charset=utf-8"})
 
 with http.server.HTTPServer(("0.0.0.0", PORT), handler) as httpd:
     print(f"Serving on port {PORT}")
