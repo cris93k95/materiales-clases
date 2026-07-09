@@ -254,8 +254,14 @@ def class_file_name(unit_number, class_number, specialty_slug):
 
 
 def select_vocab(specialty, unit_number, class_number):
+    specialty_terms = specialty["tools"]
+    if unit_number == 3:
+        specialty_start = (class_number - 1) % len(specialty_terms)
+        rotated_specialty = specialty_terms[specialty_start:] + specialty_terms[:specialty_start]
+    else:
+        rotated_specialty = specialty_terms
     source_terms = COMMON_TERMS[(class_number - 1) % len(COMMON_TERMS):] + COMMON_TERMS[: (class_number - 1) % len(COMMON_TERMS)]
-    combined_terms = list(specialty["tools"][:6]) + source_terms + list(specialty["tools"][6:])
+    combined_terms = list(rotated_specialty[:6]) + source_terms + list(rotated_specialty[6:])
     selected_terms = []
     seen_terms = set()
     for term in combined_terms:
@@ -267,6 +273,289 @@ def select_vocab(specialty, unit_number, class_number):
         if len(selected_terms) == 10:
             break
     return selected_terms
+
+
+def u3_context(specialty, class_number):
+    process_a = specialty["processes"][(class_number - 1) % len(specialty["processes"])]
+    process_b = specialty["processes"][class_number % len(specialty["processes"])]
+    system_a = specialty["systems"][(class_number - 1) % len(specialty["systems"])]
+    tools = specialty["tools"]
+    tool_a = tools[(class_number - 1) % len(tools)][0]
+    tool_b = tools[class_number % len(tools)][0]
+    tool_c = tools[(class_number + 1) % len(tools)][0]
+    return process_a, process_b, system_a, tool_a, tool_b, tool_c
+
+
+def u3_fill_patterns(specialty, class_number):
+    process_a, process_b, system_a, tool_a, tool_b, tool_c = u3_context(specialty, class_number)
+
+    if class_number == 1:
+        return [
+            (f"A technical fault ___ be a strange noise, vibration, or unstable reading during {process_a}.", "can"),
+            (f"The trainee ___ the symptom before touching {tool_a}.", "describes"),
+            (f"Good technicians ___ first; they observe and compare.", "do not guess"),
+            (f"The team ___ the current result with normal operation.", "compares"),
+            (f"A weak description ___ a weak diagnosis.", "creates"),
+            (f"The first report ___ the visible clues clearly.", "includes"),
+            (f"The discussion also ___ {system_a}.", "mentions"),
+            (f"Students ___ words like {tool_b} and {tool_c} to explain the problem.", "use"),
+            (f"Present simple ___ describe what normally happens in the workshop.", "helps"),
+            (f"Precise observation ___ the first professional habit in troubleshooting.", "is"),
+        ]
+    if class_number == 2:
+        return [
+            (f"Before acting, the team ___ collect evidence from {process_a}.", "must"),
+            (f"Students ___ restart the system without proof.", "should not"),
+            (f"One trainee ___ {tool_a} while another checks {tool_b}.", "inspects"),
+            (f"The checklist ___ observable facts, not guesses.", "records"),
+            (f"If someone changes a setting too early, the original evidence ___ .", "disappears"),
+            (f"The class ___ short recommendations in English.", "practices"),
+            (f"A technician ___ photograph the problem before replacing parts.", "should"),
+            (f"The group ___ evidence labels to support the diagnosis.", "uses"),
+            (f"Evidence ___ both the machine and the technician.", "protects"),
+            (f"A careful record ___ the next person continue the work.", "helps"),
+        ]
+    if class_number == 3:
+        return [
+            (f"Yesterday, the team ___ {process_a} at the start of the shift.", "started"),
+            (f"A student ___ {tool_a} before the fault was confirmed.", "checked"),
+            (f"The report ___ concrete verbs such as inspected and measured.", "used"),
+            (f"The writer ___ opinions and focused on evidence.", "avoided"),
+            (f"The class ___ weak sentences to make the case clearer.", "rewrote"),
+            (f"One paragraph ___ how the fault affected {system_a}.", "explained"),
+            (f"Students ___ the order of events in past tense.", "described"),
+            (f"A better verb ___ the maintenance record more useful.", "made"),
+            (f"The final document ___ a record for future training.", "became"),
+            (f"Past simple ___ the report focus on finished actions.", "helped"),
+        ]
+    if class_number == 4:
+        return [
+            (f"While one group was finishing {process_a}, another team ___ tools.", "was preparing"),
+            (f"A trainee ___ {tool_a} when the fault appeared.", "was holding"),
+            (f"Another student ___ a value on {tool_b} during the incident.", "was reading"),
+            (f"The class ___ the full scene to add missing context.", "was reconstructing"),
+            (f"At that moment, the workshop ___ at a normal rhythm before the interruption.", "was working"),
+            (f"Past continuous ___ background actions around the fault.", "describes"),
+            (f"The report ___ what each person was doing.", "was showing"),
+            (f"The system ___ small changes that affected the whole sequence.", "was receiving"),
+            (f"Students ___ forms like 'was checking' and 'were preparing'.", "were practicing"),
+            (f"Context ___ as important as the final symptom.", "was"),
+        ]
+    if class_number == 5:
+        return [
+            (f"The operator ___ already checked {tool_a} before the new symptom appeared.", "had"),
+            (f"While the second stage was running, the group ___ a new reading on {tool_b}.", "noticed"),
+            (f"The team ___ the activity to avoid extra damage.", "stopped"),
+            (f"Past simple ___ the key events of the incident.", "showed"),
+            (f"Past continuous ___ the background actions still in progress.", "described"),
+            (f"The case ___ setup actions with the later fault.", "connected"),
+            (f"A system can look normal while it ___ a hidden weak point.", "is hiding"),
+            (f"The class ___ the exact moment when the problem became visible.", "identified"),
+            (f"Timing ___ part of the evidence in technical diagnosis.", "is"),
+            (f"Students ___ event and background clauses in the same report.", "combined"),
+        ]
+    if class_number == 6:
+        return [
+            (f"If the system fails during {process_a}, the team ___ react in order.", "will"),
+            (f"If a reading on {tool_a} is ignored, the next stage ___ false data.", "will produce"),
+            (f"If students continue without checking {tool_b}, the fault ___ more components.", "will affect"),
+            (f"Prediction ___ the class think one step ahead.", "helps"),
+            (f"If the evidence is weak, the result ___ unsafe.", "may become"),
+            (f"The poster ___ likely consequences and preventive actions.", "lists"),
+            (f"One wrong decision in {system_a} ___ the full workflow.", "will change"),
+            (f"Students ___ sentences about consequences and prevention.", "complete"),
+            (f"Conditional language ___ part of technical reasoning.", "becomes"),
+            (f"Clear prediction ___ equipment, people, and time.", "protects"),
+        ]
+    if class_number == 7:
+        return [
+            (f"First, the technician ___ the symptom during {process_a}.", "identifies"),
+            (f"Next, the team ___ {tool_a} and compares it with {tool_b}.", "inspects"),
+            (f"After that, students ___ one possible cause at a time.", "test"),
+            (f"If the first hypothesis fails, the group ___ to the next option.", "moves"),
+            (f"A troubleshooting flow ___ guesswork.", "reduces"),
+            (f"The sample case ___ how one clue can lead to a larger explanation.", "shows"),
+            (f"One change in {system_a} ___ be the effect of another hidden cause.", "may"),
+            (f"Students ___ the flow aloud using sequence expressions.", "explain"),
+            (f"Speaking the sequence ___ the logic of the diagnosis.", "reinforces"),
+            (f"A clear path ___ the report and the final decision stronger.", "makes"),
+        ]
+    if class_number == 8:
+        return [
+            (f"During {process_a}, one technician ___ a confirmation step.", "skipped"),
+            (f"At first, the result looked acceptable, but a second check ___ a mismatch.", "showed"),
+            (f"The machine was working, but the procedure ___ followed correctly.", "was not"),
+            (f"The report ___ what conditions made the error possible.", "analyzes"),
+            (f"Time pressure and weak communication ___ the human mistake.", "contributed to"),
+            (f"Students ___ cause-and-effect connectors to explain the chain of events.", "use"),
+            (f"Because the check was skipped, the final result ___ inaccurate.", "became"),
+            (f"The class ___ the mistake with the wider environment of {system_a}.", "connects"),
+            (f"A professional case study ___ a mistake into a safer routine.", "transforms"),
+            (f"Technical English ___ the lesson without hiding the problem.", "states"),
+        ]
+    if class_number == 9:
+        return [
+            (f"After the fault appears during {process_a}, the supervisor ___ two options.", "presents"),
+            (f"One group thinks production ___ continue under pressure.", "should"),
+            (f"Another group argues that preventive maintenance ___ better.", "is"),
+            (f"The team ___ measurements from {tool_a} and notes linked to {tool_b}.", "reviews"),
+            (f"A responsible decision ___ evidence, safety, and long-term reliability.", "requires"),
+            (f"Students ___ recommendations with should and should not.", "write"),
+            (f"Early maintenance ___ a larger repair later.", "can prevent"),
+            (f"The instructor ___ the discussion with {system_a}.", "connects"),
+            (f"A good technician ___ when stopping is the smartest move.", "knows"),
+            (f"The final recommendation ___ quality and trust.", "protects"),
+        ]
+    if class_number == 10:
+        return [
+            (f"A case study report ___ with a clear title and symptom.", "begins"),
+            (f"The writer ___ evidence from {tool_a} and notes about {tool_b}.", "includes"),
+            (f"Each detail ___ brief, concrete, and useful for diagnosis.", "is"),
+            (f"The probable cause ___ after the evidence section.", "appears"),
+            (f"Students ___ symptom, evidence, cause, action, and result.", "separate"),
+            (f"The report ___ only the details needed to explain {system_a}.", "mentions"),
+            (f"Professional writing ___ a confusing event into a usable document.", "transforms"),
+            (f"A calm tone ___ another technician understand the case later.", "helps"),
+            (f"The structure ___ the same problem from being repeated.", "prevents"),
+            (f"The last paragraph ___ why the document matters in real work.", "explains"),
+        ]
+    if class_number == 11:
+        return [
+            (f"Before speaking, the trainee ___ a real case from {specialty['workshop']}.", "reviews"),
+            (f"The explanation ___ four parts: symptom, evidence, cause, and lesson.", "has"),
+            (f"The student ___ key terms such as {tool_a}, {tool_b}, and {tool_c}.", "highlights"),
+            (f"Past forms and connectors ___ the oral explanation clearer.", "make"),
+            (f"A short explanation ___ better than disconnected details.", "works"),
+            (f"The instructor ___ students to use transitions like first and finally.", "asks"),
+            (f"{system_a} ___ only when it clarifies the case.", "is mentioned"),
+            (f"The listener ___ why one decision was better than another.", "understands"),
+            (f"Rehearsal ___ the trainee sound more confident.", "helps"),
+            (f"Technical English ___ useful when it supports a clear explanation.", "becomes"),
+        ]
+    return [
+        (f"Each presentation ___ a different case linked to {process_a} or {process_b}.", "includes"),
+        (f"A strong presentation ___ the symptom quickly and clearly.", "identifies"),
+        (f"One presenter ___ how {tool_a} confirmed the diagnosis.", "explains"),
+        (f"Another student ___ how missing evidence created confusion.", "shows"),
+        (f"The audience ___ concrete information, not vague conclusions.", "expects"),
+        (f"The instructor ___ how each case connects with {system_a}.", "asks"),
+        (f"Clear past forms and transitions ___ the best speakers stand out.", "make"),
+        (f"Students ___ feedback about observation, reasoning, and communication.", "receive"),
+        (f"A useful technical case ___ different details but a solid structure.", "needs"),
+        (f"Good troubleshooting ___ observation and communication together.", "combines"),
+    ]
+
+
+def u3_reading_questions(specialty, class_number, class_title):
+    process_a, process_b, system_a, tool_a, tool_b, tool_c = u3_context(specialty, class_number)
+
+    if class_number == 1:
+        return [
+            f"What symptom did the trainee notice during {process_a}?",
+            f"What three visible clues were written in the first fault report?",
+            f"Which two terms from the vocabulary board were reviewed in the text?",
+            f"Why does the supervisor insist on describing the problem before fixing it?",
+            f"How does the text connect precise observation with technical English?",
+            f"Is observation more important than speed at the start of troubleshooting? Justify with one idea from the text.",
+        ]
+    if class_number == 2:
+        return [
+            f"What did the instructor ask the class to collect before acting?",
+            f"What actions were checked around {tool_a} and {tool_b}?",
+            f"What kind of information was written in the checklist?",
+            f"Why can changing a setting too early make diagnosis harder?",
+            f"How does the lesson show that advice language can be part of a technical method?",
+            f"Should technicians stop and document a fault before replacing a part? Justify with one idea from the text.",
+        ]
+    if class_number == 3:
+        return [
+            f"What did the report say happened after the second verification?",
+            f"Who checked {tool_a} in the timeline?",
+            f"What type of verbs did the class identify in the case report?",
+            f"Why does the writer avoid vague sentences like 'there was a problem'?",
+            f"How does the text show the value of past tense in technical reporting?",
+            f"Do technical students need to learn report writing in English? Justify with one idea from the text.",
+        ]
+    if class_number == 4:
+        return [
+            f"What was happening in the workshop when the fault appeared?",
+            f"Who was using {tool_a} and who was reading {tool_b}?",
+            f"Why was the first version of the report not specific enough?",
+            f"Why is background information necessary in an incident description?",
+            f"How does past continuous improve the quality of the case explanation?",
+            f"Should technicians explain what was happening around a fault, not only the fault itself? Justify.",
+        ]
+    if class_number == 5:
+        return [
+            f"What had the operator already checked before the new reading appeared?",
+            f"When did the team stop the activity?",
+            f"What two kinds of information did students mark in the timeline?",
+            f"Why can a system look normal before a hidden problem becomes visible?",
+            f"How does the text connect timing with technical evidence?",
+            f"Is it useful to combine event and background clauses in a maintenance report? Justify.",
+        ]
+    if class_number == 6:
+        return [
+            f"What does the warning poster ask the team to do if the system fails?",
+            f"What could happen if a reading on {tool_a} is ignored?",
+            f"What consequences were listed in the poster?",
+            f"Why does prediction help students think one step ahead?",
+            f"How does first conditional become part of technical reasoning in the class?",
+            f"Should students practice describing possible consequences before a real fault happens? Justify.",
+        ]
+    if class_number == 7:
+        return [
+            f"What are the four main boxes in the troubleshooting flow?",
+            f"What did students compare with {tool_a} and {tool_b}?",
+            f"What mistake do many beginners make according to the instructor?",
+            f"Why is changing a part too quickly a weak troubleshooting strategy?",
+            f"How does the text connect spoken sequence language with technical logic?",
+            f"Is a troubleshooting flow more useful than guessing? Justify with one example from the text.",
+        ]
+    if class_number == 8:
+        return [
+            f"What confirmation step was skipped during {process_a}?",
+            f"How did the second check show that the result was inaccurate?",
+            f"What conditions made the human error possible?",
+            f"Why does the report avoid blaming one person aggressively?",
+            f"How does the text connect cause-and-effect language with professional responsibility?",
+            f"Should technical case studies include human error as a learning opportunity? Justify.",
+        ]
+    if class_number == 9:
+        return [
+            f"What two maintenance options did the supervisor put on the table?",
+            f"What clues were reviewed from {tool_a} and {tool_b}?",
+            f"Why did one group prefer preventive maintenance?",
+            f"Why is a responsible decision more than a fast decision in technical work?",
+            f"How does the lesson show the value of recommendation language?",
+            f"Would you stop the process for preventive maintenance in this case? Justify with one reason from the text.",
+        ]
+    if class_number == 10:
+        return [
+            f"What information appears in the first lines of the model report?",
+            f"What evidence was included from {tool_a} and {tool_b}?",
+            f"How did the writer separate symptom, cause, and action?",
+            f"Why is a calm tone useful in a technical report?",
+            f"How does the structure help transform a confusing event into a usable document?",
+            f"Should students learn to organize reports with fixed sections? Justify.",
+        ]
+    if class_number == 11:
+        return [
+            f"What four parts did the trainee use to organize the oral explanation?",
+            f"Which key terms were highlighted for the explanation?",
+            f"What transitions were practiced during rehearsal?",
+            f"Why does the instructor want {system_a} mentioned only when it clarifies the case?",
+            f"How does rehearsal connect grammar, vocabulary, and confidence in the text?",
+            f"Is a short and clear explanation stronger than a long disconnected one? Justify.",
+        ]
+    return [
+        f"What elements did every presentation include on presentation day?",
+        f"How did one presenter use {tool_a} or {tool_b} to confirm a diagnosis?",
+        f"What made the strongest presentations different from the weakest ones?",
+        f"Why does the instructor ask how each case connects with {system_a}?",
+        f"How does the text define a useful technical case at the end of the unit?",
+        f"Should students compare different troubleshooting cases before giving feedback? Justify.",
+    ]
 
 
 def make_u3_text(specialty, class_number, class_title, grammar_focus):
@@ -469,17 +758,18 @@ def build_class_html(specialty_slug, specialty, unit_number, class_number, class
         f"<tr><td>{term_index + 1}</td><td><strong>{escape_html(english_term)}</strong></td><td class='ipa'>{escape_html(ipa_text)}</td><td>{escape_html(spanish_term)}</td></tr>"
         for term_index, (english_term, spanish_term, ipa_text) in enumerate(vocab_terms)
     )
+    fill_source = u3_fill_patterns(specialty, class_number) if unit_number == 3 else FILL_PATTERNS[unit_number]
     fill_items = "\n      ".join(
         f"<li>{escape_html(sentence).replace('___', '<span class=\"gap\">&nbsp;___&nbsp;</span>')}</li>"
-        for sentence, answer in FILL_PATTERNS[unit_number]
+        for sentence, answer in fill_source
     )
-    fill_answers = "".join(f"<li>{escape_html(answer)}</li>" for sentence, answer in FILL_PATTERNS[unit_number])
+    fill_answers = "".join(f"<li>{escape_html(answer)}</li>" for sentence, answer in fill_source)
     match_source = shuffled_matching_rows(vocab_terms, class_number) if unit_number == 3 else matching_rows(vocab_terms)
     match_rows = "\n      ".join(
         f"<tr><td>{row_index + 1}</td><td><strong>{escape_html(term)}</strong></td><td>{escape_html(definition)}</td></tr>"
         for row_index, (term, definition) in enumerate(match_source)
     )
-    questions = reading_questions(specialty, unit_number, class_title)
+    questions = u3_reading_questions(specialty, class_number, class_title) if unit_number == 3 else reading_questions(specialty, unit_number, class_title)
     reading_blocks = []
     css_classes = ["explicit", "explicit", "explicit", "implicit", "analysis", "critical"]
     for question_index, question_text in enumerate(questions):

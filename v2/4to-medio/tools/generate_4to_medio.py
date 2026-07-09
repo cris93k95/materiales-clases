@@ -389,6 +389,286 @@ def select_vocab(specialty, class_number):
     return selected
 
 
+def u3_context(specialty, class_number, vocab_terms):
+    process_a = specialty["processes"][(class_number - 1) % len(specialty["processes"])]
+    process_b = specialty["processes"][class_number % len(specialty["processes"])]
+    system = specialty["systems"][(class_number - 1) % len(specialty["systems"])]
+    term_a, term_b, term_c = [term[0] for term in vocab_terms[:3]]
+    return process_a, process_b, system, term_a, term_b, term_c
+
+
+def u3_fill_patterns(specialty, class_number, vocab_terms):
+    process_a, process_b, system, term_a, term_b, term_c = u3_context(specialty, class_number, vocab_terms)
+
+    if class_number == 1:
+        return [
+            (f"First, the team ___ the work area before {process_a}.", "checks"),
+            (f"Next, the operator ___ {term_a}, {term_b}, and {term_c}.", "verifies"),
+            (f"A standard operating procedure ___ the sequence clearly.", "presents"),
+            (f"One missed step ___ the full task.", "can affect"),
+            (f"The opening checks ___ the rest of the workflow safer.", "make"),
+            (f"The text ___ why order matters in technical work.", "explains"),
+            (f"The procedure also ___ {system}.", "mentions"),
+            (f"Students ___ sequence language such as first and finally.", "use"),
+            (f"Clear English ___ apprentices follow the same order.", "helps"),
+            (f"An SOP ___ quality, safety, and communication.", "protects"),
+        ]
+    if class_number == 2:
+        return [
+            (f"A messy instruction sheet ___ {process_a} difficult to follow.", "makes"),
+            (f"First, the technician ___ {term_a}.", "checks"),
+            (f"Next, the technician ___ {term_b}.", "prepares"),
+            (f"After that, the team ___ alignment with {term_c}.", "confirms"),
+            (f"Each instruction ___ only one clear action.", "contains"),
+            (f"A good procedure ___ hesitation and repeated questions.", "reduces"),
+            (f"The revised version ___ {system}.", "fits"),
+            (f"One student ___ the draft aloud to test clarity.", "reads"),
+            (f"The listener ___ whenever the sequence is confusing.", "pauses"),
+            (f"Clear steps ___ more reliable work.", "create"),
+        ]
+    if class_number == 3:
+        return [
+            (f"Both technicians ___ {process_a}, but in different ways.", "explain"),
+            (f"The second speaker ___ {term_a}, {term_b}, and {term_c} carefully.", "points to"),
+            (f"A good explanation ___ another person understand the risks.", "helps"),
+            (f"Speed alone ___ not a sign of professionalism.", "is"),
+            (f"Students ___ two demonstrations using comparative language.", "compare"),
+            (f"One explanation ___ clearer than the other.", "is"),
+            (f"The class ___ the video with {system}.", "connects"),
+            (f"Unclear communication ___ a correct action happen at the wrong time.", "can make"),
+            (f"Evaluation notes ___ evidence, not personal preference.", "use"),
+            (f"A strong explanation ___ correct, understandable, and useful.", "is"),
+        ]
+    if class_number == 4:
+        return [
+            (f"The report ___ the context and exact moment of the problem.", "states"),
+            (f"A trainee ___ {term_a} while another checked {term_b}.", "inspected"),
+            (f"The findings ___ observation from opinion.", "separate"),
+            (f"The writer ___ dramatic language in the report.", "avoids"),
+            (f"One repeated safety check ___ part of the findings.", "became"),
+            (f"The document ___ the wider impact on {system}.", "explains"),
+            (f"Students ___ sections like context and recommendation.", "label"),
+            (f"A technical report ___ knowledge for the next shift.", "preserves"),
+            (f"The structure ___ another technician trust the document.", "helps"),
+            (f"Professional tone ___ the report more useful.", "makes"),
+        ]
+    if class_number == 5:
+        return [
+            (f"The checklist ___ with simple confirmations before {process_a}.", "starts"),
+            (f"Technicians ___ whether {term_a} is in the expected condition.", "check"),
+            (f"They also ___ whether {term_b} has been verified.", "confirm"),
+            (f"The next block ___ on the process itself.", "focuses"),
+            (f"A missing answer today ___ a repeated failure tomorrow.", "can become"),
+            (f"Ordered questions ___ the diagnosis from guesswork.", "protect"),
+            (f"The checklist ___ the symptom with {system}.", "connects"),
+            (f"If the symptom repeats, the team ___ the stage.", "isolates"),
+            (f"If the symptom disappears, the technician ___ recent changes.", "reviews"),
+            (f"A checklist ___ troubleshooting into justified decisions.", "turns"),
+        ]
+    if class_number == 6:
+        return [
+            (f"Before {process_a}, staff ___ the area and secure materials.", "inspect"),
+            (f"The first part ___ that {term_a} and {term_b} are ready.", "confirms"),
+            (f"A worker ___ a check in the near-miss example.", "skipped"),
+            (f"A reading on {term_c} ___ that the setup was incomplete.", "suggested"),
+            (f"Safety ___ not separate from technical quality.", "is"),
+            (f"If the safety routine fails, the procedure ___ unreliable.", "becomes"),
+            (f"The bulletin also ___ {system}.", "mentions"),
+            (f"Students ___ recommendations with must and should.", "practice"),
+            (f"Technicians ___ continue if a warning sign appears.", "must not"),
+            (f"The best procedure ___ safe, clear, and repeatable.", "is"),
+        ]
+    if class_number == 7:
+        return [
+            (f"Students ___ one procedure from the monthly workload.", "choose"),
+            (f"A familiar task ___ easier to describe.", "is"),
+            (f"A more complex option ___ richer vocabulary such as {term_a} and {term_b}.", "includes"),
+            (f"The supervisor ___ both students to justify their choice.", "asks"),
+            (f"A strong procedure ___ relevance, clear steps, and technical decisions.", "shows"),
+            (f"Some procedures ___ to a wider workflow in {system}.", "belong"),
+            (f"Students ___ short justifications in English.", "write"),
+            (f"A good choice ___ the later oral explanation clearer.", "makes"),
+            (f"Choosing a procedure ___ already a technical decision.", "is"),
+            (f"The final explanation ___ more authentic after a justified choice.", "sounds"),
+        ]
+    if class_number == 8:
+        return [
+            (f"A trainee ___ a procedure script for {process_a}.", "drafts"),
+            (f"The opening section ___ the purpose and required materials.", "states"),
+            (f"The middle section ___ checks related to {term_a}, {term_b}, and {term_c}.", "includes"),
+            (f"The first version ___ too dense for oral presentation.", "is"),
+            (f"Shorter sentences ___ the script easier to use.", "make"),
+            (f"A good script ___ speaking instead of memorization.", "supports"),
+            (f"The conclusion ___ how the task fits into {system}.", "shows"),
+            (f"Students ___ purpose clauses such as 'to verify' and 'to prevent'.", "highlight"),
+            (f"Clarity ___ stronger than quantity in technical speaking.", "is"),
+            (f"The final draft ___ more with fewer words.", "communicates"),
+        ]
+    if class_number == 9:
+        return [
+            (f"On rehearsal day, students ___ key terms before explaining {process_a}.", "practice"),
+            (f"The pronunciation sheet ___ words such as {term_a}, {term_b}, and {term_c}.", "groups"),
+            (f"Students ___ stressed syllables on the sheet.", "mark"),
+            (f"Some learners ___ the word on paper but not aloud.", "know"),
+            (f"The rehearsal ___ them bridge that gap.", "helps"),
+            (f"Each term ___ to an action inside {system}.", "belongs"),
+            (f"One student ___ the term while the partner explains its role.", "says"),
+            (f"If the explanation is vague, the pair ___ the sentence again.", "reviews"),
+            (f"Clear pronunciation ___ professional credibility.", "supports"),
+            (f"Accurate terminology ___ the procedure easier to teach.", "makes"),
+        ]
+    if class_number == 10:
+        return [
+            (f"One student ___ the sequence while the partner listens.", "presents"),
+            (f"The feedback card ___ structure and technical clarity.", "checks"),
+            (f"The first attempt ___ too quickly between stages.", "moves"),
+            (f"On the second attempt, the speaker ___ clearer signposting.", "adds"),
+            (f"Transitions ___ the audience follow the explanation.", "help"),
+            (f"The pair also ___ how the task fits into {system}.", "discusses"),
+            (f"When roles change, the second student ___ feedback too.", "receives"),
+            (f"Peer practice ___ problems while there is still time to improve.", "reveals"),
+            (f"Fluency ___ not the same as speaking fast.", "is"),
+            (f"Technical fluency ___ guiding the listener with order and confidence.", "means"),
+        ]
+    if class_number == 11:
+        return [
+            (f"Each student ___ a real procedure for evaluation day.", "chooses"),
+            (f"The strongest presentation ___ careful use of {term_a}.", "shows"),
+            (f"One speaker ___ why a verification step matters before mentioning {term_b}.", "explains"),
+            (f"The rubric ___ connection with {system}.", "values"),
+            (f"Follow-up questions ___ whether the speaker truly understands the procedure.", "reveal"),
+            (f"A clear introduction ___ the audience follow the sequence.", "helps"),
+            (f"Purpose ___ stronger than repetition in a good performance.", "is"),
+            (f"Practice and performance ___ different by the end of the class.", "sound"),
+            (f"Technical English ___ meaningful when it explains real work.", "becomes"),
+            (f"A strong oral evaluation ___ clarity, sequence, and understanding.", "combines"),
+        ]
+    return [
+        (f"Students ___ possible final project topics connected to {process_a} and {process_b}.", "propose"),
+        (f"A strong topic ___ room for vocabulary such as {term_a}, {term_b}, and {term_c}.", "creates"),
+        (f"The instructor ___ every student for a problem, purpose, and outcome.", "asks"),
+        (f"A weak topic ___ too broad or too vague.", "is"),
+        (f"The class ___ how each idea fits into {system}.", "checks"),
+        (f"Students ___ short proposal sentences in English.", "write"),
+        (f"A good project topic ___ concrete and defensible.", "is"),
+        (f"Professional communication ___ with a clear question.", "starts"),
+        (f"The final proposal ___ technical reasons, not only enthusiasm.", "needs"),
+        (f"Topic selection ___ part of the final defense process.", "becomes"),
+    ]
+
+
+def u3_reading_questions(specialty, class_number, class_title, vocab_terms):
+    process_a, process_b, system, term_a, term_b, term_c = u3_context(specialty, class_number, vocab_terms)
+
+    if class_number == 1:
+        return [
+            f"What sequence does the SOP ask the team to follow before starting?",
+            f"Which three items must be checked before action begins?",
+            f"What does the procedure say can happen if one step is missed?",
+            f"Why does the text present an SOP as more than bureaucracy?",
+            f"How does sequence language support technical communication in the reading?",
+            f"Should all apprentices learn to explain a standard procedure clearly? Justify with one idea from the text.",
+        ]
+    if class_number == 2:
+        return [
+            f"What problem did the first draft instruction sheet have?",
+            f"What were the first three rewritten actions in the improved version?",
+            f"How did the team test whether the new draft was clear?",
+            f"Why can unclear writing produce preventable errors in the workshop?",
+            f"How does the text connect clear steps with reliable work?",
+            f"Should technical procedures be rewritten when the order is confusing? Justify.",
+        ]
+    if class_number == 3:
+        return [
+            f"How were the two technicians different in the training video?",
+            f"What terms or objects did the clearer speaker point to?",
+            f"What did students decide about speed and professionalism?",
+            f"Why can unclear communication be almost the same as a wrong action?",
+            f"How does comparative language help evaluate a technical explanation?",
+            f"Is a slower but clearer explanation better for training purposes? Justify.",
+        ]
+    if class_number == 4:
+        return [
+            f"What did the first section of the report include?",
+            f"Who inspected {term_a} and who checked {term_b}?",
+            f"What pattern of report sections did students identify?",
+            f"Why does the writer avoid dramatic language in the findings?",
+            f"How does the report connect one fault with the wider impact on {system}?",
+            f"Should technical reports prioritize facts over emotion? Justify with one idea from the text.",
+        ]
+    if class_number == 5:
+        return [
+            f"What confirmations appeared at the start of the checklist?",
+            f"What questions guided the diagnosis in the second block?",
+            f"What did the instructor say about skipping checklist questions?",
+            f"Why do ordered questions protect diagnosis from guesswork?",
+            f"How does the text show that a checklist supports technical reasoning?",
+            f"Would you use a checklist before replacing a component? Justify.",
+        ]
+    if class_number == 6:
+        return [
+            f"What precautions did the safety bulletin require before the procedure?",
+            f"What recent near miss did the document describe?",
+            f"What warning sign showed that the setup was incomplete?",
+            f"Why does the text say safety is built into the technical system itself?",
+            f"How do must and should become part of real workplace responsibility in the class?",
+            f"Should safety language be practiced in English as part of technical training? Justify.",
+        ]
+    if class_number == 7:
+        return [
+            f"What options did students consider when choosing a procedure?",
+            f"Why did some students prefer familiar tasks and others more complex ones?",
+            f"What three criteria did the class identify for a strong choice?",
+            f"Why can procedures connected to a wider workflow be better for oral explanation?",
+            f"How does the reading show that choosing a procedure is already a technical decision?",
+            f"Should students justify their procedure choice before presenting it? Justify.",
+        ]
+    if class_number == 8:
+        return [
+            f"What parts did the trainee include in the procedure script?",
+            f"Which checks were mentioned in the middle section of the script?",
+            f"Why did the instructor ask for shorter sentences?",
+            f"Why should a script support speaking instead of memorization?",
+            f"How do purpose clauses improve the explanation according to the text?",
+            f"Is a shorter and clearer script more effective for oral presentation? Justify.",
+        ]
+    if class_number == 9:
+        return [
+            f"What was the first focus of rehearsal day?",
+            f"Which difficult words were grouped on the pronunciation sheet?",
+            f"What problem appeared when students tried to say the terms aloud?",
+            f"Why does the vocabulary sheet connect each term with a real action?",
+            f"How does the text link pronunciation with professional credibility?",
+            f"Should pronunciation be evaluated in technical procedure explanations? Justify.",
+        ]
+    if class_number == 10:
+        return [
+            f"What did the feedback card check during the first practice round?",
+            f"What problem did the listener identify in the first attempt?",
+            f"What changed in the second attempt?",
+            f"Why is signposting important when a procedure belongs to a larger workflow?",
+            f"How does peer practice help improve oral technical explanations?",
+            f"Is fluency in technical English the same as speaking fast? Justify with one idea from the text.",
+        ]
+    if class_number == 11:
+        return [
+            f"What made the strongest presentations sound understood rather than memorized?",
+            f"How did one student explain the importance of a verification step?",
+            f"What did the teacher's follow-up questions reveal?",
+            f"Why does the rubric value connection with {system}?",
+            f"How does the text distinguish practice from final performance?",
+            f"Should oral procedure evaluation include follow-up questions? Justify.",
+        ]
+    return [
+        f"What did the instructor ask each student to propose for the final project?",
+        f"What makes a topic weak and what makes it stronger?",
+        f"Which real processes already known by students were mentioned as examples?",
+        f"Why does the class revisit {system} when selecting topics?",
+        f"How does the reading connect topic selection with professional communication?",
+        f"Should a final project topic be concrete and defensible in English? Justify.",
+    ]
+
+
 def make_u3_text(specialty, class_number, class_title, grammar_focus, vocab_terms):
     process_a = specialty["processes"][(class_number - 1) % len(specialty["processes"])]
     process_b = specialty["processes"][class_number % len(specialty["processes"])]
@@ -578,11 +858,12 @@ def build_class_html(specialty_slug, specialty, unit_number, class_number, class
         f"<tr><td>{index + 1}</td><td><strong>{escape_html(english_term)}</strong></td><td class='ipa'>{escape_html(ipa_text)}</td><td>{escape_html(spanish_term)}</td></tr>"
         for index, (english_term, spanish_term, ipa_text, definition) in enumerate(vocab_terms)
     )
+    fill_source = u3_fill_patterns(specialty, class_number, vocab_terms) if unit_number == 3 else FILL_PATTERNS[unit_number]
     fill_items = "\n      ".join(
         f"<li>{escape_html(sentence).replace('___', '<span class=\"gap\">&nbsp;___&nbsp;</span>')}</li>"
-        for sentence, answer in FILL_PATTERNS[unit_number]
+        for sentence, answer in fill_source
     )
-    fill_answers = "".join(f"<li>{escape_html(answer)}</li>" for sentence, answer in FILL_PATTERNS[unit_number])
+    fill_answers = "".join(f"<li>{escape_html(answer)}</li>" for sentence, answer in fill_source)
     if unit_number == 3:
         match_source = shuffled_matching_rows(vocab_terms, class_number)
     else:
@@ -591,7 +872,7 @@ def build_class_html(specialty_slug, specialty, unit_number, class_number, class
         f"<tr><td>{index + 1}</td><td><strong>{escape_html(english_term)}</strong></td><td>{escape_html(definition)}</td></tr>"
         for index, (english_term, definition) in enumerate(match_source)
     )
-    questions = reading_questions(specialty, unit_number, class_title)
+    questions = u3_reading_questions(specialty, class_number, class_title, vocab_terms) if unit_number == 3 else reading_questions(specialty, unit_number, class_title)
     css_classes = ["explicit", "explicit", "explicit", "implicit", "analysis", "critical"]
     reading_blocks = []
     for index, question_text in enumerate(questions):
